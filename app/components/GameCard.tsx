@@ -49,7 +49,7 @@ export default function GameCard({ game, variant, onPress, showRecap = true }: P
     : recap.actual >= pred + 10 ? 'up'
     : recap.actual <= pred - 10 ? 'down'
     : 'even';
-  const tierColor = tier === 'up' ? colors.good : tier === 'down' ? colors.bad : colors.textDim;
+  const tierColor = tier === 'up' ? colors.good : tier === 'down' ? colors.bad : colors.info;
   const tierText = tier === 'up' ? '기대 이상 ▲' : tier === 'down' ? '기대 이하 ▼' : '예측 적중';
   const recapLine = recap && showRecap ? (
     <View style={styles.recapRow}>

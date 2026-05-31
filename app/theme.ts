@@ -13,6 +13,7 @@ export const colors = {
   border: '#2B2620',    // 두꺼운 8비트 다크 테두리
   good: '#2E8B57',      // 승/긍정
   bad: '#D33A2C',       // 패/부정
+  info: '#2B6CB0',      // 파랑: 정보/적중(예측 적중)
   onGreen: '#F3E9CE',   // 그린 배경 위 텍스트(크림)
   onGold: '#2B2620',    // 골드 배경 위 텍스트
   shadow: '#000000',
