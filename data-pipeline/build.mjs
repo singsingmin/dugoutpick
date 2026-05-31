@@ -162,11 +162,26 @@ function computeHonjam(aw, hm, sa, sh, aPit, hPit, aERA, hERA, h2hRec) {
   };
 }
 
-// ---------------- 상태 매핑 ----------------
+// ---------------- 상태 / 라이브 ----------------
+// GAME_STATE_SC: 1=예정, 2=경기중, 3=종료 (실데이터로 확인). RESULT_CK=1도 종료.
 function gameStatus(g) {
   if (g.CANCEL_SC_ID && g.CANCEL_SC_ID !== '0') return 'CANCELED';
-  if (g.GAME_RESULT_CK === 1) return 'FINAL';
+  if (g.GAME_RESULT_CK === 1 || g.GAME_STATE_SC === '3') return 'FINAL';
+  if (g.GAME_STATE_SC === '2') return 'LIVE';
   return 'SCHEDULED';
+}
+// '지금 볼 각' 라이브 흥미도(0~100): 늦은 이닝 + 박빙일수록 높음
+function liveHeat(inning, scoreDiff) {
+  const innF = Math.min(1, (inning || 1) / 9);
+  const closeF = Math.max(0, 1 - scoreDiff / 6);
+  return Math.round(100 * closeF * (0.5 + 0.5 * innF));
+}
+function liveLabel(inning, half, scoreDiff) {
+  const hk = half === 'B' ? '말' : '초';
+  const inn = inning ? `${inning}회${hk}` : '경기 중';
+  if (scoreDiff === 0) return `${inn} 동점 접전`;
+  if (scoreDiff <= 1) return `${inn} ${scoreDiff}점차 접전`;
+  return `${inn} ${scoreDiff}점차`;
 }
 
 // ---------------- Build ----------------
@@ -184,19 +199,29 @@ async function main() {
     const aPit = (g.T_PIT_P_NM || '').trim(), hPit = (g.B_PIT_P_NM || '').trim();
     const aStat = pmap[aPit], hStat = pmap[hPit];
     const status = gameStatus(g);
-    const played = status === 'FINAL';
+    const hasScore = status === 'FINAL' || status === 'LIVE'; // 종료·경기중엔 스코어 노출
+    const aScore = hasScore ? +g.T_SCORE_CN : null;
+    const bScore = hasScore ? +g.B_SCORE_CN : null;
     let honjam = null;
     if (sa && sh) honjam = computeHonjam(awName, hmName, sa, sh, aPit, hPit, aStat?.era ?? LEAGUE_ERA, hStat?.era ?? LEAGUE_ERA, h2h[awName]?.[hmName] ?? null);
     const starter = (name, st) => name ? { name, era: st?.era ?? null, w: st?.w ?? null, l: st?.l ?? null } : null;
+    let live = null;
+    if (status === 'LIVE') {
+      const inning = g.GAME_INN_NO ?? null;
+      const half = g.GAME_TB_SC ?? null;
+      const diff = Math.abs((aScore ?? 0) - (bScore ?? 0));
+      live = { inning, half, out: g.OUT_CN ?? null, heat: liveHeat(inning, diff), label: liveLabel(inning, half, diff) };
+    }
     return {
       gameId: g.G_ID,
       time: g.G_TM,
       stadium: g.S_NM,
       status,
       broadcast: g.TV_IF || '',
-      away: { code: g.AWAY_ID, name: awName, rank: g.T_RANK_NO ?? sa?.rank ?? null, score: played ? +g.T_SCORE_CN : null, starter: starter(aPit, aStat) },
-      home: { code: g.HOME_ID, name: hmName, rank: g.B_RANK_NO ?? sh?.rank ?? null, score: played ? +g.B_SCORE_CN : null, starter: starter(hPit, hStat) },
+      away: { code: g.AWAY_ID, name: awName, rank: g.T_RANK_NO ?? sa?.rank ?? null, score: aScore, starter: starter(aPit, aStat) },
+      home: { code: g.HOME_ID, name: hmName, rank: g.B_RANK_NO ?? sh?.rank ?? null, score: bScore, starter: starter(hPit, hStat) },
       honjam,
+      live,
     };
   });
 

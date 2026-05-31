@@ -8,6 +8,7 @@ import type { RootStackParamList } from '../navigation/types';
 import type { GamesData, Game } from '../types';
 import { loadGames } from '../data/load';
 import GameCard from '../components/GameCard';
+import LiveCard from '../components/LiveCard';
 import ScreenHeader from '../components/ScreenHeader';
 import SectionLabel from '../components/SectionLabel';
 import PixelText from '../components/PixelText';
@@ -49,6 +50,9 @@ export default function Today() {
 }
 
 function Body({ data, open }: { data: GamesData; open: (id: string) => void }) {
+  const liveGames = data.games
+    .filter((g) => g.status === 'LIVE')
+    .sort((a, b) => (b.live?.heat ?? 0) - (a.live?.heat ?? 0));
   const recommended: Game | undefined = data.games.find((g) => g.gameId === data.recommendedGameId);
   const rest = data.games
     .filter((g) => g.gameId !== recommended?.gameId)
@@ -57,6 +61,15 @@ function Body({ data, open }: { data: GamesData; open: (id: string) => void }) {
   return (
     <ScrollView contentContainerStyle={styles.content}>
       <PixelText variant="caption" color={colors.textDim} style={styles.date}>{data.dateText}</PixelText>
+
+      {liveGames.length > 0 && (
+        <View style={styles.section}>
+          <SectionLabel icon="🔴" label="지금 볼 각" />
+          {liveGames.map((g) => (
+            <LiveCard key={g.gameId} game={g} onPress={() => open(g.gameId)} />
+          ))}
+        </View>
+      )}
 
       {recommended && (
         <View style={styles.section}>

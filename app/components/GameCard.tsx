@@ -17,14 +17,15 @@ interface Props {
 export default function GameCard({ game, variant, onPress }: Props) {
   const hero = variant === 'hero';
   const final = game.status === 'FINAL';
+  const live = game.status === 'LIVE';
   const canceled = game.status === 'CANCELED';
   const tv = hero ? 'hero' : 'body';
 
   const middle = canceled ? (
     <PixelText variant="body" color={colors.bad}>취소</PixelText>
-  ) : final ? (
-    <PixelText variant={hero ? 'hero' : 'body'} color={colors.text}>
-      {game.away.score ?? '-'} : {game.home.score ?? '-'}
+  ) : final || live ? (
+    <PixelText variant={hero ? 'hero' : 'body'} color={live ? colors.bad : colors.text}>
+      {game.away.score ?? '-'} : {game.home.score ?? '-'}{live ? ' 🔴' : ''}
     </PixelText>
   ) : (
     <PixelText variant={hero ? 'title' : 'body'} color={colors.textDim} style={styles.vs}>vs</PixelText>

@@ -65,6 +65,7 @@ export default function GameDetail({ route, navigation }: Props) {
   }
 
   const final = game.status === 'FINAL';
+  const live = game.status === 'LIVE';
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
@@ -74,16 +75,16 @@ export default function GameDetail({ route, navigation }: Props) {
           <TeamName code={game.away.code} variant="hero" />
           <View style={[styles.underline, { borderColor: teamColor(game.away.code) }]} />
         </View>
-        <PixelText variant="title" color={colors.textDim}>
-          {final ? `${game.away.score ?? '-'} : ${game.home.score ?? '-'}` : 'VS'}
+        <PixelText variant="title" color={live ? colors.bad : colors.textDim}>
+          {final || live ? `${game.away.score ?? '-'} : ${game.home.score ?? '-'}` : 'VS'}
         </PixelText>
         <View style={styles.teamCol}>
           <TeamName code={game.home.code} variant="hero" />
           <View style={[styles.underline, { borderColor: teamColor(game.home.code) }]} />
         </View>
       </View>
-      <PixelText variant="caption" color={colors.textDim} style={styles.meta}>
-        {game.time} · {game.stadium}{game.status === 'CANCELED' ? ' · 취소' : ''}
+      <PixelText variant="caption" color={live ? colors.bad : colors.textDim} style={styles.meta}>
+        {live && game.live ? `🔴 LIVE · ${game.live.label}` : `${game.time} · ${game.stadium}${game.status === 'CANCELED' ? ' · 취소' : ''}`}
       </PixelText>
 
       {/* 꿀잼지수 */}

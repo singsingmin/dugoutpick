@@ -23,7 +23,15 @@ export interface TeamSide {
   starter: Starter | null;    // 선발 미등록시 null
 }
 
-export type GameStatus = 'SCHEDULED' | 'FINAL' | 'CANCELED';
+export type GameStatus = 'SCHEDULED' | 'LIVE' | 'FINAL' | 'CANCELED';
+
+export interface LiveState {
+  inning: number | null;   // 현재 이닝
+  half: string | null;     // 'T'(초) | 'B'(말)
+  out: number | null;
+  heat: number;            // '지금 볼 각' 흥미도 0~100
+  label: string;           // 예: "9회말 동점 접전"
+}
 
 export interface Honjam {
   score: number;                    // 0~100 (보정 후 표시값)
@@ -41,6 +49,7 @@ export interface Game {
   away: TeamSide;
   home: TeamSide;
   honjam: Honjam | null;  // 순위 매칭 실패시 null
+  live: LiveState | null; // 경기중(LIVE)일 때만, 아니면 null
 }
 
 export interface GamesData {

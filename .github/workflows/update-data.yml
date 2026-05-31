@@ -4,12 +4,12 @@ name: Update KBO Data
 # 선발투수는 경기 1~2시간 전 등록되므로 오전 + 경기 직전 + 경기 후 시간대를 커버.
 on:
   schedule:
-    - cron: '0 22 * * *'   # 07:00 KST  (아침 갱신)
-    - cron: '0 2 * * *'    # 11:00 KST  (경기 전, 선발 등록)
-    - cron: '0 4 * * *'    # 13:00 KST  (낮경기 직전)
-    - cron: '0 9 * * *'    # 18:00 KST  (저녁경기 직전)
-    - cron: '0 13 * * *'   # 22:00 KST  (경기 종료/결과 반영)
-  workflow_dispatch:        # 수동 실행 버튼
+    - cron: '0 22 * * *'       # 07:00 KST  (아침 갱신)
+    - cron: '0 2 * * *'        # 11:00 KST  (경기 전, 선발 등록)
+    # 경기 시간대(14:00~23:50 KST = UTC 05~14시) 10분 간격 — '지금 볼 각' 라이브 갱신
+    # (GitHub cron은 정시 보장 안 됨: 실제 약 10~15분 주기)
+    - cron: '*/10 5-14 * * *'
+  workflow_dispatch:            # 수동 실행 버튼
 
 permissions:
   contents: write
