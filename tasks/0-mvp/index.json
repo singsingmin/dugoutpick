@@ -8,7 +8,7 @@
     { "phase": 0, "name": "scaffold", "status": "completed" },
     { "phase": 1, "name": "data-nav", "status": "completed" },
     { "phase": 2, "name": "ui-kit", "status": "completed" },
-    { "phase": 3, "name": "onboarding", "status": "pending" },
+    { "phase": 3, "name": "onboarding", "status": "completed" },
     { "phase": 4, "name": "today", "status": "pending" },
     { "phase": 5, "name": "myteam-settings", "status": "pending" },
     { "phase": 6, "name": "integration", "status": "pending" }
