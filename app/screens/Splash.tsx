@@ -12,6 +12,12 @@ import { colors, spacing } from '../theme';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Splash'>;
 
+// 스플래시 전용 야구장 장식 색(데코)
+const STANDS = '#274C30';   // 관중석(어두운 그린)
+const WALL = '#E8DCC0';     // 외야 펜스(탄)
+const GRASS1 = '#34663F';   // 잔디 줄무늬 A
+const GRASS2 = '#3F7A4C';   // 잔디 줄무늬 B
+
 const Spark = ({ style }: { style?: object }) => (
   <PixelText style={[styles.spark, style]} color={colors.accent}>✦</PixelText>
 );
@@ -44,11 +50,22 @@ export default function Splash({ navigation }: Props) {
           <PixelText variant="body" color={colors.textDim}>KBO 꿀잼지수 가이드</PixelText>
         </View>
 
-        {/* 중앙: 야구공 */}
+        {/* 중앙: 야구공(하늘) + 하단 야구장 단면 */}
         <View style={styles.mid}>
           <Spark style={styles.sparkL} />
           <Spark style={styles.sparkR} />
           <PixelText style={styles.ball}>⚾</PixelText>
+
+          {/* 야구장: 화면 폭에 꽉 차게(패딩 상쇄), 하단 고정 */}
+          <View style={styles.field}>
+            <View style={styles.stands} />
+            <View style={styles.wall} />
+            <View style={styles.grass}>
+              {Array.from({ length: 12 }).map((_, i) => (
+                <View key={i} style={[styles.stripe, { backgroundColor: i % 2 === 0 ? GRASS1 : GRASS2 }]} />
+              ))}
+            </View>
+          </View>
         </View>
 
         {/* 하단: 말풍선 + 시작하기 */}
@@ -73,8 +90,14 @@ const styles = StyleSheet.create({
   logo: { fontSize: 44 },
   // 중앙
   mid: { flex: 1, alignItems: 'center', justifyContent: 'center', alignSelf: 'stretch', position: 'relative' },
-  ball: { fontSize: 140 },
+  ball: { fontSize: 140, marginBottom: 96 }, // 야구장 위 하늘에 뜨도록 위로
   spark: { fontSize: 18 },
+  // 야구장 단면 (하단 고정, 좌우 패딩 상쇄로 화면 풀폭)
+  field: { position: 'absolute', left: -spacing.lg, right: -spacing.lg, bottom: 0, height: 132, overflow: 'hidden' },
+  stands: { height: 22, backgroundColor: STANDS },
+  wall: { height: 18, backgroundColor: WALL, borderTopWidth: 3, borderBottomWidth: 3, borderColor: colors.border },
+  grass: { flex: 1, flexDirection: 'row' },
+  stripe: { flex: 1, height: '100%' },
   sparkBig: { fontSize: 26 },
   sparkL: { position: 'absolute', left: '12%', top: '18%', fontSize: 22 },
   sparkR: { position: 'absolute', right: '14%', top: '30%', fontSize: 16 },
