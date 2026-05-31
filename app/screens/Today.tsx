@@ -7,6 +7,7 @@ import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/types';
 import type { GamesData, Game } from '../types';
 import { loadGames } from '../data/load';
+import { getCheerTeam } from '../data/team';
 import GameCard from '../components/GameCard';
 import LiveCard from '../components/LiveCard';
 import ScreenHeader from '../components/ScreenHeader';
@@ -20,6 +21,7 @@ type Nav = NativeStackNavigationProp<RootStackParamList>;
 export default function Today() {
   const navigation = useNavigation<Nav>();
   const [data, setData] = useState<GamesData | null>(null);
+  const [cheerTeam, setCheerTeam] = useState<string | null>(null);
   const [failed, setFailed] = useState(false);
 
   useEffect(() => {
@@ -27,6 +29,7 @@ export default function Today() {
     loadGames()
       .then((d) => active && setData(d))
       .catch(() => active && setFailed(true));
+    getCheerTeam().then((c) => active && setCheerTeam(c));
     return () => {
       active = false;
     };
@@ -44,16 +47,24 @@ export default function Today() {
       ) : data.games.length === 0 ? (
         <Centered text="오늘은 경기가 없다" />
       ) : (
-        <Body data={data} open={open} />
+        <Body data={data} open={open} cheerTeam={cheerTeam} />
       )}
     </SafeAreaView>
   );
 }
 
-function Body({ data, open }: { data: GamesData; open: (id: string) => void }) {
+function Body({ data, open, cheerTeam }: { data: GamesData; open: (id: string) => void; cheerTeam: string | null }) {
   const liveGames = data.games
     .filter((g) => g.status === 'LIVE')
     .sort((a, b) => (b.live?.heat ?? 0) - (a.live?.heat ?? 0));
+  // 경기 후 결산: 종료(recap) 경기들 → 오늘의 명경기(실제 꿀잼 1위) + 내 팀 결과
+  const finished = data.games.filter((g) => g.status === 'FINAL' && g.recap);
+  const bestRecap = finished.length
+    ? finished.slice().sort((a, b) => (b.recap?.actual ?? 0) - (a.recap?.actual ?? 0))[0]
+    : null;
+  const myFinished = cheerTeam
+    ? finished.find((g) => g.away.code === cheerTeam || g.home.code === cheerTeam)
+    : undefined;
   const recommended: Game | undefined = data.games.find((g) => g.gameId === data.recommendedGameId);
   const rest = data.games
     .filter((g) => g.gameId !== recommended?.gameId)
@@ -72,6 +83,24 @@ function Body({ data, open }: { data: GamesData; open: (id: string) => void }) {
           {liveGames.map((g) => (
             <LiveCard key={g.gameId} game={g} onPress={() => open(g.gameId)} />
           ))}
+        </View>
+      )}
+
+      {finished.length > 0 && (
+        <View style={styles.section}>
+          <SectionLabel icon="🏁" label="오늘의 결산" />
+          {bestRecap && (
+            <>
+              <PixelText variant="caption" color={colors.accent} style={styles.subLabel}>오늘의 명경기</PixelText>
+              <GameCard game={bestRecap} variant="list" onPress={() => open(bestRecap.gameId)} />
+            </>
+          )}
+          {myFinished && myFinished.gameId !== bestRecap?.gameId && (
+            <>
+              <PixelText variant="caption" color={colors.accent} style={styles.subLabel}>내 팀 결과</PixelText>
+              <GameCard game={myFinished} variant="list" onPress={() => open(myFinished.gameId)} />
+            </>
+          )}
         </View>
       )}
 
@@ -107,5 +136,6 @@ const styles = StyleSheet.create({
   content: { padding: spacing.md },
   center: { flex: 1, backgroundColor: colors.bg, alignItems: 'center', justifyContent: 'center' },
   dateRow: { marginBottom: spacing.md, gap: 2 },
+  subLabel: { marginBottom: spacing.xs },
   section: { marginBottom: spacing.lg },
 });

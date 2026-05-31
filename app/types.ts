@@ -40,6 +40,11 @@ export interface Honjam {
   factors: Record<string, number>;  // 0~1 원시 기여값(디버그/튜닝)
 }
 
+export interface Recap {
+  actual: number;          // 실제 꿀잼(예측과 같은 0~100 보정 척도)
+  verdict: string | null;  // 예: "예측보다 더 꿀잼! 🔥"
+}
+
 export interface Game {
   gameId: string;
   time: string;       // "14:00"
@@ -51,6 +56,7 @@ export interface Game {
   home: TeamSide;
   honjam: Honjam | null;  // 순위 매칭 실패시 null
   live: LiveState | null; // 경기중(LIVE)일 때만, 아니면 null
+  recap: Recap | null;    // 종료(FINAL)일 때만 — 경기 후 꿀잼결산
 }
 
 export interface GamesData {

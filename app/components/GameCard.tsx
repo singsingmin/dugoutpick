@@ -13,9 +13,10 @@ interface Props {
   game: Game;
   variant: 'hero' | 'list';
   onPress: () => void;
+  showRecap?: boolean; // 경기 후 결산 줄 노출(오늘경기 탭 전용). 기본 true
 }
 
-export default function GameCard({ game, variant, onPress }: Props) {
+export default function GameCard({ game, variant, onPress, showRecap = true }: Props) {
   const hero = variant === 'hero';
   const final = game.status === 'FINAL';
   const live = game.status === 'LIVE';
@@ -40,6 +41,20 @@ export default function GameCard({ game, variant, onPress }: Props) {
     </View>
   );
 
+  // 경기 후 꿀잼결산: 예측 → 실제 (실제>예측 초록 / 실제<예측 빨강)
+  const recap = game.recap;
+  const pred = game.honjam?.score ?? null;
+  const recapColor =
+    !recap || pred == null ? colors.textDim
+    : recap.actual >= pred + 10 ? colors.good
+    : recap.actual <= pred - 10 ? colors.bad
+    : colors.textDim;
+  const recapLine = recap && showRecap ? (
+    <PixelText variant="caption" color={recapColor} numberOfLines={1} style={styles.recap}>
+      예측 {pred ?? '-'} → 실제 {recap.actual}{recap.verdict ? ` ${recap.verdict.slice(-2)}` : ''}
+    </PixelText>
+  ) : null;
+
   if (hero) {
     return (
       <Pressable onPress={onPress}>
@@ -59,6 +74,7 @@ export default function GameCard({ game, variant, onPress }: Props) {
               {game.honjam.reason}
             </PixelText>
           )}
+          {recapLine}
         </Panel>
       </Pressable>
     );
@@ -68,7 +84,10 @@ export default function GameCard({ game, variant, onPress }: Props) {
   return (
     <Pressable onPress={onPress}>
       <Panel style={styles.list}>
-        <View style={styles.listMatch}>{matchup}</View>
+        <View style={styles.listMatch}>
+          {matchup}
+          {recapLine}
+        </View>
         <View style={styles.listMeta}>
           <StatusChip game={game} />
           <PixelText variant="caption" color={colors.textDim}>{game.time}</PixelText>
@@ -90,4 +109,5 @@ const styles = StyleSheet.create({
   listMeta: { alignItems: 'flex-end', gap: 2 },
   matchup: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, flexWrap: 'wrap' },
   vs: { marginHorizontal: spacing.xs },
+  recap: { marginTop: 2 },
 });

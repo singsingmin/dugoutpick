@@ -223,6 +223,23 @@ async function main() {
       const diff = Math.abs((aScore ?? 0) - (bScore ?? 0));
       live = { inning, half, out: g.OUT_CN ?? null, heat: liveHeat(inning, diff), label: liveLabel(inning, half, diff) };
     }
+    // 경기 후 꿀잼결산: 종료 박스스코어로 '실제 꿀잼' 계산(예측과 같은 보정곡선) + 판정
+    let recap = null;
+    if (status === 'FINAL' && aScore != null && bScore != null) {
+      const diff = Math.abs(aScore - bScore);
+      const total = aScore + bScore;
+      const inning = g.GAME_INN_NO || 9;
+      const extra = inning > 9 ? 1 : 0;
+      const walkoff = (bScore > aScore && g.GAME_TB_SC === 'B' && inning >= 9) ? 1 : 0;
+      const rawActual = 55 * Math.max(0, 1 - diff / 7) + 20 * extra + 15 * walkoff + 10 * Math.min(1, total / 16);
+      const actual = calibrate(rawActual);
+      const pred = honjam ? honjam.score : null;
+      const verdict = pred == null ? null
+        : actual >= pred + 10 ? '예측보다 더 꿀잼! 🔥'
+        : actual <= pred - 10 ? '기대 이하 😅'
+        : '예측 적중 👍';
+      recap = { actual, verdict };
+    }
     return {
       gameId: g.G_ID,
       time: g.G_TM,
@@ -234,6 +251,7 @@ async function main() {
       home: { code: g.HOME_ID, name: hmName, rank: g.B_RANK_NO ?? sh?.rank ?? null, score: bScore, starter: starter(hPit, hStat) },
       honjam,
       live,
+      recap,
     };
   });
 

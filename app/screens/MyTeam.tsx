@@ -61,7 +61,7 @@ export default function MyTeam() {
           <View style={styles.section}>
             <SectionLabel icon="⚾" label="오늘 경기" />
             {game ? (
-              <GameCard game={game} variant="list" onPress={() => navigation.navigate('GameDetail', { gameId: game.gameId })} />
+              <GameCard game={game} variant="list" showRecap={false} onPress={() => navigation.navigate('GameDetail', { gameId: game.gameId })} />
             ) : (
               <Panel><PixelText variant="body" color={colors.textDim}>오늘 내 팀 경기가 없다</PixelText></Panel>
             )}

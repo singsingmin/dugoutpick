@@ -1,7 +1,7 @@
 {
   "date": "20260531",
   "dateText": "2026년 5월 31일",
-  "updatedAt": "2026-05-31T09:22:59.505Z",
+  "updatedAt": "2026-05-31T09:56:45.688Z",
   "recommendedGameId": "20260531LTNC0",
   "games": [
     {
@@ -53,7 +53,11 @@
           "pitcher": 0.43
         }
       },
-      "live": null
+      "live": null,
+      "recap": {
+        "actual": 48,
+        "verdict": "예측 적중 👍"
+      }
     },
     {
       "gameId": "20260531OBSS0",
@@ -104,7 +108,11 @@
           "pitcher": 0.42
         }
       },
-      "live": null
+      "live": null,
+      "recap": {
+        "actual": 11,
+        "verdict": "기대 이하 😅"
+      }
     },
     {
       "gameId": "20260531LTNC0",
@@ -155,7 +163,11 @@
           "pitcher": 0.22
         }
       },
-      "live": null
+      "live": null,
+      "recap": {
+        "actual": 4,
+        "verdict": "기대 이하 😅"
+      }
     },
     {
       "gameId": "20260531SKHH0",
@@ -206,7 +218,11 @@
           "pitcher": 0.27
         }
       },
-      "live": null
+      "live": null,
+      "recap": {
+        "actual": 16,
+        "verdict": "기대 이하 😅"
+      }
     },
     {
       "gameId": "20260531KTWO0",
@@ -257,7 +273,11 @@
           "pitcher": 0.44
         }
       },
-      "live": null
+      "live": null,
+      "recap": {
+        "actual": 15,
+        "verdict": "예측 적중 👍"
+      }
     }
   ]
 }
