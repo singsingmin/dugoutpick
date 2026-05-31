@@ -161,16 +161,16 @@ const styles = StyleSheet.create({
   // 흙색 부채꼴(페어지역): 90° 사분원을 45° 회전 → 홈(꼭지)+1·3루 파울라인 변+외야 곡선. 흰 테두리=라인.
   fairFan: { position: 'absolute', bottom: 35, left: '50%', marginLeft: -65, width: 130, height: 130, backgroundColor: DIRT, borderWidth: 2, borderColor: '#F4ECD8', borderTopLeftRadius: 130, transform: [{ rotate: '45deg' }] },
   // 내야 다이아몬드(홈=하단 중앙)
-  // 내야: 래퍼 108, 잔디 다이아몬드 76(회전) → 꼭지점이 래퍼 변 중앙(=베이스 위치)에 닿음
-  diamondWrap: { width: 108, height: 108, position: 'absolute', bottom: 8, left: '50%', marginLeft: -54 },
-  infieldGrass: { position: 'absolute', top: 16, left: 16, width: 76, height: 76, backgroundColor: GRASS2, transform: [{ rotate: '45deg' }] },
-  mound: { position: 'absolute', top: 48, left: 48, width: 12, height: 12, borderRadius: 6, backgroundColor: DIRT, borderWidth: 1, borderColor: DIRT_LINE, alignItems: 'center', justifyContent: 'center' },
-  rubber: { width: 4, height: 2, backgroundColor: '#F4ECD8' },
+  // 내야: 래퍼 88(부채꼴 대비 작게), 살짝 위로(bottom 22) → 부채꼴 꼭지가 홈 살짝 아래
+  diamondWrap: { width: 88, height: 88, position: 'absolute', bottom: 22, left: '50%', marginLeft: -44 },
+  infieldGrass: { position: 'absolute', top: 13, left: 13, width: 62, height: 62, backgroundColor: GRASS2, transform: [{ rotate: '45deg' }] },
+  mound: { position: 'absolute', top: 35, left: 35, width: 18, height: 18, borderRadius: 9, backgroundColor: DIRT, borderWidth: 1, borderColor: DIRT_LINE, alignItems: 'center', justifyContent: 'center' },
+  rubber: { width: 6, height: 2, backgroundColor: '#F4ECD8' },
   base: { position: 'absolute', width: 9, height: 9, backgroundColor: '#F4ECD8', borderWidth: 1, borderColor: colors.border },
-  baseTop: { top: -4.5, left: 49.5 },      // 2루
-  baseRight: { right: -4.5, top: 49.5 },    // 1루
-  baseLeft: { left: -4.5, top: 49.5 },      // 3루
-  homePlate: { position: 'absolute', bottom: -5.5, left: 48.5, width: 11, height: 11, backgroundColor: '#FFFFFF', borderWidth: 1, borderColor: colors.border }, // 홈
+  baseTop: { top: -4.5, left: 39.5 },      // 2루
+  baseRight: { right: -4.5, top: 39.5 },    // 1루
+  baseLeft: { left: -4.5, top: 39.5 },      // 3루
+  homePlate: { position: 'absolute', bottom: -5.5, left: 38.5, width: 11, height: 11, backgroundColor: '#FFFFFF', borderWidth: 1, borderColor: colors.border }, // 홈
   sparkBig: { fontSize: 26 },
   sparkL: { position: 'absolute', left: '12%', top: '18%', fontSize: 22 },
   sparkR: { position: 'absolute', right: '14%', top: '30%', fontSize: 16 },
