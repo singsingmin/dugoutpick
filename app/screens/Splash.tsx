@@ -50,21 +50,21 @@ export default function Splash({ navigation }: Props) {
           <PixelText variant="body" color={colors.textDim}>KBO 꿀잼지수 가이드</PixelText>
         </View>
 
-        {/* 중앙: 야구공(하늘) + 하단 야구장 단면 */}
+        {/* 중앙: 야구공(하늘) */}
         <View style={styles.mid}>
           <Spark style={styles.sparkL} />
           <Spark style={styles.sparkR} />
           <PixelText style={styles.ball}>⚾</PixelText>
+        </View>
 
-          {/* 야구장: 화면 폭에 꽉 차게(패딩 상쇄), 하단 고정 */}
-          <View style={styles.field}>
-            <View style={styles.stands} />
-            <View style={styles.wall} />
-            <View style={styles.grass}>
-              {Array.from({ length: 12 }).map((_, i) => (
-                <View key={i} style={[styles.stripe, { backgroundColor: i % 2 === 0 ? GRASS1 : GRASS2 }]} />
-              ))}
-            </View>
+        {/* 야구장 단면 (일반 흐름·화면 풀폭, 아래 말풍선과 간격) */}
+        <View style={styles.field}>
+          <View style={styles.stands} />
+          <View style={styles.wall} />
+          <View style={styles.grass}>
+            {Array.from({ length: 12 }).map((_, i) => (
+              <View key={i} style={[styles.stripe, { backgroundColor: i % 2 === 0 ? GRASS1 : GRASS2 }]} />
+            ))}
           </View>
         </View>
 
@@ -90,12 +90,12 @@ const styles = StyleSheet.create({
   logo: { fontSize: 44 },
   // 중앙
   mid: { flex: 1, alignItems: 'center', justifyContent: 'center', alignSelf: 'stretch', position: 'relative' },
-  ball: { fontSize: 140, marginBottom: 96 }, // 야구장 위 하늘에 뜨도록 위로
+  ball: { fontSize: 140 },
   spark: { fontSize: 18 },
-  // 야구장 단면 (하단 고정, 좌우 패딩 상쇄로 화면 풀폭)
-  field: { position: 'absolute', left: -spacing.lg, right: -spacing.lg, bottom: 0, height: 132, overflow: 'hidden' },
-  stands: { height: 22, backgroundColor: STANDS },
-  wall: { height: 18, backgroundColor: WALL, borderTopWidth: 3, borderBottomWidth: 3, borderColor: colors.border },
+  // 야구장 단면 (일반 흐름, 좌우 패딩 상쇄로 화면 풀폭, 아래 그룹과 간격)
+  field: { alignSelf: 'stretch', marginHorizontal: -spacing.lg, marginBottom: spacing.xl, height: 116, overflow: 'hidden', borderTopWidth: 3, borderBottomWidth: 3, borderColor: colors.border },
+  stands: { height: 26, backgroundColor: STANDS },
+  wall: { height: 16, backgroundColor: WALL, borderBottomWidth: 3, borderColor: colors.border },
   grass: { flex: 1, flexDirection: 'row' },
   stripe: { flex: 1, height: '100%' },
   sparkBig: { fontSize: 26 },
