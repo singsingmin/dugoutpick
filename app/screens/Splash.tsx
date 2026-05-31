@@ -13,10 +13,14 @@ import { colors, spacing } from '../theme';
 type Props = NativeStackScreenProps<RootStackParamList, 'Splash'>;
 
 // 스플래시 전용 야구장 장식 색(데코)
-const STANDS = '#274C30';   // 관중석(어두운 그린)
+const STANDS = '#21402A';   // 관중석 배경(어두운 그린)
 const WALL = '#E8DCC0';     // 외야 펜스(탄)
 const GRASS1 = '#34663F';   // 잔디 줄무늬 A
 const GRASS2 = '#3F7A4C';   // 잔디 줄무늬 B
+
+// 관중 도트 팔레트 + 안정적(모듈 레벨) 배열 — 알록달록 관중
+const CROWD = ['#F4ECD8', '#5BC8FF', '#FF6B6B', '#FFD23F', '#FFFFFF', '#9B8CFF', '#FF9F45'];
+const DOTS = Array.from({ length: 160 }, (_, i) => CROWD[(i * 13 + (i % 7) * 5) % CROWD.length]);
 
 const Spark = ({ style }: { style?: object }) => (
   <PixelText style={[styles.spark, style]} color={colors.accent}>✦</PixelText>
@@ -59,7 +63,11 @@ export default function Splash({ navigation }: Props) {
 
         {/* 야구장 단면 (일반 흐름·화면 풀폭, 아래 말풍선과 간격) */}
         <View style={styles.field}>
-          <View style={styles.stands} />
+          <View style={styles.stands}>
+            {DOTS.map((c, i) => (
+              <View key={i} style={[styles.dot, { backgroundColor: c }]} />
+            ))}
+          </View>
           <View style={styles.wall} />
           <View style={styles.grass}>
             {Array.from({ length: 12 }).map((_, i) => (
@@ -93,8 +101,9 @@ const styles = StyleSheet.create({
   ball: { fontSize: 140 },
   spark: { fontSize: 18 },
   // 야구장 단면 (일반 흐름, 좌우 패딩 상쇄로 화면 풀폭, 아래 그룹과 간격)
-  field: { alignSelf: 'stretch', marginHorizontal: -spacing.lg, marginBottom: spacing.xl, height: 116, overflow: 'hidden', borderTopWidth: 3, borderBottomWidth: 3, borderColor: colors.border },
-  stands: { height: 26, backgroundColor: STANDS },
+  field: { alignSelf: 'stretch', marginHorizontal: -spacing.lg, marginBottom: spacing.xl, height: 124, overflow: 'hidden', borderTopWidth: 3, borderBottomWidth: 3, borderColor: colors.border },
+  stands: { height: 40, backgroundColor: STANDS, flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', paddingHorizontal: 4, overflow: 'hidden' },
+  dot: { width: 4, height: 4, borderRadius: 2, marginHorizontal: 2, marginVertical: 1 },
   wall: { height: 16, backgroundColor: WALL, borderBottomWidth: 3, borderColor: colors.border },
   grass: { flex: 1, flexDirection: 'row' },
   stripe: { flex: 1, height: '100%' },
