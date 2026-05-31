@@ -1,27 +1,30 @@
 // 8비트 도트 UI 디자인 토큰 (ADR-009). 모든 화면/컴포넌트는 이 토큰만 사용 — 하드코딩 금지.
-// 어두운 배경 + 고대비 비비드 팔레트 + 각진 두꺼운 테두리 + 픽셀 폰트(Galmuri11).
+// 팔레트: 빈티지 라이트(크림 배경 + 포레스트 그린 크롬 + 골드 꿀잼지수). 각진 두꺼운 다크 테두리 + 픽셀 폰트.
 
 export const colors = {
-  bg: '#0d0b1a',          // 화면 배경(딥 네이비/퍼플)
-  surface: '#1a1730',     // 패널 배경
-  surfaceAlt: '#262146',  // 보조 패널/선택 강조
-  text: '#f4f4f8',        // 기본 텍스트
-  textDim: '#9a93c4',     // 보조 텍스트
-  accent: '#ffd23f',      // 주 강조(비비드 옐로)
-  accent2: '#00e5a8',     // 보조 강조(민트)
-  border: '#5b5488',      // 기본 테두리
-  good: '#3ad97a',        // 승/긍정
-  bad: '#ff4d6d',         // 패/부정
+  bg: '#F3E9CE',        // 크림 배경
+  surface: '#FBF5E4',   // 카드(밝은 크림)
+  surfaceAlt: '#EADFBF', // 보조/선택 강조
+  text: '#2B2620',      // 진한 텍스트(다크 브라운블랙)
+  textDim: '#7A7060',   // 보조 텍스트
+  accent: '#34663F',    // 주 크롬: 포레스트 그린(헤더·버튼·라벨·활성)
+  accent2: '#F2C53D',   // 골드
+  gold: '#F2C53D',      // 꿀잼지수 골드
+  border: '#2B2620',    // 두꺼운 8비트 다크 테두리
+  good: '#2E8B57',      // 승/긍정
+  bad: '#D33A2C',       // 패/부정
+  onGreen: '#F3E9CE',   // 그린 배경 위 텍스트(크림)
+  onGold: '#2B2620',    // 골드 배경 위 텍스트
   shadow: '#000000',
 } as const;
 
 export const fonts = {
-  pixel: 'Galmuri11', // expo-font로 로드된 패밀리명과 정확히 일치해야 함
+  pixel: 'Galmuri11', // expo-font 로드 패밀리명과 일치해야 함
 } as const;
 
 export const border = {
-  width: 3,    // 8비트 두꺼운 테두리
-  radius: 0,   // 각진 모서리(픽셀 감성)
+  width: 3,
+  radius: 0, // 각진 픽셀 모서리
 } as const;
 
 export const spacing = {
@@ -41,13 +44,9 @@ export const fontSize = {
   score: 40,
 } as const;
 
-// 꿀잼지수 점수대별 색(높을수록 뜨거운 색). 히어로/배지에 사용.
-export function honjamColor(score: number): string {
-  if (score >= 80) return '#ff3b3b'; // 핫 레드
-  if (score >= 60) return '#ff8c1a'; // 오렌지
-  if (score >= 40) return '#ffd23f'; // 옐로
-  if (score >= 20) return '#5bc8ff'; // 블루
-  return '#7a86a8';                  // 그레이블루(시시)
+// 꿀잼지수 색: 추천/상세 대형 배지는 골드 고정(시그니처). 리스트 소형은 그린 박스.
+export function honjamColor(_score: number): string {
+  return colors.gold;
 }
 
 export const theme = { colors, fonts, border, spacing, fontSize, honjamColor };

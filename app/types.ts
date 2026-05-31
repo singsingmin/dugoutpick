@@ -11,6 +11,8 @@ export interface Team {
 export interface Starter {
   name: string;
   era: number | null; // 미규정/미상시 null → UI '미정'
+  w: number | null;   // 승 (규정 미달시 null)
+  l: number | null;   // 패
 }
 
 export interface TeamSide {

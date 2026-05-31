@@ -67,14 +67,17 @@ async function fetchStandings() {
   return { standings, h2h };
 }
 
-async function fetchEraMap() {
+async function fetchPitcherStats() {
   const res = await fetch('https://www.koreabaseball.com/Record/Player/PitcherBasic/Basic1.aspx', { headers: { 'User-Agent': UA } });
   if (!res.ok) throw new Error(`PitcherBasic HTTP ${res.status}`);
   const html = await res.text();
+  // 컬럼: 순위|이름|팀|ERA|승|패|...
   const map = {};
   for (const m of html.matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/g)) {
     const c = [...m[1].matchAll(/<td[^>]*>([\s\S]*?)<\/td>/g)].map(x => strip(x[1]));
-    if (c.length > 5 && /^\d+$/.test(c[0]) && /^\d\.\d\d$/.test(c[3])) map[c[1]] = parseFloat(c[3]);
+    if (c.length > 5 && /^\d+$/.test(c[0]) && /^\d\.\d\d$/.test(c[3])) {
+      map[c[1]] = { era: parseFloat(c[3]), w: parseInt(c[4], 10) || 0, l: parseInt(c[5], 10) || 0 };
+    }
   }
   return map;
 }
@@ -171,27 +174,28 @@ async function main() {
   const date = process.argv[2] || kstToday();
   console.log(`[build] date=${date}`);
 
-  const [rawGames, { standings, h2h }, eraMap] = await Promise.all([fetchGames(date), fetchStandings(), fetchEraMap()]);
+  const [rawGames, { standings, h2h }, pmap] = await Promise.all([fetchGames(date), fetchStandings(), fetchPitcherStats()]);
   const stByName = Object.fromEntries(standings.map(s => [s.name, s]));
-  console.log(`[build] games=${rawGames.length} standings=${standings.length} eraPitchers=${Object.keys(eraMap).length}`);
+  console.log(`[build] games=${rawGames.length} standings=${standings.length} pitchers=${Object.keys(pmap).length}`);
 
   const games = rawGames.map(g => {
     const awName = g.AWAY_NM.trim(), hmName = g.HOME_NM.trim();
     const sa = stByName[awName], sh = stByName[hmName];
     const aPit = (g.T_PIT_P_NM || '').trim(), hPit = (g.B_PIT_P_NM || '').trim();
-    const aERAraw = eraMap[aPit], hERAraw = eraMap[hPit];
+    const aStat = pmap[aPit], hStat = pmap[hPit];
     const status = gameStatus(g);
     const played = status === 'FINAL';
     let honjam = null;
-    if (sa && sh) honjam = computeHonjam(awName, hmName, sa, sh, aPit, hPit, aERAraw ?? LEAGUE_ERA, hERAraw ?? LEAGUE_ERA, h2h[awName]?.[hmName] ?? null);
+    if (sa && sh) honjam = computeHonjam(awName, hmName, sa, sh, aPit, hPit, aStat?.era ?? LEAGUE_ERA, hStat?.era ?? LEAGUE_ERA, h2h[awName]?.[hmName] ?? null);
+    const starter = (name, st) => name ? { name, era: st?.era ?? null, w: st?.w ?? null, l: st?.l ?? null } : null;
     return {
       gameId: g.G_ID,
       time: g.G_TM,
       stadium: g.S_NM,
       status,
       broadcast: g.TV_IF || '',
-      away: { code: g.AWAY_ID, name: awName, rank: g.T_RANK_NO ?? sa?.rank ?? null, score: played ? +g.T_SCORE_CN : null, starter: aPit ? { name: aPit, era: aERAraw ?? null } : null },
-      home: { code: g.HOME_ID, name: hmName, rank: g.B_RANK_NO ?? sh?.rank ?? null, score: played ? +g.B_SCORE_CN : null, starter: hPit ? { name: hPit, era: hERAraw ?? null } : null },
+      away: { code: g.AWAY_ID, name: awName, rank: g.T_RANK_NO ?? sa?.rank ?? null, score: played ? +g.T_SCORE_CN : null, starter: starter(aPit, aStat) },
+      home: { code: g.HOME_ID, name: hmName, rank: g.B_RANK_NO ?? sh?.rank ?? null, score: played ? +g.B_SCORE_CN : null, starter: starter(hPit, hStat) },
       honjam,
     };
   });

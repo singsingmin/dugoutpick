@@ -1,7 +1,7 @@
 {
   "date": "20260531",
   "dateText": "2026년 5월 31일",
-  "updatedAt": "2026-05-31T02:06:08.032Z",
+  "updatedAt": "2026-05-31T02:15:41.547Z",
   "recommendedGameId": "20260531LTNC0",
   "games": [
     {
@@ -17,7 +17,9 @@
         "score": null,
         "starter": {
           "name": "양현종",
-          "era": null
+          "era": null,
+          "w": null,
+          "l": null
         }
       },
       "home": {
@@ -27,7 +29,9 @@
         "score": null,
         "starter": {
           "name": "톨허스트",
-          "era": 3.44
+          "era": 3.44,
+          "w": 10,
+          "l": 6
         }
       },
       "honjam": {
@@ -62,7 +66,9 @@
         "score": null,
         "starter": {
           "name": "최민석",
-          "era": null
+          "era": null,
+          "w": null,
+          "l": null
         }
       },
       "home": {
@@ -72,7 +78,9 @@
         "score": null,
         "starter": {
           "name": "양창섭",
-          "era": null
+          "era": null,
+          "w": null,
+          "l": null
         }
       },
       "honjam": {
@@ -107,7 +115,9 @@
         "score": null,
         "starter": {
           "name": "비슬리",
-          "era": 3.71
+          "era": 3.71,
+          "w": 10,
+          "l": 4
         }
       },
       "home": {
@@ -117,7 +127,9 @@
         "score": null,
         "starter": {
           "name": "테일러",
-          "era": null
+          "era": null,
+          "w": null,
+          "l": null
         }
       },
       "honjam": {
@@ -152,7 +164,9 @@
         "score": null,
         "starter": {
           "name": "타케다",
-          "era": null
+          "era": null,
+          "w": null,
+          "l": null
         }
       },
       "home": {
@@ -162,7 +176,9 @@
         "score": null,
         "starter": {
           "name": "에르난데스",
-          "era": null
+          "era": null,
+          "w": null,
+          "l": null
         }
       },
       "honjam": {
@@ -197,7 +213,9 @@
         "score": null,
         "starter": {
           "name": "보쉴리",
-          "era": 3.49
+          "era": 3.49,
+          "w": 10,
+          "l": 6
         }
       },
       "home": {
@@ -207,7 +225,9 @@
         "score": null,
         "starter": {
           "name": "박준현",
-          "era": null
+          "era": null,
+          "w": null,
+          "l": null
         }
       },
       "honjam": {
