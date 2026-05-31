@@ -19,12 +19,13 @@ export const colors = {
 } as const;
 
 export const fonts = {
-  pixel: 'Galmuri11', // expo-font 로드 패밀리명과 일치해야 함
+  pixel: 'Galmuri11Bold',     // 기본=볼드(전체적으로 두껍게). expo-font 로드 키와 일치.
+  pixelRegular: 'Galmuri11',  // 필요 시 얇은 변형
 } as const;
 
 export const border = {
   width: 3,
-  radius: 0, // 각진 픽셀 모서리
+  radius: 6, // 살짝 둥근 모서리(픽셀감 유지하며 부드럽게)
 } as const;
 
 export const spacing = {

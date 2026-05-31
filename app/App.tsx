@@ -7,6 +7,7 @@ import RootNavigator from './navigation/RootNavigator';
 export default function App() {
   const [loaded] = useFonts({
     Galmuri11: require('./assets/fonts/Galmuri11.ttf'),
+    Galmuri11Bold: require('./assets/fonts/Galmuri11-Bold.ttf'),
   });
 
   if (!loaded) return null;

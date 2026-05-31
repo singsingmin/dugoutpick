@@ -108,7 +108,7 @@ export default function GameDetail({ route, navigation }: Props) {
       {/* 관전 포인트 TOP 3 */}
       {game.honjam && game.honjam.points.length > 0 && (
         <View style={styles.section}>
-          <SectionLabel icon="★" label="관전 포인트 TOP 3" />
+          <SectionLabel icon="★" label="관전 포인트" />
           <Panel>
             {game.honjam.points.map((p, i) => (
               <View key={i} style={styles.pointRow}>
@@ -126,13 +126,15 @@ export default function GameDetail({ route, navigation }: Props) {
 
 function PitcherCol({ side }: { side: TeamSide }) {
   const s = side.starter;
-  const rec = s && s.w != null && s.l != null ? `${s.w}승 ${s.l}패` : '';
+  // 승-패/ERA가 없어도 항상 같은 줄 수를 렌더해 좌우 컬럼 높이를 맞춘다(플레이스홀더 '-').
+  const rec = s && s.w != null && s.l != null ? `${s.w}승 ${s.l}패` : '기록 -';
+  const era = s && s.era != null ? `ERA ${s.era.toFixed(2)}` : 'ERA -';
   return (
     <View style={styles.pitcherCol}>
       <TeamBadge code={side.code} size="sm" />
-      <PixelText variant="body" style={styles.pitcherName}>{s ? s.name : '선발 미정'}</PixelText>
-      {rec ? <PixelText variant="caption" color={colors.textDim}>{rec}</PixelText> : null}
-      <PixelText variant="caption" color={colors.textDim}>{s && s.era != null ? `ERA ${s.era.toFixed(2)}` : 'ERA -'}</PixelText>
+      <PixelText variant="body" style={styles.pitcherName} numberOfLines={1}>{s ? s.name : '선발 미정'}</PixelText>
+      <PixelText variant="caption" color={colors.textDim}>{rec}</PixelText>
+      <PixelText variant="caption" color={colors.textDim}>{era}</PixelText>
     </View>
   );
 }
