@@ -44,14 +44,11 @@ export default function Splash({ navigation }: Props) {
           <PixelText variant="body" color={colors.textDim}>KBO 꿀잼지수 가이드</PixelText>
         </View>
 
-        {/* 중앙: 야구공 + 그린 필드 */}
+        {/* 중앙: 야구공 */}
         <View style={styles.mid}>
           <Spark style={styles.sparkL} />
           <Spark style={styles.sparkR} />
           <PixelText style={styles.ball}>⚾</PixelText>
-          <View style={styles.field}>
-            <View style={styles.mound} />
-          </View>
         </View>
 
         {/* 하단: 말풍선 + 시작하기 */}
@@ -77,8 +74,6 @@ const styles = StyleSheet.create({
   // 중앙
   mid: { flex: 1, alignItems: 'center', justifyContent: 'center', alignSelf: 'stretch', position: 'relative' },
   ball: { fontSize: 140 },
-  field: { position: 'absolute', bottom: spacing.lg, width: '90%', height: 56, backgroundColor: colors.accent, borderColor: colors.border, borderWidth: 3, borderRadius: 8, opacity: 0.25, alignItems: 'center', justifyContent: 'flex-end' },
-  mound: { width: 70, height: 18, backgroundColor: colors.accent, borderTopLeftRadius: 40, borderTopRightRadius: 40, marginBottom: -3 },
   spark: { fontSize: 18 },
   sparkBig: { fontSize: 26 },
   sparkL: { position: 'absolute', left: '12%', top: '18%', fontSize: 22 },
