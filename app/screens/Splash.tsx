@@ -78,11 +78,8 @@ export default function Splash({ navigation }: Props) {
                   <View key={i} style={[styles.stripe, { backgroundColor: i % 2 === 0 ? GRASS1 : GRASS2 }]} />
                 ))}
               </View>
-              <View style={[styles.foulLine, styles.foulLeft]} />
-              <View style={[styles.foulLine, styles.foulRight]} />
-              <View style={styles.fenceArc} />
+              <View style={styles.fairFan} />
               <View style={styles.diamondWrap}>
-                <View style={styles.diamondDirt} />
                 <View style={styles.infieldGrass} />
                 <View style={styles.mound}><View style={styles.rubber} /></View>
                 <View style={[styles.base, styles.baseTop]} />
@@ -161,15 +158,10 @@ const styles = StyleSheet.create({
   ground: { height: 150, position: 'relative', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' },
   grassStripes: { position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, flexDirection: 'row' },
   stripe: { flex: 1, height: '100%' },
-  // 파울라인(홈에서 1루/3루 방향 ±45°로 뻗음) — transformOrigin으로 홈을 축으로 회전
-  foulLine: { position: 'absolute', bottom: 8, left: '50%', width: 3, height: 120, marginLeft: -1.5, backgroundColor: '#F4ECD8', transformOrigin: 'bottom' },
-  foulLeft: { transform: [{ rotate: '-45deg' }] },
-  foulRight: { transform: [{ rotate: '45deg' }] },
-  // 외야 펜스 아크(두 파울라인 끝을 잇는 곡선)
-  fenceArc: { position: 'absolute', bottom: 88, left: '50%', marginLeft: -92, width: 184, height: 64, borderTopWidth: 4, borderColor: WALL, borderTopLeftRadius: 92, borderTopRightRadius: 92, backgroundColor: 'transparent' },
+  // 흙색 부채꼴(페어지역): 90° 사분원을 45° 회전 → 홈(꼭지)+1·3루 파울라인 변+외야 곡선. 흰 테두리=라인.
+  fairFan: { position: 'absolute', bottom: 35, left: '50%', marginLeft: -65, width: 130, height: 130, backgroundColor: DIRT, borderWidth: 2, borderColor: '#F4ECD8', borderTopLeftRadius: 130, transform: [{ rotate: '45deg' }] },
   // 내야 다이아몬드(홈=하단 중앙)
   diamondWrap: { width: 100, height: 100, position: 'absolute', bottom: 2, left: '50%', marginLeft: -50 },
-  diamondDirt: { position: 'absolute', top: 15, left: 15, width: 70, height: 70, backgroundColor: DIRT, borderWidth: 2, borderColor: DIRT_LINE, transform: [{ rotate: '45deg' }] },
   infieldGrass: { position: 'absolute', top: 32, left: 32, width: 36, height: 36, backgroundColor: GRASS2, transform: [{ rotate: '45deg' }] },
   mound: { position: 'absolute', top: 44, left: 44, width: 12, height: 12, borderRadius: 6, backgroundColor: DIRT, borderWidth: 1, borderColor: DIRT_LINE, alignItems: 'center', justifyContent: 'center' },
   rubber: { width: 4, height: 2, backgroundColor: '#F4ECD8' },
