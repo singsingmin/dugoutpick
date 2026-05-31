@@ -77,8 +77,24 @@ export default function Splash({ navigation }: Props) {
             </View>
           </View>
           {/* 조명탑 (관중석 위로 솟음) */}
-          <View style={[styles.tower, styles.towerL]}><View style={styles.lamp} /></View>
-          <View style={[styles.tower, styles.towerR]}><View style={styles.lamp} /></View>
+          <View style={[styles.tower, styles.towerL]}><View style={styles.lamp}>{Array.from({ length: 10 }).map((_, i) => (<View key={i} style={styles.lampDot} />))}</View></View>
+          <View style={[styles.tower, styles.towerR]}><View style={styles.lamp}>{Array.from({ length: 10 }).map((_, i) => (<View key={i} style={styles.lampDot} />))}</View></View>
+
+          {/* 중앙 전광판 (LED 보드 + 받침 다리) */}
+          <View style={styles.boardWrap} pointerEvents="none">
+            <View style={styles.board}>
+              <PixelText variant="caption" color="#FFB000" style={styles.boardLabel}>오늘 경기</PixelText>
+              <View style={styles.ledRow}>
+                {Array.from({ length: 11 }).map((_, i) => (
+                  <View key={i} style={[styles.led, { backgroundColor: i % 3 === 0 ? '#FF6B6B' : '#FFB000' }]} />
+                ))}
+              </View>
+            </View>
+            <View style={styles.legs}>
+              <View style={styles.leg} />
+              <View style={styles.leg} />
+            </View>
+          </View>
         </View>
 
         {/* 하단: 말풍선 + 시작하기 */}
@@ -112,7 +128,16 @@ const styles = StyleSheet.create({
   tower: { position: 'absolute', bottom: 78, width: 5, height: 86, backgroundColor: '#454545', alignItems: 'center' },
   towerL: { left: '15%' },
   towerR: { right: '15%' },
-  lamp: { width: 26, height: 15, marginTop: -4, backgroundColor: colors.gold, borderWidth: 2, borderColor: colors.border },
+  lamp: { width: 28, height: 16, marginTop: -5, backgroundColor: colors.gold, borderWidth: 2, borderColor: colors.border, flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' },
+  lampDot: { width: 3, height: 3, margin: 0.5, backgroundColor: '#FFF6C0' },
+  // 중앙 전광판
+  boardWrap: { position: 'absolute', left: 0, right: 0, bottom: 70, alignItems: 'center' },
+  board: { width: 104, paddingVertical: 4, paddingHorizontal: 6, backgroundColor: '#14140F', borderWidth: 3, borderColor: colors.border, alignItems: 'center' },
+  boardLabel: { marginBottom: 3 },
+  ledRow: { flexDirection: 'row', gap: 3 },
+  led: { width: 5, height: 5, borderRadius: 1 },
+  legs: { flexDirection: 'row', gap: 40 },
+  leg: { width: 4, height: 14, backgroundColor: '#454545' },
   stands: { height: 40, backgroundColor: STANDS, flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', paddingHorizontal: 4, overflow: 'hidden' },
   dot: { width: 4, height: 4, borderRadius: 2, marginHorizontal: 2, marginVertical: 1 },
   wall: { height: 16, backgroundColor: WALL, borderBottomWidth: 3, borderColor: colors.border },
