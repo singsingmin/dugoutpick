@@ -2,6 +2,7 @@
   "expo": {
     "name": "오늘야구각",
     "slug": "dugoutpick",
+    "owner": "singsingmin",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -15,6 +16,7 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.singsingmin.dugoutpick",
       "adaptiveIcon": {
         "backgroundColor": "#34663F",
         "foregroundImage": "./assets/adaptive-icon.png"
@@ -26,6 +28,11 @@
     },
     "plugins": [
       "expo-font"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "2dca77a5-dcf4-4759-863d-91e1cf81dcc7"
+      }
+    }
   }
 }
