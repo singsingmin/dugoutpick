@@ -78,7 +78,8 @@ export default function Splash({ navigation }: Props) {
                   <View key={i} style={[styles.stripe, { backgroundColor: i % 2 === 0 ? GRASS1 : GRASS2 }]} />
                 ))}
               </View>
-              <View style={styles.fairWedge} />
+              <View style={[styles.foulLine, styles.foulLeft]} />
+              <View style={[styles.foulLine, styles.foulRight]} />
               <View style={styles.fenceArc} />
               <View style={styles.diamondWrap}>
                 <View style={styles.diamondDirt} />
@@ -160,10 +161,12 @@ const styles = StyleSheet.create({
   ground: { height: 150, position: 'relative', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' },
   grassStripes: { position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, flexDirection: 'row' },
   stripe: { flex: 1, height: '100%' },
-  // 부채꼴 페어지역(하단 꼭지=홈, 위로 벌어짐) — CSS 삼각형
-  fairWedge: { position: 'absolute', bottom: 0, left: '50%', marginLeft: -150, width: 0, height: 0, borderLeftWidth: 150, borderRightWidth: 150, borderTopWidth: 142, borderLeftColor: 'transparent', borderRightColor: 'transparent', borderTopColor: GRASS2 },
-  // 외야 펜스 아크(부채꼴 위 곡선)
-  fenceArc: { position: 'absolute', top: 4, left: '50%', marginLeft: -150, width: 300, height: 130, borderTopWidth: 4, borderColor: WALL, borderTopLeftRadius: 150, borderTopRightRadius: 150, backgroundColor: 'transparent' },
+  // 파울라인(홈에서 1루/3루 방향 ±45°로 뻗음) — transformOrigin으로 홈을 축으로 회전
+  foulLine: { position: 'absolute', bottom: 8, left: '50%', width: 3, height: 120, marginLeft: -1.5, backgroundColor: '#F4ECD8', transformOrigin: 'bottom' },
+  foulLeft: { transform: [{ rotate: '-45deg' }] },
+  foulRight: { transform: [{ rotate: '45deg' }] },
+  // 외야 펜스 아크(두 파울라인 끝을 잇는 곡선)
+  fenceArc: { position: 'absolute', bottom: 88, left: '50%', marginLeft: -92, width: 184, height: 64, borderTopWidth: 4, borderColor: WALL, borderTopLeftRadius: 92, borderTopRightRadius: 92, backgroundColor: 'transparent' },
   // 내야 다이아몬드(홈=하단 중앙)
   diamondWrap: { width: 100, height: 100, position: 'absolute', bottom: 2, left: '50%', marginLeft: -50 },
   diamondDirt: { position: 'absolute', top: 15, left: 15, width: 70, height: 70, backgroundColor: DIRT, borderWidth: 2, borderColor: DIRT_LINE, transform: [{ rotate: '45deg' }] },
