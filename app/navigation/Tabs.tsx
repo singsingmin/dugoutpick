@@ -1,5 +1,5 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Text } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import type { TabParamList } from './types';
 import Today from '../screens/Today';
 import MyTeam from '../screens/MyTeam';
@@ -8,9 +8,12 @@ import { colors, fonts, border } from '../theme';
 
 const Tab = createBottomTabNavigator<TabParamList>();
 
-// 8비트 탭바. 아이콘은 이미지 대신 텍스트/이모지(ADR-009).
-const icon = (glyph: string) => ({ color }: { color: string }) => (
-  <Text style={{ fontSize: 16, color }}>{glyph}</Text>
+// 8비트 탭바 아이콘 (이모지) + 활성 시 그린 언더라인 인디케이터.
+const icon = (glyph: string) => ({ focused, color }: { focused: boolean; color: string }) => (
+  <View style={styles.iconWrap}>
+    <Text style={{ fontSize: 16, color }}>{glyph}</Text>
+    <View style={[styles.indicator, focused && styles.indicatorOn]} />
+  </View>
 );
 
 export default function Tabs() {
@@ -34,3 +37,9 @@ export default function Tabs() {
     </Tab.Navigator>
   );
 }
+
+const styles = StyleSheet.create({
+  iconWrap: { alignItems: 'center' },
+  indicator: { marginTop: 3, height: 3, width: 18, borderRadius: 2, backgroundColor: 'transparent' },
+  indicatorOn: { backgroundColor: colors.accent },
+});

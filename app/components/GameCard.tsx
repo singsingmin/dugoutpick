@@ -41,7 +41,7 @@ export default function GameCard({ game, variant, onPress }: Props) {
   if (hero) {
     return (
       <Pressable onPress={onPress}>
-        <Panel style={styles.hero}>
+        <Panel accentColor={colors.gold} style={styles.hero}>
           <View style={styles.heroTop}>
             <View style={styles.heroLeft}>
               {matchup}

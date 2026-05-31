@@ -6,6 +6,7 @@ import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/types';
 import PixelText from '../components/PixelText';
 import PixelButton from '../components/PixelButton';
+import ScreenHeader from '../components/ScreenHeader';
 import { loadTeams } from '../data/load';
 import { getCheerTeam, setCheerTeam } from '../data/team';
 import { border, colors, spacing } from '../theme';
@@ -17,7 +18,6 @@ const TEAMS = loadTeams().teams;
 export default function Onboarding({ navigation }: Props) {
   const [selected, setSelected] = useState<string | null>(null);
 
-  // 이미 저장된 응원팀이 있으면 미리 선택 표시(설정에서 재진입 대응).
   useEffect(() => {
     getCheerTeam().then((code) => {
       if (code) setSelected(code);
@@ -32,49 +32,44 @@ export default function Onboarding({ navigation }: Props) {
 
   return (
     <SafeAreaView style={styles.safe} edges={['top', 'bottom']}>
-      <PixelText variant="title" color={colors.accent} style={styles.header}>
-        응원팀을 골라라
-      </PixelText>
-      <PixelText variant="caption" color={colors.textDim} style={styles.sub}>
-        한 팀을 선택하면 시작할 수 있다
-      </PixelText>
+      <ScreenHeader title="응원팀 선택" leftIcon="★" />
+      <View style={styles.body}>
+        <PixelText variant="caption" color={colors.textDim} style={styles.sub}>
+          응원팀을 골라라 — 한 팀을 선택하면 시작할 수 있다
+        </PixelText>
 
-      <ScrollView contentContainerStyle={styles.grid}>
-        {TEAMS.map((t) => {
-          const isSel = selected === t.code;
-          return (
-            <Pressable
-              key={t.code}
-              onPress={() => setSelected(t.code)}
-              style={[styles.cell, { borderColor: isSel ? colors.accent : colors.border }]}
-            >
-              <View style={[styles.colorBlock, { backgroundColor: t.color }]} />
-              <PixelText variant="body" color={isSel ? colors.accent : colors.text}>
-                {t.name}
-              </PixelText>
-              <PixelText variant="caption" color={colors.textDim} numberOfLines={1}>
-                {t.fullName}
-              </PixelText>
-            </Pressable>
-          );
-        })}
-      </ScrollView>
+        <ScrollView contentContainerStyle={styles.grid}>
+          {TEAMS.map((t) => {
+            const isSel = selected === t.code;
+            return (
+              <Pressable
+                key={t.code}
+                onPress={() => setSelected(t.code)}
+                style={[styles.cell, { borderColor: isSel ? colors.accent : colors.border }]}
+              >
+                <View style={[styles.colorBlock, { backgroundColor: t.color }]} />
+                <PixelText variant="body" color={isSel ? colors.accent : colors.text}>{t.name}</PixelText>
+                <PixelText variant="caption" color={colors.textDim} numberOfLines={1}>{t.fullName}</PixelText>
+              </Pressable>
+            );
+          })}
+        </ScrollView>
 
-      <PixelButton
-        label={selected ? '이 팀으로 시작' : '팀을 선택하세요'}
-        onPress={confirm}
-        disabled={!selected}
-        accentColor={colors.accent}
-        style={styles.cta}
-      />
+        <PixelButton
+          label={selected ? '이 팀으로 시작 ▶' : '팀을 선택하세요'}
+          onPress={confirm}
+          disabled={!selected}
+          style={styles.cta}
+        />
+      </View>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  safe: { flex: 1, backgroundColor: colors.bg, paddingHorizontal: spacing.md },
-  header: { marginTop: spacing.md, textAlign: 'center' },
-  sub: { textAlign: 'center', marginBottom: spacing.md },
+  safe: { flex: 1, backgroundColor: colors.bg },
+  body: { flex: 1, paddingHorizontal: spacing.md },
+  sub: { textAlign: 'center', marginVertical: spacing.md },
   grid: { flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between', gap: spacing.sm, paddingBottom: spacing.md },
   cell: {
     width: '48%',

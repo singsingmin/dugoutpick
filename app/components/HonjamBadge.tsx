@@ -10,10 +10,12 @@ interface Props {
 
 export default function HonjamBadge({ score, size = 'sm' }: Props) {
   if (size === 'lg') {
+    // 점수대별 숫자 색(골드 배경 위): 80+ 핫레드 / 60+ 딥오렌지 / 그 외 다크
+    const numColor = score >= 80 ? '#C0392B' : score >= 60 ? '#9C5A00' : colors.onGold;
     return (
       <View style={[styles.box, styles.lg, { backgroundColor: colors.gold }]}>
         <PixelText variant="caption" color={colors.onGold}>꿀잼지수</PixelText>
-        <PixelText variant="score" color={colors.onGold}>{score}</PixelText>
+        <PixelText variant="score" color={numColor}>{score}</PixelText>
       </View>
     );
   }
