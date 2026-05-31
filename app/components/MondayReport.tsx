@@ -1,4 +1,4 @@
-// 월요 리포트: 지난주 리뷰(명경기 실제꿀잼 + 내 팀 성적) + 이번주 예측(주목 경기 근사꿀잼 + 내 팀 일정).
+// 월요 리포트: 지난주 리뷰(10팀 주간 성적표, 내 팀 최상단+순위순) + 이번주 예측(주목 경기 + 내 팀 일정).
 import { useEffect, useState } from 'react';
 import { View, ScrollView, StyleSheet } from 'react-native';
 import type { ReportData } from '../types';
@@ -9,7 +9,7 @@ import Panel from './Panel';
 import TeamName from './TeamName';
 import HonjamBadge from './HonjamBadge';
 import SectionLabel from './SectionLabel';
-import { shortDate } from '../utils';
+import { shortDateDow, dateRangeDow } from '../utils';
 import { colors, spacing } from '../theme';
 
 const TEAMS = loadTeams().teams;
@@ -32,50 +32,42 @@ export default function MondayReport() {
 
   if (!report) return <View style={styles.center} />;
 
-  const myLast = cheer ? report.lastWeek.team[cheer] : undefined;
+  // 지난주 팀 성적: 내 팀 최상단, 나머지 현재 순위 오름차순
+  const teamRows = Object.entries(report.lastWeek.team)
+    .map(([code, r]) => ({ code, ...r }))
+    .sort((a, b) => {
+      if (a.code === cheer) return -1;
+      if (b.code === cheer) return 1;
+      return (a.rank ?? 99) - (b.rank ?? 99);
+    });
   const myThis = cheer ? report.thisWeek.team[cheer] : undefined;
 
   return (
     <ScrollView contentContainerStyle={styles.content}>
       <PixelText variant="caption" color={colors.textDim} style={styles.intro}>오늘은 경기가 없어요 · 한 주를 정리해볼까요?</PixelText>
 
-      {/* 지난주 리뷰 */}
+      {/* 지난주 리뷰 — 팀별 주간 성적표 */}
       <View style={styles.section}>
-        <SectionLabel icon="🏁" label="지난주 리뷰" />
-        {myLast && cheer && (
-          <Panel accentColor={colors.accent} style={styles.myTeam}>
-            <View style={styles.row}>
-              <TeamName code={cheer} variant="body" />
-              <PixelText variant="caption" color={colors.textDim}>지난주 성적</PixelText>
-            </View>
-            <PixelText variant="title" color={myLast.w >= myLast.l ? colors.good : colors.bad}>
-              {myLast.w}승 {myLast.d}무 {myLast.l}패
-            </PixelText>
-          </Panel>
-        )}
-        <PixelText variant="caption" color={colors.accent} style={styles.subLabel}>이주의 명경기</PixelText>
-        {report.lastWeek.top.length > 0 ? (
-          report.lastWeek.top.map((g, i) => (
-            <Panel key={i} style={styles.gameRow}>
-              <View style={styles.matchup}>
-                <TeamName code={g.away} variant="body" />
-                <PixelText variant="body" color={colors.text}>{g.aScore} : {g.bScore}</PixelText>
-                <TeamName code={g.home} variant="body" />
+        <SectionLabel icon="🏁" label="지난주 성적" />
+        <Panel>
+          {teamRows.map((r) => {
+            const mine = r.code === cheer;
+            return (
+              <View key={r.code} style={[styles.teamRow, mine && styles.teamRowMine]}>
+                <PixelText variant="caption" color={colors.textDim} style={styles.rankCol}>{r.rank ? `${r.rank}위` : '-'}</PixelText>
+                <View style={styles.nameCol}><TeamName code={r.code} variant="body" /></View>
+                {mine && <PixelText variant="caption" color={colors.accent} style={styles.meTag}>내 팀</PixelText>}
+                <PixelText variant="body" color={mine ? colors.text : colors.textDim} style={styles.recCol}>{r.w}승 {r.d}무 {r.l}패</PixelText>
               </View>
-              <View style={styles.right}>
-                <PixelText variant="caption" color={colors.textDim}>{shortDate(g.date)}</PixelText>
-                <HonjamBadge score={g.actual} size="sm" />
-              </View>
-            </Panel>
-          ))
-        ) : (
-          <Panel><PixelText variant="body" color={colors.textDim}>지난주 경기 기록이 없어요</PixelText></Panel>
-        )}
+            );
+          })}
+        </Panel>
       </View>
 
       {/* 이번주 예측 */}
       <View style={styles.section}>
         <SectionLabel icon="🔮" label="이번주 예측" />
+
         {myThis && cheer && (
           <Panel accentColor={colors.accent} style={styles.myTeam}>
             <View style={styles.row}>
@@ -87,27 +79,34 @@ export default function MondayReport() {
               const homeAway = m.home === cheer ? '홈' : '원정';
               return (
                 <PixelText key={i} variant="caption" color={colors.textDim}>
-                  {shortDate(m.date)} vs {teamName(opp)} ({homeAway})
+                  {shortDateDow(m.date)} vs {teamName(opp)} ({homeAway})
                 </PixelText>
               );
             })}
           </Panel>
         )}
+
         <PixelText variant="caption" color={colors.accent} style={styles.subLabel}>주목 경기 (예측)</PixelText>
         {report.thisWeek.top.length > 0 ? (
-          report.thisWeek.top.map((g, i) => (
-            <Panel key={i} style={styles.gameRow}>
-              <View style={styles.matchup}>
-                <TeamName code={g.away} variant="body" />
-                <PixelText variant="caption" color={colors.textDim}>vs</PixelText>
-                <TeamName code={g.home} variant="body" />
-              </View>
-              <View style={styles.right}>
-                <PixelText variant="caption" color={colors.textDim}>{shortDate(g.date)}</PixelText>
+          report.thisWeek.top.map((g, i) => {
+            const dateText = g.dateStart && g.dateEnd ? dateRangeDow(g.dateStart, g.dateEnd) : g.dateStart ? shortDateDow(g.dateStart) : '';
+            return (
+            <Panel key={i} style={styles.gameCard}>
+              <View style={styles.gameTop}>
+                <View style={styles.gameLeft}>
+                  <View style={styles.matchup}>
+                    <TeamName code={g.away} variant="body" />
+                    <PixelText variant="caption" color={colors.textDim}>vs</PixelText>
+                    <TeamName code={g.home} variant="body" />
+                    {dateText ? <PixelText variant="caption" color={colors.textDim}>{dateText}</PixelText> : null}
+                  </View>
+                  {g.reason ? <PixelText variant="caption" color={colors.textDim} style={styles.reason}>{g.reason}</PixelText> : null}
+                </View>
                 <HonjamBadge score={g.pred} size="sm" />
               </View>
             </Panel>
-          ))
+          );
+          })
         ) : (
           <Panel><PixelText variant="body" color={colors.textDim}>이번주 일정이 없어요</PixelText></Panel>
         )}
@@ -122,11 +121,21 @@ const styles = StyleSheet.create({
   content: { padding: spacing.md },
   intro: { marginBottom: spacing.md },
   section: { marginBottom: spacing.lg },
+  // 지난주 성적표
+  teamRow: { flexDirection: 'row', alignItems: 'center', paddingVertical: 4, gap: spacing.sm },
+  teamRowMine: { backgroundColor: colors.surfaceAlt, marginHorizontal: -spacing.sm, paddingHorizontal: spacing.sm, borderRadius: 4 },
+  rankCol: { width: 30 },
+  nameCol: { flex: 1 },
+  meTag: { },
+  recCol: { },
+  // 이번주
   myTeam: { gap: spacing.xs, marginBottom: spacing.sm },
   row: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
   subLabel: { marginTop: spacing.sm, marginBottom: spacing.xs },
-  gameRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: spacing.sm, marginBottom: spacing.sm },
-  matchup: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, flex: 1, flexWrap: 'wrap' },
-  right: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
+  gameCard: { marginBottom: spacing.sm },
+  gameTop: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: spacing.sm },
+  gameLeft: { flex: 1, gap: spacing.xs },
+  matchup: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, flexWrap: 'wrap' },
+  reason: {},
   note: { marginTop: spacing.sm },
 });

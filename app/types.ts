@@ -104,12 +104,11 @@ export interface RecentData {
 }
 
 // 월요 리포트
-export interface ReportPastGame { date: string; away: string; home: string; aScore: number; bScore: number; actual: number; }
-export interface ReportUpcomingGame { date: string; away: string; home: string; pred: number; }
-export interface TeamWeekRecord { w: number; l: number; d: number; }
+export interface ReportUpcomingGame { away: string; home: string; pred: number; reason: string; dateStart: string; dateEnd: string; }
+export interface TeamWeekRecord { w: number; l: number; d: number; rank: number; }
 export interface ReportData {
   updatedAt: string;
-  lastWeek: { range: [string, string]; top: ReportPastGame[]; team: Record<string, TeamWeekRecord> };
+  lastWeek: { range: [string, string]; team: Record<string, TeamWeekRecord> };
   thisWeek: { range: [string, string]; top: ReportUpcomingGame[]; team: Record<string, { date: string; away: string; home: string }[]> };
 }
 

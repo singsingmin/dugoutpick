@@ -256,36 +256,39 @@ function weekBounds(ymd) {
   return { thisMon: fmt(thisMon), thisSun: fmt(thisSun), lastMon: fmt(lastMon), lastSun: fmt(lastSun) };
 }
 
-// 주간 '실제 꿀잼' 근사 — 스케줄엔 이닝/끝내기 없음 → 박빙+득점만(예측과 같은 보정)
-function weeklyActual(aS, bS) {
-  return calibrate(75 * Math.max(0, 1 - Math.abs(aS - bS) / 7) + 25 * Math.min(1, (aS + bS) / 16));
-}
+// 이번주 예측용 가정 선발 ERA(선발 미정이라 평균 에이스 가정 → 점수 보정). LEAGUE_ERA(4.20)보다 좋게.
+const WEEKLY_ERA = 3.2;
 
 function buildReport(date, schedule, standings) {
   const wb = weekBounds(date);
   const stByName = Object.fromEntries(standings.map(s => [s.name, s]));
   const inRange = (d, a, b) => d >= a && d <= b;
 
-  // 지난주: 종료 경기 → 실제 꿀잼 TOP3 + 팀별 성적
-  const lastGames = schedule.filter(g => g.finished && inRange(g.date, wb.lastMon, wb.lastSun));
-  const lastTop = lastGames
-    .map(g => ({ date: g.date, away: g.away, home: g.home, aScore: g.aS, bScore: g.hS, actual: weeklyActual(g.aS, g.hS) }))
-    .sort((x, y) => y.actual - x.actual).slice(0, 3);
+  // 지난주: 팀별 성적(10팀 전체, 무경기는 0-0-0) + 현재 순위
   const lastTeam = {};
-  const reg = (code, sf, sa) => { const t = (lastTeam[code] ||= { w: 0, l: 0, d: 0 }); if (sf > sa) t.w++; else if (sf < sa) t.l++; else t.d++; };
-  for (const g of lastGames) { reg(g.away, g.aS, g.hS); reg(g.home, g.hS, g.aS); }
+  for (const s of standings) if (s.code) lastTeam[s.code] = { w: 0, l: 0, d: 0, rank: s.rank };
+  const reg = (code, sf, sa) => { const t = lastTeam[code]; if (!t) return; if (sf > sa) t.w++; else if (sf < sa) t.l++; else t.d++; };
+  for (const g of schedule.filter(x => x.finished && inRange(x.date, wb.lastMon, wb.lastSun))) {
+    reg(g.away, g.aS, g.hS); reg(g.home, g.hS, g.aS);
+  }
 
-  // 이번주: 예정 포함 → 근사 꿀잼(선발 없이) TOP3 + 팀별 일정
+  // 이번주: 매치업 단위로 중복 제거(시리즈 묶기) → 근사 꿀잼 TOP3(이유 포함) + 팀별 일정
   const thisGames = schedule.filter(g => inRange(g.date, wb.thisMon, wb.thisSun));
-  const predFor = (g) => {
-    const aw = byCode[g.away]?.name, hm = byCode[g.home]?.name;
-    const sa = stByName[aw], sh = stByName[hm];
-    if (!sa || !sh) return null;
-    return computeHonjam(aw, hm, sa, sh, '', '', LEAGUE_ERA, LEAGUE_ERA, null).score; // 선발 미정 → 근사
-  };
-  const thisTop = thisGames
-    .map(g => ({ date: g.date, away: g.away, home: g.home, pred: predFor(g) }))
-    .filter(x => x.pred != null).sort((x, y) => y.pred - x.pred).slice(0, 3);
+  const byPair = {};
+  for (const g of thisGames) {
+    const k = `${g.away}-${g.home}`;
+    (byPair[k] ||= { away: g.away, home: g.home, dates: [] }).dates.push(g.date);
+  }
+  const thisTop = Object.values(byPair)
+    .map(p => {
+      const aw = byCode[p.away]?.name, hm = byCode[p.home]?.name;
+      const sa = stByName[aw], sh = stByName[hm];
+      if (!sa || !sh) return null;
+      const hj = computeHonjam(aw, hm, sa, sh, '', '', WEEKLY_ERA, WEEKLY_ERA, null); // 선발 평균 에이스 가정
+      const ds = p.dates.slice().sort();
+      return { away: p.away, home: p.home, pred: hj.score, reason: hj.reason, dateStart: ds[0], dateEnd: ds[ds.length - 1] };
+    })
+    .filter(Boolean).sort((x, y) => y.pred - x.pred).slice(0, 3);
   const thisTeam = {};
   for (const g of thisGames) {
     const item = { date: g.date, away: g.away, home: g.home };
@@ -294,7 +297,7 @@ function buildReport(date, schedule, standings) {
   }
 
   return {
-    lastWeek: { range: [wb.lastMon, wb.lastSun], top: lastTop, team: lastTeam },
+    lastWeek: { range: [wb.lastMon, wb.lastSun], team: lastTeam },
     thisWeek: { range: [wb.thisMon, wb.thisSun], top: thisTop, team: thisTeam },
   };
 }
@@ -313,7 +316,7 @@ async function main() {
   const stByName = Object.fromEntries(standings.map(s => [s.name, s]));
   const recent = buildRecent(schedule);
   const report = buildReport(date, schedule, standings);
-  console.log(`[build] games=${rawGames.length} standings=${standings.length} pitchers=${Object.keys(pmap).length} recentTeams=${Object.keys(recent).length} reportGames(this/last)=${report.thisWeek.top.length}/${report.lastWeek.top.length}`);
+  console.log(`[build] games=${rawGames.length} standings=${standings.length} pitchers=${Object.keys(pmap).length} recentTeams=${Object.keys(recent).length} thisWeekTop=${report.thisWeek.top.length}`);
 
   // freeze: 직전 산출물의 꿀잼지수를 읽어, 이미 시작된 경기는 '경기 전 값'을 유지(드리프트 방지)
   const prevHonjam = {};
