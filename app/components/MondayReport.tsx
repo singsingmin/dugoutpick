@@ -32,19 +32,15 @@ export default function MondayReport() {
 
   if (!report) return <View style={styles.center} />;
 
-  // 지난주 팀 성적: 내 팀 최상단, 나머지 현재 순위 오름차순
+  // 지난주 팀 성적: 현재 순위 오름차순(내 팀은 행 강조로 구분)
   const teamRows = Object.entries(report.lastWeek.team)
     .map(([code, r]) => ({ code, ...r }))
-    .sort((a, b) => {
-      if (a.code === cheer) return -1;
-      if (b.code === cheer) return 1;
-      return (a.rank ?? 99) - (b.rank ?? 99);
-    });
+    .sort((a, b) => (a.rank ?? 99) - (b.rank ?? 99));
   const myThis = cheer ? report.thisWeek.team[cheer] : undefined;
 
   return (
     <ScrollView contentContainerStyle={styles.content}>
-      <PixelText variant="caption" color={colors.textDim} style={styles.intro}>오늘은 경기가 없어요 · 한 주를 정리해볼까요?</PixelText>
+      <PixelText variant="title" color={colors.text} style={styles.intro}>오늘은 경기가 없어요{'\n'}한 주를 정리해볼까요?</PixelText>
 
       {/* 지난주 리뷰 — 팀별 주간 성적표 */}
       <View style={styles.section}>
@@ -119,7 +115,7 @@ export default function MondayReport() {
 const styles = StyleSheet.create({
   center: { flex: 1, backgroundColor: colors.bg },
   content: { padding: spacing.md },
-  intro: { marginBottom: spacing.md },
+  intro: { marginBottom: spacing.md, lineHeight: 26 },
   section: { marginBottom: spacing.lg },
   // 지난주 성적표
   teamRow: { flexDirection: 'row', alignItems: 'center', paddingVertical: 4, gap: spacing.sm },
