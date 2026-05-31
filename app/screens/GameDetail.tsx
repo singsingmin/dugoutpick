@@ -18,6 +18,16 @@ type Props = NativeStackScreenProps<RootStackParamList, 'GameDetail'>;
 const TEAMS = loadTeams().teams;
 const teamColor = (code: string) => TEAMS.find((t) => t.code === code)?.color ?? colors.text;
 
+// 꿀잼지수 근거 표시용: 요소 라벨 + 가중치(공식과 일치)
+const FACTOR_META: { key: string; label: string; weight: number }[] = [
+  { key: 'close', label: '순위 근접도', weight: 30 },
+  { key: 'quality', label: '상위권 매치', weight: 20 },
+  { key: 'form', label: '최근 상승세', weight: 15 },
+  { key: 'pitcher', label: '선발 매치업', weight: 15 },
+  { key: 'rivalry', label: '라이벌 매치', weight: 10 },
+  { key: 'playoff', label: '가을야구 경쟁', weight: 10 },
+];
+
 export default function GameDetail({ route, navigation }: Props) {
   const { gameId } = route.params;
   const [game, setGame] = useState<Game | null>(null);
@@ -119,6 +129,27 @@ export default function GameDetail({ route, navigation }: Props) {
           </Panel>
         </View>
       )}
+
+      {/* 꿀잼지수 근거 (요소별 강도) */}
+      {game.honjam && (
+        <View style={styles.section}>
+          <SectionLabel icon="🔍" label="꿀잼지수 근거" />
+          <Panel>
+            {FACTOR_META
+              .map((f) => ({ ...f, v: game.honjam!.factors[f.key] ?? 0 }))
+              .sort((a, b) => b.v * b.weight - a.v * a.weight)
+              .map((f) => (
+                <View key={f.key} style={styles.factorRow}>
+                  <PixelText variant="caption" color={colors.textDim} style={styles.factorLabel}>{f.label}</PixelText>
+                  <View style={styles.barTrack}>
+                    <View style={[styles.barFill, { width: `${Math.round(f.v * 100)}%` }]} />
+                  </View>
+                </View>
+              ))}
+            <PixelText variant="caption" color={colors.textDim} style={styles.factorNote}>막대가 길수록 이 경기에서 강하게 작용한 요소</PixelText>
+          </Panel>
+        </View>
+      )}
     </ScrollView>
   );
 }
@@ -156,4 +187,9 @@ const styles = StyleSheet.create({
   pointRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, marginVertical: 3 },
   num: { backgroundColor: colors.accent, borderColor: colors.border, borderWidth: 2, width: 20, height: 20, alignItems: 'center', justifyContent: 'center' },
   pointText: { flex: 1 },
+  factorRow: { flexDirection: 'row', alignItems: 'center', marginVertical: 3, gap: spacing.sm },
+  factorLabel: { width: 78 },
+  barTrack: { flex: 1, height: 10, backgroundColor: colors.surfaceAlt, borderWidth: 1, borderColor: colors.border, borderRadius: 3, overflow: 'hidden' },
+  barFill: { height: '100%', backgroundColor: colors.gold },
+  factorNote: { marginTop: spacing.sm },
 });
