@@ -1,0 +1,16 @@
+# Node
+node_modules/
+npm-debug.log*
+
+# Expo / RN
+app/.expo/
+app/dist/
+app/web-build/
+*.tsbuildinfo
+
+# Task runner outputs (대용량 phase 로그)
+tasks/**/phase*-output.json
+
+# OS
+.DS_Store
+Thumbs.db

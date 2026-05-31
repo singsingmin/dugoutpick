@@ -1,0 +1,40 @@
+name: Update KBO Data
+
+# KST 기준 하루 여러 번 갱신 (GitHub cron은 UTC).
+# 선발투수는 경기 1~2시간 전 등록되므로 오전 + 경기 직전 + 경기 후 시간대를 커버.
+on:
+  schedule:
+    - cron: '0 22 * * *'   # 07:00 KST  (아침 갱신)
+    - cron: '0 2 * * *'    # 11:00 KST  (경기 전, 선발 등록)
+    - cron: '0 4 * * *'    # 13:00 KST  (낮경기 직전)
+    - cron: '0 9 * * *'    # 18:00 KST  (저녁경기 직전)
+    - cron: '0 13 * * *'   # 22:00 KST  (경기 종료/결과 반영)
+  workflow_dispatch:        # 수동 실행 버튼
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build data
+        run: node data-pipeline/build.mjs
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data-pipeline/output/*.json
+          if git diff --staged --quiet; then
+            echo "No data changes."
+          else
+            git commit -m "chore: update KBO data ($(date -u +%Y-%m-%dT%H:%MZ))"
+            git push
+          fi
