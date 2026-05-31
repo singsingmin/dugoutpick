@@ -1,7 +1,7 @@
 {
   "date": "20260531",
   "dateText": "2026년 5월 31일",
-  "updatedAt": "2026-05-31T09:15:48.644Z",
+  "updatedAt": "2026-05-31T09:22:59.505Z",
   "recommendedGameId": "20260531LTNC0",
   "games": [
     {
@@ -9,6 +9,7 @@
       "time": "14:00",
       "stadium": "잠실",
       "status": "FINAL",
+      "cancelReason": null,
       "broadcast": "M-T",
       "away": {
         "code": "HT",
@@ -59,6 +60,7 @@
       "time": "14:00",
       "stadium": "대구",
       "status": "FINAL",
+      "cancelReason": null,
       "broadcast": "SPO-T",
       "away": {
         "code": "OB",
@@ -109,6 +111,7 @@
       "time": "14:00",
       "stadium": "창원",
       "status": "FINAL",
+      "cancelReason": null,
       "broadcast": "SPO-2T",
       "away": {
         "code": "LT",
@@ -159,6 +162,7 @@
       "time": "14:00",
       "stadium": "대전",
       "status": "FINAL",
+      "cancelReason": null,
       "broadcast": "KN-T",
       "away": {
         "code": "SK",
@@ -209,6 +213,7 @@
       "time": "14:00",
       "stadium": "고척",
       "status": "FINAL",
+      "cancelReason": null,
       "broadcast": "SS-T,MS-T",
       "away": {
         "code": "KT",

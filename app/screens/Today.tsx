@@ -12,6 +12,7 @@ import LiveCard from '../components/LiveCard';
 import ScreenHeader from '../components/ScreenHeader';
 import SectionLabel from '../components/SectionLabel';
 import PixelText from '../components/PixelText';
+import { formatUpdatedAt } from '../utils';
 import { colors, spacing } from '../theme';
 
 type Nav = NativeStackNavigationProp<RootStackParamList>;
@@ -60,7 +61,10 @@ function Body({ data, open }: { data: GamesData; open: (id: string) => void }) {
 
   return (
     <ScrollView contentContainerStyle={styles.content}>
-      <PixelText variant="caption" color={colors.textDim} style={styles.date}>{data.dateText}</PixelText>
+      <View style={styles.dateRow}>
+        <PixelText variant="caption" color={colors.textDim}>{data.dateText}</PixelText>
+        <PixelText variant="caption" color={colors.textDim}>갱신 {formatUpdatedAt(data.updatedAt)}</PixelText>
+      </View>
 
       {liveGames.length > 0 && (
         <View style={styles.section}>
@@ -102,6 +106,6 @@ const styles = StyleSheet.create({
   safe: { flex: 1, backgroundColor: colors.bg },
   content: { padding: spacing.md },
   center: { flex: 1, backgroundColor: colors.bg, alignItems: 'center', justifyContent: 'center' },
-  date: { marginBottom: spacing.md },
+  dateRow: { marginBottom: spacing.md, gap: 2 },
   section: { marginBottom: spacing.lg },
 });

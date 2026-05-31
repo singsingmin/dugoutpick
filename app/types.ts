@@ -45,6 +45,7 @@ export interface Game {
   time: string;       // "14:00"
   stadium: string;
   status: GameStatus;
+  cancelReason: string | null; // CANCELED일 때 사유(예: "우천취소"), 아니면 null
   broadcast: string;
   away: TeamSide;
   home: TeamSide;

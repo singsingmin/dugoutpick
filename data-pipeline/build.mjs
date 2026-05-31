@@ -228,6 +228,7 @@ async function main() {
       time: g.G_TM,
       stadium: g.S_NM,
       status,
+      cancelReason: status === 'CANCELED' ? (g.CANCEL_SC_NM || '취소') : null, // 예: "우천취소"
       broadcast: g.TV_IF || '',
       away: { code: g.AWAY_ID, name: awName, rank: g.T_RANK_NO ?? sa?.rank ?? null, score: aScore, starter: starter(aPit, aStat) },
       home: { code: g.HOME_ID, name: hmName, rank: g.B_RANK_NO ?? sh?.rank ?? null, score: bScore, starter: starter(hPit, hStat) },

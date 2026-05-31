@@ -6,6 +6,7 @@ import PixelText from './PixelText';
 import Panel from './Panel';
 import TeamName from './TeamName';
 import HonjamBadge from './HonjamBadge';
+import StatusChip from './StatusChip';
 import { colors, spacing } from '../theme';
 
 interface Props {
@@ -42,9 +43,10 @@ export default function GameCard({ game, variant, onPress }: Props) {
   if (hero) {
     return (
       <Pressable onPress={onPress}>
-        <Panel accentColor={colors.gold} style={styles.hero}>
+        <Panel accentColor={colors.bad} style={styles.hero}>
           <View style={styles.heroTop}>
             <View style={styles.heroLeft}>
+              <StatusChip game={game} />
               {matchup}
               <PixelText variant="caption" color={colors.textDim} style={styles.meta}>
                 {game.time} · {game.stadium}
@@ -67,7 +69,10 @@ export default function GameCard({ game, variant, onPress }: Props) {
     <Pressable onPress={onPress}>
       <Panel style={styles.list}>
         <View style={styles.listMatch}>{matchup}</View>
-        <PixelText variant="caption" color={colors.textDim} style={styles.listTime}>{game.time}</PixelText>
+        <View style={styles.listMeta}>
+          <StatusChip game={game} />
+          <PixelText variant="caption" color={colors.textDim}>{game.time}</PixelText>
+        </View>
         {game.honjam && <HonjamBadge score={game.honjam.score} size="sm" />}
       </Panel>
     </Pressable>
@@ -82,7 +87,7 @@ const styles = StyleSheet.create({
   reasonHero: { marginTop: spacing.xs },
   list: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: spacing.sm, marginBottom: spacing.sm },
   listMatch: { flex: 1 },
-  listTime: { minWidth: 44, textAlign: 'right' },
+  listMeta: { alignItems: 'flex-end', gap: 2 },
   matchup: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, flexWrap: 'wrap' },
   vs: { marginHorizontal: spacing.xs },
 });
