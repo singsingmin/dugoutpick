@@ -116,7 +116,6 @@ export default function GameDetail({ route, navigation }: Props) {
                 <PixelText variant="body" style={styles.pointText}>{p}</PixelText>
               </View>
             ))}
-            <PixelText style={styles.trophy}>🏆</PixelText>
           </Panel>
         </View>
       )}
@@ -157,5 +156,4 @@ const styles = StyleSheet.create({
   pointRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, marginVertical: 3 },
   num: { backgroundColor: colors.accent, borderColor: colors.border, borderWidth: 2, width: 20, height: 20, alignItems: 'center', justifyContent: 'center' },
   pointText: { flex: 1 },
-  trophy: { fontSize: 28, textAlign: 'right' },
 });
