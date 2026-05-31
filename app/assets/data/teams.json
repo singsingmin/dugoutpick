@@ -1,0 +1,64 @@
+{
+  "teams": [
+    {
+      "code": "HT",
+      "name": "KIA",
+      "fullName": "KIA 타이거즈",
+      "color": "#EA0029"
+    },
+    {
+      "code": "SS",
+      "name": "삼성",
+      "fullName": "삼성 라이온즈",
+      "color": "#0066B3"
+    },
+    {
+      "code": "LG",
+      "name": "LG",
+      "fullName": "LG 트윈스",
+      "color": "#C30452"
+    },
+    {
+      "code": "OB",
+      "name": "두산",
+      "fullName": "두산 베어스",
+      "color": "#1A1748"
+    },
+    {
+      "code": "KT",
+      "name": "KT",
+      "fullName": "KT 위즈",
+      "color": "#231F20"
+    },
+    {
+      "code": "SK",
+      "name": "SSG",
+      "fullName": "SSG 랜더스",
+      "color": "#CE0E2D"
+    },
+    {
+      "code": "LT",
+      "name": "롯데",
+      "fullName": "롯데 자이언츠",
+      "color": "#002955"
+    },
+    {
+      "code": "HH",
+      "name": "한화",
+      "fullName": "한화 이글스",
+      "color": "#FC4E00"
+    },
+    {
+      "code": "NC",
+      "name": "NC",
+      "fullName": "NC 다이노스",
+      "color": "#1D467F"
+    },
+    {
+      "code": "WO",
+      "name": "키움",
+      "fullName": "키움 히어로즈",
+      "color": "#820024"
+    }
+  ]
+}
