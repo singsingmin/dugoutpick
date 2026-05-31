@@ -10,7 +10,7 @@
     { "phase": 2, "name": "ui-kit", "status": "completed" },
     { "phase": 3, "name": "onboarding", "status": "completed" },
     { "phase": 4, "name": "today", "status": "completed" },
-    { "phase": 5, "name": "myteam-settings", "status": "pending" },
+    { "phase": 5, "name": "myteam-settings", "status": "completed" },
     { "phase": 6, "name": "integration", "status": "pending" }
   ]
 }
