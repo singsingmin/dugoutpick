@@ -1,0 +1,17 @@
+{
+  "project": "DugoutPick (오늘야구각)",
+  "task": "mvp",
+  "prompt": "plan-and-build skill 사용해서 이 서비스의 mvp를 전부 구현하자. — DugoutPick(오늘야구각) MVP 전체 구현: docs/(prd·flow·data-schema·code-architecture·adr)와 완성된 data-pipeline을 근거로 Expo(React Native + TypeScript) 앱을 스캐폴딩하고 핵심 흐름(스플래시→온보딩 팀선택→오늘경기 탭→경기 상세→내 팀 탭→설정)을 레트로 8비트 도트 UI로 전부 구현.",
+  "totalPhases": 7,
+  "created_at": "2026-05-31T09:35:00+0900",
+  "phases": [
+    { "phase": 0, "name": "scaffold", "status": "completed" },
+    { "phase": 1, "name": "data-nav", "status": "completed" },
+    { "phase": 2, "name": "ui-kit", "status": "completed" },
+    { "phase": 3, "name": "onboarding", "status": "completed" },
+    { "phase": 4, "name": "today", "status": "completed" },
+    { "phase": 5, "name": "myteam-settings", "status": "completed" },
+    { "phase": 6, "name": "integration", "status": "completed" }
+  ],
+  "completed_at": "2026-05-31T10:30:00+0900"
+}

@@ -1,0 +1,87 @@
+// 경기 카드 (리스트/히어로 공용). 꿀잼지수·이유는 game.honjam 그대로 표시(ADR-004/005).
+// 목업 스타일: 팀명=팀색 텍스트, 추천=골드 배지, 리스트=그린 점수 박스.
+import { Pressable, View, StyleSheet } from 'react-native';
+import type { Game } from '../types';
+import PixelText from './PixelText';
+import Panel from './Panel';
+import TeamName from './TeamName';
+import HonjamBadge from './HonjamBadge';
+import { colors, spacing } from '../theme';
+
+interface Props {
+  game: Game;
+  variant: 'hero' | 'list';
+  onPress: () => void;
+}
+
+export default function GameCard({ game, variant, onPress }: Props) {
+  const hero = variant === 'hero';
+  const final = game.status === 'FINAL';
+  const canceled = game.status === 'CANCELED';
+  const tv = hero ? 'hero' : 'body';
+
+  const middle = canceled ? (
+    <PixelText variant="body" color={colors.bad}>취소</PixelText>
+  ) : final ? (
+    <PixelText variant={hero ? 'hero' : 'body'} color={colors.text}>
+      {game.away.score ?? '-'} : {game.home.score ?? '-'}
+    </PixelText>
+  ) : (
+    <PixelText variant={hero ? 'title' : 'body'} color={colors.textDim} style={styles.vs}>vs</PixelText>
+  );
+
+  const matchup = (
+    <View style={styles.matchup}>
+      <TeamName code={game.away.code} variant={tv} />
+      {middle}
+      <TeamName code={game.home.code} variant={tv} />
+    </View>
+  );
+
+  if (hero) {
+    return (
+      <Pressable onPress={onPress}>
+        <Panel accentColor={colors.gold} style={styles.hero}>
+          <View style={styles.heroTop}>
+            <View style={styles.heroLeft}>
+              {matchup}
+              <PixelText variant="caption" color={colors.textDim} style={styles.meta}>
+                {game.time} · {game.stadium}
+              </PixelText>
+            </View>
+            {game.honjam && <HonjamBadge score={game.honjam.score} size="lg" />}
+          </View>
+          {game.honjam && (
+            <PixelText variant="body" color={colors.text} style={styles.reasonHero}>
+              {game.honjam.reason}
+            </PixelText>
+          )}
+        </Panel>
+      </Pressable>
+    );
+  }
+
+  // list variant — 한 줄: 팀명 vs 팀명 | 시간 | 점수박스
+  return (
+    <Pressable onPress={onPress}>
+      <Panel style={styles.list}>
+        <View style={styles.listMatch}>{matchup}</View>
+        <PixelText variant="caption" color={colors.textDim} style={styles.listTime}>{game.time}</PixelText>
+        {game.honjam && <HonjamBadge score={game.honjam.score} size="sm" />}
+      </Panel>
+    </Pressable>
+  );
+}
+
+const styles = StyleSheet.create({
+  hero: { gap: spacing.sm },
+  heroTop: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: spacing.md },
+  heroLeft: { flex: 1, gap: spacing.xs },
+  meta: { marginTop: spacing.xs },
+  reasonHero: { marginTop: spacing.xs },
+  list: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: spacing.sm, marginBottom: spacing.sm },
+  listMatch: { flex: 1 },
+  listTime: { minWidth: 44, textAlign: 'right' },
+  matchup: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, flexWrap: 'wrap' },
+  vs: { marginHorizontal: spacing.xs },
+});

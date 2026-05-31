@@ -32,11 +32,12 @@ async function fetchStandings() {
   const res = await fetch('https://www.koreabaseball.com/Record/TeamRank/TeamRankDaily.aspx', { headers: { 'User-Agent': UA } });
   if (!res.ok) throw new Error(`TeamRankDaily HTTP ${res.status}`);
   const html = await res.text();
-  const rows = [...html.matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/g)]
+  const rowsOf = (t) => [...t.matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/g)]
     .map(m => [...m[1].matchAll(/<t[dh][^>]*>([\s\S]*?)<\/t[dh]>/g)].map(c => strip(c[1])));
-  // 컬럼: 순위|팀명|경기|승|패|무|승률|게임차|최근10경기|연속|홈|방문
-  const data = rows.filter(r => r.length >= 12 && /^\d+$/.test(r[0]));
-  return data.map(r => {
+
+  // 1) 순위표 (컬럼: 순위|팀명|경기|승|패|무|승률|게임차|최근10|연속|홈|방문)
+  const data = rowsOf(html).filter(r => r.length >= 12 && /^\d+$/.test(r[0]));
+  const standings = data.map(r => {
     const team = byName[r[1]];
     return {
       rank: +r[0], code: team?.code ?? null, name: r[1],
@@ -46,16 +47,37 @@ async function fetchStandings() {
       last10: r[8], streak: r[9], home: r[10], away: r[11],
     };
   });
+
+  // 2) 팀간 승패 매트릭스 (두 번째 테이블) → h2h[팀명][상대팀명] = "승-패-무"
+  const tables = [...html.matchAll(/<table[\s\S]*?<\/table>/g)].map(m => m[0]);
+  const h2h = {};
+  if (tables[1]) {
+    const mrows = rowsOf(tables[1]);
+    const header = (mrows[0] || []).map(c => c.replace(/\(.*\)/, '')); // "LG(승-패-무)" → "LG"
+    for (const r of mrows) {
+      if (!r[0] || !byName[r[0]]) continue; // 데이터 행(첫 셀=팀명)만
+      h2h[r[0]] = {};
+      for (let i = 1; i < header.length - 1; i++) {
+        const opp = header[i];
+        if (byName[opp] && /^\d+-\d+-\d+$/.test(r[i] || '')) h2h[r[0]][opp] = r[i];
+      }
+    }
+  }
+
+  return { standings, h2h };
 }
 
-async function fetchEraMap() {
+async function fetchPitcherStats() {
   const res = await fetch('https://www.koreabaseball.com/Record/Player/PitcherBasic/Basic1.aspx', { headers: { 'User-Agent': UA } });
   if (!res.ok) throw new Error(`PitcherBasic HTTP ${res.status}`);
   const html = await res.text();
+  // 컬럼: 순위|이름|팀|ERA|승|패|...
   const map = {};
   for (const m of html.matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/g)) {
     const c = [...m[1].matchAll(/<td[^>]*>([\s\S]*?)<\/td>/g)].map(x => strip(x[1]));
-    if (c.length > 5 && /^\d+$/.test(c[0]) && /^\d\.\d\d$/.test(c[3])) map[c[1]] = parseFloat(c[3]);
+    if (c.length > 5 && /^\d+$/.test(c[0]) && /^\d\.\d\d$/.test(c[3])) {
+      map[c[1]] = { era: parseFloat(c[3]), w: parseInt(c[4], 10) || 0, l: parseInt(c[5], 10) || 0 };
+    }
   }
   return map;
 }
@@ -80,9 +102,9 @@ const streakSigned = (s) => {
   return (+m[1]) * (m[2] === '승' ? 1 : -1);
 };
 
-function computeHonjam(aw, hm, sa, sh, aPit, hPit, aERA, hERA) {
-  const a = { rank: sa.rank, wr: sa.winRate, l10: last10Wins(sa.last10), streak: streakSigned(sa.streak) };
-  const h = { rank: sh.rank, wr: sh.winRate, l10: last10Wins(sh.last10), streak: streakSigned(sh.streak) };
+function computeHonjam(aw, hm, sa, sh, aPit, hPit, aERA, hERA, h2hRec) {
+  const a = { rank: sa.rank, wr: sa.winRate, gb: sa.gamesBehind, l10: last10Wins(sa.last10), streak: streakSigned(sa.streak) };
+  const h = { rank: sh.rank, wr: sh.winRate, gb: sh.gamesBehind, l10: last10Wins(sh.last10), streak: streakSigned(sh.streak) };
   const parts = {
     close: clamp01(1 - Math.abs(a.wr - h.wr) / 0.15),
     quality: (strength(a.rank) + strength(h.rank)) / 2,
@@ -93,10 +115,14 @@ function computeHonjam(aw, hm, sa, sh, aPit, hPit, aERA, hERA) {
   };
   if (Math.abs(a.rank - h.rank) <= 1 && a.rank >= 3 && a.rank <= 8 && h.rank >= 3 && h.rank <= 8) parts.playoff = 1;
 
-  // 한 줄 이유 / 관전 포인트 프래그먼트
-  const diff = Math.abs(a.wr - h.wr);
+  // 한 줄 이유 / 관전 포인트 프래그먼트. (점수는 승률 기반, 표시는 게임차 기반 — 게임차가 직관적)
+  const gbDiff = Math.abs(a.gb - h.gb);
+  const gbStr = gbDiff.toFixed(1).replace(/\.0$/, '');
   const frag = {};
-  frag.close = diff < 0.005 ? `승률 ${a.wr.toFixed(3)} 완전 동률의 초접전` : `승률차 단 ${diff.toFixed(3)}, 막상막하 승부`;
+  frag.close =
+    gbDiff === 0 ? `게임차 없는 동률 초접전`
+    : gbDiff <= 2 ? `게임차 ${gbStr}, 막상막하 승부`
+    : `게임차 ${gbStr}의 순위 다툼`;
   frag.quality = Math.max(a.rank, h.rank) <= 4 ? `리그 ${Math.min(a.rank, h.rank)}위·${Math.max(a.rank, h.rank)}위 상위권 빅매치` : '';
   const sp = Math.abs(a.streak) >= Math.abs(h.streak) ? [aw, a.streak] : [hm, h.streak];
   frag.form = sp[1] <= -5 ? `${sp[0]} ${-sp[1]}연패 탈출 도전` : sp[1] >= 3 ? `${sp[0]} ${sp[1]}연승 질주` : `양 팀 최근 10경기 합 ${a.l10 + h.l10}승의 화력`;
@@ -113,15 +139,25 @@ function computeHonjam(aw, hm, sa, sh, aPit, hPit, aERA, hERA) {
   else if (contrib[1] && contrib[1][1] >= contrib[0][1] * 0.65 && frag[contrib[1][0]] !== main) reason = `${main} · ${frag[contrib[1][0]]}`;
   else reason = main;
 
-  // 관전 포인트: 라이벌(있으면) + 기여도순 프래그먼트 상위 3
+  // 관전 포인트: 라이벌(있으면) + 게임차/상대전적 라벨 항목 + 나머지 서사(close 제외, 게임차로 대체)
+  const closeDesc = gbDiff === 0 ? '동률 초접전' : gbDiff <= 2 ? '막상막하' : gbDiff <= 5 ? '순위 다툼' : '';
+  const gamePoint = closeDesc ? `게임차 : ${gbStr} · ${closeDesc}` : `게임차 : ${gbStr}`;
+  let h2hPoint = '';
+  if (h2hRec) {
+    const [w, l, d] = h2hRec.split('-').map(Number);
+    if (Number.isFinite(w) && Number.isFinite(l)) h2hPoint = `상대전적 : ${aw} ${w}승 ${l}패${d > 0 ? ` ${d}무` : ''}`;
+  }
+
   const points = [];
   if (frag.rivalry) points.push(frag.rivalry);
-  for (const [k] of contrib) if (frag[k] && !points.includes(frag[k])) points.push(frag[k]);
+  points.push(gamePoint);
+  if (h2hPoint) points.push(h2hPoint);
+  for (const [k] of contrib) if (k !== 'close' && frag[k] && !points.includes(frag[k])) points.push(frag[k]);
 
   return {
     score: calibrate(raw),
     reason,
-    points: points.slice(0, 3),
+    points: points.slice(0, 4),
     factors: Object.fromEntries(Object.entries(parts).map(([k, v]) => [k, +v.toFixed(2)])),
   };
 }
@@ -138,27 +174,28 @@ async function main() {
   const date = process.argv[2] || kstToday();
   console.log(`[build] date=${date}`);
 
-  const [rawGames, standings, eraMap] = await Promise.all([fetchGames(date), fetchStandings(), fetchEraMap()]);
+  const [rawGames, { standings, h2h }, pmap] = await Promise.all([fetchGames(date), fetchStandings(), fetchPitcherStats()]);
   const stByName = Object.fromEntries(standings.map(s => [s.name, s]));
-  console.log(`[build] games=${rawGames.length} standings=${standings.length} eraPitchers=${Object.keys(eraMap).length}`);
+  console.log(`[build] games=${rawGames.length} standings=${standings.length} pitchers=${Object.keys(pmap).length}`);
 
   const games = rawGames.map(g => {
     const awName = g.AWAY_NM.trim(), hmName = g.HOME_NM.trim();
     const sa = stByName[awName], sh = stByName[hmName];
     const aPit = (g.T_PIT_P_NM || '').trim(), hPit = (g.B_PIT_P_NM || '').trim();
-    const aERAraw = eraMap[aPit], hERAraw = eraMap[hPit];
+    const aStat = pmap[aPit], hStat = pmap[hPit];
     const status = gameStatus(g);
     const played = status === 'FINAL';
     let honjam = null;
-    if (sa && sh) honjam = computeHonjam(awName, hmName, sa, sh, aPit, hPit, aERAraw ?? LEAGUE_ERA, hERAraw ?? LEAGUE_ERA);
+    if (sa && sh) honjam = computeHonjam(awName, hmName, sa, sh, aPit, hPit, aStat?.era ?? LEAGUE_ERA, hStat?.era ?? LEAGUE_ERA, h2h[awName]?.[hmName] ?? null);
+    const starter = (name, st) => name ? { name, era: st?.era ?? null, w: st?.w ?? null, l: st?.l ?? null } : null;
     return {
       gameId: g.G_ID,
       time: g.G_TM,
       stadium: g.S_NM,
       status,
       broadcast: g.TV_IF || '',
-      away: { code: g.AWAY_ID, name: awName, rank: g.T_RANK_NO ?? sa?.rank ?? null, score: played ? +g.T_SCORE_CN : null, starter: aPit ? { name: aPit, era: aERAraw ?? null } : null },
-      home: { code: g.HOME_ID, name: hmName, rank: g.B_RANK_NO ?? sh?.rank ?? null, score: played ? +g.B_SCORE_CN : null, starter: hPit ? { name: hPit, era: hERAraw ?? null } : null },
+      away: { code: g.AWAY_ID, name: awName, rank: g.T_RANK_NO ?? sa?.rank ?? null, score: played ? +g.T_SCORE_CN : null, starter: starter(aPit, aStat) },
+      home: { code: g.HOME_ID, name: hmName, rank: g.B_RANK_NO ?? sh?.rank ?? null, score: played ? +g.B_SCORE_CN : null, starter: starter(hPit, hStat) },
       honjam,
     };
   });
