@@ -81,8 +81,8 @@ const streakSigned = (s) => {
 };
 
 function computeHonjam(aw, hm, sa, sh, aPit, hPit, aERA, hERA) {
-  const a = { rank: sa.rank, wr: sa.winRate, l10: last10Wins(sa.last10), streak: streakSigned(sa.streak) };
-  const h = { rank: sh.rank, wr: sh.winRate, l10: last10Wins(sh.last10), streak: streakSigned(sh.streak) };
+  const a = { rank: sa.rank, wr: sa.winRate, gb: sa.gamesBehind, l10: last10Wins(sa.last10), streak: streakSigned(sa.streak) };
+  const h = { rank: sh.rank, wr: sh.winRate, gb: sh.gamesBehind, l10: last10Wins(sh.last10), streak: streakSigned(sh.streak) };
   const parts = {
     close: clamp01(1 - Math.abs(a.wr - h.wr) / 0.15),
     quality: (strength(a.rank) + strength(h.rank)) / 2,
@@ -93,10 +93,14 @@ function computeHonjam(aw, hm, sa, sh, aPit, hPit, aERA, hERA) {
   };
   if (Math.abs(a.rank - h.rank) <= 1 && a.rank >= 3 && a.rank <= 8 && h.rank >= 3 && h.rank <= 8) parts.playoff = 1;
 
-  // 한 줄 이유 / 관전 포인트 프래그먼트
-  const diff = Math.abs(a.wr - h.wr);
+  // 한 줄 이유 / 관전 포인트 프래그먼트. (점수는 승률 기반, 표시는 게임차 기반 — 게임차가 직관적)
+  const gbDiff = Math.abs(a.gb - h.gb);
+  const gbStr = gbDiff.toFixed(1).replace(/\.0$/, '');
   const frag = {};
-  frag.close = diff < 0.005 ? `승률 ${a.wr.toFixed(3)} 완전 동률의 초접전` : `승률차 단 ${diff.toFixed(3)}, 막상막하 승부`;
+  frag.close =
+    gbDiff === 0 ? `게임차 없는 동률 초접전`
+    : gbDiff <= 2 ? `게임차 ${gbStr}, 막상막하 승부`
+    : `게임차 ${gbStr}의 순위 다툼`;
   frag.quality = Math.max(a.rank, h.rank) <= 4 ? `리그 ${Math.min(a.rank, h.rank)}위·${Math.max(a.rank, h.rank)}위 상위권 빅매치` : '';
   const sp = Math.abs(a.streak) >= Math.abs(h.streak) ? [aw, a.streak] : [hm, h.streak];
   frag.form = sp[1] <= -5 ? `${sp[0]} ${-sp[1]}연패 탈출 도전` : sp[1] >= 3 ? `${sp[0]} ${sp[1]}연승 질주` : `양 팀 최근 10경기 합 ${a.l10 + h.l10}승의 화력`;
