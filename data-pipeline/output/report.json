@@ -1,68 +1,68 @@
 {
-  "updatedAt": "2026-05-31T14:14:19.641Z",
+  "updatedAt": "2026-05-31T15:41:49.740Z",
   "lastWeek": {
     "range": [
-      "20260518",
-      "20260524"
+      "20260525",
+      "20260531"
     ],
     "team": {
       "LG": {
-        "w": 3,
-        "l": 2,
+        "w": 5,
+        "l": 1,
         "d": 0,
         "rank": 1
       },
       "KT": {
-        "w": 2,
-        "l": 3,
+        "w": 5,
+        "l": 1,
         "d": 0,
         "rank": 2
       },
       "SS": {
-        "w": 4,
-        "l": 1,
+        "w": 3,
+        "l": 2,
         "d": 0,
         "rank": 3
       },
       "HT": {
-        "w": 4,
-        "l": 1,
+        "w": 3,
+        "l": 3,
         "d": 0,
         "rank": 4
       },
       "HH": {
-        "w": 3,
-        "l": 2,
+        "w": 4,
+        "l": 1,
         "d": 0,
         "rank": 5
       },
       "OB": {
-        "w": 2,
+        "w": 3,
         "l": 3,
         "d": 0,
         "rank": 6
       },
       "NC": {
-        "w": 1,
-        "l": 4,
+        "w": 3,
+        "l": 2,
         "d": 0,
         "rank": 7
       },
       "SK": {
         "w": 0,
-        "l": 6,
+        "l": 5,
         "d": 0,
         "rank": 8
       },
       "LT": {
-        "w": 3,
-        "l": 2,
+        "w": 2,
+        "l": 4,
         "d": 0,
         "rank": 9
       },
       "WO": {
-        "w": 4,
-        "l": 2,
+        "w": 0,
+        "l": 6,
         "d": 0,
         "rank": 10
       }
@@ -70,334 +70,354 @@
   },
   "thisWeek": {
     "range": [
-      "20260525",
-      "20260531"
+      "20260601",
+      "20260607"
     ],
     "top": [
       {
-        "away": "LT",
-        "home": "NC",
-        "pred": 77,
-        "reason": "낙동강 더비 · 게임차 1, 막상막하 승부",
-        "dateStart": "20260529",
-        "dateEnd": "20260531"
+        "away": "LG",
+        "home": "KT",
+        "pred": 90,
+        "reason": "게임차 0.5, 막상막하 승부 · 리그 1위·2위 상위권 빅매치",
+        "dateStart": "20260602",
+        "dateEnd": "20260604"
       },
       {
-        "away": "HT",
-        "home": "LG",
-        "pred": 64,
-        "reason": "리그 1위·4위 상위권 빅매치 · 게임차 5의 순위 다툼",
-        "dateStart": "20260529",
-        "dateEnd": "20260531"
+        "away": "SS",
+        "home": "HT",
+        "pred": 84,
+        "reason": "전통의 명문 자존심 대결 · 리그 3위·4위 상위권 빅매치",
+        "dateStart": "20260605",
+        "dateEnd": "20260607"
       },
       {
         "away": "HH",
-        "home": "NC",
-        "pred": 59,
-        "reason": "게임차 4.5의 순위 다툼 · 7위권 PO 생존 경쟁",
-        "dateStart": "20260527",
-        "dateEnd": "20260528"
+        "home": "OB",
+        "pred": 79,
+        "reason": "게임차 2.5의 순위 다툼",
+        "dateStart": "20260602",
+        "dateEnd": "20260604"
       }
     ],
     "team": {
-      "KT": [
+      "HH": [
         {
-          "date": "20260526",
-          "away": "KT",
+          "date": "20260602",
+          "away": "HH",
           "home": "OB"
         },
         {
-          "date": "20260527",
-          "away": "KT",
+          "date": "20260603",
+          "away": "HH",
           "home": "OB"
         },
         {
-          "date": "20260528",
-          "away": "KT",
+          "date": "20260604",
+          "away": "HH",
           "home": "OB"
         },
         {
-          "date": "20260529",
-          "away": "KT",
-          "home": "WO"
+          "date": "20260605",
+          "away": "HH",
+          "home": "LT"
         },
         {
-          "date": "20260530",
-          "away": "KT",
-          "home": "WO"
+          "date": "20260606",
+          "away": "HH",
+          "home": "LT"
         },
         {
-          "date": "20260531",
-          "away": "KT",
-          "home": "WO"
+          "date": "20260607",
+          "away": "HH",
+          "home": "LT"
         }
       ],
       "OB": [
         {
-          "date": "20260526",
-          "away": "KT",
-          "home": "OB"
-        },
-        {
-          "date": "20260527",
-          "away": "KT",
-          "home": "OB"
-        },
-        {
-          "date": "20260528",
-          "away": "KT",
-          "home": "OB"
-        },
-        {
-          "date": "20260529",
-          "away": "OB",
-          "home": "SS"
-        },
-        {
-          "date": "20260530",
-          "away": "OB",
-          "home": "SS"
-        },
-        {
-          "date": "20260531",
-          "away": "OB",
-          "home": "SS"
-        }
-      ],
-      "LG": [
-        {
-          "date": "20260526",
-          "away": "LG",
-          "home": "LT"
-        },
-        {
-          "date": "20260527",
-          "away": "LG",
-          "home": "LT"
-        },
-        {
-          "date": "20260528",
-          "away": "LG",
-          "home": "LT"
-        },
-        {
-          "date": "20260529",
-          "away": "HT",
-          "home": "LG"
-        },
-        {
-          "date": "20260530",
-          "away": "HT",
-          "home": "LG"
-        },
-        {
-          "date": "20260531",
-          "away": "HT",
-          "home": "LG"
-        }
-      ],
-      "LT": [
-        {
-          "date": "20260526",
-          "away": "LG",
-          "home": "LT"
-        },
-        {
-          "date": "20260527",
-          "away": "LG",
-          "home": "LT"
-        },
-        {
-          "date": "20260528",
-          "away": "LG",
-          "home": "LT"
-        },
-        {
-          "date": "20260529",
-          "away": "LT",
-          "home": "NC"
-        },
-        {
-          "date": "20260530",
-          "away": "LT",
-          "home": "NC"
-        },
-        {
-          "date": "20260531",
-          "away": "LT",
-          "home": "NC"
-        }
-      ],
-      "HT": [
-        {
-          "date": "20260526",
-          "away": "HT",
-          "home": "WO"
-        },
-        {
-          "date": "20260527",
-          "away": "HT",
-          "home": "WO"
-        },
-        {
-          "date": "20260528",
-          "away": "HT",
-          "home": "WO"
-        },
-        {
-          "date": "20260529",
-          "away": "HT",
-          "home": "LG"
-        },
-        {
-          "date": "20260530",
-          "away": "HT",
-          "home": "LG"
-        },
-        {
-          "date": "20260531",
-          "away": "HT",
-          "home": "LG"
-        }
-      ],
-      "WO": [
-        {
-          "date": "20260526",
-          "away": "HT",
-          "home": "WO"
-        },
-        {
-          "date": "20260527",
-          "away": "HT",
-          "home": "WO"
-        },
-        {
-          "date": "20260528",
-          "away": "HT",
-          "home": "WO"
-        },
-        {
-          "date": "20260529",
-          "away": "KT",
-          "home": "WO"
-        },
-        {
-          "date": "20260530",
-          "away": "KT",
-          "home": "WO"
-        },
-        {
-          "date": "20260531",
-          "away": "KT",
-          "home": "WO"
-        }
-      ],
-      "SS": [
-        {
-          "date": "20260527",
-          "away": "SS",
-          "home": "SK"
-        },
-        {
-          "date": "20260528",
-          "away": "SS",
-          "home": "SK"
-        },
-        {
-          "date": "20260529",
-          "away": "OB",
-          "home": "SS"
-        },
-        {
-          "date": "20260530",
-          "away": "OB",
-          "home": "SS"
-        },
-        {
-          "date": "20260531",
-          "away": "OB",
-          "home": "SS"
-        }
-      ],
-      "SK": [
-        {
-          "date": "20260527",
-          "away": "SS",
-          "home": "SK"
-        },
-        {
-          "date": "20260528",
-          "away": "SS",
-          "home": "SK"
-        },
-        {
-          "date": "20260529",
-          "away": "SK",
-          "home": "HH"
-        },
-        {
-          "date": "20260530",
-          "away": "SK",
-          "home": "HH"
-        },
-        {
-          "date": "20260531",
-          "away": "SK",
-          "home": "HH"
-        }
-      ],
-      "HH": [
-        {
-          "date": "20260527",
+          "date": "20260602",
           "away": "HH",
-          "home": "NC"
+          "home": "OB"
         },
         {
-          "date": "20260528",
+          "date": "20260603",
           "away": "HH",
-          "home": "NC"
+          "home": "OB"
         },
         {
-          "date": "20260529",
-          "away": "SK",
-          "home": "HH"
+          "date": "20260604",
+          "away": "HH",
+          "home": "OB"
         },
         {
-          "date": "20260530",
-          "away": "SK",
-          "home": "HH"
+          "date": "20260605",
+          "away": "WO",
+          "home": "OB"
         },
         {
-          "date": "20260531",
-          "away": "SK",
-          "home": "HH"
+          "date": "20260606",
+          "away": "WO",
+          "home": "OB"
+        },
+        {
+          "date": "20260607",
+          "away": "WO",
+          "home": "OB"
         }
       ],
       "NC": [
         {
-          "date": "20260527",
+          "date": "20260602",
+          "away": "NC",
+          "home": "SS"
+        },
+        {
+          "date": "20260603",
+          "away": "NC",
+          "home": "SS"
+        },
+        {
+          "date": "20260604",
+          "away": "NC",
+          "home": "SS"
+        },
+        {
+          "date": "20260605",
+          "away": "LG",
+          "home": "NC"
+        },
+        {
+          "date": "20260606",
+          "away": "LG",
+          "home": "NC"
+        },
+        {
+          "date": "20260607",
+          "away": "LG",
+          "home": "NC"
+        }
+      ],
+      "SS": [
+        {
+          "date": "20260602",
+          "away": "NC",
+          "home": "SS"
+        },
+        {
+          "date": "20260603",
+          "away": "NC",
+          "home": "SS"
+        },
+        {
+          "date": "20260604",
+          "away": "NC",
+          "home": "SS"
+        },
+        {
+          "date": "20260605",
+          "away": "SS",
+          "home": "HT"
+        },
+        {
+          "date": "20260606",
+          "away": "SS",
+          "home": "HT"
+        },
+        {
+          "date": "20260607",
+          "away": "SS",
+          "home": "HT"
+        }
+      ],
+      "WO": [
+        {
+          "date": "20260602",
+          "away": "WO",
+          "home": "SK"
+        },
+        {
+          "date": "20260603",
+          "away": "WO",
+          "home": "SK"
+        },
+        {
+          "date": "20260604",
+          "away": "WO",
+          "home": "SK"
+        },
+        {
+          "date": "20260605",
+          "away": "WO",
+          "home": "OB"
+        },
+        {
+          "date": "20260606",
+          "away": "WO",
+          "home": "OB"
+        },
+        {
+          "date": "20260607",
+          "away": "WO",
+          "home": "OB"
+        }
+      ],
+      "SK": [
+        {
+          "date": "20260602",
+          "away": "WO",
+          "home": "SK"
+        },
+        {
+          "date": "20260603",
+          "away": "WO",
+          "home": "SK"
+        },
+        {
+          "date": "20260604",
+          "away": "WO",
+          "home": "SK"
+        },
+        {
+          "date": "20260605",
+          "away": "KT",
+          "home": "SK"
+        },
+        {
+          "date": "20260606",
+          "away": "KT",
+          "home": "SK"
+        },
+        {
+          "date": "20260607",
+          "away": "KT",
+          "home": "SK"
+        }
+      ],
+      "LT": [
+        {
+          "date": "20260602",
+          "away": "LT",
+          "home": "HT"
+        },
+        {
+          "date": "20260603",
+          "away": "LT",
+          "home": "HT"
+        },
+        {
+          "date": "20260604",
+          "away": "LT",
+          "home": "HT"
+        },
+        {
+          "date": "20260605",
           "away": "HH",
-          "home": "NC"
+          "home": "LT"
         },
         {
-          "date": "20260528",
+          "date": "20260606",
           "away": "HH",
+          "home": "LT"
+        },
+        {
+          "date": "20260607",
+          "away": "HH",
+          "home": "LT"
+        }
+      ],
+      "HT": [
+        {
+          "date": "20260602",
+          "away": "LT",
+          "home": "HT"
+        },
+        {
+          "date": "20260603",
+          "away": "LT",
+          "home": "HT"
+        },
+        {
+          "date": "20260604",
+          "away": "LT",
+          "home": "HT"
+        },
+        {
+          "date": "20260605",
+          "away": "SS",
+          "home": "HT"
+        },
+        {
+          "date": "20260606",
+          "away": "SS",
+          "home": "HT"
+        },
+        {
+          "date": "20260607",
+          "away": "SS",
+          "home": "HT"
+        }
+      ],
+      "LG": [
+        {
+          "date": "20260602",
+          "away": "LG",
+          "home": "KT"
+        },
+        {
+          "date": "20260603",
+          "away": "LG",
+          "home": "KT"
+        },
+        {
+          "date": "20260604",
+          "away": "LG",
+          "home": "KT"
+        },
+        {
+          "date": "20260605",
+          "away": "LG",
           "home": "NC"
         },
         {
-          "date": "20260529",
-          "away": "LT",
+          "date": "20260606",
+          "away": "LG",
           "home": "NC"
         },
         {
-          "date": "20260530",
-          "away": "LT",
+          "date": "20260607",
+          "away": "LG",
           "home": "NC"
+        }
+      ],
+      "KT": [
+        {
+          "date": "20260602",
+          "away": "LG",
+          "home": "KT"
         },
         {
-          "date": "20260531",
-          "away": "LT",
-          "home": "NC"
+          "date": "20260603",
+          "away": "LG",
+          "home": "KT"
+        },
+        {
+          "date": "20260604",
+          "away": "LG",
+          "home": "KT"
+        },
+        {
+          "date": "20260605",
+          "away": "KT",
+          "home": "SK"
+        },
+        {
+          "date": "20260606",
+          "away": "KT",
+          "home": "SK"
+        },
+        {
+          "date": "20260607",
+          "away": "KT",
+          "home": "SK"
         }
       ]
     }
