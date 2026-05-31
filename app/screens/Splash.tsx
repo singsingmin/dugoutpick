@@ -61,19 +61,24 @@ export default function Splash({ navigation }: Props) {
           <PixelText style={styles.ball}>⚾</PixelText>
         </View>
 
-        {/* 야구장 단면 (일반 흐름·화면 풀폭, 아래 말풍선과 간격) */}
-        <View style={styles.field}>
-          <View style={styles.stands}>
-            {DOTS.map((c, i) => (
-              <View key={i} style={[styles.dot, { backgroundColor: c }]} />
-            ))}
+        {/* 야구장 단면(관중석/펜스/잔디) + 양옆 조명탑 */}
+        <View style={styles.fieldWrap}>
+          <View style={styles.field}>
+            <View style={styles.stands}>
+              {DOTS.map((c, i) => (
+                <View key={i} style={[styles.dot, { backgroundColor: c }]} />
+              ))}
+            </View>
+            <View style={styles.wall} />
+            <View style={styles.grass}>
+              {Array.from({ length: 12 }).map((_, i) => (
+                <View key={i} style={[styles.stripe, { backgroundColor: i % 2 === 0 ? GRASS1 : GRASS2 }]} />
+              ))}
+            </View>
           </View>
-          <View style={styles.wall} />
-          <View style={styles.grass}>
-            {Array.from({ length: 12 }).map((_, i) => (
-              <View key={i} style={[styles.stripe, { backgroundColor: i % 2 === 0 ? GRASS1 : GRASS2 }]} />
-            ))}
-          </View>
+          {/* 조명탑 (관중석 위로 솟음) */}
+          <View style={[styles.tower, styles.towerL]}><View style={styles.lamp} /></View>
+          <View style={[styles.tower, styles.towerR]}><View style={styles.lamp} /></View>
         </View>
 
         {/* 하단: 말풍선 + 시작하기 */}
@@ -100,8 +105,14 @@ const styles = StyleSheet.create({
   mid: { flex: 1, alignItems: 'center', justifyContent: 'center', alignSelf: 'stretch', position: 'relative' },
   ball: { fontSize: 140 },
   spark: { fontSize: 18 },
-  // 야구장 단면 (일반 흐름, 좌우 패딩 상쇄로 화면 풀폭, 아래 그룹과 간격)
-  field: { alignSelf: 'stretch', marginHorizontal: -spacing.lg, marginBottom: spacing.xl, height: 124, overflow: 'hidden', borderTopWidth: 3, borderBottomWidth: 3, borderColor: colors.border },
+  // 야구장 래퍼(풀폭·간격) — 조명탑이 위로 솟을 수 있게 overflow 비클립
+  fieldWrap: { alignSelf: 'stretch', marginHorizontal: -spacing.lg, marginTop: spacing.xl, marginBottom: spacing.xl, position: 'relative' },
+  field: { height: 124, overflow: 'hidden', borderTopWidth: 3, borderBottomWidth: 3, borderColor: colors.border },
+  // 조명탑: 폴 + 램프 헤드
+  tower: { position: 'absolute', bottom: 78, width: 5, height: 86, backgroundColor: '#454545', alignItems: 'center' },
+  towerL: { left: '15%' },
+  towerR: { right: '15%' },
+  lamp: { width: 26, height: 15, marginTop: -4, backgroundColor: colors.gold, borderWidth: 2, borderColor: colors.border },
   stands: { height: 40, backgroundColor: STANDS, flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', paddingHorizontal: 4, overflow: 'hidden' },
   dot: { width: 4, height: 4, borderRadius: 2, marginHorizontal: 2, marginVertical: 1 },
   wall: { height: 16, backgroundColor: WALL, borderBottomWidth: 3, borderColor: colors.border },
