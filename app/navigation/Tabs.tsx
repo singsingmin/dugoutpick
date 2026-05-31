@@ -2,6 +2,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { View, Text, StyleSheet } from 'react-native';
 import type { TabParamList } from './types';
 import Today from '../screens/Today';
+import Standings from '../screens/Standings';
 import MyTeam from '../screens/MyTeam';
 import Settings from '../screens/Settings';
 import { colors, fonts, border } from '../theme';
@@ -32,6 +33,7 @@ export default function Tabs() {
       }}
     >
       <Tab.Screen name="Today" component={Today} options={{ title: '오늘경기', tabBarIcon: icon('⚾') }} />
+      <Tab.Screen name="Standings" component={Standings} options={{ title: '순위', tabBarIcon: icon('📊') }} />
       <Tab.Screen name="MyTeam" component={MyTeam} options={{ title: '내 팀', tabBarIcon: icon('★') }} />
       <Tab.Screen name="Settings" component={Settings} options={{ title: '설정', tabBarIcon: icon('⚙') }} />
     </Tab.Navigator>

@@ -8,6 +8,7 @@ export type RootStackParamList = {
 
 export type TabParamList = {
   Today: undefined;
+  Standings: undefined;
   MyTeam: undefined;
   Settings: undefined;
 };
