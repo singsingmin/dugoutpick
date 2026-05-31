@@ -11,6 +11,7 @@
     { "phase": 3, "name": "onboarding", "status": "completed" },
     { "phase": 4, "name": "today", "status": "completed" },
     { "phase": 5, "name": "myteam-settings", "status": "completed" },
-    { "phase": 6, "name": "integration", "status": "pending" }
-  ]
+    { "phase": 6, "name": "integration", "status": "completed" }
+  ],
+  "completed_at": "2026-05-31T10:30:00+0900"
 }
