@@ -235,9 +235,9 @@ async function main() {
       const actual = calibrate(rawActual);
       const pred = honjam ? honjam.score : null;
       const verdict = pred == null ? null
-        : actual >= pred + 10 ? '예측보다 더 꿀잼! 🔥'
-        : actual <= pred - 10 ? '기대 이하 😅'
-        : '예측 적중 👍';
+        : actual >= pred + 10 ? '기대 이상'
+        : actual <= pred - 10 ? '기대 이하'
+        : '예측 적중';
       recap = { actual, verdict };
     }
     return {

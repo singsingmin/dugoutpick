@@ -41,18 +41,26 @@ export default function GameCard({ game, variant, onPress, showRecap = true }: P
     </View>
   );
 
-  // 경기 후 꿀잼결산: 예측 → 실제 (실제>예측 초록 / 실제<예측 빨강)
+  // 경기 후 꿀잼결산: 예측 → 실제 + 판정 칩(기대 이상 ▲ / 예측 적중 / 기대 이하 ▼)
   const recap = game.recap;
   const pred = game.honjam?.score ?? null;
-  const recapColor =
-    !recap || pred == null ? colors.textDim
-    : recap.actual >= pred + 10 ? colors.good
-    : recap.actual <= pred - 10 ? colors.bad
-    : colors.textDim;
+  const tier =
+    !recap || pred == null ? null
+    : recap.actual >= pred + 10 ? 'up'
+    : recap.actual <= pred - 10 ? 'down'
+    : 'even';
+  const tierColor = tier === 'up' ? colors.good : tier === 'down' ? colors.bad : colors.textDim;
+  const tierText = tier === 'up' ? '기대 이상 ▲' : tier === 'down' ? '기대 이하 ▼' : '예측 적중';
   const recapLine = recap && showRecap ? (
-    <PixelText variant="caption" color={recapColor} numberOfLines={1} style={styles.recap}>
-      예측 {pred ?? '-'} → 실제 {recap.actual}{recap.verdict ? ` ${recap.verdict.slice(-2)}` : ''}
-    </PixelText>
+    <View style={styles.recapRow}>
+      <PixelText variant="caption" color={colors.textDim}>예측 {pred ?? '-'} → </PixelText>
+      <PixelText variant="caption" color={tierColor}>실제 {recap.actual}</PixelText>
+      {tier && (
+        <View style={[styles.recapChip, { borderColor: tierColor }]}>
+          <PixelText variant="caption" color={tierColor}>{tierText}</PixelText>
+        </View>
+      )}
+    </View>
   ) : null;
 
   if (hero) {
@@ -109,5 +117,6 @@ const styles = StyleSheet.create({
   listMeta: { alignItems: 'flex-end', gap: 2 },
   matchup: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, flexWrap: 'wrap' },
   vs: { marginHorizontal: spacing.xs },
-  recap: { marginTop: 2 },
+  recapRow: { flexDirection: 'row', alignItems: 'center', gap: 4, marginTop: 3, flexWrap: 'wrap' },
+  recapChip: { borderWidth: 1, borderRadius: 4, paddingHorizontal: 5, paddingVertical: 1 },
 });

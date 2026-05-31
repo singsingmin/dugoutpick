@@ -1,7 +1,7 @@
 {
   "date": "20260531",
   "dateText": "2026년 5월 31일",
-  "updatedAt": "2026-05-31T09:56:45.688Z",
+  "updatedAt": "2026-05-31T10:14:30.303Z",
   "recommendedGameId": "20260531LTNC0",
   "games": [
     {
@@ -56,7 +56,7 @@
       "live": null,
       "recap": {
         "actual": 48,
-        "verdict": "예측 적중 👍"
+        "verdict": "예측 적중"
       }
     },
     {
@@ -111,7 +111,7 @@
       "live": null,
       "recap": {
         "actual": 11,
-        "verdict": "기대 이하 😅"
+        "verdict": "기대 이하"
       }
     },
     {
@@ -166,7 +166,7 @@
       "live": null,
       "recap": {
         "actual": 4,
-        "verdict": "기대 이하 😅"
+        "verdict": "기대 이하"
       }
     },
     {
@@ -221,7 +221,7 @@
       "live": null,
       "recap": {
         "actual": 16,
-        "verdict": "기대 이하 😅"
+        "verdict": "기대 이하"
       }
     },
     {
@@ -276,7 +276,7 @@
       "live": null,
       "recap": {
         "actual": 15,
-        "verdict": "예측 적중 👍"
+        "verdict": "예측 적중"
       }
     }
   ]
