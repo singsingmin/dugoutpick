@@ -71,14 +71,15 @@ export default function Splash({ navigation }: Props) {
                 <View key={i} style={[styles.dot, { backgroundColor: c }]} />
               ))}
             </View>
-            <View style={styles.wall} />
-            {/* 그라운드: 잔디(줄무늬) + 내야 다이아몬드 + 베이스 + 마운드 */}
+            {/* 그라운드(관중석과 맞닿음): 잔디 + 부채꼴 페어지역 + 외야 펜스 아크 + 내야 */}
             <View style={styles.ground}>
               <View style={styles.grassStripes}>
                 {Array.from({ length: 12 }).map((_, i) => (
                   <View key={i} style={[styles.stripe, { backgroundColor: i % 2 === 0 ? GRASS1 : GRASS2 }]} />
                 ))}
               </View>
+              <View style={styles.fairWedge} />
+              <View style={styles.fenceArc} />
               <View style={styles.diamondWrap}>
                 <View style={styles.diamondDirt} />
                 <View style={styles.infieldGrass} />
@@ -145,7 +146,7 @@ const styles = StyleSheet.create({
   lamp: { width: 28, height: 16, marginTop: -5, backgroundColor: colors.gold, borderWidth: 2, borderColor: colors.border, flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' },
   lampDot: { width: 3, height: 3, margin: 0.5, backgroundColor: '#FFF6C0' },
   // 중앙 전광판 (관중석 위쪽 중앙)
-  boardWrap: { position: 'absolute', left: 0, right: 0, top: -30, alignItems: 'center' },
+  boardWrap: { position: 'absolute', left: 0, right: 0, top: -46, alignItems: 'center' },
   board: { width: 104, paddingVertical: 4, paddingHorizontal: 6, backgroundColor: '#14140F', borderWidth: 3, borderColor: colors.border, alignItems: 'center' },
   boardLabel: { marginBottom: 3 },
   ledRow: { flexDirection: 'row', gap: 3 },
@@ -155,13 +156,16 @@ const styles = StyleSheet.create({
   // 관중석
   stands: { height: 40, backgroundColor: STANDS, flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', paddingHorizontal: 4, overflow: 'hidden' },
   dot: { width: 4, height: 4, borderRadius: 2, marginHorizontal: 2, marginVertical: 1 },
-  // 외야 펜스
-  wall: { height: 16, backgroundColor: WALL, borderBottomWidth: 3, borderColor: colors.border },
-  // 그라운드(잔디 줄무늬 배경 + 내야 다이아몬드)
-  ground: { height: 120, position: 'relative', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' },
+  // 그라운드(관중석과 맞닿음): 잔디 + 부채꼴 + 펜스 아크 + 내야
+  ground: { height: 150, position: 'relative', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' },
   grassStripes: { position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, flexDirection: 'row' },
   stripe: { flex: 1, height: '100%' },
-  diamondWrap: { width: 100, height: 100, position: 'relative' },
+  // 부채꼴 페어지역(하단 꼭지=홈, 위로 벌어짐) — CSS 삼각형
+  fairWedge: { position: 'absolute', bottom: 0, left: '50%', marginLeft: -150, width: 0, height: 0, borderLeftWidth: 150, borderRightWidth: 150, borderTopWidth: 142, borderLeftColor: 'transparent', borderRightColor: 'transparent', borderTopColor: GRASS2 },
+  // 외야 펜스 아크(부채꼴 위 곡선)
+  fenceArc: { position: 'absolute', top: 4, left: '50%', marginLeft: -150, width: 300, height: 130, borderTopWidth: 4, borderColor: WALL, borderTopLeftRadius: 150, borderTopRightRadius: 150, backgroundColor: 'transparent' },
+  // 내야 다이아몬드(홈=하단 중앙)
+  diamondWrap: { width: 100, height: 100, position: 'absolute', bottom: 2, left: '50%', marginLeft: -50 },
   diamondDirt: { position: 'absolute', top: 15, left: 15, width: 70, height: 70, backgroundColor: DIRT, borderWidth: 2, borderColor: DIRT_LINE, transform: [{ rotate: '45deg' }] },
   infieldGrass: { position: 'absolute', top: 32, left: 32, width: 36, height: 36, backgroundColor: GRASS2, transform: [{ rotate: '45deg' }] },
   mound: { position: 'absolute', top: 44, left: 44, width: 12, height: 12, borderRadius: 6, backgroundColor: DIRT, borderWidth: 1, borderColor: DIRT_LINE, alignItems: 'center', justifyContent: 'center' },
