@@ -17,6 +17,8 @@ const STANDS = '#21402A';   // 관중석 배경(어두운 그린)
 const WALL = '#E8DCC0';     // 외야 펜스(탄)
 const GRASS1 = '#34663F';   // 잔디 줄무늬 A
 const GRASS2 = '#3F7A4C';   // 잔디 줄무늬 B
+const DIRT = '#C99A5B';     // 내야 흙
+const DIRT_LINE = '#A8763D'; // 흙 테두리
 
 // 관중 도트 팔레트 + 안정적(모듈 레벨) 배열 — 알록달록 관중
 const CROWD = ['#F4ECD8', '#5BC8FF', '#FF6B6B', '#FFD23F', '#FFFFFF', '#9B8CFF', '#FF9F45'];
@@ -70,10 +72,22 @@ export default function Splash({ navigation }: Props) {
               ))}
             </View>
             <View style={styles.wall} />
-            <View style={styles.grass}>
-              {Array.from({ length: 12 }).map((_, i) => (
-                <View key={i} style={[styles.stripe, { backgroundColor: i % 2 === 0 ? GRASS1 : GRASS2 }]} />
-              ))}
+            {/* 그라운드: 잔디(줄무늬) + 내야 다이아몬드 + 베이스 + 마운드 */}
+            <View style={styles.ground}>
+              <View style={styles.grassStripes}>
+                {Array.from({ length: 12 }).map((_, i) => (
+                  <View key={i} style={[styles.stripe, { backgroundColor: i % 2 === 0 ? GRASS1 : GRASS2 }]} />
+                ))}
+              </View>
+              <View style={styles.diamondWrap}>
+                <View style={styles.diamondDirt} />
+                <View style={styles.infieldGrass} />
+                <View style={styles.mound}><View style={styles.rubber} /></View>
+                <View style={[styles.base, styles.baseTop]} />
+                <View style={[styles.base, styles.baseRight]} />
+                <View style={[styles.base, styles.baseLeft]} />
+                <View style={[styles.homePlate]} />
+              </View>
             </View>
           </View>
           {/* 조명탑 (관중석 위로 솟음) */}
@@ -123,26 +137,40 @@ const styles = StyleSheet.create({
   spark: { fontSize: 18 },
   // 야구장 래퍼(풀폭·간격) — 조명탑이 위로 솟을 수 있게 overflow 비클립
   fieldWrap: { alignSelf: 'stretch', marginHorizontal: -spacing.lg, marginTop: spacing.xl, marginBottom: spacing.xl, position: 'relative' },
-  field: { height: 124, overflow: 'hidden', borderTopWidth: 3, borderBottomWidth: 3, borderColor: colors.border },
-  // 조명탑: 폴 + 램프 헤드
-  tower: { position: 'absolute', bottom: 78, width: 5, height: 86, backgroundColor: '#454545', alignItems: 'center' },
+  field: { borderTopWidth: 3, borderBottomWidth: 3, borderColor: colors.border }, // 높이는 내용물(관중석+펜스+그라운드)에 맞춤
+  // 조명탑 (stands 상단 기준, 위로 솟음)
+  tower: { position: 'absolute', top: -44, width: 5, height: 72, backgroundColor: '#454545', alignItems: 'center' },
   towerL: { left: '15%' },
   towerR: { right: '15%' },
   lamp: { width: 28, height: 16, marginTop: -5, backgroundColor: colors.gold, borderWidth: 2, borderColor: colors.border, flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' },
   lampDot: { width: 3, height: 3, margin: 0.5, backgroundColor: '#FFF6C0' },
-  // 중앙 전광판
-  boardWrap: { position: 'absolute', left: 0, right: 0, bottom: 70, alignItems: 'center' },
+  // 중앙 전광판 (관중석 위쪽 중앙)
+  boardWrap: { position: 'absolute', left: 0, right: 0, top: -30, alignItems: 'center' },
   board: { width: 104, paddingVertical: 4, paddingHorizontal: 6, backgroundColor: '#14140F', borderWidth: 3, borderColor: colors.border, alignItems: 'center' },
   boardLabel: { marginBottom: 3 },
   ledRow: { flexDirection: 'row', gap: 3 },
   led: { width: 5, height: 5, borderRadius: 1 },
   legs: { flexDirection: 'row', gap: 40 },
   leg: { width: 4, height: 14, backgroundColor: '#454545' },
+  // 관중석
   stands: { height: 40, backgroundColor: STANDS, flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', paddingHorizontal: 4, overflow: 'hidden' },
   dot: { width: 4, height: 4, borderRadius: 2, marginHorizontal: 2, marginVertical: 1 },
+  // 외야 펜스
   wall: { height: 16, backgroundColor: WALL, borderBottomWidth: 3, borderColor: colors.border },
-  grass: { flex: 1, flexDirection: 'row' },
+  // 그라운드(잔디 줄무늬 배경 + 내야 다이아몬드)
+  ground: { height: 120, position: 'relative', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' },
+  grassStripes: { position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, flexDirection: 'row' },
   stripe: { flex: 1, height: '100%' },
+  diamondWrap: { width: 100, height: 100, position: 'relative' },
+  diamondDirt: { position: 'absolute', top: 15, left: 15, width: 70, height: 70, backgroundColor: DIRT, borderWidth: 2, borderColor: DIRT_LINE, transform: [{ rotate: '45deg' }] },
+  infieldGrass: { position: 'absolute', top: 32, left: 32, width: 36, height: 36, backgroundColor: GRASS2, transform: [{ rotate: '45deg' }] },
+  mound: { position: 'absolute', top: 44, left: 44, width: 12, height: 12, borderRadius: 6, backgroundColor: DIRT, borderWidth: 1, borderColor: DIRT_LINE, alignItems: 'center', justifyContent: 'center' },
+  rubber: { width: 4, height: 2, backgroundColor: '#F4ECD8' },
+  base: { position: 'absolute', width: 8, height: 8, backgroundColor: '#F4ECD8', borderWidth: 1, borderColor: colors.border },
+  baseTop: { top: -4, left: 46 },
+  baseRight: { right: -4, top: 46 },
+  baseLeft: { left: -4, top: 46 },
+  homePlate: { position: 'absolute', bottom: -5, left: 45, width: 10, height: 10, backgroundColor: '#FFFFFF', borderWidth: 1, borderColor: colors.border },
   sparkBig: { fontSize: 26 },
   sparkL: { position: 'absolute', left: '12%', top: '18%', fontSize: 22 },
   sparkR: { position: 'absolute', right: '14%', top: '30%', fontSize: 16 },
