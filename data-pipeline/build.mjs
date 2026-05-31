@@ -193,6 +193,13 @@ async function main() {
   const stByName = Object.fromEntries(standings.map(s => [s.name, s]));
   console.log(`[build] games=${rawGames.length} standings=${standings.length} pitchers=${Object.keys(pmap).length}`);
 
+  // freeze: 직전 산출물의 꿀잼지수를 읽어, 이미 시작된 경기는 '경기 전 값'을 유지(드리프트 방지)
+  const prevHonjam = {};
+  try {
+    const prev = JSON.parse(fs.readFileSync(path.join(OUT_DIR, 'games.json'), 'utf8'));
+    for (const g of prev.games || []) if (g.gameId && g.honjam) prevHonjam[g.gameId] = g.honjam;
+  } catch { /* 직전 산출물 없음(첫 실행/새 날짜) → 신규 계산 */ }
+
   const games = rawGames.map(g => {
     const awName = g.AWAY_NM.trim(), hmName = g.HOME_NM.trim();
     const sa = stByName[awName], sh = stByName[hmName];
@@ -203,7 +210,11 @@ async function main() {
     const aScore = hasScore ? +g.T_SCORE_CN : null;
     const bScore = hasScore ? +g.B_SCORE_CN : null;
     let honjam = null;
-    if (sa && sh) honjam = computeHonjam(awName, hmName, sa, sh, aPit, hPit, aStat?.era ?? LEAGUE_ERA, hStat?.era ?? LEAGUE_ERA, h2h[awName]?.[hmName] ?? null);
+    if (status !== 'SCHEDULED' && prevHonjam[g.G_ID]) {
+      honjam = prevHonjam[g.G_ID]; // 경기 시작 후엔 경기 전 꿀잼지수 고정
+    } else if (sa && sh) {
+      honjam = computeHonjam(awName, hmName, sa, sh, aPit, hPit, aStat?.era ?? LEAGUE_ERA, hStat?.era ?? LEAGUE_ERA, h2h[awName]?.[hmName] ?? null);
+    }
     const starter = (name, st) => name ? { name, era: st?.era ?? null, w: st?.w ?? null, l: st?.l ?? null } : null;
     let live = null;
     if (status === 'LIVE') {
