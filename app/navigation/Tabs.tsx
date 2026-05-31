@@ -6,6 +6,7 @@ import Standings from '../screens/Standings';
 import MyTeam from '../screens/MyTeam';
 import Settings from '../screens/Settings';
 import { colors, fonts, border } from '../theme';
+import { isKstMonday } from '../utils';
 
 const Tab = createBottomTabNavigator<TabParamList>();
 
@@ -18,6 +19,7 @@ const icon = (glyph: string) => ({ focused, color }: { focused: boolean; color: 
 );
 
 export default function Tabs() {
+  const monday = isKstMonday(); // 월요일엔 첫 탭이 '월요 리포트'로
   return (
     <Tab.Navigator
       screenOptions={{
@@ -32,7 +34,7 @@ export default function Tabs() {
         tabBarInactiveTintColor: colors.textDim,
       }}
     >
-      <Tab.Screen name="Today" component={Today} options={{ title: '오늘경기', tabBarIcon: icon('⚾') }} />
+      <Tab.Screen name="Today" component={Today} options={{ title: monday ? '월요 리포트' : '오늘경기', tabBarIcon: icon(monday ? '📋' : '⚾') }} />
       <Tab.Screen name="Standings" component={Standings} options={{ title: '순위', tabBarIcon: icon('📊') }} />
       <Tab.Screen name="MyTeam" component={MyTeam} options={{ title: '내 팀', tabBarIcon: icon('★') }} />
       <Tab.Screen name="Settings" component={Settings} options={{ title: '설정', tabBarIcon: icon('⚙') }} />

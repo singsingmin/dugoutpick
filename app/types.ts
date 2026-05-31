@@ -103,6 +103,16 @@ export interface RecentData {
   recent: Record<string, RecentGame[]>; // 팀코드 → 최근 경기(오래된→최신)
 }
 
+// 월요 리포트
+export interface ReportPastGame { date: string; away: string; home: string; aScore: number; bScore: number; actual: number; }
+export interface ReportUpcomingGame { date: string; away: string; home: string; pred: number; }
+export interface TeamWeekRecord { w: number; l: number; d: number; }
+export interface ReportData {
+  updatedAt: string;
+  lastWeek: { range: [string, string]; top: ReportPastGame[]; team: Record<string, TeamWeekRecord> };
+  thisWeek: { range: [string, string]; top: ReportUpcomingGame[]; team: Record<string, { date: string; away: string; home: string }[]> };
+}
+
 export interface TeamsData {
   teams: Team[];
 }

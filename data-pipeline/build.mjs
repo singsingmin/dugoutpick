@@ -4,7 +4,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { TEAMS, byName } from './teams.mjs';
+import { TEAMS, byName, byCode } from './teams.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const OUT_DIR = path.join(__dirname, 'output');
@@ -77,7 +77,7 @@ async function fetchStandings() {
   return { standings, h2h };
 }
 
-// 최근 경기(스케줄)에서 팀별 최근 N경기 W/L·득실 추출 → 폼 타임라인용
+// 월별 스케줄(종료+예정 모두). gameId로 날짜·팀코드, play셀로 점수.
 async function fetchMonthSchedule(year, month) {
   const res = await fetch('https://www.koreabaseball.com/ws/Schedule.asmx/GetScheduleList', {
     method: 'POST',
@@ -94,29 +94,35 @@ async function fetchMonthSchedule(year, month) {
     const play = cells.find(c => c.Class === 'play');
     if (!play) continue;
     const nums = [...String(play.Text).matchAll(/class="(?:win|lose)"[^>]*>(\d+)</g)];
-    if (nums.length < 2) continue; // 점수 없으면 미종료 → 제외
-    out.push({ date: gid.slice(0, 8), away: gid.slice(8, 10), home: gid.slice(10, 12), aS: +nums[0][1], hS: +nums[1][1] });
+    const finished = nums.length >= 2;
+    out.push({ date: gid.slice(0, 8), away: gid.slice(8, 10), home: gid.slice(10, 12), aS: finished ? +nums[0][1] : null, hS: finished ? +nums[1][1] : null, finished });
   }
   return out;
 }
 
-async function fetchRecent(date) {
+// 지난달+이번달 스케줄(주간 리포트·최근경기 공용 소스)
+async function fetchSchedule2mo(date) {
   const y = date.slice(0, 4), m = date.slice(4, 6);
   const prevM = +m - 1;
   const months = prevM >= 1 ? [[y, String(prevM).padStart(2, '0')], [y, m]] : [[String(+y - 1), '12'], [y, m]];
   let all = [];
   for (const [yy, mm] of months) all = all.concat(await fetchMonthSchedule(yy, mm));
-  all.sort((a, b) => a.date.localeCompare(b.date));
+  return all.sort((a, b) => a.date.localeCompare(b.date));
+}
+
+// 팀별 최근 N경기 W/L·득실 (폼 타임라인용) — 종료 경기만
+function buildRecent(schedule) {
   const byTeam = {};
-  const add = (code, oppCode, isHome, sf, sa, date2) => {
+  const add = (code, oppCode, isHome, sf, sa, date) => {
     const result = sf > sa ? 'W' : sf < sa ? 'L' : 'D';
-    (byTeam[code] ||= []).push({ date: date2, oppCode, isHome, sf, sa, result });
+    (byTeam[code] ||= []).push({ date, oppCode, isHome, sf, sa, result });
   };
-  for (const g of all) {
+  for (const g of schedule) {
+    if (!g.finished) continue;
     add(g.away, g.home, false, g.aS, g.hS, g.date);
     add(g.home, g.away, true, g.hS, g.aS, g.date);
   }
-  for (const k of Object.keys(byTeam)) byTeam[k] = byTeam[k].slice(-10); // 최근 10경기
+  for (const k of Object.keys(byTeam)) byTeam[k] = byTeam[k].slice(-10);
   return byTeam;
 }
 
@@ -237,19 +243,77 @@ function liveLabel(inning, half, scoreDiff) {
   return `${inn} ${scoreDiff}점차`;
 }
 
+// ---------------- 월요 리포트 ----------------
+// 주(KST, 월~일) 경계 계산
+function weekBounds(ymd) {
+  const d = new Date(Date.UTC(+ymd.slice(0, 4), +ymd.slice(4, 6) - 1, +ymd.slice(6, 8)));
+  const offset = (d.getUTCDay() + 6) % 7; // 월요일까지 일수 (0=일)
+  const fmt = (x) => `${x.getUTCFullYear()}${String(x.getUTCMonth() + 1).padStart(2, '0')}${String(x.getUTCDate()).padStart(2, '0')}`;
+  const thisMon = new Date(d); thisMon.setUTCDate(d.getUTCDate() - offset);
+  const thisSun = new Date(thisMon); thisSun.setUTCDate(thisMon.getUTCDate() + 6);
+  const lastMon = new Date(thisMon); lastMon.setUTCDate(thisMon.getUTCDate() - 7);
+  const lastSun = new Date(thisMon); lastSun.setUTCDate(thisMon.getUTCDate() - 1);
+  return { thisMon: fmt(thisMon), thisSun: fmt(thisSun), lastMon: fmt(lastMon), lastSun: fmt(lastSun) };
+}
+
+// 주간 '실제 꿀잼' 근사 — 스케줄엔 이닝/끝내기 없음 → 박빙+득점만(예측과 같은 보정)
+function weeklyActual(aS, bS) {
+  return calibrate(75 * Math.max(0, 1 - Math.abs(aS - bS) / 7) + 25 * Math.min(1, (aS + bS) / 16));
+}
+
+function buildReport(date, schedule, standings) {
+  const wb = weekBounds(date);
+  const stByName = Object.fromEntries(standings.map(s => [s.name, s]));
+  const inRange = (d, a, b) => d >= a && d <= b;
+
+  // 지난주: 종료 경기 → 실제 꿀잼 TOP3 + 팀별 성적
+  const lastGames = schedule.filter(g => g.finished && inRange(g.date, wb.lastMon, wb.lastSun));
+  const lastTop = lastGames
+    .map(g => ({ date: g.date, away: g.away, home: g.home, aScore: g.aS, bScore: g.hS, actual: weeklyActual(g.aS, g.hS) }))
+    .sort((x, y) => y.actual - x.actual).slice(0, 3);
+  const lastTeam = {};
+  const reg = (code, sf, sa) => { const t = (lastTeam[code] ||= { w: 0, l: 0, d: 0 }); if (sf > sa) t.w++; else if (sf < sa) t.l++; else t.d++; };
+  for (const g of lastGames) { reg(g.away, g.aS, g.hS); reg(g.home, g.hS, g.aS); }
+
+  // 이번주: 예정 포함 → 근사 꿀잼(선발 없이) TOP3 + 팀별 일정
+  const thisGames = schedule.filter(g => inRange(g.date, wb.thisMon, wb.thisSun));
+  const predFor = (g) => {
+    const aw = byCode[g.away]?.name, hm = byCode[g.home]?.name;
+    const sa = stByName[aw], sh = stByName[hm];
+    if (!sa || !sh) return null;
+    return computeHonjam(aw, hm, sa, sh, '', '', LEAGUE_ERA, LEAGUE_ERA, null).score; // 선발 미정 → 근사
+  };
+  const thisTop = thisGames
+    .map(g => ({ date: g.date, away: g.away, home: g.home, pred: predFor(g) }))
+    .filter(x => x.pred != null).sort((x, y) => y.pred - x.pred).slice(0, 3);
+  const thisTeam = {};
+  for (const g of thisGames) {
+    const item = { date: g.date, away: g.away, home: g.home };
+    (thisTeam[g.away] ||= []).push(item);
+    (thisTeam[g.home] ||= []).push(item);
+  }
+
+  return {
+    lastWeek: { range: [wb.lastMon, wb.lastSun], top: lastTop, team: lastTeam },
+    thisWeek: { range: [wb.thisMon, wb.thisSun], top: thisTop, team: thisTeam },
+  };
+}
+
 // ---------------- Build ----------------
 async function main() {
   const date = process.argv[2] || kstToday();
   console.log(`[build] date=${date}`);
 
-  const [rawGames, { standings, h2h }, pmap, recent] = await Promise.all([
+  const [rawGames, { standings, h2h }, pmap, schedule] = await Promise.all([
     fetchGames(date),
     fetchStandings(),
     fetchPitcherStats(),
-    fetchRecent(date).catch(() => ({})), // 최근경기 실패해도 빌드 계속
+    fetchSchedule2mo(date).catch(() => []), // 스케줄 실패해도 빌드 계속
   ]);
   const stByName = Object.fromEntries(standings.map(s => [s.name, s]));
-  console.log(`[build] games=${rawGames.length} standings=${standings.length} pitchers=${Object.keys(pmap).length} recentTeams=${Object.keys(recent).length}`);
+  const recent = buildRecent(schedule);
+  const report = buildReport(date, schedule, standings);
+  console.log(`[build] games=${rawGames.length} standings=${standings.length} pitchers=${Object.keys(pmap).length} recentTeams=${Object.keys(recent).length} reportGames(this/last)=${report.thisWeek.top.length}/${report.lastWeek.top.length}`);
 
   // freeze: 직전 산출물의 꿀잼지수를 읽어, 이미 시작된 경기는 '경기 전 값'을 유지(드리프트 방지)
   const prevHonjam = {};
@@ -325,8 +389,9 @@ async function main() {
   fs.writeFileSync(path.join(OUT_DIR, 'standings.json'), JSON.stringify({ updatedAt, standings }, null, 2));
   fs.writeFileSync(path.join(OUT_DIR, 'teams.json'), JSON.stringify({ teams: TEAMS }, null, 2));
   fs.writeFileSync(path.join(OUT_DIR, 'recent.json'), JSON.stringify({ updatedAt, recent }, null, 2));
+  fs.writeFileSync(path.join(OUT_DIR, 'report.json'), JSON.stringify({ updatedAt, ...report }, null, 2));
 
-  console.log(`[build] wrote games.json (${games.length}), standings.json (${standings.length}), teams.json (${TEAMS.length}), recent.json (${Object.keys(recent).length} teams)`);
+  console.log(`[build] wrote games/standings/teams/recent/report.json`);
   console.log(`[build] 추천경기: ${recommendedGameId}`);
 }
 

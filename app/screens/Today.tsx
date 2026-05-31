@@ -13,7 +13,8 @@ import LiveCard from '../components/LiveCard';
 import ScreenHeader from '../components/ScreenHeader';
 import SectionLabel from '../components/SectionLabel';
 import PixelText from '../components/PixelText';
-import { formatUpdatedAt } from '../utils';
+import MondayReport from '../components/MondayReport';
+import { formatUpdatedAt, isKstMonday } from '../utils';
 import { colors, spacing } from '../theme';
 
 type Nav = NativeStackNavigationProp<RootStackParamList>;
@@ -36,6 +37,16 @@ export default function Today() {
   }, []);
 
   const open = (gameId: string) => navigation.navigate('GameDetail', { gameId });
+
+  // 월요일: 오늘경기 탭이 '월요 리포트'로 전환
+  if (isKstMonday()) {
+    return (
+      <SafeAreaView style={styles.safe} edges={['top']}>
+        <ScreenHeader title="월요 리포트" leftIcon="📋" />
+        <MondayReport />
+      </SafeAreaView>
+    );
+  }
 
   return (
     <SafeAreaView style={styles.safe} edges={['top']}>
