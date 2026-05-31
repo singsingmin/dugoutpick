@@ -1,12 +1,12 @@
-// 내 팀 탭 (피드형 세로 스크롤): ① 오늘 경기 ② 현재 순위 ③ 최근 흐름. (flow.md, ADR-010)
+// 내 팀 탭 (피드형): 오늘 경기 + 순위/승무패·최근폼·홈원정·상대전적 차트. (ADR-010)
 import { useCallback, useState } from 'react';
 import { View, ScrollView, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useFocusEffect, useNavigation } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/types';
-import type { Game, Standing } from '../types';
-import { loadGames, loadStandings, loadTeams } from '../data/load';
+import type { Game, Standing, RecentGame } from '../types';
+import { loadGames, loadStandings, loadRecent, loadTeams } from '../data/load';
 import { getCheerTeam } from '../data/team';
 import PixelText from '../components/PixelText';
 import Panel from '../components/Panel';
@@ -14,6 +14,7 @@ import TeamBadge from '../components/TeamBadge';
 import GameCard from '../components/GameCard';
 import ScreenHeader from '../components/ScreenHeader';
 import SectionLabel from '../components/SectionLabel';
+import { RankLadder, WLDBar, HomeAwayBars, H2HList, FormDots } from '../components/charts';
 import { colors, spacing } from '../theme';
 
 type Nav = NativeStackNavigationProp<RootStackParamList>;
@@ -24,6 +25,7 @@ export default function MyTeam() {
   const [code, setCode] = useState<string | null>(null);
   const [game, setGame] = useState<Game | null>(null);
   const [standing, setStanding] = useState<Standing | null>(null);
+  const [recent, setRecent] = useState<RecentGame[]>([]);
   const [loaded, setLoaded] = useState(false);
 
   useFocusEffect(
@@ -31,11 +33,12 @@ export default function MyTeam() {
       let active = true;
       (async () => {
         const c = await getCheerTeam();
-        const [g, s] = await Promise.all([loadGames(), loadStandings()]);
+        const [g, s, r] = await Promise.all([loadGames(), loadStandings(), loadRecent()]);
         if (!active) return;
         setCode(c);
         setGame(g.games.find((x) => x.away.code === c || x.home.code === c) ?? null);
         setStanding(s.standings.find((x) => x.code === c) ?? null);
+        setRecent(c ? r.recent[c] ?? [] : []);
         setLoaded(true);
       })();
       return () => { active = false; };
@@ -43,6 +46,7 @@ export default function MyTeam() {
   );
 
   const team = code ? TEAMS.find((t) => t.code === code) : undefined;
+  const accent = team?.color ?? colors.accent;
 
   return (
     <SafeAreaView style={styles.safe} edges={['top']}>
@@ -55,9 +59,10 @@ export default function MyTeam() {
         <ScrollView contentContainerStyle={styles.content}>
           <View style={styles.teamHead}>
             <TeamBadge code={code} size="md" />
-            <PixelText variant="title" color={team?.color ?? colors.accent}>{team?.fullName ?? code}</PixelText>
+            <PixelText variant="title" color={accent}>{team?.fullName ?? code}</PixelText>
           </View>
 
+          {/* 오늘 경기 */}
           <View style={styles.section}>
             <SectionLabel icon="⚾" label="오늘 경기" />
             {game ? (
@@ -67,33 +72,55 @@ export default function MyTeam() {
             )}
           </View>
 
+          {/* 현재 순위 + 승무패 */}
           <View style={styles.section}>
             <SectionLabel icon="📊" label="현재 순위" />
             {standing ? (
               <Panel accentColor={team?.color}>
-                <PixelText variant="hero" color={team?.color ?? colors.text}>{standing.rank}위</PixelText>
-                <PixelText variant="body" style={styles.statLine}>
-                  {standing.win}승 {standing.draw}무 {standing.loss}패 · 승률 {standing.winRate.toFixed(3)}
-                </PixelText>
-                <PixelText variant="caption" color={colors.textDim}>게임차 {standing.gamesBehind} · {standing.games}경기</PixelText>
+                <View style={styles.rankHead}>
+                  <PixelText variant="hero" color={accent}>{standing.rank}위</PixelText>
+                  <PixelText variant="caption" color={colors.textDim}>승률 {standing.winRate.toFixed(3)} · 게임차 {standing.gamesBehind} · {standing.games}경기</PixelText>
+                </View>
+                <RankLadder rank={standing.rank} color={accent} />
+                <View style={styles.chartGap}>
+                  <WLDBar win={standing.win} draw={standing.draw} loss={standing.loss} />
+                </View>
               </Panel>
             ) : (
               <Panel><PixelText variant="body" color={colors.textDim}>순위 정보 없음</PixelText></Panel>
             )}
           </View>
 
+          {/* 최근 흐름 */}
           <View style={styles.section}>
             <SectionLabel icon="🔥" label="최근 흐름" />
-            {standing ? (
-              <Panel>
-                <PixelText variant="body">최근 10경기 {standing.last10}</PixelText>
+            <Panel>
+              {recent.length > 0 ? (
+                <FormDots games={recent} />
+              ) : (
+                <PixelText variant="body" color={colors.textDim}>최근 경기 기록 없음</PixelText>
+              )}
+              {standing && (
                 <PixelText variant="body" color={streakColor(standing.streak)} style={styles.statLine}>현재 {standing.streak}</PixelText>
-                <PixelText variant="caption" color={colors.textDim}>홈 {standing.home} · 방문 {standing.away} (승-무-패)</PixelText>
-              </Panel>
-            ) : (
-              <Panel><PixelText variant="body" color={colors.textDim}>기록 없음</PixelText></Panel>
-            )}
+              )}
+            </Panel>
           </View>
+
+          {/* 홈/원정 */}
+          {standing && (
+            <View style={styles.section}>
+              <SectionLabel icon="🏠" label="홈 · 원정" />
+              <Panel><HomeAwayBars home={standing.home} away={standing.away} /></Panel>
+            </View>
+          )}
+
+          {/* 상대전적 */}
+          {standing && standing.vs && Object.keys(standing.vs).length > 0 && (
+            <View style={styles.section}>
+              <SectionLabel icon="🆚" label="상대 전적" />
+              <Panel><H2HList vs={standing.vs} /></Panel>
+            </View>
+          )}
         </ScrollView>
       )}
     </SafeAreaView>
@@ -112,5 +139,7 @@ const styles = StyleSheet.create({
   content: { padding: spacing.md },
   teamHead: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, marginBottom: spacing.md },
   section: { marginBottom: spacing.lg },
-  statLine: { marginTop: spacing.xs },
+  rankHead: { flexDirection: 'row', alignItems: 'baseline', gap: spacing.sm, marginBottom: spacing.sm, flexWrap: 'wrap' },
+  chartGap: { marginTop: spacing.sm },
+  statLine: { marginTop: spacing.sm },
 });

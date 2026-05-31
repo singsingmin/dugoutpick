@@ -2,15 +2,17 @@
 // 원격 실패 시 캐시 → 번들 순으로 폴백 (오프라인 생존, ADR-002).
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { REMOTE_BASE_URL } from './config';
-import type { GamesData, StandingsData, TeamsData } from '../types';
+import type { GamesData, StandingsData, TeamsData, RecentData } from '../types';
 import gamesJson from '../assets/data/games.json';
 import standingsJson from '../assets/data/standings.json';
 import teamsJson from '../assets/data/teams.json';
+import recentJson from '../assets/data/recent.json';
 
 // JSON import는 넓은 타입으로 추론되므로 unknown 경유로 단언.
 const bundledGames = gamesJson as unknown as GamesData;
 const bundledStandings = standingsJson as unknown as StandingsData;
 const bundledTeams = teamsJson as unknown as TeamsData;
+const bundledRecent = recentJson as unknown as RecentData;
 
 async function loadJson<T>(fileName: string, cacheKey: string, fallback: T): Promise<T> {
   if (!REMOTE_BASE_URL) return fallback;
@@ -41,6 +43,10 @@ export function loadGames(): Promise<GamesData> {
 
 export function loadStandings(): Promise<StandingsData> {
   return loadJson<StandingsData>('standings.json', 'cache.standings', bundledStandings);
+}
+
+export function loadRecent(): Promise<RecentData> {
+  return loadJson<RecentData>('recent.json', 'cache.recent', bundledRecent);
 }
 
 // teams는 온보딩이 fetch 전에 필요하므로 항상 번들(동기) 사용.

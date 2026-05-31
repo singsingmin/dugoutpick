@@ -81,11 +81,26 @@ export interface Standing {
   streak: string;   // "2승" | "11패"
   home: string;     // "18-0-10" (승-무-패)
   away: string;
+  vs: Record<string, string>; // 상대팀코드 → "승-패-무"
 }
 
 export interface StandingsData {
   updatedAt: string;
   standings: Standing[];
+}
+
+export interface RecentGame {
+  date: string;
+  oppCode: string;
+  isHome: boolean;
+  sf: number;            // 득점(우리 팀)
+  sa: number;            // 실점
+  result: 'W' | 'L' | 'D';
+}
+
+export interface RecentData {
+  updatedAt: string;
+  recent: Record<string, RecentGame[]>; // 팀코드 → 최근 경기(오래된→최신)
 }
 
 export interface TeamsData {

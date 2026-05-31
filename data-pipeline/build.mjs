@@ -64,7 +64,60 @@ async function fetchStandings() {
     }
   }
 
+  // 각 팀 standing에 상대전적(코드별) 부착: vs[상대코드] = "승-패-무"
+  for (const s of standings) {
+    s.vs = {};
+    const row = h2h[s.name] || {};
+    for (const [oppName, rec] of Object.entries(row)) {
+      const oc = byName[oppName]?.code;
+      if (oc) s.vs[oc] = rec;
+    }
+  }
+
   return { standings, h2h };
+}
+
+// 최근 경기(스케줄)에서 팀별 최근 N경기 W/L·득실 추출 → 폼 타임라인용
+async function fetchMonthSchedule(year, month) {
+  const res = await fetch('https://www.koreabaseball.com/ws/Schedule.asmx/GetScheduleList', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8', 'Referer': 'https://www.koreabaseball.com/Schedule/Schedule.aspx', 'User-Agent': UA },
+    body: `leId=1&srIdList=0,9,6&teamId=&date=${year}${month}01&seasonId=${year}&gameYear=${year}&gameMonth=${month}`,
+  });
+  if (!res.ok) return [];
+  const j = await res.json();
+  const out = [];
+  for (const r of j.rows || []) {
+    const cells = r.row || [];
+    const gid = (cells.map(c => String(c.Text)).join(' ').match(/gameId=([0-9A-Z]+)/) || [])[1];
+    if (!gid || gid.length < 12) continue;
+    const play = cells.find(c => c.Class === 'play');
+    if (!play) continue;
+    const nums = [...String(play.Text).matchAll(/class="(?:win|lose)"[^>]*>(\d+)</g)];
+    if (nums.length < 2) continue; // 점수 없으면 미종료 → 제외
+    out.push({ date: gid.slice(0, 8), away: gid.slice(8, 10), home: gid.slice(10, 12), aS: +nums[0][1], hS: +nums[1][1] });
+  }
+  return out;
+}
+
+async function fetchRecent(date) {
+  const y = date.slice(0, 4), m = date.slice(4, 6);
+  const prevM = +m - 1;
+  const months = prevM >= 1 ? [[y, String(prevM).padStart(2, '0')], [y, m]] : [[String(+y - 1), '12'], [y, m]];
+  let all = [];
+  for (const [yy, mm] of months) all = all.concat(await fetchMonthSchedule(yy, mm));
+  all.sort((a, b) => a.date.localeCompare(b.date));
+  const byTeam = {};
+  const add = (code, oppCode, isHome, sf, sa, date2) => {
+    const result = sf > sa ? 'W' : sf < sa ? 'L' : 'D';
+    (byTeam[code] ||= []).push({ date: date2, oppCode, isHome, sf, sa, result });
+  };
+  for (const g of all) {
+    add(g.away, g.home, false, g.aS, g.hS, g.date);
+    add(g.home, g.away, true, g.hS, g.aS, g.date);
+  }
+  for (const k of Object.keys(byTeam)) byTeam[k] = byTeam[k].slice(-10); // 최근 10경기
+  return byTeam;
 }
 
 async function fetchPitcherStats() {
@@ -189,9 +242,14 @@ async function main() {
   const date = process.argv[2] || kstToday();
   console.log(`[build] date=${date}`);
 
-  const [rawGames, { standings, h2h }, pmap] = await Promise.all([fetchGames(date), fetchStandings(), fetchPitcherStats()]);
+  const [rawGames, { standings, h2h }, pmap, recent] = await Promise.all([
+    fetchGames(date),
+    fetchStandings(),
+    fetchPitcherStats(),
+    fetchRecent(date).catch(() => ({})), // 최근경기 실패해도 빌드 계속
+  ]);
   const stByName = Object.fromEntries(standings.map(s => [s.name, s]));
-  console.log(`[build] games=${rawGames.length} standings=${standings.length} pitchers=${Object.keys(pmap).length}`);
+  console.log(`[build] games=${rawGames.length} standings=${standings.length} pitchers=${Object.keys(pmap).length} recentTeams=${Object.keys(recent).length}`);
 
   // freeze: 직전 산출물의 꿀잼지수를 읽어, 이미 시작된 경기는 '경기 전 값'을 유지(드리프트 방지)
   const prevHonjam = {};
@@ -266,8 +324,9 @@ async function main() {
   fs.writeFileSync(path.join(OUT_DIR, 'games.json'), JSON.stringify({ date, dateText: dt, updatedAt, recommendedGameId, games }, null, 2));
   fs.writeFileSync(path.join(OUT_DIR, 'standings.json'), JSON.stringify({ updatedAt, standings }, null, 2));
   fs.writeFileSync(path.join(OUT_DIR, 'teams.json'), JSON.stringify({ teams: TEAMS }, null, 2));
+  fs.writeFileSync(path.join(OUT_DIR, 'recent.json'), JSON.stringify({ updatedAt, recent }, null, 2));
 
-  console.log(`[build] wrote games.json (${games.length}), standings.json (${standings.length}), teams.json (${TEAMS.length})`);
+  console.log(`[build] wrote games.json (${games.length}), standings.json (${standings.length}), teams.json (${TEAMS.length}), recent.json (${Object.keys(recent).length} teams)`);
   console.log(`[build] 추천경기: ${recommendedGameId}`);
 }
 
