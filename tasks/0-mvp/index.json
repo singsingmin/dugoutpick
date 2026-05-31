@@ -6,7 +6,7 @@
   "created_at": "2026-05-31T09:35:00+0900",
   "phases": [
     { "phase": 0, "name": "scaffold", "status": "completed" },
-    { "phase": 1, "name": "data-nav", "status": "pending" },
+    { "phase": 1, "name": "data-nav", "status": "completed" },
     { "phase": 2, "name": "ui-kit", "status": "pending" },
     { "phase": 3, "name": "onboarding", "status": "pending" },
     { "phase": 4, "name": "today", "status": "pending" },

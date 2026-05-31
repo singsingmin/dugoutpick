@@ -1,0 +1,21 @@
+// 네비게이션 파라미터 타입 (flow.md와 1:1).
+export type RootStackParamList = {
+  Splash: undefined;
+  Onboarding: undefined;
+  Tabs: undefined;
+  GameDetail: { gameId: string };
+};
+
+export type TabParamList = {
+  Today: undefined;
+  MyTeam: undefined;
+  Settings: undefined;
+};
+
+// 전역 navigation 타입 보강 (useNavigation 등에서 타입 추론).
+declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
+  namespace ReactNavigation {
+    interface RootParamList extends RootStackParamList {}
+  }
+}
