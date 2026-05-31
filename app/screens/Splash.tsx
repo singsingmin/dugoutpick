@@ -1,41 +1,56 @@
-// 스플래시: 픽셀 로고 표시 후 응원팀 유무로 분기 (flow.md).
-import { useEffect } from 'react';
+// 스플래시/랜딩: 픽셀 로고 + 야구공 + 말풍선. 기존 응원팀 있으면 자동 진입, 없으면 '시작하기'→온보딩.
+import { useEffect, useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/types';
 import PixelText from '../components/PixelText';
+import Panel from '../components/Panel';
+import PixelButton from '../components/PixelButton';
 import { getCheerTeam } from '../data/team';
 import { colors, spacing } from '../theme';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Splash'>;
 
 export default function Splash({ navigation }: Props) {
+  const [showStart, setShowStart] = useState(false);
+
   useEffect(() => {
     let active = true;
-    const timer = setTimeout(async () => {
-      const team = await getCheerTeam();
+    getCheerTeam().then((team) => {
       if (!active) return;
-      navigation.replace(team ? 'Tabs' : 'Onboarding');
-    }, 800);
+      if (team) setTimeout(() => active && navigation.replace('Tabs'), 700); // 재방문자는 바로 진입
+      else setShowStart(true); // 신규: 랜딩 노출
+    });
     return () => {
       active = false;
-      clearTimeout(timer);
     };
   }, [navigation]);
 
   return (
     <View style={styles.container}>
-      {/* 텍스트 기반 8비트 로고 (이미지 금지, ADR-009) */}
-      <View style={styles.badge}>
-        <PixelText variant="caption" color={colors.bg}>⚾ KBO</PixelText>
+      <View style={styles.logoRow}>
+        <PixelText variant="hero" color={colors.text}>오늘</PixelText>
+        <PixelText variant="hero" color={colors.bad}>야구</PixelText>
+        <PixelText variant="hero" color={colors.text}>각</PixelText>
       </View>
-      <PixelText variant="hero" color={colors.accent}>오늘야구각</PixelText>
-      <PixelText variant="caption" color={colors.textDim}>오늘 뭐 볼까?</PixelText>
+
+      <PixelText style={styles.ball}>⚾</PixelText>
+
+      <Panel style={styles.bubble}>
+        <PixelText variant="body">오늘 KBO, 볼 각인가?</PixelText>
+      </Panel>
+
+      {showStart && (
+        <PixelButton label="시작하기 ▶" onPress={() => navigation.replace('Onboarding')} style={styles.cta} />
+      )}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: colors.bg, alignItems: 'center', justifyContent: 'center', gap: spacing.sm },
-  badge: { backgroundColor: colors.accent, paddingHorizontal: spacing.sm, paddingVertical: 2, marginBottom: spacing.xs },
+  container: { flex: 1, backgroundColor: colors.bg, alignItems: 'center', justifyContent: 'center', gap: spacing.lg, padding: spacing.lg },
+  logoRow: { flexDirection: 'row' },
+  ball: { fontSize: 72 },
+  bubble: { alignItems: 'center' },
+  cta: { alignSelf: 'stretch', marginTop: spacing.sm },
 });

@@ -1,4 +1,4 @@
-// 오늘경기 탭: 추천 히어로(최상단) + 나머지 경기(꿀잼 높은 순). (flow.md, ADR-004)
+// 오늘경기 탭: 그린 헤더 + 추천 히어로 + 나머지 경기(꿀잼 높은 순). (flow.md, ADR-004)
 import { useEffect, useState } from 'react';
 import { View, ScrollView, ActivityIndicator, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -8,6 +8,8 @@ import type { RootStackParamList } from '../navigation/types';
 import type { GamesData, Game } from '../types';
 import { loadGames } from '../data/load';
 import GameCard from '../components/GameCard';
+import ScreenHeader from '../components/ScreenHeader';
+import SectionLabel from '../components/SectionLabel';
 import PixelText from '../components/PixelText';
 import { colors, spacing } from '../theme';
 
@@ -30,47 +32,48 @@ export default function Today() {
 
   const open = (gameId: string) => navigation.navigate('GameDetail', { gameId });
 
-  if (failed) return <Centered text="데이터를 불러오지 못했다" />;
-  if (!data) {
-    return (
-      <View style={styles.center}>
-        <ActivityIndicator color={colors.accent} />
-      </View>
-    );
-  }
+  return (
+    <SafeAreaView style={styles.safe} edges={['top']}>
+      <ScreenHeader title="오늘 경기" leftIcon="⚾" rightIcon="📅" />
+      {failed ? (
+        <Centered text="데이터를 불러오지 못했다" />
+      ) : !data ? (
+        <View style={styles.center}><ActivityIndicator color={colors.accent} /></View>
+      ) : data.games.length === 0 ? (
+        <Centered text="오늘은 경기가 없다" />
+      ) : (
+        <Body data={data} open={open} />
+      )}
+    </SafeAreaView>
+  );
+}
 
-  const { games, recommendedGameId } = data;
-  if (games.length === 0) return <Centered text="오늘은 경기가 없다" />;
-
-  const recommended: Game | undefined = games.find((g) => g.gameId === recommendedGameId);
-  const rest = games
+function Body({ data, open }: { data: GamesData; open: (id: string) => void }) {
+  const recommended: Game | undefined = data.games.find((g) => g.gameId === data.recommendedGameId);
+  const rest = data.games
     .filter((g) => g.gameId !== recommended?.gameId)
     .sort((a, b) => (b.honjam?.score ?? -1) - (a.honjam?.score ?? -1));
 
   return (
-    <SafeAreaView style={styles.safe} edges={['top']}>
-      <ScrollView contentContainerStyle={styles.content}>
-        <PixelText variant="title" color={colors.accent}>오늘의 경기</PixelText>
-        <PixelText variant="caption" color={colors.textDim} style={styles.date}>
-          {data.dateText}
-        </PixelText>
+    <ScrollView contentContainerStyle={styles.content}>
+      <PixelText variant="caption" color={colors.textDim} style={styles.date}>{data.dateText}</PixelText>
 
-        {recommended && (
-          <View style={styles.heroWrap}>
-            <GameCard game={recommended} variant="hero" onPress={() => open(recommended.gameId)} />
-          </View>
-        )}
+      {recommended && (
+        <View style={styles.section}>
+          <SectionLabel icon="★" label="오늘의 추천 경기" />
+          <GameCard game={recommended} variant="hero" onPress={() => open(recommended.gameId)} />
+        </View>
+      )}
 
-        {rest.length > 0 && (
-          <PixelText variant="body" color={colors.textDim} style={styles.sectionTitle}>
-            다른 경기
-          </PixelText>
-        )}
-        {rest.map((g) => (
-          <GameCard key={g.gameId} game={g} variant="list" onPress={() => open(g.gameId)} />
-        ))}
-      </ScrollView>
-    </SafeAreaView>
+      {rest.length > 0 && (
+        <View style={styles.section}>
+          <SectionLabel label="다른 경기" />
+          {rest.map((g) => (
+            <GameCard key={g.gameId} game={g} variant="list" onPress={() => open(g.gameId)} />
+          ))}
+        </View>
+      )}
+    </ScrollView>
   );
 }
 
@@ -84,9 +87,8 @@ function Centered({ text }: { text: string }) {
 
 const styles = StyleSheet.create({
   safe: { flex: 1, backgroundColor: colors.bg },
-  content: { padding: spacing.md, gap: spacing.xs },
+  content: { padding: spacing.md },
   center: { flex: 1, backgroundColor: colors.bg, alignItems: 'center', justifyContent: 'center' },
   date: { marginBottom: spacing.md },
-  heroWrap: { marginBottom: spacing.lg },
-  sectionTitle: { marginBottom: spacing.sm },
+  section: { marginBottom: spacing.lg },
 });

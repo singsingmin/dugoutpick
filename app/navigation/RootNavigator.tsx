@@ -13,9 +13,10 @@ export default function RootNavigator() {
     <Stack.Navigator
       initialRouteName="Splash"
       screenOptions={{
-        headerStyle: { backgroundColor: colors.bg },
-        headerTintColor: colors.text,
+        headerStyle: { backgroundColor: colors.accent },
+        headerTintColor: colors.onGreen,
         headerTitleStyle: { fontFamily: fonts.pixel },
+        headerTitleAlign: 'center',
         contentStyle: { backgroundColor: colors.bg },
       }}
     >

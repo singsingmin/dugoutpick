@@ -1,11 +1,12 @@
 // 경기 카드 (리스트/히어로 공용). 꿀잼지수·이유는 game.honjam 그대로 표시(ADR-004/005).
+// 목업 스타일: 팀명=팀색 텍스트, 추천=골드 배지, 리스트=그린 점수 박스.
 import { Pressable, View, StyleSheet } from 'react-native';
 import type { Game } from '../types';
 import PixelText from './PixelText';
 import Panel from './Panel';
-import TeamBadge from './TeamBadge';
+import TeamName from './TeamName';
 import HonjamBadge from './HonjamBadge';
-import { colors, honjamColor, spacing } from '../theme';
+import { colors, spacing } from '../theme';
 
 interface Props {
   game: Game;
@@ -15,41 +16,41 @@ interface Props {
 
 export default function GameCard({ game, variant, onPress }: Props) {
   const hero = variant === 'hero';
-  const accent = game.honjam ? honjamColor(game.honjam.score) : colors.border;
   const final = game.status === 'FINAL';
   const canceled = game.status === 'CANCELED';
+  const tv = hero ? 'hero' : 'body';
 
-  // 양팀 표시: 점수(FINAL) 또는 'vs'
-  const middle = canceled ? '취소' : final ? `${game.away.score ?? '-'} : ${game.home.score ?? '-'}` : 'vs';
+  const middle = canceled ? (
+    <PixelText variant="body" color={colors.bad}>취소</PixelText>
+  ) : final ? (
+    <PixelText variant={hero ? 'hero' : 'body'} color={colors.text}>
+      {game.away.score ?? '-'} : {game.home.score ?? '-'}
+    </PixelText>
+  ) : (
+    <PixelText variant={hero ? 'title' : 'body'} color={colors.textDim} style={styles.vs}>vs</PixelText>
+  );
 
   const matchup = (
     <View style={styles.matchup}>
-      <TeamBadge code={game.away.code} size={hero ? 'md' : 'sm'} />
-      <PixelText variant={hero ? 'title' : 'body'} color={canceled ? colors.bad : colors.textDim} style={styles.mid}>
-        {middle}
-      </PixelText>
-      <TeamBadge code={game.home.code} size={hero ? 'md' : 'sm'} />
+      <TeamName code={game.away.code} variant={tv} />
+      {middle}
+      <TeamName code={game.home.code} variant={tv} />
     </View>
-  );
-
-  const meta = (
-    <PixelText variant="caption" color={colors.textDim}>
-      {game.time} · {game.stadium}
-    </PixelText>
   );
 
   if (hero) {
     return (
       <Pressable onPress={onPress}>
-        <Panel accentColor={accent} style={styles.hero}>
-          <PixelText variant="caption" color={accent}>★ 오늘의 추천</PixelText>
-          {game.honjam && (
-            <View style={styles.heroBadge}>
-              <HonjamBadge score={game.honjam.score} size="lg" />
+        <Panel style={styles.hero}>
+          <View style={styles.heroTop}>
+            <View style={styles.heroLeft}>
+              {matchup}
+              <PixelText variant="caption" color={colors.textDim} style={styles.meta}>
+                {game.time} · {game.stadium}
+              </PixelText>
             </View>
-          )}
-          {matchup}
-          {meta}
+            {game.honjam && <HonjamBadge score={game.honjam.score} size="lg" />}
+          </View>
           {game.honjam && (
             <PixelText variant="body" color={colors.text} style={styles.reasonHero}>
               {game.honjam.reason}
@@ -60,19 +61,12 @@ export default function GameCard({ game, variant, onPress }: Props) {
     );
   }
 
-  // list variant
+  // list variant — 한 줄: 팀명 vs 팀명 | 시간 | 점수박스
   return (
     <Pressable onPress={onPress}>
-      <Panel accentColor={accent} style={styles.list}>
-        <View style={styles.listLeft}>
-          {matchup}
-          {meta}
-          {game.honjam && (
-            <PixelText variant="caption" color={colors.textDim} numberOfLines={1} style={styles.reasonList}>
-              {game.honjam.reason}
-            </PixelText>
-          )}
-        </View>
+      <Panel style={styles.list}>
+        <View style={styles.listMatch}>{matchup}</View>
+        <PixelText variant="caption" color={colors.textDim} style={styles.listTime}>{game.time}</PixelText>
         {game.honjam && <HonjamBadge score={game.honjam.score} size="sm" />}
       </Panel>
     </Pressable>
@@ -80,12 +74,14 @@ export default function GameCard({ game, variant, onPress }: Props) {
 }
 
 const styles = StyleSheet.create({
-  hero: { gap: spacing.sm, alignItems: 'center' },
-  heroBadge: { marginVertical: spacing.xs },
-  reasonHero: { textAlign: 'center', marginTop: spacing.xs },
-  list: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: spacing.md, marginBottom: spacing.sm },
-  listLeft: { flex: 1, gap: spacing.xs },
-  matchup: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
-  mid: { marginHorizontal: spacing.xs },
-  reasonList: { marginTop: 2 },
+  hero: { gap: spacing.sm },
+  heroTop: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: spacing.md },
+  heroLeft: { flex: 1, gap: spacing.xs },
+  meta: { marginTop: spacing.xs },
+  reasonHero: { marginTop: spacing.xs },
+  list: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: spacing.sm, marginBottom: spacing.sm },
+  listMatch: { flex: 1 },
+  listTime: { minWidth: 44, textAlign: 'right' },
+  matchup: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, flexWrap: 'wrap' },
+  vs: { marginHorizontal: spacing.xs },
 });
