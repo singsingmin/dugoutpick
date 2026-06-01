@@ -57,7 +57,7 @@ export default function MondayReport() {
                   <PixelText variant="caption" color={colors.textDim} style={styles.rankCol}>{r.rank ? `${r.rank}위` : '-'}</PixelText>
                   <View style={styles.nameCol}><TeamName code={r.code} variant="body" /></View>
                   {mine && <PixelText variant="caption" color={colors.accent} style={styles.meTag}>내 팀</PixelText>}
-                  <PixelText variant="body" color={mine ? colors.text : colors.textDim} style={styles.recCol}>{r.w} / {r.d} / {r.l}</PixelText>
+                  <PixelText variant="body" color={mine ? colors.text : colors.textDim} style={styles.recCol} numberOfLines={1}>{r.w}/{r.d}/{r.l}</PixelText>
                 </View>
                 {r.note ? (
                   <PixelText variant="caption" color={mine ? colors.accent : colors.textDim} style={styles.noteLine}>{r.note}</PixelText>
