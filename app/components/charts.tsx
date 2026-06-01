@@ -87,12 +87,21 @@ export function H2HList({ vs }: { vs: Record<string, string> }) {
   );
 }
 
-// 최근 N경기 폼 — 결과 도트(오래된→최신)
-export function FormDots({ games }: { games: RecentGame[] }) {
+// 최근 N경기 폼 — 결과 도트(오래된→최신). compact: 작은 도트만(순위 탭 서브라인용).
+const dotColor = (r: string) => (r === 'W' ? colors.good : r === 'L' ? colors.bad : colors.textDim);
+export function FormDots({ games, compact = false }: { games: RecentGame[]; compact?: boolean }) {
+  if (compact) {
+    return (
+      <View style={s.miniRow}>
+        {games.map((g, i) => (
+          <View key={i} style={[s.formDotMini, { backgroundColor: dotColor(g.result) }]} />
+        ))}
+      </View>
+    );
+  }
   const w = games.filter((g) => g.result === 'W').length;
   const l = games.filter((g) => g.result === 'L').length;
   const d = games.length - w - l;
-  const dotColor = (r: string) => (r === 'W' ? colors.good : r === 'L' ? colors.bad : colors.textDim);
   return (
     <View>
       <View style={s.dotsRow}>
@@ -118,4 +127,6 @@ const s = StyleSheet.create({
   dotsRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 3, marginBottom: 4 },
   formDot: { width: 18, height: 18, borderRadius: 2, alignItems: 'center', justifyContent: 'center', borderWidth: 1, borderColor: colors.border },
   formDotTxt: { fontSize: 9 },
+  miniRow: { flexDirection: 'row', gap: 2 },
+  formDotMini: { width: 9, height: 9, borderRadius: 1, borderWidth: 1, borderColor: colors.border },
 });
