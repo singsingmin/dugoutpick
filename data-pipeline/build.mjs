@@ -147,7 +147,8 @@ const strength = (r) => (10 - r) / 9;
 const playoffRel = (r) => (r >= 4 && r <= 7 ? 1 : (r === 3 || r === 8 ? 0.5 : 0));
 const aceness = (era) => clamp01((5.0 - era) / 3.0);
 const LEAGUE_ERA = 4.20;
-const W = { close: 30, quality: 20, form: 15, rivalry: 10, playoff: 10, pitcher: 15 };
+// doom(멸망전): 둘 다 깊은 연패일 때 '연패 탈출 서사' 가산. 평소 경기는 0이라 기존 점수 불변(ADR-016).
+const W = { close: 30, quality: 20, form: 15, rivalry: 10, playoff: 10, pitcher: 15, doom: 18 };
 const calibrate = (raw) => Math.round(100 / (1 + Math.exp(-(raw - 45) / 10)));
 
 const rivKey = (a, b) => [a, b].sort().join('|');
@@ -164,13 +165,18 @@ const streakSigned = (s) => {
 function computeHonjam(aw, hm, sa, sh, aPit, hPit, aERA, hERA, h2hRec) {
   const a = { rank: sa.rank, wr: sa.winRate, gb: sa.gamesBehind, l10: last10Wins(sa.last10), streak: streakSigned(sa.streak) };
   const h = { rank: sh.rank, wr: sh.winRate, gb: sh.gamesBehind, l10: last10Wins(sh.last10), streak: streakSigned(sh.streak) };
+  // form은 '방향 무관 기세'(연승·연패 대칭, ADR-007): 최근10이 .500에서 멀수록 + 연속이 길수록.
+  const l10dev = (n) => Math.abs(n - 5) / 5;
+  // doom(멸망전): 둘 다 5연패 이상일 때, 더 얕은 쪽 연패 깊이로 강도 산정(누가 먼저 끊나 서사).
+  const loseDepth = Math.min(Math.max(0, -a.streak), Math.max(0, -h.streak));
   const parts = {
     close: clamp01(1 - Math.abs(a.wr - h.wr) / 0.15),
     quality: (strength(a.rank) + strength(h.rank)) / 2,
-    form: 0.6 * ((a.l10 + h.l10) / 20) + 0.4 * Math.min(1, Math.max(Math.abs(a.streak), Math.abs(h.streak)) / 7),
+    form: 0.6 * ((l10dev(a.l10) + l10dev(h.l10)) / 2) + 0.4 * Math.min(1, Math.max(Math.abs(a.streak), Math.abs(h.streak)) / 7),
     rivalry: RIVALRY[rivKey(aw, hm)] || 0,
     playoff: (playoffRel(a.rank) + playoffRel(h.rank)) / 2,
     pitcher: (aceness(aERA) + aceness(hERA)) / 2,
+    doom: loseDepth >= 5 ? clamp01((loseDepth - 3) / 7) : 0,
   };
   if (Math.abs(a.rank - h.rank) <= 1 && a.rank >= 3 && a.rank <= 8 && h.rank >= 3 && h.rank <= 8) parts.playoff = 1;
 
@@ -189,12 +195,15 @@ function computeHonjam(aw, hm, sa, sh, aPit, hPit, aERA, hERA, h2hRec) {
   frag.playoff = (a.rank >= 7 || h.rank >= 7) ? `${Math.max(a.rank, h.rank)}위권 PO 생존 경쟁` : '가을야구 직행 순위 다툼';
   const bestNM = aERA <= hERA ? aPit : hPit, bestERA = Math.min(aERA, hERA);
   frag.pitcher = (aERA < 3.6 && hERA < 3.6) ? `양 팀 에이스 투수전(ERA ${aERA}·${hERA})` : (bestERA < 3.6 ? `${bestNM}(ERA ${bestERA}) 호투 기대` : '');
+  frag.doom = parts.doom > 0 ? `연패 탈출 멸망전 · ${aw} ${-a.streak}연패 vs ${hm} ${-h.streak}연패` : '';
 
   const raw = Object.entries(W).reduce((s, [k, w]) => s + w * parts[k], 0);
-  const contrib = Object.entries(W).map(([k, w]) => [k, w * parts[k]]).filter(([k, v]) => k !== 'rivalry' && v > 0.5 && frag[k]).sort((x, y) => y[1] - x[1]);
+  // rivalry·doom은 일반 기여도에서 빼고 '리드 문구'로 따로 앞세움
+  const contrib = Object.entries(W).map(([k, w]) => [k, w * parts[k]]).filter(([k, v]) => k !== 'rivalry' && k !== 'doom' && v > 0.5 && frag[k]).sort((x, y) => y[1] - x[1]);
   const main = contrib.length ? frag[contrib[0][0]] : frag.close;
+  const lead = frag.rivalry || (parts.doom >= 0.5 ? frag.doom : '');
   let reason;
-  if (frag.rivalry) reason = `${frag.rivalry} · ${main}`;
+  if (lead) reason = `${lead} · ${main}`;
   else if (contrib[1] && contrib[1][1] >= contrib[0][1] * 0.65 && frag[contrib[1][0]] !== main) reason = `${main} · ${frag[contrib[1][0]]}`;
   else reason = main;
 
@@ -209,6 +218,7 @@ function computeHonjam(aw, hm, sa, sh, aPit, hPit, aERA, hERA, h2hRec) {
 
   const points = [];
   if (frag.rivalry) points.push(frag.rivalry);
+  if (parts.doom >= 0.5 && frag.doom) points.push(frag.doom);
   points.push(gamePoint);
   if (h2hPoint) points.push(h2hPoint);
   for (const [k] of contrib) if (k !== 'close' && frag[k] && !points.includes(frag[k])) points.push(frag[k]);

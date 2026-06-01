@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-01T10:28:30.955Z",
+  "updatedAt": "2026-06-01T10:49:02.827Z",
   "lastWeek": {
     "range": [
       "20260525",
@@ -87,26 +87,26 @@
       {
         "away": "LG",
         "home": "KT",
-        "pred": 90,
+        "pred": 87,
         "reason": "게임차 0.5, 막상막하 승부 · 리그 1위·2위 상위권 빅매치",
+        "dateStart": "20260602",
+        "dateEnd": "20260604"
+      },
+      {
+        "away": "WO",
+        "home": "SK",
+        "pred": 81,
+        "reason": "연패 탈출 멸망전 · 키움 8연패 vs SSG 12연패 · 게임차 3의 순위 다툼",
         "dateStart": "20260602",
         "dateEnd": "20260604"
       },
       {
         "away": "SS",
         "home": "HT",
-        "pred": 84,
+        "pred": 80,
         "reason": "전통의 명문 자존심 대결 · 리그 3위·4위 상위권 빅매치",
         "dateStart": "20260605",
         "dateEnd": "20260607"
-      },
-      {
-        "away": "HH",
-        "home": "OB",
-        "pred": 79,
-        "reason": "게임차 2.5의 순위 다툼",
-        "dateStart": "20260602",
-        "dateEnd": "20260604"
       }
     ],
     "team": {
