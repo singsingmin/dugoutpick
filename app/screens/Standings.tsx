@@ -34,6 +34,16 @@ function streakColor(streak: string): string {
   return colors.textDim;
 }
 
+// 범례 항목: 색상 사각형 + 라벨 (폼닷 색과 일치)
+function LegendItem({ color, label }: { color: string; label: string }) {
+  return (
+    <View style={styles.legendItem}>
+      <View style={[styles.legendSquare, { backgroundColor: color }]} />
+      <PixelText variant="caption" color={colors.textDim}>{label}</PixelText>
+    </View>
+  );
+}
+
 export default function Standings() {
   const [rows, setRows] = useState<Standing[]>([]);
   const [recent, setRecent] = useState<Record<string, RecentGame[]>>({});
@@ -106,7 +116,9 @@ export default function Standings() {
                   {s.rank === PO_CUT && (
                     <View style={styles.cutRow}>
                       <View style={styles.cutLine} />
-                      <PixelText variant="caption" color={colors.accent} style={styles.cutLabel}>가을야구 마지노선</PixelText>
+                      <View style={styles.cutLabel}>
+                        <PixelText variant="caption" color={colors.onGold}>🍂 가을야구 마지노선</PixelText>
+                      </View>
                       <View style={styles.cutLine} />
                     </View>
                   )}
@@ -115,7 +127,12 @@ export default function Standings() {
             })}
           </View>
           <View style={styles.legend}>
-            <PixelText variant="caption" color={colors.textDim}>최근 10경기 ← 오래 · 최신 → · ■승 ■패 ■무</PixelText>
+            <View style={styles.legendRow}>
+              <PixelText variant="caption" color={colors.textDim}>최근 10경기 ← 오래·최신 →</PixelText>
+              <LegendItem color={colors.good} label="승" />
+              <LegendItem color={colors.bad} label="패" />
+              <LegendItem color={colors.textDim} label="무" />
+            </View>
             {myCode && <PixelText variant="caption" color={colors.textDim}>★ 내 팀 강조</PixelText>}
           </View>
         </ScrollView>
@@ -141,8 +158,11 @@ const styles = StyleSheet.create({
   formRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: 6, minHeight: 11 },
   wrTrack: { height: 5, backgroundColor: colors.surfaceAlt, borderRadius: 2, overflow: 'hidden', marginTop: 6 },
   wrFill: { height: '100%' },
-  cutRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, paddingVertical: 4, paddingHorizontal: spacing.sm, backgroundColor: colors.bg },
-  cutLine: { flex: 1, height: 2, backgroundColor: colors.accent, opacity: 0.5 },
-  cutLabel: { },
-  legend: { marginTop: spacing.sm, gap: 2, alignItems: 'flex-end' },
+  cutRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.xs, paddingVertical: spacing.sm, paddingHorizontal: spacing.sm, backgroundColor: colors.surfaceAlt },
+  cutLine: { flex: 1, height: 3, backgroundColor: colors.gold, borderRadius: 2 },
+  cutLabel: { backgroundColor: colors.gold, borderColor: colors.border, borderWidth: 2, borderRadius: border.radius, paddingVertical: 3, paddingHorizontal: spacing.sm },
+  legend: { marginTop: spacing.sm, gap: 4, alignItems: 'flex-end' },
+  legendRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, flexWrap: 'wrap', justifyContent: 'flex-end' },
+  legendItem: { flexDirection: 'row', alignItems: 'center', gap: 3 },
+  legendSquare: { width: 9, height: 9, borderRadius: 1, borderWidth: 1, borderColor: colors.border },
 });
