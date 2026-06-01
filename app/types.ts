@@ -105,7 +105,7 @@ export interface RecentData {
 
 // 월요 리포트
 export interface ReportUpcomingGame { away: string; home: string; pred: number; reason: string; dateStart: string; dateEnd: string; }
-export interface TeamWeekRecord { w: number; l: number; d: number; rank: number; }
+export interface TeamWeekRecord { w: number; l: number; d: number; rank: number; note?: string; }
 export interface ReportData {
   updatedAt: string;
   lastWeek: { range: [string, string]; team: Record<string, TeamWeekRecord> };

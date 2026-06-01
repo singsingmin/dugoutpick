@@ -44,16 +44,24 @@ export default function MondayReport() {
 
       {/* 지난주 리뷰 — 팀별 주간 성적표 */}
       <View style={styles.section}>
-        <SectionLabel icon="🏁" label="지난주 성적" />
+        <View style={styles.sectionHead}>
+          <SectionLabel icon="🏁" label="지난주 성적" />
+          <PixelText variant="caption" color={colors.textDim}>승 / 무 / 패</PixelText>
+        </View>
         <Panel>
           {teamRows.map((r) => {
             const mine = r.code === cheer;
             return (
-              <View key={r.code} style={[styles.teamRow, mine && styles.teamRowMine]}>
-                <PixelText variant="caption" color={colors.textDim} style={styles.rankCol}>{r.rank ? `${r.rank}위` : '-'}</PixelText>
-                <View style={styles.nameCol}><TeamName code={r.code} variant="body" /></View>
-                {mine && <PixelText variant="caption" color={colors.accent} style={styles.meTag}>내 팀</PixelText>}
-                <PixelText variant="body" color={mine ? colors.text : colors.textDim} style={styles.recCol}>{r.w}승 {r.d}무 {r.l}패</PixelText>
+              <View key={r.code} style={[styles.teamBlock, mine && styles.teamRowMine]}>
+                <View style={styles.teamRow}>
+                  <PixelText variant="caption" color={colors.textDim} style={styles.rankCol}>{r.rank ? `${r.rank}위` : '-'}</PixelText>
+                  <View style={styles.nameCol}><TeamName code={r.code} variant="body" /></View>
+                  {mine && <PixelText variant="caption" color={colors.accent} style={styles.meTag}>내 팀</PixelText>}
+                  <PixelText variant="body" color={mine ? colors.text : colors.textDim} style={styles.recCol}>{r.w} / {r.d} / {r.l}</PixelText>
+                </View>
+                {r.note ? (
+                  <PixelText variant="caption" color={mine ? colors.accent : colors.textDim} style={styles.noteLine}>{r.note}</PixelText>
+                ) : null}
               </View>
             );
           })}
@@ -118,12 +126,15 @@ const styles = StyleSheet.create({
   intro: { marginBottom: spacing.md, lineHeight: 26 },
   section: { marginBottom: spacing.lg },
   // 지난주 성적표
-  teamRow: { flexDirection: 'row', alignItems: 'center', paddingVertical: 4, gap: spacing.sm },
+  sectionHead: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
+  teamBlock: { paddingVertical: 5 },
+  teamRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
   teamRowMine: { backgroundColor: colors.surfaceAlt, marginHorizontal: -spacing.sm, paddingHorizontal: spacing.sm, borderRadius: 4 },
+  noteLine: { marginTop: 3, marginLeft: 30 + spacing.sm, lineHeight: 14 },
   rankCol: { width: 30 },
   nameCol: { flex: 1 },
   meTag: { },
-  recCol: { },
+  recCol: { width: 58, textAlign: 'right' },
   // 이번주
   myTeam: { gap: spacing.xs, marginBottom: spacing.sm },
   row: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },

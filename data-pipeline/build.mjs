@@ -259,6 +259,39 @@ function weekBounds(ymd) {
 // 이번주 예측용 가정 선발 ERA(선발 미정이라 평균 에이스 가정 → 점수 보정). LEAGUE_ERA(4.20)보다 좋게.
 const WEEKLY_ERA = 3.2;
 
+// 지난주 성적 한줄평 (하이브리드: 규칙으로 상황 판별 + 손수 쓴 밈/드립 문구 라이브러리).
+// AI 없음·환각 없음. 실데이터(주간 승패·현재 순위·연속·지난주 잡은/진 상대·다음주 상대)만 사용.
+// 경기 내 사건(역전/끝내기 등)은 데이터에 없으므로 절대 지어내지 않는다.
+// 같은 데이터엔 항상 같은 문구(결정적), 팀마다 시드가 달라 변주 — seed로 변형 선택.
+function weeklyNote(code, rec, ctx) {
+  const tn = (c) => ctx.byCode[c]?.name ?? c;
+  const { w, l, d, rank } = rec;
+  const g = w + l + d;
+  const { streak, beat, lost, nextOppRank } = ctx;
+  const seed = (w * 131 + l * 977 + rank * 31) >>> 0; // 인접 값이 다른 변형에 흩어지도록 혼합
+  const pick = (arr) => arr[seed % arr.length];
+
+  // 지난주 잡은 '윗물'(나보다 순위 높고 4위 이내) / 덜미 잡힌 '아랫물'(나보다 낮고 8위 이하)
+  const upset = beat.filter((o) => o.rank < rank && o.rank <= 4).sort((a, b) => a.rank - b.rank)[0];
+  const slip = lost.filter((o) => o.rank > rank && o.rank >= 8).sort((a, b) => b.rank - a.rank)[0];
+  const rec2 = `${w}승${l}패${d ? ` ${d}무` : ''}`;
+
+  // 우선순위: 극단(전승/전패/장기연속) → 순위 특수(1위/꼴찌/선두권) → 서사(업셋/덜미) → 위닝/루징/반타작
+  if (g === 0) return '지난주 경기 없이 재정비 — 이번주를 노린다';
+  if (l === 0 && w >= 3) return pick([`${w}전 ${w}승, 거칠 것 없는 무패 주간 🔥`, `지난주 ${w}연승 싹쓸이 — 폼 미쳤다`, `${w}경기 전부 승, 이번주도 못 막는다`]);
+  if (w === 0 && l >= 3) return pick([`${l}전 ${l}패… 출구가 안 보인다`, `지난주 한 경기도 못 잡았다, 단체로 멘탈 가출`, `${l}연패로 마감… 다음주는 제발`]);
+  if (streak <= -4) return pick([`${-streak}연패 늪, 탈출이 급하다`, `${-streak}연패째… 이러다 큰일 난다`, `${-streak}연패 행진, 분위기 반전이 절실`]);
+  if (streak >= 4) return pick([`${streak}연승 폭주 기관차 🚂 누가 좀 말려봐`, `${streak}연승, 지금이 전성기`, `${streak}연승 질주 — 상승세 제대로다`]);
+  if (rank === 1) return pick([`선두 수성 중 — 어쩌라고, 1위인데 (${rec2})`, `${rec2}, 1위는 1위가 한다`, `${rec2}로 선두 유지, 클래스가 다르다`]);
+  if (rank === 2 && nextOppRank === 1) return `${rec2}, 다음주 선두 직접 잡으러 간다`;
+  if (rank === 10) return pick([`${rec2}, 탈꼴찌가 간절하다`, `10위 바닥에서 반등을 노린다 (${rec2})`, `${rec2}, 더 내려갈 곳도 없다`]);
+  if (w > l && upset) return pick([`${tn(upset.code)} 잡고 ${rec2} 위닝 — 윗물 정조준`, `윗물 ${tn(upset.code)} 잡은 ${rec2}, 무섭다`]);
+  if (l > w && slip) return pick([`${tn(slip.code)}한테 덜미, ${rec2} 뼈아픈 한 주`, `${tn(slip.code)}한테 발목… ${rec2} 아쉽다`]);
+  if (w > l) return pick([`${rec2} 위닝, 분위기 탄다`, `이기는 맛 아는 한 주 — ${rec2}`, `${rec2}로 위닝 마감, 상승 기류`]);
+  if (l > w) return pick([`${rec2} 루징, 반등이 필요해`, `살짝 삐끗한 한 주 ${rec2}`, `${rec2}, 다음주 반등을 노린다`]);
+  return pick([`딱 반타작 ${rec2}, 평타는 쳤다`, `${rec2} 5할 페이스, 무난한 한 주`, `${rec2}, 이겼다 졌다 롤러코스터`]);
+}
+
 function buildReport(date, schedule, standings) {
   const wb = weekBounds(date);
   const stByName = Object.fromEntries(standings.map(s => [s.name, s]));
@@ -268,8 +301,15 @@ function buildReport(date, schedule, standings) {
   const lastTeam = {};
   for (const s of standings) if (s.code) lastTeam[s.code] = { w: 0, l: 0, d: 0, rank: s.rank };
   const reg = (code, sf, sa) => { const t = lastTeam[code]; if (!t) return; if (sf > sa) t.w++; else if (sf < sa) t.l++; else t.d++; };
+  // 한줄평용 신호: 지난주 잡은/진 상대(순위 포함), 현재 연속, 다음주 첫 상대
+  const rankOf = Object.fromEntries(standings.filter(s => s.code).map(s => [s.code, s.rank]));
+  const streakOf = Object.fromEntries(standings.filter(s => s.code).map(s => [s.code, streakSigned(s.streak)]));
+  const beatLost = {}; // code -> { beat:[{code,rank}], lost:[{code,rank}] }
+  const bl = (code) => (beatLost[code] ||= { beat: [], lost: [] });
+  const addWin = (winner, loser) => { bl(winner).beat.push({ code: loser, rank: rankOf[loser] ?? 99 }); bl(loser).lost.push({ code: winner, rank: rankOf[winner] ?? 99 }); };
   for (const g of schedule.filter(x => x.finished && inRange(x.date, wb.lastMon, wb.lastSun))) {
     reg(g.away, g.aS, g.hS); reg(g.home, g.hS, g.aS);
+    if (g.aS !== g.hS) (g.aS > g.hS ? addWin(g.away, g.home) : addWin(g.home, g.away));
   }
 
   // 이번주: 매치업 단위로 중복 제거(시리즈 묶기) → 근사 꿀잼 TOP3(이유 포함) + 팀별 일정
@@ -294,6 +334,19 @@ function buildReport(date, schedule, standings) {
     const item = { date: g.date, away: g.away, home: g.home };
     (thisTeam[g.away] ||= []).push(item);
     (thisTeam[g.home] ||= []).push(item);
+  }
+
+  // 지난주 한줄평 부착(다음주 첫 상대 순위까지 반영)
+  for (const [code, rec] of Object.entries(lastTeam)) {
+    const sched = (thisTeam[code] || []).slice().sort((a, b) => a.date.localeCompare(b.date));
+    const firstOpp = sched.length ? (sched[0].away === code ? sched[0].home : sched[0].away) : null;
+    rec.note = weeklyNote(code, rec, {
+      byCode,
+      streak: streakOf[code] ?? 0,
+      beat: beatLost[code]?.beat ?? [],
+      lost: beatLost[code]?.lost ?? [],
+      nextOppRank: firstOpp ? (rankOf[firstOpp] ?? null) : null,
+    });
   }
 
   return {
