@@ -141,6 +141,27 @@ async function fetchPitcherStats() {
   return map;
 }
 
+// 선수 ID로 개별 투수 시즌 기록 조회(규정 미달 등 랭킹표에 없는 선발 보강).
+// 상세 페이지 첫 테이블 = 시즌 요약: [팀명, ERA, G, CG, SHO, W, L, ...]. 트레이드 시 '합계' 행 우선.
+async function fetchPitcherById(id) {
+  try {
+    const res = await fetch(`https://www.koreabaseball.com/Record/Player/PitcherDetail/Basic.aspx?playerId=${id}`, { headers: { 'User-Agent': UA } });
+    if (!res.ok) return null;
+    const html = await res.text();
+    const tbl = (html.match(/<table[\s\S]*?<\/table>/) || [])[0] || '';
+    let pick = null;
+    for (const m of tbl.matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/g)) {
+      const c = [...m[1].matchAll(/<td[^>]*>([\s\S]*?)<\/td>/g)].map(x => strip(x[1]));
+      if (c.length >= 7 && /^\d+\.\d{2}$/.test(c[1])) {
+        const row = { era: parseFloat(c[1]), w: parseInt(c[5], 10) || 0, l: parseInt(c[6], 10) || 0 };
+        if (c[0] === '합계') return row; // 시즌 다팀 합계 우선
+        if (!pick) pick = row;           // 아니면 첫 유효행
+      }
+    }
+    return pick;
+  } catch { return null; }
+}
+
 // ---------------- 꿀잼지수 ----------------
 const clamp01 = (x) => Math.max(0, Math.min(1, x));
 const strength = (r) => (10 - r) / 9;
@@ -400,7 +421,20 @@ async function main() {
   const stByName = Object.fromEntries(standings.map(s => [s.name, s]));
   const recent = buildRecent(schedule);
   const report = buildReport(date, schedule, standings);
-  console.log(`[build] games=${rawGames.length} standings=${standings.length} pitchers=${Object.keys(pmap).length} recentTeams=${Object.keys(recent).length} thisWeekTop=${report.thisWeek.top.length}`);
+
+  // 선발 보강: 랭킹표(규정 충족)에 없는 선발만 player ID로 개별 조회 → 규정 미달 투수도 ERA/승/패 노출
+  const missIds = [...new Set(
+    rawGames
+      .flatMap(g => [[g.T_PIT_P_NM, g.T_PIT_P_ID], [g.B_PIT_P_NM, g.B_PIT_P_ID]])
+      .filter(([nm, id]) => id && nm && nm.trim() && !pmap[nm.trim()])
+      .map(([, id]) => id)
+  )];
+  const byId = Object.fromEntries(await Promise.all(missIds.map(async id => [id, await fetchPitcherById(id)])));
+  // 선발 기록 조회: 이름(랭킹표) 우선 → 없으면 ID(개별조회)
+  const statOf = (nm, id) => pmap[(nm || '').trim()] || (id != null ? byId[id] : null) || null;
+
+  const filledById = Object.values(byId).filter(Boolean).length;
+  console.log(`[build] games=${rawGames.length} standings=${standings.length} pitchers=${Object.keys(pmap).length}(+${filledById} byId) recentTeams=${Object.keys(recent).length} thisWeekTop=${report.thisWeek.top.length}`);
 
   // freeze: 직전 산출물의 꿀잼지수를 읽어, 이미 시작된 경기는 '경기 전 값'을 유지(드리프트 방지)
   const prevHonjam = {};
@@ -413,7 +447,7 @@ async function main() {
     const awName = g.AWAY_NM.trim(), hmName = g.HOME_NM.trim();
     const sa = stByName[awName], sh = stByName[hmName];
     const aPit = (g.T_PIT_P_NM || '').trim(), hPit = (g.B_PIT_P_NM || '').trim();
-    const aStat = pmap[aPit], hStat = pmap[hPit];
+    const aStat = statOf(g.T_PIT_P_NM, g.T_PIT_P_ID), hStat = statOf(g.B_PIT_P_NM, g.B_PIT_P_ID);
     const status = gameStatus(g);
     const hasScore = status === 'FINAL' || status === 'LIVE'; // 종료·경기중엔 스코어 노출
     const aScore = hasScore ? +g.T_SCORE_CN : null;
