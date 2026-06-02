@@ -23,7 +23,7 @@ const FACTOR_META: { key: string; label: string; weight: number }[] = [
   { key: 'close', label: '순위 근접도', weight: 30 },
   { key: 'quality', label: '상위권 매치', weight: 20 },
   { key: 'doom', label: '연패 탈출 멸망전', weight: 18 },
-  { key: 'form', label: '최근 기세', weight: 15 },
+  { key: 'form', label: '연승·연패 강도', weight: 15 },
   { key: 'pitcher', label: '선발 매치업', weight: 15 },
   { key: 'rivalry', label: '라이벌 매치', weight: 10 },
   { key: 'playoff', label: '가을야구 경쟁', weight: 10 },
