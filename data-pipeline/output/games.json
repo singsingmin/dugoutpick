@@ -1,14 +1,14 @@
 {
   "date": "20260602",
   "dateText": "2026년 6월 2일",
-  "updatedAt": "2026-06-02T12:25:24.795Z",
+  "updatedAt": "2026-06-02T12:30:33.386Z",
   "recommendedGameId": "20260602LGKT0",
   "games": [
     {
       "gameId": "20260602HHOB0",
       "time": "18:30",
       "stadium": "잠실",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "KN-T",
       "away": {
@@ -54,14 +54,11 @@
           "doom": 0
         }
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 1,
-        "heat": 59,
-        "label": "9회초 2점차"
-      },
-      "recap": null
+      "live": null,
+      "recap": {
+        "actual": 48,
+        "verdict": "기대 이하"
+      }
     },
     {
       "gameId": "20260602NCSS0",
@@ -116,7 +113,7 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "heat": 43,
         "label": "8회말 3점차"
       },
@@ -145,7 +142,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 8,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "베니지아노",
           "era": 5.63,
@@ -175,9 +172,9 @@
       "live": {
         "inning": 9,
         "half": "B",
-        "out": 1,
+        "out": 3,
         "heat": 0,
-        "label": "9회말 7점차"
+        "label": "9회말 6점차"
       },
       "recap": null
     },
@@ -234,7 +231,7 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "heat": 84,
         "label": "8회말 동점 접전"
       },
@@ -292,10 +289,10 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 1,
         "heat": 0,
-        "label": "9회초 9점차"
+        "label": "9회말 9점차"
       },
       "recap": null
     }
