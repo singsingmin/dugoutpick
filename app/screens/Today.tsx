@@ -83,9 +83,12 @@ function Body({ data, open, cheerTeam }: { data: GamesData; open: (id: string) =
   const myFinished = cheerTeam
     ? finished.find((g) => g.away.code === cheerTeam || g.home.code === cheerTeam)
     : undefined;
-  const recommended: Game | undefined = data.games.find((g) => g.gameId === data.recommendedGameId);
+  // LIVE 경기는 '지금 볼 각'으로 졸업 → 추천/다른경기에서는 제외(중복 노출 방지, 3트랙 구조).
+  const recommended: Game | undefined = data.games.find(
+    (g) => g.gameId === data.recommendedGameId && g.status !== 'LIVE'
+  );
   const rest = data.games
-    .filter((g) => g.gameId !== recommended?.gameId)
+    .filter((g) => g.status !== 'LIVE' && g.gameId !== recommended?.gameId)
     .sort((a, b) => (b.honjam?.score ?? -1) - (a.honjam?.score ?? -1));
 
   return (
