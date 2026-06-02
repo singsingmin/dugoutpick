@@ -1,8 +1,8 @@
 // 오늘경기 탭: 그린 헤더 + 추천 히어로 + 나머지 경기(꿀잼 높은 순). (flow.md, ADR-004)
-import { useEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
 import { View, ScrollView, ActivityIndicator, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/types';
 import type { GamesData, Game } from '../types';
@@ -25,16 +25,23 @@ export default function Today() {
   const [cheerTeam, setCheerTeam] = useState<string | null>(null);
   const [failed, setFailed] = useState(false);
 
-  useEffect(() => {
-    let active = true;
-    loadGames()
-      .then((d) => active && setData(d))
-      .catch(() => active && setFailed(true));
-    getCheerTeam().then((c) => active && setCheerTeam(c));
-    return () => {
-      active = false;
-    };
-  }, []);
+  // 탭 재진입 시마다 재조회 → 라이브 점수/갱신 시각이 최신화(순위 탭과 동일 패턴)
+  useFocusEffect(
+    useCallback(() => {
+      let active = true;
+      loadGames()
+        .then((d) => {
+          if (!active) return;
+          setData(d);
+          setFailed(false);
+        })
+        .catch(() => active && setFailed(true));
+      getCheerTeam().then((c) => active && setCheerTeam(c));
+      return () => {
+        active = false;
+      };
+    }, [])
+  );
 
   const open = (gameId: string) => navigation.navigate('GameDetail', { gameId });
 
