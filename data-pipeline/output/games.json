@@ -1,7 +1,7 @@
 {
   "date": "20260602",
   "dateText": "2026년 6월 2일",
-  "updatedAt": "2026-06-02T12:05:20.586Z",
+  "updatedAt": "2026-06-02T12:10:25.624Z",
   "recommendedGameId": "20260602LGKT0",
   "games": [
     {
@@ -18,21 +18,21 @@
         "score": 1,
         "starter": {
           "name": "박준영",
-          "era": null,
-          "w": null,
-          "l": null
+          "era": 3.55,
+          "w": 1,
+          "l": 0
         }
       },
       "home": {
         "code": "OB",
         "name": "두산",
         "rank": 6,
-        "score": 3,
+        "score": 5,
         "starter": {
           "name": "벤자민",
-          "era": null,
-          "w": null,
-          "l": null
+          "era": 2.61,
+          "w": 2,
+          "l": 3
         }
       },
       "honjam": {
@@ -55,11 +55,11 @@
         }
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
-        "heat": 55,
-        "label": "8회말 2점차"
+        "inning": 9,
+        "half": "T",
+        "out": 0,
+        "heat": 29,
+        "label": "9회초 4점차"
       },
       "recap": null
     },
@@ -77,9 +77,9 @@
         "score": 7,
         "starter": {
           "name": "토다",
-          "era": null,
-          "w": null,
-          "l": null
+          "era": 4.34,
+          "w": 2,
+          "l": 5
         }
       },
       "home": {
@@ -116,7 +116,7 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "heat": 40,
         "label": "7회말 3점차"
       },
@@ -148,9 +148,9 @@
         "score": 5,
         "starter": {
           "name": "베니지아노",
-          "era": null,
-          "w": null,
-          "l": null
+          "era": 5.63,
+          "w": 1,
+          "l": 3
         }
       },
       "honjam": {
@@ -175,7 +175,7 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 46,
         "label": "9회초 3점차"
       },
@@ -192,7 +192,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 9,
-        "score": 0,
+        "score": 4,
         "starter": {
           "name": "나균안",
           "era": 3.45,
@@ -235,8 +235,8 @@
         "inning": 8,
         "half": "T",
         "out": 2,
-        "heat": 41,
-        "label": "8회초 3점차"
+        "heat": 69,
+        "label": "8회초 1점차 접전"
       },
       "recap": null
     },
@@ -251,7 +251,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": 7,
+        "score": 8,
         "starter": {
           "name": "임찬규",
           "era": 4.31,
@@ -291,11 +291,11 @@
         }
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 3,
+        "inning": 9,
+        "half": "T",
+        "out": 0,
         "heat": 0,
-        "label": "8회말 6점차"
+        "label": "9회초 7점차"
       },
       "recap": null
     }
