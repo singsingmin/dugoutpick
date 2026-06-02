@@ -1,7 +1,7 @@
 {
   "date": "20260602",
   "dateText": "2026년 6월 2일",
-  "updatedAt": "2026-06-02T11:25:20.447Z",
+  "updatedAt": "2026-06-02T11:30:32.012Z",
   "recommendedGameId": "20260602LGKT0",
   "games": [
     {
@@ -133,7 +133,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 6,
+        "score": 8,
         "starter": {
           "name": "알칸타라",
           "era": 3.18,
@@ -174,10 +174,10 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 2,
-        "heat": 13,
-        "label": "7회초 5점차"
+        "half": "B",
+        "out": 0,
+        "heat": 0,
+        "label": "7회말 7점차"
       },
       "recap": null
     },
@@ -233,10 +233,10 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 63,
-        "label": "7회초 1점차 접전"
+        "label": "7회말 1점차 접전"
       },
       "recap": null
     },
