@@ -27,7 +27,7 @@ export default function GameCard({ game, variant, onPress, showRecap = true }: P
     <PixelText variant="body" color={colors.bad}>취소</PixelText>
   ) : final || live ? (
     <PixelText variant={hero ? 'hero' : 'body'} color={live ? colors.bad : colors.text}>
-      {game.away.score ?? '-'} : {game.home.score ?? '-'}{live ? ' 🔴' : ''}
+      {game.away.score ?? '-'} : {game.home.score ?? '-'}
     </PixelText>
   ) : (
     <PixelText variant={hero ? 'title' : 'body'} color={colors.textDim} style={styles.vs}>vs</PixelText>
