@@ -22,6 +22,7 @@ const teamColor = (code: string) => TEAMS.find((t) => t.code === code)?.color ??
 const FACTOR_META: { key: string; label: string; weight: number }[] = [
   { key: 'close', label: '순위 근접도', weight: 30 },
   { key: 'quality', label: '상위권 매치', weight: 20 },
+  { key: 'doom', label: '연패 탈출 멸망전', weight: 18 },
   { key: 'form', label: '최근 기세', weight: 15 },
   { key: 'pitcher', label: '선발 매치업', weight: 15 },
   { key: 'rivalry', label: '라이벌 매치', weight: 10 },
@@ -138,6 +139,7 @@ export default function GameDetail({ route, navigation }: Props) {
           <Panel>
             {FACTOR_META
               .map((f) => ({ ...f, v: game.honjam!.factors[f.key] ?? 0 }))
+              .filter((f) => f.v > 0) // 작용하지 않은 요소(빈 막대)는 숨김 — doom은 멸망전에만 등장
               .sort((a, b) => b.v * b.weight - a.v * a.weight)
               .map((f) => (
                 <View key={f.key} style={styles.factorRow}>
