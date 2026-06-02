@@ -14,6 +14,12 @@ on:
 permissions:
   contents: write
 
+# 이중 트리거(외부 cron + GitHub schedule) 동시 실행 시 git push 충돌 방지.
+# cancel-in-progress: false → 겹치면 취소하지 않고 줄 세워 순차 실행.
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
