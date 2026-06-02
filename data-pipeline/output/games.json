@@ -1,7 +1,7 @@
 {
   "date": "20260602",
   "dateText": "2026년 6월 2일",
-  "updatedAt": "2026-06-02T09:52:36.813Z",
+  "updatedAt": "2026-06-02T10:16:40.203Z",
   "recommendedGameId": "20260602LGKT0",
   "games": [
     {
@@ -27,7 +27,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 6,
-        "score": 0,
+        "score": 3,
         "starter": {
           "name": "벤자민",
           "era": null,
@@ -55,11 +55,11 @@
         }
       },
       "live": {
-        "inning": 2,
+        "inning": 3,
         "half": "B",
-        "out": 1,
-        "heat": 61,
-        "label": "2회말 동점 접전"
+        "out": 3,
+        "heat": 33,
+        "label": "3회말 3점차"
       },
       "recap": null
     },
@@ -74,7 +74,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "토다",
           "era": null,
@@ -114,11 +114,11 @@
         }
       },
       "live": {
-        "inning": 2,
-        "half": "T",
+        "inning": 3,
+        "half": "B",
         "out": 0,
-        "heat": 61,
-        "label": "2회초 동점 접전"
+        "heat": 56,
+        "label": "3회말 1점차 접전"
       },
       "recap": null
     },
@@ -133,7 +133,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 0,
+        "score": 3,
         "starter": {
           "name": "알칸타라",
           "era": 3.18,
@@ -173,11 +173,11 @@
         }
       },
       "live": {
-        "inning": 2,
+        "inning": 3,
         "half": "B",
         "out": 0,
-        "heat": 51,
-        "label": "2회말 1점차 접전"
+        "heat": 44,
+        "label": "3회말 2점차"
       },
       "recap": null
     },
@@ -204,7 +204,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "네일",
           "era": 3.84,
@@ -232,11 +232,11 @@
         }
       },
       "live": {
-        "inning": 2,
-        "half": "T",
-        "out": 3,
-        "heat": 61,
-        "label": "2회초 동점 접전"
+        "inning": 3,
+        "half": "B",
+        "out": 1,
+        "heat": 56,
+        "label": "3회말 1점차 접전"
       },
       "recap": null
     },
@@ -251,7 +251,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": 1,
+        "score": 3,
         "starter": {
           "name": "임찬규",
           "era": 4.31,
@@ -291,11 +291,11 @@
         }
       },
       "live": {
-        "inning": 2,
+        "inning": 3,
         "half": "B",
-        "out": 0,
-        "heat": 51,
-        "label": "2회말 1점차 접전"
+        "out": 1,
+        "heat": 33,
+        "label": "3회말 3점차"
       },
       "recap": null
     }
