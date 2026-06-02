@@ -14,7 +14,7 @@ import ScreenHeader from '../components/ScreenHeader';
 import SectionLabel from '../components/SectionLabel';
 import PixelText from '../components/PixelText';
 import MondayReport from '../components/MondayReport';
-import { formatUpdatedAt, isKstMonday } from '../utils';
+import { formatUpdatedAt, relativeFromNow, isKstMonday } from '../utils';
 import { colors, spacing } from '../theme';
 
 type Nav = NativeStackNavigationProp<RootStackParamList>;
@@ -85,12 +85,15 @@ function Body({ data, open, cheerTeam }: { data: GamesData; open: (id: string) =
     <ScrollView contentContainerStyle={styles.content}>
       <View style={styles.dateRow}>
         <PixelText variant="caption" color={colors.textDim}>{data.dateText}</PixelText>
-        <PixelText variant="caption" color={colors.textDim}>갱신 {formatUpdatedAt(data.updatedAt)}</PixelText>
+        <PixelText variant="caption" color={colors.textDim}>갱신 {formatUpdatedAt(data.updatedAt)} · {relativeFromNow(data.updatedAt)}</PixelText>
       </View>
 
       {liveGames.length > 0 && (
         <View style={styles.section}>
           <SectionLabel icon="🔴" label="지금 볼 각" />
+          <PixelText variant="caption" color={colors.textDim} style={styles.liveHint}>
+            ⚠ 라이브 점수는 갱신 시각 기준 — 실제보다 몇 분 늦을 수 있다
+          </PixelText>
           {liveGames.map((g) => (
             <LiveCard key={g.gameId} game={g} onPress={() => open(g.gameId)} />
           ))}
@@ -147,6 +150,7 @@ const styles = StyleSheet.create({
   content: { padding: spacing.md },
   center: { flex: 1, backgroundColor: colors.bg, alignItems: 'center', justifyContent: 'center' },
   dateRow: { marginBottom: spacing.md, gap: 2 },
+  liveHint: { marginBottom: spacing.sm },
   subLabel: { marginBottom: spacing.xs },
   section: { marginBottom: spacing.lg },
 });

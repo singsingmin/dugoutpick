@@ -24,6 +24,18 @@ export function dateRangeDow(a: string, b: string): string {
   return a === b ? shortDateDow(a) : `${shortDateDow(a)}~${shortDateDow(b)}`;
 }
 
+// ISO(UTC) → 지금으로부터 경과("방금 전"/"N분 전"/"N시간 N분 전"). 갱신 신선도 직관 표시용.
+export function relativeFromNow(iso: string): string {
+  const t = new Date(iso).getTime();
+  if (isNaN(t)) return '';
+  const mins = Math.max(0, Math.round((Date.now() - t) / 60000));
+  if (mins < 1) return '방금 전';
+  if (mins < 60) return `${mins}분 전`;
+  const hrs = Math.floor(mins / 60);
+  const rem = mins % 60;
+  return rem ? `${hrs}시간 ${rem}분 전` : `${hrs}시간 전`;
+}
+
 // ISO(UTC) → KST(UTC+9) "YYYY-MM-DD HH:MM (KST)". +9h 후 getUTC*로 KST 벽시계 추출(Intl 의존 회피).
 export function formatUpdatedAt(iso: string): string {
   const d = new Date(iso);
