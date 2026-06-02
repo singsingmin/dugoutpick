@@ -5,6 +5,8 @@ export const colors = {
   bg: '#F3E9CE',        // 크림 배경
   surface: '#FBF5E4',   // 카드(밝은 크림)
   surfaceAlt: '#EADFBF', // 보조/선택 강조
+  track: '#CBB98C',     // 막대 그래프 트랙(홈): surfaceAlt보다 한 톤 진해 선택 행 위에서도 구분
+  goldSoft: '#F8EBB8',  // 옅은 골드 배경: 가을야구 마지노선 행(내 팀 강조의 탄 색과 구분)
   text: '#2B2620',      // 진한 텍스트(다크 브라운블랙)
   textDim: '#7A7060',   // 보조 텍스트
   accent: '#34663F',    // 주 크롬: 포레스트 그린(헤더·버튼·라벨·활성)
