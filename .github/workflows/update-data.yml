@@ -6,9 +6,10 @@ on:
   schedule:
     - cron: '0 22 * * *'       # 07:00 KST  (아침 갱신)
     - cron: '0 2 * * *'        # 11:00 KST  (경기 전, 선발 등록)
-    # 경기 시간대(14:00~23:50 KST = UTC 05~14시) 5분 간격 — '지금 볼 각' 라이브 갱신
-    # (GitHub cron은 정시 보장 안 됨: 밀리거나 건너뛰어도 다음 기회가 빨리 오도록 5분으로 단축)
-    - cron: '*/5 5-14 * * *'
+    # 경기 시간대(14:00~23:50 KST = UTC 05~14시) 백업 갱신 — 주력은 외부 cron(cron-job.org)이 5분 간격으로
+    # workflow_dispatch 호출. GitHub schedule은 best-effort라 신뢰 못 하므로, 외부 cron 장애/PAT 만료 시
+    # '완전히 깜깜해지는 것'만 막는 30분 폴백으로 둠.
+    - cron: '*/30 5-14 * * *'
   workflow_dispatch:            # 수동 실행 버튼
 
 permissions:
@@ -38,8 +39,12 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data-pipeline/output/*.json
-          if git diff --staged --quiet; then
-            echo "No data changes."
+          # build.mjs는 매 실행마다 updatedAt를 새로 쓰므로 항상 diff가 생김.
+          # 실데이터 변경 없이 updatedAt만 바뀐 경우는 커밋하지 않음(히스토리 폭증 방지).
+          real_changes=$(git diff --staged -U0 -- data-pipeline/output/*.json \
+            | grep -E '^[+-]' | grep -vE '^(\+\+\+|---)' | grep -v '"updatedAt"' || true)
+          if [ -z "$real_changes" ]; then
+            echo "No real data changes (updatedAt only) — skipping commit."
           else
             git commit -m "chore: update KBO data ($(date -u +%Y-%m-%dT%H:%MZ))"
             git push
