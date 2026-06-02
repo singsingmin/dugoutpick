@@ -1,7 +1,7 @@
 {
   "date": "20260602",
   "dateText": "2026년 6월 2일",
-  "updatedAt": "2026-06-02T10:31:01.940Z",
+  "updatedAt": "2026-06-02T10:50:17.563Z",
   "recommendedGameId": "20260602LGKT0",
   "games": [
     {
@@ -55,11 +55,11 @@
         }
       },
       "live": {
-        "inning": 4,
+        "inning": 5,
         "half": "B",
-        "out": 0,
-        "heat": 36,
-        "label": "4회말 3점차"
+        "out": 2,
+        "heat": 39,
+        "label": "5회말 3점차"
       },
       "recap": null
     },
@@ -74,7 +74,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 2,
+        "score": 4,
         "starter": {
           "name": "토다",
           "era": null,
@@ -114,11 +114,11 @@
         }
       },
       "live": {
-        "inning": 4,
+        "inning": 5,
         "half": "T",
         "out": 1,
-        "heat": 60,
-        "label": "4회초 1점차 접전"
+        "heat": 39,
+        "label": "5회초 3점차"
       },
       "recap": null
     },
@@ -173,11 +173,11 @@
         }
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 1,
-        "heat": 48,
-        "label": "4회말 2점차"
+        "inning": 6,
+        "half": "T",
+        "out": 0,
+        "heat": 56,
+        "label": "6회초 2점차"
       },
       "recap": null
     },
@@ -232,11 +232,11 @@
         }
       },
       "live": {
-        "inning": 4,
+        "inning": 5,
         "half": "T",
         "out": 1,
-        "heat": 60,
-        "label": "4회초 1점차 접전"
+        "heat": 65,
+        "label": "5회초 1점차 접전"
       },
       "recap": null
     },
@@ -251,7 +251,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "임찬규",
           "era": 4.31,
@@ -291,11 +291,11 @@
         }
       },
       "live": {
-        "inning": 4,
+        "inning": 5,
         "half": "T",
-        "out": 2,
-        "heat": 12,
-        "label": "4회초 5점차"
+        "out": 0,
+        "heat": 0,
+        "label": "5회초 6점차"
       },
       "recap": null
     }
