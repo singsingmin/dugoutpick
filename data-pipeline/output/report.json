@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-02T12:50:25.238Z",
+  "updatedAt": "2026-06-02T12:55:25.847Z",
   "lastWeek": {
     "range": [
       "20260525",
@@ -103,8 +103,8 @@
       {
         "away": "SS",
         "home": "HT",
-        "pred": 73,
-        "reason": "전통의 명문 자존심 대결 · 리그 2위·4위 상위권 빅매치",
+        "pred": 75,
+        "reason": "전통의 명문 자존심 대결 · 게임차 3.5의 순위 다툼",
         "dateStart": "20260605",
         "dateEnd": "20260607"
       }
@@ -238,6 +238,70 @@
           "home": "SK"
         }
       ],
+      "LT": [
+        {
+          "date": "20260602",
+          "away": "LT",
+          "home": "HT"
+        },
+        {
+          "date": "20260603",
+          "away": "LT",
+          "home": "HT"
+        },
+        {
+          "date": "20260604",
+          "away": "LT",
+          "home": "HT"
+        },
+        {
+          "date": "20260605",
+          "away": "HH",
+          "home": "LT"
+        },
+        {
+          "date": "20260606",
+          "away": "HH",
+          "home": "LT"
+        },
+        {
+          "date": "20260607",
+          "away": "HH",
+          "home": "LT"
+        }
+      ],
+      "HT": [
+        {
+          "date": "20260602",
+          "away": "LT",
+          "home": "HT"
+        },
+        {
+          "date": "20260603",
+          "away": "LT",
+          "home": "HT"
+        },
+        {
+          "date": "20260604",
+          "away": "LT",
+          "home": "HT"
+        },
+        {
+          "date": "20260605",
+          "away": "SS",
+          "home": "HT"
+        },
+        {
+          "date": "20260606",
+          "away": "SS",
+          "home": "HT"
+        },
+        {
+          "date": "20260607",
+          "away": "SS",
+          "home": "HT"
+        }
+      ],
       "LG": [
         {
           "date": "20260602",
@@ -339,60 +403,6 @@
           "date": "20260604",
           "away": "NC",
           "home": "SS"
-        },
-        {
-          "date": "20260605",
-          "away": "SS",
-          "home": "HT"
-        },
-        {
-          "date": "20260606",
-          "away": "SS",
-          "home": "HT"
-        },
-        {
-          "date": "20260607",
-          "away": "SS",
-          "home": "HT"
-        }
-      ],
-      "LT": [
-        {
-          "date": "20260603",
-          "away": "LT",
-          "home": "HT"
-        },
-        {
-          "date": "20260604",
-          "away": "LT",
-          "home": "HT"
-        },
-        {
-          "date": "20260605",
-          "away": "HH",
-          "home": "LT"
-        },
-        {
-          "date": "20260606",
-          "away": "HH",
-          "home": "LT"
-        },
-        {
-          "date": "20260607",
-          "away": "HH",
-          "home": "LT"
-        }
-      ],
-      "HT": [
-        {
-          "date": "20260603",
-          "away": "LT",
-          "home": "HT"
-        },
-        {
-          "date": "20260604",
-          "away": "LT",
-          "home": "HT"
         },
         {
           "date": "20260605",
