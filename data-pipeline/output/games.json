@@ -1,7 +1,7 @@
 {
   "date": "20260602",
   "dateText": "2026년 6월 2일",
-  "updatedAt": "2026-06-02T12:30:33.386Z",
+  "updatedAt": "2026-06-02T12:35:21.504Z",
   "recommendedGameId": "20260602LGKT0",
   "games": [
     {
@@ -83,7 +83,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 3,
-        "score": 4,
+        "score": 7,
         "starter": {
           "name": "후라도",
           "era": 2.17,
@@ -113,9 +113,9 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 1,
-        "heat": 43,
-        "label": "8회말 3점차"
+        "out": 2,
+        "heat": 87,
+        "label": "8회말 동점 접전"
       },
       "recap": null
     },
@@ -123,7 +123,7 @@
       "gameId": "20260602WOSK0",
       "time": "18:30",
       "stadium": "문학",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPO-2T",
       "away": {
@@ -169,14 +169,11 @@
           "doom": 0.71
         }
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 3,
-        "heat": 0,
-        "label": "9회말 6점차"
-      },
-      "recap": null
+      "live": null,
+      "recap": {
+        "actual": 6,
+        "verdict": "기대 이하"
+      }
     },
     {
       "gameId": "20260602LTHT0",
@@ -229,11 +226,11 @@
         }
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
-        "heat": 84,
-        "label": "8회말 동점 접전"
+        "inning": 9,
+        "half": "T",
+        "out": 0,
+        "heat": 89,
+        "label": "9회초 동점 접전"
       },
       "recap": null
     },
@@ -241,7 +238,7 @@
       "gameId": "20260602LGKT0",
       "time": "18:30",
       "stadium": "수원",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPO-T",
       "away": {
@@ -287,14 +284,11 @@
           "doom": 0
         }
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 1,
-        "heat": 0,
-        "label": "9회말 9점차"
-      },
-      "recap": null
+      "live": null,
+      "recap": {
+        "actual": 2,
+        "verdict": "기대 이하"
+      }
     }
   ]
 }
