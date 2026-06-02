@@ -1,7 +1,7 @@
 {
   "date": "20260602",
   "dateText": "2026년 6월 2일",
-  "updatedAt": "2026-06-02T12:20:23.900Z",
+  "updatedAt": "2026-06-02T12:25:24.795Z",
   "recommendedGameId": "20260602LGKT0",
   "games": [
     {
@@ -15,7 +15,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 5,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "박준영",
           "era": 3.55,
@@ -58,8 +58,8 @@
         "inning": 9,
         "half": "T",
         "out": 1,
-        "heat": 44,
-        "label": "9회초 3점차"
+        "heat": 59,
+        "label": "9회초 2점차"
       },
       "recap": null
     },
@@ -115,10 +115,10 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 43,
-        "label": "8회초 3점차"
+        "label": "8회말 3점차"
       },
       "recap": null
     },
@@ -174,10 +174,10 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 1,
         "heat": 0,
-        "label": "9회초 7점차"
+        "label": "9회말 7점차"
       },
       "recap": null
     },
@@ -251,7 +251,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": 9,
+        "score": 10,
         "starter": {
           "name": "임찬규",
           "era": 4.31,
@@ -295,7 +295,7 @@
         "half": "T",
         "out": 2,
         "heat": 0,
-        "label": "9회초 8점차"
+        "label": "9회초 9점차"
       },
       "recap": null
     }
