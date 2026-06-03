@@ -1,7 +1,7 @@
 {
   "date": "20260603",
   "dateText": "2026년 6월 3일",
-  "updatedAt": "2026-06-03T11:40:21.754Z",
+  "updatedAt": "2026-06-03T11:45:22.877Z",
   "recommendedGameId": "20260603LGKT0",
   "games": [
     {
@@ -27,7 +27,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 6,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "박신지",
           "era": 10.5,
@@ -57,9 +57,9 @@
       "live": {
         "inning": 11,
         "half": "B",
-        "out": 0,
-        "heat": 63,
-        "label": "11회말 2점차"
+        "out": 1,
+        "heat": 90,
+        "label": "11회말 끝내기 찬스"
       },
       "recap": null
     },
@@ -74,7 +74,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 8,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "김태경",
           "era": 3.44,
@@ -116,9 +116,9 @@
       "live": {
         "inning": 10,
         "half": "T",
-        "out": 1,
-        "heat": 78,
-        "label": "10회초 1점차 접전"
+        "out": 2,
+        "heat": 63,
+        "label": "10회초 2점차"
       },
       "recap": null
     },
