@@ -1,7 +1,7 @@
 {
   "date": "20260603",
   "dateText": "2026년 6월 3일",
-  "updatedAt": "2026-06-03T11:15:25.962Z",
+  "updatedAt": "2026-06-03T11:20:23.566Z",
   "recommendedGameId": "20260603LGKT0",
   "games": [
     {
@@ -57,7 +57,7 @@
       "live": {
         "inning": 10,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "heat": 100,
         "label": "10회말 끝내기 찬스"
       },
@@ -185,7 +185,7 @@
       "gameId": "20260603LTHT0",
       "time": "17:00",
       "stadium": "광주",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "MS-T",
       "away": {
@@ -231,14 +231,11 @@
           "doom": 0
         }
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 0,
-        "heat": 15,
-        "label": "9회말 5점차"
-      },
-      "recap": null
+      "live": null,
+      "recap": {
+        "actual": 10,
+        "verdict": "예측 적중"
+      }
     },
     {
       "gameId": "20260603LGKT0",
