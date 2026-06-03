@@ -1,7 +1,7 @@
 {
   "date": "20260603",
   "dateText": "2026년 6월 3일",
-  "updatedAt": "2026-06-03T11:25:21.430Z",
+  "updatedAt": "2026-06-03T11:30:28.255Z",
   "recommendedGameId": "20260603LGKT0",
   "games": [
     {
@@ -73,7 +73,7 @@
       "away": {
         "code": "NC",
         "name": "NC",
-        "rank": 7,
+        "rank": 8,
         "score": 4,
         "starter": {
           "name": "김태경",
@@ -116,7 +116,7 @@
       "live": {
         "inning": 10,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 93,
         "label": "10회초 연장 혈투"
       },
@@ -126,7 +126,7 @@
       "gameId": "20260603WOSK0",
       "time": "17:00",
       "stadium": "문학",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPO-2T",
       "away": {
@@ -144,8 +144,8 @@
       "home": {
         "code": "SK",
         "name": "SSG",
-        "rank": 8,
-        "score": 4,
+        "rank": 7,
+        "score": 5,
         "starter": {
           "name": "백승건",
           "era": 4.32,
@@ -172,14 +172,11 @@
           "doom": 0
         }
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 1,
-        "heat": 99,
-        "label": "9회말 끝내기 찬스"
-      },
-      "recap": null
+      "live": null,
+      "recap": {
+        "actual": 91,
+        "verdict": "기대 이상"
+      }
     },
     {
       "gameId": "20260603LTHT0",
@@ -191,7 +188,7 @@
       "away": {
         "code": "LT",
         "name": "롯데",
-        "rank": 8,
+        "rank": 9,
         "score": 8,
         "starter": {
           "name": "김진욱",
