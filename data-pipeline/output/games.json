@@ -1,7 +1,7 @@
 {
   "date": "20260603",
   "dateText": "2026년 6월 3일",
-  "updatedAt": "2026-06-03T08:45:23.630Z",
+  "updatedAt": "2026-06-03T08:50:23.808Z",
   "recommendedGameId": "20260603LGKT0",
   "games": [
     {
@@ -57,7 +57,7 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "heat": 45,
         "label": "3회말 1점차 접전"
       },
@@ -115,10 +115,10 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 46,
-        "label": "3회초 1점차 접전"
+        "label": "3회말 1점차 접전"
       },
       "recap": null
     },
@@ -175,7 +175,7 @@
       "live": {
         "inning": 2,
         "half": "B",
-        "out": 0,
+        "out": 3,
         "heat": 26,
         "label": "2회말 3점차"
       },
@@ -204,7 +204,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "황동하",
           "era": 3.91,
@@ -235,8 +235,8 @@
         "inning": 2,
         "half": "B",
         "out": 0,
-        "heat": 25,
-        "label": "2회말 3점차"
+        "heat": 34,
+        "label": "2회말 2점차"
       },
       "recap": null
     },
@@ -293,7 +293,7 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 9,
         "label": "3회초 5점차"
       },
