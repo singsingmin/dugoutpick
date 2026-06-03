@@ -7,6 +7,7 @@ import Panel from './Panel';
 import TeamName from './TeamName';
 import HonjamBadge from './HonjamBadge';
 import StatusChip from './StatusChip';
+import StarterLine from './StarterLine';
 import { colors, spacing } from '../theme';
 
 interface Props {
@@ -71,6 +72,7 @@ export default function GameCard({ game, variant, onPress, showRecap = true }: P
             <View style={styles.heroLeft}>
               <StatusChip game={game} />
               {matchup}
+              <StarterLine game={game} style={styles.starterHero} />
               <PixelText variant="caption" color={colors.textDim} style={styles.meta}>
                 {game.time} · {game.stadium}
               </PixelText>
@@ -94,6 +96,7 @@ export default function GameCard({ game, variant, onPress, showRecap = true }: P
       <Panel style={styles.list}>
         <View style={styles.listMatch}>
           {matchup}
+          <StarterLine game={game} style={styles.starterList} />
           {recapLine}
         </View>
         <View style={styles.listMeta}>
@@ -111,6 +114,8 @@ const styles = StyleSheet.create({
   heroTop: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: spacing.md },
   heroLeft: { flex: 1, gap: spacing.xs },
   meta: { marginTop: spacing.xs },
+  starterHero: { marginTop: spacing.xs },
+  starterList: { marginTop: 3 },
   reasonHero: { marginTop: spacing.xs },
   list: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: spacing.sm, marginBottom: spacing.sm },
   listMatch: { flex: 1 },

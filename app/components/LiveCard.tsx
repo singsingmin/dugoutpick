@@ -4,6 +4,7 @@ import type { Game } from '../types';
 import PixelText from './PixelText';
 import Panel from './Panel';
 import TeamName from './TeamName';
+import StarterLine from './StarterLine';
 import { colors, spacing } from '../theme';
 
 const LIVE_RED = '#E03131';
@@ -29,6 +30,7 @@ export default function LiveCard({ game, onPress }: { game: Game; onPress: () =>
           </PixelText>
           <TeamName code={game.home.code} variant="title" />
         </View>
+        <StarterLine game={game} style={styles.starter} />
       </Panel>
     </Pressable>
   );
@@ -39,4 +41,5 @@ const styles = StyleSheet.create({
   top: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
   heat: { marginLeft: 'auto', backgroundColor: colors.gold, paddingHorizontal: spacing.sm, paddingVertical: 1, borderRadius: 4 },
   row: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around' },
+  starter: { textAlign: 'center' },
 });
