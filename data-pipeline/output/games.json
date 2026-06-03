@@ -1,7 +1,7 @@
 {
   "date": "20260603",
   "dateText": "2026년 6월 3일",
-  "updatedAt": "2026-06-03T10:55:21.390Z",
+  "updatedAt": "2026-06-03T11:00:35.667Z",
   "recommendedGameId": "20260603LGKT0",
   "games": [
     {
@@ -57,7 +57,7 @@
       "live": {
         "inning": 10,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 90,
         "label": "10회초 연장 혈투"
       },
@@ -173,11 +173,11 @@
         }
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
-        "heat": 84,
-        "label": "8회말 동점 접전"
+        "inning": 9,
+        "half": "T",
+        "out": 0,
+        "heat": 89,
+        "label": "9회초 동점 접전"
       },
       "recap": null
     },
@@ -232,11 +232,11 @@
         }
       },
       "live": {
-        "inning": 8,
-        "half": "B",
+        "inning": 9,
+        "half": "T",
         "out": 1,
-        "heat": 42,
-        "label": "8회말 3점차"
+        "heat": 45,
+        "label": "9회초 3점차"
       },
       "recap": null
     },
@@ -244,7 +244,7 @@
       "gameId": "20260603LGKT0",
       "time": "17:00",
       "stadium": "수원",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPO-T",
       "away": {
@@ -290,14 +290,11 @@
           "doom": 0
         }
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 3,
-        "heat": 76,
-        "label": "9회초 1점차 접전"
-      },
-      "recap": null
+      "live": null,
+      "recap": {
+        "actual": 74,
+        "verdict": "예측 적중"
+      }
     }
   ]
 }
