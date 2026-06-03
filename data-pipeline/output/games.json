@@ -1,7 +1,7 @@
 {
   "date": "20260603",
   "dateText": "2026년 6월 3일",
-  "updatedAt": "2026-06-03T10:30:29.154Z",
+  "updatedAt": "2026-06-03T10:35:21.626Z",
   "recommendedGameId": "20260603LGKT0",
   "games": [
     {
@@ -55,11 +55,11 @@
         }
       },
       "live": {
-        "inning": 8,
-        "half": "B",
+        "inning": 9,
+        "half": "T",
         "out": 0,
-        "heat": 81,
-        "label": "8회말 동점 접전"
+        "heat": 86,
+        "label": "9회초 동점 접전"
       },
       "recap": null
     },
@@ -173,11 +173,11 @@
         }
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 2,
-        "heat": 52,
-        "label": "7회말 2점차"
+        "inning": 8,
+        "half": "T",
+        "out": 0,
+        "heat": 55,
+        "label": "8회초 2점차"
       },
       "recap": null
     },
@@ -293,7 +293,7 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "heat": 57,
         "label": "8회말 2점차"
       },
