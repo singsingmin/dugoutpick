@@ -1,7 +1,7 @@
 {
   "date": "20260603",
   "dateText": "2026년 6월 3일",
-  "updatedAt": "2026-06-03T09:55:24.413Z",
+  "updatedAt": "2026-06-03T10:00:33.320Z",
   "recommendedGameId": "20260603LGKT0",
   "games": [
     {
@@ -55,11 +55,11 @@
         }
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 1,
-        "heat": 70,
-        "label": "6회말 동점 접전"
+        "inning": 7,
+        "half": "T",
+        "out": 0,
+        "heat": 76,
+        "label": "7회초 동점 접전"
       },
       "recap": null
     },
@@ -114,11 +114,11 @@
         }
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 2,
-        "heat": 61,
-        "label": "6회말 1점차 접전"
+        "inning": 7,
+        "half": "T",
+        "out": 0,
+        "heat": 65,
+        "label": "7회초 1점차 접전"
       },
       "recap": null
     },
@@ -174,10 +174,10 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 36,
-        "label": "6회초 3점차"
+        "label": "6회말 3점차"
       },
       "recap": null
     },
@@ -234,7 +234,7 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "heat": 36,
         "label": "6회말 3점차"
       },
@@ -251,7 +251,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "이정용",
           "era": 5.65,
@@ -292,10 +292,10 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 1,
-        "heat": 0,
-        "label": "7회초 6점차"
+        "half": "B",
+        "out": 0,
+        "heat": 26,
+        "label": "7회말 4점차"
       },
       "recap": null
     }
