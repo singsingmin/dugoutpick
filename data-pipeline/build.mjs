@@ -130,12 +130,12 @@ async function fetchPitcherStats() {
   const res = await fetch('https://www.koreabaseball.com/Record/Player/PitcherBasic/Basic1.aspx', { headers: { 'User-Agent': UA } });
   if (!res.ok) throw new Error(`PitcherBasic HTTP ${res.status}`);
   const html = await res.text();
-  // 컬럼: 순위|이름|팀|ERA|승|패|...
+  // 컬럼: 순위|이름|팀|ERA|G|승|패|... (ERA 다음 G(경기수)가 있어 W=c[5], L=c[6])
   const map = {};
   for (const m of html.matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/g)) {
     const c = [...m[1].matchAll(/<td[^>]*>([\s\S]*?)<\/td>/g)].map(x => strip(x[1]));
-    if (c.length > 5 && /^\d+$/.test(c[0]) && /^\d\.\d\d$/.test(c[3])) {
-      map[c[1]] = { era: parseFloat(c[3]), w: parseInt(c[4], 10) || 0, l: parseInt(c[5], 10) || 0 };
+    if (c.length > 6 && /^\d+$/.test(c[0]) && /^\d\.\d\d$/.test(c[3])) {
+      map[c[1]] = { era: parseFloat(c[3]), w: parseInt(c[5], 10) || 0, l: parseInt(c[6], 10) || 0 };
     }
   }
   return map;
