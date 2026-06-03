@@ -1,7 +1,7 @@
 {
   "date": "20260603",
   "dateText": "2026년 6월 3일",
-  "updatedAt": "2026-06-03T08:30:29.939Z",
+  "updatedAt": "2026-06-03T08:35:19.331Z",
   "recommendedGameId": "20260603LGKT0",
   "games": [
     {
@@ -55,11 +55,11 @@
         }
       },
       "live": {
-        "inning": 2,
-        "half": "B",
-        "out": 2,
-        "heat": 49,
-        "label": "2회말 동점 접전"
+        "inning": 3,
+        "half": "T",
+        "out": 0,
+        "heat": 54,
+        "label": "3회초 동점 접전"
       },
       "recap": null
     },
@@ -115,10 +115,10 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "heat": 42,
-        "label": "2회초 1점차 접전"
+        "label": "2회말 1점차 접전"
       },
       "recap": null
     },
@@ -133,7 +133,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 0,
+        "score": 4,
         "starter": {
           "name": "로젠버그",
           "era": 3.18,
@@ -175,9 +175,9 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 1,
-        "heat": 41,
-        "label": "2회초 1점차 접전"
+        "out": 2,
+        "heat": 26,
+        "label": "2회초 3점차"
       },
       "recap": null
     },
@@ -192,7 +192,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 9,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "김진욱",
           "era": 3.38,
@@ -234,9 +234,9 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 1,
-        "heat": 41,
-        "label": "2회초 1점차 접전"
+        "out": 2,
+        "heat": 33,
+        "label": "2회초 2점차"
       },
       "recap": null
     },
@@ -292,10 +292,10 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
+        "half": "B",
         "out": 1,
         "heat": 25,
-        "label": "2회초 3점차"
+        "label": "2회말 3점차"
       },
       "recap": null
     }
