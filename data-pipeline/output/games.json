@@ -1,7 +1,7 @@
 {
   "date": "20260604",
   "dateText": "2026년 6월 4일",
-  "updatedAt": "2026-06-04T11:05:20.892Z",
+  "updatedAt": "2026-06-04T11:10:22.794Z",
   "recommendedGameId": "20260604LGKT0",
   "games": [
     {
@@ -86,7 +86,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 3,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "원태인",
           "era": 3.57,
@@ -116,9 +116,9 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 1,
-        "heat": 45,
-        "label": "5회말 2점차"
+        "out": 2,
+        "heat": 56,
+        "label": "5회말 1점차 접전"
       },
       "recap": null
     },
@@ -133,7 +133,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "배동현",
           "era": 4.15,
@@ -175,9 +175,9 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 1,
-        "heat": 52,
-        "label": "4회초 1점차 접전"
+        "out": 2,
+        "heat": 63,
+        "label": "4회초 동점 접전"
       },
       "recap": null
     },
@@ -234,7 +234,7 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 11,
         "label": "5회초 5점차"
       },
@@ -291,11 +291,11 @@
         }
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 2,
-        "heat": 56,
-        "label": "5회말 1점차 접전"
+        "inning": 6,
+        "half": "T",
+        "out": 0,
+        "heat": 60,
+        "label": "6회초 1점차 접전"
       },
       "recap": null
     }
