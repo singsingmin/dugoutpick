@@ -1,7 +1,7 @@
 {
   "date": "20260604",
   "dateText": "2026년 6월 4일",
-  "updatedAt": "2026-06-04T12:55:19.930Z",
+  "updatedAt": "2026-06-04T13:00:36.784Z",
   "recommendedGameId": "20260604LGKT0",
   "games": [
     {
@@ -56,10 +56,10 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
+        "half": "B",
         "out": 2,
         "heat": 47,
-        "label": "6회초 2점차"
+        "label": "6회말 2점차"
       },
       "recap": null
     },
@@ -123,7 +123,7 @@
       "gameId": "20260604WOSK0",
       "time": "18:30",
       "stadium": "문학",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPO-2T",
       "away": {
@@ -169,14 +169,11 @@
           "doom": 0
         }
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 1,
-        "heat": 76,
-        "label": "9회초 1점차 접전"
-      },
-      "recap": null
+      "live": null,
+      "recap": {
+        "actual": 74,
+        "verdict": "기대 이상"
+      }
     },
     {
       "gameId": "20260604LTHT0",
