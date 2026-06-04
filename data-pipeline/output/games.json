@@ -1,7 +1,7 @@
 {
   "date": "20260604",
   "dateText": "2026년 6월 4일",
-  "updatedAt": "2026-06-04T10:00:33.867Z",
+  "updatedAt": "2026-06-04T10:05:21.991Z",
   "recommendedGameId": "20260604LGKT0",
   "games": [
     {
@@ -74,7 +74,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "구창모",
           "era": 3.99,
@@ -115,10 +115,10 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
-        "out": 1,
-        "heat": 33,
-        "label": "2회초 2점차"
+        "half": "B",
+        "out": 0,
+        "heat": 25,
+        "label": "2회말 3점차"
       },
       "recap": null
     },
@@ -204,7 +204,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "시라카와",
           "era": null,
@@ -235,8 +235,8 @@
         "inning": 2,
         "half": "B",
         "out": 1,
-        "heat": 49,
-        "label": "2회말 동점 접전"
+        "heat": 41,
+        "label": "2회말 1점차 접전"
       },
       "recap": null
     },
@@ -293,7 +293,7 @@
       "live": {
         "inning": 2,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "heat": 33,
         "label": "2회말 2점차"
       },
