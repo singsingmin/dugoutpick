@@ -1,7 +1,7 @@
 {
   "date": "20260604",
   "dateText": "2026년 6월 4일",
-  "updatedAt": "2026-06-04T11:44:39.087Z",
+  "updatedAt": "2026-06-04T11:45:21.657Z",
   "recommendedGameId": "20260604LGKT0",
   "games": [
     {
@@ -251,7 +251,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "웰스",
           "era": 1.79,
@@ -294,8 +294,8 @@
         "inning": 7,
         "half": "T",
         "out": 1,
-        "heat": 65,
-        "label": "7회초 1점차 접전"
+        "heat": 52,
+        "label": "7회초 2점차"
       },
       "recap": null
     }
