@@ -1,7 +1,7 @@
 {
   "date": "20260604",
   "dateText": "2026년 6월 4일",
-  "updatedAt": "2026-06-04T09:55:19.945Z",
+  "updatedAt": "2026-06-04T10:00:33.867Z",
   "recommendedGameId": "20260604LGKT0",
   "games": [
     {
@@ -74,7 +74,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "구창모",
           "era": 3.99,
@@ -117,8 +117,8 @@
         "inning": 2,
         "half": "T",
         "out": 1,
-        "heat": 41,
-        "label": "2회초 1점차 접전"
+        "heat": 33,
+        "label": "2회초 2점차"
       },
       "recap": null
     },
@@ -133,7 +133,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "배동현",
           "era": 4.15,
@@ -175,9 +175,9 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 1,
-        "heat": 41,
-        "label": "2회초 1점차 접전"
+        "out": 3,
+        "heat": 50,
+        "label": "2회초 동점 접전"
       },
       "recap": null
     },
@@ -233,10 +233,10 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 1,
         "heat": 49,
-        "label": "2회초 동점 접전"
+        "label": "2회말 동점 접전"
       },
       "recap": null
     },
@@ -292,10 +292,10 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "heat": 33,
-        "label": "2회초 2점차"
+        "label": "2회말 2점차"
       },
       "recap": null
     }
