@@ -1,21 +1,21 @@
 {
   "date": "20260604",
   "dateText": "2026년 6월 4일",
-  "updatedAt": "2026-06-04T08:43:22.374Z",
+  "updatedAt": "2026-06-04T09:35:20.557Z",
   "recommendedGameId": "20260604LGKT0",
   "games": [
     {
       "gameId": "20260604HHOB0",
       "time": "18:30",
       "stadium": "잠실",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "KN-T",
       "away": {
         "code": "HH",
         "name": "한화",
         "rank": 5,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "화이트",
           "era": 3.05,
@@ -27,7 +27,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 6,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "잭로그",
           "era": 4.22,
@@ -54,21 +54,27 @@
           "doom": 0
         }
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "B",
+        "out": 3,
+        "heat": 43,
+        "label": "1회말 동점 접전"
+      },
       "recap": null
     },
     {
       "gameId": "20260604NCSS0",
       "time": "18:30",
       "stadium": "대구",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SS-T",
       "away": {
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "구창모",
           "era": 3.99,
@@ -80,7 +86,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 3,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "원태인",
           "era": 3.57,
@@ -107,21 +113,27 @@
           "doom": 0
         }
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 0,
+        "heat": 43,
+        "label": "1회초 동점 접전"
+      },
       "recap": null
     },
     {
       "gameId": "20260604WOSK0",
       "time": "18:30",
       "stadium": "문학",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SPO-2T",
       "away": {
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "배동현",
           "era": 4.15,
@@ -133,7 +145,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 8,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "최민준",
           "era": 3.52,
@@ -160,21 +172,27 @@
           "doom": 0
         }
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "B",
+        "out": 0,
+        "heat": 43,
+        "label": "1회말 동점 접전"
+      },
       "recap": null
     },
     {
       "gameId": "20260604LTHT0",
       "time": "18:30",
       "stadium": "광주",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "MS-T",
       "away": {
         "code": "LT",
         "name": "롯데",
         "rank": 9,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "박세웅",
           "era": 4.2,
@@ -186,7 +204,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "시라카와",
           "era": null,
@@ -213,21 +231,27 @@
           "doom": 0
         }
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 0,
+        "heat": 43,
+        "label": "1회초 동점 접전"
+      },
       "recap": null
     },
     {
       "gameId": "20260604LGKT0",
       "time": "18:30",
       "stadium": "수원",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SPO-T",
       "away": {
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "웰스",
           "era": 1.79,
@@ -239,7 +263,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 2,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "사우어",
           "era": 4.43,
@@ -266,7 +290,13 @@
           "doom": 0
         }
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 1,
+        "heat": 43,
+        "label": "1회초 동점 접전"
+      },
       "recap": null
     }
   ]
