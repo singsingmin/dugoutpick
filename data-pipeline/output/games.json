@@ -1,288 +1,273 @@
 {
-  "date": "20260604",
-  "dateText": "2026년 6월 4일",
-  "updatedAt": "2026-06-04T14:05:23.817Z",
-  "recommendedGameId": "20260604LGKT0",
+  "date": "20260605",
+  "dateText": "2026년 6월 5일",
+  "updatedAt": "2026-06-04T23:04:09.778Z",
+  "recommendedGameId": "20260605SSHT0",
   "games": [
     {
-      "gameId": "20260604HHOB0",
+      "gameId": "20260605WOOB0",
       "time": "18:30",
       "stadium": "잠실",
-      "status": "FINAL",
+      "status": "SCHEDULED",
       "cancelReason": null,
-      "broadcast": "KN-T",
+      "broadcast": "SPO-2T,SS-T",
       "away": {
-        "code": "HH",
-        "name": "한화",
-        "rank": 5,
-        "score": 1,
+        "code": "WO",
+        "name": "키움",
+        "rank": 10,
+        "score": null,
         "starter": {
-          "name": "화이트",
-          "era": 3.04,
+          "name": "하영민",
+          "era": 4.89,
           "w": 2,
-          "l": 2
+          "l": 3
         }
       },
       "home": {
         "code": "OB",
         "name": "두산",
         "rank": 6,
-        "score": 3,
+        "score": null,
         "starter": {
-          "name": "잭로그",
-          "era": 3.97,
-          "w": 3,
-          "l": 3
+          "name": "최승용",
+          "era": 5.61,
+          "w": 1,
+          "l": 5
         }
       },
       "honjam": {
-        "score": 73,
-        "reason": "게임차 1.5, 막상막하 승부",
+        "score": 8,
+        "reason": "게임차 7의 순위 다툼 · 양 팀 최근 10경기 합 6승의 화력",
         "points": [
-          "게임차 : 1.5 · 막상막하",
-          "상대전적 : 한화 5승 2패 1무",
-          "가을야구 직행 순위 다툼",
-          "화이트(ERA 3.05) 호투 기대"
+          "게임차 : 7",
+          "상대전적 : 키움 2승 3패",
+          "양 팀 최근 10경기 합 6승의 화력",
+          "10위권 PO 생존 경쟁"
         ],
         "factors": {
-          "close": 0.81,
-          "quality": 0.5,
-          "form": 0.24,
+          "close": 0.18,
+          "quality": 0.22,
+          "form": 0.35,
           "rivalry": 0,
-          "playoff": 1,
-          "pitcher": 0.46,
+          "playoff": 0.5,
+          "pitcher": 0.02,
           "doom": 0
         }
       },
       "live": null,
-      "recap": {
-        "actual": 42,
-        "verdict": "기대 이하"
-      }
+      "recap": null
     },
     {
-      "gameId": "20260604NCSS0",
+      "gameId": "20260605HHLT0",
       "time": "18:30",
-      "stadium": "대구",
-      "status": "FINAL",
+      "stadium": "사직",
+      "status": "SCHEDULED",
       "cancelReason": null,
-      "broadcast": "SS-T",
+      "broadcast": "MS-T",
       "away": {
-        "code": "NC",
-        "name": "NC",
-        "rank": 7,
-        "score": 6,
+        "code": "HH",
+        "name": "한화",
+        "rank": 5,
+        "score": null,
         "starter": {
-          "name": "구창모",
-          "era": 4.04,
-          "w": 5,
+          "name": "류현진",
+          "era": 3.28,
+          "w": 6,
           "l": 2
         }
       },
       "home": {
-        "code": "SS",
-        "name": "삼성",
-        "rank": 3,
-        "score": 3,
+        "code": "LT",
+        "name": "롯데",
+        "rank": 9,
+        "score": null,
         "starter": {
-          "name": "원태인",
-          "era": 3.68,
-          "w": 2,
+          "name": "로드리게스",
+          "era": 5.12,
+          "w": 3,
           "l": 4
         }
       },
       "honjam": {
-        "score": 14,
-        "reason": "7위권 PO 생존 경쟁 · 원태인(ERA 3.57) 호투 기대",
+        "score": 21,
+        "reason": "게임차 5의 순위 다툼",
         "points": [
-          "게임차 : 9",
-          "상대전적 : NC 1승 7패",
-          "7위권 PO 생존 경쟁",
-          "원태인(ERA 3.57) 호투 기대"
+          "게임차 : 5 · 순위 다툼",
+          "상대전적 : 한화 2승 2패",
+          "9위권 PO 생존 경쟁",
+          "양 팀 최근 10경기 합 9승의 화력"
         ],
         "factors": {
-          "close": 0,
-          "quality": 0.56,
-          "form": 0.12,
+          "close": 0.38,
+          "quality": 0.33,
+          "form": 0.29,
           "rivalry": 0,
-          "playoff": 0.75,
-          "pitcher": 0.41,
+          "playoff": 0.5,
+          "pitcher": 0.29,
           "doom": 0
         }
       },
       "live": null,
-      "recap": {
-        "actual": 31,
-        "verdict": "기대 이상"
-      }
+      "recap": null
     },
     {
-      "gameId": "20260604WOSK0",
+      "gameId": "20260605KTSK0",
       "time": "18:30",
       "stadium": "문학",
-      "status": "FINAL",
+      "status": "SCHEDULED",
       "cancelReason": null,
-      "broadcast": "SPO-2T",
+      "broadcast": "SPO-T",
       "away": {
-        "code": "WO",
-        "name": "키움",
-        "rank": 10,
-        "score": 6,
+        "code": "KT",
+        "name": "KT",
+        "rank": 2,
+        "score": null,
         "starter": {
-          "name": "배동현",
-          "era": 5.02,
-          "w": 4,
-          "l": 4
+          "name": "문용익",
+          "era": 16.88,
+          "w": 0,
+          "l": 0
         }
       },
       "home": {
         "code": "SK",
         "name": "SSG",
         "rank": 8,
-        "score": 7,
+        "score": null,
         "starter": {
-          "name": "최민준",
-          "era": 4.38,
-          "w": 1,
-          "l": 4
+          "name": "김건우",
+          "era": 4.7,
+          "w": 5,
+          "l": 2
         }
       },
       "honjam": {
-        "score": 34,
-        "reason": "게임차 3의 순위 다툼",
+        "score": 7,
+        "reason": "양 팀 최근 10경기 합 8승의 화력",
         "points": [
-          "게임차 : 3 · 순위 다툼",
-          "상대전적 : 키움 5승 3패",
-          "양 팀 최근 10경기 합 2승의 화력",
-          "최민준(ERA 3.52) 호투 기대"
+          "게임차 : 9",
+          "상대전적 : KT 2승 4패",
+          "양 팀 최근 10경기 합 8승의 화력",
+          "8위권 PO 생존 경쟁"
         ],
         "factors": {
-          "close": 0.66,
-          "quality": 0.11,
-          "form": 0.54,
+          "close": 0,
+          "quality": 0.56,
+          "form": 0.35,
           "rivalry": 0,
           "playoff": 0.25,
-          "pitcher": 0.39,
+          "pitcher": 0.05,
           "doom": 0
         }
       },
       "live": null,
-      "recap": {
-        "actual": 74,
-        "verdict": "기대 이상"
-      }
+      "recap": null
     },
     {
-      "gameId": "20260604LTHT0",
+      "gameId": "20260605SSHT0",
       "time": "18:30",
       "stadium": "광주",
-      "status": "FINAL",
+      "status": "SCHEDULED",
       "cancelReason": null,
-      "broadcast": "MS-T",
+      "broadcast": "K-2T",
       "away": {
-        "code": "LT",
-        "name": "롯데",
-        "rank": 9,
-        "score": 0,
+        "code": "SS",
+        "name": "삼성",
+        "rank": 3,
+        "score": null,
         "starter": {
-          "name": "박세웅",
-          "era": 4.98,
-          "w": 1,
-          "l": 5
+          "name": "오러클린",
+          "era": 3.99,
+          "w": 4,
+          "l": 2
         }
       },
       "home": {
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 10,
+        "score": null,
         "starter": {
-          "name": "시라카와",
-          "era": 0,
-          "w": 1,
-          "l": 0
+          "name": "올러",
+          "era": 2.63,
+          "w": 6,
+          "l": 4
         }
       },
       "honjam": {
-        "score": 14,
-        "reason": "게임차 6의 순위 다툼 · 9위권 PO 생존 경쟁",
+        "score": 82,
+        "reason": "전통의 명문 자존심 대결 · 게임차 3의 순위 다툼",
         "points": [
-          "게임차 : 6",
-          "상대전적 : 롯데 2승 5패 1무",
-          "9위권 PO 생존 경쟁",
-          "양 팀 최근 10경기 합 10승의 화력"
+          "전통의 명문 자존심 대결",
+          "게임차 : 3 · 순위 다툼",
+          "상대전적 : 삼성 2승 3패",
+          "리그 3위·4위 상위권 빅매치"
         ],
         "factors": {
-          "close": 0.25,
-          "quality": 0.39,
-          "form": 0.18,
-          "rivalry": 0,
-          "playoff": 0.5,
-          "pitcher": 0.27,
+          "close": 0.62,
+          "quality": 0.72,
+          "form": 0.17,
+          "rivalry": 0.6,
+          "playoff": 1,
+          "pitcher": 0.56,
           "doom": 0
         }
       },
       "live": null,
-      "recap": {
-        "actual": 2,
-        "verdict": "기대 이하"
-      }
+      "recap": null
     },
     {
-      "gameId": "20260604LGKT0",
+      "gameId": "20260605LGNC0",
       "time": "18:30",
-      "stadium": "수원",
-      "status": "FINAL",
+      "stadium": "창원",
+      "status": "SCHEDULED",
       "cancelReason": null,
-      "broadcast": "SPO-T",
+      "broadcast": "KN-T",
       "away": {
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": 7,
+        "score": null,
         "starter": {
-          "name": "웰스",
-          "era": 1.97,
-          "w": 3,
-          "l": 2
+          "name": "김윤식",
+          "era": 2.63,
+          "w": 0,
+          "l": 0
         }
       },
       "home": {
-        "code": "KT",
-        "name": "KT",
-        "rank": 2,
-        "score": 5,
+        "code": "NC",
+        "name": "NC",
+        "rank": 7,
+        "score": null,
         "starter": {
-          "name": "사우어",
-          "era": 4.54,
-          "w": 4,
-          "l": 3
+          "name": "라일리",
+          "era": 3.33,
+          "w": 2,
+          "l": 0
         }
       },
       "honjam": {
-        "score": 84,
-        "reason": "게임차 0.5, 막상막하 승부 · 리그 1위·2위 상위권 빅매치",
+        "score": 25,
+        "reason": "양 팀 에이스 투수전(ERA 2.63·3.33)",
         "points": [
-          "게임차 : 0.5 · 막상막하",
-          "상대전적 : LG 2승 5패",
-          "리그 1위·2위 상위권 빅매치",
-          "웰스(ERA 1.79) 호투 기대"
+          "게임차 : 10",
+          "상대전적 : LG 4승 1패",
+          "양 팀 에이스 투수전(ERA 2.63·3.33)",
+          "양 팀 최근 10경기 합 14승의 화력"
         ],
         "factors": {
-          "close": 0.95,
-          "quality": 0.94,
-          "form": 0.36,
+          "close": 0,
+          "quality": 0.67,
+          "form": 0.35,
           "rivalry": 0,
-          "playoff": 0,
-          "pitcher": 0.6,
+          "playoff": 0.5,
+          "pitcher": 0.67,
           "doom": 0
         }
       },
       "live": null,
-      "recap": {
-        "actual": 54,
-        "verdict": "기대 이하"
-      }
+      "recap": null
     }
   ]
 }
