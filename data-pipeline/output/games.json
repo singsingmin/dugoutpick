@@ -1,7 +1,7 @@
 {
   "date": "20260604",
   "dateText": "2026년 6월 4일",
-  "updatedAt": "2026-06-04T13:10:25.251Z",
+  "updatedAt": "2026-06-04T13:15:28.202Z",
   "recommendedGameId": "20260604LGKT0",
   "games": [
     {
@@ -56,10 +56,10 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "heat": 63,
-        "label": "7회초 1점차 접전"
+        "label": "7회말 1점차 접전"
       },
       "recap": null
     },
