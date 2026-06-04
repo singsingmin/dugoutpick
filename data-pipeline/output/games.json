@@ -1,7 +1,7 @@
 {
   "date": "20260604",
   "dateText": "2026년 6월 4일",
-  "updatedAt": "2026-06-04T12:05:23.172Z",
+  "updatedAt": "2026-06-04T12:10:24.172Z",
   "recommendedGameId": "20260604LGKT0",
   "games": [
     {
@@ -116,7 +116,7 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "heat": 56,
         "label": "8회말 2점차"
       },
@@ -175,7 +175,7 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 1,
+        "out": 3,
         "heat": 63,
         "label": "6회말 1점차 접전"
       },
@@ -204,7 +204,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 9,
+        "score": 10,
         "starter": {
           "name": "시라카와",
           "era": null,
@@ -232,11 +232,11 @@
         }
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 1,
+        "inning": 8,
+        "half": "T",
+        "out": 0,
         "heat": 0,
-        "label": "7회말 9점차"
+        "label": "8회초 10점차"
       },
       "recap": null
     },
@@ -293,7 +293,7 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 42,
         "label": "8회초 3점차"
       },
