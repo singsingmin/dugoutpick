@@ -1,7 +1,7 @@
 {
   "date": "20260604",
   "dateText": "2026년 6월 4일",
-  "updatedAt": "2026-06-04T11:45:21.657Z",
+  "updatedAt": "2026-06-04T11:50:23.954Z",
   "recommendedGameId": "20260604LGKT0",
   "games": [
     {
@@ -115,10 +115,10 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 65,
-        "label": "7회초 1점차 접전"
+        "label": "7회말 1점차 접전"
       },
       "recap": null
     },
@@ -145,7 +145,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 8,
-        "score": 6,
+        "score": 7,
         "starter": {
           "name": "최민준",
           "era": 3.52,
@@ -175,9 +175,9 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 1,
-        "heat": 70,
-        "label": "5회말 동점 접전"
+        "out": 2,
+        "heat": 59,
+        "label": "5회말 1점차 접전"
       },
       "recap": null
     },
@@ -232,11 +232,11 @@
         }
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 0,
         "heat": 0,
-        "label": "6회말 9점차"
+        "label": "7회초 9점차"
       },
       "recap": null
     },
@@ -251,7 +251,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "웰스",
           "era": 1.79,
@@ -293,9 +293,9 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 1,
-        "heat": 52,
-        "label": "7회초 2점차"
+        "out": 3,
+        "heat": 40,
+        "label": "7회초 3점차"
       },
       "recap": null
     }
