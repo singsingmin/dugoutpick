@@ -1,7 +1,7 @@
 {
   "date": "20260604",
   "dateText": "2026년 6월 4일",
-  "updatedAt": "2026-06-04T13:55:22.666Z",
+  "updatedAt": "2026-06-04T14:00:34.532Z",
   "recommendedGameId": "20260604LGKT0",
   "games": [
     {
@@ -57,7 +57,7 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 0,
+        "out": 3,
         "heat": 58,
         "label": "9회초 2점차"
       },
