@@ -1,7 +1,7 @@
 {
   "date": "20260604",
   "dateText": "2026년 6월 4일",
-  "updatedAt": "2026-06-04T13:05:24.551Z",
+  "updatedAt": "2026-06-04T13:10:25.251Z",
   "recommendedGameId": "20260604LGKT0",
   "games": [
     {
@@ -15,7 +15,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 5,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "화이트",
           "era": 3.05,
@@ -58,8 +58,8 @@
         "inning": 7,
         "half": "T",
         "out": 0,
-        "heat": 50,
-        "label": "7회초 2점차"
+        "heat": 63,
+        "label": "7회초 1점차 접전"
       },
       "recap": null
     },
