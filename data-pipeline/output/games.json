@@ -1,14 +1,14 @@
 {
   "date": "20260604",
   "dateText": "2026년 6월 4일",
-  "updatedAt": "2026-06-04T14:00:34.532Z",
+  "updatedAt": "2026-06-04T14:05:23.817Z",
   "recommendedGameId": "20260604LGKT0",
   "games": [
     {
       "gameId": "20260604HHOB0",
       "time": "18:30",
       "stadium": "잠실",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "KN-T",
       "away": {
@@ -18,9 +18,9 @@
         "score": 1,
         "starter": {
           "name": "화이트",
-          "era": 3.05,
+          "era": 3.04,
           "w": 2,
-          "l": 1
+          "l": 2
         }
       },
       "home": {
@@ -30,7 +30,7 @@
         "score": 3,
         "starter": {
           "name": "잭로그",
-          "era": 4.22,
+          "era": 3.97,
           "w": 3,
           "l": 3
         }
@@ -54,14 +54,11 @@
           "doom": 0
         }
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 3,
-        "heat": 58,
-        "label": "9회초 2점차"
-      },
-      "recap": null
+      "live": null,
+      "recap": {
+        "actual": 42,
+        "verdict": "기대 이하"
+      }
     },
     {
       "gameId": "20260604NCSS0",
@@ -77,8 +74,8 @@
         "score": 6,
         "starter": {
           "name": "구창모",
-          "era": 3.99,
-          "w": 4,
+          "era": 4.04,
+          "w": 5,
           "l": 2
         }
       },
@@ -89,9 +86,9 @@
         "score": 3,
         "starter": {
           "name": "원태인",
-          "era": 3.57,
+          "era": 3.68,
           "w": 2,
-          "l": 3
+          "l": 4
         }
       },
       "honjam": {
@@ -133,9 +130,9 @@
         "score": 6,
         "starter": {
           "name": "배동현",
-          "era": 4.15,
+          "era": 5.02,
           "w": 4,
-          "l": 3
+          "l": 4
         }
       },
       "home": {
@@ -145,7 +142,7 @@
         "score": 7,
         "starter": {
           "name": "최민준",
-          "era": 3.52,
+          "era": 4.38,
           "w": 1,
           "l": 4
         }
@@ -189,9 +186,9 @@
         "score": 0,
         "starter": {
           "name": "박세웅",
-          "era": 4.2,
+          "era": 4.98,
           "w": 1,
-          "l": 4
+          "l": 5
         }
       },
       "home": {
@@ -201,9 +198,9 @@
         "score": 10,
         "starter": {
           "name": "시라카와",
-          "era": null,
-          "w": null,
-          "l": null
+          "era": 0,
+          "w": 1,
+          "l": 0
         }
       },
       "honjam": {
@@ -245,7 +242,7 @@
         "score": 7,
         "starter": {
           "name": "웰스",
-          "era": 1.79,
+          "era": 1.97,
           "w": 3,
           "l": 2
         }
@@ -257,9 +254,9 @@
         "score": 5,
         "starter": {
           "name": "사우어",
-          "era": 4.43,
+          "era": 4.54,
           "w": 4,
-          "l": 2
+          "l": 3
         }
       },
       "honjam": {
