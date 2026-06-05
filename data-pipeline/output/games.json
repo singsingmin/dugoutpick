@@ -1,7 +1,7 @@
 {
   "date": "20260605",
   "dateText": "2026년 6월 5일",
-  "updatedAt": "2026-06-05T12:35:21.168Z",
+  "updatedAt": "2026-06-05T12:40:24.885Z",
   "recommendedGameId": "20260605SSHT0",
   "games": [
     {
@@ -127,7 +127,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 2,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "문용익",
           "era": 16.88,
@@ -169,9 +169,9 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 1,
-        "heat": 60,
-        "label": "9회초 2점차"
+        "out": 2,
+        "heat": 75,
+        "label": "9회초 1점차 접전"
       },
       "recap": null
     },
@@ -282,11 +282,11 @@
         }
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
-        "heat": 70,
-        "label": "8회말 1점차 접전"
+        "inning": 9,
+        "half": "T",
+        "out": 0,
+        "heat": 75,
+        "label": "9회초 1점차 접전"
       },
       "recap": null
     }
