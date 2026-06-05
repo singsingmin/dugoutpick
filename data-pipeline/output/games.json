@@ -1,7 +1,7 @@
 {
   "date": "20260605",
   "dateText": "2026년 6월 5일",
-  "updatedAt": "2026-06-05T12:55:21.801Z",
+  "updatedAt": "2026-06-05T13:00:40.103Z",
   "recommendedGameId": "20260605SSHT0",
   "games": [
     {
@@ -232,7 +232,7 @@
       "gameId": "20260605LGNC0",
       "time": "18:30",
       "stadium": "창원",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "KN-T",
       "away": {
@@ -278,14 +278,11 @@
           "doom": 0
         }
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 1,
-        "heat": 85,
-        "label": "9회말 끝내기 찬스"
-      },
-      "recap": null
+      "live": null,
+      "recap": {
+        "actual": 68,
+        "verdict": "기대 이상"
+      }
     }
   ]
 }
