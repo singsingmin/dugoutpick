@@ -1,21 +1,21 @@
 {
   "date": "20260605",
   "dateText": "2026년 6월 5일",
-  "updatedAt": "2026-06-05T08:45:23.547Z",
+  "updatedAt": "2026-06-05T09:35:21.052Z",
   "recommendedGameId": "20260605SSHT0",
   "games": [
     {
       "gameId": "20260605WOOB0",
       "time": "18:30",
       "stadium": "잠실",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SPO-2T,SS-T",
       "away": {
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "하영민",
           "era": 4.89,
@@ -27,7 +27,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 6,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "최승용",
           "era": 5.61,
@@ -54,21 +54,27 @@
           "doom": 0
         }
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 0,
+        "heat": 43,
+        "label": "1회초 동점 접전"
+      },
       "recap": null
     },
     {
       "gameId": "20260605HHLT0",
       "time": "18:30",
       "stadium": "사직",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "MS-T",
       "away": {
         "code": "HH",
         "name": "한화",
         "rank": 5,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "류현진",
           "era": 3.28,
@@ -80,7 +86,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 9,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "로드리게스",
           "era": 5.12,
@@ -107,21 +113,27 @@
           "doom": 0
         }
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 2,
+        "heat": 43,
+        "label": "1회초 동점 접전"
+      },
       "recap": null
     },
     {
       "gameId": "20260605KTSK0",
       "time": "18:30",
       "stadium": "문학",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SPO-T",
       "away": {
         "code": "KT",
         "name": "KT",
         "rank": 2,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "문용익",
           "era": 16.88,
@@ -133,7 +145,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 8,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "김건우",
           "era": 4.7,
@@ -160,21 +172,27 @@
           "doom": 0
         }
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 1,
+        "heat": 43,
+        "label": "1회초 동점 접전"
+      },
       "recap": null
     },
     {
       "gameId": "20260605SSHT0",
       "time": "18:30",
       "stadium": "광주",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "K-2T",
       "away": {
         "code": "SS",
         "name": "삼성",
         "rank": 3,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "오러클린",
           "era": 3.99,
@@ -186,7 +204,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "올러",
           "era": 2.63,
@@ -213,21 +231,27 @@
           "doom": 0
         }
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 2,
+        "heat": 43,
+        "label": "1회초 동점 접전"
+      },
       "recap": null
     },
     {
       "gameId": "20260605LGNC0",
       "time": "18:30",
       "stadium": "창원",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "KN-T",
       "away": {
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "김윤식",
           "era": 2.63,
@@ -239,7 +263,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "라일리",
           "era": 3.33,
@@ -266,7 +290,13 @@
           "doom": 0
         }
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 3,
+        "heat": 43,
+        "label": "1회초 동점 접전"
+      },
       "recap": null
     }
   ]
