@@ -1,7 +1,7 @@
 {
   "date": "20260605",
   "dateText": "2026년 6월 5일",
-  "updatedAt": "2026-06-05T11:00:39.068Z",
+  "updatedAt": "2026-06-05T11:05:19.822Z",
   "recommendedGameId": "20260605SSHT0",
   "games": [
     {
@@ -74,7 +74,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 5,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "류현진",
           "era": 3.28,
@@ -116,9 +116,9 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 1,
-        "heat": 59,
-        "label": "6회초 1점차 접전"
+        "out": 2,
+        "heat": 48,
+        "label": "6회초 2점차"
       },
       "recap": null
     },
@@ -145,7 +145,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 8,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "김건우",
           "era": 4.7,
@@ -175,9 +175,9 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
-        "heat": 56,
-        "label": "5회말 1점차 접전"
+        "out": 1,
+        "heat": 67,
+        "label": "5회말 동점 접전"
       },
       "recap": null
     },
@@ -232,11 +232,11 @@
         }
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 3,
-        "heat": 22,
-        "label": "5회말 4점차"
+        "inning": 6,
+        "half": "T",
+        "out": 1,
+        "heat": 24,
+        "label": "6회초 4점차"
       },
       "recap": null
     },
