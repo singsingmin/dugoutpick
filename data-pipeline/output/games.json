@@ -1,7 +1,7 @@
 {
   "date": "20260605",
   "dateText": "2026년 6월 5일",
-  "updatedAt": "2026-06-05T10:40:20.996Z",
+  "updatedAt": "2026-06-05T10:45:25.516Z",
   "recommendedGameId": "20260605SSHT0",
   "games": [
     {
@@ -55,11 +55,11 @@
         }
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 2,
-        "heat": 50,
-        "label": "4회말 1점차 접전"
+        "inning": 5,
+        "half": "T",
+        "out": 0,
+        "heat": 54,
+        "label": "5회초 1점차 접전"
       },
       "recap": null
     },
@@ -74,7 +74,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 5,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "류현진",
           "era": 3.28,
@@ -115,10 +115,10 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 2,
-        "heat": 65,
-        "label": "5회초 동점 접전"
+        "half": "B",
+        "out": 0,
+        "heat": 55,
+        "label": "5회말 1점차 접전"
       },
       "recap": null
     },
@@ -175,7 +175,7 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "heat": 41,
         "label": "4회말 2점차"
       },
@@ -232,11 +232,11 @@
         }
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 1,
-        "heat": 20,
-        "label": "4회말 4점차"
+        "inning": 5,
+        "half": "T",
+        "out": 0,
+        "heat": 22,
+        "label": "5회초 4점차"
       },
       "recap": null
     },
@@ -291,11 +291,11 @@
         }
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 0,
-        "heat": 41,
-        "label": "4회말 2점차"
+        "heat": 44,
+        "label": "5회초 2점차"
       },
       "recap": null
     }
