@@ -1,7 +1,7 @@
 {
   "date": "20260605",
   "dateText": "2026년 6월 5일",
-  "updatedAt": "2026-06-05T10:45:25.516Z",
+  "updatedAt": "2026-06-05T10:50:24.112Z",
   "recommendedGameId": "20260605SSHT0",
   "games": [
     {
@@ -57,7 +57,7 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 54,
         "label": "5회초 1점차 접전"
       },
@@ -114,11 +114,11 @@
         }
       },
       "live": {
-        "inning": 5,
-        "half": "B",
+        "inning": 6,
+        "half": "T",
         "out": 0,
-        "heat": 55,
-        "label": "5회말 1점차 접전"
+        "heat": 59,
+        "label": "6회초 1점차 접전"
       },
       "recap": null
     },
@@ -173,11 +173,11 @@
         }
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 1,
-        "heat": 41,
-        "label": "4회말 2점차"
+        "inning": 5,
+        "half": "T",
+        "out": 0,
+        "heat": 44,
+        "label": "5회초 2점차"
       },
       "recap": null
     },
@@ -234,7 +234,7 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 22,
         "label": "5회초 4점차"
       },
@@ -292,10 +292,10 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "heat": 44,
-        "label": "5회초 2점차"
+        "label": "5회말 2점차"
       },
       "recap": null
     }
