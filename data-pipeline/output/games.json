@@ -1,7 +1,7 @@
 {
   "date": "20260605",
   "dateText": "2026년 6월 5일",
-  "updatedAt": "2026-06-05T09:35:21.052Z",
+  "updatedAt": "2026-06-05T09:40:23.591Z",
   "recommendedGameId": "20260605SSHT0",
   "games": [
     {
@@ -57,7 +57,7 @@
       "live": {
         "inning": 1,
         "half": "T",
-        "out": 0,
+        "out": 3,
         "heat": 43,
         "label": "1회초 동점 접전"
       },
@@ -115,10 +115,10 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 43,
-        "label": "1회초 동점 접전"
+        "label": "1회말 동점 접전"
       },
       "recap": null
     },
@@ -175,7 +175,7 @@
       "live": {
         "inning": 1,
         "half": "T",
-        "out": 1,
+        "out": 3,
         "heat": 43,
         "label": "1회초 동점 접전"
       },
@@ -233,10 +233,10 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 43,
-        "label": "1회초 동점 접전"
+        "label": "1회말 동점 접전"
       },
       "recap": null
     },
@@ -292,10 +292,10 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
-        "out": 3,
+        "half": "B",
+        "out": 1,
         "heat": 43,
-        "label": "1회초 동점 접전"
+        "label": "1회말 동점 접전"
       },
       "recap": null
     }
