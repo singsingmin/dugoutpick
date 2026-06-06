@@ -1,7 +1,7 @@
 {
   "date": "20260606",
   "dateText": "2026년 6월 6일",
-  "updatedAt": "2026-06-06T08:45:21.337Z",
+  "updatedAt": "2026-06-06T08:50:21.254Z",
   "recommendedGameId": "20260606SSHT0",
   "games": [
     {
@@ -113,7 +113,7 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "heat": 46,
         "label": "3회말 1점차 접전"
       },
@@ -142,7 +142,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 9,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "이민석",
           "era": 8.78,
@@ -170,11 +170,11 @@
         }
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 2,
-        "heat": 54,
-        "label": "3회말 동점 접전"
+        "inning": 4,
+        "half": "T",
+        "out": 1,
+        "heat": 40,
+        "label": "4회초 2점차"
       },
       "recap": null
     },
@@ -230,10 +230,10 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "heat": 54,
-        "label": "3회초 동점 접전"
+        "label": "3회말 동점 접전"
       },
       "recap": null
     },
@@ -290,7 +290,7 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 45,
         "label": "3회초 1점차 접전"
       },
