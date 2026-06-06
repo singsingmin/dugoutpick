@@ -1,7 +1,7 @@
 {
   "date": "20260606",
   "dateText": "2026년 6월 6일",
-  "updatedAt": "2026-06-06T11:20:20.803Z",
+  "updatedAt": "2026-06-06T11:25:20.004Z",
   "recommendedGameId": "20260606SSHT0",
   "games": [
     {
@@ -26,7 +26,7 @@
       "home": {
         "code": "SK",
         "name": "SSG",
-        "rank": 7,
+        "rank": 8,
         "score": 3,
         "starter": {
           "name": "타케다",
@@ -183,7 +183,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 3,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "장찬희",
           "era": 4,
@@ -225,9 +225,9 @@
       "live": {
         "inning": 10,
         "half": "T",
-        "out": 0,
-        "heat": 91,
-        "label": "10회초 연장 혈투"
+        "out": 2,
+        "heat": 76,
+        "label": "10회초 1점차 접전"
       },
       "recap": null
     },
@@ -253,7 +253,7 @@
       "home": {
         "code": "NC",
         "name": "NC",
-        "rank": 8,
+        "rank": 7,
         "score": 8,
         "starter": {
           "name": "테일러",
