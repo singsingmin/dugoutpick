@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-06T11:00:31.506Z",
+  "updatedAt": "2026-06-06T11:05:18.639Z",
   "lastWeek": {
     "range": [
       "20260525",
@@ -85,20 +85,20 @@
     ],
     "top": [
       {
-        "away": "HH",
-        "home": "OB",
-        "pred": 88,
-        "reason": "게임차 없는 동률 초접전",
-        "dateStart": "20260602",
-        "dateEnd": "20260604"
-      },
-      {
         "away": "SS",
         "home": "HT",
         "pred": 88,
         "reason": "전통의 명문 자존심 대결 · 게임차 2, 막상막하 승부",
         "dateStart": "20260605",
         "dateEnd": "20260607"
+      },
+      {
+        "away": "HH",
+        "home": "OB",
+        "pred": 86,
+        "reason": "게임차 0.5, 막상막하 승부",
+        "dateStart": "20260602",
+        "dateEnd": "20260604"
       },
       {
         "away": "LG",
@@ -128,6 +128,11 @@
         },
         {
           "date": "20260605",
+          "away": "HH",
+          "home": "LT"
+        },
+        {
+          "date": "20260606",
           "away": "HH",
           "home": "LT"
         },
@@ -305,6 +310,11 @@
         },
         {
           "date": "20260605",
+          "away": "HH",
+          "home": "LT"
+        },
+        {
+          "date": "20260606",
           "away": "HH",
           "home": "LT"
         },
