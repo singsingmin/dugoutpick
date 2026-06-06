@@ -1,7 +1,7 @@
 {
   "date": "20260606",
   "dateText": "2026년 6월 6일",
-  "updatedAt": "2026-06-06T06:15:22.465Z",
+  "updatedAt": "2026-06-06T06:20:21.965Z",
   "recommendedGameId": "20260606SSHT0",
   "games": [
     {
@@ -15,7 +15,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 2,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "배제성",
           "era": 7.71,
@@ -56,10 +56,10 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 1,
-        "heat": 50,
-        "label": "4회초 1점차 접전"
+        "half": "B",
+        "out": 0,
+        "heat": 40,
+        "label": "4회말 2점차"
       },
       "recap": null
     },
