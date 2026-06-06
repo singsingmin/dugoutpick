@@ -1,7 +1,7 @@
 {
   "date": "20260606",
   "dateText": "2026년 6월 6일",
-  "updatedAt": "2026-06-06T10:45:20.604Z",
+  "updatedAt": "2026-06-06T10:50:19.826Z",
   "recommendedGameId": "20260606SSHT0",
   "games": [
     {
@@ -64,7 +64,7 @@
       "gameId": "20260606WOOB0",
       "time": "17:00",
       "stadium": "잠실",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPO-2T,SS-T",
       "away": {
@@ -110,14 +110,11 @@
           "doom": 0
         }
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 0,
-        "heat": 0,
-        "label": "9회초 8점차"
-      },
-      "recap": null
+      "live": null,
+      "recap": {
+        "actual": 2,
+        "verdict": "기대 이하"
+      }
     },
     {
       "gameId": "20260606HHLT0",
@@ -172,7 +169,7 @@
       "live": {
         "inning": 9,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "heat": 15,
         "label": "9회말 5점차"
       },
@@ -260,7 +257,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 8,
-        "score": 6,
+        "score": 8,
         "starter": {
           "name": "테일러",
           "era": 5.44,
@@ -291,8 +288,8 @@
         "inning": 7,
         "half": "B",
         "out": 2,
-        "heat": 53,
-        "label": "7회말 2점차"
+        "heat": 27,
+        "label": "7회말 4점차"
       },
       "recap": null
     }
