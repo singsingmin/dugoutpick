@@ -1,7 +1,7 @@
 {
   "date": "20260606",
   "dateText": "2026년 6월 6일",
-  "updatedAt": "2026-06-06T10:15:21.257Z",
+  "updatedAt": "2026-06-06T10:20:20.380Z",
   "recommendedGameId": "20260606SSHT0",
   "games": [
     {
@@ -83,7 +83,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 6,
-        "score": 8,
+        "score": 9,
         "starter": {
           "name": "최민석",
           "era": 3.29,
@@ -111,11 +111,11 @@
         }
       },
       "live": {
-        "inning": 7,
-        "half": "B",
+        "inning": 8,
+        "half": "T",
         "out": 0,
         "heat": 0,
-        "label": "7회말 7점차"
+        "label": "8회초 8점차"
       },
       "recap": null
     },
@@ -130,7 +130,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 5,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "에르난데스",
           "era": 4.47,
@@ -172,9 +172,9 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
-        "heat": 54,
-        "label": "8회초 2점차"
+        "out": 1,
+        "heat": 82,
+        "label": "8회초 동점 접전"
       },
       "recap": null
     },
@@ -289,10 +289,10 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "heat": 65,
-        "label": "7회초 1점차 접전"
+        "label": "7회말 1점차 접전"
       },
       "recap": null
     }
