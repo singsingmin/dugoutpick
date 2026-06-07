@@ -1,7 +1,7 @@
 {
   "date": "20260607",
   "dateText": "2026년 6월 7일",
-  "updatedAt": "2026-06-07T11:40:22.343Z",
+  "updatedAt": "2026-06-07T11:45:21.638Z",
   "recommendedGameId": "20260607SSHT0",
   "games": [
     {
@@ -129,7 +129,7 @@
       "away": {
         "code": "KT",
         "name": "KT",
-        "rank": 3,
+        "rank": 2,
         "score": 0,
         "starter": {
           "name": "오원석",
@@ -185,7 +185,7 @@
       "away": {
         "code": "SS",
         "name": "삼성",
-        "rank": 2,
+        "rank": 3,
         "score": 6,
         "starter": {
           "name": "양창섭",
