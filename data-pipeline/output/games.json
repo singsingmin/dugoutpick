@@ -1,7 +1,7 @@
 {
   "date": "20260607",
   "dateText": "2026년 6월 7일",
-  "updatedAt": "2026-06-07T10:50:19.585Z",
+  "updatedAt": "2026-06-07T10:55:17.465Z",
   "recommendedGameId": "20260607SSHT0",
   "games": [
     {
@@ -55,11 +55,11 @@
         }
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
-        "heat": 41,
-        "label": "8회말 3점차"
+        "inning": 9,
+        "half": "T",
+        "out": 0,
+        "heat": 44,
+        "label": "9회초 3점차"
       },
       "recap": null
     },
@@ -289,10 +289,10 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "heat": 86,
-        "label": "8회초 동점 접전"
+        "label": "8회말 동점 접전"
       },
       "recap": null
     }
