@@ -1,7 +1,7 @@
 {
   "date": "20260607",
   "dateText": "2026년 6월 7일",
-  "updatedAt": "2026-06-07T09:35:19.764Z",
+  "updatedAt": "2026-06-07T09:40:19.692Z",
   "recommendedGameId": "20260607SSHT0",
   "games": [
     {
@@ -56,10 +56,10 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 22,
-        "label": "5회초 4점차"
+        "label": "5회말 4점차"
       },
       "recap": null
     },
@@ -114,11 +114,11 @@
         }
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 1,
-        "heat": 53,
-        "label": "4회말 1점차 접전"
+        "inning": 5,
+        "half": "T",
+        "out": 0,
+        "heat": 57,
+        "label": "5회초 1점차 접전"
       },
       "recap": null
     },
@@ -145,7 +145,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 8,
-        "score": 6,
+        "score": 7,
         "starter": {
           "name": "베니지아노",
           "era": 5.81,
@@ -175,9 +175,9 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 2,
+        "out": 3,
         "heat": 0,
-        "label": "5회말 6점차"
+        "label": "5회말 7점차"
       },
       "recap": null
     },
@@ -233,10 +233,10 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "heat": 34,
-        "label": "5회초 3점차"
+        "label": "5회말 3점차"
       },
       "recap": null
     },
@@ -291,11 +291,11 @@
         }
       },
       "live": {
-        "inning": 5,
+        "inning": 6,
         "half": "T",
-        "out": 3,
-        "heat": 23,
-        "label": "5회초 4점차"
+        "out": 0,
+        "heat": 24,
+        "label": "6회초 4점차"
       },
       "recap": null
     }
