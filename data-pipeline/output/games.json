@@ -1,7 +1,7 @@
 {
   "date": "20260607",
   "dateText": "2026년 6월 7일",
-  "updatedAt": "2026-06-07T11:35:18.240Z",
+  "updatedAt": "2026-06-07T11:40:22.343Z",
   "recommendedGameId": "20260607SSHT0",
   "games": [
     {
@@ -113,7 +113,7 @@
       "live": {
         "inning": 10,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 96,
         "label": "10회초 연장 혈투"
       },
@@ -141,7 +141,7 @@
       "home": {
         "code": "SK",
         "name": "SSG",
-        "rank": 7,
+        "rank": 8,
         "score": 7,
         "starter": {
           "name": "베니지아노",
@@ -179,7 +179,7 @@
       "gameId": "20260607SSHT0",
       "time": "17:00",
       "stadium": "광주",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "M-T",
       "away": {
@@ -225,14 +225,11 @@
           "doom": 0
         }
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 2,
-        "heat": 76,
-        "label": "9회초 1점차 접전"
-      },
-      "recap": null
+      "live": null,
+      "recap": {
+        "actual": 74,
+        "verdict": "예측 적중"
+      }
     },
     {
       "gameId": "20260607LGNC0",
@@ -256,7 +253,7 @@
       "home": {
         "code": "NC",
         "name": "NC",
-        "rank": 8,
+        "rank": 7,
         "score": 7,
         "starter": {
           "name": "토다",
