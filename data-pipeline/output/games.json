@@ -1,7 +1,7 @@
 {
   "date": "20260607",
   "dateText": "2026년 6월 7일",
-  "updatedAt": "2026-06-07T11:55:19.018Z",
+  "updatedAt": "2026-06-07T12:00:32.336Z",
   "recommendedGameId": "20260607SSHT0",
   "games": [
     {
@@ -83,7 +83,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 9,
-        "score": 7,
+        "score": 8,
         "starter": {
           "name": "비슬리",
           "era": 4.5,
@@ -114,8 +114,8 @@
         "inning": 10,
         "half": "B",
         "out": 2,
-        "heat": 65,
-        "label": "10회말 2점차"
+        "heat": 91,
+        "label": "10회말 끝내기 찬스"
       },
       "recap": null
     },
