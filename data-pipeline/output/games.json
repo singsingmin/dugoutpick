@@ -1,7 +1,7 @@
 {
   "date": "20260607",
   "dateText": "2026년 6월 7일",
-  "updatedAt": "2026-06-07T10:30:24.047Z",
+  "updatedAt": "2026-06-07T10:35:19.458Z",
   "recommendedGameId": "20260607SSHT0",
   "games": [
     {
@@ -56,10 +56,10 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "heat": 41,
-        "label": "8회초 3점차"
+        "label": "8회말 3점차"
       },
       "recap": null
     },
@@ -114,11 +114,11 @@
         }
       },
       "live": {
-        "inning": 7,
-        "half": "B",
+        "inning": 8,
+        "half": "T",
         "out": 0,
-        "heat": 40,
-        "label": "7회말 3점차"
+        "heat": 43,
+        "label": "8회초 3점차"
       },
       "recap": null
     },
@@ -126,13 +126,13 @@
       "gameId": "20260607KTSK0",
       "time": "17:00",
       "stadium": "문학",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPO-T",
       "away": {
         "code": "KT",
         "name": "KT",
-        "rank": 2,
+        "rank": 3,
         "score": 0,
         "starter": {
           "name": "오원석",
@@ -144,7 +144,7 @@
       "home": {
         "code": "SK",
         "name": "SSG",
-        "rank": 8,
+        "rank": 7,
         "score": 7,
         "starter": {
           "name": "베니지아노",
@@ -172,14 +172,11 @@
           "doom": 0
         }
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 3,
-        "heat": 0,
-        "label": "9회초 7점차"
-      },
-      "recap": null
+      "live": null,
+      "recap": {
+        "actual": 2,
+        "verdict": "예측 적중"
+      }
     },
     {
       "gameId": "20260607SSHT0",
@@ -191,7 +188,7 @@
       "away": {
         "code": "SS",
         "name": "삼성",
-        "rank": 3,
+        "rank": 2,
         "score": 4,
         "starter": {
           "name": "양창섭",
@@ -262,7 +259,7 @@
       "home": {
         "code": "NC",
         "name": "NC",
-        "rank": 7,
+        "rank": 8,
         "score": 6,
         "starter": {
           "name": "토다",
@@ -292,10 +289,10 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 1,
         "heat": 67,
-        "label": "7회초 1점차 접전"
+        "label": "7회말 1점차 접전"
       },
       "recap": null
     }
