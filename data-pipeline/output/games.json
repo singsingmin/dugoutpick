@@ -1,7 +1,7 @@
 {
   "date": "20260607",
   "dateText": "2026년 6월 7일",
-  "updatedAt": "2026-06-07T09:10:21.286Z",
+  "updatedAt": "2026-06-07T09:15:21.976Z",
   "recommendedGameId": "20260607SSHT0",
   "games": [
     {
@@ -57,7 +57,7 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "heat": 19,
         "label": "3회말 4점차"
       },
@@ -145,7 +145,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 8,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "베니지아노",
           "era": 5.81,
@@ -176,8 +176,8 @@
         "inning": 5,
         "half": "B",
         "out": 0,
-        "heat": 43,
-        "label": "5회말 2점차"
+        "heat": 33,
+        "label": "5회말 3점차"
       },
       "recap": null
     },
@@ -232,11 +232,11 @@
         }
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 3,
-        "heat": 29,
-        "label": "3회말 3점차"
+        "inning": 4,
+        "half": "T",
+        "out": 2,
+        "heat": 32,
+        "label": "4회초 3점차"
       },
       "recap": null
     },
@@ -251,7 +251,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "송승기",
           "era": 4.18,
@@ -293,9 +293,9 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 0,
-        "heat": 0,
-        "label": "4회초 6점차"
+        "out": 2,
+        "heat": 10,
+        "label": "4회초 5점차"
       },
       "recap": null
     }
