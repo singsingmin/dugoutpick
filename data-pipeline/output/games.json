@@ -1,7 +1,7 @@
 {
   "date": "20260607",
   "dateText": "2026년 6월 7일",
-  "updatedAt": "2026-06-07T10:39:19.961Z",
+  "updatedAt": "2026-06-07T10:40:20.083Z",
   "recommendedGameId": "20260607SSHT0",
   "games": [
     {
@@ -231,7 +231,7 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "heat": 67,
         "label": "7회말 1점차 접전"
       },
