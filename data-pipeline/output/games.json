@@ -1,7 +1,7 @@
 {
   "date": "20260607",
   "dateText": "2026년 6월 7일",
-  "updatedAt": "2026-06-07T08:45:20.114Z",
+  "updatedAt": "2026-06-07T08:50:20.671Z",
   "recommendedGameId": "20260607SSHT0",
   "games": [
     {
@@ -55,11 +55,11 @@
         }
       },
       "live": {
-        "inning": 2,
-        "half": "B",
-        "out": 2,
-        "heat": 17,
-        "label": "2회말 4점차"
+        "inning": 3,
+        "half": "T",
+        "out": 0,
+        "heat": 19,
+        "label": "3회초 4점차"
       },
       "recap": null
     },
@@ -86,7 +86,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 9,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "비슬리",
           "era": 4.5,
@@ -116,9 +116,9 @@
       "live": {
         "inning": 2,
         "half": "B",
-        "out": 1,
-        "heat": 26,
-        "label": "2회말 3점차"
+        "out": 2,
+        "heat": 34,
+        "label": "2회말 2점차"
       },
       "recap": null
     },
@@ -192,7 +192,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 3,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "양창섭",
           "era": 3.53,
@@ -234,9 +234,9 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 1,
-        "heat": 47,
-        "label": "3회초 1점차 접전"
+        "out": 2,
+        "heat": 57,
+        "label": "3회초 동점 접전"
       },
       "recap": null
     },
@@ -293,7 +293,7 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 9,
         "label": "3회초 5점차"
       },
