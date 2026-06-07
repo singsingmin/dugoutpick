@@ -1,7 +1,7 @@
 {
   "date": "20260607",
   "dateText": "2026년 6월 7일",
-  "updatedAt": "2026-06-07T08:20:21.152Z",
+  "updatedAt": "2026-06-07T08:25:18.599Z",
   "recommendedGameId": "20260607SSHT0",
   "games": [
     {
@@ -55,11 +55,11 @@
         }
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 0,
-        "heat": 22,
-        "label": "1회말 3점차"
+        "heat": 25,
+        "label": "2회초 3점차"
       },
       "recap": null
     },
@@ -86,7 +86,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 9,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "비슬리",
           "era": 4.5,
@@ -116,9 +116,9 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
-        "heat": 15,
-        "label": "1회말 4점차"
+        "out": 1,
+        "heat": 23,
+        "label": "1회말 3점차"
       },
       "recap": null
     },
@@ -174,10 +174,10 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 33,
-        "label": "2회초 2점차"
+        "label": "2회말 2점차"
       },
       "recap": null
     },
@@ -233,10 +233,10 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "heat": 33,
-        "label": "2회초 2점차"
+        "label": "2회말 2점차"
       },
       "recap": null
     },
@@ -293,7 +293,7 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 17,
         "label": "2회초 4점차"
       },
