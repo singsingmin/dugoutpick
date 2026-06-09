@@ -1,7 +1,7 @@
 {
   "date": "20260609",
   "dateText": "2026년 6월 9일",
-  "updatedAt": "2026-06-09T10:40:24.045Z",
+  "updatedAt": "2026-06-09T10:45:25.110Z",
   "recommendedGameId": "20260609HTHH0",
   "games": [
     {
@@ -55,11 +55,11 @@
         }
       },
       "live": {
-        "inning": 3,
-        "half": "B",
+        "inning": 4,
+        "half": "T",
         "out": 0,
-        "heat": 19,
-        "label": "3회말 4점차"
+        "heat": 21,
+        "label": "4회초 4점차"
       },
       "recap": null
     },
@@ -115,10 +115,10 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "heat": 41,
-        "label": "4회초 2점차"
+        "label": "4회말 2점차"
       },
       "recap": null
     },
@@ -173,11 +173,11 @@
         }
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 2,
-        "heat": 41,
-        "label": "4회말 2점차"
+        "heat": 44,
+        "label": "5회초 2점차"
       },
       "recap": null
     },
@@ -234,7 +234,7 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 41,
         "label": "4회초 2점차"
       },
@@ -293,7 +293,7 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 60,
         "label": "4회초 동점 접전"
       },
