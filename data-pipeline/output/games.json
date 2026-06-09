@@ -1,7 +1,7 @@
 {
   "date": "20260609",
   "dateText": "2026년 6월 9일",
-  "updatedAt": "2026-06-09T13:20:25.327Z",
+  "updatedAt": "2026-06-09T13:25:22.788Z",
   "recommendedGameId": "20260609HTHH0",
   "games": [
     {
@@ -232,7 +232,7 @@
       "gameId": "20260609NCWO0",
       "time": "18:30",
       "stadium": "고척",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SS-T",
       "away": {
@@ -251,7 +251,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 6,
+        "score": 7,
         "starter": {
           "name": "로젠버그",
           "era": 3.18,
@@ -278,14 +278,11 @@
           "doom": 0
         }
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 2,
-        "heat": 100,
-        "label": "9회말 끝내기 찬스"
-      },
-      "recap": null
+      "live": null,
+      "recap": {
+        "actual": 93,
+        "verdict": "기대 이상"
+      }
     }
   ]
 }
