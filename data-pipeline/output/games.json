@@ -1,7 +1,7 @@
 {
   "date": "20260609",
   "dateText": "2026년 6월 9일",
-  "updatedAt": "2026-06-09T13:10:26.162Z",
+  "updatedAt": "2026-06-09T13:15:30.526Z",
   "recommendedGameId": "20260609HTHH0",
   "games": [
     {
@@ -281,7 +281,7 @@
       "live": {
         "inning": 9,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "heat": 100,
         "label": "9회말 끝내기 찬스"
       },
