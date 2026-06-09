@@ -1,7 +1,7 @@
 {
   "date": "20260609",
   "dateText": "2026년 6월 9일",
-  "updatedAt": "2026-06-09T13:05:23.267Z",
+  "updatedAt": "2026-06-09T13:10:26.162Z",
   "recommendedGameId": "20260609HTHH0",
   "games": [
     {
@@ -280,10 +280,10 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
+        "half": "B",
         "out": 0,
-        "heat": 91,
-        "label": "9회초 동점 접전"
+        "heat": 100,
+        "label": "9회말 끝내기 찬스"
       },
       "recap": null
     }
