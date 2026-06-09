@@ -1,7 +1,7 @@
 {
   "date": "20260609",
   "dateText": "2026년 6월 9일",
-  "updatedAt": "2026-06-09T12:40:21.815Z",
+  "updatedAt": "2026-06-09T12:45:23.634Z",
   "recommendedGameId": "20260609HTHH0",
   "games": [
     {
@@ -113,7 +113,7 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "heat": 75,
         "label": "9회초 1점차 접전"
       },
@@ -179,7 +179,7 @@
       "gameId": "20260609HTHH0",
       "time": "18:30",
       "stadium": "대전",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "KN-T",
       "away": {
@@ -225,14 +225,11 @@
           "doom": 0
         }
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 2,
-        "heat": 60,
-        "label": "9회말 2점차"
-      },
-      "recap": null
+      "live": null,
+      "recap": {
+        "actual": 51,
+        "verdict": "기대 이하"
+      }
     },
     {
       "gameId": "20260609NCWO0",
