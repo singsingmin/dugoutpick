@@ -1,21 +1,21 @@
 {
   "date": "20260609",
   "dateText": "2026년 6월 9일",
-  "updatedAt": "2026-06-09T12:30:29.140Z",
+  "updatedAt": "2026-06-09T12:35:21.697Z",
   "recommendedGameId": "20260609HTHH0",
   "games": [
     {
       "gameId": "20260609SKLG0",
       "time": "18:30",
       "stadium": "잠실",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPO-2T",
       "away": {
         "code": "SK",
         "name": "SSG",
         "rank": 8,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "김민준",
           "era": null,
@@ -54,14 +54,11 @@
           "doom": 0
         }
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 2,
-        "heat": 0,
-        "label": "9회초 7점차"
-      },
-      "recap": null
+      "live": null,
+      "recap": {
+        "actual": 4,
+        "verdict": "예측 적중"
+      }
     },
     {
       "gameId": "20260609OBLT0",
@@ -114,11 +111,11 @@
         }
       },
       "live": {
-        "inning": 8,
-        "half": "B",
+        "inning": 9,
+        "half": "T",
         "out": 0,
-        "heat": 71,
-        "label": "8회말 1점차 접전"
+        "heat": 75,
+        "label": "9회초 1점차 접전"
       },
       "recap": null
     },
@@ -230,10 +227,10 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 60,
-        "label": "9회초 2점차"
+        "label": "9회말 2점차"
       },
       "recap": null
     },
@@ -290,7 +287,7 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 71,
         "label": "8회초 1점차 접전"
       },
