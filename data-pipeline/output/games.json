@@ -1,7 +1,7 @@
 {
   "date": "20260609",
   "dateText": "2026년 6월 9일",
-  "updatedAt": "2026-06-09T12:20:20.527Z",
+  "updatedAt": "2026-06-09T12:25:22.430Z",
   "recommendedGameId": "20260609HTHH0",
   "games": [
     {
@@ -55,11 +55,11 @@
         }
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 1,
+        "inning": 9,
+        "half": "T",
+        "out": 0,
         "heat": 0,
-        "label": "8회말 7점차"
+        "label": "9회초 7점차"
       },
       "recap": null
     },
@@ -116,7 +116,7 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "heat": 71,
         "label": "8회초 1점차 접전"
       },
@@ -201,7 +201,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 5,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "왕옌청",
           "era": 3.13,
@@ -229,11 +229,11 @@
         }
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
-        "heat": 42,
-        "label": "8회말 3점차"
+        "inning": 9,
+        "half": "T",
+        "out": 0,
+        "heat": 60,
+        "label": "9회초 2점차"
       },
       "recap": null
     },
@@ -290,7 +290,7 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "heat": 67,
         "label": "7회말 1점차 접전"
       },
