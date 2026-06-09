@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-09T13:00:37.606Z",
+  "updatedAt": "2026-06-09T13:05:23.267Z",
   "lastWeek": {
     "range": [
       "20260601",
@@ -67,7 +67,7 @@
         "l": 5,
         "d": 0,
         "rank": 9,
-        "note": "4연패 늪, 탈출이 급하다"
+        "note": "5연패 늪, 탈출이 급하다"
       },
       "WO": {
         "w": 2,
@@ -103,8 +103,8 @@
       {
         "away": "OB",
         "home": "HT",
-        "pred": 68,
-        "reason": "게임차 3의 순위 다툼",
+        "pred": 74,
+        "reason": "게임차 2.5의 순위 다툼",
         "dateStart": "20260612",
         "dateEnd": "20260614"
       }
@@ -157,6 +157,70 @@
           "date": "20260611",
           "away": "SK",
           "home": "LG"
+        },
+        {
+          "date": "20260612",
+          "away": "LT",
+          "home": "LG"
+        },
+        {
+          "date": "20260613",
+          "away": "LT",
+          "home": "LG"
+        },
+        {
+          "date": "20260614",
+          "away": "LT",
+          "home": "LG"
+        }
+      ],
+      "OB": [
+        {
+          "date": "20260609",
+          "away": "OB",
+          "home": "LT"
+        },
+        {
+          "date": "20260610",
+          "away": "OB",
+          "home": "LT"
+        },
+        {
+          "date": "20260611",
+          "away": "OB",
+          "home": "LT"
+        },
+        {
+          "date": "20260612",
+          "away": "OB",
+          "home": "HT"
+        },
+        {
+          "date": "20260613",
+          "away": "OB",
+          "home": "HT"
+        },
+        {
+          "date": "20260614",
+          "away": "OB",
+          "home": "HT"
+        }
+      ],
+      "LT": [
+        {
+          "date": "20260609",
+          "away": "OB",
+          "home": "LT"
+        },
+        {
+          "date": "20260610",
+          "away": "OB",
+          "home": "LT"
+        },
+        {
+          "date": "20260611",
+          "away": "OB",
+          "home": "LT"
         },
         {
           "date": "20260612",
@@ -300,60 +364,6 @@
           "date": "20260614",
           "away": "HH",
           "home": "WO"
-        }
-      ],
-      "OB": [
-        {
-          "date": "20260610",
-          "away": "OB",
-          "home": "LT"
-        },
-        {
-          "date": "20260611",
-          "away": "OB",
-          "home": "LT"
-        },
-        {
-          "date": "20260612",
-          "away": "OB",
-          "home": "HT"
-        },
-        {
-          "date": "20260613",
-          "away": "OB",
-          "home": "HT"
-        },
-        {
-          "date": "20260614",
-          "away": "OB",
-          "home": "HT"
-        }
-      ],
-      "LT": [
-        {
-          "date": "20260610",
-          "away": "OB",
-          "home": "LT"
-        },
-        {
-          "date": "20260611",
-          "away": "OB",
-          "home": "LT"
-        },
-        {
-          "date": "20260612",
-          "away": "LT",
-          "home": "LG"
-        },
-        {
-          "date": "20260613",
-          "away": "LT",
-          "home": "LG"
-        },
-        {
-          "date": "20260614",
-          "away": "LT",
-          "home": "LG"
         }
       ],
       "NC": [
