@@ -1,7 +1,7 @@
 {
   "date": "20260609",
   "dateText": "2026년 6월 9일",
-  "updatedAt": "2026-06-09T11:00:34.428Z",
+  "updatedAt": "2026-06-09T11:05:23.185Z",
   "recommendedGameId": "20260609HTHH0",
   "games": [
     {
@@ -55,11 +55,11 @@
         }
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 2,
-        "heat": 21,
-        "label": "4회말 4점차"
+        "inning": 5,
+        "half": "T",
+        "out": 1,
+        "heat": 22,
+        "label": "5회초 4점차"
       },
       "recap": null
     },
@@ -74,7 +74,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 6,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "곽빈",
           "era": 3.26,
@@ -116,9 +116,9 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 0,
-        "heat": 56,
-        "label": "5회초 1점차 접전"
+        "out": 1,
+        "heat": 45,
+        "label": "5회초 2점차"
       },
       "recap": null
     },
@@ -174,10 +174,10 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "heat": 48,
-        "label": "6회초 2점차"
+        "label": "6회말 2점차"
       },
       "recap": null
     },
@@ -232,11 +232,11 @@
         }
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 1,
-        "heat": 10,
-        "label": "4회말 5점차"
+        "inning": 5,
+        "half": "T",
+        "out": 0,
+        "heat": 11,
+        "label": "5회초 5점차"
       },
       "recap": null
     },
@@ -293,7 +293,7 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 65,
         "label": "5회초 동점 접전"
       },
