@@ -1,7 +1,7 @@
 {
   "date": "20260610",
   "dateText": "2026년 6월 10일",
-  "updatedAt": "2026-06-10T12:50:23.510Z",
+  "updatedAt": "2026-06-10T12:55:24.680Z",
   "recommendedGameId": "20260610HTHH0",
   "games": [
     {
@@ -251,7 +251,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "하영민",
           "era": 4.53,
@@ -282,8 +282,8 @@
         "inning": 9,
         "half": "B",
         "out": 0,
-        "heat": 29,
-        "label": "9회말 4점차"
+        "heat": 44,
+        "label": "9회말 3점차"
       },
       "recap": null
     }
