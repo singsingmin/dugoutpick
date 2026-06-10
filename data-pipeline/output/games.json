@@ -1,21 +1,21 @@
 {
   "date": "20260610",
   "dateText": "2026년 6월 10일",
-  "updatedAt": "2026-06-10T08:40:27.083Z",
+  "updatedAt": "2026-06-10T09:35:20.152Z",
   "recommendedGameId": "20260610HTHH0",
   "games": [
     {
       "gameId": "20260610SKLG0",
       "time": "18:30",
       "stadium": "잠실",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SPO-2T",
       "away": {
         "code": "SK",
         "name": "SSG",
         "rank": 8,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "최민준",
           "era": 4.38,
@@ -27,7 +27,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "웰스",
           "era": 1.97,
@@ -54,21 +54,27 @@
           "doom": 0
         }
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 0,
+        "heat": 43,
+        "label": "1회초 동점 접전"
+      },
       "recap": null
     },
     {
       "gameId": "20260610OBLT0",
       "time": "18:30",
       "stadium": "사직",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "MS-T",
       "away": {
         "code": "OB",
         "name": "두산",
         "rank": 6,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "잭로그",
           "era": 3.97,
@@ -80,7 +86,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 9,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "김진욱",
           "era": 3.48,
@@ -107,21 +113,27 @@
           "doom": 0
         }
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 1,
+        "heat": 43,
+        "label": "1회초 동점 접전"
+      },
       "recap": null
     },
     {
       "gameId": "20260610SSKT0",
       "time": "18:30",
       "stadium": "수원",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SPO-T",
       "away": {
         "code": "SS",
         "name": "삼성",
         "rank": 3,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "원태인",
           "era": 3.68,
@@ -133,7 +145,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 2,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "사우어",
           "era": 4.54,
@@ -160,21 +172,27 @@
           "doom": 0
         }
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 2,
+        "heat": 43,
+        "label": "1회초 동점 접전"
+      },
       "recap": null
     },
     {
       "gameId": "20260610HTHH0",
       "time": "18:30",
       "stadium": "대전",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "KN-T",
       "away": {
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "시라카와",
           "era": 0,
@@ -186,7 +204,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 5,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "화이트",
           "era": 3.04,
@@ -213,21 +231,27 @@
           "doom": 0
         }
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "B",
+        "out": 0,
+        "heat": 43,
+        "label": "1회말 동점 접전"
+      },
       "recap": null
     },
     {
       "gameId": "20260610NCWO0",
       "time": "18:30",
       "stadium": "고척",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SS-T",
       "away": {
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "구창모",
           "era": 4.04,
@@ -239,7 +263,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "하영민",
           "era": 4.53,
@@ -266,7 +290,13 @@
           "doom": 0
         }
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 2,
+        "heat": 43,
+        "label": "1회초 동점 접전"
+      },
       "recap": null
     }
   ]
