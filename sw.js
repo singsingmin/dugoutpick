@@ -1,4 +1,4 @@
-const CACHE = 'dugoutpick-v1';
+const CACHE = 'dugoutpick-v2';
 const PRECACHE = [
   '/dugoutpick/',
   '/dugoutpick/index.html',
