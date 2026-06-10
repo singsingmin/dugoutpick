@@ -103,6 +103,10 @@ if (!html.includes('apple-mobile-web-app-capable')) {
   // Fix favicon path (Expo generates root-relative but we're under /dugoutpick/)
   html = html.replace('href="/favicon.ico"', 'href="/dugoutpick/favicon.ico"');
 
+  // Fix JS bundle path: Expo Metro ignores baseUrl in output:single mode.
+  // script src="/_expo/..." → src="/dugoutpick/_expo/..."
+  html = html.replace(/src="\/_expo\//g, 'src="/dugoutpick/_expo/');
+
   // Extend viewport to support iPhone notch / Dynamic Island
   html = html.replace(
     'width=device-width, initial-scale=1, shrink-to-fit=no',
