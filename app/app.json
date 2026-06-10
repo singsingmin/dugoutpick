@@ -24,6 +24,9 @@
       "predictiveBackGestureEnabled": false
     },
     "web": {
+      "bundler": "metro",
+      "output": "single",
+      "baseUrl": "/dugoutpick",
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
