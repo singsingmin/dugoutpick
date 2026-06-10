@@ -44,7 +44,7 @@ const manifest = {
 writeFileSync(join(distDir, 'manifest.json'), JSON.stringify(manifest, null, 2));
 
 // ── 3. sw.js (service worker) ──────────────────────────────────────
-const sw = `const CACHE = 'dugoutpick-v1';
+const sw = `const CACHE = 'dugoutpick-v2';
 const PRECACHE = [
   '/dugoutpick/',
   '/dugoutpick/index.html',
