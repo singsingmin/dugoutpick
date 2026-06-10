@@ -1,7 +1,7 @@
 {
   "date": "20260610",
   "dateText": "2026년 6월 10일",
-  "updatedAt": "2026-06-10T11:45:24.518Z",
+  "updatedAt": "2026-06-10T11:50:24.272Z",
   "recommendedGameId": "20260610HTHH0",
   "games": [
     {
@@ -57,7 +57,7 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 54,
         "label": "7회초 2점차"
       },
@@ -116,7 +116,7 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "heat": 38,
         "label": "7회초 3점차"
       },
@@ -173,11 +173,11 @@
         }
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 1,
-        "heat": 65,
-        "label": "7회말 1점차 접전"
+        "inning": 8,
+        "half": "T",
+        "out": 0,
+        "heat": 69,
+        "label": "8회초 1점차 접전"
       },
       "recap": null
     },
@@ -192,7 +192,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "시라카와",
           "era": 0,
@@ -233,10 +233,10 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 2,
-        "heat": 26,
-        "label": "7회초 4점차"
+        "half": "B",
+        "out": 0,
+        "heat": 39,
+        "label": "7회말 3점차"
       },
       "recap": null
     },
@@ -293,7 +293,7 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 54,
         "label": "8회초 2점차"
       },
