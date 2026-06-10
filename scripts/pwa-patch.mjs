@@ -3,7 +3,7 @@
  * Run after `expo export --platform web` from app/.
  * Adds: manifest.json, sw.js, iOS meta tags, PWA icons.
  */
-import { readFileSync, writeFileSync, copyFileSync } from 'fs';
+import { readFileSync, writeFileSync, copyFileSync, readdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -129,8 +129,25 @@ if (!html.includes('apple-mobile-web-app-capable')) {
   console.log('  index.html already patched — skipped');
 }
 
+// ── 5. Patch JS bundle: fix asset paths ────────────────────────────
+// Expo Metro output:single hardcodes "/assets/..." in the bundle regardless of baseUrl.
+// Replace "/assets/ → "/dugoutpick/assets/ so GitHub Pages paths resolve correctly.
+const jsBundleDir = join(distDir, '_expo', 'static', 'js', 'web');
+const jsBundles = readdirSync(jsBundleDir).filter(f => f.endsWith('.js'));
+let patchedBundles = 0;
+for (const bundleFile of jsBundles) {
+  const bundlePath = join(jsBundleDir, bundleFile);
+  const bundleContent = readFileSync(bundlePath, 'utf8');
+  if (bundleContent.includes('"/assets/')) {
+    const patched = bundleContent.replaceAll('"/assets/', '"/dugoutpick/assets/');
+    writeFileSync(bundlePath, patched, 'utf8');
+    patchedBundles++;
+  }
+}
+
 console.log('✓ PWA patch done');
 console.log('  icon.png, favicon.png copied');
 console.log('  manifest.json created');
 console.log('  sw.js created');
 console.log('  index.html patched (viewport, favicon, Apple meta, manifest link, SW)');
+console.log(`  ${patchedBundles} JS bundle(s) patched (asset paths prefixed with /dugoutpick)`);
