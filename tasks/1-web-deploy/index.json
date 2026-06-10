@@ -22,7 +22,9 @@
     {
       "phase": 2,
       "name": "github-deploy",
-      "status": "pending"
+      "status": "completed",
+      "started_at": "2026-06-10T20:44:23+0900",
+      "completed_at": "2026-06-10T21:02:00+0900"
     }
   ]
 }

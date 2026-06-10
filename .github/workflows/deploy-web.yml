@@ -1,0 +1,46 @@
+name: Deploy Web
+
+# Triggered on app code changes or manual run.
+# After first run, go to repo Settings → Pages → Source → gh-pages branch to activate the site.
+# URL: https://singsingmin.github.io/dugoutpick/
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'app/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy-web
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        working-directory: app
+        run: npm ci
+
+      - name: Build web
+        working-directory: app
+        run: npx expo export --platform web
+
+      - name: Patch PWA
+        run: node scripts/pwa-patch.mjs
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./app/dist
+          enable_jekyll: false
