@@ -1,7 +1,7 @@
 {
   "date": "20260610",
   "dateText": "2026년 6월 10일",
-  "updatedAt": "2026-06-10T11:20:25.527Z",
+  "updatedAt": "2026-06-10T11:25:20.178Z",
   "recommendedGameId": "20260610HTHH0",
   "games": [
     {
@@ -55,11 +55,11 @@
         }
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 2,
-        "heat": 58,
-        "label": "5회말 1점차 접전"
+        "inning": 6,
+        "half": "T",
+        "out": 0,
+        "heat": 62,
+        "label": "6회초 1점차 접전"
       },
       "recap": null
     },
@@ -115,10 +115,10 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 69,
-        "label": "6회초 동점 접전"
+        "label": "6회말 동점 접전"
       },
       "recap": null
     },
@@ -145,7 +145,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 2,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "사우어",
           "era": 4.54,
@@ -176,8 +176,8 @@
         "inning": 6,
         "half": "B",
         "out": 2,
-        "heat": 35,
-        "label": "6회말 3점차"
+        "heat": 24,
+        "label": "6회말 4점차"
       },
       "recap": null
     },
@@ -232,11 +232,11 @@
         }
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 3,
-        "heat": 22,
-        "label": "5회말 4점차"
+        "inning": 6,
+        "half": "T",
+        "out": 2,
+        "heat": 24,
+        "label": "6회초 4점차"
       },
       "recap": null
     },
@@ -292,10 +292,10 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 1,
         "heat": 47,
-        "label": "6회초 2점차"
+        "label": "6회말 2점차"
       },
       "recap": null
     }
