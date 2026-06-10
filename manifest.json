@@ -1,0 +1,24 @@
+{
+  "name": "오늘야구각",
+  "short_name": "오늘야구각",
+  "description": "KBO 오늘 경기 꿀잼지수 예측",
+  "start_url": "/dugoutpick/",
+  "scope": "/dugoutpick/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F3E9CE",
+  "theme_color": "#34663F",
+  "icons": [
+    {
+      "src": "/dugoutpick/favicon.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "/dugoutpick/icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
