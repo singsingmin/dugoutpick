@@ -1,7 +1,7 @@
 {
   "date": "20260610",
   "dateText": "2026년 6월 10일",
-  "updatedAt": "2026-06-10T11:35:21.582Z",
+  "updatedAt": "2026-06-10T11:40:24.955Z",
   "recommendedGameId": "20260610HTHH0",
   "games": [
     {
@@ -27,7 +27,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": 6,
+        "score": 7,
         "starter": {
           "name": "웰스",
           "era": 1.97,
@@ -57,9 +57,9 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 0,
-        "heat": 62,
-        "label": "6회말 1점차 접전"
+        "out": 2,
+        "heat": 50,
+        "label": "6회말 2점차"
       },
       "recap": null
     },
@@ -114,11 +114,11 @@
         }
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 2,
-        "heat": 35,
-        "label": "6회말 3점차"
+        "inning": 7,
+        "half": "T",
+        "out": 1,
+        "heat": 38,
+        "label": "7회초 3점차"
       },
       "recap": null
     },
@@ -175,7 +175,7 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 2,
+        "out": 3,
         "heat": 65,
         "label": "7회초 1점차 접전"
       },
@@ -232,11 +232,11 @@
         }
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 1,
-        "heat": 24,
-        "label": "6회말 4점차"
+        "inning": 7,
+        "half": "T",
+        "out": 0,
+        "heat": 26,
+        "label": "7회초 4점차"
       },
       "recap": null
     },
@@ -293,7 +293,7 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "heat": 50,
         "label": "7회말 2점차"
       },
