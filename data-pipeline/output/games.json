@@ -1,7 +1,7 @@
 {
   "date": "20260610",
   "dateText": "2026년 6월 10일",
-  "updatedAt": "2026-06-10T11:15:24.969Z",
+  "updatedAt": "2026-06-10T11:20:25.527Z",
   "recommendedGameId": "20260610HTHH0",
   "games": [
     {
@@ -27,7 +27,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": 2,
+        "score": 6,
         "starter": {
           "name": "웰스",
           "era": 1.97,
@@ -57,9 +57,9 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
-        "heat": 34,
-        "label": "5회말 3점차"
+        "out": 2,
+        "heat": 58,
+        "label": "5회말 1점차 접전"
       },
       "recap": null
     },
@@ -116,7 +116,7 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "heat": 69,
         "label": "6회초 동점 접전"
       },
@@ -204,7 +204,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 5,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "화이트",
           "era": 3.04,
@@ -234,9 +234,9 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 2,
-        "heat": 33,
-        "label": "5회말 3점차"
+        "out": 3,
+        "heat": 22,
+        "label": "5회말 4점차"
       },
       "recap": null
     },
