@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths:
       - 'app/**'
+      - 'scripts/pwa-patch.mjs'
   workflow_dispatch:
 
 permissions:
