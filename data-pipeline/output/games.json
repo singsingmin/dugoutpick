@@ -1,7 +1,7 @@
 {
   "date": "20260610",
   "dateText": "2026년 6월 10일",
-  "updatedAt": "2026-06-10T12:30:31.679Z",
+  "updatedAt": "2026-06-10T12:35:21.374Z",
   "recommendedGameId": "20260610HTHH0",
   "games": [
     {
@@ -57,7 +57,7 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 61,
         "label": "9회초 2점차"
       },
@@ -67,7 +67,7 @@
       "gameId": "20260610OBLT0",
       "time": "18:30",
       "stadium": "사직",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "MS-T",
       "away": {
@@ -113,14 +113,11 @@
           "doom": 0
         }
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 1,
-        "heat": 58,
-        "label": "9회초 2점차"
-      },
-      "recap": null
+      "live": null,
+      "recap": {
+        "actual": 42,
+        "verdict": "기대 이상"
+      }
     },
     {
       "gameId": "20260610SSKT0",
@@ -175,7 +172,7 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 74,
         "label": "9회초 1점차 접전"
       },
@@ -234,7 +231,7 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "heat": 74,
         "label": "9회초 1점차 접전"
       },
