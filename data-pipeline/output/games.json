@@ -1,7 +1,7 @@
 {
   "date": "20260610",
   "dateText": "2026년 6월 10일",
-  "updatedAt": "2026-06-10T10:10:24.112Z",
+  "updatedAt": "2026-06-10T10:15:26.580Z",
   "recommendedGameId": "20260610HTHH0",
   "games": [
     {
@@ -57,7 +57,7 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 56,
         "label": "3회초 동점 접전"
       },
@@ -175,7 +175,7 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 45,
         "label": "3회초 1점차 접전"
       },
@@ -234,7 +234,7 @@
       "live": {
         "inning": 2,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "heat": 25,
         "label": "2회말 3점차"
       },
@@ -251,7 +251,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "구창모",
           "era": 4.04,
@@ -293,9 +293,9 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 0,
-        "heat": 54,
-        "label": "3회초 동점 접전"
+        "out": 1,
+        "heat": 45,
+        "label": "3회초 1점차 접전"
       },
       "recap": null
     }
