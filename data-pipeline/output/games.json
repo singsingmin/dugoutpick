@@ -1,7 +1,7 @@
 {
   "date": "20260610",
   "dateText": "2026년 6월 10일",
-  "updatedAt": "2026-06-10T10:55:21.408Z",
+  "updatedAt": "2026-06-10T11:00:35.690Z",
   "recommendedGameId": "20260610HTHH0",
   "games": [
     {
@@ -15,7 +15,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 8,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "최민준",
           "era": 4.38,
@@ -57,9 +57,9 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 1,
-        "heat": 45,
-        "label": "5회초 2점차"
+        "out": 2,
+        "heat": 34,
+        "label": "5회초 3점차"
       },
       "recap": null
     },
@@ -116,7 +116,7 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 64,
         "label": "5회초 동점 접전"
       },
@@ -173,11 +173,11 @@
         }
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 1,
-        "heat": 33,
-        "label": "5회말 3점차"
+        "inning": 6,
+        "half": "T",
+        "out": 0,
+        "heat": 35,
+        "label": "6회초 3점차"
       },
       "recap": null
     },
@@ -292,10 +292,10 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 43,
-        "label": "5회초 2점차"
+        "label": "5회말 2점차"
       },
       "recap": null
     }
