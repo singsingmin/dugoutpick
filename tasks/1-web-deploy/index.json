@@ -1,0 +1,26 @@
+{
+  "project": "DugoutPick",
+  "task": "web-deploy",
+  "prompt": "오늘야구각을 웹으로도 배포 가능해? / PC에서 사용은 안할거고, 아이폰에서도 사용하려고 웹 배포 하려는거야. / 무료로 할거라서 GitHub로 하자",
+  "totalPhases": 3,
+  "created_at": "2026-06-10T14:00:00+0900",
+  "phases": [
+    {
+      "phase": 0,
+      "name": "web-build",
+      "status": "completed",
+      "started_at": "2026-06-10T20:32:56+0900",
+      "completed_at": "2026-06-10T20:52:00+0900"
+    },
+    {
+      "phase": 1,
+      "name": "pwa-config",
+      "status": "pending"
+    },
+    {
+      "phase": 2,
+      "name": "github-deploy",
+      "status": "pending"
+    }
+  ]
+}
