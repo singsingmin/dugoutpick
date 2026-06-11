@@ -1,7 +1,7 @@
 {
   "date": "20260611",
   "dateText": "2026년 6월 11일",
-  "updatedAt": "2026-06-11T10:55:20.908Z",
+  "updatedAt": "2026-06-11T11:00:35.173Z",
   "recommendedGameId": "20260611HTHH0",
   "games": [
     {
@@ -27,7 +27,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "김윤식",
           "era": 4.4,
@@ -58,8 +58,8 @@
         "inning": 4,
         "half": "B",
         "out": 1,
-        "heat": 21,
-        "label": "4회말 4점차"
+        "heat": 10,
+        "label": "4회말 5점차"
       },
       "recap": null
     },
@@ -86,7 +86,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 9,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "박세웅",
           "era": 4.98,
@@ -117,8 +117,8 @@
         "inning": 4,
         "half": "B",
         "out": 2,
-        "heat": 41,
-        "label": "4회말 2점차"
+        "heat": 52,
+        "label": "4회말 1점차 접전"
       },
       "recap": null
     },
@@ -173,11 +173,11 @@
         }
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 2,
-        "heat": 33,
-        "label": "5회말 3점차"
+        "inning": 6,
+        "half": "T",
+        "out": 0,
+        "heat": 35,
+        "label": "6회초 3점차"
       },
       "recap": null
     },
@@ -234,7 +234,7 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 33,
         "label": "5회초 3점차"
       },
@@ -291,11 +291,11 @@
         }
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 1,
-        "heat": 50,
-        "label": "4회말 1점차 접전"
+        "inning": 5,
+        "half": "T",
+        "out": 0,
+        "heat": 55,
+        "label": "5회초 1점차 접전"
       },
       "recap": null
     }
