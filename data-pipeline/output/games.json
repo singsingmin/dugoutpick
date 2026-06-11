@@ -1,7 +1,7 @@
 {
   "date": "20260611",
   "dateText": "2026년 6월 11일",
-  "updatedAt": "2026-06-11T12:55:21.684Z",
+  "updatedAt": "2026-06-11T12:59:23.166Z",
   "recommendedGameId": "20260611HTHH0",
   "games": [
     {
@@ -113,7 +113,7 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 47,
         "label": "9회초 3점차"
       },
