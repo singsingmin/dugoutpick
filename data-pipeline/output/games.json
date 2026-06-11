@@ -1,7 +1,7 @@
 {
   "date": "20260611",
   "dateText": "2026년 6월 11일",
-  "updatedAt": "2026-06-11T11:05:20.857Z",
+  "updatedAt": "2026-06-11T11:10:23.276Z",
   "recommendedGameId": "20260611HTHH0",
   "games": [
     {
@@ -27,7 +27,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": 9,
+        "score": 10,
         "starter": {
           "name": "김윤식",
           "era": 4.4,
@@ -55,11 +55,11 @@
         }
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 2,
+        "inning": 5,
+        "half": "T",
+        "out": 0,
         "heat": 0,
-        "label": "4회말 8점차"
+        "label": "5회초 9점차"
       },
       "recap": null
     },
@@ -133,7 +133,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 3,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "오러클린",
           "era": 4.26,
@@ -176,8 +176,8 @@
         "inning": 6,
         "half": "T",
         "out": 1,
-        "heat": 35,
-        "label": "6회초 3점차"
+        "heat": 24,
+        "label": "6회초 4점차"
       },
       "recap": null
     },
@@ -234,7 +234,7 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "heat": 33,
         "label": "5회말 3점차"
       },
@@ -292,10 +292,10 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "heat": 55,
-        "label": "5회초 1점차 접전"
+        "label": "5회말 1점차 접전"
       },
       "recap": null
     }
