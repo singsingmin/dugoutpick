@@ -1,7 +1,7 @@
 {
   "date": "20260611",
   "dateText": "2026년 6월 11일",
-  "updatedAt": "2026-06-11T13:00:33.883Z",
+  "updatedAt": "2026-06-11T13:10:25.544Z",
   "recommendedGameId": "20260611HTHH0",
   "games": [
     {
@@ -71,7 +71,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 6,
-        "score": 10,
+        "score": 12,
         "starter": {
           "name": "타카다",
           "era": null,
@@ -113,9 +113,9 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 1,
-        "heat": 47,
-        "label": "9회초 3점차"
+        "out": 2,
+        "heat": 15,
+        "label": "9회초 5점차"
       },
       "recap": null
     },
