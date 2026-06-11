@@ -1,7 +1,7 @@
 {
   "date": "20260611",
   "dateText": "2026년 6월 11일",
-  "updatedAt": "2026-06-11T09:45:40.677Z",
+  "updatedAt": "2026-06-11T09:50:24.560Z",
   "recommendedGameId": "20260611HTHH0",
   "games": [
     {
@@ -116,7 +116,7 @@
       "live": {
         "inning": 1,
         "half": "T",
-        "out": 0,
+        "out": 3,
         "heat": 30,
         "label": "1회초 2점차"
       },
@@ -175,7 +175,7 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "heat": 43,
         "label": "1회말 동점 접전"
       },
