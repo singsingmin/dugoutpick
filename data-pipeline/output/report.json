@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-11T13:20:23.184Z",
+  "updatedAt": "2026-06-11T13:25:25.123Z",
   "lastWeek": {
     "range": [
       "20260601",
@@ -93,20 +93,20 @@
         "dateEnd": "20260611"
       },
       {
+        "away": "OB",
+        "home": "HT",
+        "pred": 77,
+        "reason": "게임차 1.5, 막상막하 승부",
+        "dateStart": "20260612",
+        "dateEnd": "20260614"
+      },
+      {
         "away": "SS",
         "home": "KT",
         "pred": 74,
         "reason": "게임차 1.5, 막상막하 승부 · 리그 2위·3위 상위권 빅매치",
         "dateStart": "20260609",
         "dateEnd": "20260611"
-      },
-      {
-        "away": "OB",
-        "home": "HT",
-        "pred": 74,
-        "reason": "게임차 2, 막상막하 승부",
-        "dateStart": "20260612",
-        "dateEnd": "20260614"
       }
     ],
     "team": {
@@ -186,6 +186,11 @@
           "home": "LT"
         },
         {
+          "date": "20260611",
+          "away": "OB",
+          "home": "LT"
+        },
+        {
           "date": "20260612",
           "away": "OB",
           "home": "HT"
@@ -209,6 +214,11 @@
         },
         {
           "date": "20260610",
+          "away": "OB",
+          "home": "LT"
+        },
+        {
+          "date": "20260611",
           "away": "OB",
           "home": "LT"
         },
