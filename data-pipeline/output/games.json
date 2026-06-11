@@ -1,7 +1,7 @@
 {
   "date": "20260611",
   "dateText": "2026년 6월 11일",
-  "updatedAt": "2026-06-11T12:05:20.123Z",
+  "updatedAt": "2026-06-11T12:10:23.887Z",
   "recommendedGameId": "20260611HTHH0",
   "games": [
     {
@@ -15,7 +15,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 8,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "김건우",
           "era": 4.6,
@@ -27,7 +27,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": 13,
+        "score": 14,
         "starter": {
           "name": "김윤식",
           "era": 4.4,
@@ -55,11 +55,11 @@
         }
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 1,
+        "inning": 8,
+        "half": "T",
+        "out": 0,
         "heat": 0,
-        "label": "7회말 12점차"
+        "label": "8회초 12점차"
       },
       "recap": null
     },
@@ -114,11 +114,11 @@
         }
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 2,
-        "heat": 52,
-        "label": "6회말 2점차"
+        "inning": 7,
+        "half": "T",
+        "out": 0,
+        "heat": 55,
+        "label": "7회초 2점차"
       },
       "recap": null
     },
@@ -175,7 +175,7 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "heat": 0,
         "label": "8회말 6점차"
       },
@@ -204,7 +204,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 5,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "류현진",
           "era": 2.97,
@@ -232,11 +232,11 @@
         }
       },
       "live": {
-        "inning": 8,
-        "half": "B",
+        "inning": 9,
+        "half": "T",
         "out": 0,
-        "heat": 41,
-        "label": "8회말 3점차"
+        "heat": 29,
+        "label": "9회초 4점차"
       },
       "recap": null
     },
@@ -293,7 +293,7 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 82,
         "label": "8회초 동점 접전"
       },
