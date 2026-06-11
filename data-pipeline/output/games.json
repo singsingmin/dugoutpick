@@ -1,7 +1,7 @@
 {
   "date": "20260611",
   "dateText": "2026년 6월 11일",
-  "updatedAt": "2026-06-11T10:45:22.578Z",
+  "updatedAt": "2026-06-11T10:50:23.797Z",
   "recommendedGameId": "20260611HTHH0",
   "games": [
     {
@@ -56,10 +56,10 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "heat": 21,
-        "label": "4회초 4점차"
+        "label": "4회말 4점차"
       },
       "recap": null
     },
@@ -74,7 +74,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 6,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "타카다",
           "era": null,
@@ -116,9 +116,9 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 0,
-        "heat": 51,
-        "label": "4회초 1점차 접전"
+        "out": 2,
+        "heat": 41,
+        "label": "4회초 2점차"
       },
       "recap": null
     },
@@ -174,10 +174,10 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 33,
-        "label": "5회초 3점차"
+        "label": "5회말 3점차"
       },
       "recap": null
     },
@@ -204,7 +204,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 5,
-        "score": 2,
+        "score": 4,
         "starter": {
           "name": "류현진",
           "era": 2.97,
@@ -234,9 +234,9 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 1,
-        "heat": 50,
-        "label": "4회말 1점차 접전"
+        "out": 2,
+        "heat": 31,
+        "label": "4회말 3점차"
       },
       "recap": null
     },
