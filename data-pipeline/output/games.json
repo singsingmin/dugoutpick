@@ -1,7 +1,7 @@
 {
   "date": "20260611",
   "dateText": "2026년 6월 11일",
-  "updatedAt": "2026-06-11T11:20:24.120Z",
+  "updatedAt": "2026-06-11T11:25:20.323Z",
   "recommendedGameId": "20260611HTHH0",
   "games": [
     {
@@ -55,11 +55,11 @@
         }
       },
       "live": {
-        "inning": 5,
-        "half": "B",
+        "inning": 6,
+        "half": "T",
         "out": 0,
         "heat": 0,
-        "label": "5회말 9점차"
+        "label": "6회초 9점차"
       },
       "recap": null
     },
@@ -86,7 +86,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 9,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "박세웅",
           "era": 4.98,
@@ -116,9 +116,9 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 1,
-        "heat": 57,
-        "label": "5회말 1점차 접전"
+        "out": 3,
+        "heat": 46,
+        "label": "5회말 2점차"
       },
       "recap": null
     },
@@ -175,7 +175,7 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "heat": 0,
         "label": "6회말 6점차"
       },
@@ -234,7 +234,7 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "heat": 36,
         "label": "6회말 3점차"
       },
@@ -291,11 +291,11 @@
         }
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 3,
-        "heat": 55,
-        "label": "5회말 1점차 접전"
+        "inning": 6,
+        "half": "T",
+        "out": 2,
+        "heat": 59,
+        "label": "6회초 1점차 접전"
       },
       "recap": null
     }
