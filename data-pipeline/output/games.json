@@ -1,7 +1,7 @@
 {
   "date": "20260611",
   "dateText": "2026년 6월 11일",
-  "updatedAt": "2026-06-11T12:15:25.461Z",
+  "updatedAt": "2026-06-11T12:20:24.564Z",
   "recommendedGameId": "20260611HTHH0",
   "games": [
     {
@@ -56,10 +56,10 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 0,
-        "label": "8회초 13점차"
+        "label": "8회말 13점차"
       },
       "recap": null
     },
@@ -115,10 +115,10 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "heat": 55,
-        "label": "7회초 2점차"
+        "label": "7회말 2점차"
       },
       "recap": null
     },
@@ -133,7 +133,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 3,
-        "score": 6,
+        "score": 7,
         "starter": {
           "name": "오러클린",
           "era": 4.26,
@@ -177,7 +177,7 @@
         "half": "T",
         "out": 0,
         "heat": 0,
-        "label": "9회초 6점차"
+        "label": "9회초 7점차"
       },
       "recap": null
     },
@@ -185,7 +185,7 @@
       "gameId": "20260611HTHH0",
       "time": "18:30",
       "stadium": "대전",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "KN-T",
       "away": {
@@ -231,14 +231,11 @@
           "doom": 0
         }
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 2,
-        "heat": 29,
-        "label": "9회초 4점차"
-      },
-      "recap": null
+      "live": null,
+      "recap": {
+        "actual": 15,
+        "verdict": "기대 이하"
+      }
     },
     {
       "gameId": "20260611NCWO0",
