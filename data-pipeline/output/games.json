@@ -1,7 +1,7 @@
 {
   "date": "20260612",
   "dateText": "2026년 6월 12일",
-  "updatedAt": "2026-06-12T13:05:21.277Z",
+  "updatedAt": "2026-06-12T13:10:23.932Z",
   "recommendedGameId": "20260612OBHT0",
   "games": [
     {
@@ -27,7 +27,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "톨허스트",
           "era": 3.36,
@@ -57,9 +57,9 @@
       "live": {
         "inning": 9,
         "half": "B",
-        "out": 2,
+        "out": 3,
         "heat": 0,
-        "label": "9회말 12점차"
+        "label": "9회말 11점차"
       },
       "recap": null
     },
