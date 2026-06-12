@@ -1,15 +1,7 @@
 {
-  "updatedAt": "2026-06-12T12:30:30.344Z",
+  "updatedAt": "2026-06-12T12:35:20.859Z",
   "recent": {
     "NC": [
-      {
-        "date": "20260531",
-        "oppCode": "LT",
-        "isHome": true,
-        "sf": 8,
-        "sa": 2,
-        "result": "W"
-      },
       {
         "date": "20260602",
         "oppCode": "SS",
@@ -81,6 +73,14 @@
         "sf": 3,
         "sa": 2,
         "result": "W"
+      },
+      {
+        "date": "20260612",
+        "oppCode": "KT",
+        "isHome": false,
+        "sf": 2,
+        "sa": 3,
+        "result": "L"
       }
     ],
     "LG": [
@@ -495,14 +495,6 @@
     ],
     "KT": [
       {
-        "date": "20260531",
-        "oppCode": "WO",
-        "isHome": false,
-        "sf": 5,
-        "sa": 1,
-        "result": "W"
-      },
-      {
         "date": "20260602",
         "oppCode": "LG",
         "isHome": true,
@@ -573,17 +565,17 @@
         "sf": 1,
         "sa": 8,
         "result": "L"
+      },
+      {
+        "date": "20260612",
+        "oppCode": "NC",
+        "isHome": true,
+        "sf": 3,
+        "sa": 2,
+        "result": "W"
       }
     ],
     "HT": [
-      {
-        "date": "20260531",
-        "oppCode": "LG",
-        "isHome": false,
-        "sf": 3,
-        "sa": 5,
-        "result": "L"
-      },
       {
         "date": "20260602",
         "oppCode": "LT",
@@ -655,17 +647,17 @@
         "sf": 1,
         "sa": 5,
         "result": "L"
+      },
+      {
+        "date": "20260612",
+        "oppCode": "OB",
+        "isHome": true,
+        "sf": 2,
+        "sa": 4,
+        "result": "L"
       }
     ],
     "OB": [
-      {
-        "date": "20260530",
-        "oppCode": "SS",
-        "isHome": false,
-        "sf": 8,
-        "sa": 7,
-        "result": "W"
-      },
       {
         "date": "20260531",
         "oppCode": "SS",
@@ -736,6 +728,14 @@
         "isHome": false,
         "sf": 12,
         "sa": 7,
+        "result": "W"
+      },
+      {
+        "date": "20260612",
+        "oppCode": "HT",
+        "isHome": false,
+        "sf": 4,
+        "sa": 2,
         "result": "W"
       }
     ],
