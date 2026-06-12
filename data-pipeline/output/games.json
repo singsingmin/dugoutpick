@@ -1,7 +1,7 @@
 {
   "date": "20260612",
   "dateText": "2026년 6월 12일",
-  "updatedAt": "2026-06-12T12:12:30.502Z",
+  "updatedAt": "2026-06-12T12:15:24.226Z",
   "recommendedGameId": "20260612OBHT0",
   "games": [
     {
@@ -15,7 +15,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 9,
-        "score": 8,
+        "score": 10,
         "starter": {
           "name": "로드리게스",
           "era": 5.56,
@@ -58,8 +58,8 @@
         "inning": 8,
         "half": "T",
         "out": 1,
-        "heat": 29,
-        "label": "8회초 4점차"
+        "heat": 0,
+        "label": "8회초 6점차"
       },
       "recap": null
     },
@@ -174,10 +174,10 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 44,
-        "label": "9회초 3점차"
+        "label": "9회말 3점차"
       },
       "recap": null
     },
@@ -234,7 +234,7 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "heat": 87,
         "label": "9회초 동점 접전"
       },
@@ -291,11 +291,11 @@
         }
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
-        "heat": 55,
-        "label": "8회말 2점차"
+        "inning": 9,
+        "half": "T",
+        "out": 0,
+        "heat": 58,
+        "label": "9회초 2점차"
       },
       "recap": null
     }
