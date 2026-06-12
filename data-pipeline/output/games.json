@@ -1,7 +1,7 @@
 {
   "date": "20260612",
   "dateText": "2026년 6월 12일",
-  "updatedAt": "2026-06-12T11:15:23.099Z",
+  "updatedAt": "2026-06-12T11:20:24.733Z",
   "recommendedGameId": "20260612OBHT0",
   "games": [
     {
@@ -56,10 +56,10 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 0,
-        "label": "6회초 7점차"
+        "label": "6회말 7점차"
       },
       "recap": null
     },
@@ -116,7 +116,7 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "heat": 61,
         "label": "6회초 1점차 접전"
       },
@@ -133,7 +133,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 6,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "최민석",
           "era": 3.06,
@@ -174,10 +174,10 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 2,
-        "heat": 48,
-        "label": "6회초 2점차"
+        "half": "B",
+        "out": 0,
+        "heat": 36,
+        "label": "6회말 3점차"
       },
       "recap": null
     },
@@ -232,11 +232,11 @@
         }
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 1,
-        "heat": 59,
-        "label": "6회말 1점차 접전"
+        "inning": 7,
+        "half": "T",
+        "out": 0,
+        "heat": 63,
+        "label": "7회초 1점차 접전"
       },
       "recap": null
     },
