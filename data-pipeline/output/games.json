@@ -1,7 +1,7 @@
 {
   "date": "20260613",
   "dateText": "2026년 6월 13일",
-  "updatedAt": "2026-06-13T10:50:26.703Z",
+  "updatedAt": "2026-06-13T10:55:18.957Z",
   "recommendedGameId": "20260613OBHT0",
   "games": [
     {
@@ -63,7 +63,7 @@
       "gameId": "20260613SKSS0",
       "time": "17:00",
       "stadium": "대구",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPO-T",
       "away": {
@@ -109,14 +109,11 @@
           "doom": 0
         }
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 1,
-        "heat": 76,
-        "label": "9회초 1점차 접전"
-      },
-      "recap": null
+      "live": null,
+      "recap": {
+        "actual": 74,
+        "verdict": "기대 이상"
+      }
     },
     {
       "gameId": "20260613OBHT0",
@@ -226,10 +223,10 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 59,
-        "label": "8회초 2점차"
+        "label": "8회말 2점차"
       },
       "recap": null
     },
