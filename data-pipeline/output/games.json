@@ -1,7 +1,7 @@
 {
   "date": "20260613",
   "dateText": "2026년 6월 13일",
-  "updatedAt": "2026-06-13T11:25:18.773Z",
+  "updatedAt": "2026-06-13T11:30:27.043Z",
   "recommendedGameId": "20260613OBHT0",
   "games": [
     {
@@ -175,7 +175,7 @@
       "gameId": "20260613NCKT0",
       "time": "17:00",
       "stadium": "수원",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SS-T",
       "away": {
@@ -221,14 +221,11 @@
           "doom": 0
         }
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 1,
-        "heat": 62,
-        "label": "9회초 2점차"
-      },
-      "recap": null
+      "live": null,
+      "recap": {
+        "actual": 61,
+        "verdict": "기대 이상"
+      }
     },
     {
       "gameId": "20260613HHWO0",
