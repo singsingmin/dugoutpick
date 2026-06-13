@@ -1,7 +1,7 @@
 {
   "date": "20260613",
   "dateText": "2026년 6월 13일",
-  "updatedAt": "2026-06-13T10:25:21.034Z",
+  "updatedAt": "2026-06-13T10:30:26.355Z",
   "recommendedGameId": "20260613OBHT0",
   "games": [
     {
@@ -55,10 +55,10 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
+        "half": "B",
         "out": 1,
         "heat": 56,
-        "label": "8회초 2점차"
+        "label": "8회말 2점차"
       },
       "recap": null
     },
@@ -85,7 +85,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 3,
-        "score": 5,
+        "score": 7,
         "starter": {
           "name": "후라도",
           "era": 2.61,
@@ -115,8 +115,8 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 1,
-        "heat": 67,
+        "out": 3,
+        "heat": 68,
         "label": "7회말 1점차 접전"
       },
       "recap": null
@@ -174,7 +174,7 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "heat": 68,
         "label": "8회말 1점차 접전"
       },
@@ -233,7 +233,7 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "heat": 13,
         "label": "7회말 5점차"
       },
