@@ -1,7 +1,7 @@
 {
   "date": "20260613",
   "dateText": "2026년 6월 13일",
-  "updatedAt": "2026-06-13T08:30:27.872Z",
+  "updatedAt": "2026-06-13T08:35:19.918Z",
   "recommendedGameId": "20260613OBHT0",
   "games": [
     {
@@ -27,7 +27,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "김진수",
           "era": 4.07,
@@ -57,8 +57,8 @@
         "inning": 2,
         "half": "B",
         "out": 0,
-        "heat": 33,
-        "label": "2회말 2점차"
+        "heat": 25,
+        "label": "2회말 3점차"
       },
       "recap": null
     },
@@ -115,7 +115,7 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 45,
         "label": "3회초 1점차 접전"
       },
@@ -174,7 +174,7 @@
       "live": {
         "inning": 2,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "heat": 49,
         "label": "2회말 동점 접전"
       },
@@ -290,11 +290,11 @@
         }
       },
       "live": {
-        "inning": 2,
-        "half": "B",
-        "out": 1,
-        "heat": 49,
-        "label": "2회말 동점 접전"
+        "inning": 3,
+        "half": "T",
+        "out": 0,
+        "heat": 54,
+        "label": "3회초 동점 접전"
       },
       "recap": null
     }
