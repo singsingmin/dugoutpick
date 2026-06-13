@@ -1,7 +1,7 @@
 {
   "date": "20260613",
   "dateText": "2026년 6월 13일",
-  "updatedAt": "2026-06-13T08:35:19.918Z",
+  "updatedAt": "2026-06-13T08:40:28.816Z",
   "recommendedGameId": "20260613OBHT0",
   "games": [
     {
@@ -73,7 +73,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 8,
-        "score": 1,
+        "score": 3,
         "starter": {
           "name": "베니지아노",
           "era": 5.13,
@@ -116,8 +116,8 @@
         "inning": 3,
         "half": "T",
         "out": 1,
-        "heat": 45,
-        "label": "3회초 1점차 접전"
+        "heat": 28,
+        "label": "3회초 3점차"
       },
       "recap": null
     },
@@ -172,11 +172,11 @@
         }
       },
       "live": {
-        "inning": 2,
-        "half": "B",
-        "out": 2,
-        "heat": 49,
-        "label": "2회말 동점 접전"
+        "inning": 3,
+        "half": "T",
+        "out": 1,
+        "heat": 54,
+        "label": "3회초 동점 접전"
       },
       "recap": null
     },
@@ -233,7 +233,7 @@
       "live": {
         "inning": 2,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "heat": 33,
         "label": "2회말 2점차"
       },
@@ -291,10 +291,10 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "heat": 54,
-        "label": "3회초 동점 접전"
+        "label": "3회말 동점 접전"
       },
       "recap": null
     }
