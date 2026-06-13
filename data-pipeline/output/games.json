@@ -1,7 +1,7 @@
 {
   "date": "20260613",
   "dateText": "2026년 6월 13일",
-  "updatedAt": "2026-06-13T10:43:06.129Z",
+  "updatedAt": "2026-06-13T10:45:21.513Z",
   "recommendedGameId": "20260613OBHT0",
   "games": [
     {
@@ -115,7 +115,7 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 1,
+        "out": 3,
         "heat": 72,
         "label": "8회말 1점차 접전"
       },
@@ -188,7 +188,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 5,
+        "score": 8,
         "starter": {
           "name": "토다",
           "era": 4.69,
@@ -231,8 +231,8 @@
         "inning": 8,
         "half": "T",
         "out": 1,
-        "heat": 57,
-        "label": "8회초 2점차"
+        "heat": 73,
+        "label": "8회초 1점차 접전"
       },
       "recap": null
     },
