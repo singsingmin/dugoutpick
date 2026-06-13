@@ -1,7 +1,7 @@
 {
   "date": "20260613",
   "dateText": "2026년 6월 13일",
-  "updatedAt": "2026-06-13T08:16:45.232Z",
+  "updatedAt": "2026-06-13T08:20:21.857Z",
   "recommendedGameId": "20260613OBHT0",
   "games": [
     {
@@ -27,7 +27,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "김진수",
           "era": 4.07,
@@ -56,9 +56,9 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
-        "heat": 43,
-        "label": "1회말 동점 접전"
+        "out": 2,
+        "heat": 30,
+        "label": "1회말 2점차"
       },
       "recap": null
     },
@@ -73,7 +73,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 8,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "베니지아노",
           "era": 5.13,
@@ -114,10 +114,10 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
-        "out": 2,
-        "heat": 49,
-        "label": "2회초 동점 접전"
+        "half": "B",
+        "out": 0,
+        "heat": 41,
+        "label": "2회말 1점차 접전"
       },
       "recap": null
     },
@@ -174,7 +174,7 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 49,
         "label": "2회초 동점 접전"
       },
@@ -233,7 +233,7 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "heat": 43,
         "label": "1회말 동점 접전"
       },
@@ -292,7 +292,7 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 49,
         "label": "2회초 동점 접전"
       },
