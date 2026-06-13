@@ -1,7 +1,7 @@
 {
   "date": "20260613",
   "dateText": "2026년 6월 13일",
-  "updatedAt": "2026-06-13T09:00:38.870Z",
+  "updatedAt": "2026-06-13T09:05:19.607Z",
   "recommendedGameId": "20260613OBHT0",
   "games": [
     {
@@ -55,10 +55,10 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
+        "half": "B",
         "out": 2,
         "heat": 29,
-        "label": "3회초 3점차"
+        "label": "3회말 3점차"
       },
       "recap": null
     },
@@ -115,7 +115,7 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "heat": 0,
         "label": "4회초 6점차"
       },
@@ -173,10 +173,10 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 59,
-        "label": "4회초 동점 접전"
+        "label": "4회말 동점 접전"
       },
       "recap": null
     },
@@ -203,7 +203,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 2,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "오원석",
           "era": 5.25,
@@ -231,11 +231,11 @@
         }
       },
       "live": {
-        "inning": 3,
-        "half": "B",
+        "inning": 4,
+        "half": "T",
         "out": 0,
-        "heat": 19,
-        "label": "3회말 4점차"
+        "heat": 10,
+        "label": "4회초 5점차"
       },
       "recap": null
     },
@@ -290,11 +290,11 @@
         }
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 1,
-        "heat": 59,
-        "label": "4회말 동점 접전"
+        "inning": 5,
+        "half": "T",
+        "out": 0,
+        "heat": 64,
+        "label": "5회초 동점 접전"
       },
       "recap": null
     }
