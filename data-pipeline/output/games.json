@@ -1,7 +1,7 @@
 {
   "date": "20260614",
   "dateText": "2026년 6월 14일",
-  "updatedAt": "2026-06-14T10:00:36.527Z",
+  "updatedAt": "2026-06-14T10:05:28.625Z",
   "recommendedGameId": "20260614OBHT0",
   "games": [
     {
@@ -112,7 +112,7 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "heat": 76,
         "label": "7회말 동점 접전"
       },
@@ -171,7 +171,7 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 1,
+        "out": 3,
         "heat": 47,
         "label": "5회말 2점차"
       },
@@ -188,7 +188,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "곽빈",
           "era": 3.38,
@@ -229,10 +229,10 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
+        "half": "B",
         "out": 0,
-        "heat": 39,
-        "label": "7회초 3점차"
+        "heat": 26,
+        "label": "7회말 4점차"
       },
       "recap": null
     },
