@@ -1,14 +1,14 @@
 {
   "date": "20260614",
   "dateText": "2026년 6월 14일",
-  "updatedAt": "2026-06-14T07:55:21.395Z",
+  "updatedAt": "2026-06-14T08:00:34.226Z",
   "recommendedGameId": "20260614OBHT0",
   "games": [
     {
       "gameId": "20260614HHWO0",
       "time": "14:00",
       "stadium": "고척",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "S-T",
       "away": {
@@ -54,14 +54,11 @@
           "doom": 0
         }
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 1,
-        "heat": 73,
-        "label": "9회초 1점차 접전"
-      },
-      "recap": null
+      "live": null,
+      "recap": {
+        "actual": 63,
+        "verdict": "기대 이상"
+      }
     },
     {
       "gameId": "20260614LTLG0",
