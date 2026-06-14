@@ -1,7 +1,7 @@
 {
   "date": "20260614",
   "dateText": "2026년 6월 14일",
-  "updatedAt": "2026-06-14T05:50:24.023Z",
+  "updatedAt": "2026-06-14T05:55:19.685Z",
   "recommendedGameId": "20260614OBHT0",
   "games": [
     {
@@ -56,10 +56,10 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
+        "half": "B",
         "out": 2,
         "heat": 45,
-        "label": "3회초 1점차 접전"
+        "label": "3회말 1점차 접전"
       },
       "recap": null
     },
