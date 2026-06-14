@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-14T11:10:20.704Z",
+  "updatedAt": "2026-06-14T11:20:21.704Z",
   "recent": {
     "NC": [
       {
@@ -85,14 +85,6 @@
     ],
     "LG": [
       {
-        "date": "20260603",
-        "oppCode": "KT",
-        "isHome": false,
-        "sf": 6,
-        "sa": 7,
-        "result": "L"
-      },
-      {
         "date": "20260604",
         "oppCode": "KT",
         "isHome": false,
@@ -162,6 +154,14 @@
         "isHome": true,
         "sf": 5,
         "sa": 3,
+        "result": "W"
+      },
+      {
+        "date": "20260614",
+        "oppCode": "LT",
+        "isHome": true,
+        "sf": 6,
+        "sa": 1,
         "result": "W"
       }
     ],
@@ -331,14 +331,6 @@
     ],
     "LT": [
       {
-        "date": "20260603",
-        "oppCode": "HT",
-        "isHome": false,
-        "sf": 8,
-        "sa": 3,
-        "result": "W"
-      },
-      {
         "date": "20260604",
         "oppCode": "HT",
         "isHome": false,
@@ -408,6 +400,14 @@
         "isHome": false,
         "sf": 3,
         "sa": 5,
+        "result": "L"
+      },
+      {
+        "date": "20260614",
+        "oppCode": "LG",
+        "isHome": false,
+        "sf": 1,
+        "sa": 6,
         "result": "L"
       }
     ],
@@ -577,14 +577,6 @@
     ],
     "HT": [
       {
-        "date": "20260603",
-        "oppCode": "LT",
-        "isHome": true,
-        "sf": 3,
-        "sa": 8,
-        "result": "L"
-      },
-      {
         "date": "20260604",
         "oppCode": "LT",
         "isHome": true,
@@ -655,17 +647,17 @@
         "sf": 2,
         "sa": 1,
         "result": "W"
+      },
+      {
+        "date": "20260614",
+        "oppCode": "OB",
+        "isHome": true,
+        "sf": 1,
+        "sa": 8,
+        "result": "L"
       }
     ],
     "OB": [
-      {
-        "date": "20260602",
-        "oppCode": "HH",
-        "isHome": true,
-        "sf": 5,
-        "sa": 3,
-        "result": "W"
-      },
       {
         "date": "20260604",
         "oppCode": "HH",
@@ -737,6 +729,14 @@
         "sf": 1,
         "sa": 2,
         "result": "L"
+      },
+      {
+        "date": "20260614",
+        "oppCode": "HT",
+        "isHome": false,
+        "sf": 8,
+        "sa": 1,
+        "result": "W"
       }
     ],
     "WO": [

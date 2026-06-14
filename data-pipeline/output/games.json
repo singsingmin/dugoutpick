@@ -1,7 +1,7 @@
 {
   "date": "20260614",
   "dateText": "2026년 6월 14일",
-  "updatedAt": "2026-06-14T11:10:20.704Z",
+  "updatedAt": "2026-06-14T11:20:21.704Z",
   "recommendedGameId": "20260614OBHT0",
   "games": [
     {
@@ -14,7 +14,7 @@
       "away": {
         "code": "HH",
         "name": "한화",
-        "rank": 5,
+        "rank": 6,
         "score": 2,
         "starter": {
           "name": "왕옌청",
@@ -126,7 +126,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 8,
-        "score": 7,
+        "score": 8,
         "starter": {
           "name": "해치",
           "era": null,
@@ -167,10 +167,10 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 1,
-        "heat": 44,
-        "label": "8회초 3점차"
+        "half": "B",
+        "out": 0,
+        "heat": 59,
+        "label": "8회말 2점차"
       },
       "recap": null
     },
