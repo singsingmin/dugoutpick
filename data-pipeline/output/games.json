@@ -1,7 +1,7 @@
 {
   "date": "20260614",
   "dateText": "2026년 6월 14일",
-  "updatedAt": "2026-06-14T06:30:38.747Z",
+  "updatedAt": "2026-06-14T06:35:22.588Z",
   "recommendedGameId": "20260614OBHT0",
   "games": [
     {
@@ -27,7 +27,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "로젠버그",
           "era": 4.5,
@@ -57,9 +57,9 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
-        "heat": 55,
-        "label": "5회말 1점차 접전"
+        "out": 2,
+        "heat": 66,
+        "label": "5회말 동점 접전"
       },
       "recap": null
     },
