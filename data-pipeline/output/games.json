@@ -1,7 +1,7 @@
 {
   "date": "20260614",
   "dateText": "2026년 6월 14일",
-  "updatedAt": "2026-06-14T10:50:23.024Z",
+  "updatedAt": "2026-06-14T10:55:18.385Z",
   "recommendedGameId": "20260614OBHT0",
   "games": [
     {
@@ -83,7 +83,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "임찬규",
           "era": 3.72,
@@ -113,8 +113,8 @@
         "inning": 8,
         "half": "B",
         "out": 1,
-        "heat": 41,
-        "label": "8회말 3점차"
+        "heat": 28,
+        "label": "8회말 4점차"
       },
       "recap": null
     },
@@ -170,10 +170,10 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "heat": 41,
-        "label": "7회초 3점차"
+        "label": "7회말 3점차"
       },
       "recap": null
     },
@@ -230,7 +230,7 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 0,
         "label": "9회초 6점차"
       },
