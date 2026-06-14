@@ -1,7 +1,7 @@
 {
   "date": "20260614",
   "dateText": "2026년 6월 14일",
-  "updatedAt": "2026-06-14T08:00:34.226Z",
+  "updatedAt": "2026-06-14T08:05:27.716Z",
   "recommendedGameId": "20260614OBHT0",
   "games": [
     {
@@ -26,7 +26,7 @@
       "home": {
         "code": "WO",
         "name": "키움",
-        "rank": 10,
+        "rank": 9,
         "score": 3,
         "starter": {
           "name": "로젠버그",
@@ -64,14 +64,14 @@
       "gameId": "20260614LTLG0",
       "time": "17:00",
       "stadium": "잠실",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SPO-2T",
       "away": {
         "code": "LT",
         "name": "롯데",
-        "rank": 9,
-        "score": null,
+        "rank": 10,
+        "score": 0,
         "starter": {
           "name": "비슬리",
           "era": 4.86,
@@ -83,7 +83,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "임찬규",
           "era": 3.72,
@@ -109,21 +109,27 @@
           "doom": 0
         }
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "B",
+        "out": 0,
+        "heat": 43,
+        "label": "1회말 동점 접전"
+      },
       "recap": null
     },
     {
       "gameId": "20260614SKSS0",
       "time": "17:00",
       "stadium": "대구",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "MS-T",
       "away": {
         "code": "SK",
         "name": "SSG",
         "rank": 8,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "해치",
           "era": null,
@@ -135,7 +141,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 3,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "양창섭",
           "era": 4.43,
@@ -162,21 +168,27 @@
           "doom": 0
         }
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 0,
+        "heat": 43,
+        "label": "1회초 동점 접전"
+      },
       "recap": null
     },
     {
       "gameId": "20260614OBHT0",
       "time": "17:00",
       "stadium": "광주",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "KN-T",
       "away": {
         "code": "OB",
         "name": "두산",
-        "rank": 6,
-        "score": null,
+        "rank": 5,
+        "score": 0,
         "starter": {
           "name": "곽빈",
           "era": 3.38,
@@ -188,7 +200,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "김태형",
           "era": 5.17,
@@ -215,7 +227,13 @@
           "doom": 0
         }
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 2,
+        "heat": 43,
+        "label": "1회초 동점 접전"
+      },
       "recap": null
     },
     {
