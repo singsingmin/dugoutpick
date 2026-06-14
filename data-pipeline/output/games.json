@@ -1,7 +1,7 @@
 {
   "date": "20260614",
   "dateText": "2026년 6월 14일",
-  "updatedAt": "2026-06-14T09:40:31.903Z",
+  "updatedAt": "2026-06-14T09:45:31.542Z",
   "recommendedGameId": "20260614OBHT0",
   "games": [
     {
@@ -83,7 +83,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "임찬규",
           "era": 3.72,
@@ -112,9 +112,9 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 0,
-        "heat": 58,
-        "label": "6회말 1점차 접전"
+        "out": 1,
+        "heat": 70,
+        "label": "6회말 동점 접전"
       },
       "recap": null
     },
@@ -129,7 +129,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 8,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "해치",
           "era": null,
@@ -171,9 +171,9 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 1,
-        "heat": 56,
-        "label": "5회초 1점차 접전"
+        "out": 2,
+        "heat": 67,
+        "label": "5회초 동점 접전"
       },
       "recap": null
     },
@@ -230,7 +230,7 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "heat": 48,
         "label": "6회말 2점차"
       },
