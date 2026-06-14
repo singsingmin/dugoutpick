@@ -1,7 +1,7 @@
 {
   "date": "20260614",
   "dateText": "2026년 6월 14일",
-  "updatedAt": "2026-06-14T07:45:26.893Z",
+  "updatedAt": "2026-06-14T07:55:21.395Z",
   "recommendedGameId": "20260614OBHT0",
   "games": [
     {
@@ -57,7 +57,7 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 73,
         "label": "9회초 1점차 접전"
       },
