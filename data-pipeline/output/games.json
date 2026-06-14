@@ -1,7 +1,7 @@
 {
   "date": "20260614",
   "dateText": "2026년 6월 14일",
-  "updatedAt": "2026-06-14T10:25:20.532Z",
+  "updatedAt": "2026-06-14T10:30:29.483Z",
   "recommendedGameId": "20260614OBHT0",
   "games": [
     {
@@ -141,7 +141,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 3,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "양창섭",
           "era": 4.43,
@@ -171,9 +171,9 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 0,
-        "heat": 50,
-        "label": "6회말 2점차"
+        "out": 1,
+        "heat": 63,
+        "label": "6회말 1점차 접전"
       },
       "recap": null
     },
@@ -230,7 +230,7 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 28,
         "label": "8회초 4점차"
       },
