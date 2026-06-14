@@ -1,7 +1,7 @@
 {
   "date": "20260614",
   "dateText": "2026년 6월 14일",
-  "updatedAt": "2026-06-14T11:05:19.473Z",
+  "updatedAt": "2026-06-14T11:10:20.704Z",
   "recommendedGameId": "20260614OBHT0",
   "games": [
     {
@@ -64,7 +64,7 @@
       "gameId": "20260614LTLG0",
       "time": "17:00",
       "stadium": "잠실",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPO-2T",
       "away": {
@@ -109,14 +109,11 @@
           "doom": 0
         }
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 2,
-        "heat": 15,
-        "label": "9회초 5점차"
-      },
-      "recap": null
+      "live": null,
+      "recap": {
+        "actual": 8,
+        "verdict": "예측 적중"
+      }
     },
     {
       "gameId": "20260614SKSS0",
@@ -181,7 +178,7 @@
       "gameId": "20260614OBHT0",
       "time": "17:00",
       "stadium": "광주",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "KN-T",
       "away": {
@@ -227,14 +224,11 @@
           "doom": 0
         }
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 2,
-        "heat": 0,
-        "label": "9회말 7점차"
-      },
-      "recap": null
+      "live": null,
+      "recap": {
+        "actual": 2,
+        "verdict": "기대 이하"
+      }
     },
     {
       "gameId": "20260614NCKT0",
