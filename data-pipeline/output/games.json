@@ -1,7 +1,7 @@
 {
   "date": "20260614",
   "dateText": "2026년 6월 14일",
-  "updatedAt": "2026-06-14T06:23:20.229Z",
+  "updatedAt": "2026-06-14T06:25:20.709Z",
   "recommendedGameId": "20260614OBHT0",
   "games": [
     {
@@ -15,7 +15,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 5,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "왕옌청",
           "era": 3.49,
@@ -58,8 +58,8 @@
         "inning": 5,
         "half": "T",
         "out": 2,
-        "heat": 65,
-        "label": "5회초 동점 접전"
+        "heat": 55,
+        "label": "5회초 1점차 접전"
       },
       "recap": null
     },
