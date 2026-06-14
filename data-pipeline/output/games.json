@@ -1,7 +1,7 @@
 {
   "date": "20260614",
   "dateText": "2026년 6월 14일",
-  "updatedAt": "2026-06-14T10:55:18.385Z",
+  "updatedAt": "2026-06-14T11:00:33.528Z",
   "recommendedGameId": "20260614OBHT0",
   "games": [
     {
@@ -83,7 +83,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "임찬규",
           "era": 3.72,
@@ -110,11 +110,11 @@
         }
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 1,
-        "heat": 28,
-        "label": "8회말 4점차"
+        "inning": 9,
+        "half": "T",
+        "out": 0,
+        "heat": 15,
+        "label": "9회초 5점차"
       },
       "recap": null
     },
@@ -169,11 +169,11 @@
         }
       },
       "live": {
-        "inning": 7,
-        "half": "B",
+        "inning": 8,
+        "half": "T",
         "out": 0,
-        "heat": 41,
-        "label": "7회말 3점차"
+        "heat": 44,
+        "label": "8회초 3점차"
       },
       "recap": null
     },
@@ -188,7 +188,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 7,
+        "score": 8,
         "starter": {
           "name": "곽빈",
           "era": 3.38,
@@ -229,10 +229,10 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 0,
-        "label": "9회초 6점차"
+        "label": "9회말 7점차"
       },
       "recap": null
     },
