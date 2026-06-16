@@ -1,7 +1,7 @@
 {
   "date": "20260616",
   "dateText": "2026년 6월 16일",
-  "updatedAt": "2026-06-16T09:40:28.921Z",
+  "updatedAt": "2026-06-16T09:45:24.426Z",
   "recommendedGameId": "20260616HHNC0",
   "games": [
     {
@@ -114,11 +114,11 @@
         }
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 2,
-        "heat": 43,
-        "label": "1회말 동점 접전"
+        "inning": 2,
+        "half": "T",
+        "out": 0,
+        "heat": 49,
+        "label": "2회초 동점 접전"
       },
       "recap": null
     },
@@ -145,7 +145,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 8,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "김민준",
           "era": 12.27,
@@ -176,8 +176,8 @@
         "inning": 1,
         "half": "B",
         "out": 1,
-        "heat": 43,
-        "label": "1회말 동점 접전"
+        "heat": 30,
+        "label": "1회말 2점차"
       },
       "recap": null
     },
@@ -204,7 +204,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "시라카와",
           "era": 3.12,
@@ -234,9 +234,9 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 1,
-        "heat": 37,
-        "label": "1회말 1점차 접전"
+        "out": 2,
+        "heat": 44,
+        "label": "1회말 동점 접전"
       },
       "recap": null
     },
@@ -293,7 +293,7 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "heat": 43,
         "label": "1회말 동점 접전"
       },
