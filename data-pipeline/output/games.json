@@ -1,7 +1,7 @@
 {
   "date": "20260616",
   "dateText": "2026년 6월 16일",
-  "updatedAt": "2026-06-16T10:50:27.912Z",
+  "updatedAt": "2026-06-16T10:55:30.046Z",
   "recommendedGameId": "20260616HHNC0",
   "games": [
     {
@@ -55,11 +55,11 @@
         }
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 2,
-        "heat": 31,
-        "label": "4회말 3점차"
+        "inning": 5,
+        "half": "T",
+        "out": 0,
+        "heat": 33,
+        "label": "5회초 3점차"
       },
       "recap": null
     },
@@ -86,7 +86,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 3,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "원태인",
           "era": 3.95,
@@ -117,8 +117,8 @@
         "inning": 5,
         "half": "B",
         "out": 2,
-        "heat": 64,
-        "label": "5회말 동점 접전"
+        "heat": 54,
+        "label": "5회말 1점차 접전"
       },
       "recap": null
     },
@@ -175,7 +175,7 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 43,
         "label": "5회초 2점차"
       },
@@ -263,7 +263,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 2,
+        "score": 4,
         "starter": {
           "name": "구창모",
           "era": 3.69,
@@ -293,9 +293,9 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 0,
-        "heat": 61,
-        "label": "4회말 동점 접전"
+        "out": 1,
+        "heat": 41,
+        "label": "4회말 2점차"
       },
       "recap": null
     }
