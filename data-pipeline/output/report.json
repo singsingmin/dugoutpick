@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-16T08:35:26.585Z",
+  "updatedAt": "2026-06-16T08:40:23.877Z",
   "lastWeek": {
     "range": [
       "20260608",
@@ -110,70 +110,6 @@
       }
     ],
     "team": {
-      "LT": [
-        {
-          "date": "20260616",
-          "away": "LT",
-          "home": "SK"
-        },
-        {
-          "date": "20260617",
-          "away": "LT",
-          "home": "SK"
-        },
-        {
-          "date": "20260618",
-          "away": "LT",
-          "home": "SK"
-        },
-        {
-          "date": "20260619",
-          "away": "LT",
-          "home": "WO"
-        },
-        {
-          "date": "20260620",
-          "away": "LT",
-          "home": "WO"
-        },
-        {
-          "date": "20260621",
-          "away": "LT",
-          "home": "WO"
-        }
-      ],
-      "SK": [
-        {
-          "date": "20260616",
-          "away": "LT",
-          "home": "SK"
-        },
-        {
-          "date": "20260617",
-          "away": "LT",
-          "home": "SK"
-        },
-        {
-          "date": "20260618",
-          "away": "LT",
-          "home": "SK"
-        },
-        {
-          "date": "20260619",
-          "away": "SK",
-          "home": "NC"
-        },
-        {
-          "date": "20260620",
-          "away": "SK",
-          "home": "NC"
-        },
-        {
-          "date": "20260621",
-          "away": "SK",
-          "home": "NC"
-        }
-      ],
       "LG": [
         {
           "date": "20260616",
@@ -344,6 +280,60 @@
           "date": "20260621",
           "away": "SS",
           "home": "HH"
+        }
+      ],
+      "LT": [
+        {
+          "date": "20260617",
+          "away": "LT",
+          "home": "SK"
+        },
+        {
+          "date": "20260618",
+          "away": "LT",
+          "home": "SK"
+        },
+        {
+          "date": "20260619",
+          "away": "LT",
+          "home": "WO"
+        },
+        {
+          "date": "20260620",
+          "away": "LT",
+          "home": "WO"
+        },
+        {
+          "date": "20260621",
+          "away": "LT",
+          "home": "WO"
+        }
+      ],
+      "SK": [
+        {
+          "date": "20260617",
+          "away": "LT",
+          "home": "SK"
+        },
+        {
+          "date": "20260618",
+          "away": "LT",
+          "home": "SK"
+        },
+        {
+          "date": "20260619",
+          "away": "SK",
+          "home": "NC"
+        },
+        {
+          "date": "20260620",
+          "away": "SK",
+          "home": "NC"
+        },
+        {
+          "date": "20260621",
+          "away": "SK",
+          "home": "NC"
         }
       ],
       "HH": [
