@@ -1,7 +1,7 @@
 {
   "date": "20260616",
   "dateText": "2026년 6월 16일",
-  "updatedAt": "2026-06-16T12:30:37.791Z",
+  "updatedAt": "2026-06-16T12:35:28.450Z",
   "recommendedGameId": "20260616HHNC0",
   "games": [
     {
@@ -26,7 +26,7 @@
       "home": {
         "code": "OB",
         "name": "두산",
-        "rank": 4,
+        "rank": 6,
         "score": 2,
         "starter": {
           "name": "최승용",
@@ -169,7 +169,7 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "heat": 0,
         "label": "8회말 7점차"
       },
@@ -197,7 +197,7 @@
       "home": {
         "code": "HT",
         "name": "KIA",
-        "rank": 5,
+        "rank": 4,
         "score": 2,
         "starter": {
           "name": "시라카와",
@@ -241,7 +241,7 @@
       "away": {
         "code": "HH",
         "name": "한화",
-        "rank": 6,
+        "rank": 5,
         "score": 5,
         "starter": {
           "name": "화이트",
@@ -283,10 +283,10 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 71,
-        "label": "8회초 1점차 접전"
+        "label": "8회말 1점차 접전"
       },
       "recap": null
     }
