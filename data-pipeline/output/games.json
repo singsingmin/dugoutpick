@@ -1,7 +1,7 @@
 {
   "date": "20260616",
   "dateText": "2026년 6월 16일",
-  "updatedAt": "2026-06-16T12:55:24.300Z",
+  "updatedAt": "2026-06-16T13:00:46.424Z",
   "recommendedGameId": "20260616HHNC0",
   "games": [
     {
@@ -139,7 +139,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 8,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "김민준",
           "era": 12.27,
@@ -169,9 +169,9 @@
       "live": {
         "inning": 9,
         "half": "B",
-        "out": 1,
-        "heat": 15,
-        "label": "9회말 5점차"
+        "out": 3,
+        "heat": 31,
+        "label": "9회말 4점차"
       },
       "recap": null
     },
