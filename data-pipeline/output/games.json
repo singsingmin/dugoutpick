@@ -1,7 +1,7 @@
 {
   "date": "20260616",
   "dateText": "2026년 6월 16일",
-  "updatedAt": "2026-06-16T11:00:38.013Z",
+  "updatedAt": "2026-06-16T11:05:22.440Z",
   "recommendedGameId": "20260616HHNC0",
   "games": [
     {
@@ -15,7 +15,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 2,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "고영표",
           "era": 4.5,
@@ -58,8 +58,8 @@
         "inning": 5,
         "half": "T",
         "out": 1,
-        "heat": 33,
-        "label": "5회초 3점차"
+        "heat": 22,
+        "label": "5회초 4점차"
       },
       "recap": null
     },
@@ -86,7 +86,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 3,
-        "score": 1,
+        "score": 4,
         "starter": {
           "name": "원태인",
           "era": 3.95,
@@ -117,8 +117,8 @@
         "inning": 5,
         "half": "B",
         "out": 2,
-        "heat": 54,
-        "label": "5회말 1점차 접전"
+        "heat": 22,
+        "label": "5회말 4점차"
       },
       "recap": null
     },
@@ -133,7 +133,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 10,
-        "score": 1,
+        "score": 5,
         "starter": {
           "name": "김진욱",
           "era": 3.2,
@@ -175,9 +175,9 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 1,
-        "heat": 55,
-        "label": "5회초 1점차 접전"
+        "out": 2,
+        "heat": 34,
+        "label": "5회초 3점차"
       },
       "recap": null
     },
@@ -232,11 +232,11 @@
         }
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 2,
-        "heat": 33,
-        "label": "5회말 3점차"
+        "inning": 6,
+        "half": "T",
+        "out": 0,
+        "heat": 36,
+        "label": "6회초 3점차"
       },
       "recap": null
     },
@@ -263,7 +263,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 4,
+        "score": 6,
         "starter": {
           "name": "구창모",
           "era": 3.69,
@@ -294,8 +294,8 @@
         "inning": 4,
         "half": "B",
         "out": 2,
-        "heat": 41,
-        "label": "4회말 2점차"
+        "heat": 21,
+        "label": "4회말 4점차"
       },
       "recap": null
     }
