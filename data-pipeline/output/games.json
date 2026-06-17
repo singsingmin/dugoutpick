@@ -1,7 +1,7 @@
 {
   "date": "20260617",
   "dateText": "2026년 6월 17일",
-  "updatedAt": "2026-06-17T10:50:22.834Z",
+  "updatedAt": "2026-06-17T10:55:19.835Z",
   "recommendedGameId": "20260617HHNC0",
   "games": [
     {
@@ -15,7 +15,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 2,
-        "score": 1,
+        "score": 4,
         "starter": {
           "name": "사우어",
           "era": 4.42,
@@ -57,9 +57,9 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 1,
-        "heat": 65,
-        "label": "5회초 동점 접전"
+        "out": 2,
+        "heat": 33,
+        "label": "5회초 3점차"
       },
       "recap": null
     },
@@ -116,7 +116,7 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 69,
         "label": "6회초 동점 접전"
       },
@@ -175,7 +175,7 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 54,
         "label": "5회초 1점차 접전"
       },
@@ -234,7 +234,7 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "heat": 55,
         "label": "5회말 1점차 접전"
       },
@@ -263,7 +263,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "라일리",
           "era": 3.4,
@@ -293,9 +293,9 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
-        "heat": 33,
-        "label": "5회말 3점차"
+        "out": 2,
+        "heat": 56,
+        "label": "5회말 1점차 접전"
       },
       "recap": null
     }
