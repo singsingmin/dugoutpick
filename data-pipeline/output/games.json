@@ -1,7 +1,7 @@
 {
   "date": "20260617",
   "dateText": "2026년 6월 17일",
-  "updatedAt": "2026-06-17T09:45:23.106Z",
+  "updatedAt": "2026-06-17T09:50:24.439Z",
   "recommendedGameId": "20260617HHNC0",
   "games": [
     {
@@ -55,11 +55,11 @@
         }
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 2,
-        "heat": 43,
-        "label": "1회말 동점 접전"
+        "inning": 2,
+        "half": "T",
+        "out": 0,
+        "heat": 49,
+        "label": "2회초 동점 접전"
       },
       "recap": null
     },
@@ -114,11 +114,11 @@
         }
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 1,
-        "heat": 43,
-        "label": "1회말 동점 접전"
+        "inning": 2,
+        "half": "T",
+        "out": 0,
+        "heat": 49,
+        "label": "2회초 동점 접전"
       },
       "recap": null
     },
@@ -173,11 +173,11 @@
         }
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 2,
-        "heat": 43,
-        "label": "1회말 동점 접전"
+        "inning": 2,
+        "half": "T",
+        "out": 0,
+        "heat": 49,
+        "label": "2회초 동점 접전"
       },
       "recap": null
     },
@@ -234,7 +234,7 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 49,
         "label": "2회초 동점 접전"
       },
@@ -251,7 +251,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "류현진",
           "era": 2.84,
@@ -293,9 +293,9 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 0,
-        "heat": 33,
-        "label": "2회초 2점차"
+        "out": 2,
+        "heat": 25,
+        "label": "2회초 3점차"
       },
       "recap": null
     }
