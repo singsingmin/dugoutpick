@@ -1,7 +1,7 @@
 {
   "date": "20260617",
   "dateText": "2026년 6월 17일",
-  "updatedAt": "2026-06-17T10:10:24.663Z",
+  "updatedAt": "2026-06-17T10:15:25.899Z",
   "recommendedGameId": "20260617HHNC0",
   "games": [
     {
@@ -56,10 +56,10 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "heat": 45,
-        "label": "3회초 1점차 접전"
+        "label": "3회말 1점차 접전"
       },
       "recap": null
     },
@@ -115,10 +115,10 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 1,
         "heat": 54,
-        "label": "3회초 동점 접전"
+        "label": "3회말 동점 접전"
       },
       "recap": null
     },
@@ -174,10 +174,10 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "heat": 45,
-        "label": "3회초 1점차 접전"
+        "label": "3회말 1점차 접전"
       },
       "recap": null
     },
@@ -234,7 +234,7 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 45,
         "label": "3회초 1점차 접전"
       },
@@ -293,7 +293,7 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "heat": 28,
         "label": "3회말 3점차"
       },
