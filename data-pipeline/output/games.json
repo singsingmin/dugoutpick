@@ -1,7 +1,7 @@
 {
   "date": "20260617",
   "dateText": "2026년 6월 17일",
-  "updatedAt": "2026-06-17T12:35:29.316Z",
+  "updatedAt": "2026-06-17T12:40:23.097Z",
   "recommendedGameId": "20260617HHNC0",
   "games": [
     {
@@ -254,7 +254,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "라일리",
           "era": 3.4,
@@ -284,8 +284,8 @@
       "live": {
         "inning": 9,
         "half": "B",
-        "out": 0,
-        "heat": 99,
+        "out": 2,
+        "heat": 85,
         "label": "9회말 끝내기 찬스"
       },
       "recap": null
