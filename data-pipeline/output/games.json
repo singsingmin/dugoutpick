@@ -1,7 +1,7 @@
 {
   "date": "20260617",
   "dateText": "2026년 6월 17일",
-  "updatedAt": "2026-06-17T10:00:40.646Z",
+  "updatedAt": "2026-06-17T10:05:20.892Z",
   "recommendedGameId": "20260617HHNC0",
   "games": [
     {
@@ -57,7 +57,7 @@
       "live": {
         "inning": 2,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "heat": 41,
         "label": "2회말 1점차 접전"
       },
@@ -114,11 +114,11 @@
         }
       },
       "live": {
-        "inning": 2,
-        "half": "B",
+        "inning": 3,
+        "half": "T",
         "out": 0,
-        "heat": 49,
-        "label": "2회말 동점 접전"
+        "heat": 54,
+        "label": "3회초 동점 접전"
       },
       "recap": null
     },
@@ -145,7 +145,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 8,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "김건우",
           "era": 5.66,
@@ -175,9 +175,9 @@
       "live": {
         "inning": 2,
         "half": "B",
-        "out": 1,
-        "heat": 49,
-        "label": "2회말 동점 접전"
+        "out": 2,
+        "heat": 41,
+        "label": "2회말 1점차 접전"
       },
       "recap": null
     },
@@ -293,7 +293,7 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 28,
         "label": "3회초 3점차"
       },
