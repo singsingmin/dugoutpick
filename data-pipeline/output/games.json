@@ -1,7 +1,7 @@
 {
   "date": "20260617",
   "dateText": "2026년 6월 17일",
-  "updatedAt": "2026-06-17T08:40:24.485Z",
+  "updatedAt": "2026-06-17T09:30:30.864Z",
   "recommendedGameId": "20260617HHNC0",
   "games": [
     {
@@ -61,14 +61,14 @@
       "gameId": "20260617WOSS0",
       "time": "18:30",
       "stadium": "대구",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "MS-T",
       "away": {
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "박준현",
           "era": 3.51,
@@ -80,7 +80,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 3,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "최원태",
           "era": 4.83,
@@ -107,7 +107,13 @@
           "doom": 0
         }
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 0,
+        "heat": 43,
+        "label": "1회초 동점 접전"
+      },
       "recap": null
     },
     {
