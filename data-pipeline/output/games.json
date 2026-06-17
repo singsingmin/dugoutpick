@@ -1,21 +1,21 @@
 {
   "date": "20260617",
   "dateText": "2026년 6월 17일",
-  "updatedAt": "2026-06-17T09:30:30.864Z",
+  "updatedAt": "2026-06-17T09:35:25.934Z",
   "recommendedGameId": "20260617HHNC0",
   "games": [
     {
       "gameId": "20260617KTOB0",
       "time": "18:30",
       "stadium": "잠실",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SPO-T",
       "away": {
         "code": "KT",
         "name": "KT",
         "rank": 2,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "사우어",
           "era": 4.42,
@@ -27,7 +27,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "타카다",
           "era": 11.25,
@@ -54,7 +54,13 @@
           "doom": 0
         }
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 2,
+        "heat": 43,
+        "label": "1회초 동점 접전"
+      },
       "recap": null
     },
     {
@@ -110,7 +116,7 @@
       "live": {
         "inning": 1,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 43,
         "label": "1회초 동점 접전"
       },
@@ -120,14 +126,14 @@
       "gameId": "20260617LTSK0",
       "time": "18:30",
       "stadium": "문학",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SPO-2T",
       "away": {
         "code": "LT",
         "name": "롯데",
         "rank": 9,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "박세웅",
           "era": 5.15,
@@ -139,7 +145,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 8,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "김건우",
           "era": 5.66,
@@ -166,21 +172,27 @@
           "doom": 0
         }
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 2,
+        "heat": 43,
+        "label": "1회초 동점 접전"
+      },
       "recap": null
     },
     {
       "gameId": "20260617LGHT0",
       "time": "18:30",
       "stadium": "광주",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SS-T",
       "away": {
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "장현식",
           "era": 4.3,
@@ -192,7 +204,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "올러",
           "era": 2.66,
@@ -219,21 +231,27 @@
           "doom": 0
         }
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 2,
+        "heat": 43,
+        "label": "1회초 동점 접전"
+      },
       "recap": null
     },
     {
       "gameId": "20260617HHNC0",
       "time": "18:30",
       "stadium": "창원",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "KN-T",
       "away": {
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "류현진",
           "era": 2.84,
@@ -245,7 +263,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "라일리",
           "era": 3.4,
@@ -272,7 +290,13 @@
           "doom": 0
         }
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 2,
+        "heat": 43,
+        "label": "1회초 동점 접전"
+      },
       "recap": null
     }
   ]
