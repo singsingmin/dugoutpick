@@ -1,7 +1,7 @@
 {
   "date": "20260617",
   "dateText": "2026년 6월 17일",
-  "updatedAt": "2026-06-17T11:00:37.870Z",
+  "updatedAt": "2026-06-17T11:05:28.670Z",
   "recommendedGameId": "20260617HHNC0",
   "games": [
     {
@@ -114,11 +114,11 @@
         }
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 1,
-        "heat": 69,
-        "label": "6회말 동점 접전"
+        "inning": 7,
+        "half": "T",
+        "out": 0,
+        "heat": 75,
+        "label": "7회초 동점 접전"
       },
       "recap": null
     },
@@ -175,7 +175,7 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 2,
+        "out": 3,
         "heat": 54,
         "label": "5회말 1점차 접전"
       },
@@ -232,11 +232,11 @@
         }
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 2,
-        "heat": 55,
-        "label": "5회말 1점차 접전"
+        "inning": 6,
+        "half": "T",
+        "out": 0,
+        "heat": 59,
+        "label": "6회초 1점차 접전"
       },
       "recap": null
     },
@@ -251,7 +251,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "류현진",
           "era": 2.84,
@@ -293,9 +293,9 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 0,
-        "heat": 60,
-        "label": "6회초 1점차 접전"
+        "out": 2,
+        "heat": 48,
+        "label": "6회초 2점차"
       },
       "recap": null
     }
