@@ -1,7 +1,7 @@
 {
   "date": "20260618",
   "dateText": "2026년 6월 18일",
-  "updatedAt": "2026-06-18T12:20:27.357Z",
+  "updatedAt": "2026-06-18T12:25:28.792Z",
   "recommendedGameId": "20260618HHNC0",
   "games": [
     {
@@ -113,7 +113,7 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 88,
         "label": "9회초 동점 접전"
       },
@@ -170,11 +170,11 @@
         }
       },
       "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 2,
-        "heat": 97,
-        "label": "9회말 끝내기 찬스"
+        "inning": 10,
+        "half": "T",
+        "out": 0,
+        "heat": 91,
+        "label": "10회초 연장 혈투"
       },
       "recap": null
     },
@@ -241,7 +241,7 @@
       "gameId": "20260618HHNC0",
       "time": "18:30",
       "stadium": "창원",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SS-T",
       "away": {
@@ -287,14 +287,11 @@
           "doom": 0
         }
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 2,
-        "heat": 0,
-        "label": "9회초 6점차"
-      },
-      "recap": null
+      "live": null,
+      "recap": {
+        "actual": 3,
+        "verdict": "기대 이하"
+      }
     }
   ]
 }
