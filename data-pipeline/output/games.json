@@ -1,7 +1,7 @@
 {
   "date": "20260618",
   "dateText": "2026년 6월 18일",
-  "updatedAt": "2026-06-18T12:00:37.438Z",
+  "updatedAt": "2026-06-18T12:05:26.478Z",
   "recommendedGameId": "20260618HHNC0",
   "games": [
     {
@@ -57,7 +57,7 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 72,
         "label": "9회초 1점차 접전"
       },
@@ -116,7 +116,7 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 83,
         "label": "8회초 동점 접전"
       },
@@ -175,7 +175,7 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 87,
         "label": "9회초 동점 접전"
       },
@@ -232,11 +232,11 @@
         }
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 1,
-        "heat": 64,
-        "label": "7회말 1점차 접전"
+        "inning": 8,
+        "half": "T",
+        "out": 0,
+        "heat": 69,
+        "label": "8회초 1점차 접전"
       },
       "recap": null
     },
@@ -292,10 +292,10 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "heat": 0,
-        "label": "8회초 6점차"
+        "label": "8회말 6점차"
       },
       "recap": null
     }
