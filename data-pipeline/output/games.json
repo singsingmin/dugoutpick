@@ -1,14 +1,14 @@
 {
   "date": "20260618",
   "dateText": "2026년 6월 18일",
-  "updatedAt": "2026-06-18T12:05:26.478Z",
+  "updatedAt": "2026-06-18T12:10:25.943Z",
   "recommendedGameId": "20260618HHNC0",
   "games": [
     {
       "gameId": "20260618KTOB0",
       "time": "18:30",
       "stadium": "잠실",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "MS-T,SPO-T",
       "away": {
@@ -54,14 +54,11 @@
           "doom": 0
         }
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 2,
-        "heat": 72,
-        "label": "9회초 1점차 접전"
-      },
-      "recap": null
+      "live": null,
+      "recap": {
+        "actual": 60,
+        "verdict": "기대 이상"
+      }
     },
     {
       "gameId": "20260618WOSS0",
@@ -175,7 +172,7 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 1,
+        "out": 3,
         "heat": 87,
         "label": "9회초 동점 접전"
       },
@@ -293,7 +290,7 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "heat": 0,
         "label": "8회말 6점차"
       },
