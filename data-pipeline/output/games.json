@@ -1,7 +1,7 @@
 {
   "date": "20260618",
   "dateText": "2026년 6월 18일",
-  "updatedAt": "2026-06-18T10:45:26.279Z",
+  "updatedAt": "2026-06-18T10:50:24.373Z",
   "recommendedGameId": "20260618HHNC0",
   "games": [
     {
@@ -27,7 +27,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "최민석",
           "era": 2.88,
@@ -58,8 +58,8 @@
         "inning": 5,
         "half": "B",
         "out": 0,
-        "heat": 54,
-        "label": "5회말 1점차 접전"
+        "heat": 65,
+        "label": "5회말 동점 접전"
       },
       "recap": null
     },
@@ -116,7 +116,7 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "heat": 60,
         "label": "4회말 동점 접전"
       },
@@ -145,7 +145,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 8,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "타케다",
           "era": 7.52,
@@ -175,9 +175,9 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
-        "heat": 55,
-        "label": "5회말 1점차 접전"
+        "out": 3,
+        "heat": 66,
+        "label": "5회말 동점 접전"
       },
       "recap": null
     },
@@ -234,7 +234,7 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "heat": 40,
         "label": "4회말 2점차"
       },
