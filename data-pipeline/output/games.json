@@ -1,7 +1,7 @@
 {
   "date": "20260618",
   "dateText": "2026년 6월 18일",
-  "updatedAt": "2026-06-18T12:50:24.994Z",
+  "updatedAt": "2026-06-18T12:55:28.655Z",
   "recommendedGameId": "20260618HHNC0",
   "games": [
     {
@@ -169,7 +169,7 @@
       "live": {
         "inning": 11,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "heat": 100,
         "label": "11회말 끝내기 찬스"
       },
