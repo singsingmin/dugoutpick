@@ -1,7 +1,7 @@
 {
   "date": "20260618",
   "dateText": "2026년 6월 18일",
-  "updatedAt": "2026-06-18T11:10:22.741Z",
+  "updatedAt": "2026-06-18T11:15:26.463Z",
   "recommendedGameId": "20260618HHNC0",
   "games": [
     {
@@ -56,10 +56,10 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 1,
         "heat": 70,
-        "label": "6회초 동점 접전"
+        "label": "6회말 동점 접전"
       },
       "recap": null
     },
@@ -115,10 +115,10 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 1,
         "heat": 44,
-        "label": "5회초 2점차"
+        "label": "5회말 2점차"
       },
       "recap": null
     },
@@ -204,7 +204,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 0,
+        "score": 3,
         "starter": {
           "name": "양현종",
           "era": 4.32,
@@ -234,9 +234,9 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
-        "heat": 43,
-        "label": "5회말 2점차"
+        "out": 1,
+        "heat": 56,
+        "label": "5회말 1점차 접전"
       },
       "recap": null
     },
