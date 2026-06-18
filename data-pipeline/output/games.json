@@ -1,7 +1,7 @@
 {
   "date": "20260618",
   "dateText": "2026년 6월 18일",
-  "updatedAt": "2026-06-18T10:20:25.487Z",
+  "updatedAt": "2026-06-18T10:25:20.662Z",
   "recommendedGameId": "20260618HHNC0",
   "games": [
     {
@@ -55,11 +55,11 @@
         }
       },
       "live": {
-        "inning": 3,
-        "half": "B",
+        "inning": 4,
+        "half": "T",
         "out": 1,
-        "heat": 45,
-        "label": "3회말 1점차 접전"
+        "heat": 50,
+        "label": "4회초 1점차 접전"
       },
       "recap": null
     },
@@ -115,10 +115,10 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 55,
-        "label": "3회초 동점 접전"
+        "label": "3회말 동점 접전"
       },
       "recap": null
     },
@@ -133,7 +133,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 9,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "로드리게스",
           "era": 5.17,
@@ -174,10 +174,10 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 50,
-        "label": "4회초 1점차 접전"
+        "label": "4회말 1점차 접전"
       },
       "recap": null
     },
@@ -233,10 +233,10 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "heat": 45,
-        "label": "3회초 1점차 접전"
+        "label": "3회말 1점차 접전"
       },
       "recap": null
     },
@@ -291,11 +291,11 @@
         }
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 1,
-        "heat": 28,
-        "label": "3회말 3점차"
+        "inning": 4,
+        "half": "T",
+        "out": 0,
+        "heat": 30,
+        "label": "4회초 3점차"
       },
       "recap": null
     }
