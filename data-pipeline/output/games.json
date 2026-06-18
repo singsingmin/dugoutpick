@@ -1,7 +1,7 @@
 {
   "date": "20260618",
   "dateText": "2026년 6월 18일",
-  "updatedAt": "2026-06-18T11:45:25.741Z",
+  "updatedAt": "2026-06-18T11:50:23.487Z",
   "recommendedGameId": "20260618HHNC0",
   "games": [
     {
@@ -57,7 +57,7 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 68,
         "label": "8회초 1점차 접전"
       },
@@ -234,7 +234,7 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 64,
         "label": "7회초 1점차 접전"
       },
@@ -263,7 +263,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "테일러",
           "era": 4.91,
@@ -293,9 +293,9 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 1,
-        "heat": 13,
-        "label": "7회말 5점차"
+        "out": 2,
+        "heat": 0,
+        "label": "7회말 6점차"
       },
       "recap": null
     }
