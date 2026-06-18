@@ -1,7 +1,7 @@
 {
   "date": "20260618",
   "dateText": "2026년 6월 18일",
-  "updatedAt": "2026-06-18T10:00:39.363Z",
+  "updatedAt": "2026-06-18T10:05:28.111Z",
   "recommendedGameId": "20260618HHNC0",
   "games": [
     {
@@ -57,7 +57,7 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 54,
         "label": "3회초 동점 접전"
       },
@@ -86,7 +86,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 3,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "오러클린",
           "era": 3.88,
@@ -116,9 +116,9 @@
       "live": {
         "inning": 2,
         "half": "B",
-        "out": 0,
-        "heat": 41,
-        "label": "2회말 1점차 접전"
+        "out": 1,
+        "heat": 50,
+        "label": "2회말 동점 접전"
       },
       "recap": null
     },
@@ -174,10 +174,10 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "heat": 45,
-        "label": "3회초 1점차 접전"
+        "label": "3회말 1점차 접전"
       },
       "recap": null
     },
@@ -233,10 +233,10 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "heat": 41,
-        "label": "2회초 1점차 접전"
+        "label": "2회말 1점차 접전"
       },
       "recap": null
     },
@@ -293,7 +293,7 @@
       "live": {
         "inning": 2,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "heat": 41,
         "label": "2회말 1점차 접전"
       },
