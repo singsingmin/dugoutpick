@@ -1,7 +1,7 @@
 {
   "date": "20260619",
   "dateText": "2026년 6월 19일",
-  "updatedAt": "2026-06-19T12:20:23.744Z",
+  "updatedAt": "2026-06-19T12:25:21.119Z",
   "recommendedGameId": "20260619OBLG0",
   "games": [
     {
@@ -112,10 +112,10 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 1,
         "heat": 0,
-        "label": "8회초 9점차"
+        "label": "8회말 9점차"
       },
       "recap": null
     },
@@ -129,7 +129,7 @@
       "away": {
         "code": "SK",
         "name": "SSG",
-        "rank": 8,
+        "rank": 9,
         "score": 3,
         "starter": {
           "name": "베니지아노",
@@ -228,7 +228,7 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 88,
         "label": "9회초 동점 접전"
       },
@@ -244,7 +244,7 @@
       "away": {
         "code": "LT",
         "name": "롯데",
-        "rank": 9,
+        "rank": 8,
         "score": 2,
         "starter": {
           "name": "이민석",
