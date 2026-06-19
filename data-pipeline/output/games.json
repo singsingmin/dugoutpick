@@ -1,7 +1,7 @@
 {
   "date": "20260619",
   "dateText": "2026년 6월 19일",
-  "updatedAt": "2026-06-19T12:57:23.383Z",
+  "updatedAt": "2026-06-19T13:00:36.129Z",
   "recommendedGameId": "20260619OBLG0",
   "games": [
     {
@@ -223,11 +223,11 @@
         }
       },
       "live": {
-        "inning": 10,
-        "half": "B",
-        "out": 2,
-        "heat": 100,
-        "label": "10회말 끝내기 찬스"
+        "inning": 11,
+        "half": "T",
+        "out": 0,
+        "heat": 96,
+        "label": "11회초 연장 혈투"
       },
       "recap": null
     },
