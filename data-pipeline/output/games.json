@@ -1,7 +1,7 @@
 {
   "date": "20260619",
   "dateText": "2026년 6월 19일",
-  "updatedAt": "2026-06-19T12:15:24.770Z",
+  "updatedAt": "2026-06-19T12:20:23.744Z",
   "recommendedGameId": "20260619OBLG0",
   "games": [
     {
@@ -71,7 +71,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 9,
+        "score": 11,
         "starter": {
           "name": "네일",
           "era": 3.43,
@@ -113,9 +113,9 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "heat": 0,
-        "label": "8회초 7점차"
+        "label": "8회초 9점차"
       },
       "recap": null
     },
@@ -226,11 +226,11 @@
         }
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
-        "heat": 83,
-        "label": "8회말 동점 접전"
+        "inning": 9,
+        "half": "T",
+        "out": 0,
+        "heat": 88,
+        "label": "9회초 동점 접전"
       },
       "recap": null
     },
@@ -238,7 +238,7 @@
       "gameId": "20260619LTWO0",
       "time": "18:30",
       "stadium": "고척",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "MS-T",
       "away": {
@@ -284,14 +284,11 @@
           "doom": 0
         }
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 2,
-        "heat": 82,
-        "label": "9회말 끝내기 찬스"
-      },
-      "recap": null
+      "live": null,
+      "recap": {
+        "actual": 60,
+        "verdict": "기대 이상"
+      }
     }
   ]
 }
