@@ -1,7 +1,7 @@
 {
   "date": "20260619",
   "dateText": "2026년 6월 19일",
-  "updatedAt": "2026-06-19T11:10:23.623Z",
+  "updatedAt": "2026-06-19T11:15:22.946Z",
   "recommendedGameId": "20260619OBLG0",
   "games": [
     {
@@ -57,7 +57,7 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 64,
         "label": "7회초 1점차 접전"
       },
@@ -116,7 +116,7 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 36,
         "label": "6회초 3점차"
       },
@@ -204,7 +204,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "박준영",
           "era": 4.13,
@@ -234,9 +234,9 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 0,
-        "heat": 59,
-        "label": "6회말 1점차 접전"
+        "out": 2,
+        "heat": 71,
+        "label": "6회말 동점 접전"
       },
       "recap": null
     },
@@ -291,11 +291,11 @@
         }
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 2,
-        "heat": 59,
-        "label": "6회말 1점차 접전"
+        "inning": 7,
+        "half": "T",
+        "out": 1,
+        "heat": 63,
+        "label": "7회초 1점차 접전"
       },
       "recap": null
     }
