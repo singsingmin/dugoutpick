@@ -1,7 +1,7 @@
 {
   "date": "20260619",
   "dateText": "2026년 6월 19일",
-  "updatedAt": "2026-06-19T12:35:20.511Z",
+  "updatedAt": "2026-06-19T12:40:23.428Z",
   "recommendedGameId": "20260619OBLG0",
   "games": [
     {
@@ -83,7 +83,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 2,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "오원석",
           "era": 5.12,
@@ -113,9 +113,9 @@
       "live": {
         "inning": 9,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "heat": 0,
-        "label": "9회말 9점차"
+        "label": "9회말 8점차"
       },
       "recap": null
     },
