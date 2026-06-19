@@ -1,7 +1,7 @@
 {
   "date": "20260619",
   "dateText": "2026년 6월 19일",
-  "updatedAt": "2026-06-19T10:50:24.453Z",
+  "updatedAt": "2026-06-19T10:55:20.031Z",
   "recommendedGameId": "20260619OBLG0",
   "games": [
     {
@@ -55,11 +55,11 @@
         }
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 3,
-        "heat": 56,
-        "label": "5회말 1점차 접전"
+        "inning": 6,
+        "half": "T",
+        "out": 0,
+        "heat": 60,
+        "label": "6회초 1점차 접전"
       },
       "recap": null
     },
@@ -116,7 +116,7 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "heat": 34,
         "label": "5회말 3점차"
       },
@@ -145,7 +145,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 8,
+        "score": 9,
         "starter": {
           "name": "토다",
           "era": 5.04,
@@ -174,10 +174,10 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 2,
-        "heat": 12,
-        "label": "5회초 5점차"
+        "half": "B",
+        "out": 1,
+        "heat": 0,
+        "label": "5회말 6점차"
       },
       "recap": null
     },
@@ -232,11 +232,11 @@
         }
       },
       "live": {
-        "inning": 5,
-        "half": "B",
+        "inning": 6,
+        "half": "T",
         "out": 0,
-        "heat": 55,
-        "label": "5회말 1점차 접전"
+        "heat": 59,
+        "label": "6회초 1점차 접전"
       },
       "recap": null
     },
@@ -293,7 +293,7 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
+        "out": 3,
         "heat": 55,
         "label": "5회말 1점차 접전"
       },
