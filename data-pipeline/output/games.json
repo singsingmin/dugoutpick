@@ -1,7 +1,7 @@
 {
   "date": "20260619",
   "dateText": "2026년 6월 19일",
-  "updatedAt": "2026-06-19T09:50:30.653Z",
+  "updatedAt": "2026-06-19T09:55:22.938Z",
   "recommendedGameId": "20260619OBLG0",
   "games": [
     {
@@ -57,7 +57,7 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 33,
         "label": "2회초 2점차"
       },
@@ -74,7 +74,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "네일",
           "era": 3.43,
@@ -116,9 +116,9 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 0,
-        "heat": 41,
-        "label": "2회초 1점차 접전"
+        "out": 2,
+        "heat": 33,
+        "label": "2회초 2점차"
       },
       "recap": null
     },
@@ -145,7 +145,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 2,
+        "score": 4,
         "starter": {
           "name": "토다",
           "era": 5.04,
@@ -175,9 +175,9 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 1,
-        "heat": 30,
-        "label": "1회말 2점차"
+        "out": 2,
+        "heat": 15,
+        "label": "1회말 4점차"
       },
       "recap": null
     },
@@ -234,7 +234,7 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 41,
         "label": "2회초 1점차 접전"
       },
@@ -292,10 +292,10 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "heat": 49,
-        "label": "2회초 동점 접전"
+        "label": "2회말 동점 접전"
       },
       "recap": null
     }
