@@ -1,7 +1,7 @@
 {
   "date": "20260619",
   "dateText": "2026년 6월 19일",
-  "updatedAt": "2026-06-19T13:10:25.941Z",
+  "updatedAt": "2026-06-19T13:40:22.587Z",
   "recommendedGameId": "20260619OBLG0",
   "games": [
     {
@@ -176,7 +176,7 @@
       "gameId": "20260619SSHH0",
       "time": "18:30",
       "stadium": "대전",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SS-T",
       "away": {
@@ -222,14 +222,11 @@
           "doom": 0
         }
       },
-      "live": {
-        "inning": 10,
-        "half": "B",
-        "out": 3,
-        "heat": 100,
-        "label": "10회말 끝내기 찬스"
-      },
-      "recap": null
+      "live": null,
+      "recap": {
+        "actual": 97,
+        "verdict": "기대 이상"
+      }
     },
     {
       "gameId": "20260619LTWO0",
