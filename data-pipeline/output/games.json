@@ -1,53 +1,106 @@
 {
-  "date": "20260620",
-  "dateText": "2026년 6월 20일",
-  "updatedAt": "2026-06-20T12:40:21.958Z",
-  "recommendedGameId": "20260620OBLG0",
+  "date": "20260621",
+  "dateText": "2026년 6월 21일",
+  "updatedAt": "2026-06-20T23:00:51.029Z",
+  "recommendedGameId": "20260621OBLG0",
   "games": [
     {
-      "gameId": "20260620OBLG0",
+      "gameId": "20260621LTWO0",
+      "time": "14:00",
+      "stadium": "고척",
+      "status": "SCHEDULED",
+      "cancelReason": null,
+      "broadcast": "S-T",
+      "away": {
+        "code": "LT",
+        "name": "롯데",
+        "rank": 8,
+        "score": null,
+        "starter": {
+          "name": "비슬리",
+          "era": 4.63,
+          "w": 4,
+          "l": 4
+        }
+      },
+      "home": {
+        "code": "WO",
+        "name": "키움",
+        "rank": 10,
+        "score": null,
+        "starter": {
+          "name": "배동현",
+          "era": 4.75,
+          "w": 4,
+          "l": 4
+        }
+      },
+      "honjam": {
+        "score": 23,
+        "reason": "게임차 4의 순위 다툼",
+        "points": [
+          "게임차 : 4 · 순위 다툼",
+          "상대전적 : 롯데 6승 2패",
+          "키움 5연패 탈출 도전",
+          "10위권 PO 생존 경쟁"
+        ],
+        "factors": {
+          "close": 0.65,
+          "quality": 0.11,
+          "form": 0.47,
+          "rivalry": 0,
+          "playoff": 0.25,
+          "pitcher": 0.1,
+          "doom": 0
+        }
+      },
+      "live": null,
+      "recap": null
+    },
+    {
+      "gameId": "20260621OBLG0",
       "time": "17:00",
       "stadium": "잠실",
-      "status": "FINAL",
+      "status": "SCHEDULED",
       "cancelReason": null,
-      "broadcast": "SPO-2T",
+      "broadcast": "KN-T,SPO-2T",
       "away": {
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 2,
+        "score": null,
         "starter": {
-          "name": "곽빈",
-          "era": 3.12,
-          "w": 5,
-          "l": 3
+          "name": "잭로그",
+          "era": 4.01,
+          "w": 3,
+          "l": 4
         }
       },
       "home": {
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": 4,
+        "score": null,
         "starter": {
-          "name": "임찬규",
-          "era": 3.45,
-          "w": 7,
-          "l": 1
+          "name": "웰스",
+          "era": 2.67,
+          "w": 4,
+          "l": 2
         }
       },
       "honjam": {
-        "score": 55,
-        "reason": "잠실 라이벌 더비 · 양 팀 에이스 투수전(ERA 3.22·3.48)",
+        "score": 53,
+        "reason": "잠실 라이벌 더비 · 웰스(ERA 2.67) 호투 기대",
         "points": [
           "잠실 라이벌 더비",
-          "게임차 : 8.5",
-          "상대전적 : 두산 2승 5패",
-          "양 팀 에이스 투수전(ERA 3.22·3.48)"
+          "게임차 : 9.5",
+          "상대전적 : 두산 2승 6패",
+          "웰스(ERA 2.67) 호투 기대"
         ],
         "factors": {
-          "close": 0.18,
+          "close": 0.09,
           "quality": 0.78,
-          "form": 0.18,
+          "form": 0.29,
           "rivalry": 1,
           "playoff": 0.5,
           "pitcher": 0.55,
@@ -55,234 +108,166 @@
         }
       },
       "live": null,
-      "recap": {
-        "actual": 45,
-        "verdict": "기대 이하"
-      }
+      "recap": null
     },
     {
-      "gameId": "20260620HTKT0",
+      "gameId": "20260621HTKT0",
       "time": "17:00",
       "stadium": "수원",
-      "status": "FINAL",
+      "status": "SCHEDULED",
       "cancelReason": null,
-      "broadcast": "KN-T",
+      "broadcast": "SS-T",
       "away": {
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 9,
+        "score": null,
         "starter": {
-          "name": "황동하",
-          "era": 4.14,
-          "w": 6,
-          "l": 1
+          "name": "김태형",
+          "era": 5.2,
+          "w": 1,
+          "l": 2
         }
       },
       "home": {
         "code": "KT",
         "name": "KT",
         "rank": 2,
-        "score": 10,
+        "score": null,
         "starter": {
-          "name": "배제성",
-          "era": 4.7,
-          "w": 0,
-          "l": 2
+          "name": "로건",
+          "era": null,
+          "w": null,
+          "l": null
         }
       },
       "honjam": {
-        "score": 50,
-        "reason": "게임차 4의 순위 다툼 · 리그 2위·4위 상위권 빅매치",
+        "score": 41,
+        "reason": "리그 2위·4위 상위권 빅매치 · 게임차 5의 순위 다툼",
         "points": [
-          "게임차 : 4 · 순위 다툼",
-          "상대전적 : KIA 2승 5패",
+          "게임차 : 5 · 순위 다툼",
+          "상대전적 : KIA 2승 6패",
           "리그 2위·4위 상위권 빅매치",
           "가을야구 직행 순위 다툼"
         ],
         "factors": {
-          "close": 0.59,
+          "close": 0.51,
           "quality": 0.78,
-          "form": 0.23,
+          "form": 0.24,
           "rivalry": 0,
           "playoff": 0.5,
-          "pitcher": 0.22,
+          "pitcher": 0.13,
           "doom": 0
         }
       },
       "live": null,
-      "recap": {
-        "actual": 94,
-        "verdict": "기대 이상"
-      }
+      "recap": null
     },
     {
-      "gameId": "20260620SKNC0",
+      "gameId": "20260621SKNC0",
       "time": "17:00",
       "stadium": "창원",
-      "status": "FINAL",
+      "status": "SCHEDULED",
       "cancelReason": null,
-      "broadcast": "SPO-T",
+      "broadcast": "MS-T,SPO-T",
       "away": {
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 12,
+        "score": null,
         "starter": {
-          "name": "해치",
-          "era": 6.3,
+          "name": "최민준",
+          "era": 4.89,
           "w": 1,
-          "l": 0
+          "l": 4
         }
       },
       "home": {
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 5,
+        "score": null,
         "starter": {
-          "name": "김준원",
-          "era": 5.87,
+          "name": "김태경",
+          "era": 4.5,
           "w": 0,
-          "l": 1
+          "l": 0
         }
       },
       "honjam": {
-        "score": 41,
-        "reason": "게임차 5.5의 순위 다툼 · SSG 5연패 탈출 도전",
+        "score": 22,
+        "reason": "게임차 4.5의 순위 다툼",
         "points": [
-          "게임차 : 5.5",
-          "상대전적 : SSG 2승 3패 1무",
-          "SSG 5연패 탈출 도전",
-          "김준원(ERA 0) 호투 기대"
+          "게임차 : 4.5 · 순위 다툼",
+          "상대전적 : SSG 3승 3패 1무",
+          "9위권 PO 생존 경쟁",
+          "양 팀 최근 10경기 합 8승의 화력"
         ],
         "factors": {
-          "close": 0.45,
-          "quality": 0.28,
-          "form": 0.65,
+          "close": 0.56,
+          "quality": 0.22,
+          "form": 0.3,
           "rivalry": 0,
           "playoff": 0.5,
-          "pitcher": 0.5,
+          "pitcher": 0.1,
           "doom": 0
         }
       },
       "live": null,
-      "recap": {
-        "actual": 3,
-        "verdict": "기대 이하"
-      }
+      "recap": null
     },
     {
-      "gameId": "20260620SSHH0",
+      "gameId": "20260621SSHH0",
       "time": "17:00",
       "stadium": "대전",
-      "status": "FINAL",
+      "status": "SCHEDULED",
       "cancelReason": null,
-      "broadcast": "SS-T",
+      "broadcast": "M-T",
       "away": {
         "code": "SS",
         "name": "삼성",
         "rank": 3,
-        "score": 4,
+        "score": null,
         "starter": {
-          "name": "장찬희",
-          "era": 4.86,
+          "name": "양창섭",
+          "era": 4.84,
           "w": 4,
-          "l": 4
+          "l": 0
         }
       },
       "home": {
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 10,
+        "score": null,
         "starter": {
-          "name": "왕옌청",
-          "era": 3.74,
-          "w": 5,
+          "name": "화이트",
+          "era": 3.86,
+          "w": 3,
           "l": 3
         }
       },
       "honjam": {
-        "score": 46,
-        "reason": "게임차 7의 순위 다툼 · 한화 6연패 탈출 도전",
+        "score": 35,
+        "reason": "게임차 6의 순위 다툼",
         "points": [
-          "게임차 : 7",
-          "상대전적 : 삼성 5승 1패 1무",
-          "한화 6연패 탈출 도전",
-          "가을야구 직행 순위 다툼"
+          "게임차 : 6",
+          "상대전적 : 삼성 5승 2패 1무",
+          "가을야구 직행 순위 다툼",
+          "양 팀 최근 10경기 합 9승의 화력"
         ],
         "factors": {
-          "close": 0.29,
+          "close": 0.41,
           "quality": 0.61,
-          "form": 0.58,
+          "form": 0.24,
           "rivalry": 0,
           "playoff": 0.75,
-          "pitcher": 0.41,
+          "pitcher": 0.22,
           "doom": 0
         }
       },
       "live": null,
-      "recap": {
-        "actual": 6,
-        "verdict": "기대 이하"
-      }
-    },
-    {
-      "gameId": "20260620LTWO0",
-      "time": "17:00",
-      "stadium": "고척",
-      "status": "FINAL",
-      "cancelReason": null,
-      "broadcast": "MS-T",
-      "away": {
-        "code": "LT",
-        "name": "롯데",
-        "rank": 8,
-        "score": 7,
-        "starter": {
-          "name": "나균안",
-          "era": 3.86,
-          "w": 3,
-          "l": 6
-        }
-      },
-      "home": {
-        "code": "WO",
-        "name": "키움",
-        "rank": 10,
-        "score": 1,
-        "starter": {
-          "name": "로젠버그",
-          "era": 4.8,
-          "w": 0,
-          "l": 2
-        }
-      },
-      "honjam": {
-        "score": 28,
-        "reason": "게임차 3의 순위 다툼",
-        "points": [
-          "게임차 : 3 · 순위 다툼",
-          "상대전적 : 롯데 5승 2패",
-          "양 팀 최근 10경기 합 9승의 화력",
-          "10위권 PO 생존 경쟁"
-        ],
-        "factors": {
-          "close": 0.75,
-          "quality": 0.11,
-          "form": 0.29,
-          "rivalry": 0,
-          "playoff": 0.25,
-          "pitcher": 0.27,
-          "doom": 0
-        }
-      },
-      "live": null,
-      "recap": {
-        "actual": 4,
-        "verdict": "기대 이하"
-      }
+      "recap": null
     }
   ]
 }
