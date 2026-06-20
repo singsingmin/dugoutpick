@@ -1,7 +1,7 @@
 {
   "date": "20260620",
   "dateText": "2026년 6월 20일",
-  "updatedAt": "2026-06-20T09:20:22.629Z",
+  "updatedAt": "2026-06-20T09:25:18.974Z",
   "recommendedGameId": "20260620OBLG0",
   "games": [
     {
@@ -116,7 +116,7 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 50,
         "label": "4회초 1점차 접전"
       },
@@ -133,7 +133,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 6,
+        "score": 7,
         "starter": {
           "name": "해치",
           "era": 8.31,
@@ -175,9 +175,9 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 0,
-        "label": "5회초 6점차"
+        "label": "5회초 7점차"
       },
       "recap": null
     },
