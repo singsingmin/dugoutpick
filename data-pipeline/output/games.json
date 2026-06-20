@@ -1,7 +1,7 @@
 {
   "date": "20260620",
   "dateText": "2026년 6월 20일",
-  "updatedAt": "2026-06-20T12:24:07.755Z",
+  "updatedAt": "2026-06-20T12:30:28.868Z",
   "recommendedGameId": "20260620OBLG0",
   "games": [
     {
@@ -64,7 +64,7 @@
       "gameId": "20260620HTKT0",
       "time": "17:00",
       "stadium": "수원",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "KN-T",
       "away": {
@@ -83,7 +83,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 2,
-        "score": 9,
+        "score": 10,
         "starter": {
           "name": "배제성",
           "era": 4.58,
@@ -110,14 +110,11 @@
           "doom": 0
         }
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 2,
-        "heat": 100,
-        "label": "9회말 끝내기 찬스"
-      },
-      "recap": null
+      "live": null,
+      "recap": {
+        "actual": 94,
+        "verdict": "기대 이상"
+      }
     },
     {
       "gameId": "20260620SKNC0",
