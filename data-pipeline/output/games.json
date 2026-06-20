@@ -1,7 +1,7 @@
 {
   "date": "20260620",
   "dateText": "2026년 6월 20일",
-  "updatedAt": "2026-06-20T10:20:20.823Z",
+  "updatedAt": "2026-06-20T10:25:18.979Z",
   "recommendedGameId": "20260620OBLG0",
   "games": [
     {
@@ -27,7 +27,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": 1,
+        "score": 4,
         "starter": {
           "name": "임찬규",
           "era": 3.48,
@@ -55,11 +55,11 @@
         }
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 1,
-        "heat": 68,
-        "label": "8회말 1점차 접전"
+        "inning": 9,
+        "half": "T",
+        "out": 0,
+        "heat": 59,
+        "label": "9회초 2점차"
       },
       "recap": null
     },
@@ -116,7 +116,7 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "heat": 35,
         "label": "5회말 3점차"
       },
@@ -204,7 +204,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 3,
+        "score": 5,
         "starter": {
           "name": "왕옌청",
           "era": 3.5,
@@ -234,8 +234,8 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 1,
-        "heat": 52,
+        "out": 2,
+        "heat": 53,
         "label": "4회말 1점차 접전"
       },
       "recap": null
@@ -251,7 +251,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "나균안",
           "era": 4.06,
@@ -292,10 +292,10 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
+        "half": "B",
         "out": 1,
-        "heat": 26,
-        "label": "7회초 4점차"
+        "heat": 13,
+        "label": "7회말 5점차"
       },
       "recap": null
     }
