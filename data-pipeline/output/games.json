@@ -1,7 +1,7 @@
 {
   "date": "20260621",
   "dateText": "2026년 6월 21일",
-  "updatedAt": "2026-06-21T11:00:31.227Z",
+  "updatedAt": "2026-06-21T11:05:20.562Z",
   "recommendedGameId": "20260621OBLG0",
   "games": [
     {
@@ -64,7 +64,7 @@
       "gameId": "20260621OBLG0",
       "time": "17:00",
       "stadium": "잠실",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "KN-T,SPO-2T",
       "away": {
@@ -110,14 +110,11 @@
           "doom": 0
         }
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 2,
-        "heat": 0,
-        "label": "9회초 6점차"
-      },
-      "recap": null
+      "live": null,
+      "recap": {
+        "actual": 5,
+        "verdict": "기대 이하"
+      }
     },
     {
       "gameId": "20260621HTKT0",
@@ -172,7 +169,7 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 0,
+        "out": 3,
         "heat": 0,
         "label": "8회말 6점차"
       },
@@ -182,7 +179,7 @@
       "gameId": "20260621SKNC0",
       "time": "17:00",
       "stadium": "창원",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "MS-T,SPO-T",
       "away": {
@@ -228,20 +225,17 @@
           "doom": 0
         }
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 2,
-        "heat": 30,
-        "label": "9회말 4점차"
-      },
-      "recap": null
+      "live": null,
+      "recap": {
+        "actual": 18,
+        "verdict": "예측 적중"
+      }
     },
     {
       "gameId": "20260621SSHH0",
       "time": "17:00",
       "stadium": "대전",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "M-T",
       "away": {
@@ -287,14 +281,11 @@
           "doom": 0
         }
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 1,
-        "heat": 58,
-        "label": "9회말 2점차"
-      },
-      "recap": null
+      "live": null,
+      "recap": {
+        "actual": 42,
+        "verdict": "예측 적중"
+      }
     }
   ]
 }
