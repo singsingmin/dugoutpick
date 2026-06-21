@@ -1,7 +1,7 @@
 {
   "date": "20260621",
   "dateText": "2026년 6월 21일",
-  "updatedAt": "2026-06-21T11:25:19.296Z",
+  "updatedAt": "2026-06-21T11:30:27.594Z",
   "recommendedGameId": "20260621OBLG0",
   "games": [
     {
@@ -18,7 +18,7 @@
         "score": 6,
         "starter": {
           "name": "비슬리",
-          "era": 4.63,
+          "era": 4.5,
           "w": 4,
           "l": 4
         }
@@ -30,9 +30,9 @@
         "score": 3,
         "starter": {
           "name": "배동현",
-          "era": 4.75,
+          "era": 5.1,
           "w": 4,
-          "l": 4
+          "l": 5
         }
       },
       "honjam": {
@@ -74,9 +74,9 @@
         "score": 3,
         "starter": {
           "name": "잭로그",
-          "era": 4.01,
+          "era": 4.44,
           "w": 3,
-          "l": 4
+          "l": 5
         }
       },
       "home": {
@@ -86,8 +86,8 @@
         "score": 9,
         "starter": {
           "name": "웰스",
-          "era": 2.67,
-          "w": 4,
+          "era": 2.47,
+          "w": 5,
           "l": 2
         }
       },
@@ -130,7 +130,7 @@
         "score": 11,
         "starter": {
           "name": "김태형",
-          "era": 5.2,
+          "era": 5.63,
           "w": 1,
           "l": 2
         }
@@ -142,9 +142,9 @@
         "score": 5,
         "starter": {
           "name": "로건",
-          "era": null,
-          "w": null,
-          "l": null
+          "era": 3.6,
+          "w": 0,
+          "l": 0
         }
       },
       "honjam": {
@@ -186,7 +186,7 @@
         "score": 7,
         "starter": {
           "name": "최민준",
-          "era": 4.89,
+          "era": 4.84,
           "w": 1,
           "l": 4
         }
@@ -242,8 +242,8 @@
         "score": 3,
         "starter": {
           "name": "양창섭",
-          "era": 4.84,
-          "w": 4,
+          "era": 4.53,
+          "w": 5,
           "l": 0
         }
       },
@@ -254,9 +254,9 @@
         "score": 1,
         "starter": {
           "name": "화이트",
-          "era": 3.86,
+          "era": 3.65,
           "w": 3,
-          "l": 3
+          "l": 4
         }
       },
       "honjam": {
