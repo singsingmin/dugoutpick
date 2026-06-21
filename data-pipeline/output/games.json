@@ -1,7 +1,7 @@
 {
   "date": "20260621",
   "dateText": "2026년 6월 21일",
-  "updatedAt": "2026-06-21T07:30:27.870Z",
+  "updatedAt": "2026-06-21T07:35:20.162Z",
   "recommendedGameId": "20260621OBLG0",
   "games": [
     {
@@ -55,11 +55,11 @@
         }
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
-        "heat": 56,
-        "label": "8회말 2점차"
+        "inning": 9,
+        "half": "T",
+        "out": 0,
+        "heat": 59,
+        "label": "9회초 2점차"
       },
       "recap": null
     },
