@@ -1,7 +1,7 @@
 {
   "date": "20260621",
   "dateText": "2026년 6월 21일",
-  "updatedAt": "2026-06-21T09:55:19.938Z",
+  "updatedAt": "2026-06-21T10:00:33.126Z",
   "recommendedGameId": "20260621OBLG0",
   "games": [
     {
@@ -112,10 +112,10 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 1,
         "heat": 12,
-        "label": "6회초 5점차"
+        "label": "6회말 5점차"
       },
       "recap": null
     },
@@ -171,10 +171,10 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 1,
         "heat": 36,
-        "label": "6회초 3점차"
+        "label": "6회말 3점차"
       },
       "recap": null
     },
@@ -230,10 +230,10 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "heat": 71,
-        "label": "6회초 동점 접전"
+        "label": "6회말 동점 접전"
       },
       "recap": null
     },
@@ -248,7 +248,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 3,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "양창섭",
           "era": 4.84,
@@ -290,9 +290,9 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 0,
-        "heat": 63,
-        "label": "7회초 1점차 접전"
+        "out": 1,
+        "heat": 51,
+        "label": "7회초 2점차"
       },
       "recap": null
     }
