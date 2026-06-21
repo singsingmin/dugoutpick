@@ -1,7 +1,7 @@
 {
   "date": "20260621",
   "dateText": "2026년 6월 21일",
-  "updatedAt": "2026-06-21T07:10:23.220Z",
+  "updatedAt": "2026-06-21T07:15:24.467Z",
   "recommendedGameId": "20260621OBLG0",
   "games": [
     {
@@ -27,7 +27,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 1,
+        "score": 3,
         "starter": {
           "name": "배동현",
           "era": 4.75,
@@ -55,11 +55,11 @@
         }
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 2,
-        "heat": 26,
-        "label": "7회말 4점차"
+        "inning": 8,
+        "half": "T",
+        "out": 0,
+        "heat": 56,
+        "label": "8회초 2점차"
       },
       "recap": null
     },
