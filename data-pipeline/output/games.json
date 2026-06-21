@@ -1,7 +1,7 @@
 {
   "date": "20260621",
   "dateText": "2026년 6월 21일",
-  "updatedAt": "2026-06-21T10:00:33.126Z",
+  "updatedAt": "2026-06-21T10:05:19.478Z",
   "recommendedGameId": "20260621OBLG0",
   "games": [
     {
@@ -170,11 +170,11 @@
         }
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 1,
-        "heat": 36,
-        "label": "6회말 3점차"
+        "inning": 7,
+        "half": "T",
+        "out": 0,
+        "heat": 39,
+        "label": "7회초 3점차"
       },
       "recap": null
     },
@@ -201,7 +201,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "김태경",
           "era": 4.5,
@@ -231,9 +231,9 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 0,
-        "heat": 71,
-        "label": "6회말 동점 접전"
+        "out": 1,
+        "heat": 60,
+        "label": "6회말 1점차 접전"
       },
       "recap": null
     },
@@ -289,10 +289,10 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "heat": 51,
-        "label": "7회초 2점차"
+        "label": "7회말 2점차"
       },
       "recap": null
     }
