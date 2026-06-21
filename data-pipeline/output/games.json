@@ -1,7 +1,7 @@
 {
   "date": "20260621",
   "dateText": "2026년 6월 21일",
-  "updatedAt": "2026-06-21T08:54:00.909Z",
+  "updatedAt": "2026-06-21T09:00:34.866Z",
   "recommendedGameId": "20260621OBLG0",
   "games": [
     {
@@ -112,10 +112,10 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 28,
-        "label": "3회초 3점차"
+        "label": "3회말 3점차"
       },
       "recap": null
     },
@@ -142,7 +142,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 2,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "로건",
           "era": null,
@@ -172,9 +172,9 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 1,
-        "heat": 37,
-        "label": "3회말 2점차"
+        "out": 2,
+        "heat": 28,
+        "label": "3회말 3점차"
       },
       "recap": null
     },
@@ -189,7 +189,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "최민준",
           "era": 4.89,
@@ -231,9 +231,9 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 0,
-        "heat": 37,
-        "label": "3회초 2점차"
+        "out": 2,
+        "heat": 46,
+        "label": "3회초 1점차 접전"
       },
       "recap": null
     },
@@ -289,10 +289,10 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "heat": 40,
-        "label": "4회초 2점차"
+        "label": "4회말 2점차"
       },
       "recap": null
     }
