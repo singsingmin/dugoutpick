@@ -1,7 +1,7 @@
 {
   "date": "20260621",
   "dateText": "2026년 6월 21일",
-  "updatedAt": "2026-06-21T11:30:27.594Z",
+  "updatedAt": "2026-06-21T13:10:21.709Z",
   "recommendedGameId": "20260621OBLG0",
   "games": [
     {
@@ -30,9 +30,9 @@
         "score": 3,
         "starter": {
           "name": "배동현",
-          "era": 5.1,
-          "w": 4,
-          "l": 5
+          "era": null,
+          "w": null,
+          "l": null
         }
       },
       "honjam": {
@@ -86,9 +86,9 @@
         "score": 9,
         "starter": {
           "name": "웰스",
-          "era": 2.47,
-          "w": 5,
-          "l": 2
+          "era": null,
+          "w": null,
+          "l": null
         }
       },
       "honjam": {
@@ -130,9 +130,9 @@
         "score": 11,
         "starter": {
           "name": "김태형",
-          "era": 5.63,
-          "w": 1,
-          "l": 2
+          "era": null,
+          "w": null,
+          "l": null
         }
       },
       "home": {
@@ -142,9 +142,9 @@
         "score": 5,
         "starter": {
           "name": "로건",
-          "era": 3.6,
-          "w": 0,
-          "l": 0
+          "era": null,
+          "w": null,
+          "l": null
         }
       },
       "honjam": {
@@ -186,9 +186,9 @@
         "score": 7,
         "starter": {
           "name": "최민준",
-          "era": 4.84,
-          "w": 1,
-          "l": 4
+          "era": null,
+          "w": null,
+          "l": null
         }
       },
       "home": {
@@ -198,9 +198,9 @@
         "score": 3,
         "starter": {
           "name": "김태경",
-          "era": 4.5,
-          "w": 0,
-          "l": 0
+          "era": null,
+          "w": null,
+          "l": null
         }
       },
       "honjam": {
@@ -254,9 +254,9 @@
         "score": 1,
         "starter": {
           "name": "화이트",
-          "era": 3.65,
-          "w": 3,
-          "l": 4
+          "era": null,
+          "w": null,
+          "l": null
         }
       },
       "honjam": {
