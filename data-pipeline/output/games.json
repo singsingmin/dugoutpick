@@ -1,7 +1,7 @@
 {
   "date": "20260621",
   "dateText": "2026년 6월 21일",
-  "updatedAt": "2026-06-21T09:45:21.519Z",
+  "updatedAt": "2026-06-21T09:50:21.220Z",
   "recommendedGameId": "20260621OBLG0",
   "games": [
     {
@@ -83,7 +83,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": 4,
+        "score": 6,
         "starter": {
           "name": "웰스",
           "era": 2.67,
@@ -111,11 +111,11 @@
         }
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 2,
-        "heat": 33,
-        "label": "5회말 3점차"
+        "inning": 6,
+        "half": "T",
+        "out": 0,
+        "heat": 12,
+        "label": "6회초 5점차"
       },
       "recap": null
     },
@@ -142,7 +142,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 2,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "로건",
           "era": null,
@@ -170,11 +170,11 @@
         }
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 2,
-        "heat": 45,
-        "label": "5회말 2점차"
+        "inning": 6,
+        "half": "T",
+        "out": 0,
+        "heat": 36,
+        "label": "6회초 3점차"
       },
       "recap": null
     },
@@ -231,7 +231,7 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "heat": 66,
         "label": "5회말 동점 접전"
       },
@@ -288,11 +288,11 @@
         }
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 1,
-        "heat": 59,
-        "label": "6회말 1점차 접전"
+        "inning": 7,
+        "half": "T",
+        "out": 0,
+        "heat": 63,
+        "label": "7회초 1점차 접전"
       },
       "recap": null
     }
