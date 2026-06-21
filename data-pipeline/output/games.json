@@ -1,7 +1,7 @@
 {
   "date": "20260621",
   "dateText": "2026년 6월 21일",
-  "updatedAt": "2026-06-21T10:50:21.553Z",
+  "updatedAt": "2026-06-21T10:55:20.172Z",
   "recommendedGameId": "20260621OBLG0",
   "games": [
     {
@@ -113,7 +113,7 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 0,
         "label": "9회초 8점차"
       },
@@ -130,7 +130,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 8,
+        "score": 10,
         "starter": {
           "name": "김태형",
           "era": 5.2,
@@ -173,8 +173,8 @@
         "inning": 8,
         "half": "T",
         "out": 1,
-        "heat": 43,
-        "label": "8회초 3점차"
+        "heat": 15,
+        "label": "8회초 5점차"
       },
       "recap": null
     },
@@ -230,10 +230,10 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 30,
-        "label": "9회초 4점차"
+        "label": "9회말 4점차"
       },
       "recap": null
     },
@@ -289,10 +289,10 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "heat": 58,
-        "label": "9회초 2점차"
+        "label": "9회말 2점차"
       },
       "recap": null
     }
