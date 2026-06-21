@@ -1,14 +1,14 @@
 {
   "date": "20260621",
   "dateText": "2026년 6월 21일",
-  "updatedAt": "2026-06-21T07:55:19.507Z",
+  "updatedAt": "2026-06-21T08:00:32.410Z",
   "recommendedGameId": "20260621OBLG0",
   "games": [
     {
       "gameId": "20260621LTWO0",
       "time": "14:00",
       "stadium": "고척",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "S-T",
       "away": {
@@ -54,14 +54,11 @@
           "doom": 0
         }
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 2,
-        "heat": 45,
-        "label": "9회말 3점차"
-      },
-      "recap": null
+      "live": null,
+      "recap": {
+        "actual": 31,
+        "verdict": "예측 적중"
+      }
     },
     {
       "gameId": "20260621OBLG0",
