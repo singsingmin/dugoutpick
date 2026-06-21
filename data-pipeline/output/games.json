@@ -1,7 +1,7 @@
 {
   "date": "20260621",
   "dateText": "2026년 6월 21일",
-  "updatedAt": "2026-06-21T10:30:27.814Z",
+  "updatedAt": "2026-06-21T10:35:19.886Z",
   "recommendedGameId": "20260621OBLG0",
   "games": [
     {
@@ -111,11 +111,11 @@
         }
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 1,
+        "inning": 8,
+        "half": "T",
+        "out": 0,
         "heat": 0,
-        "label": "7회말 8점차"
+        "label": "8회초 8점차"
       },
       "recap": null
     },
@@ -130,7 +130,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 6,
+        "score": 7,
         "starter": {
           "name": "김태형",
           "era": 5.2,
@@ -171,10 +171,10 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 2,
-        "heat": 67,
-        "label": "7회초 1점차 접전"
+        "half": "B",
+        "out": 0,
+        "heat": 54,
+        "label": "7회말 2점차"
       },
       "recap": null
     },
@@ -189,7 +189,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 6,
+        "score": 7,
         "starter": {
           "name": "최민준",
           "era": 4.89,
@@ -231,9 +231,9 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 1,
-        "heat": 42,
-        "label": "8회초 3점차"
+        "out": 3,
+        "heat": 28,
+        "label": "8회초 4점차"
       },
       "recap": null
     },
@@ -290,7 +290,7 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 55,
         "label": "8회초 2점차"
       },
