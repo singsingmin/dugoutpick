@@ -45,6 +45,12 @@ export interface Recap {
   verdict: string | null;  // 예: "예측보다 더 꿀잼! 🔥"
 }
 
+export interface Decision {
+  win: string | null;   // 승리투수 (무승부면 null)
+  lose: string | null;  // 패전투수 (무승부면 null)
+  save: string | null;  // 세이브투수 (없으면 null)
+}
+
 export interface Game {
   gameId: string;
   time: string;       // "14:00"
@@ -57,6 +63,7 @@ export interface Game {
   honjam: Honjam | null;  // 순위 매칭 실패시 null
   live: LiveState | null; // 경기중(LIVE)일 때만, 아니면 null
   recap: Recap | null;    // 종료(FINAL)일 때만 — 경기 후 꿀잼결산
+  decision: Decision | null; // 종료(FINAL)일 때만 — 승/패/세이브 투수
 }
 
 export interface GamesData {

@@ -93,7 +93,8 @@ async function fetchMonthSchedule(year, month) {
     if (!gid || gid.length < 12) continue;
     const play = cells.find(c => c.Class === 'play');
     if (!play) continue;
-    const nums = [...String(play.Text).matchAll(/class="(?:win|lose)"[^>]*>(\d+)</g)];
+    // 승부 결정: class=win/lose, 무승부: class=same (둘 다 동점). 무승부도 종료 경기로 잡아야 최근폼에 표시됨.
+    const nums = [...String(play.Text).matchAll(/class="(?:win|lose|same)"[^>]*>(\d+)</g)];
     const finished = nums.length >= 2;
     out.push({ date: gid.slice(0, 8), away: gid.slice(8, 10), home: gid.slice(10, 12), aS: finished ? +nums[0][1] : null, hS: finished ? +nums[1][1] : null, finished });
   }
@@ -459,6 +460,9 @@ async function main() {
       honjam = computeHonjam(awName, hmName, sa, sh, aPit, hPit, aStat?.era ?? LEAGUE_ERA, hStat?.era ?? LEAGUE_ERA, h2h[awName]?.[hmName] ?? null);
     }
     const starter = (name, st) => name ? { name, era: st?.era ?? null, w: st?.w ?? null, l: st?.l ?? null } : null;
+    // 종료 경기: 승리/패전/세이브 투수(경기 단위 필드). 무승부면 win/lose 없음 → null.
+    const pn = (name) => { const t = (name || '').trim(); return t || null; };
+    const decision = status === 'FINAL' ? { win: pn(g.W_PIT_P_NM), lose: pn(g.L_PIT_P_NM), save: pn(g.SV_PIT_P_NM) } : null;
     let live = null;
     if (status === 'LIVE') {
       const inning = g.GAME_INN_NO ?? null;
@@ -496,6 +500,7 @@ async function main() {
       honjam,
       live,
       recap,
+      decision,
     };
   });
 

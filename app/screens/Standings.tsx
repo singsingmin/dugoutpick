@@ -65,6 +65,10 @@ export default function Standings() {
     }, [])
   );
 
+  // 가을야구 마지노선: PO 진출권(5위) 안에 드는 마지막 팀 뒤에 1줄만.
+  // 공동 5위처럼 같은 순위가 둘이어도 줄이 두 번 그려지지 않도록 index 기준으로 처리.
+  const poCutIndex = rows.reduce((acc, s, i) => (s.rank <= PO_CUT ? i : acc), -1);
+
   return (
     <SafeAreaView style={styles.safe} edges={['top']}>
       <ScreenHeader title="구단 순위" leftIcon="📊" />
@@ -86,7 +90,7 @@ export default function Standings() {
               <PixelText style={[styles.hCell, COLS.gb]} color={colors.onGreen}>게임차</PixelText>
             </View>
             {/* 데이터 */}
-            {rows.map((s) => {
+            {rows.map((s, i) => {
               const mine = s.code != null && s.code === myCode;
               const games = (s.code && recent[s.code]) || [];
               return (
@@ -113,7 +117,7 @@ export default function Standings() {
                     </View>
                   </View>
                   {/* 가을야구 마지노선 */}
-                  {s.rank === PO_CUT && (
+                  {i === poCutIndex && (
                     <View style={styles.cutRow}>
                       <View style={styles.cutLine} />
                       <View style={styles.cutLabel}>
