@@ -2,6 +2,10 @@
 node_modules/
 npm-debug.log*
 
+# Python (하네스 스크립트 bytecode)
+__pycache__/
+*.pyc
+
 # Expo / RN
 app/.expo/
 app/dist/
@@ -10,6 +14,10 @@ app/web-build/
 
 # Task runner outputs (대용량 phase 로그)
 tasks/**/phase*-output.json
+
+# 자율 주행 하네스: 이터레이션 세션 로그 (계속 커짐 — 커밋 제외).
+# 단 iterations/ 디렉토리와 requirement.md / check-report.json 등 산출물은 커밋 대상.
+iterations/*/*.log
 
 # OS
 .DS_Store
