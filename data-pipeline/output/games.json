@@ -1,7 +1,7 @@
 {
   "date": "20260623",
   "dateText": "2026년 6월 23일",
-  "updatedAt": "2026-06-23T11:30:29.793Z",
+  "updatedAt": "2026-06-23T11:35:20.543Z",
   "recommendedGameId": "20260623OBHH0",
   "games": [
     {
@@ -57,7 +57,7 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 65,
         "label": "7회초 1점차 접전"
       },
@@ -74,7 +74,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "라일리",
           "era": 3.74,
@@ -116,9 +116,9 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
-        "heat": 81,
-        "label": "8회초 동점 접전"
+        "out": 2,
+        "heat": 68,
+        "label": "8회초 1점차 접전"
       },
       "recap": null
     },
@@ -233,7 +233,7 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "heat": 63,
         "label": "7회초 1점차 접전"
       },
@@ -290,11 +290,11 @@
         }
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 1,
-        "heat": 48,
-        "label": "6회말 2점차"
+        "inning": 7,
+        "half": "T",
+        "out": 0,
+        "heat": 51,
+        "label": "7회초 2점차"
       },
       "recap": null
     }
