@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-23T07:55:20.840Z",
+  "updatedAt": "2026-06-23T08:20:25.833Z",
   "lastWeek": {
     "range": [
       "20260615",
@@ -105,75 +105,11 @@
         "home": "LT",
         "pred": 80,
         "reason": "낙동강 더비 · 게임차 3의 순위 다툼",
-        "dateStart": "20260623",
+        "dateStart": "20260624",
         "dateEnd": "20260625"
       }
     ],
     "team": {
-      "NC": [
-        {
-          "date": "20260623",
-          "away": "NC",
-          "home": "LT"
-        },
-        {
-          "date": "20260624",
-          "away": "NC",
-          "home": "LT"
-        },
-        {
-          "date": "20260625",
-          "away": "NC",
-          "home": "LT"
-        },
-        {
-          "date": "20260626",
-          "away": "WO",
-          "home": "NC"
-        },
-        {
-          "date": "20260627",
-          "away": "WO",
-          "home": "NC"
-        },
-        {
-          "date": "20260628",
-          "away": "WO",
-          "home": "NC"
-        }
-      ],
-      "LT": [
-        {
-          "date": "20260623",
-          "away": "NC",
-          "home": "LT"
-        },
-        {
-          "date": "20260624",
-          "away": "NC",
-          "home": "LT"
-        },
-        {
-          "date": "20260625",
-          "away": "NC",
-          "home": "LT"
-        },
-        {
-          "date": "20260626",
-          "away": "LG",
-          "home": "LT"
-        },
-        {
-          "date": "20260627",
-          "away": "LG",
-          "home": "LT"
-        },
-        {
-          "date": "20260628",
-          "away": "LG",
-          "home": "LT"
-        }
-      ],
       "SK": [
         {
           "date": "20260623",
@@ -403,6 +339,60 @@
           "date": "20260625",
           "away": "SS",
           "home": "LG"
+        },
+        {
+          "date": "20260626",
+          "away": "LG",
+          "home": "LT"
+        },
+        {
+          "date": "20260627",
+          "away": "LG",
+          "home": "LT"
+        },
+        {
+          "date": "20260628",
+          "away": "LG",
+          "home": "LT"
+        }
+      ],
+      "NC": [
+        {
+          "date": "20260624",
+          "away": "NC",
+          "home": "LT"
+        },
+        {
+          "date": "20260625",
+          "away": "NC",
+          "home": "LT"
+        },
+        {
+          "date": "20260626",
+          "away": "WO",
+          "home": "NC"
+        },
+        {
+          "date": "20260627",
+          "away": "WO",
+          "home": "NC"
+        },
+        {
+          "date": "20260628",
+          "away": "WO",
+          "home": "NC"
+        }
+      ],
+      "LT": [
+        {
+          "date": "20260624",
+          "away": "NC",
+          "home": "LT"
+        },
+        {
+          "date": "20260625",
+          "away": "NC",
+          "home": "LT"
         },
         {
           "date": "20260626",
