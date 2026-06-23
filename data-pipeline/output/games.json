@@ -1,7 +1,7 @@
 {
   "date": "20260623",
   "dateText": "2026년 6월 23일",
-  "updatedAt": "2026-06-23T11:05:24.499Z",
+  "updatedAt": "2026-06-23T11:10:25.323Z",
   "recommendedGameId": "20260623OBHH0",
   "games": [
     {
@@ -15,7 +15,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 3,
-        "score": 0,
+        "score": 3,
         "starter": {
           "name": "최원태",
           "era": 4.39,
@@ -58,8 +58,8 @@
         "inning": 6,
         "half": "T",
         "out": 0,
-        "heat": 24,
-        "label": "6회초 4점차"
+        "heat": 61,
+        "label": "6회초 1점차 접전"
       },
       "recap": null
     },
@@ -115,10 +115,10 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "heat": 76,
-        "label": "7회초 동점 접전"
+        "label": "7회말 동점 접전"
       },
       "recap": null
     },
@@ -174,7 +174,7 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 1,
+        "out": 3,
         "heat": 23,
         "label": "5회말 4점차"
       },
@@ -231,11 +231,11 @@
         }
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 3,
-        "heat": 65,
-        "label": "5회말 동점 접전"
+        "inning": 6,
+        "half": "T",
+        "out": 1,
+        "heat": 70,
+        "label": "6회초 동점 접전"
       },
       "recap": null
     },
@@ -292,7 +292,7 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 1,
+        "out": 3,
         "heat": 43,
         "label": "5회말 2점차"
       },
