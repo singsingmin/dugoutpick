@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-23T12:20:27.757Z",
+  "updatedAt": "2026-06-23T12:25:25.447Z",
   "lastWeek": {
     "range": [
       "20260615",
@@ -93,23 +93,87 @@
         "dateEnd": "20260625"
       },
       {
+        "away": "NC",
+        "home": "LT",
+        "pred": 85,
+        "reason": "낙동강 더비 · 게임차 2, 막상막하 승부",
+        "dateStart": "20260623",
+        "dateEnd": "20260625"
+      },
+      {
         "away": "KT",
         "home": "SS",
         "pred": 83,
         "reason": "게임차 0.5, 막상막하 승부",
         "dateStart": "20260626",
         "dateEnd": "20260628"
-      },
-      {
-        "away": "NC",
-        "home": "LT",
-        "pred": 80,
-        "reason": "낙동강 더비 · 게임차 3의 순위 다툼",
-        "dateStart": "20260624",
-        "dateEnd": "20260625"
       }
     ],
     "team": {
+      "NC": [
+        {
+          "date": "20260623",
+          "away": "NC",
+          "home": "LT"
+        },
+        {
+          "date": "20260624",
+          "away": "NC",
+          "home": "LT"
+        },
+        {
+          "date": "20260625",
+          "away": "NC",
+          "home": "LT"
+        },
+        {
+          "date": "20260626",
+          "away": "WO",
+          "home": "NC"
+        },
+        {
+          "date": "20260627",
+          "away": "WO",
+          "home": "NC"
+        },
+        {
+          "date": "20260628",
+          "away": "WO",
+          "home": "NC"
+        }
+      ],
+      "LT": [
+        {
+          "date": "20260623",
+          "away": "NC",
+          "home": "LT"
+        },
+        {
+          "date": "20260624",
+          "away": "NC",
+          "home": "LT"
+        },
+        {
+          "date": "20260625",
+          "away": "NC",
+          "home": "LT"
+        },
+        {
+          "date": "20260626",
+          "away": "LG",
+          "home": "LT"
+        },
+        {
+          "date": "20260627",
+          "away": "LG",
+          "home": "LT"
+        },
+        {
+          "date": "20260628",
+          "away": "LG",
+          "home": "LT"
+        }
+      ],
       "SS": [
         {
           "date": "20260624",
@@ -147,60 +211,6 @@
           "date": "20260625",
           "away": "SS",
           "home": "LG"
-        },
-        {
-          "date": "20260626",
-          "away": "LG",
-          "home": "LT"
-        },
-        {
-          "date": "20260627",
-          "away": "LG",
-          "home": "LT"
-        },
-        {
-          "date": "20260628",
-          "away": "LG",
-          "home": "LT"
-        }
-      ],
-      "NC": [
-        {
-          "date": "20260624",
-          "away": "NC",
-          "home": "LT"
-        },
-        {
-          "date": "20260625",
-          "away": "NC",
-          "home": "LT"
-        },
-        {
-          "date": "20260626",
-          "away": "WO",
-          "home": "NC"
-        },
-        {
-          "date": "20260627",
-          "away": "WO",
-          "home": "NC"
-        },
-        {
-          "date": "20260628",
-          "away": "WO",
-          "home": "NC"
-        }
-      ],
-      "LT": [
-        {
-          "date": "20260624",
-          "away": "NC",
-          "home": "LT"
-        },
-        {
-          "date": "20260625",
-          "away": "NC",
-          "home": "LT"
         },
         {
           "date": "20260626",
