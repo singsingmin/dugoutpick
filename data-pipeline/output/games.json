@@ -1,7 +1,7 @@
 {
   "date": "20260623",
   "dateText": "2026년 6월 23일",
-  "updatedAt": "2026-06-23T11:50:23.676Z",
+  "updatedAt": "2026-06-23T11:55:22.618Z",
   "recommendedGameId": "20260623OBHH0",
   "games": [
     {
@@ -57,7 +57,7 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 69,
         "label": "8회초 1점차 접전"
       },
@@ -114,11 +114,11 @@
         }
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
-        "heat": 82,
-        "label": "8회말 동점 접전"
+        "inning": 9,
+        "half": "T",
+        "out": 0,
+        "heat": 87,
+        "label": "9회초 동점 접전"
       },
       "recap": null
     },
@@ -173,10 +173,10 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 0,
-        "label": "7회초 6점차"
+        "label": "7회말 6점차"
       },
       "recap": null
     },
@@ -262,7 +262,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "박준현",
           "era": 2.9,
@@ -291,10 +291,10 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 1,
-        "heat": 26,
-        "label": "7회초 4점차"
+        "half": "B",
+        "out": 0,
+        "heat": 39,
+        "label": "7회말 3점차"
       },
       "recap": null
     }
