@@ -1,7 +1,7 @@
 {
   "date": "20260623",
   "dateText": "2026년 6월 23일",
-  "updatedAt": "2026-06-23T11:36:25.061Z",
+  "updatedAt": "2026-06-23T11:40:25.285Z",
   "recommendedGameId": "20260623OBHH0",
   "games": [
     {
@@ -56,10 +56,10 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 65,
-        "label": "7회초 1점차 접전"
+        "label": "7회말 1점차 접전"
       },
       "recap": null
     },
@@ -145,7 +145,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 2,
-        "score": 6,
+        "score": 8,
         "starter": {
           "name": "고영표",
           "era": 4.38,
@@ -174,9 +174,9 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 0,
-        "heat": 24,
-        "label": "6회말 4점차"
+        "out": 1,
+        "heat": 0,
+        "label": "6회말 6점차"
       },
       "recap": null
     },
@@ -232,10 +232,10 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 3,
+        "half": "B",
+        "out": 1,
         "heat": 63,
-        "label": "7회초 1점차 접전"
+        "label": "7회말 1점차 접전"
       },
       "recap": null
     },
