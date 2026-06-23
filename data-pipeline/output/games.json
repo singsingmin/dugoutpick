@@ -1,7 +1,7 @@
 {
   "date": "20260623",
   "dateText": "2026년 6월 23일",
-  "updatedAt": "2026-06-23T11:35:20.543Z",
+  "updatedAt": "2026-06-23T11:36:25.061Z",
   "recommendedGameId": "20260623OBHH0",
   "games": [
     {
@@ -57,7 +57,7 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "heat": 65,
         "label": "7회초 1점차 접전"
       },
@@ -233,7 +233,7 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 2,
+        "out": 3,
         "heat": 63,
         "label": "7회초 1점차 접전"
       },
