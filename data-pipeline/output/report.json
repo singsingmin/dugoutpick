@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-23T12:30:32.680Z",
+  "updatedAt": "2026-06-23T12:35:22.581Z",
   "lastWeek": {
     "range": [
       "20260615",
@@ -11,7 +11,7 @@
         "l": 2,
         "d": 0,
         "rank": 1,
-        "note": "4승2패, 1위는 1위가 한다"
+        "note": "4연승, 지금이 전성기"
       },
       "KT": {
         "w": 3,
@@ -103,13 +103,77 @@
       {
         "away": "KT",
         "home": "SS",
-        "pred": 83,
-        "reason": "게임차 0.5, 막상막하 승부",
+        "pred": 79,
+        "reason": "게임차 1, 막상막하 승부",
         "dateStart": "20260626",
         "dateEnd": "20260628"
       }
     ],
     "team": {
+      "SS": [
+        {
+          "date": "20260623",
+          "away": "SS",
+          "home": "LG"
+        },
+        {
+          "date": "20260624",
+          "away": "SS",
+          "home": "LG"
+        },
+        {
+          "date": "20260625",
+          "away": "SS",
+          "home": "LG"
+        },
+        {
+          "date": "20260626",
+          "away": "KT",
+          "home": "SS"
+        },
+        {
+          "date": "20260627",
+          "away": "KT",
+          "home": "SS"
+        },
+        {
+          "date": "20260628",
+          "away": "KT",
+          "home": "SS"
+        }
+      ],
+      "LG": [
+        {
+          "date": "20260623",
+          "away": "SS",
+          "home": "LG"
+        },
+        {
+          "date": "20260624",
+          "away": "SS",
+          "home": "LG"
+        },
+        {
+          "date": "20260625",
+          "away": "SS",
+          "home": "LG"
+        },
+        {
+          "date": "20260626",
+          "away": "LG",
+          "home": "LT"
+        },
+        {
+          "date": "20260627",
+          "away": "LG",
+          "home": "LT"
+        },
+        {
+          "date": "20260628",
+          "away": "LG",
+          "home": "LT"
+        }
+      ],
       "NC": [
         {
           "date": "20260623",
@@ -157,60 +221,6 @@
           "date": "20260625",
           "away": "NC",
           "home": "LT"
-        },
-        {
-          "date": "20260626",
-          "away": "LG",
-          "home": "LT"
-        },
-        {
-          "date": "20260627",
-          "away": "LG",
-          "home": "LT"
-        },
-        {
-          "date": "20260628",
-          "away": "LG",
-          "home": "LT"
-        }
-      ],
-      "SS": [
-        {
-          "date": "20260624",
-          "away": "SS",
-          "home": "LG"
-        },
-        {
-          "date": "20260625",
-          "away": "SS",
-          "home": "LG"
-        },
-        {
-          "date": "20260626",
-          "away": "KT",
-          "home": "SS"
-        },
-        {
-          "date": "20260627",
-          "away": "KT",
-          "home": "SS"
-        },
-        {
-          "date": "20260628",
-          "away": "KT",
-          "home": "SS"
-        }
-      ],
-      "LG": [
-        {
-          "date": "20260624",
-          "away": "SS",
-          "home": "LG"
-        },
-        {
-          "date": "20260625",
-          "away": "SS",
-          "home": "LG"
         },
         {
           "date": "20260626",
