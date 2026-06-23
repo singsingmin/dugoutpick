@@ -1,7 +1,7 @@
 {
   "date": "20260623",
   "dateText": "2026년 6월 23일",
-  "updatedAt": "2026-06-23T12:55:20.294Z",
+  "updatedAt": "2026-06-23T13:25:26.670Z",
   "recommendedGameId": "20260623OBHH0",
   "games": [
     {
@@ -58,6 +58,11 @@
       "recap": {
         "actual": 66,
         "verdict": "예측 적중"
+      },
+      "decision": {
+        "win": "장현식",
+        "lose": "최원태",
+        "save": "손주영"
       }
     },
     {
@@ -114,6 +119,11 @@
       "recap": {
         "actual": 88,
         "verdict": "기대 이상"
+      },
+      "decision": {
+        "win": "최준용",
+        "lose": "임지민",
+        "save": null
       }
     },
     {
@@ -169,6 +179,11 @@
       "recap": {
         "actual": 3,
         "verdict": "예측 적중"
+      },
+      "decision": {
+        "win": "고영표",
+        "lose": "김건우",
+        "save": null
       }
     },
     {
@@ -225,6 +240,11 @@
       "recap": {
         "actual": 88,
         "verdict": "예측 적중"
+      },
+      "decision": {
+        "win": "이민우",
+        "lose": "이영하",
+        "save": null
       }
     },
     {
@@ -281,6 +301,11 @@
       "recap": {
         "actual": 18,
         "verdict": "예측 적중"
+      },
+      "decision": {
+        "win": "올러",
+        "lose": "박준현",
+        "save": null
       }
     }
   ]
