@@ -1,7 +1,7 @@
 {
   "date": "20260623",
   "dateText": "2026년 6월 23일",
-  "updatedAt": "2026-06-23T12:15:27.988Z",
+  "updatedAt": "2026-06-23T12:20:27.757Z",
   "recommendedGameId": "20260623OBHH0",
   "games": [
     {
@@ -67,7 +67,7 @@
       "gameId": "20260623NCLT0",
       "time": "18:30",
       "stadium": "사직",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "MS-T",
       "away": {
@@ -86,7 +86,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "박세웅",
           "era": 4.84,
@@ -113,14 +113,11 @@
           "doom": 0
         }
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 1,
-        "heat": 97,
-        "label": "9회말 끝내기 찬스"
-      },
-      "recap": null
+      "live": null,
+      "recap": {
+        "actual": 88,
+        "verdict": "기대 이상"
+      }
     },
     {
       "gameId": "20260623SKKT0",
@@ -174,7 +171,7 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 0,
         "label": "8회초 11점차"
       },
@@ -231,11 +228,11 @@
         }
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
-        "heat": 82,
-        "label": "8회말 동점 접전"
+        "inning": 9,
+        "half": "T",
+        "out": 1,
+        "heat": 87,
+        "label": "9회초 동점 접전"
       },
       "recap": null
     },
@@ -292,7 +289,7 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "heat": 42,
         "label": "8회말 3점차"
       },
