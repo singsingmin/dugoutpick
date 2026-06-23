@@ -1,7 +1,7 @@
 {
   "date": "20260623",
   "dateText": "2026년 6월 23일",
-  "updatedAt": "2026-06-23T11:40:25.285Z",
+  "updatedAt": "2026-06-23T11:45:23.827Z",
   "recommendedGameId": "20260623OBHH0",
   "games": [
     {
@@ -57,7 +57,7 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "heat": 65,
         "label": "7회말 1점차 접전"
       },
@@ -86,7 +86,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "박세웅",
           "era": 4.84,
@@ -115,10 +115,10 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 2,
-        "heat": 68,
-        "label": "8회초 1점차 접전"
+        "half": "B",
+        "out": 0,
+        "heat": 82,
+        "label": "8회말 동점 접전"
       },
       "recap": null
     },
@@ -172,11 +172,11 @@
         }
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 1,
+        "inning": 7,
+        "half": "T",
+        "out": 0,
         "heat": 0,
-        "label": "6회말 6점차"
+        "label": "7회초 6점차"
       },
       "recap": null
     },
@@ -203,7 +203,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "류현진",
           "era": 2.74,
@@ -231,11 +231,11 @@
         }
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 1,
-        "heat": 63,
-        "label": "7회말 1점차 접전"
+        "inning": 8,
+        "half": "T",
+        "out": 0,
+        "heat": 82,
+        "label": "8회초 동점 접전"
       },
       "recap": null
     },
@@ -250,7 +250,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 3,
+        "score": 5,
         "starter": {
           "name": "올러",
           "era": 2.58,
@@ -293,8 +293,8 @@
         "inning": 7,
         "half": "T",
         "out": 0,
-        "heat": 51,
-        "label": "7회초 2점차"
+        "heat": 26,
+        "label": "7회초 4점차"
       },
       "recap": null
     }
