@@ -99,7 +99,9 @@ function Body({ data, open, cheerTeam }: { data: GamesData; open: (id: string) =
         <PixelText variant="caption" color={colors.textDim}>갱신 {formatUpdatedAt(data.updatedAt)} · {relativeFromNow(data.updatedAt)}</PixelText>
       </View>
 
-      <TrackRecordBadge track={data.trackRecord} variant="today" />
+      <View style={styles.trackRecordRow}>
+        <TrackRecordBadge track={data.trackRecord} variant="today" />
+      </View>
 
       {liveGames.length > 0 && (
         <View style={styles.section}>
@@ -163,6 +165,7 @@ const styles = StyleSheet.create({
   content: { padding: spacing.md },
   center: { flex: 1, backgroundColor: colors.bg, alignItems: 'center', justifyContent: 'center' },
   dateRow: { marginBottom: spacing.md, gap: 2 },
+  trackRecordRow: { marginBottom: spacing.lg },
   liveHint: { marginBottom: spacing.sm },
   subLabel: { marginBottom: spacing.xs },
   section: { marginBottom: spacing.lg },

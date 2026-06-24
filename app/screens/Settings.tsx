@@ -6,13 +6,11 @@ import { useNavigation } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/types';
 import { loadGames } from '../data/load';
-import type { TrackRecord } from '../types';
 import PixelText from '../components/PixelText';
 import Panel from '../components/Panel';
 import PixelButton from '../components/PixelButton';
 import ScreenHeader from '../components/ScreenHeader';
 import SectionLabel from '../components/SectionLabel';
-import TrackRecordBadge from '../components/TrackRecordBadge';
 import { formatUpdatedAt } from '../utils';
 import { colors, spacing } from '../theme';
 
@@ -22,13 +20,11 @@ const APP_VERSION = '1.0.0';
 export default function Settings() {
   const navigation = useNavigation<Nav>();
   const [updatedAt, setUpdatedAt] = useState<string | null>(null);
-  const [track, setTrack] = useState<TrackRecord | null>(null);
 
   useEffect(() => {
     let active = true;
     loadGames().then((d) => {
       active && setUpdatedAt(d.updatedAt);
-      active && setTrack(d.trackRecord ?? null);
     }).catch(() => {});
     return () => { active = false; };
   }, []);
@@ -50,7 +46,6 @@ export default function Settings() {
               {updatedAt ? formatUpdatedAt(updatedAt) : '-'}
             </PixelText>
           </Panel>
-          <TrackRecordBadge track={track} variant="settings" />
         </View>
 
         <View style={styles.section}>
