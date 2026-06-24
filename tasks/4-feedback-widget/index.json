@@ -1,0 +1,12 @@
+{
+  "project": "DugoutPick",
+  "task": "feedback-widget",
+  "prompt": "피드백 기능에 그렇게 생각한 이유를 적는 내용도 넣는 건 어때? 응 포함해서 진행해줘. — 경기 후 👍👎 + 이유 태그 → Discord 웹훅. persuasion-review 시뮬(kbo-core-fan-01_20260624_230350) 개선 포인트 #3: 자기개선 루프 미구현. 꿀잼지수 가중치 튜닝을 위한 실사용 피드백 데이터 수집.",
+  "totalPhases": 3,
+  "created_at": "2026-06-24T23:55:00+0900",
+  "phases": [
+    { "phase": 0, "name": "docs", "status": "pending" },
+    { "phase": 1, "name": "infra", "status": "pending" },
+    { "phase": 2, "name": "ui", "status": "pending" }
+  ]
+}
