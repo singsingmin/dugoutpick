@@ -24,6 +24,19 @@
 
 ## 항목
 
+### 2026-06-24 피드백 웹훅 — Discord 웹훅 URL 생성 + .env.local 설정
+- 상황: Discord 웹훅 URL은 CLI로 생성 불가(Discord 웹 UI 필요). `.env.local`에 수동 입력 필요.
+- 필요한 수동 조치:
+  1. Discord에서 비공개 채널 생성 (예: #dugoutpick-feedback)
+  2. 채널 설정 → 연동 → 웹훅 → 새 웹훅 생성 → URL 복사
+  3. 프로젝트 루트에 `.env.local` 파일 생성:
+     ```
+     DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/...
+     ```
+  4. `.env.local`이 `.gitignore`에 포함되어 있는지 확인 (Phase 1에서 자동 추가됨)
+  5. 이후 EAS 빌드 시 환경변수 주입 필요 (eas.json 또는 빌드 시 --env 플래그)
+- 차단 여부: blocking — 이 설정 없이는 피드백 전송 기능이 동작하지 않음 (저장은 되나 Discord 전송 안 됨).
+
 ### 2026-06-24 누적 적중률 트랙레코드 — APK 재빌드 + 파이프라인 push 필요
 - 상황: 앱 코드(types.ts·배지 컴포넌트·Today/Settings 화면) 변경이라 APK 재빌드 필요. `build.mjs`·`recap.mjs` 등 파이프라인 코드 변경은 `origin/main` push 해야 Actions가 라이브 반영(로컬 커밋만으로는 안 바뀜). 적중률 표본은 운영 며칠(하루 5경기 기준 최소 2일, sampleSize >= 10) 누적돼야 배지가 '집계 중' → 실수치로 전환되며, 이는 운영시간 의존이지 인간 개입 아님.
 - 필요한 수동 조치:

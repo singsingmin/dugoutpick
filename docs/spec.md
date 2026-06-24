@@ -37,19 +37,30 @@ native-stack + bottom-tabs 조합. 화면명은 `app/navigation/` 및 `app/scree
 
 타입은 `app/types.ts` 에 명문화(data-schema 미러). 스키마 변경 시 `types.ts` 와 data-schema.md 를 함께 갱신한다.
 
-## 4. 데이터 로딩 계약 (`app/data/`)
+## 4. 피드백 시스템 (경기 후 사용자 평가)
+- 경기 상세 화면(`GameDetail`)에서 `game.status === 'FINAL' && game.honjam != null` 조건일 때만 FeedbackWidget 노출
+- 사용자가 👍/👎 선택 후 이유 태그(slug 기반)를 선택하면 AsyncStorage에 저장 + Discord 웹훅으로 전송
+- AsyncStorage 키: `dugout.feedback.{gameId}` (게임별 개별 키)
+- 피드백 데이터 구조:
+  ```
+  { gameId, predictedScore, thumbs: 'up'|'down', reasonTag: string|null, reasonLabel: string|null, ts: ISO8601 }
+  ```
+- Discord 전송 실패는 무음 처리 (앱 크래시 없음)
+- 웹훅 URL: `app.config.js`의 `extra.discordWebhookUrl` 환경변수로 주입 (`.env.local` → `DISCORD_WEBHOOK_URL`)
+
+## 5. 데이터 로딩 계약 (`app/data/`)
 - **dev/MVP**: `assets/data/*.json` 번들 import.
 - **prod**: `data/config.ts` 의 `REMOTE_BASE_URL` 원격 fetch → 성공 시 AsyncStorage 캐시, 실패 시 마지막 캐시 폴백.
 - 환경 분기는 `data/config.ts` **한 곳**에만 격리.
 
-## 5. 파이프라인 계약 (`data-pipeline/build.mjs`)
+## 6. 파이프라인 계약 (`data-pipeline/build.mjs`)
 - 입력: KBO 3개 HTTP 엔드포인트(브라우저 불필요). 처리: 순위→지표맵 / 경기+선발 / 투수ERA맵 → `computeHonjam()`.
 - 꿀잼지수 로직은 이 파일에 **응집**(앱과 공유 안 함). 공식 튜닝 시 앱 재배포 불필요.
 - **실패 시 exit 1** → Actions 가 커밋 안 함 → 앱은 직전 JSON 유지.
 - teams 단일 출처 = `data-pipeline/teams.mjs` → `teams.json`.
 - **트랙레코드 누적:** FINAL 경기 중 `honjam.frozen===true`(경기 전 freeze된 예측)인 것만 `recap-history.json`에 append-only 누적. 롤링 집계(최근 window=50건)를 `games.json`의 `trackRecord`에 임베드해 앱에 전달(별도 네트워크 요청 0 증가).
 
-## 6. 불변 규칙 (구현 시 깨지 말 것)
+## 7. 불변 규칙 (구현 시 깨지 말 것)
 1. 꿀잼지수는 파이프라인 단일 출처. 앱·문서 어디서도 재구현 금지.
 2. 앱은 데이터 표시 전용. 네트워크 실패가 크래시로 이어지면 안 됨(캐시 폴백 필수).
 3. 외부 의존 최소화: 파이프라인 0개, 앱도 무거운 라이브러리 지양.
