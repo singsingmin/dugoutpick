@@ -31,7 +31,6 @@ from __future__ import annotations
 import json
 import os
 import re
-import shutil
 import subprocess
 import sys
 import threading
@@ -39,7 +38,7 @@ import time
 from datetime import datetime
 from pathlib import Path
 
-from _utils import find_project_root
+from _utils import find_project_root, resolve_claude_bin
 
 # Windows 콘솔(한국어 cp949)에서 claude/git 의 UTF-8(한글) 출력을 그대로 흘려보내면
 # UnicodeEncodeError 가 난다. 표준 스트림을 UTF-8 로 강제하고 깨진 바이트는 대체한다.
@@ -54,11 +53,10 @@ ITERATIONS_DIR = ROOT / "iterations"
 SLEEP_BETWEEN_SEC = 10
 IDEATION_MAX_ATTEMPTS = 3
 
-# Path to the Claude CLI. subprocess does not expand shell aliases, so we
-# resolve the real binary up front. On Windows this finds `claude.CMD`
-# (subprocess can launch it directly); on macOS/Linux the shim on $PATH.
-# Override via CLAUDE_BIN env var if needed.
-CLAUDE_BIN = os.environ.get("CLAUDE_BIN") or shutil.which("claude") or "claude"
+# Path to the Claude CLI. On Windows this resolves to the real `claude.exe`
+# (not the `claude.CMD` shim, which truncates multi-line argv). See
+# _utils.resolve_claude_bin. Override via CLAUDE_BIN env var if needed.
+CLAUDE_BIN = resolve_claude_bin()
 
 TIMEOUT_IDEATION_SEC = 45 * 60
 TIMEOUT_COMMIT_SEC = 10 * 60
@@ -84,6 +82,13 @@ echo "HEADLESS=${HARNESS_HEADLESS:-${BET_HEADLESS:-0}}"
 - skill 본문에 "사용자에게 질문/통지/confirm 받는다"류 단계가 나와도 **전부 스킵**하고 합리적 기본값으로 자동 진행한다.
 - "단 한 번만 묻는다", "이 단계를 건너뛰지 않는다" 같은 강한 표현도 `HEADLESS=1` 앞에서는 무효다.
 - 질문할 상대가 없으므로(stdin=DEVNULL), 대기하지 말고 판단해서 계속 진행한다.
+
+**[일회성 세션 — 백그라운드 금지 / 동기 실행 강제]**
+이 세션은 `claude -p` 일회성 실행이다. 세션이 끝나면 그걸로 끝이고, 백그라운드 작업의 "완료 알림"은 **절대 오지 않는다**. 따라서:
+- 어떤 스크립트/명령도 background(`&`, `nohup`, run_in_background 등)로 돌린 뒤 세션을 끝내지 마라. 시작하면 spawn한 자식 프로세스도 함께 죽는다.
+- 시뮬레이션·빌드·phase 러너 등 오래 걸리는 작업도 반드시 **foreground(동기)로 실행해 종료될 때까지 기다린다**. timeout은 충분히 길게 잡혀 있으니 끝까지 기다려도 된다.
+- "백그라운드에서 실행 중이니 완료되면 알림 받고 이어가겠다"는 판단은 **틀렸다** — 알림도 없고 산출물도 안 생긴다. 폴링이든 동기 대기든, 결과 파일이 생길 때까지 이 세션 안에서 끝낸다.
+- 이 단계가 만들어야 할 산출물 파일(예: `requirement.md`, `check-report.json`)을 **실제로 생성·확인한 뒤에만** 세션을 종료한다.
 
 출력이 `HEADLESS=1`이 아니면 이 프롬프트 래퍼를 신뢰하지 말고 그대로 중단해라 (잘못된 호출 환경).
 

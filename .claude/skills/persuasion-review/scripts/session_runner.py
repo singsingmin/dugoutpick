@@ -19,14 +19,30 @@ import yaml
 # claude CLI 경로 및 주요 플래그. 버전/설치 방식에 따라 조정 가능.
 # 환경에 여러 claude 바이너리(예: pnpm glob 2.0.x와 ~/.claude/local/ 2.1.x)가 공존할 때
 # subprocess PATH가 구버전을 집어 nested 실행이 "Execution error"로 조기 실패하는 사례 있음.
-# 우선순위: ~/.claude/local/claude > PATH에서 first match.
+# 우선순위: CLAUDE_BIN 환경변수 > ~/.claude/local/claude > PATH first match.
 import os as _os
 import shutil as _shutil
-_local_claude = _os.path.expanduser("~/.claude/local/claude")
-CLAUDE_BIN = ((_local_claude if _os.path.exists(_local_claude) else None)
-              or _shutil.which("claude")
-              or "claude"
-              )
+
+
+def _resolve_claude_bin() -> str:
+    override = _os.environ.get("CLAUDE_BIN")
+    if override:
+        return override
+    local = _os.path.expanduser("~/.claude/local/claude")
+    if _os.path.exists(local):
+        return local
+    found = _shutil.which("claude")
+    # Windows: `claude.CMD` shim 은 cmd.exe `%*` 재파싱으로 여러 줄 argv(프롬프트/
+    # system prompt)를 첫 줄에서 잘라버린다. shim 이 감싸는 실제 claude.exe 를 직접 쓴다.
+    if found and found.lower().endswith(".cmd"):
+        exe = (Path(found).resolve().parent
+               / "node_modules" / "@anthropic-ai" / "claude-code" / "bin" / "claude.exe")
+        if exe.exists():
+            return str(exe)
+    return found or "claude"
+
+
+CLAUDE_BIN = _resolve_claude_bin()
 PERMISSION_MODE = "bypassPermissions"  # 헤드리스 실행 시 Read/Write 허용 간소화
 
 
@@ -102,6 +118,9 @@ def run_session(
             cmd,
             capture_output=True,
             text=True,
+            encoding="utf-8",
+            errors="replace",
+            stdin=subprocess.DEVNULL,
             timeout=timeout_sec,
         )
     except subprocess.TimeoutExpired as exc:

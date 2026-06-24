@@ -3,6 +3,7 @@ Shared utilities for agentinc scripts.
 """
 
 import os
+import shutil
 import subprocess
 import sys
 import time
@@ -18,6 +19,27 @@ def find_project_root() -> Path:
             return current
         current = current.parent
     raise RuntimeError("Could not find project root (no .git directory found)")
+
+
+def resolve_claude_bin() -> str:
+    """실행할 claude CLI 바이너리 경로를 해석한다 (CLAUDE_BIN 환경변수가 최우선).
+
+    Windows: `shutil.which("claude")` 는 npm 배치 shim `claude.CMD` 를 돌려준다.
+    이 shim 은 내부적으로 cmd.exe `%*` 로 인자를 재파싱하는데, 여러 줄 프롬프트를
+    argv 로 넘기면 **첫 줄 이후가 잘린다**(헤드리스 세션이 작업 본문을 못 받음).
+    그래서 shim 이 감싸는 실제 `claude.exe` 를 직접 가리켜 cmd.exe 를 우회한다.
+    macOS/Linux: `which` 가 셸 shim/바이너리를 직접 주며 여러 줄 argv 도 문제없다.
+    """
+    override = os.environ.get("CLAUDE_BIN")
+    if override:
+        return override
+    found = shutil.which("claude")
+    if found and found.lower().endswith(".cmd"):
+        exe = (Path(found).resolve().parent
+               / "node_modules" / "@anthropic-ai" / "claude-code" / "bin" / "claude.exe")
+        if exe.exists():
+            return str(exe)
+    return found or "claude"
 
 
 # ---------------------------------------------------------------------------

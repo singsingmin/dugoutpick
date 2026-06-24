@@ -11,7 +11,6 @@ Example: python3 run-phases.py 0-mvp
 import itertools
 import json
 import os
-import shutil
 import subprocess
 import sys
 import threading
@@ -20,7 +19,7 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import Optional
 
-from _utils import find_project_root
+from _utils import find_project_root, resolve_claude_bin
 
 # Windows 콘솔(한국어 cp949)에서 claude/git 의 UTF-8(한글) 출력을 그대로 흘려보내면
 # UnicodeEncodeError 가 난다. 표준 스트림을 UTF-8 로 강제하고 깨진 바이트는 대체한다.
@@ -34,11 +33,10 @@ ROOT = find_project_root()
 TASKS_DIR = ROOT / "tasks"
 TOP_INDEX_FILE = TASKS_DIR / "index.json"
 
-# Path to the Claude CLI. subprocess does not expand shell aliases, so we
-# resolve the real binary up front. On Windows this finds `claude.CMD`
-# (subprocess can launch it directly); on macOS/Linux the shim on $PATH.
-# Override via CLAUDE_BIN env var if needed.
-CLAUDE_BIN = os.environ.get("CLAUDE_BIN") or shutil.which("claude") or "claude"
+# Path to the Claude CLI. On Windows this resolves to the real `claude.exe`
+# (not the `claude.CMD` shim, which truncates multi-line argv). See
+# _utils.resolve_claude_bin. Override via CLAUDE_BIN env var if needed.
+CLAUDE_BIN = resolve_claude_bin()
 
 KST = timezone(timedelta(hours=9))
 
