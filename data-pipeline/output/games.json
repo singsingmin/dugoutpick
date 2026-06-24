@@ -1,7 +1,7 @@
 {
   "date": "20260624",
   "dateText": "2026년 6월 24일",
-  "updatedAt": "2026-06-24T11:30:33.559Z",
+  "updatedAt": "2026-06-24T11:35:22.259Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 0,
@@ -65,7 +65,7 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 50,
         "label": "7회초 2점차"
       },
@@ -185,10 +185,10 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 26,
-        "label": "7회초 4점차"
+        "label": "7회말 4점차"
       },
       "recap": null,
       "decision": null
@@ -246,10 +246,10 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 3,
+        "half": "B",
+        "out": 1,
         "heat": 12,
-        "label": "6회초 5점차"
+        "label": "6회말 5점차"
       },
       "recap": null,
       "decision": null
@@ -307,10 +307,10 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 0,
-        "label": "6회초 6점차"
+        "label": "6회말 6점차"
       },
       "recap": null,
       "decision": null
