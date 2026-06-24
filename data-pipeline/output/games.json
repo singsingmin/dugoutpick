@@ -1,7 +1,7 @@
 {
   "date": "20260624",
   "dateText": "2026년 6월 24일",
-  "updatedAt": "2026-06-24T11:50:23.129Z",
+  "updatedAt": "2026-06-24T11:55:21.774Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 0,
@@ -64,10 +64,10 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "heat": 54,
-        "label": "8회초 2점차"
+        "label": "8회말 2점차"
       },
       "recap": null,
       "decision": null
@@ -126,7 +126,7 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "heat": 77,
         "label": "7회말 동점 접전"
       },
@@ -185,10 +185,10 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 28,
-        "label": "8회초 4점차"
+        "label": "8회말 4점차"
       },
       "recap": null,
       "decision": null
@@ -204,7 +204,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 6,
-        "score": 6,
+        "score": 7,
         "starter": {
           "name": "최민석",
           "era": 2.77,
@@ -246,10 +246,10 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 0,
-        "label": "7회초 6점차"
+        "label": "7회말 7점차"
       },
       "recap": null,
       "decision": null
@@ -306,11 +306,11 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
+        "inning": 8,
+        "half": "T",
         "out": 0,
         "heat": 0,
-        "label": "7회말 7점차"
+        "label": "8회초 7점차"
       },
       "recap": null,
       "decision": null
