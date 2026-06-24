@@ -5,6 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { TEAMS, byName, byCode } from './teams.mjs';
+import { resolveFrozen, toRecord, mergeHistory, aggregate, WINDOW, MIN_SAMPLE } from './recap.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const OUT_DIR = path.join(__dirname, 'output');
@@ -439,9 +440,13 @@ async function main() {
 
   // freeze: 직전 산출물의 꿀잼지수를 읽어, 이미 시작된 경기는 '경기 전 값'을 유지(드리프트 방지)
   const prevHonjam = {};
+  const prevStatus = {};
   try {
     const prev = JSON.parse(fs.readFileSync(path.join(OUT_DIR, 'games.json'), 'utf8'));
-    for (const g of prev.games || []) if (g.gameId && g.honjam) prevHonjam[g.gameId] = g.honjam;
+    for (const g of prev.games || []) {
+      if (g.gameId && g.honjam) prevHonjam[g.gameId] = g.honjam;
+      if (g.gameId) prevStatus[g.gameId] = g.status;
+    }
   } catch { /* 직전 산출물 없음(첫 실행/새 날짜) → 신규 계산 */ }
 
   const games = rawGames.map(g => {
@@ -455,7 +460,8 @@ async function main() {
     const bScore = hasScore ? +g.B_SCORE_CN : null;
     let honjam = null;
     if (status !== 'SCHEDULED' && prevHonjam[g.G_ID]) {
-      honjam = prevHonjam[g.G_ID]; // 경기 시작 후엔 경기 전 꿀잼지수 고정
+      const frozen = resolveFrozen({ prevHonjam: prevHonjam[g.G_ID], prevStatus: prevStatus[g.G_ID] });
+      honjam = { ...prevHonjam[g.G_ID], frozen }; // 경기 시작 후엔 경기 전 값 고정 + frozen 보존/발화
     } else if (sa && sh) {
       honjam = computeHonjam(awName, hmName, sa, sh, aPit, hPit, aStat?.era ?? LEAGUE_ERA, hStat?.era ?? LEAGUE_ERA, h2h[awName]?.[hmName] ?? null);
     }
@@ -511,8 +517,21 @@ async function main() {
   const dt = `${date.slice(0, 4)}년 ${+date.slice(4, 6)}월 ${+date.slice(6, 8)}일`;
   const updatedAt = new Date().toISOString();
 
+  // recap-history 누적 + trackRecord 집계
+  let history = [];
+  try {
+    const h = JSON.parse(fs.readFileSync(path.join(OUT_DIR, 'recap-history.json'), 'utf8'));
+    history = Array.isArray(h.records) ? h.records : [];
+  } catch { /* 첫 실행 → 빈 history */ }
+  const incoming = games.map(g => toRecord(g, date)).filter(Boolean);
+  const merged = mergeHistory(history, incoming);
+  const trackRecord = aggregate(merged, { window: WINDOW, minSample: MIN_SAMPLE });
+  console.log(`[build] recap-history: +${incoming.length} new, total ${merged.length}, hitRate ${trackRecord.hitRate}% (n=${trackRecord.sampleSize}, ready=${trackRecord.ready})`);
+
   fs.mkdirSync(OUT_DIR, { recursive: true });
-  fs.writeFileSync(path.join(OUT_DIR, 'games.json'), JSON.stringify({ date, dateText: dt, updatedAt, recommendedGameId, games }, null, 2));
+  fs.writeFileSync(path.join(OUT_DIR, 'recap-history.json'),
+    JSON.stringify({ updatedAt, ...trackRecord, records: merged }, null, 2));
+  fs.writeFileSync(path.join(OUT_DIR, 'games.json'), JSON.stringify({ date, dateText: dt, updatedAt, trackRecord, recommendedGameId, games }, null, 2));
   fs.writeFileSync(path.join(OUT_DIR, 'standings.json'), JSON.stringify({ updatedAt, standings }, null, 2));
   fs.writeFileSync(path.join(OUT_DIR, 'teams.json'), JSON.stringify({ teams: TEAMS }, null, 2));
   fs.writeFileSync(path.join(OUT_DIR, 'recent.json'), JSON.stringify({ updatedAt, recent }, null, 2));
