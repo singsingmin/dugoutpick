@@ -1,12 +1,12 @@
 {
   "date": "20260624",
   "dateText": "2026년 6월 24일",
-  "updatedAt": "2026-06-24T12:25:20.416Z",
+  "updatedAt": "2026-06-24T12:30:31.760Z",
   "trackRecord": {
     "window": 50,
-    "sampleSize": 1,
+    "sampleSize": 3,
     "hitRate": 0,
-    "bonusRate": 0,
+    "bonusRate": 33,
     "ready": false
   },
   "recommendedGameId": "20260624OBHH0",
@@ -125,11 +125,11 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
-        "heat": 56,
-        "label": "8회말 2점차"
+        "inning": 9,
+        "half": "T",
+        "out": 1,
+        "heat": 59,
+        "label": "9회초 2점차"
       },
       "recap": null,
       "decision": null
@@ -138,7 +138,7 @@
       "gameId": "20260624SKKT0",
       "time": "18:30",
       "stadium": "수원",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPO-2T",
       "away": {
@@ -184,15 +184,16 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 1,
-        "heat": 85,
-        "label": "9회말 끝내기 찬스"
+      "live": null,
+      "recap": {
+        "actual": 68,
+        "verdict": "기대 이상"
       },
-      "recap": null,
-      "decision": null
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      }
     },
     {
       "gameId": "20260624OBHH0",
@@ -248,7 +249,7 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 0,
         "label": "9회초 6점차"
       },
@@ -259,7 +260,7 @@
       "gameId": "20260624HTWO0",
       "time": "18:30",
       "stadium": "고척",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPO-T",
       "away": {
@@ -306,15 +307,16 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 0,
-        "heat": 0,
-        "label": "9회말 7점차"
+      "live": null,
+      "recap": {
+        "actual": 2,
+        "verdict": "기대 이하"
       },
-      "recap": null,
-      "decision": null
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      }
     }
   ]
 }
