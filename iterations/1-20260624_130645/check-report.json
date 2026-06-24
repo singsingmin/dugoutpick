@@ -1,0 +1,72 @@
+{
+  "iter_id": "1-20260624_130645",
+  "status": "fail",
+  "task": {
+    "dir": "tasks/2-track-record",
+    "name": "track-record",
+    "overall_status": "incomplete"
+  },
+  "phases": [
+    {
+      "phase": 0,
+      "name": "docs",
+      "status": "error",
+      "duration_sec": null,
+      "notes": "started_at 2026-06-24T13:40:41 이후 completed_at 없음. runner.log가 약 40초 지점에서 끊김 — phase0-output.json 미생성. plan-and-build가 phase 0 도중 종료됨."
+    },
+    {
+      "phase": 1,
+      "name": "recap-module",
+      "status": "pending",
+      "duration_sec": null,
+      "notes": "미착수. recap 모듈 파일 없음."
+    },
+    {
+      "phase": 2,
+      "name": "recap-tests",
+      "status": "pending",
+      "duration_sec": null,
+      "notes": "미착수."
+    },
+    {
+      "phase": 3,
+      "name": "build-integration",
+      "status": "pending",
+      "duration_sec": null,
+      "notes": "미착수. build.mjs 변경 없음, recap-history.json 미생성."
+    },
+    {
+      "phase": 4,
+      "name": "app-types-badge",
+      "status": "pending",
+      "duration_sec": null,
+      "notes": "미착수. 앱 타입/배지 변경 없음."
+    },
+    {
+      "phase": 5,
+      "name": "app-screens",
+      "status": "pending",
+      "duration_sec": null,
+      "notes": "미착수. 화면 변경 없음."
+    }
+  ],
+  "issues": [
+    "plan-and-build가 phase 0(docs) 도중 종료됨 — task index.json의 phase 0에 completed_at 없음, phase{N}-output.json 일체 미생성.",
+    "구현 산출물 전무: data-pipeline/output/recap-history.json 없음, recap 모듈 없음, build.mjs/app TSX 변경 없음.",
+    "git working tree 변경은 tasks/2-track-record/index.json·runner.log 뿐. 요구사항(꿀잼지수 누적 적중률 트랙레코드) 미구현.",
+    "runner.log가 phase 0 약 40초 지점에서 절단 — 무인 세션이 단계 완료 전에 비정상 종료된 것으로 추정."
+  ],
+  "conclusion": "plan-and-build가 phase 0(docs) 도중 중도 종료되어 track-record 요구사항이 전혀 구현되지 않음. 6개 phase 모두 미완(0=error, 1~5=pending).",
+  "carry_over": [
+    "track-record 요구사항(누적 적중률 트랙레코드) 전체를 다음 iteration에서 재시도 — recap-history.json append-only 누적 + 앱 신뢰 배지.",
+    "CTO 승인 조건 4종 유지: (1)표본 게이트 미달 시 '집계 중' 표기, (2)정의('예측 ±10 이내 비율') 1줄 병기, (3)gameId dedup 멱등성 테스트, (4)honjam freeze 정합(경기 전 고정값만 누적, prevHonjam 없던 경기 제외).",
+    "plan-and-build 무인 세션이 phase 0에서 멈춘 원인 점검 필요 — 하네스/타임아웃·헤드리스 실행 안정성."
+  ],
+  "progress": {
+    "previous_iter_id": null,
+    "previous_run_id": null,
+    "current_run_id": "kbo-core-fan-01_20260624_130750",
+    "signal": "no_prior_run",
+    "summary": "첫 iteration이라 비교 대상(직전 run)이 없음. 이번 iteration은 빌드가 phase 0에서 중도 종료되어 고객 pain(꿀잼지수 적중률 객관 근거 부재)을 해소할 구현이 전혀 산출되지 않음. 적중률 트랙레코드 기능 전체가 다음 iteration으로 이월됨."
+  }
+}
