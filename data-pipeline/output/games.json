@@ -1,7 +1,7 @@
 {
   "date": "20260624",
   "dateText": "2026년 6월 24일",
-  "updatedAt": "2026-06-24T10:30:28.162Z",
+  "updatedAt": "2026-06-24T10:35:22.548Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 0,
@@ -95,7 +95,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "로드리게스",
           "era": 4.91,
@@ -127,8 +127,8 @@
         "inning": 4,
         "half": "B",
         "out": 1,
-        "heat": 50,
-        "label": "4회말 1점차 접전"
+        "heat": 60,
+        "label": "4회말 동점 접전"
       },
       "recap": null,
       "decision": null
@@ -144,7 +144,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "김민준",
           "era": 7.88,
@@ -185,10 +185,10 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "heat": 50,
-        "label": "4회초 1점차 접전"
+        "label": "4회말 1점차 접전"
       },
       "recap": null,
       "decision": null
@@ -308,7 +308,7 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 62,
         "label": "4회초 동점 접전"
       },
