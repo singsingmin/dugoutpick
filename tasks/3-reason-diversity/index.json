@@ -1,0 +1,10 @@
+{
+  "project": "DugoutPick",
+  "task": "reason-diversity",
+  "prompt": "꿀잼지수 한 줄 이유 상황별 문구 다양화 (5+ 패턴). persuasion-review 시뮬 report.md 개선 포인트 #5 — keyman buy_trigger '한 줄 이유가 오 그래서 볼 만하네 싶게 구체적'. 기존 변수(streak/gb/rank/ERA 등)만 사용, 새 fetch 금지.",
+  "totalPhases": 1,
+  "created_at": "2026-06-24T21:00:00+0900",
+  "phases": [
+    { "phase": 0, "name": "frag-patterns", "status": "pending" }
+  ]
+}
