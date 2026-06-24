@@ -1,7 +1,7 @@
 {
   "date": "20260624",
   "dateText": "2026년 6월 24일",
-  "updatedAt": "2026-06-24T10:50:23.260Z",
+  "updatedAt": "2026-06-24T10:55:19.626Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 0,
@@ -64,10 +64,10 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "heat": 54,
-        "label": "5회초 1점차 접전"
+        "label": "5회말 1점차 접전"
       },
       "recap": null,
       "decision": null
@@ -126,7 +126,7 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "heat": 55,
         "label": "5회초 1점차 접전"
       },
@@ -144,7 +144,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 2,
+        "score": 5,
         "starter": {
           "name": "김민준",
           "era": 7.88,
@@ -187,8 +187,8 @@
         "inning": 5,
         "half": "T",
         "out": 1,
-        "heat": 55,
-        "label": "5회초 1점차 접전"
+        "heat": 22,
+        "label": "5회초 4점차"
       },
       "recap": null,
       "decision": null
@@ -308,7 +308,7 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "heat": 67,
         "label": "5회말 동점 접전"
       },
