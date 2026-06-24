@@ -212,12 +212,25 @@ function computeHonjam(aw, hm, sa, sh, aPit, hPit, aERA, hERA, h2hRec) {
     : gbDiff <= 2 ? `게임차 ${gbStr}, 막상막하 승부`
     : `게임차 ${gbStr}의 순위 다툼`;
   frag.quality = Math.max(a.rank, h.rank) <= 4 ? `리그 ${Math.min(a.rank, h.rank)}위·${Math.max(a.rank, h.rank)}위 상위권 빅매치` : '';
+  const totalL10 = a.l10 + h.l10;
   const sp = Math.abs(a.streak) >= Math.abs(h.streak) ? [aw, a.streak] : [hm, h.streak];
-  frag.form = sp[1] <= -5 ? `${sp[0]} ${-sp[1]}연패 탈출 도전` : sp[1] >= 3 ? `${sp[0]} ${sp[1]}연승 질주` : `양 팀 최근 10경기 합 ${a.l10 + h.l10}승의 화력`;
+  frag.form = sp[1] <= -5 ? `${sp[0]} ${-sp[1]}연패 탈출 도전`
+    : sp[1] <= -3 ? `${sp[0]} ${-sp[1]}연패 탈출 발판`
+    : sp[1] >= 5 ? `${sp[0]} ${sp[1]}연승 질주, 기세 절정`
+    : sp[1] >= 3 ? `${sp[0]} ${sp[1]}연승 질주`
+    : totalL10 >= 15 ? `양 팀 최근 10경기 합 ${totalL10}승, 화력 최고조`
+    : totalL10 <= 7 ? `양 팀 동반 슬럼프, 승기 선점 싸움`
+    : `최근 10경기 ${aw} ${a.l10}승 · ${hm} ${h.l10}승`;
   frag.rivalry = RIVALRY_NAME[rivKey(aw, hm)] || '';
-  frag.playoff = (a.rank >= 7 || h.rank >= 7) ? `${Math.max(a.rank, h.rank)}위권 PO 생존 경쟁` : '가을야구 직행 순위 다툼';
+  const rankDiff = Math.abs(a.rank - h.rank);
+  const minRank = Math.min(a.rank, h.rank);
+  frag.playoff = (a.rank >= 7 || h.rank >= 7) ? `${Math.max(a.rank, h.rank)}위권 PO 생존 경쟁`
+    : (minRank >= 5 && rankDiff <= 1) ? `${a.rank}위·${h.rank}위 와일드카드 판가름`
+    : '가을야구 직행 순위 다툼';
   const bestNM = aERA <= hERA ? aPit : hPit, bestERA = Math.min(aERA, hERA);
-  frag.pitcher = (aERA < 3.6 && hERA < 3.6) ? `양 팀 에이스 투수전(ERA ${aERA}·${hERA})` : (bestERA < 3.6 ? `${bestNM}(ERA ${bestERA}) 호투 기대` : '');
+  frag.pitcher = bestERA < 2.5 ? `${bestNM} ERA ${bestERA} 압도적 에이스 등판`
+    : (aERA < 3.6 && hERA < 3.6) ? `양 팀 에이스 투수전(ERA ${aERA}·${hERA})`
+    : (bestERA < 3.6 ? `${bestNM}(ERA ${bestERA}) 호투 기대` : '');
   frag.doom = parts.doom > 0 ? `연패 탈출 멸망전 · ${aw} ${-a.streak}연패 vs ${hm} ${-h.streak}연패` : '';
 
   const raw = Object.entries(W).reduce((s, [k, w]) => s + w * parts[k], 0);
