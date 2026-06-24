@@ -34,6 +34,8 @@ jobs:
 
       - name: Build web
         working-directory: app
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: npx expo export --platform web
 
       - name: Patch PWA
