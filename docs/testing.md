@@ -25,6 +25,11 @@ node data-pipeline/build.mjs    # exit 0 + output/*.json 생성/갱신
 ```
 - 외부 KBO 엔드포인트에 의존하므로 네트워크 실패 시 exit 1 은 "정상 방어"다(앱은 직전 JSON 유지). AC 작성 시 네트워크 불가 환경을 구분할 것.
 
+**순수 로직 테스트 컨벤션 (파이프라인):**
+- 파이프라인 순수 로직 테스트는 `node:assert` + **의존성 0** 으로 작성하고, `node data-pipeline/test/*.test.mjs` 로 실행한다.
+- **`build.mjs` 는 top-level `main().catch()` 구동이라 import 하면 실제 네트워크 빌드가 돌므로 테스트에서 import 금지.** 순수 로직은 `data-pipeline/recap.mjs` 같은 부작용 없는 모듈로 분리해 테스트한다.
+- 헤드리스 환경에서 dev 번들 시드(`app/assets/data/games.json`)에는 `trackRecord` 가 없어 배지가 '집계 중'으로 뜨는 것이 **정상**(번들 시드는 라이브가 아니므로 트랙레코드가 없는 게 정직). QA 가 버그로 오인하지 않도록 주의.
+
 ## 정책
 1. **Mock 보다 실제 데이터.** 단위 테스트를 도입한다면 KBO 응답을 통째로 mocking 하기보다, `data-pipeline/output/*.json` 실산출물이나 고정 fixture 로 `computeHonjam()` 등 순수 로직을 검증한다. UI 데이터 계약은 실제 JSON 으로 확인.
 2. **순수 로직 우선.** 꿀잼지수 계산처럼 외부 의존 없는 순수 함수가 테스트 1순위 대상.

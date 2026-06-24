@@ -23,4 +23,10 @@
 - **데이터 산출물 수동 재생성 금지** — `data-pipeline/output/*.json` 과 앱 번들 JSON 은 Actions 가 자동 갱신한다. 수동 `build.mjs` 재생성·커밋은 push 충돌을 유발하므로 하지 말 것(코드만 커밋).
 
 ## 항목
-(아직 없음 — 하네스가 차단 지점을 만나면 여기에 추가)
+
+### 2026-06-24 누적 적중률 트랙레코드 — APK 재빌드 + 파이프라인 push 필요
+- 상황: 앱 코드(types.ts·배지 컴포넌트·Today/Settings 화면) 변경이라 APK 재빌드 필요. `build.mjs`·`recap.mjs` 등 파이프라인 코드 변경은 `origin/main` push 해야 Actions가 라이브 반영(로컬 커밋만으로는 안 바뀜). 적중률 표본은 운영 며칠(하루 5경기 기준 최소 2일, sampleSize >= 10) 누적돼야 배지가 '집계 중' → 실수치로 전환되며, 이는 운영시간 의존이지 인간 개입 아님.
+- 필요한 수동 조치:
+  1. `git push origin main` — 파이프라인 코드 Actions 라이브 반영.
+  2. EAS APK 재빌드(`eas build --platform android`) 및 배포.
+- 차단 여부: non-blocking — 코드·테스트는 CLI로 완결, 배포만 사용자 몫.

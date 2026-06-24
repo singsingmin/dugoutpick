@@ -27,12 +27,13 @@ native-stack + bottom-tabs 조합. 화면명은 `app/navigation/` 및 `app/scree
 
 분기 규칙: `Splash`에서 AsyncStorage 응원팀 있으면 `Tabs`, 없으면 `Onboarding`. (상세 → [flow.md](flow.md))
 
-## 3. 데이터 모델 (앱이 소비하는 정적 JSON 3종)
+## 3. 데이터 모델 (앱이 소비하는 정적 JSON 3종 + 파이프라인 누적 파일)
 정밀 스키마·nullable 규칙은 [data-schema.md](data-schema.md). 계약 요약:
 
-- **games.json** — 메인 데이터. `recommendedGameId`(최고 꿀잼, null 가능) + `games[]`(각 경기 + `honjam{score,reason,points,factors}`). `score`는 경기 전 null, `starter`/`era`는 미등록 시 null, `honjam`은 순위 매칭 실패 시 null.
+- **games.json** — 메인 데이터. `trackRecord`(롤링 적중률 집계, 옵셔널) + `recommendedGameId`(최고 꿀잼, null 가능) + `games[]`(각 경기 + `honjam{score,reason,points,factors,frozen?}`). `score`는 경기 전 null, `starter`/`era`는 미등록 시 null, `honjam`은 순위 매칭 실패 시 null. `trackRecord`는 표본 부족·구버전 시드에서 없을 수 있음(옵셔널) — 이 경우 배지는 '집계 중'.
 - **standings.json** — 10팀 순위표. MyTeam / 순위 표시용.
 - **teams.json** — 구단 레퍼런스(코드·팀명·색상). 온보딩이 fetch 전에 필요 → **앱에 번들**.
+- **recap-history.json** (파이프라인 산출물, 앱은 직접 fetch 안 함) — 크로스데이트 누적 적중률. append-only. 롤링 집계값은 games.json의 `trackRecord`로 미러링돼 앱에 전달(별도 fetch 0).
 
 타입은 `app/types.ts` 에 명문화(data-schema 미러). 스키마 변경 시 `types.ts` 와 data-schema.md 를 함께 갱신한다.
 
@@ -46,9 +47,11 @@ native-stack + bottom-tabs 조합. 화면명은 `app/navigation/` 및 `app/scree
 - 꿀잼지수 로직은 이 파일에 **응집**(앱과 공유 안 함). 공식 튜닝 시 앱 재배포 불필요.
 - **실패 시 exit 1** → Actions 가 커밋 안 함 → 앱은 직전 JSON 유지.
 - teams 단일 출처 = `data-pipeline/teams.mjs` → `teams.json`.
+- **트랙레코드 누적:** FINAL 경기 중 `honjam.frozen===true`(경기 전 freeze된 예측)인 것만 `recap-history.json`에 append-only 누적. 롤링 집계(최근 window=50건)를 `games.json`의 `trackRecord`에 임베드해 앱에 전달(별도 네트워크 요청 0 증가).
 
 ## 6. 불변 규칙 (구현 시 깨지 말 것)
 1. 꿀잼지수는 파이프라인 단일 출처. 앱·문서 어디서도 재구현 금지.
 2. 앱은 데이터 표시 전용. 네트워크 실패가 크래시로 이어지면 안 됨(캐시 폴백 필수).
 3. 외부 의존 최소화: 파이프라인 0개, 앱도 무거운 라이브러리 지양.
 4. 데이터 산출물(`data-pipeline/output/*.json`, 앱 번들 JSON)은 Actions 가 자동 갱신 — 수동 재생성·커밋 금지(push 충돌 유발).
+5. **트랙레코드 정직성 게이트:** 적중률 집계는 `frozen===true`(경기 전 freeze) 예측만 포함한다. post-hoc 재계산 예측은 영구 제외. `verdict===null`·`sampleSize < MIN_SAMPLE(10)` 상태는 앱에 노출 금지('집계 중' 표시).
