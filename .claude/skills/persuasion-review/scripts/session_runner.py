@@ -44,6 +44,10 @@ def _resolve_claude_bin() -> str:
 
 CLAUDE_BIN = _resolve_claude_bin()
 PERMISSION_MODE = "bypassPermissions"  # 헤드리스 실행 시 Read/Write 허용 간소화
+# 페르소나 시뮬·UX 프로브는 텍스트 롤플레이/관찰이라 Opus가 필요 없다. 기본 모델을
+# sonnet으로 고정해 fan-out(페르소나 × 단계)이 Opus 기본값으로 새는 것을 막는다.
+# 더 싼/비싼 모델이 필요하면 호출측에서 run_session(model=...)로 덮어쓴다.
+DEFAULT_MODEL = "sonnet"
 
 
 @dataclass
@@ -95,10 +99,12 @@ def run_session(
     output_path: Path,
     timeout_sec: int = 600,
     allowed_tools: tuple[str, ...] = DEFAULT_ALLOWED_TOOLS,
+    model: str = DEFAULT_MODEL,
 ) -> SessionResult:
     """claude headless 세션을 1회 실행하고 결과 파일을 파싱해 반환.
 
     allowed_tools: 기본 (Read, Write). UX probe 등 Bash가 필요한 세션은 호출측에서 확장.
+    model: 기본 sonnet. CLI 기본값(사용자 설정=Opus일 수 있음)으로 새지 않도록 항상 명시.
     """
     system_prompt = system_prompt_path.read_text(encoding="utf-8")
     output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -106,6 +112,7 @@ def run_session(
     cmd = [
         CLAUDE_BIN,
         "-p", task_prompt,
+        "--model", model,
         "--append-system-prompt", system_prompt,
         # subprocess에서는 상호작용 승인이 불가하므로 권한 체크를 완전히 스킵.
         # --permission-mode bypassPermissions만으로는 Write가 차단되는 사례 확인됨(2.1.117).
