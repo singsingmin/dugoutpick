@@ -14,6 +14,7 @@ import ScreenHeader from '../components/ScreenHeader';
 import SectionLabel from '../components/SectionLabel';
 import PixelText from '../components/PixelText';
 import MondayReport from '../components/MondayReport';
+import TrackRecordBadge from '../components/TrackRecordBadge';
 import { formatUpdatedAt, relativeFromNow, isKstMonday } from '../utils';
 import { colors, spacing } from '../theme';
 
@@ -97,6 +98,8 @@ function Body({ data, open, cheerTeam }: { data: GamesData; open: (id: string) =
         <PixelText variant="caption" color={colors.textDim}>{data.dateText}</PixelText>
         <PixelText variant="caption" color={colors.textDim}>갱신 {formatUpdatedAt(data.updatedAt)} · {relativeFromNow(data.updatedAt)}</PixelText>
       </View>
+
+      <TrackRecordBadge track={data.trackRecord} variant="today" />
 
       {liveGames.length > 0 && (
         <View style={styles.section}>
