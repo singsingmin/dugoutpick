@@ -28,8 +28,9 @@
       "id": 3,
       "name": "reason-diversity",
       "dir": "3-reason-diversity",
-      "status": "pending",
-      "created_at": "2026-06-24T21:00:00+0900"
+      "status": "completed",
+      "created_at": "2026-06-24T21:00:00+0900",
+      "completed_at": "2026-06-24T19:12:11+0900"
     }
   ]
 }
