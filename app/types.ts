@@ -52,6 +52,18 @@ export interface Decision {
   save: string | null;  // 세이브투수 (없으면 null)
 }
 
+export interface LineupPlayer {
+  order: number;
+  pos: string;
+  name: string;
+}
+
+export interface Lineup {
+  home: LineupPlayer[];
+  away: LineupPlayer[];
+  confirmed: boolean;
+}
+
 export interface Game {
   gameId: string;
   time: string;       // "14:00"
@@ -65,6 +77,7 @@ export interface Game {
   live: LiveState | null; // 경기중(LIVE)일 때만, 아니면 null
   recap: Recap | null;    // 종료(FINAL)일 때만 — 경기 후 꿀잼결산
   decision: Decision | null; // 종료(FINAL)일 때만 — 승/패/세이브 투수
+  lineup: Lineup | null; // SCHEDULED/LIVE만 — null이면 미제공
 }
 
 export interface TrackRecord {

@@ -112,6 +112,36 @@ async function fetchSchedule2mo(date) {
   return all.sort((a, b) => a.date.localeCompare(b.date));
 }
 
+// 선발 타순 조회: SCHEDULED/LIVE 경기만. j[3]=홈팀, j[4]=원정팀.
+// LINEUP_CK=false 시 최근 기준 추정 타순 반환(confirmed=false).
+async function fetchLineup(gameId, seasonId) {
+  try {
+    const res = await fetch('https://www.koreabaseball.com/ws/Schedule.asmx/GetLineUpAnalysis', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8', 'Referer': 'https://www.koreabaseball.com/', 'User-Agent': UA },
+      body: `leId=1&srId=0&seasonId=${seasonId}&gameId=${gameId}`,
+    });
+    if (!res.ok) return null;
+    const j = await res.json();
+    if (!Array.isArray(j) || j.length < 5) return null;
+    const confirmed = j[0]?.[0]?.LINEUP_CK === true;
+    const parseTable = (charObj) => {
+      try {
+        const str = Object.values(charObj || {}).join('');
+        const table = JSON.parse(str);
+        return (table.rows || []).map(r => {
+          const cells = (r.row || []).map(c => c.Text || '');
+          return { order: +cells[0] || 0, pos: cells[1] || '', name: cells[2] || '' };
+        }).filter(p => p.order > 0 && p.name);
+      } catch { return []; }
+    };
+    const home = parseTable(j[3]?.[0]);
+    const away = parseTable(j[4]?.[0]);
+    if (!home.length && !away.length) return null;
+    return { home, away, confirmed };
+  } catch { return null; }
+}
+
 // 팀별 최근 N경기 W/L·득실 (폼 타임라인용) — 종료 경기만
 function buildRecent(schedule) {
   const byTeam = {};
@@ -451,6 +481,16 @@ async function main() {
   const filledById = Object.values(byId).filter(Boolean).length;
   console.log(`[build] games=${rawGames.length} standings=${standings.length} pitchers=${Object.keys(pmap).length}(+${filledById} byId) recentTeams=${Object.keys(recent).length} thisWeekTop=${report.thisWeek.top.length}`);
 
+  // 라인업: SCHEDULED/LIVE 경기만 병렬 fetch
+  const seasonId = date.slice(0, 4);
+  const lineupMap = {};
+  const lineupTargets = rawGames.filter(g => { const s = gameStatus(g); return s === 'SCHEDULED' || s === 'LIVE'; });
+  await Promise.all(lineupTargets.map(async (g) => {
+    const lu = await fetchLineup(g.G_ID, seasonId);
+    if (lu) lineupMap[g.G_ID] = lu;
+  }));
+  console.log(`[build] lineups fetched=${Object.keys(lineupMap).length}/${lineupTargets.length}`);
+
   // freeze: 직전 산출물의 꿀잼지수를 읽어, 이미 시작된 경기는 '경기 전 값'을 유지(드리프트 방지)
   const prevHonjam = {};
   const prevStatus = {};
@@ -520,6 +560,7 @@ async function main() {
       live,
       recap,
       decision,
+      lineup: lineupMap[g.G_ID] ?? null,
     };
   });
 

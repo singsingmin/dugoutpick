@@ -14,6 +14,7 @@ import SectionLabel from '../components/SectionLabel';
 import { loadTeams } from '../data/load';
 import { border, colors, spacing } from '../theme';
 import FeedbackWidget from '../components/FeedbackWidget';
+import LineupSheet from '../components/LineupSheet';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'GameDetail'>;
 const TEAMS = loadTeams().teams;
@@ -34,6 +35,7 @@ export default function GameDetail({ route, navigation }: Props) {
   const { gameId } = route.params;
   const [game, setGame] = useState<Game | null>(null);
   const [loaded, setLoaded] = useState(false);
+  const [lineupVisible, setLineupVisible] = useState(false);
 
   useEffect(() => {
     let active = true;
@@ -108,7 +110,14 @@ export default function GameDetail({ route, navigation }: Props) {
 
       {/* 선발투수 비교 */}
       <View style={styles.section}>
-        <SectionLabel icon="⚾" label="선발투수 비교" />
+        <View style={styles.sectionHeader}>
+          <SectionLabel icon="⚾" label="선발투수 비교" />
+          {game.lineup && (
+            <Pressable onPress={() => setLineupVisible(true)} style={styles.lineupBtn}>
+              <PixelText variant="caption" color={colors.onGreen}>타순 ▼</PixelText>
+            </Pressable>
+          )}
+        </View>
         <Panel>
           <View style={styles.starterRow}>
             <PitcherCol side={game.away} />
@@ -117,6 +126,9 @@ export default function GameDetail({ route, navigation }: Props) {
           </View>
         </Panel>
       </View>
+      {game.lineup && (
+        <LineupSheet visible={lineupVisible} onClose={() => setLineupVisible(false)} game={game} />
+      )}
 
       {/* 관전 포인트 TOP 3 */}
       {game.honjam && game.honjam.points.length > 0 && (
@@ -194,6 +206,8 @@ const styles = StyleSheet.create({
   honjamRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: spacing.md, marginVertical: spacing.sm },
   spark: { fontSize: 18 },
   section: { marginTop: spacing.sm },
+  sectionHeader: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
+  lineupBtn: { backgroundColor: colors.accent, borderWidth: border.width, borderColor: colors.border, borderRadius: border.radius, paddingHorizontal: spacing.sm, paddingVertical: 2 },
   starterRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around' },
   pitcherCol: { alignItems: 'center', gap: spacing.xs, flex: 1 },
   pitcherName: { marginTop: spacing.xs },

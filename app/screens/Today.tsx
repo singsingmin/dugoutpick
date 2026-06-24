@@ -1,5 +1,5 @@
 // 오늘경기 탭: 그린 헤더 + 추천 히어로 + 나머지 경기(꿀잼 높은 순). (flow.md, ADR-004)
-import { useCallback, useState } from 'react';
+import { useCallback, useRef, useState } from 'react';
 import { View, ScrollView, ActivityIndicator, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
@@ -26,20 +26,41 @@ export default function Today() {
   const [cheerTeam, setCheerTeam] = useState<string | null>(null);
   const [failed, setFailed] = useState(false);
 
-  // 탭 재진입 시마다 재조회 → 라이브 점수/갱신 시각이 최신화(순위 탭과 동일 패턴)
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  // 탭 재진입 시마다 재조회. LIVE 경기 있으면 60초 자동 갱신(배터리 절약: LIVE 없으면 폴링 중단).
   useFocusEffect(
     useCallback(() => {
       let active = true;
-      loadGames()
-        .then((d) => {
-          if (!active) return;
-          setData(d);
-          setFailed(false);
-        })
-        .catch(() => active && setFailed(true));
+
+      const refresh = () => {
+        loadGames()
+          .then((d) => {
+            if (!active) return;
+            setData(d);
+            setFailed(false);
+            const hasLive = d.games.some((g) => g.status === 'LIVE');
+            if (hasLive && !intervalRef.current) {
+              intervalRef.current = setInterval(refresh, 60_000);
+            } else if (!hasLive && intervalRef.current) {
+              clearInterval(intervalRef.current);
+              intervalRef.current = null;
+            }
+          })
+          .catch(() => {
+            if (active) setFailed(true);
+          });
+      };
+
+      refresh();
       getCheerTeam().then((c) => active && setCheerTeam(c));
+
       return () => {
         active = false;
+        if (intervalRef.current) {
+          clearInterval(intervalRef.current);
+          intervalRef.current = null;
+        }
       };
     }, [])
   );
