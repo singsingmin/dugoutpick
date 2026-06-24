@@ -13,6 +13,7 @@ import HonjamBadge from '../components/HonjamBadge';
 import SectionLabel from '../components/SectionLabel';
 import { loadTeams } from '../data/load';
 import { border, colors, spacing } from '../theme';
+import FeedbackWidget from '../components/FeedbackWidget';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'GameDetail'>;
 const TEAMS = loadTeams().teams;
@@ -152,6 +153,15 @@ export default function GameDetail({ route, navigation }: Props) {
             <PixelText variant="caption" color={colors.textDim} style={styles.factorNote}>막대가 길수록 이 경기에서 강하게 작용한 요소</PixelText>
           </Panel>
         </View>
+      )}
+
+      {/* 경기 후 피드백 */}
+      {game.status === 'FINAL' && game.honjam != null && (
+        <FeedbackWidget
+          gameId={game.gameId}
+          predictedScore={game.honjam.score}
+          matchLabel={`${game.away.name} vs ${game.home.name}`}
+        />
       )}
     </ScrollView>
   );

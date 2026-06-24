@@ -22,7 +22,9 @@
     {
       "phase": 2,
       "name": "ui",
-      "status": "pending"
+      "status": "completed",
+      "started_at": "2026-06-24T23:34:33+0900",
+      "completed_at": "2026-06-24T23:50:00+0900"
     }
   ]
 }
