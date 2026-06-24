@@ -5,11 +5,36 @@
   "totalPhases": 6,
   "created_at": "2026-06-24T13:34:29+0900",
   "phases": [
-    { "phase": 0, "name": "docs", "status": "pending" },
-    { "phase": 1, "name": "recap-module", "status": "pending" },
-    { "phase": 2, "name": "recap-tests", "status": "pending" },
-    { "phase": 3, "name": "build-integration", "status": "pending" },
-    { "phase": 4, "name": "app-types-badge", "status": "pending" },
-    { "phase": 5, "name": "app-screens", "status": "pending" }
+    {
+      "phase": 0,
+      "name": "docs",
+      "status": "pending",
+      "started_at": "2026-06-24T13:40:41+0900"
+    },
+    {
+      "phase": 1,
+      "name": "recap-module",
+      "status": "pending"
+    },
+    {
+      "phase": 2,
+      "name": "recap-tests",
+      "status": "pending"
+    },
+    {
+      "phase": 3,
+      "name": "build-integration",
+      "status": "pending"
+    },
+    {
+      "phase": 4,
+      "name": "app-types-badge",
+      "status": "pending"
+    },
+    {
+      "phase": 5,
+      "name": "app-screens",
+      "status": "pending"
+    }
   ]
 }
