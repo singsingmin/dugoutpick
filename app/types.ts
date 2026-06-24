@@ -38,6 +38,7 @@ export interface Honjam {
   reason: string;                   // 한 줄 예측(카드용)
   points: string[];                 // 관전포인트 최대 3개(상세용)
   factors: Record<string, number>;  // 0~1 원시 기여값(디버그/튜닝)
+  frozen?: boolean;                 // 파이프라인 정직성 게이트용, 앱은 무시
 }
 
 export interface Recap {
@@ -66,12 +67,21 @@ export interface Game {
   decision: Decision | null; // 종료(FINAL)일 때만 — 승/패/세이브 투수
 }
 
+export interface TrackRecord {
+  window: number;     // 집계 윈도우(최근 N건)
+  sampleSize: number; // 윈도우 내 실제 표본 수
+  hitRate: number;    // 0~100, 예측 적중 비율(%)
+  bonusRate: number;  // 0~100, '기대 이상' 비율(%) — hitRate와 별개
+  ready: boolean;     // sampleSize >= 임계치(10)일 때만 true
+}
+
 export interface GamesData {
   date: string;                       // YYYYMMDD
   dateText: string;                   // "2026년 5월 31일"
   updatedAt: string;                  // ISO
   recommendedGameId: string | null;   // 최고 꿀잼지수 경기
   games: Game[];
+  trackRecord?: TrackRecord;          // 없으면 '집계 중' 처리
 }
 
 export interface Standing {
