@@ -1,7 +1,7 @@
 {
   "date": "20260625",
   "dateText": "2026년 6월 25일",
-  "updatedAt": "2026-06-25T10:00:33.512Z",
+  "updatedAt": "2026-06-25T10:02:16.942Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 5,
@@ -698,11 +698,11 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
-        "out": 2,
-        "heat": 49,
-        "label": "2회말 동점 접전"
+        "inning": 3,
+        "half": "T",
+        "out": 0,
+        "heat": 54,
+        "label": "3회초 동점 접전"
       },
       "recap": null,
       "decision": null,
