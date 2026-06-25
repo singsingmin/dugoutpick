@@ -10,6 +10,7 @@
 - [x] **라인업 조회** (2026-06-25) — `Schedule.asmx/GetLineUpAnalysis` API로 선발 타순(1~9번·포지션·이름) fetch → games.json 포함. 경기 상세 선발투수 섹션 옆 버튼 → 바텀시트 표시. 발표 전 추정 타순도 "최근 기준 추정" 표시로 제공.
 - [ ] **로컬 알림** — 내 팀 경기 시작/접전 알림. 서버 없이 가능(PRD에서 "추후"로 미룬 것).
 - [ ] **heat: 역전 직후 가산** — 직전 스냅샷 비교 필요. heat v2에서 보류한 드라마 요소.
+- [ ] **LLM 기반 텍스트 다양화** — 한 줄 예측·관전 포인트·월요 리포트 한줄평을 Claude Haiku/Sonnet으로 생성. 규칙 기반 템플릿의 반복 느낌 해소, 팀별 밈·말투 반영(`data-pipeline/team-context.json` 활용). 구현 조건: GitHub Actions secret에 `ANTHROPIC_API_KEY` 추가 필요. 파이프라인에서 gameId+date 키로 캐시해 2분 빌드마다 LLM 호출하지 않도록 설계. 비용 Haiku 기준 시즌 전체 ~$2.
 
 ## B. 📊 데이터·정확도
 - [ ] **꿀잼지수 공식 실경기 검증·튜닝** — recap(예측 vs 실제 적중률) 데이터 누적 → 가중치 보정.
