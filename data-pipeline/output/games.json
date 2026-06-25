@@ -1,7 +1,7 @@
 {
   "date": "20260625",
   "dateText": "2026년 6월 25일",
-  "updatedAt": "2026-06-25T11:11:43.476Z",
+  "updatedAt": "2026-06-25T11:14:21.007Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 5,
@@ -226,10 +226,10 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 0,
-        "label": "4회초 8점차"
+        "label": "4회말 8점차"
       },
       "recap": null,
       "decision": null,
@@ -387,7 +387,7 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "heat": 58,
         "label": "5회초 1점차 접전"
       },
@@ -545,11 +545,11 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 2,
-        "heat": 33,
-        "label": "5회말 3점차"
+        "inning": 6,
+        "half": "T",
+        "out": 0,
+        "heat": 35,
+        "label": "6회초 3점차"
       },
       "recap": null,
       "decision": null,
@@ -662,7 +662,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "네일",
           "era": 3.4,
@@ -708,8 +708,8 @@
         "inning": 7,
         "half": "T",
         "out": 1,
-        "heat": 26,
-        "label": "7회초 4점차"
+        "heat": 13,
+        "label": "7회초 5점차"
       },
       "recap": null,
       "decision": null,
