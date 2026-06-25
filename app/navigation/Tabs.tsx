@@ -1,5 +1,5 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { View, Text, StyleSheet, Platform } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import type { TabParamList } from './types';
 import Today from '../screens/Today';
 import Standings from '../screens/Standings';
@@ -31,9 +31,6 @@ export default function Tabs() {
           backgroundColor: colors.surface,
           borderTopColor: colors.border,
           borderTopWidth: border.width,
-          // 웹: RN이 height:49px 인라인 고정 → padding-bottom이 콘텐츠 압축 → 라벨 클립
-          // height:auto 오버라이드로 safe-area padding이 아이콘+라벨 아래에 붙도록 함
-          ...(Platform.OS === 'web' ? { height: 'auto' as any } : {}),
         },
         tabBarLabelStyle: { fontFamily: fonts.pixel, fontSize: 10 },
         tabBarActiveTintColor: accent,
