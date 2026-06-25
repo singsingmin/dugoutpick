@@ -1,7 +1,7 @@
 {
   "date": "20260625",
   "dateText": "2026년 6월 25일",
-  "updatedAt": "2026-06-25T12:34:18.738Z",
+  "updatedAt": "2026-06-25T12:36:20.481Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 6,
@@ -67,7 +67,7 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 0,
         "label": "8회초 8점차"
       },
@@ -354,7 +354,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 2,
-        "score": 9,
+        "score": 11,
         "starter": {
           "name": "소형준",
           "era": 3.48,
@@ -388,8 +388,8 @@
         "inning": 8,
         "half": "B",
         "out": 1,
-        "heat": 59,
-        "label": "8회말 2점차"
+        "heat": 29,
+        "label": "8회말 4점차"
       },
       "recap": null,
       "decision": null,
@@ -547,7 +547,7 @@
       "live": {
         "inning": 9,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "heat": 59,
         "label": "9회말 2점차"
       },
