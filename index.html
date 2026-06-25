@@ -49,6 +49,8 @@
     @media(display-mode:standalone){
       div:has(>div[role="tablist"]){height:calc(49px + env(safe-area-inset-bottom,0px))!important;padding-bottom:env(safe-area-inset-bottom,0px)!important;box-sizing:border-box!important}
     }
+    /* 스플래시: dvh 계산 오차·스크롤 무관하게 뷰포트에 고정 */
+    [data-testid="splash-container"]{position:fixed!important;inset:0!important;width:100%!important;height:100svh!important}
   </style>
 </head>
 
@@ -59,6 +61,6 @@
     </noscript>
     <!-- The root element for your Expo app. -->
     <div id="root"></div>
-  <script src="/dugoutpick/_expo/static/js/web/index-d8e08ff9237b53bd5866ce7ed5eb1b51.js" defer></script>
+  <script src="/dugoutpick/_expo/static/js/web/index-d295b0b23b3c33b78aca41fbcb8114a9.js" defer></script>
 </body>
 </html>

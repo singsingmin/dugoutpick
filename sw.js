@@ -1,4 +1,4 @@
-const CACHE = 'dugoutpick-1782396407042';
+const CACHE = 'dugoutpick-1782397186714';
 const PRECACHE = [
   '/dugoutpick/manifest.json',
   '/dugoutpick/icon.png',
