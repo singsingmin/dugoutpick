@@ -1,7 +1,7 @@
 {
   "date": "20260625",
   "dateText": "2026년 6월 25일",
-  "updatedAt": "2026-06-25T12:14:19.315Z",
+  "updatedAt": "2026-06-25T12:16:17.239Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 5,
@@ -227,7 +227,7 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "heat": 0,
         "label": "8회초 6점차"
       },
@@ -547,7 +547,7 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "heat": 56,
         "label": "8회말 2점차"
       },
@@ -674,7 +674,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 2,
+        "score": 4,
         "starter": {
           "name": "알칸타라",
           "era": 2.93,
@@ -708,8 +708,8 @@
         "inning": 9,
         "half": "B",
         "out": 2,
-        "heat": 0,
-        "label": "9회말 7점차"
+        "heat": 15,
+        "label": "9회말 5점차"
       },
       "recap": null,
       "decision": null,
