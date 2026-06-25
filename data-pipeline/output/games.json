@@ -1,7 +1,7 @@
 {
   "date": "20260625",
   "dateText": "2026년 6월 25일",
-  "updatedAt": "2026-06-25T10:02:16.942Z",
+  "updatedAt": "2026-06-25T10:04:17.854Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 5,
@@ -67,7 +67,7 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 17,
         "label": "2회초 4점차"
       },
@@ -175,14 +175,14 @@
       "gameId": "20260625NCLT0",
       "time": "18:30",
       "stadium": "사직",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "MS-T",
       "away": {
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "토다",
           "era": 4.73,
@@ -194,7 +194,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "이민석",
           "era": 5.34,
@@ -221,9 +221,16 @@
           "doom": 0,
           "park": 0.77,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 1,
+        "heat": 43,
+        "label": "1회초 동점 접전"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
@@ -380,7 +387,7 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 51,
         "label": "2회초 동점 접전"
       },
@@ -540,7 +547,7 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 54,
         "label": "3회초 동점 접전"
       },
