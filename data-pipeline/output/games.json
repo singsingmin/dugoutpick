@@ -1,12 +1,12 @@
 {
   "date": "20260625",
   "dateText": "2026년 6월 25일",
-  "updatedAt": "2026-06-25T12:38:16.788Z",
+  "updatedAt": "2026-06-25T12:40:29.851Z",
   "trackRecord": {
     "window": 50,
-    "sampleSize": 7,
+    "sampleSize": 8,
     "hitRate": 0,
-    "bonusRate": 14,
+    "bonusRate": 13,
     "ready": false
   },
   "recommendedGameId": "20260625OBHH0",
@@ -175,7 +175,7 @@
       "gameId": "20260625NCLT0",
       "time": "18:30",
       "stadium": "사직",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "MS-T",
       "away": {
@@ -224,112 +224,17 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 2,
-        "heat": 0,
-        "label": "9회말 6점차"
+      "live": null,
+      "recap": {
+        "actual": 2,
+        "verdict": "기대 이하"
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "황성빈"
-          },
-          {
-            "order": 2,
-            "pos": "2루수",
-            "name": "고승민"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "레이예스"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "한동희"
-          },
-          {
-            "order": 5,
-            "pos": "1루수",
-            "name": "나승엽"
-          },
-          {
-            "order": 6,
-            "pos": "우익수",
-            "name": "윤동희"
-          },
-          {
-            "order": 7,
-            "pos": "유격수",
-            "name": "전민재"
-          },
-          {
-            "order": 8,
-            "pos": "3루수",
-            "name": "박승욱"
-          },
-          {
-            "order": 9,
-            "pos": "포수",
-            "name": "손성빈"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "유격수",
-            "name": "김주원"
-          },
-          {
-            "order": 2,
-            "pos": "좌익수",
-            "name": "이우성"
-          },
-          {
-            "order": 3,
-            "pos": "2루수",
-            "name": "박민우"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "박건우"
-          },
-          {
-            "order": 5,
-            "pos": "우익수",
-            "name": "권희동"
-          },
-          {
-            "order": 6,
-            "pos": "1루수",
-            "name": "데이비슨"
-          },
-          {
-            "order": 7,
-            "pos": "중견수",
-            "name": "천재환"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "김형준"
-          },
-          {
-            "order": 9,
-            "pos": "3루수",
-            "name": "김휘집"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260625SKKT0",
@@ -354,7 +259,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 2,
-        "score": 11,
+        "score": 12,
         "starter": {
           "name": "소형준",
           "era": 3.48,
@@ -388,8 +293,8 @@
         "inning": 8,
         "half": "B",
         "out": 1,
-        "heat": 29,
-        "label": "8회말 4점차"
+        "heat": 15,
+        "label": "8회말 5점차"
       },
       "recap": null,
       "decision": null,
