@@ -1,7 +1,7 @@
 {
   "date": "20260625",
   "dateText": "2026년 6월 25일",
-  "updatedAt": "2026-06-25T12:06:19.138Z",
+  "updatedAt": "2026-06-25T12:08:18.096Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 5,
@@ -227,7 +227,7 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "heat": 0,
         "label": "7회말 6점차"
       },
