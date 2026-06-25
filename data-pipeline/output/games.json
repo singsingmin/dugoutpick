@@ -1,7 +1,7 @@
 {
   "date": "20260625",
   "dateText": "2026년 6월 25일",
-  "updatedAt": "2026-06-25T08:40:21.733Z",
+  "updatedAt": "2026-06-25T08:44:17.985Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 5,
@@ -565,7 +565,7 @@
           {
             "order": 8,
             "pos": "좌익수",
-            "name": "유민"
+            "name": "이진영"
           },
           {
             "order": 9,
@@ -601,13 +601,13 @@
           },
           {
             "order": 6,
-            "pos": "유격수",
-            "name": "박찬호"
+            "pos": "1루수",
+            "name": "오명진"
           },
           {
             "order": 7,
-            "pos": "1루수",
-            "name": "오명진"
+            "pos": "3루수",
+            "name": "안재석"
           },
           {
             "order": 8,
@@ -616,11 +616,11 @@
           },
           {
             "order": 9,
-            "pos": "3루수",
-            "name": "안재석"
+            "pos": "유격수",
+            "name": "박지훈"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
