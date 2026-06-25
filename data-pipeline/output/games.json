@@ -1,7 +1,7 @@
 {
   "date": "20260625",
   "dateText": "2026년 6월 25일",
-  "updatedAt": "2026-06-25T13:08:18.191Z",
+  "updatedAt": "2026-06-25T13:10:24.931Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 9,
@@ -22,7 +22,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 3,
-        "score": 11,
+        "score": 13,
         "starter": {
           "name": "후라도",
           "era": 2.86,
@@ -67,9 +67,9 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 0,
-        "heat": 15,
-        "label": "9회초 5점차"
+        "out": 1,
+        "heat": 0,
+        "label": "9회초 7점차"
       },
       "recap": null,
       "decision": null,
