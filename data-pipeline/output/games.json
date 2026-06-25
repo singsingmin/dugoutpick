@@ -1,7 +1,7 @@
 {
   "date": "20260625",
   "dateText": "2026년 6월 25일",
-  "updatedAt": "2026-06-25T12:44:17.178Z",
+  "updatedAt": "2026-06-25T12:46:16.963Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 8,
@@ -34,7 +34,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "이정용",
           "era": 6.05,
@@ -69,7 +69,7 @@
         "half": "B",
         "out": 0,
         "heat": 0,
-        "label": "8회말 8점차"
+        "label": "8회말 7점차"
       },
       "recap": null,
       "decision": null,
@@ -292,7 +292,7 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 15,
         "label": "9회초 5점차"
       },
