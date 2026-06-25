@@ -1,7 +1,7 @@
 {
   "date": "20260625",
   "dateText": "2026년 6월 25일",
-  "updatedAt": "2026-06-25T10:08:17.520Z",
+  "updatedAt": "2026-06-25T10:10:22.954Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 5,
@@ -22,7 +22,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 3,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "후라도",
           "era": 2.86,
@@ -68,8 +68,8 @@
         "inning": 2,
         "half": "T",
         "out": 2,
-        "heat": 9,
-        "label": "2회초 5점차"
+        "heat": 0,
+        "label": "2회초 6점차"
       },
       "recap": null,
       "decision": null,
@@ -342,7 +342,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "베니지아노",
           "era": 5.91,
@@ -388,8 +388,8 @@
         "inning": 2,
         "half": "T",
         "out": 1,
-        "heat": 43,
-        "label": "2회초 1점차 접전"
+        "heat": 34,
+        "label": "2회초 2점차"
       },
       "recap": null,
       "decision": null,
@@ -547,7 +547,7 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "heat": 54,
         "label": "3회말 동점 접전"
       },
@@ -662,7 +662,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "네일",
           "era": 3.4,
@@ -707,9 +707,9 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 0,
-        "heat": 54,
-        "label": "3회초 동점 접전"
+        "out": 2,
+        "heat": 45,
+        "label": "3회초 1점차 접전"
       },
       "recap": null,
       "decision": null,
