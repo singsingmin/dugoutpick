@@ -36,7 +36,8 @@ async function fetchStandings() {
   const rowsOf = (t) => [...t.matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/g)]
     .map(m => [...m[1].matchAll(/<t[dh][^>]*>([\s\S]*?)<\/t[dh]>/g)].map(c => strip(c[1])));
 
-  // 1) 순위표 (컬럼: 순위|팀명|경기|승|패|무|승률|게임차|최근10|연속|홈|방문)
+  // 1) 순위표 (컬럼: 순위|팀명|경기|승|패|무|승률|게임차|최근10|연속|홈|방문|득점?|실점?…)
+  // r[12]=득점(RS) 존재 시 타선 득점력 계산에 활용. 컬럼 수는 KBO 페이지 버전에 따라 가변.
   const data = rowsOf(html).filter(r => r.length >= 12 && /^\d+$/.test(r[0]));
   const standings = data.map(r => {
     const team = byName[r[1]];
@@ -46,6 +47,7 @@ async function fetchStandings() {
       winRate: parseFloat(r[6]) || 0,
       gamesBehind: r[7] === '0' || r[7] === '-' ? 0 : parseFloat(r[7]) || 0,
       last10: r[8], streak: r[9], home: r[10], away: r[11],
+      rs: r.length > 12 ? (+r[12] || 0) : 0,  // 득점(Runs Scored). 없으면 0(폴백: 리그평균 가정)
     };
   });
 
@@ -201,8 +203,22 @@ const playoffRel = (r) => (r >= 4 && r <= 7 ? 1 : (r === 3 || r === 8 ? 0.5 : 0)
 const aceness = (era) => clamp01((5.0 - era) / 3.0);
 const LEAGUE_ERA = 4.20;
 // doom(멸망전): 둘 다 깊은 연패일 때 '연패 탈출 서사' 가산. 평소 경기는 0이라 기존 점수 불변(ADR-016).
-const W = { close: 30, quality: 20, form: 15, rivalry: 10, playoff: 10, pitcher: 15, doom: 18 };
-const calibrate = (raw) => Math.round(100 / (1 + Math.exp(-(raw - 45) / 10)));
+// park(파크팩터)+offense(타선득점력) 추가 — center 45→51 (+6) 보정으로 기존 점수 분포 유지.
+const W = { close: 30, quality: 20, form: 15, rivalry: 10, playoff: 10, pitcher: 15, doom: 18, park: 5, offense: 6 };
+const calibrate = (raw) => Math.round(100 / (1 + Math.exp(-(raw - 51) / 10)));
+
+// 파크팩터: 구장별 타자/투수 유불리 (1.0=리그평균). 부분 문자열 매칭.
+// 라팍·사직 타자 유리, 잠실·고척 투수 유리 — KBO 통계적 경향 반영.
+const PARK_FACTOR_MAP = [
+  ['대구', 1.10], ['사직', 1.05], ['광주', 1.03], ['창원', 1.02],
+  ['인천', 1.00], ['수원', 0.98], ['대전', 0.96], ['잠실', 0.90], ['고척', 0.88],
+];
+const parkScore = (stadium) => {
+  const s = stadium ?? '';
+  const pf = PARK_FACTOR_MAP.find(([k]) => s.includes(k))?.[1] ?? 1.00;
+  // 0.88(고척)→0, 1.00(중립)→0.55, 1.10(라팍)→1.0
+  return clamp01((pf - 0.88) / 0.22);
+};
 
 const rivKey = (a, b) => [a, b].sort().join('|');
 const RIVALRY = { 'LG|두산': 1.0, 'NC|롯데': 0.7, '롯데|삼성': 0.7, 'KIA|삼성': 0.6 };
@@ -215,13 +231,18 @@ const streakSigned = (s) => {
   return (+m[1]) * (m[2] === '승' ? 1 : -1);
 };
 
-function computeHonjam(aw, hm, sa, sh, aPit, hPit, aERA, hERA, h2hRec) {
+function computeHonjam(aw, hm, sa, sh, aPit, hPit, aERA, hERA, h2hRec, stadium) {
   const a = { rank: sa.rank, wr: sa.winRate, gb: sa.gamesBehind, l10: last10Wins(sa.last10), streak: streakSigned(sa.streak) };
   const h = { rank: sh.rank, wr: sh.winRate, gb: sh.gamesBehind, l10: last10Wins(sh.last10), streak: streakSigned(sh.streak) };
   // form은 '방향 무관 기세'(연승·연패 대칭, ADR-007): 최근10이 .500에서 멀수록 + 연속이 길수록.
   const l10dev = (n) => Math.abs(n - 5) / 5;
   // doom(멸망전): 둘 다 5연패 이상일 때, 더 얕은 쪽 연패 깊이로 강도 산정(누가 먼저 끊나 서사).
   const loseDepth = Math.min(Math.max(0, -a.streak), Math.max(0, -h.streak));
+  // 타선 득점력: 경기당 득점(RS/G). rs=0이면 리그평균(5.0) 가정 → 중립값 0.5.
+  const LEAGUE_RS_PER_GAME = 5.0;
+  const rsPerGame = (rs, games) => (rs > 0 && games > 0) ? rs / games : LEAGUE_RS_PER_GAME;
+  const aRSPG = rsPerGame(sa.rs ?? 0, sa.games);
+  const hRSPG = rsPerGame(sh.rs ?? 0, sh.games);
   const parts = {
     close: clamp01(1 - Math.abs(a.wr - h.wr) / 0.15),
     quality: (strength(a.rank) + strength(h.rank)) / 2,
@@ -230,6 +251,9 @@ function computeHonjam(aw, hm, sa, sh, aPit, hPit, aERA, hERA, h2hRec) {
     playoff: (playoffRel(a.rank) + playoffRel(h.rank)) / 2,
     pitcher: (aceness(aERA) + aceness(hERA)) / 2,
     doom: loseDepth >= 5 ? clamp01((loseDepth - 3) / 7) : 0,
+    park: parkScore(stadium),
+    // 양 팀 평균 득점/경기: 3.5이하→0, 5.0(리그평균)→0.5, 6.5이상→1.0
+    offense: clamp01(((aRSPG + hRSPG) / 2 - 3.5) / 3.0),
   };
   if (Math.abs(a.rank - h.rank) <= 1 && a.rank >= 3 && a.rank <= 8 && h.rank >= 3 && h.rank <= 8) parts.playoff = 1;
 
@@ -262,6 +286,13 @@ function computeHonjam(aw, hm, sa, sh, aPit, hPit, aERA, hERA, h2hRec) {
     : (aERA < 3.6 && hERA < 3.6) ? `양 팀 에이스 투수전(ERA ${aERA}·${hERA})`
     : (bestERA < 3.6 ? `${bestNM}(ERA ${bestERA}) 호투 기대` : '');
   frag.doom = parts.doom > 0 ? `연패 탈출 멸망전 · ${aw} ${-a.streak}연패 vs ${hm} ${-h.streak}연패` : '';
+  frag.park = parts.park >= 0.8 ? `라팍·사직급 타자 친화 구장, 고득점 기대`
+    : parts.park <= 0.2 ? `잠실·고척급 투수 공원, 투수전 예상`
+    : '';
+  const avgRSPG = ((aRSPG + hRSPG) / 2).toFixed(1);
+  frag.offense = parts.offense >= 0.7 ? `양 팀 타선 화력 상위권(평균 ${avgRSPG}점/경기)`
+    : parts.offense >= 0.5 ? `${aw}·${hm} 득점력 기대(평균 ${avgRSPG}점/경기)`
+    : '';
 
   const raw = Object.entries(W).reduce((s, [k, w]) => s + w * parts[k], 0);
   // rivalry·doom은 일반 기여도에서 빼고 '리드 문구'로 따로 앞세움
@@ -420,7 +451,7 @@ function buildReport(date, schedule, standings) {
       const aw = byCode[p.away]?.name, hm = byCode[p.home]?.name;
       const sa = stByName[aw], sh = stByName[hm];
       if (!sa || !sh) return null;
-      const hj = computeHonjam(aw, hm, sa, sh, '', '', WEEKLY_ERA, WEEKLY_ERA, null); // 선발 평균 에이스 가정
+      const hj = computeHonjam(aw, hm, sa, sh, '', '', WEEKLY_ERA, WEEKLY_ERA, null, null); // 선발 평균 에이스, 구장 중립 가정
       const ds = p.dates.slice().sort();
       return { away: p.away, home: p.home, pred: hj.score, reason: hj.reason, dateStart: ds[0], dateEnd: ds[ds.length - 1] };
     })
@@ -516,7 +547,7 @@ async function main() {
       const frozen = resolveFrozen({ prevHonjam: prevHonjam[g.G_ID], prevStatus: prevStatus[g.G_ID] });
       honjam = { ...prevHonjam[g.G_ID], frozen }; // 경기 시작 후엔 경기 전 값 고정 + frozen 보존/발화
     } else if (sa && sh) {
-      honjam = computeHonjam(awName, hmName, sa, sh, aPit, hPit, aStat?.era ?? LEAGUE_ERA, hStat?.era ?? LEAGUE_ERA, h2h[awName]?.[hmName] ?? null);
+      honjam = computeHonjam(awName, hmName, sa, sh, aPit, hPit, aStat?.era ?? LEAGUE_ERA, hStat?.era ?? LEAGUE_ERA, h2h[awName]?.[hmName] ?? null, g.S_NM ?? null);
     }
     const starter = (name, st) => name ? { name, era: st?.era ?? null, w: st?.w ?? null, l: st?.l ?? null } : null;
     // 종료 경기: 승리/패전/세이브 투수(경기 단위 필드). 무승부면 win/lose 없음 → null.
