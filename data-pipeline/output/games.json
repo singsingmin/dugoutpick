@@ -1,7 +1,7 @@
 {
   "date": "20260625",
   "dateText": "2026년 6월 25일",
-  "updatedAt": "2026-06-25T10:12:17.015Z",
+  "updatedAt": "2026-06-25T10:14:17.863Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 5,
@@ -22,7 +22,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 3,
-        "score": 6,
+        "score": 8,
         "starter": {
           "name": "후라도",
           "era": 2.86,
@@ -66,10 +66,10 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 0,
-        "label": "2회초 6점차"
+        "label": "2회말 8점차"
       },
       "recap": null,
       "decision": null,
@@ -182,7 +182,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "토다",
           "era": 4.73,
@@ -227,9 +227,9 @@
       "live": {
         "inning": 1,
         "half": "T",
-        "out": 1,
-        "heat": 43,
-        "label": "1회초 동점 접전"
+        "out": 2,
+        "heat": 30,
+        "label": "1회초 2점차"
       },
       "recap": null,
       "decision": null,
@@ -387,7 +387,7 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "heat": 34,
         "label": "2회초 2점차"
       },
@@ -547,7 +547,7 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "heat": 54,
         "label": "3회말 동점 접전"
       },
@@ -706,10 +706,10 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 19,
-        "label": "3회초 4점차"
+        "label": "3회말 4점차"
       },
       "recap": null,
       "decision": null,
