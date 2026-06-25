@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { Modal, View, ScrollView, Pressable, StyleSheet } from 'react-native';
 import { loadReport, loadTeams } from '../data/load';
+import { getCheerTeam } from '../data/team';
 import type { ReportData } from '../types';
 import PixelText from './PixelText';
 import { border, colors, spacing } from '../theme';
@@ -21,6 +22,11 @@ interface GameEntry { date: string; away: string; home: string; }
 
 export default function WeeklyScheduleSheet({ visible, onClose }: Props) {
   const [report, setReport] = useState<ReportData | null>(null);
+  const [cheerTeam, setCheerTeam] = useState<string | null>(null);
+
+  useEffect(() => {
+    getCheerTeam().then(setCheerTeam);
+  }, []);
 
   useEffect(() => {
     if (!visible) return;
@@ -52,11 +58,8 @@ export default function WeeklyScheduleSheet({ visible, onClose }: Props) {
 
   return (
     <Modal visible={visible} transparent animationType="slide" onRequestClose={onClose}>
-      {/* container: 전체 화면, 시트는 하단 정렬 */}
       <View style={styles.container}>
-        {/* backdrop: 절대 위치로 전체 커버 — 시트 아래에 렌더되므로 시트 영역 터치는 올라오지 않음 */}
         <Pressable style={styles.backdrop} onPress={onClose} />
-        {/* sheet: 고정 높이(75%) → ScrollView flex:1 이 정확히 작동하는 유일한 보장 방법 */}
         <View style={styles.sheet}>
           <View style={styles.handle} />
           <View style={styles.header}>
@@ -82,13 +85,17 @@ export default function WeeklyScheduleSheet({ visible, onClose }: Props) {
                     {shortDateDow(date)}
                   </PixelText>
                 </View>
-                {games.map((g, i) => (
-                  <View key={i} style={styles.gameRow}>
-                    <PixelText variant="body" color={teamColorOf(g.away)} style={styles.teamNameText} numberOfLines={1}>{teamNameOf(g.away)}</PixelText>
-                    <PixelText variant="caption" color={colors.textDim} style={styles.vs}>vs</PixelText>
-                    <PixelText variant="body" color={teamColorOf(g.home)} style={styles.teamNameText} numberOfLines={1}>{teamNameOf(g.home)}</PixelText>
-                  </View>
-                ))}
+                {games.map((g, i) => {
+                  const isMyTeam = !!cheerTeam && (g.away === cheerTeam || g.home === cheerTeam);
+                  return (
+                    <View key={i} style={[styles.gameRow, isMyTeam && styles.myTeamRow]}>
+                      {isMyTeam && <View style={styles.myTeamAccent} />}
+                      <PixelText variant="body" color={teamColorOf(g.away)} style={styles.teamNameText} numberOfLines={1}>{teamNameOf(g.away)}</PixelText>
+                      <PixelText variant="caption" color={colors.textDim} style={styles.vs}>vs</PixelText>
+                      <PixelText variant="body" color={teamColorOf(g.home)} style={styles.teamNameText} numberOfLines={1}>{teamNameOf(g.home)}</PixelText>
+                    </View>
+                  );
+                })}
               </View>
             ))}
           </ScrollView>
@@ -135,6 +142,8 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1, borderBottomColor: colors.surfaceAlt,
     gap: spacing.sm,
   },
+  myTeamRow: { backgroundColor: colors.goldSoft },
+  myTeamAccent: { width: 3, alignSelf: 'stretch', backgroundColor: colors.gold, borderRadius: 2, marginRight: 2 },
   teamNameText: { flex: 1, textAlign: 'center' },
   vs: { width: 20, textAlign: 'center' },
 });
