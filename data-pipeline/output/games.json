@@ -1,7 +1,7 @@
 {
   "date": "20260625",
   "dateText": "2026년 6월 25일",
-  "updatedAt": "2026-06-25T08:38:18.435Z",
+  "updatedAt": "2026-06-25T08:40:21.733Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 5,
@@ -381,8 +381,8 @@
           },
           {
             "order": 2,
-            "pos": "1루수",
-            "name": "김현수"
+            "pos": "좌익수",
+            "name": "김민혁"
           },
           {
             "order": 3,
@@ -396,18 +396,18 @@
           },
           {
             "order": 5,
-            "pos": "2루수",
-            "name": "김상수"
-          },
-          {
-            "order": 6,
             "pos": "3루수",
             "name": "허경민"
           },
           {
+            "order": 6,
+            "pos": "2루수",
+            "name": "김상수"
+          },
+          {
             "order": 7,
-            "pos": "좌익수",
-            "name": "김민혁"
+            "pos": "1루수",
+            "name": "오윤석"
           },
           {
             "order": 8,
@@ -417,7 +417,7 @@
           {
             "order": 9,
             "pos": "유격수",
-            "name": "권동진"
+            "name": "이강민"
           }
         ],
         "away": [
@@ -467,7 +467,7 @@
             "name": "조형우"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
