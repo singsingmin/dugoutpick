@@ -5,10 +5,31 @@
   "totalPhases": 5,
   "created_at": "2026-06-25T20:00:34+0900",
   "phases": [
-    { "phase": 0, "name": "docs", "status": "pending" },
-    { "phase": 1, "name": "types", "status": "pending" },
-    { "phase": 2, "name": "pipeline", "status": "pending" },
-    { "phase": 3, "name": "ui-badge", "status": "pending" },
-    { "phase": 4, "name": "ac-verify", "status": "pending" }
+    {
+      "phase": 0,
+      "name": "docs",
+      "status": "completed",
+      "started_at": "2026-06-25T22:39:39+0900"
+    },
+    {
+      "phase": 1,
+      "name": "types",
+      "status": "pending"
+    },
+    {
+      "phase": 2,
+      "name": "pipeline",
+      "status": "pending"
+    },
+    {
+      "phase": 3,
+      "name": "ui-badge",
+      "status": "pending"
+    },
+    {
+      "phase": 4,
+      "name": "ac-verify",
+      "status": "pending"
+    }
   ]
 }
