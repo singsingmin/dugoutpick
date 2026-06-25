@@ -1,0 +1,61 @@
+{
+  "iter_id": "3-20260625_200034",
+  "status": "warn",
+  "task": {
+    "dir": "tasks/5-recap-preview",
+    "name": "recap-preview",
+    "overall_status": "completed"
+  },
+  "phases": [
+    {
+      "phase": 0,
+      "name": "docs",
+      "status": "completed",
+      "duration_sec": 172,
+      "notes": ""
+    },
+    {
+      "phase": 1,
+      "name": "types",
+      "status": "completed",
+      "duration_sec": 75,
+      "notes": "pre-existing tsc errors in LiveCard.tsx/TeamTheme.tsx — unrelated to this change, existed before phase 1"
+    },
+    {
+      "phase": 2,
+      "name": "pipeline",
+      "status": "completed",
+      "duration_sec": 75,
+      "notes": ""
+    },
+    {
+      "phase": 3,
+      "name": "ui-badge",
+      "status": "completed",
+      "duration_sec": 96,
+      "notes": "pre-existing tsc errors in LiveCard.tsx/TeamTheme.tsx unchanged — no new type errors introduced"
+    },
+    {
+      "phase": 4,
+      "name": "ac-verify",
+      "status": "completed",
+      "duration_sec": 113,
+      "notes": "검증2(web export) PASS, 검증3(pipeline syntax) PASS, 검증4(smoke test) PASS. 검증1 tsc exit 2: LiveCard.tsx/TeamTheme.tsx pre-existing 에러, recap-preview 코드와 무관"
+    }
+  ],
+  "issues": [
+    "tsc 빌드 exit 2: LiveCard.tsx/TeamTheme.tsx에 pre-existing 타입 에러 미해결 — recap-preview와 무관하나 장기 방치 시 타입 안전성 저하 우려"
+  ],
+  "conclusion": "5개 phase 모두 completed, exitCode 0. pre-existing tsc 에러만 잔존(warn). recap-preview 기능 정상 구현.",
+  "carry_over": [
+    "LiveCard.tsx/TeamTheme.tsx pre-existing tsc 에러 수정 — 3개 phase에서 반복 언급, 다음 iteration에서 별도 정리 권장",
+    "APK 재빌드 미실시 — 앱 컴포넌트 변경 포함, 배포 전 재빌드 필요"
+  ],
+  "progress": {
+    "previous_iter_id": "1-20260624_130645",
+    "previous_run_id": "kbo-core-fan-01_20260624_130750",
+    "current_run_id": "kbo-core-fan-01_20260625_200134",
+    "signal": "improved",
+    "summary": "keyman confidence 60→72(+12): 이전 run에서 트랙레코드가 전혀 없어 '정확도 미검증'이 결정적 drop 사유였으나, 트랙레코드 기능 구현 후 pain이 '집계 미달로 증거 없음'으로 좁혀졌다. 여전히 keyman_drop이지만 거부 근거가 구조적 부재에서 초기 데이터 누적 부족으로 이행한 것으로, 이번 recap-preview 구현(집계 미달 시 최근 5경기 복기 카드 표시)이 이 좁혀진 pain을 직접 겨냥한다. iOS 미지원·추정 라인업 정확도 등 2차 pain은 잔존."
+  }
+}
