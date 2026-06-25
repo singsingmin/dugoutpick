@@ -27,8 +27,10 @@ const FACTOR_META: { key: string; label: string; weight: number }[] = [
   { key: 'doom', label: '연패 탈출 멸망전', weight: 18 },
   { key: 'form', label: '연승·연패 강도', weight: 15 },
   { key: 'pitcher', label: '선발 매치업', weight: 15 },
+  { key: 'offense', label: '타선 득점력', weight: 6 },
   { key: 'rivalry', label: '라이벌 매치', weight: 10 },
   { key: 'playoff', label: '가을야구 경쟁', weight: 10 },
+  { key: 'park', label: '파크팩터', weight: 5 },
 ];
 
 export default function GameDetail({ route, navigation }: Props) {
