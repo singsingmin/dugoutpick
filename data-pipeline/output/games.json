@@ -1,7 +1,7 @@
 {
   "date": "20260625",
   "dateText": "2026년 6월 25일",
-  "updatedAt": "2026-06-25T10:30:30.517Z",
+  "updatedAt": "2026-06-25T10:32:17.928Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 5,
@@ -227,7 +227,7 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 2,
+        "out": 3,
         "heat": 33,
         "label": "2회초 2점차"
       },
@@ -502,7 +502,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "벤자민",
           "era": 3.02,
@@ -548,8 +548,8 @@
         "inning": 4,
         "half": "T",
         "out": 0,
-        "heat": 40,
-        "label": "4회초 2점차"
+        "heat": 30,
+        "label": "4회초 3점차"
       },
       "recap": null,
       "decision": null,
