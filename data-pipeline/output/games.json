@@ -1,13 +1,35 @@
 {
   "date": "20260625",
   "dateText": "2026년 6월 25일",
-  "updatedAt": "2026-06-25T13:22:19.047Z",
+  "updatedAt": "2026-06-25T14:36:20.410Z",
   "trackRecord": {
     "window": 50,
-    "sampleSize": 10,
-    "hitRate": 10,
-    "bonusRate": 10,
-    "ready": true
+    "sampleSize": 5,
+    "hitRate": 20,
+    "bonusRate": 20,
+    "ready": false,
+    "recentRecapPreview": [
+      {
+        "pred": 17,
+        "verdict": "예측 적중"
+      },
+      {
+        "pred": 87,
+        "verdict": "기대 이하"
+      },
+      {
+        "pred": 6,
+        "verdict": "기대 이상"
+      },
+      {
+        "pred": 85,
+        "verdict": "기대 이하"
+      },
+      {
+        "pred": 56,
+        "verdict": "기대 이하"
+      }
+    ]
   },
   "recommendedGameId": "20260625OBHH0",
   "games": [
@@ -66,7 +88,7 @@
       },
       "live": null,
       "recap": {
-        "actual": 2,
+        "actual": 5,
         "verdict": "기대 이하"
       },
       "decision": {
@@ -131,7 +153,7 @@
       },
       "live": null,
       "recap": {
-        "actual": 2,
+        "actual": 7,
         "verdict": "기대 이하"
       },
       "decision": {
@@ -196,8 +218,8 @@
       },
       "live": null,
       "recap": {
-        "actual": 7,
-        "verdict": "예측 적중"
+        "actual": 19,
+        "verdict": "기대 이상"
       },
       "decision": {
         "win": "박영현",
@@ -261,7 +283,7 @@
       },
       "live": null,
       "recap": {
-        "actual": 34,
+        "actual": 61,
         "verdict": "기대 이하"
       },
       "decision": {
@@ -326,8 +348,8 @@
       },
       "live": null,
       "recap": {
-        "actual": 6,
-        "verdict": "기대 이하"
+        "actual": 17,
+        "verdict": "예측 적중"
       },
       "decision": {
         "win": "네일",
