@@ -1,7 +1,7 @@
 {
   "date": "20260625",
   "dateText": "2026년 6월 25일",
-  "updatedAt": "2026-06-25T13:18:19.103Z",
+  "updatedAt": "2026-06-25T13:22:19.047Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 10,
@@ -25,8 +25,8 @@
         "score": 13,
         "starter": {
           "name": "후라도",
-          "era": 2.86,
-          "w": 3,
+          "era": 2.95,
+          "w": 4,
           "l": 1
         }
       },
@@ -37,9 +37,9 @@
         "score": 6,
         "starter": {
           "name": "이정용",
-          "era": 6.05,
+          "era": 7.01,
           "w": 1,
-          "l": 2
+          "l": 3
         }
       },
       "honjam": {
@@ -70,8 +70,8 @@
         "verdict": "기대 이하"
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "후라도",
+        "lose": "이정용",
         "save": null
       },
       "lineup": null
@@ -90,8 +90,8 @@
         "score": 8,
         "starter": {
           "name": "토다",
-          "era": 4.73,
-          "w": 3,
+          "era": 4.52,
+          "w": 4,
           "l": 5
         }
       },
@@ -102,9 +102,9 @@
         "score": 2,
         "starter": {
           "name": "이민석",
-          "era": 5.34,
+          "era": 6.75,
           "w": 1,
-          "l": 1
+          "l": 2
         }
       },
       "honjam": {
@@ -135,8 +135,8 @@
         "verdict": "기대 이하"
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "토다",
+        "lose": "이민석",
         "save": null
       },
       "lineup": null
@@ -155,7 +155,7 @@
         "score": 7,
         "starter": {
           "name": "베니지아노",
-          "era": 5.91,
+          "era": 6.27,
           "w": 2,
           "l": 5
         }
@@ -167,7 +167,7 @@
         "score": 12,
         "starter": {
           "name": "소형준",
-          "era": 3.48,
+          "era": 3.94,
           "w": 3,
           "l": 0
         }
@@ -200,8 +200,8 @@
         "verdict": "예측 적중"
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "박영현",
+        "lose": "노경은",
         "save": null
       },
       "lineup": null
@@ -220,8 +220,8 @@
         "score": 5,
         "starter": {
           "name": "벤자민",
-          "era": 3.02,
-          "w": 3,
+          "era": 2.9,
+          "w": 4,
           "l": 6
         }
       },
@@ -232,9 +232,9 @@
         "score": 3,
         "starter": {
           "name": "박준영",
-          "era": 4.03,
+          "era": 4.22,
           "w": 2,
-          "l": 2
+          "l": 3
         }
       },
       "honjam": {
@@ -265,9 +265,9 @@
         "verdict": "기대 이하"
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "벤자민",
+        "lose": "박준영",
+        "save": "이영하"
       },
       "lineup": null
     },
@@ -285,8 +285,8 @@
         "score": 9,
         "starter": {
           "name": "네일",
-          "era": 3.4,
-          "w": 4,
+          "era": 3.15,
+          "w": 5,
           "l": 4
         }
       },
@@ -297,9 +297,9 @@
         "score": 4,
         "starter": {
           "name": "알칸타라",
-          "era": 2.93,
+          "era": 3.12,
           "w": 7,
-          "l": 5
+          "l": 6
         }
       },
       "honjam": {
@@ -330,8 +330,8 @@
         "verdict": "기대 이하"
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "네일",
+        "lose": "알칸타라",
         "save": null
       },
       "lineup": null
