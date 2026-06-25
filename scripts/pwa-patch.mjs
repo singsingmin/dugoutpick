@@ -128,9 +128,10 @@ if (!html.includes('apple-mobile-web-app-capable')) {
     html,body{background-color:#F3E9CE}
     /* 브라우저 모드: 외부 컨테이너 49px 고정, 패딩 제거 */
     div:has(>div[role="tablist"]){height:49px!important;padding-bottom:0px!important}
-    /* RN이 JS(useSafeAreaInsets)로 각 탭 아이템에 주입하는 padding-bottom 제거.
-       이게 없으면 아이템 내부 콘텐츠 영역이 압축되어 라벨 하단이 잘림. */
-    div[role="tablist"]>*{padding-bottom:0px!important}
+    /* RN이 JS(useSafeAreaInsets)로 탭바 내부 모든 하위 요소에 padding-bottom 주입.
+       직접 자식만 겨냥하면 더 깊은 중첩 div에 걸린 padding이 남아 라벨이 짤림.
+       * 전체에 적용해 모든 레벨에서 제거. */
+    div:has(>div[role="tablist"]) *{padding-bottom:0px!important}
     /* standalone(홈화면 PWA): 홈 인디케이터 영역까지 배경 확장.
        box-sizing:border-box → 전체 높이=49px+safe-area, 콘텐츠 영역은 여전히 49px. */
     @media(display-mode:standalone){
