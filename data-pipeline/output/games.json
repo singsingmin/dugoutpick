@@ -1,7 +1,7 @@
 {
   "date": "20260625",
   "dateText": "2026년 6월 25일",
-  "updatedAt": "2026-06-25T12:04:18.355Z",
+  "updatedAt": "2026-06-25T12:06:19.138Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 5,
@@ -706,10 +706,10 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 0,
-        "label": "9회초 7점차"
+        "label": "9회말 7점차"
       },
       "recap": null,
       "decision": null,
