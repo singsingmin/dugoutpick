@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-25T05:18:16.610Z",
+  "updatedAt": "2026-06-25T07:20:22.539Z",
   "lastWeek": {
     "range": [
       "20260615",
@@ -87,7 +87,7 @@
       {
         "away": "NC",
         "home": "LT",
-        "pred": 90,
+        "pred": 92,
         "reason": "낙동강 더비 · 게임차 1, 막상막하 승부",
         "dateStart": "20260623",
         "dateEnd": "20260625"
@@ -95,7 +95,7 @@
       {
         "away": "OB",
         "home": "HH",
-        "pred": 87,
+        "pred": 90,
         "reason": "게임차 없는 동률 초접전",
         "dateStart": "20260623",
         "dateEnd": "20260625"
@@ -103,7 +103,7 @@
       {
         "away": "KT",
         "home": "SS",
-        "pred": 77,
+        "pred": 80,
         "reason": "게임차 1.5, 막상막하 승부",
         "dateStart": "20260626",
         "dateEnd": "20260628"
