@@ -15,7 +15,14 @@ import SectionLabel from '../components/SectionLabel';
 import PixelText from '../components/PixelText';
 import MondayReport from '../components/MondayReport';
 import TrackRecordBadge from '../components/TrackRecordBadge';
+import WeeklyScheduleSheet from '../components/WeeklyScheduleSheet';
 import { formatUpdatedAt, relativeFromNow, isKstMonday } from '../utils';
+
+// KST 기준 오늘 날짜 "M/D" (헤더 달력 버튼 레이블)
+function kstDateLabel(): string {
+  const k = new Date(Date.now() + 9 * 60 * 60 * 1000);
+  return `${k.getUTCMonth() + 1}/${k.getUTCDate()}`;
+}
 import { colors, spacing } from '../theme';
 
 type Nav = NativeStackNavigationProp<RootStackParamList>;
@@ -25,6 +32,7 @@ export default function Today() {
   const [data, setData] = useState<GamesData | null>(null);
   const [cheerTeam, setCheerTeam] = useState<string | null>(null);
   const [failed, setFailed] = useState(false);
+  const [weeklyVisible, setWeeklyVisible] = useState(false);
 
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
@@ -79,7 +87,13 @@ export default function Today() {
 
   return (
     <SafeAreaView style={styles.safe} edges={['top']}>
-      <ScreenHeader title="오늘 경기" leftIcon="⚾" rightIcon="📅" />
+      <ScreenHeader
+        title="오늘 경기"
+        leftIcon="⚾"
+        rightLabel={kstDateLabel()}
+        onRightPress={() => setWeeklyVisible(true)}
+      />
+      <WeeklyScheduleSheet visible={weeklyVisible} onClose={() => setWeeklyVisible(false)} />
       {failed ? (
         <Centered text="데이터를 불러오지 못했다" />
       ) : !data ? (
