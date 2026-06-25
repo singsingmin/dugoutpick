@@ -1,7 +1,7 @@
 {
   "date": "20260625",
   "dateText": "2026년 6월 25일",
-  "updatedAt": "2026-06-25T08:36:19.888Z",
+  "updatedAt": "2026-06-25T08:38:18.435Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 5,
@@ -688,17 +688,17 @@
           {
             "order": 2,
             "pos": "중견수",
-            "name": "임병욱"
+            "name": "이주형"
           },
           {
             "order": 3,
-            "pos": "좌익수",
+            "pos": "지명타자",
             "name": "히우라"
           },
           {
             "order": 4,
-            "pos": "포수",
-            "name": "김건희"
+            "pos": "1루수",
+            "name": "김웅빈"
           },
           {
             "order": 5,
@@ -707,13 +707,13 @@
           },
           {
             "order": 6,
-            "pos": "지명타자",
-            "name": "안치홍"
+            "pos": "좌익수",
+            "name": "추재현"
           },
           {
             "order": 7,
-            "pos": "1루수",
-            "name": "김웅빈"
+            "pos": "포수",
+            "name": "김동헌"
           },
           {
             "order": 8,
@@ -749,23 +749,23 @@
           },
           {
             "order": 5,
-            "pos": "지명타자",
+            "pos": "1루수",
             "name": "카스트로"
           },
           {
             "order": 6,
-            "pos": "포수",
+            "pos": "지명타자",
             "name": "한준수"
           },
           {
             "order": 7,
-            "pos": "1루수",
-            "name": "변우혁"
+            "pos": "2루수",
+            "name": "김규성"
           },
           {
             "order": 8,
-            "pos": "2루수",
-            "name": "김규성"
+            "pos": "포수",
+            "name": "김태군"
           },
           {
             "order": 9,
@@ -773,7 +773,7 @@
             "name": "박민"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     }
   ]
