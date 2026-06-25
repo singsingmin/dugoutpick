@@ -1,7 +1,7 @@
 {
   "date": "20260625",
   "dateText": "2026년 6월 25일",
-  "updatedAt": "2026-06-25T10:26:18.160Z",
+  "updatedAt": "2026-06-25T10:28:18.308Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 5,
@@ -386,10 +386,10 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "heat": 38,
-        "label": "3회초 2점차"
+        "label": "3회말 2점차"
       },
       "recap": null,
       "decision": null,
