@@ -34,7 +34,7 @@ export default function Splash({ navigation }: Props) {
 
   return (
     <Pressable
-      style={StyleSheet.absoluteFill}
+      style={styles.container}
       onPress={canNavigate ? handleTap : undefined}
       accessibilityRole="button"
       accessibilityLabel="홈으로 이동"
@@ -50,5 +50,6 @@ export default function Splash({ navigation }: Props) {
 }
 
 const styles = StyleSheet.create({
+  container: { flex: 1 },
   image: { flex: 1 },
 });
