@@ -137,6 +137,8 @@ if (!html.includes('apple-mobile-web-app-capable')) {
     @media(display-mode:standalone){
       div:has(>div[role="tablist"]){height:calc(49px + env(safe-area-inset-bottom,0px))!important;padding-bottom:env(safe-area-inset-bottom,0px)!important;box-sizing:border-box!important}
     }
+    /* 스플래시: dvh 계산 오차·스크롤 무관하게 뷰포트에 고정 */
+    [data-testid="splash-container"]{position:fixed!important;inset:0!important;width:100%!important;height:100svh!important}
   </style>`;
 
   // Expo puts </head> right after the last element on the same line; add newline first

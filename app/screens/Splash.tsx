@@ -34,6 +34,7 @@ export default function Splash({ navigation }: Props) {
 
   return (
     <Pressable
+      testID="splash-container"
       style={styles.container}
       onPress={canNavigate ? handleTap : undefined}
       accessibilityRole="button"
