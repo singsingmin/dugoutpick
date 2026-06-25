@@ -27,7 +27,6 @@ export default function WeeklyScheduleSheet({ visible, onClose }: Props) {
     loadReport().then(setReport).catch(() => {});
   }, [visible]);
 
-  // thisWeek.team 에서 유니크 경기 추출 후 날짜순 정렬 → 날짜별 그룹화
   const grouped: { date: string; games: GameEntry[] }[] = [];
   if (report) {
     const seen = new Set<string>();
@@ -53,9 +52,12 @@ export default function WeeklyScheduleSheet({ visible, onClose }: Props) {
 
   return (
     <Modal visible={visible} transparent animationType="slide" onRequestClose={onClose}>
-      <Pressable style={styles.backdrop} onPress={onClose}>
-        {/* View + onStartShouldSetResponder: 터치를 여기서 소비해 backdrop onPress 차단, Pressable이 아니므로 ScrollView 제스처 간섭 없음 */}
-        <View style={styles.sheet} onStartShouldSetResponder={() => true}>
+      {/* container: 전체 화면, 시트는 하단 정렬 */}
+      <View style={styles.container}>
+        {/* backdrop: 절대 위치로 전체 커버 — 시트 아래에 렌더되므로 시트 영역 터치는 올라오지 않음 */}
+        <Pressable style={styles.backdrop} onPress={onClose} />
+        {/* sheet: 고정 높이(75%) → ScrollView flex:1 이 정확히 작동하는 유일한 보장 방법 */}
+        <View style={styles.sheet}>
           <View style={styles.handle} />
           <View style={styles.header}>
             <View>
@@ -91,14 +93,16 @@ export default function WeeklyScheduleSheet({ visible, onClose }: Props) {
             ))}
           </ScrollView>
         </View>
-      </Pressable>
+      </View>
     </Modal>
   );
 }
 
 const styles = StyleSheet.create({
-  backdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.5)', justifyContent: 'flex-end' },
+  container: { flex: 1, justifyContent: 'flex-end' },
+  backdrop: { ...StyleSheet.absoluteFillObject, backgroundColor: 'rgba(0,0,0,0.5)' },
   sheet: {
+    height: '75%',
     backgroundColor: colors.surface,
     borderTopWidth: border.width,
     borderTopColor: colors.border,
@@ -106,7 +110,6 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 12,
     padding: spacing.md,
     paddingBottom: spacing.xl,
-    maxHeight: '80%',
   },
   handle: {
     width: 40, height: 4, borderRadius: 2,
