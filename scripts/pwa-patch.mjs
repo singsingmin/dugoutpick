@@ -126,11 +126,14 @@ if (!html.includes('apple-mobile-web-app-capable')) {
     body,#root{height:100%}
     /* 100dvh 아래 영역(home indicator 등)이 흰 배경으로 노출되지 않도록 */
     html,body{background-color:#F3E9CE}
-    /* standalone(홈화면 PWA) 전용 safe-area 처리.
-       outer container(:has 셀렉터)에 height:auto+padding 적용.
-       inner div[role=tablist]의 flex:1 충돌을 피하기 위해 외부를 직접 타겟. */
+    /* 브라우저 모드: RN이 JS로 주입하는 padding-bottom(safe-area) 제거 + 정확히 49px 고정.
+       dvh가 이미 브라우저 크롬을 제외하므로 추가 inset 불필요. */
+    div:has(>div[role="tablist"]){height:49px!important;padding-bottom:0px!important}
+    /* standalone(홈화면 PWA): 홈 인디케이터 영역까지 배경 확장.
+       box-sizing:border-box → 전체 높이=49px+safe-area, 콘텐츠 영역은 여전히 49px.
+       라벨 아래 빈 공간 없이 홈 인디케이터 뒤에만 배경색이 깔림. */
     @media(display-mode:standalone){
-      div:has(>div[role="tablist"]){height:auto!important;padding-bottom:env(safe-area-inset-bottom,0px)!important}
+      div:has(>div[role="tablist"]){height:calc(49px + env(safe-area-inset-bottom,0px))!important;padding-bottom:env(safe-area-inset-bottom,0px)!important;box-sizing:border-box!important}
     }
   </style>`;
 
