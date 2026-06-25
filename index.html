@@ -30,7 +30,7 @@
   <meta name="theme-color" content="#34663F" />
   <link rel="apple-touch-icon" href="/dugoutpick/icon.png" />
   <link rel="manifest" href="/dugoutpick/manifest.json" />
-  <script>if('serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('/dugoutpick/sw.js'));</script>
+  <script>if('serviceWorker'in navigator){window.addEventListener('load',()=>{navigator.serviceWorker.register('/dugoutpick/sw.js');navigator.serviceWorker.addEventListener('controllerchange',()=>window.location.reload());});}</script>
 </head>
 
   <body>

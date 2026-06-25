@@ -1,7 +1,5 @@
-const CACHE = 'dugoutpick-v2';
+const CACHE = 'dugoutpick-1782367056375';
 const PRECACHE = [
-  '/dugoutpick/',
-  '/dugoutpick/index.html',
   '/dugoutpick/manifest.json',
   '/dugoutpick/icon.png',
 ];
@@ -25,14 +23,13 @@ self.addEventListener('activate', e => {
 self.addEventListener('fetch', e => {
   if (e.request.method !== 'GET') return;
   const url = new URL(e.request.url);
-  // Network-first: GitHub raw JSON data
-  if (url.hostname === 'raw.githubusercontent.com') {
-    e.respondWith(
-      fetch(e.request).catch(() => caches.match(e.request))
-    );
+  // Network-first: JSON 데이터 + HTML (배포 시 최신 HTML 보장, 번들 경로 불일치 방지)
+  const isHtml = url.pathname.endsWith('/') || url.pathname.endsWith('.html');
+  if (url.hostname === 'raw.githubusercontent.com' || isHtml) {
+    e.respondWith(fetch(e.request).catch(() => caches.match(e.request)));
     return;
   }
-  // Cache-first: app shell & static assets
+  // Cache-first: 해시 포함 JS/CSS 번들 등 불변 정적 자산
   e.respondWith(
     caches.match(e.request).then(cached => {
       if (cached) return cached;
