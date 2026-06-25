@@ -43,5 +43,6 @@
       "completed_at": "2026-06-25T22:48:33+0900",
       "note": "검증2(web export) PASS, 검증3(pipeline syntax) PASS, 검증4(smoke test) PASS. 검증1 tsc exit 2: LiveCard.tsx/TeamTheme.tsx pre-existing 에러(phase1·3 노트에 이미 문서화, recap-preview 코드와 무관)"
     }
-  ]
+  ],
+  "completed_at": "2026-06-25T22:48:34+0900"
 }
