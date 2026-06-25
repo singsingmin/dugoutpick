@@ -1,7 +1,7 @@
 {
   "date": "20260625",
   "dateText": "2026년 6월 25일",
-  "updatedAt": "2026-06-25T12:10:22.495Z",
+  "updatedAt": "2026-06-25T12:12:17.363Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 5,
@@ -225,11 +225,11 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 2,
+        "inning": 8,
+        "half": "T",
+        "out": 0,
         "heat": 0,
-        "label": "7회말 6점차"
+        "label": "8회초 6점차"
       },
       "recap": null,
       "decision": null,
@@ -342,7 +342,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "베니지아노",
           "era": 5.91,
@@ -387,9 +387,9 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
-        "heat": 57,
-        "label": "8회초 2점차"
+        "out": 1,
+        "heat": 72,
+        "label": "8회초 1점차 접전"
       },
       "recap": null,
       "decision": null,
