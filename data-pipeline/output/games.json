@@ -1,7 +1,7 @@
 {
   "date": "20260625",
   "dateText": "2026년 6월 25일",
-  "updatedAt": "2026-06-24T16:09:51.476Z",
+  "updatedAt": "2026-06-25T05:00:32.951Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 5,
@@ -63,7 +63,104 @@
       },
       "live": null,
       "recap": null,
-      "decision": null
+      "decision": null,
+      "lineup": {
+        "home": [
+          {
+            "order": 1,
+            "pos": "우익수",
+            "name": "송찬의"
+          },
+          {
+            "order": 2,
+            "pos": "중견수",
+            "name": "박해민"
+          },
+          {
+            "order": 3,
+            "pos": "지명타자",
+            "name": "오스틴"
+          },
+          {
+            "order": 4,
+            "pos": "3루수",
+            "name": "문보경"
+          },
+          {
+            "order": 5,
+            "pos": "1루수",
+            "name": "문정빈"
+          },
+          {
+            "order": 6,
+            "pos": "포수",
+            "name": "박동원"
+          },
+          {
+            "order": 7,
+            "pos": "유격수",
+            "name": "오지환"
+          },
+          {
+            "order": 8,
+            "pos": "2루수",
+            "name": "구본혁"
+          },
+          {
+            "order": 9,
+            "pos": "좌익수",
+            "name": "문성주"
+          }
+        ],
+        "away": [
+          {
+            "order": 1,
+            "pos": "중견수",
+            "name": "김성윤"
+          },
+          {
+            "order": 2,
+            "pos": "좌익수",
+            "name": "구자욱"
+          },
+          {
+            "order": 3,
+            "pos": "우익수",
+            "name": "박승규"
+          },
+          {
+            "order": 4,
+            "pos": "1루수",
+            "name": "디아즈"
+          },
+          {
+            "order": 5,
+            "pos": "지명타자",
+            "name": "최형우"
+          },
+          {
+            "order": 6,
+            "pos": "3루수",
+            "name": "김영웅"
+          },
+          {
+            "order": 7,
+            "pos": "2루수",
+            "name": "류지혁"
+          },
+          {
+            "order": 8,
+            "pos": "포수",
+            "name": "김도환"
+          },
+          {
+            "order": 9,
+            "pos": "유격수",
+            "name": "양우현"
+          }
+        ],
+        "confirmed": false
+      }
     },
     {
       "gameId": "20260625NCLT0",
@@ -117,7 +214,104 @@
       },
       "live": null,
       "recap": null,
-      "decision": null
+      "decision": null,
+      "lineup": {
+        "home": [
+          {
+            "order": 1,
+            "pos": "중견수",
+            "name": "황성빈"
+          },
+          {
+            "order": 2,
+            "pos": "2루수",
+            "name": "고승민"
+          },
+          {
+            "order": 3,
+            "pos": "좌익수",
+            "name": "레이예스"
+          },
+          {
+            "order": 4,
+            "pos": "3루수",
+            "name": "한동희"
+          },
+          {
+            "order": 5,
+            "pos": "1루수",
+            "name": "나승엽"
+          },
+          {
+            "order": 6,
+            "pos": "우익수",
+            "name": "윤동희"
+          },
+          {
+            "order": 7,
+            "pos": "유격수",
+            "name": "전민재"
+          },
+          {
+            "order": 8,
+            "pos": "지명타자",
+            "name": "김동현"
+          },
+          {
+            "order": 9,
+            "pos": "포수",
+            "name": "손성빈"
+          }
+        ],
+        "away": [
+          {
+            "order": 1,
+            "pos": "유격수",
+            "name": "김주원"
+          },
+          {
+            "order": 2,
+            "pos": "좌익수",
+            "name": "이우성"
+          },
+          {
+            "order": 3,
+            "pos": "2루수",
+            "name": "박민우"
+          },
+          {
+            "order": 4,
+            "pos": "지명타자",
+            "name": "박건우"
+          },
+          {
+            "order": 5,
+            "pos": "우익수",
+            "name": "권희동"
+          },
+          {
+            "order": 6,
+            "pos": "1루수",
+            "name": "데이비슨"
+          },
+          {
+            "order": 7,
+            "pos": "3루수",
+            "name": "김휘집"
+          },
+          {
+            "order": 8,
+            "pos": "중견수",
+            "name": "오장한"
+          },
+          {
+            "order": 9,
+            "pos": "포수",
+            "name": "안중열"
+          }
+        ],
+        "confirmed": false
+      }
     },
     {
       "gameId": "20260625SKKT0",
@@ -171,7 +365,104 @@
       },
       "live": null,
       "recap": null,
-      "decision": null
+      "decision": null,
+      "lineup": {
+        "home": [
+          {
+            "order": 1,
+            "pos": "우익수",
+            "name": "최원준"
+          },
+          {
+            "order": 2,
+            "pos": "1루수",
+            "name": "김현수"
+          },
+          {
+            "order": 3,
+            "pos": "지명타자",
+            "name": "안현민"
+          },
+          {
+            "order": 4,
+            "pos": "중견수",
+            "name": "힐리어드"
+          },
+          {
+            "order": 5,
+            "pos": "2루수",
+            "name": "김상수"
+          },
+          {
+            "order": 6,
+            "pos": "3루수",
+            "name": "허경민"
+          },
+          {
+            "order": 7,
+            "pos": "좌익수",
+            "name": "김민혁"
+          },
+          {
+            "order": 8,
+            "pos": "포수",
+            "name": "한승택"
+          },
+          {
+            "order": 9,
+            "pos": "유격수",
+            "name": "권동진"
+          }
+        ],
+        "away": [
+          {
+            "order": 1,
+            "pos": "2루수",
+            "name": "정준재"
+          },
+          {
+            "order": 2,
+            "pos": "유격수",
+            "name": "박성한"
+          },
+          {
+            "order": 3,
+            "pos": "지명타자",
+            "name": "최정"
+          },
+          {
+            "order": 4,
+            "pos": "좌익수",
+            "name": "김재환"
+          },
+          {
+            "order": 5,
+            "pos": "우익수",
+            "name": "에레디아"
+          },
+          {
+            "order": 6,
+            "pos": "1루수",
+            "name": "전의산"
+          },
+          {
+            "order": 7,
+            "pos": "3루수",
+            "name": "고명준"
+          },
+          {
+            "order": 8,
+            "pos": "중견수",
+            "name": "최지훈"
+          },
+          {
+            "order": 9,
+            "pos": "포수",
+            "name": "조형우"
+          }
+        ],
+        "confirmed": false
+      }
     },
     {
       "gameId": "20260625OBHH0",
@@ -225,7 +516,104 @@
       },
       "live": null,
       "recap": null,
-      "decision": null
+      "decision": null,
+      "lineup": {
+        "home": [
+          {
+            "order": 1,
+            "pos": "2루수",
+            "name": "이도윤"
+          },
+          {
+            "order": 2,
+            "pos": "우익수",
+            "name": "페라자"
+          },
+          {
+            "order": 3,
+            "pos": "중견수",
+            "name": "문현빈"
+          },
+          {
+            "order": 4,
+            "pos": "지명타자",
+            "name": "강백호"
+          },
+          {
+            "order": 5,
+            "pos": "3루수",
+            "name": "노시환"
+          },
+          {
+            "order": 6,
+            "pos": "1루수",
+            "name": "김태연"
+          },
+          {
+            "order": 7,
+            "pos": "포수",
+            "name": "허인서"
+          },
+          {
+            "order": 8,
+            "pos": "좌익수",
+            "name": "유민"
+          },
+          {
+            "order": 9,
+            "pos": "유격수",
+            "name": "심우준"
+          }
+        ],
+        "away": [
+          {
+            "order": 1,
+            "pos": "중견수",
+            "name": "정수빈"
+          },
+          {
+            "order": 2,
+            "pos": "우익수",
+            "name": "류승민"
+          },
+          {
+            "order": 3,
+            "pos": "2루수",
+            "name": "박준순"
+          },
+          {
+            "order": 4,
+            "pos": "지명타자",
+            "name": "양의지"
+          },
+          {
+            "order": 5,
+            "pos": "좌익수",
+            "name": "김민석"
+          },
+          {
+            "order": 6,
+            "pos": "유격수",
+            "name": "박찬호"
+          },
+          {
+            "order": 7,
+            "pos": "1루수",
+            "name": "오명진"
+          },
+          {
+            "order": 8,
+            "pos": "포수",
+            "name": "윤준호"
+          },
+          {
+            "order": 9,
+            "pos": "3루수",
+            "name": "안재석"
+          }
+        ],
+        "confirmed": false
+      }
     },
     {
       "gameId": "20260625HTWO0",
@@ -279,7 +667,104 @@
       },
       "live": null,
       "recap": null,
-      "decision": null
+      "decision": null,
+      "lineup": {
+        "home": [
+          {
+            "order": 1,
+            "pos": "2루수",
+            "name": "서건창"
+          },
+          {
+            "order": 2,
+            "pos": "중견수",
+            "name": "임병욱"
+          },
+          {
+            "order": 3,
+            "pos": "좌익수",
+            "name": "히우라"
+          },
+          {
+            "order": 4,
+            "pos": "포수",
+            "name": "김건희"
+          },
+          {
+            "order": 5,
+            "pos": "우익수",
+            "name": "박찬혁"
+          },
+          {
+            "order": 6,
+            "pos": "지명타자",
+            "name": "안치홍"
+          },
+          {
+            "order": 7,
+            "pos": "1루수",
+            "name": "김웅빈"
+          },
+          {
+            "order": 8,
+            "pos": "유격수",
+            "name": "권혁빈"
+          },
+          {
+            "order": 9,
+            "pos": "3루수",
+            "name": "여동욱"
+          }
+        ],
+        "away": [
+          {
+            "order": 1,
+            "pos": "좌익수",
+            "name": "박재현"
+          },
+          {
+            "order": 2,
+            "pos": "중견수",
+            "name": "김호령"
+          },
+          {
+            "order": 3,
+            "pos": "3루수",
+            "name": "김도영"
+          },
+          {
+            "order": 4,
+            "pos": "우익수",
+            "name": "나성범"
+          },
+          {
+            "order": 5,
+            "pos": "지명타자",
+            "name": "카스트로"
+          },
+          {
+            "order": 6,
+            "pos": "포수",
+            "name": "한준수"
+          },
+          {
+            "order": 7,
+            "pos": "1루수",
+            "name": "변우혁"
+          },
+          {
+            "order": 8,
+            "pos": "2루수",
+            "name": "김규성"
+          },
+          {
+            "order": 9,
+            "pos": "유격수",
+            "name": "박민"
+          }
+        ],
+        "confirmed": false
+      }
     }
   ]
 }
