@@ -1,80 +1,9 @@
 {
-  "updatedAt": "2026-06-25T13:22:19.047Z",
+  "updatedAt": "2026-06-25T00:00:00.000Z",
   "window": 50,
-  "sampleSize": 10,
-  "hitRate": 10,
-  "bonusRate": 10,
-  "ready": true,
-  "records": [
-    {
-      "date": "20260624",
-      "gameId": "20260624SSLG0",
-      "pred": 62,
-      "actual": 39,
-      "verdict": "기대 이하"
-    },
-    {
-      "date": "20260624",
-      "gameId": "20260624SKKT0",
-      "pred": 5,
-      "actual": 68,
-      "verdict": "기대 이상"
-    },
-    {
-      "date": "20260624",
-      "gameId": "20260624HTWO0",
-      "pred": 13,
-      "actual": 2,
-      "verdict": "기대 이하"
-    },
-    {
-      "date": "20260624",
-      "gameId": "20260624NCLT0",
-      "pred": 74,
-      "actual": 48,
-      "verdict": "기대 이하"
-    },
-    {
-      "date": "20260624",
-      "gameId": "20260624OBHH0",
-      "pred": 85,
-      "actual": 9,
-      "verdict": "기대 이하"
-    },
-    {
-      "date": "20260625",
-      "gameId": "20260625HTWO0",
-      "pred": 17,
-      "actual": 6,
-      "verdict": "기대 이하"
-    },
-    {
-      "date": "20260625",
-      "gameId": "20260625OBHH0",
-      "pred": 87,
-      "actual": 34,
-      "verdict": "기대 이하"
-    },
-    {
-      "date": "20260625",
-      "gameId": "20260625NCLT0",
-      "pred": 85,
-      "actual": 2,
-      "verdict": "기대 이하"
-    },
-    {
-      "date": "20260625",
-      "gameId": "20260625SKKT0",
-      "pred": 6,
-      "actual": 7,
-      "verdict": "예측 적중"
-    },
-    {
-      "date": "20260625",
-      "gameId": "20260625SSLG0",
-      "pred": 56,
-      "actual": 2,
-      "verdict": "기대 이하"
-    }
-  ]
+  "sampleSize": 0,
+  "hitRate": 0,
+  "bonusRate": 0,
+  "ready": false,
+  "records": []
 }
