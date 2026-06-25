@@ -18,11 +18,6 @@ import TrackRecordBadge from '../components/TrackRecordBadge';
 import WeeklyScheduleSheet from '../components/WeeklyScheduleSheet';
 import { formatUpdatedAt, relativeFromNow, isKstMonday } from '../utils';
 
-// KST 기준 오늘 날짜 "M/D" (헤더 달력 버튼 레이블)
-function kstDateLabel(): string {
-  const k = new Date(Date.now() + 9 * 60 * 60 * 1000);
-  return `${k.getUTCMonth() + 1}/${k.getUTCDate()}`;
-}
 import { colors, spacing } from '../theme';
 
 type Nav = NativeStackNavigationProp<RootStackParamList>;
@@ -90,7 +85,7 @@ export default function Today() {
       <ScreenHeader
         title="오늘 경기"
         leftIcon="⚾"
-        rightLabel={kstDateLabel()}
+        rightIcon="🗓"
         onRightPress={() => setWeeklyVisible(true)}
       />
       <WeeklyScheduleSheet visible={weeklyVisible} onClose={() => setWeeklyVisible(false)} />

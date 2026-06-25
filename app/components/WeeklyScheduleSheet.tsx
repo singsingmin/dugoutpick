@@ -2,12 +2,15 @@
 // report.json의 thisWeek.team 데이터를 날짜별로 그룹화해 표시.
 import { useEffect, useState } from 'react';
 import { Modal, View, ScrollView, Pressable, StyleSheet } from 'react-native';
-import { loadReport } from '../data/load';
-import { loadTeams } from '../data/load';
+import { loadReport, loadTeams } from '../data/load';
 import type { ReportData } from '../types';
 import PixelText from './PixelText';
 import { border, colors, spacing } from '../theme';
 import { shortDateDow } from '../utils';
+
+const TEAMS = loadTeams().teams;
+const teamNameOf = (code: string) => TEAMS.find((t) => t.code === code)?.name ?? code;
+const teamColorOf = (code: string) => TEAMS.find((t) => t.code === code)?.color ?? colors.text;
 
 interface Props {
   visible: boolean;
@@ -23,12 +26,6 @@ export default function WeeklyScheduleSheet({ visible, onClose }: Props) {
     if (!visible) return;
     loadReport().then(setReport).catch(() => {});
   }, [visible]);
-
-  // 팀코드 → 짧은 이름 맵
-  const nameOf = (code: string) => {
-    const teams = loadTeams().teams;
-    return teams.find((t) => t.code === code)?.name ?? code;
-  };
 
   // thisWeek.team 에서 유니크 경기 추출 후 날짜순 정렬 → 날짜별 그룹화
   const grouped: { date: string; games: GameEntry[] }[] = [];
@@ -57,7 +54,8 @@ export default function WeeklyScheduleSheet({ visible, onClose }: Props) {
   return (
     <Modal visible={visible} transparent animationType="slide" onRequestClose={onClose}>
       <Pressable style={styles.backdrop} onPress={onClose}>
-        <Pressable style={styles.sheet} onPress={(e) => e.stopPropagation()}>
+        {/* View + onStartShouldSetResponder: 터치를 여기서 소비해 backdrop onPress 차단, Pressable이 아니므로 ScrollView 제스처 간섭 없음 */}
+        <View style={styles.sheet} onStartShouldSetResponder={() => true}>
           <View style={styles.handle} />
           <View style={styles.header}>
             <View>
@@ -84,15 +82,15 @@ export default function WeeklyScheduleSheet({ visible, onClose }: Props) {
                 </View>
                 {games.map((g, i) => (
                   <View key={i} style={styles.gameRow}>
-                    <PixelText variant="body" style={styles.teamName}>{nameOf(g.away)}</PixelText>
+                    <PixelText variant="body" color={teamColorOf(g.away)} style={styles.teamNameText} numberOfLines={1}>{teamNameOf(g.away)}</PixelText>
                     <PixelText variant="caption" color={colors.textDim} style={styles.vs}>vs</PixelText>
-                    <PixelText variant="body" style={styles.teamName}>{nameOf(g.home)}</PixelText>
+                    <PixelText variant="body" color={teamColorOf(g.home)} style={styles.teamNameText} numberOfLines={1}>{teamNameOf(g.home)}</PixelText>
                   </View>
                 ))}
               </View>
             ))}
           </ScrollView>
-        </Pressable>
+        </View>
       </Pressable>
     </Modal>
   );
@@ -115,7 +113,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.border, alignSelf: 'center', marginBottom: spacing.sm,
   },
   header: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: spacing.md },
-  scroll: { flexGrow: 0 },
+  scroll: { flex: 1 },
   empty: { textAlign: 'center', marginTop: spacing.lg },
   dateGroup: { marginBottom: spacing.md },
   dateLabelRow: { marginBottom: spacing.xs },
@@ -134,6 +132,6 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1, borderBottomColor: colors.surfaceAlt,
     gap: spacing.sm,
   },
-  teamName: { flex: 1, textAlign: 'center' },
+  teamNameText: { flex: 1, textAlign: 'center' },
   vs: { width: 20, textAlign: 'center' },
 });
