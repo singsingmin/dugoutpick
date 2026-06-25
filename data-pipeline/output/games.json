@@ -1,7 +1,7 @@
 {
   "date": "20260625",
   "dateText": "2026년 6월 25일",
-  "updatedAt": "2026-06-25T12:12:17.363Z",
+  "updatedAt": "2026-06-25T12:14:19.315Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 5,
@@ -227,7 +227,7 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 0,
         "label": "8회초 6점차"
       },
@@ -514,7 +514,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 1,
+        "score": 3,
         "starter": {
           "name": "박준영",
           "era": 4.03,
@@ -548,8 +548,8 @@
         "inning": 8,
         "half": "B",
         "out": 0,
-        "heat": 28,
-        "label": "8회말 4점차"
+        "heat": 56,
+        "label": "8회말 2점차"
       },
       "recap": null,
       "decision": null,
@@ -707,7 +707,7 @@
       "live": {
         "inning": 9,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "heat": 0,
         "label": "9회말 7점차"
       },
