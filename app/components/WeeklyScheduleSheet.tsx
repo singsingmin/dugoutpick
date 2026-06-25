@@ -89,7 +89,6 @@ export default function WeeklyScheduleSheet({ visible, onClose }: Props) {
                   const isMyTeam = !!cheerTeam && (g.away === cheerTeam || g.home === cheerTeam);
                   return (
                     <View key={i} style={[styles.gameRow, isMyTeam && styles.myTeamRow]}>
-                      {isMyTeam && <View style={styles.myTeamAccent} />}
                       <PixelText variant="body" color={teamColorOf(g.away)} style={styles.teamNameText} numberOfLines={1}>{teamNameOf(g.away)}</PixelText>
                       <PixelText variant="caption" color={colors.textDim} style={styles.vs}>vs</PixelText>
                       <PixelText variant="body" color={teamColorOf(g.home)} style={styles.teamNameText} numberOfLines={1}>{teamNameOf(g.home)}</PixelText>
@@ -140,10 +139,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row', alignItems: 'center',
     paddingVertical: spacing.xs,
     borderBottomWidth: 1, borderBottomColor: colors.surfaceAlt,
+    borderLeftWidth: 3, borderLeftColor: 'transparent',
     gap: spacing.sm,
   },
-  myTeamRow: { backgroundColor: colors.goldSoft },
-  myTeamAccent: { width: 3, alignSelf: 'stretch', backgroundColor: colors.gold, borderRadius: 2, marginRight: 2 },
+  myTeamRow: { backgroundColor: colors.goldSoft, borderLeftColor: colors.gold },
   teamNameText: { flex: 1, textAlign: 'center' },
   vs: { width: 20, textAlign: 'center' },
 });
