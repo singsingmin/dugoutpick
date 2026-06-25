@@ -620,6 +620,10 @@ async function main() {
   const incoming = games.map(g => toRecord(g, date)).filter(Boolean);
   const merged = mergeHistory(history, incoming);
   const trackRecord = aggregate(merged, { window: WINDOW, minSample: MIN_SAMPLE });
+  // 집계 미달 시 최근 5경기 프리뷰 (선별 금지: 있는 그대로 slice)
+  if (!trackRecord.ready && merged.length > 0) {
+    trackRecord.recentRecapPreview = merged.slice(-5).reverse().map(r => ({ pred: r.pred, verdict: r.verdict }));
+  }
   console.log(`[build] recap-history: +${incoming.length} new, total ${merged.length}, hitRate ${trackRecord.hitRate}% (n=${trackRecord.sampleSize}, ready=${trackRecord.ready})`);
 
   fs.mkdirSync(OUT_DIR, { recursive: true });
