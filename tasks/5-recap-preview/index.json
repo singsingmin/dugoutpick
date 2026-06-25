@@ -30,7 +30,10 @@
     {
       "phase": 3,
       "name": "ui-badge",
-      "status": "pending"
+      "status": "completed",
+      "started_at": "2026-06-25T22:45:03+0900",
+      "completed_at": "2026-06-25T22:47:00+0900",
+      "note": "pre-existing tsc errors in LiveCard.tsx/TeamTheme.tsx unchanged — no new type errors introduced"
     },
     {
       "phase": 4,
