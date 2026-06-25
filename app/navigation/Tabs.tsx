@@ -1,5 +1,5 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { View, Text, StyleSheet, Platform } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import type { TabParamList } from './types';
 import Today from '../screens/Today';
 import Standings from '../screens/Standings';
@@ -31,8 +31,6 @@ export default function Tabs() {
           backgroundColor: colors.surface,
           borderTopColor: colors.border,
           borderTopWidth: border.width,
-          // 웹: CSS env()로 브라우저 홈 인디케이터 영역 회피 (useSafeAreaInsets는 웹 브라우저에서 0 반환)
-          ...(Platform.OS === 'web' ? { paddingBottom: 'env(safe-area-inset-bottom, 0px)' as any } : {}),
         },
         tabBarLabelStyle: { fontFamily: fonts.pixel, fontSize: 10 },
         tabBarActiveTintColor: accent,

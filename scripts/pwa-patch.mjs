@@ -118,7 +118,16 @@ if (!html.includes('apple-mobile-web-app-capable')) {
   <meta name="theme-color" content="#34663F" />
   <link rel="apple-touch-icon" href="/dugoutpick/icon.png" />
   <link rel="manifest" href="/dugoutpick/manifest.json" />
-  <script>if('serviceWorker'in navigator){window.addEventListener('load',()=>{navigator.serviceWorker.register('/dugoutpick/sw.js');navigator.serviceWorker.addEventListener('controllerchange',()=>window.location.reload());});}</script>`;
+  <script>if('serviceWorker'in navigator){window.addEventListener('load',()=>{navigator.serviceWorker.register('/dugoutpick/sw.js');navigator.serviceWorker.addEventListener('controllerchange',()=>window.location.reload());});}</script>
+  <style>
+    /* dvh: 모바일 브라우저 크롬(주소창 등) 제외한 실제 가시 영역 높이 */
+    html{height:-webkit-fill-available}
+    html{height:100dvh}
+    body,#root{height:100%}
+    /* React Navigation 탭바 DOM 셀렉터 — 홈 인디케이터/제스처바 영역 회피
+       !important로 RN Web 인라인 스타일 오버라이드 */
+    div[role="tablist"]{padding-bottom:env(safe-area-inset-bottom,0px)!important}
+  </style>`;
 
   // Expo puts </head> right after the last element on the same line; add newline first
   html = html.replace('</head>', `\n${pwaHead}\n</head>`);
