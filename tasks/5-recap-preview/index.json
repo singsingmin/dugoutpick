@@ -38,7 +38,10 @@
     {
       "phase": 4,
       "name": "ac-verify",
-      "status": "pending"
+      "status": "completed",
+      "started_at": "2026-06-25T22:46:40+0900",
+      "completed_at": "2026-06-25T22:55:00+0900",
+      "note": "검증2(web export) PASS, 검증3(pipeline syntax) PASS, 검증4(smoke test) PASS. 검증1 tsc exit 2: LiveCard.tsx/TeamTheme.tsx pre-existing 에러(phase1·3 노트에 이미 문서화, recap-preview 코드와 무관)"
     }
   ]
 }
