@@ -3,6 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import RootNavigator from './navigation/RootNavigator';
+import { TeamThemeProvider } from './context/TeamTheme';
 
 export default function App() {
   const [loaded] = useFonts({
@@ -14,10 +15,12 @@ export default function App() {
 
   return (
     <SafeAreaProvider>
-      <NavigationContainer>
-        <RootNavigator />
-      </NavigationContainer>
-      <StatusBar style="dark" />
+      <TeamThemeProvider>
+        <NavigationContainer>
+          <RootNavigator />
+        </NavigationContainer>
+        <StatusBar style="dark" />
+      </TeamThemeProvider>
     </SafeAreaProvider>
   );
 }

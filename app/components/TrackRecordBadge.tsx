@@ -3,6 +3,7 @@ import { View, StyleSheet } from 'react-native';
 import PixelText from './PixelText';
 import { border, colors, spacing } from '../theme';
 import type { TrackRecord } from '../types';
+import { useTeamTheme } from '../context/TeamTheme';
 
 interface Props {
   track?: TrackRecord | null;
@@ -10,6 +11,7 @@ interface Props {
 }
 
 export default function TrackRecordBadge({ track, variant = 'today' }: Props) {
+  const { accent } = useTeamTheme();
   if (!track || !track.ready) {
     return (
       <View style={styles.box}>
@@ -20,7 +22,7 @@ export default function TrackRecordBadge({ track, variant = 'today' }: Props) {
 
   return (
     <View style={[styles.box, variant === 'settings' && styles.settingsBox]}>
-      <PixelText variant="body" color={colors.accent}>
+      <PixelText variant="body" color={accent}>
         최근 {track.sampleSize}경기 예측 적중률 {track.hitRate}%
       </PixelText>
       <PixelText variant="caption" color={colors.textDim}>

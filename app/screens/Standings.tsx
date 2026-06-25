@@ -10,6 +10,7 @@ import PixelText from '../components/PixelText';
 import ScreenHeader from '../components/ScreenHeader';
 import { FormDots } from '../components/charts';
 import { border, colors, spacing } from '../theme';
+import { useTeamTheme } from '../context/TeamTheme';
 
 const TEAMS = loadTeams().teams;
 const teamColor = (code: string | null) => TEAMS.find((t) => t.code === code)?.color ?? colors.text;
@@ -49,6 +50,7 @@ export default function Standings() {
   const [recent, setRecent] = useState<Record<string, RecentGame[]>>({});
   const [myCode, setMyCode] = useState<string | null>(null);
   const [loaded, setLoaded] = useState(false);
+  const { accent } = useTeamTheme();
 
   useFocusEffect(
     useCallback(() => {
@@ -80,7 +82,7 @@ export default function Standings() {
         <ScrollView contentContainerStyle={styles.content}>
           <View style={styles.table}>
             {/* 헤더 */}
-            <View style={styles.headerRow}>
+            <View style={[styles.headerRow, { backgroundColor: accent }]}>
               <PixelText style={[styles.hCell, COLS.rank]} color={colors.onGreen}>순위</PixelText>
               <PixelText style={[styles.hCell, COLS.team, styles.teamAlign]} color={colors.onGreen}>팀</PixelText>
               <PixelText style={[styles.hCell, COLS.win]} color={colors.onGreen}>승</PixelText>
@@ -150,7 +152,7 @@ const styles = StyleSheet.create({
   center: { flex: 1, backgroundColor: colors.bg, alignItems: 'center', justifyContent: 'center' },
   content: { padding: spacing.md },
   table: { borderWidth: border.width, borderColor: colors.border, borderRadius: border.radius, backgroundColor: colors.surface, overflow: 'hidden' },
-  headerRow: { flexDirection: 'row', alignItems: 'center', backgroundColor: colors.accent, paddingVertical: 6, paddingHorizontal: spacing.sm },
+  headerRow: { flexDirection: 'row', alignItems: 'center', paddingVertical: 6, paddingHorizontal: spacing.sm },
   block: { paddingVertical: 7, paddingHorizontal: spacing.sm, borderTopWidth: 1, borderTopColor: colors.border, borderLeftWidth: 4, borderLeftColor: 'transparent' },
   blockMine: { backgroundColor: colors.surfaceAlt },
   row: { flexDirection: 'row', alignItems: 'center' },

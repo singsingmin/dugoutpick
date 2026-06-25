@@ -10,6 +10,7 @@ import ScreenHeader from '../components/ScreenHeader';
 import { loadTeams } from '../data/load';
 import { getCheerTeam, setCheerTeam } from '../data/team';
 import { border, colors, spacing } from '../theme';
+import { useTeamTheme } from '../context/TeamTheme';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Onboarding'>;
 
@@ -17,6 +18,7 @@ const TEAMS = loadTeams().teams;
 
 export default function Onboarding({ navigation }: Props) {
   const [selected, setSelected] = useState<string | null>(null);
+  const { refresh } = useTeamTheme();
 
   useEffect(() => {
     getCheerTeam().then((code) => {
@@ -27,6 +29,7 @@ export default function Onboarding({ navigation }: Props) {
   const confirm = async () => {
     if (!selected) return;
     await setCheerTeam(selected);
+    await refresh();
     navigation.replace('Tabs');
   };
 

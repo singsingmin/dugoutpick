@@ -8,6 +8,7 @@ import type { ReportData } from '../types';
 import PixelText from './PixelText';
 import { border, colors, spacing } from '../theme';
 import { shortDateDow } from '../utils';
+import { useTeamTheme } from '../context/TeamTheme';
 
 const TEAMS = loadTeams().teams;
 const teamNameOf = (code: string) => TEAMS.find((t) => t.code === code)?.name ?? code;
@@ -23,6 +24,7 @@ interface GameEntry { date: string; away: string; home: string; }
 export default function WeeklyScheduleSheet({ visible, onClose }: Props) {
   const [report, setReport] = useState<ReportData | null>(null);
   const [cheerTeam, setCheerTeam] = useState<string | null>(null);
+  const { accent } = useTeamTheme();
 
   useEffect(() => {
     getCheerTeam().then(setCheerTeam);
@@ -81,7 +83,7 @@ export default function WeeklyScheduleSheet({ visible, onClose }: Props) {
             {grouped.map(({ date, games }) => (
               <View key={date} style={styles.dateGroup}>
                 <View style={styles.dateLabelRow}>
-                  <PixelText variant="caption" color={colors.onGreen} style={styles.dateLabel}>
+                  <PixelText variant="caption" color={colors.onGreen} style={[styles.dateLabel, { backgroundColor: accent }]}>
                     {shortDateDow(date)}
                   </PixelText>
                 </View>
@@ -127,7 +129,6 @@ const styles = StyleSheet.create({
   dateGroup: { marginBottom: spacing.md },
   dateLabelRow: { marginBottom: spacing.xs },
   dateLabel: {
-    backgroundColor: colors.accent,
     alignSelf: 'flex-start',
     paddingHorizontal: spacing.sm,
     paddingVertical: 2,

@@ -1,7 +1,8 @@
-// 그린 탭형 섹션 라벨 (목업: "★ 오늘의 추천 경기", "💬 오늘의 한 줄 예측" 등).
+// 팀색 탭형 섹션 라벨 (목업: "★ 오늘의 추천 경기", "💬 오늘의 한 줄 예측" 등).
 import { View, StyleSheet } from 'react-native';
 import PixelText from './PixelText';
 import { border, colors, spacing } from '../theme';
+import { useTeamTheme } from '../context/TeamTheme';
 
 interface Props {
   label: string;
@@ -9,8 +10,9 @@ interface Props {
 }
 
 export default function SectionLabel({ label, icon }: Props) {
+  const { accent } = useTeamTheme();
   return (
-    <View style={styles.tab}>
+    <View style={[styles.tab, { backgroundColor: accent }]}>
       <PixelText variant="body" color={colors.onGreen}>
         {icon ? `${icon} ` : ''}
         {label}
@@ -22,7 +24,6 @@ export default function SectionLabel({ label, icon }: Props) {
 const styles = StyleSheet.create({
   tab: {
     alignSelf: 'flex-start',
-    backgroundColor: colors.accent,
     borderColor: colors.border,
     borderWidth: border.width,
     borderRadius: border.radius,

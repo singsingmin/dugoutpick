@@ -7,19 +7,22 @@ import MyTeam from '../screens/MyTeam';
 import Settings from '../screens/Settings';
 import { colors, fonts, border } from '../theme';
 import { isKstMonday } from '../utils';
+import { useTeamTheme } from '../context/TeamTheme';
 
 const Tab = createBottomTabNavigator<TabParamList>();
 
-// 8비트 탭바 아이콘 (이모지) + 활성 시 그린 언더라인 인디케이터.
-const icon = (glyph: string) => ({ focused, color }: { focused: boolean; color: string }) => (
-  <View style={styles.iconWrap}>
-    <Text style={{ fontSize: 16, color }}>{glyph}</Text>
-    <View style={[styles.indicator, focused && styles.indicatorOn]} />
-  </View>
-);
-
 export default function Tabs() {
-  const monday = isKstMonday(); // 월요일엔 첫 탭이 '월요 리포트'로
+  const monday = isKstMonday();
+  const { accent } = useTeamTheme();
+
+  // 8비트 탭바 아이콘 (이모지) + 활성 시 팀색 언더라인 인디케이터.
+  const icon = (glyph: string) => ({ focused, color }: { focused: boolean; color: string }) => (
+    <View style={styles.iconWrap}>
+      <Text style={{ fontSize: 16, color }}>{glyph}</Text>
+      <View style={[styles.indicator, focused && { backgroundColor: accent }]} />
+    </View>
+  );
+
   return (
     <Tab.Navigator
       screenOptions={{
@@ -32,7 +35,7 @@ export default function Tabs() {
           ...(Platform.OS === 'web' ? { paddingBottom: 'env(safe-area-inset-bottom, 0px)' as any } : {}),
         },
         tabBarLabelStyle: { fontFamily: fonts.pixel, fontSize: 10 },
-        tabBarActiveTintColor: colors.accent,
+        tabBarActiveTintColor: accent,
         tabBarInactiveTintColor: colors.textDim,
       }}
     >
@@ -47,5 +50,4 @@ export default function Tabs() {
 const styles = StyleSheet.create({
   iconWrap: { alignItems: 'center' },
   indicator: { marginTop: 3, height: 3, width: 18, borderRadius: 2, backgroundColor: 'transparent' },
-  indicatorOn: { backgroundColor: colors.accent },
 });
