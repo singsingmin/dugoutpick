@@ -1,7 +1,7 @@
 {
   "date": "20260625",
   "dateText": "2026년 6월 25일",
-  "updatedAt": "2026-06-25T11:40:22.304Z",
+  "updatedAt": "2026-06-25T11:42:17.691Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 5,
@@ -22,7 +22,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 3,
-        "score": 10,
+        "score": 11,
         "starter": {
           "name": "후라도",
           "era": 2.86,
@@ -69,7 +69,7 @@
         "half": "T",
         "out": 2,
         "heat": 0,
-        "label": "7회초 7점차"
+        "label": "7회초 8점차"
       },
       "recap": null,
       "decision": null,
@@ -227,7 +227,7 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 1,
+        "out": 3,
         "heat": 0,
         "label": "5회말 6점차"
       },
@@ -387,7 +387,7 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 67,
         "label": "7회초 1점차 접전"
       },
@@ -502,7 +502,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "벤자민",
           "era": 3.02,
@@ -548,8 +548,8 @@
         "inning": 7,
         "half": "T",
         "out": 0,
-        "heat": 39,
-        "label": "7회초 3점차"
+        "heat": 26,
+        "label": "7회초 4점차"
       },
       "recap": null,
       "decision": null,
@@ -707,7 +707,7 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 0,
         "label": "8회초 9점차"
       },
