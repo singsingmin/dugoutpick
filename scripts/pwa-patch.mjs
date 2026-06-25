@@ -44,10 +44,10 @@ const manifest = {
 writeFileSync(join(distDir, 'manifest.json'), JSON.stringify(manifest, null, 2));
 
 // ── 3. sw.js (service worker) ──────────────────────────────────────
-const sw = `const CACHE = 'dugoutpick-v2';
+// 빌드 타임스탬프를 캐시 키에 주입 → 배포마다 sw.js 내용이 바뀜 → 브라우저가 새 SW 감지
+const buildTs = Date.now();
+const sw = `const CACHE = 'dugoutpick-${buildTs}';
 const PRECACHE = [
-  '/dugoutpick/',
-  '/dugoutpick/index.html',
   '/dugoutpick/manifest.json',
   '/dugoutpick/icon.png',
 ];
@@ -71,14 +71,13 @@ self.addEventListener('activate', e => {
 self.addEventListener('fetch', e => {
   if (e.request.method !== 'GET') return;
   const url = new URL(e.request.url);
-  // Network-first: GitHub raw JSON data
-  if (url.hostname === 'raw.githubusercontent.com') {
-    e.respondWith(
-      fetch(e.request).catch(() => caches.match(e.request))
-    );
+  // Network-first: JSON 데이터 + HTML (배포 시 최신 HTML 보장, 번들 경로 불일치 방지)
+  const isHtml = url.pathname.endsWith('/') || url.pathname.endsWith('.html');
+  if (url.hostname === 'raw.githubusercontent.com' || isHtml) {
+    e.respondWith(fetch(e.request).catch(() => caches.match(e.request)));
     return;
   }
-  // Cache-first: app shell & static assets
+  // Cache-first: 해시 포함 JS/CSS 번들 등 불변 정적 자산
   e.respondWith(
     caches.match(e.request).then(cached => {
       if (cached) return cached;
@@ -119,7 +118,7 @@ if (!html.includes('apple-mobile-web-app-capable')) {
   <meta name="theme-color" content="#34663F" />
   <link rel="apple-touch-icon" href="/dugoutpick/icon.png" />
   <link rel="manifest" href="/dugoutpick/manifest.json" />
-  <script>if('serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('/dugoutpick/sw.js'));</script>`;
+  <script>if('serviceWorker'in navigator){window.addEventListener('load',()=>{navigator.serviceWorker.register('/dugoutpick/sw.js');navigator.serviceWorker.addEventListener('controllerchange',()=>window.location.reload());});}</script>`;
 
   // Expo puts </head> right after the last element on the same line; add newline first
   html = html.replace('</head>', `\n${pwaHead}\n</head>`);
