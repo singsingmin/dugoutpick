@@ -86,6 +86,7 @@ export interface TrackRecord {
   hitRate: number;    // 0~100, 예측 적중 비율(%)
   bonusRate: number;  // 0~100, '기대 이상' 비율(%) — hitRate와 별개
   ready: boolean;     // sampleSize >= 임계치(10)일 때만 true
+  recentRecapPreview?: { pred: number; verdict: string }[]; // ready===false일 때만 파이프라인이 채움
 }
 
 export interface GamesData {
