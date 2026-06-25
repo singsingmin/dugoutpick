@@ -1,6 +1,5 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { View, Text, StyleSheet, Platform } from 'react-native';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import type { TabParamList } from './types';
 import Today from '../screens/Today';
 import Standings from '../screens/Standings';
@@ -21,7 +20,6 @@ const icon = (glyph: string) => ({ focused, color }: { focused: boolean; color: 
 
 export default function Tabs() {
   const monday = isKstMonday(); // 월요일엔 첫 탭이 '월요 리포트'로
-  const insets = useSafeAreaInsets();
   return (
     <Tab.Navigator
       screenOptions={{
@@ -30,8 +28,8 @@ export default function Tabs() {
           backgroundColor: colors.surface,
           borderTopColor: colors.border,
           borderTopWidth: border.width,
-          // 웹: viewport-fit=cover로 확장된 영역만큼 탭바 하단 패딩 추가 (네이티브는 RN Navigation이 자동 처리)
-          ...(Platform.OS === 'web' ? { paddingBottom: insets.bottom } : {}),
+          // 웹: CSS env()로 브라우저 홈 인디케이터 영역 회피 (useSafeAreaInsets는 웹 브라우저에서 0 반환)
+          ...(Platform.OS === 'web' ? { paddingBottom: 'env(safe-area-inset-bottom, 0px)' as any } : {}),
         },
         tabBarLabelStyle: { fontFamily: fonts.pixel, fontSize: 10 },
         tabBarActiveTintColor: colors.accent,
