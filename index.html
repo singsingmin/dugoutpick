@@ -36,9 +36,12 @@
     html{height:-webkit-fill-available}
     html{height:100dvh}
     body,#root{height:100%}
-    /* React Navigation 탭바 DOM 셀렉터 — 홈 인디케이터/제스처바 영역 회피
+    /* standalone(홈화면 PWA) 모드에서만 safe-area padding 적용.
+       브라우저 모드는 100dvh가 이미 home indicator 위 가시영역을 보장하므로 불필요.
        !important로 RN Web 인라인 스타일 오버라이드 */
-    div[role="tablist"]{padding-bottom:env(safe-area-inset-bottom,0px)!important}
+    @media(display-mode:standalone){
+      div[role="tablist"]{padding-bottom:env(safe-area-inset-bottom,0px)!important}
+    }
   </style>
 </head>
 
