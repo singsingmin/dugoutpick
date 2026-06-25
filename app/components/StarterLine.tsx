@@ -40,5 +40,6 @@ const styles = StyleSheet.create({
   row: { flexDirection: 'row', alignItems: 'center' },
   center: { justifyContent: 'center' },
   name: { flex: 1, textAlign: 'center' },
-  icon: { paddingHorizontal: 4 },
+  // includeFontPadding: false → 픽셀폰트+이모지 혼용 시 이모지가 아래로 치우치는 현상 제거
+  icon: { paddingHorizontal: 4, includeFontPadding: false },
 });
