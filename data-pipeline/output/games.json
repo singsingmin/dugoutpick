@@ -1,7 +1,7 @@
 {
   "date": "20260625",
   "dateText": "2026년 6월 25일",
-  "updatedAt": "2026-06-25T05:00:32.951Z",
+  "updatedAt": "2026-06-25T05:18:16.610Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 5,
@@ -43,7 +43,7 @@
         }
       },
       "honjam": {
-        "score": 60,
+        "score": 53,
         "reason": "리그 1위·3위 상위권 빅매치 · 게임차 5.5의 순위 다툼",
         "points": [
           "게임차 : 5.5",
@@ -58,7 +58,9 @@
           "rivalry": 0,
           "playoff": 0.25,
           "pitcher": 0.36,
-          "doom": 0
+          "doom": 0,
+          "park": 0.09,
+          "offense": 0.5
         }
       },
       "live": null,
@@ -194,7 +196,7 @@
         }
       },
       "honjam": {
-        "score": 80,
+        "score": 82,
         "reason": "낙동강 더비 · 게임차 1, 막상막하 승부",
         "points": [
           "낙동강 더비",
@@ -209,7 +211,9 @@
           "rivalry": 0.7,
           "playoff": 1,
           "pitcher": 0.04,
-          "doom": 0
+          "doom": 0,
+          "park": 0.77,
+          "offense": 0.5
         }
       },
       "live": null,
@@ -360,7 +364,9 @@
           "rivalry": 0,
           "playoff": 0,
           "pitcher": 0.25,
-          "doom": 0
+          "doom": 0,
+          "park": 0.45,
+          "offense": 0.5
         }
       },
       "live": null,
@@ -496,7 +502,7 @@
         }
       },
       "honjam": {
-        "score": 85,
+        "score": 84,
         "reason": "게임차 없는 동률 초접전",
         "points": [
           "게임차 : 0 · 동률 초접전",
@@ -511,7 +517,9 @@
           "rivalry": 0,
           "playoff": 1,
           "pitcher": 0.49,
-          "doom": 0
+          "doom": 0,
+          "park": 0.36,
+          "offense": 0.5
         }
       },
       "live": null,
@@ -647,7 +655,7 @@
         }
       },
       "honjam": {
-        "score": 20,
+        "score": 16,
         "reason": "키움 8연패 탈출 도전 · 양 팀 에이스 투수전(ERA 3.4·2.93)",
         "points": [
           "게임차 : 14.5",
@@ -662,7 +670,9 @@
           "rivalry": 0,
           "playoff": 0.5,
           "pitcher": 0.61,
-          "doom": 0
+          "doom": 0,
+          "park": 0,
+          "offense": 0.5
         }
       },
       "live": null,
