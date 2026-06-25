@@ -36,9 +36,9 @@ export default function GameCard({ game, variant, onPress, showRecap = true }: P
 
   const matchup = (
     <View style={styles.matchup}>
-      <TeamName code={game.away.code} variant={tv} />
+      <View style={styles.teamWrap}><TeamName code={game.away.code} variant={tv} /></View>
       {middle}
-      <TeamName code={game.home.code} variant={tv} />
+      <View style={styles.teamWrap}><TeamName code={game.home.code} variant={tv} /></View>
     </View>
   );
 
@@ -120,7 +120,8 @@ const styles = StyleSheet.create({
   list: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: spacing.sm, marginBottom: spacing.sm },
   listMatch: { flex: 1 },
   listMeta: { alignItems: 'flex-end', gap: 2 },
-  matchup: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, flexWrap: 'wrap' },
+  matchup: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
+  teamWrap: { flex: 1, alignItems: 'center' },
   vs: { marginHorizontal: spacing.xs },
   recapRow: { flexDirection: 'row', alignItems: 'center', gap: 4, marginTop: 3, flexWrap: 'wrap' },
   recapChip: { borderWidth: 1, borderRadius: 4, paddingHorizontal: 5, paddingVertical: 1 },

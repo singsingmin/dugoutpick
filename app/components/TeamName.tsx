@@ -13,7 +13,7 @@ interface Props {
 export default function TeamName({ code, variant = 'body' }: Props) {
   const team = TEAMS.find((t) => t.code === code);
   return (
-    <PixelText variant={variant} color={team?.color ?? colors.text}>
+    <PixelText variant={variant} color={team?.color ?? colors.text} numberOfLines={1}>
       {team?.name ?? code}
     </PixelText>
   );

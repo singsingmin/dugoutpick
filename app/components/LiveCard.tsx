@@ -24,11 +24,11 @@ export default function LiveCard({ game, onPress }: { game: Game; onPress: () =>
           )}
         </View>
         <View style={styles.row}>
-          <TeamName code={game.away.code} variant="title" />
+          <View style={styles.teamWrap}><TeamName code={game.away.code} variant="title" /></View>
           <PixelText variant="title" color={colors.text}>
             {game.away.score ?? 0} : {game.home.score ?? 0}
           </PixelText>
-          <TeamName code={game.home.code} variant="title" />
+          <View style={styles.teamWrap}><TeamName code={game.home.code} variant="title" /></View>
         </View>
         <StarterLine game={game} style={styles.starter} />
       </Panel>
@@ -41,5 +41,6 @@ const styles = StyleSheet.create({
   top: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
   heat: { marginLeft: 'auto', backgroundColor: colors.gold, paddingHorizontal: spacing.sm, paddingVertical: 1, borderRadius: 4 },
   row: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around' },
+  teamWrap: { flex: 1, alignItems: 'center' },
   starter: { textAlign: 'center' },
 });
