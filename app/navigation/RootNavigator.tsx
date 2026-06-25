@@ -5,15 +5,17 @@ import Onboarding from '../screens/Onboarding';
 import GameDetail from '../screens/GameDetail';
 import Tabs from './Tabs';
 import { colors, fonts } from '../theme';
+import { useTeamTheme } from '../context/TeamTheme';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function RootNavigator() {
+  const { accent } = useTeamTheme();
   return (
     <Stack.Navigator
       initialRouteName="Splash"
       screenOptions={{
-        headerStyle: { backgroundColor: colors.accent },
+        headerStyle: { backgroundColor: accent },
         headerTintColor: colors.onGreen,
         headerTitleStyle: { fontFamily: fonts.pixel },
         headerTitleAlign: 'center',

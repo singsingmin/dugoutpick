@@ -9,6 +9,7 @@ import {
   type FeedbackTag,
 } from '../services/feedback';
 import { colors, spacing, border } from '../theme';
+import { useTeamTheme } from '../context/TeamTheme';
 
 interface FeedbackWidgetProps {
   gameId: string;
@@ -19,6 +20,7 @@ interface FeedbackWidgetProps {
 type Step = 'idle' | 'thumbs_select' | 'tag_select' | 'submitting' | 'done';
 
 export default function FeedbackWidget({ gameId, predictedScore, matchLabel }: FeedbackWidgetProps) {
+  const { accent } = useTeamTheme();
   const [step, setStep] = useState<Step>('idle');
   const [thumbs, setThumbs] = useState<'up' | 'down' | null>(null);
 
@@ -112,7 +114,7 @@ export default function FeedbackWidget({ gameId, predictedScore, matchLabel }: F
 
         {step === 'done' && (
           <View style={styles.center}>
-            <PixelText variant="body" color={colors.accent}>피드백 감사해요 👋</PixelText>
+            <PixelText variant="body" color={accent}>피드백 감사해요 👋</PixelText>
           </View>
         )}
       </Panel>

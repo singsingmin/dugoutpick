@@ -13,6 +13,7 @@ import HonjamBadge from '../components/HonjamBadge';
 import SectionLabel from '../components/SectionLabel';
 import { loadTeams } from '../data/load';
 import { border, colors, spacing } from '../theme';
+import { useTeamTheme } from '../context/TeamTheme';
 import FeedbackWidget from '../components/FeedbackWidget';
 import LineupSheet from '../components/LineupSheet';
 
@@ -35,6 +36,7 @@ const FACTOR_META: { key: string; label: string; weight: number }[] = [
 
 export default function GameDetail({ route, navigation }: Props) {
   const { gameId } = route.params;
+  const { accent } = useTeamTheme();
   const [game, setGame] = useState<Game | null>(null);
   const [loaded, setLoaded] = useState(false);
   const [lineupVisible, setLineupVisible] = useState(false);
@@ -115,7 +117,7 @@ export default function GameDetail({ route, navigation }: Props) {
         <View style={styles.sectionHeader}>
           <SectionLabel icon="⚾" label="선발투수 비교" />
           {game.lineup && (
-            <Pressable onPress={() => setLineupVisible(true)} style={styles.lineupBtn}>
+            <Pressable onPress={() => setLineupVisible(true)} style={[styles.lineupBtn, { backgroundColor: accent }]}>
               <PixelText variant="caption" color={colors.onGreen}>타순 ▼</PixelText>
             </Pressable>
           )}
@@ -139,7 +141,7 @@ export default function GameDetail({ route, navigation }: Props) {
           <Panel>
             {game.honjam.points.map((p, i) => (
               <View key={i} style={styles.pointRow}>
-                <View style={styles.num}><PixelText variant="caption" color={colors.onGreen}>{i + 1}</PixelText></View>
+                <View style={[styles.num, { backgroundColor: accent }]}><PixelText variant="caption" color={colors.onGreen}>{i + 1}</PixelText></View>
                 <PixelText variant="body" style={styles.pointText}>{p}</PixelText>
               </View>
             ))}
@@ -209,12 +211,12 @@ const styles = StyleSheet.create({
   spark: { fontSize: 18 },
   section: { marginTop: spacing.sm },
   sectionHeader: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
-  lineupBtn: { backgroundColor: colors.accent, borderWidth: border.width, borderColor: colors.border, borderRadius: border.radius, paddingHorizontal: spacing.sm, paddingVertical: 2 },
+  lineupBtn: { borderWidth: border.width, borderColor: colors.border, borderRadius: border.radius, paddingHorizontal: spacing.sm, paddingVertical: 2 },
   starterRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around' },
   pitcherCol: { alignItems: 'center', gap: spacing.xs, flex: 1 },
   pitcherName: { marginTop: spacing.xs },
   pointRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, marginVertical: 3 },
-  num: { backgroundColor: colors.accent, borderColor: colors.border, borderWidth: 2, width: 20, height: 20, alignItems: 'center', justifyContent: 'center' },
+  num: { borderColor: colors.border, borderWidth: 2, width: 20, height: 20, alignItems: 'center', justifyContent: 'center' },
   pointText: { flex: 1 },
   factorRow: { flexDirection: 'row', alignItems: 'center', marginVertical: 3, gap: spacing.sm },
   factorLabel: { width: 78 },
