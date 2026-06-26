@@ -1,7 +1,7 @@
 {
   "date": "20260626",
   "dateText": "2026년 6월 26일",
-  "updatedAt": "2026-06-26T08:34:19.373Z",
+  "updatedAt": "2026-06-26T08:36:19.564Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 5,
@@ -133,7 +133,7 @@
           {
             "order": 9,
             "pos": "유격수",
-            "name": "박지훈"
+            "name": "박찬호"
           }
         ],
         "away": [
@@ -154,7 +154,7 @@
           },
           {
             "order": 4,
-            "pos": "우익수",
+            "pos": "지명타자",
             "name": "나성범"
           },
           {
@@ -164,26 +164,26 @@
           },
           {
             "order": 6,
-            "pos": "지명타자",
-            "name": "한준수"
+            "pos": "2루수",
+            "name": "김선빈"
           },
           {
             "order": 7,
-            "pos": "2루수",
-            "name": "김규성"
+            "pos": "포수",
+            "name": "한준수"
           },
           {
             "order": 8,
-            "pos": "포수",
-            "name": "김태군"
+            "pos": "유격수",
+            "name": "박민"
           },
           {
             "order": 9,
-            "pos": "유격수",
-            "name": "박민"
+            "pos": "우익수",
+            "name": "박정우"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
