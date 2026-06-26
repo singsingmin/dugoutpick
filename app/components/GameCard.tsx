@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
   starterHero: { marginTop: spacing.xs },
   starterList: { marginTop: 3 },
   reasonHero: { marginTop: spacing.xs },
-  list: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: spacing.sm, marginBottom: spacing.sm },
+  list: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: spacing.sm, marginBottom: spacing.sm, borderWidth: 1 },
   listMatch: { flex: 1 },
   listMeta: { alignItems: 'flex-end', gap: 2 },
   matchup: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
