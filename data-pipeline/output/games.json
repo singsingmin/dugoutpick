@@ -1,7 +1,7 @@
 {
   "date": "20260626",
   "dateText": "2026년 6월 26일",
-  "updatedAt": "2026-06-26T10:50:21.451Z",
+  "updatedAt": "2026-06-26T10:52:17.473Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 5,
@@ -87,11 +87,11 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 3,
-        "heat": 50,
-        "label": "4회말 1점차 접전"
+        "inning": 5,
+        "half": "T",
+        "out": 0,
+        "heat": 54,
+        "label": "5회초 1점차 접전"
       },
       "recap": null,
       "decision": null,
