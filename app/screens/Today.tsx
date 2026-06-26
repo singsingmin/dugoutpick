@@ -14,7 +14,6 @@ import ScreenHeader from '../components/ScreenHeader';
 import SectionLabel from '../components/SectionLabel';
 import PixelText from '../components/PixelText';
 import MondayReport from '../components/MondayReport';
-import TrackRecordBadge from '../components/TrackRecordBadge';
 import WeeklyScheduleSheet from '../components/WeeklyScheduleSheet';
 import { formatUpdatedAt, relativeFromNow, isKstMonday } from '../utils';
 import { colors, spacing } from '../theme';
@@ -81,11 +80,9 @@ export default function Today() {
   return (
     <View style={styles.root}>
       {/* 고정 배경 — SafeAreaView/ScrollView 바깥에 있어 스크롤에 영향받지 않음 */}
-      <Image
-        source={require('../assets/stadium-bg.png')}
-        style={styles.bgImage}
-        resizeMode="cover"
-      />
+      <Image source={require('../assets/stadium-bg.png')} style={styles.bgImage} resizeMode="cover" />
+      {/* 흰색 오버레이 — 채도 낮춰 눈 부담 감소 */}
+      <View style={styles.bgOverlay} />
       <SafeAreaView style={styles.safe} edges={['top']}>
         <WeeklyScheduleSheet visible={weeklyVisible} onClose={() => setWeeklyVisible(false)} />
         {failed ? (
@@ -181,7 +178,6 @@ function Body({
             <GameCard game={heroGame} variant="hero" onPress={() => open(heroGame!.gameId)} />
           </View>
         )}
-        <TrackRecordBadge track={data.trackRecord} variant="today" />
       </View>
 
       {/* ── 리스트 섹션 ── */}
@@ -247,8 +243,8 @@ function Centered({ text }: { text: string }) {
 const styles = StyleSheet.create({
   // 야구장 고정 배경 구조
   root: { flex: 1, backgroundColor: colors.bg },
-  // position/width/height 명시 — absoluteFillObject의 right/bottom 방식은 웹에서 img 자연 크기를 못 잡음
   bgImage: { position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' },
+  bgOverlay: { position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(255,255,255,0.38)' },
   safe: { flex: 1, backgroundColor: 'transparent' },
   safeSolid: { flex: 1, backgroundColor: colors.bg },
   scroll: { flex: 1 },

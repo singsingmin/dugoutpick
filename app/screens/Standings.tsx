@@ -74,6 +74,7 @@ export default function Standings() {
   return (
     <View style={styles.root}>
       <Image source={require('../assets/stadium-bg.png')} style={styles.bgImage} resizeMode="cover" />
+      <View style={styles.bgOverlay} />
       <SafeAreaView style={styles.safe} edges={['top']}>
       <ScreenHeader title="구단 순위" leftIcon="📊" />
       {!loaded ? (
@@ -153,6 +154,7 @@ export default function Standings() {
 const styles = StyleSheet.create({
   root: { flex: 1, backgroundColor: colors.bg },
   bgImage: { position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' },
+  bgOverlay: { position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(255,255,255,0.38)' },
   safe: { flex: 1, backgroundColor: 'transparent' },
   center: { flex: 1, alignItems: 'center', justifyContent: 'center' },
   content: { padding: spacing.md },
