@@ -1,6 +1,6 @@
 // 구단 순위 탭: 순위·팀·승·패·무·승률·게임차 + 최근10 폼닷·연속·승률 막대 + 가을야구 컷(5위). 내 팀 강조.
 import { useCallback, useState } from 'react';
-import { View, ScrollView, Image, StyleSheet } from 'react-native';
+import { View, ScrollView, Image, Pressable, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useFocusEffect } from '@react-navigation/native';
 import type { Standing, RecentGame } from '../types';
@@ -50,6 +50,7 @@ export default function Standings() {
   const [recent, setRecent] = useState<Record<string, RecentGame[]>>({});
   const [myCode, setMyCode] = useState<string | null>(null);
   const [loaded, setLoaded] = useState(false);
+  const [belowExpanded, setBelowExpanded] = useState(false);
   const { accent } = useTeamTheme();
 
   useFocusEffect(
@@ -98,38 +99,44 @@ export default function Standings() {
             {rows.map((s, i) => {
               const mine = s.code != null && s.code === myCode;
               const games = (s.code && recent[s.code]) || [];
+              const isBelowCut = poCutIndex >= 0 && i > poCutIndex;
               return (
                 <View key={`${s.rank}-${s.name}`}>
-                  <View style={[styles.block, mine && styles.blockMine, mine && { borderLeftColor: teamColor(s.code) }]}>
-                    {/* 1줄: 숫자 표 */}
-                    <View style={styles.row}>
-                      <PixelText style={[styles.cell, COLS.rank, styles.rankText]} color={colors.text}>{s.rank}</PixelText>
-                      <PixelText style={[styles.cell, COLS.team, styles.teamAlign]} color={teamColor(s.code)} numberOfLines={1}>{s.name}</PixelText>
-                      <PixelText style={[styles.cell, COLS.win]} color={colors.text}>{s.win}</PixelText>
-                      <PixelText style={[styles.cell, COLS.loss]} color={colors.text}>{s.loss}</PixelText>
-                      <PixelText style={[styles.cell, COLS.draw]} color={colors.textDim}>{s.draw}</PixelText>
-                      <PixelText style={[styles.cell, COLS.wr]} color={colors.text}>{s.winRate.toFixed(3)}</PixelText>
-                      <PixelText style={[styles.cell, COLS.gb]} color={colors.textDim}>{s.gamesBehind === 0 ? '-' : s.gamesBehind}</PixelText>
+                  {/* 가을야구 마지노선 아래 팀은 접힌 상태에서 숨김 */}
+                  {(!isBelowCut || belowExpanded) && (
+                    <View style={[styles.block, mine && styles.blockMine, mine && { borderLeftColor: teamColor(s.code) }]}>
+                      {/* 1줄: 숫자 표 */}
+                      <View style={styles.row}>
+                        <PixelText style={[styles.cell, COLS.rank, styles.rankText]} color={colors.text}>{s.rank}</PixelText>
+                        <PixelText style={[styles.cell, COLS.team, styles.teamAlign]} color={teamColor(s.code)} numberOfLines={1}>{s.name}</PixelText>
+                        <PixelText style={[styles.cell, COLS.win]} color={colors.text}>{s.win}</PixelText>
+                        <PixelText style={[styles.cell, COLS.loss]} color={colors.text}>{s.loss}</PixelText>
+                        <PixelText style={[styles.cell, COLS.draw]} color={colors.textDim}>{s.draw}</PixelText>
+                        <PixelText style={[styles.cell, COLS.wr]} color={colors.text}>{s.winRate.toFixed(3)}</PixelText>
+                        <PixelText style={[styles.cell, COLS.gb]} color={colors.textDim}>{s.gamesBehind === 0 ? '-' : s.gamesBehind}</PixelText>
+                      </View>
+                      {/* 2줄: 최근10 폼닷 + 연속 */}
+                      <View style={styles.formRow}>
+                        {games.length > 0 ? <FormDots games={games} compact /> : <View />}
+                        <PixelText variant="caption" color={streakColor(s.streak)}>{s.streak}</PixelText>
+                      </View>
+                      {/* 승률 막대 */}
+                      <View style={styles.wrTrack}>
+                        <View style={[styles.wrFill, { width: `${Math.round(s.winRate * 100)}%`, backgroundColor: teamColor(s.code) }]} />
+                      </View>
                     </View>
-                    {/* 2줄: 최근10 폼닷 + 연속 */}
-                    <View style={styles.formRow}>
-                      {games.length > 0 ? <FormDots games={games} compact /> : <View />}
-                      <PixelText variant="caption" color={streakColor(s.streak)}>{s.streak}</PixelText>
-                    </View>
-                    {/* 승률 막대 */}
-                    <View style={styles.wrTrack}>
-                      <View style={[styles.wrFill, { width: `${Math.round(s.winRate * 100)}%`, backgroundColor: teamColor(s.code) }]} />
-                    </View>
-                  </View>
-                  {/* 가을야구 마지노선 */}
+                  )}
+                  {/* 가을야구 마지노선 — 탭하면 아래 팀 펼치기/접기 */}
                   {i === poCutIndex && (
-                    <View style={styles.cutRow}>
+                    <Pressable style={styles.cutRow} onPress={() => setBelowExpanded(v => !v)}>
                       <View style={styles.cutLine} />
                       <View style={styles.cutLabel}>
-                        <PixelText variant="caption" color={colors.onGold}>🍂 가을야구 마지노선</PixelText>
+                        <PixelText variant="caption" color={colors.onGold}>
+                          🍂 가을야구 마지노선 {belowExpanded ? '▲' : '▼'}
+                        </PixelText>
                       </View>
                       <View style={styles.cutLine} />
-                    </View>
+                    </Pressable>
                   )}
                 </View>
               );
