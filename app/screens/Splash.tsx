@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { ImageBackground, Platform, Pressable, StatusBar, StyleSheet } from 'react-native';
+import { ImageBackground, Pressable, StatusBar, StyleSheet } from 'react-native';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/types';
 import { getCheerTeam } from '../data/team';
@@ -31,6 +31,7 @@ export default function Splash({ navigation }: Props) {
   return (
     <Pressable
       testID="splash-container"
+      nativeID="splash-container"
       style={styles.container}
       onPress={canNavigate ? handleTap : undefined}
       accessibilityRole="button"
@@ -41,16 +42,10 @@ export default function Splash({ navigation }: Props) {
         source={require('../assets/splash-intro.png')}
         style={styles.image}
         resizeMode="cover"
-        // 웹: object-position:top → 이미지 상단(타이틀)이 항상 화면 상단에 고정.
-        // 컨테이너가 viewport보다 커도 타이틀이 잘리지 않음.
-        imageStyle={Platform.OS === 'web' ? (webImageStyle as object) : undefined}
       />
     </Pressable>
   );
 }
-
-// web 전용 CSS — RN StyleSheet에서 지원 안 하므로 별도 선언
-const webImageStyle = { objectPosition: 'top center' };
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
