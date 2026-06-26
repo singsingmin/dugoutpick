@@ -112,8 +112,6 @@ const styles = StyleSheet.create({
   sheet: {
     height: '75%',
     backgroundColor: colors.surface,
-    borderTopWidth: border.width,
-    borderTopColor: colors.border,
     borderTopLeftRadius: 12,
     borderTopRightRadius: 12,
     padding: spacing.md,
@@ -132,8 +130,6 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start',
     paddingHorizontal: spacing.sm,
     paddingVertical: 2,
-    borderWidth: border.width,
-    borderColor: colors.border,
     borderRadius: border.radius,
   },
   gameRow: {

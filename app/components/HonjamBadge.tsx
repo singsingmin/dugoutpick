@@ -20,7 +20,7 @@ export default function HonjamBadge({ score, size = 'sm' }: Props) {
     );
   }
   return (
-    <View style={[styles.box, styles.sm, { backgroundColor: colors.surface, borderColor: colors.accent }]}>
+    <View style={[styles.box, styles.sm, { backgroundColor: colors.surface }]}>
       <PixelText variant="title" color={colors.accent}>{score}</PixelText>
     </View>
   );
@@ -28,9 +28,7 @@ export default function HonjamBadge({ score, size = 'sm' }: Props) {
 
 const styles = StyleSheet.create({
   box: {
-    borderWidth: border.width,
     borderRadius: border.radius,
-    borderColor: colors.border,
     alignItems: 'center',
     justifyContent: 'center',
   },

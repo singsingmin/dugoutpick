@@ -6,6 +6,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/types';
+import { useTeamTheme } from '../context/TeamTheme';
 import { loadGames } from '../data/load';
 import PixelText from '../components/PixelText';
 import Panel from '../components/Panel';
@@ -21,6 +22,7 @@ const APP_VERSION = '1.0.0';
 
 export default function Settings() {
   const navigation = useNavigation<Nav>();
+  const { accent } = useTeamTheme();
   const [updatedAt, setUpdatedAt] = useState<string | null>(null);
   const [trackRecord, setTrackRecord] = useState<TrackRecord | null>(null);
 
@@ -43,7 +45,7 @@ export default function Settings() {
       <ScrollView contentContainerStyle={styles.content}>
         <View style={styles.section}>
           <SectionLabel label="응원팀" />
-          <PixelButton label="응원팀 변경" onPress={() => navigation.navigate('Onboarding')} />
+          <PixelButton label="응원팀 변경" onPress={() => navigation.navigate('Onboarding')} accentColor={accent} />
         </View>
 
         <View style={styles.section}>

@@ -33,8 +33,6 @@ export default function PixelButton({ label, onPress, accentColor, selected, dis
 
 const styles = StyleSheet.create({
   btn: {
-    borderWidth: border.width,
-    borderColor: colors.border,
     borderRadius: border.radius,
     paddingVertical: spacing.md,
     paddingHorizontal: spacing.md,
