@@ -1,7 +1,7 @@
 {
   "date": "20260626",
   "dateText": "2026년 6월 26일",
-  "updatedAt": "2026-06-26T09:44:19.068Z",
+  "updatedAt": "2026-06-26T09:46:19.044Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 5,
@@ -249,7 +249,7 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "heat": 43,
         "label": "1회말 동점 접전"
       },
@@ -728,10 +728,10 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "heat": 49,
-        "label": "2회초 동점 접전"
+        "label": "2회말 동점 접전"
       },
       "recap": null,
       "decision": null,
