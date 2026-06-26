@@ -24,8 +24,6 @@ export default function SectionLabel({ label, icon }: Props) {
 const styles = StyleSheet.create({
   tab: {
     alignSelf: 'flex-start',
-    borderColor: colors.border,
-    borderWidth: border.width,
     borderRadius: border.radius,
     paddingVertical: spacing.xs,
     paddingHorizontal: spacing.sm,

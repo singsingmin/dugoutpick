@@ -184,5 +184,5 @@ const styles = StyleSheet.create({
   legend: { marginTop: spacing.sm, gap: 4, alignItems: 'flex-end' },
   legendRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, flexWrap: 'wrap', justifyContent: 'flex-end' },
   legendItem: { flexDirection: 'row', alignItems: 'center', gap: 3 },
-  legendSquare: { width: 9, height: 9, borderRadius: 1, borderWidth: 1, borderColor: colors.border },
+  legendSquare: { width: 9, height: 9, borderRadius: 1 },
 });

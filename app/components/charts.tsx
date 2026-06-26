@@ -3,7 +3,7 @@ import { View, StyleSheet } from 'react-native';
 import PixelText from './PixelText';
 import { loadTeams } from '../data/load';
 import type { RecentGame } from '../types';
-import { border, colors } from '../theme';
+import { colors } from '../theme';
 
 const TEAMS = loadTeams().teams;
 const teamMeta = (code: string) => TEAMS.find((t) => t.code === code);
@@ -118,15 +118,15 @@ export function FormDots({ games, compact = false }: { games: RecentGame[]; comp
 
 const s = StyleSheet.create({
   ladder: { flexDirection: 'row', gap: 2 },
-  rung: { flex: 1, height: 20, backgroundColor: colors.surfaceAlt, borderWidth: 1, borderColor: colors.border, borderRadius: 2, alignItems: 'center', justifyContent: 'center' },
-  track: { flexDirection: 'row', height: 14, borderWidth: border.width, borderColor: colors.border, borderRadius: 3, overflow: 'hidden', marginBottom: 4 },
+  rung: { flex: 1, height: 20, backgroundColor: colors.surfaceAlt, borderRadius: 2, alignItems: 'center', justifyContent: 'center' },
+  track: { flexDirection: 'row', height: 14, borderRadius: 3, overflow: 'hidden', marginBottom: 4 },
   h2hRow: { flexDirection: 'row', alignItems: 'center', gap: 6 },
   h2hName: { width: 36 },
-  h2hTrack: { flex: 1, flexDirection: 'row', height: 10, borderWidth: 1, borderColor: colors.border, borderRadius: 2, overflow: 'hidden', backgroundColor: colors.surfaceAlt },
+  h2hTrack: { flex: 1, flexDirection: 'row', height: 10, borderRadius: 2, overflow: 'hidden', backgroundColor: colors.surfaceAlt },
   h2hRec: { width: 46, textAlign: 'right' },
   dotsRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 3, marginBottom: 4 },
-  formDot: { width: 18, height: 18, borderRadius: 2, alignItems: 'center', justifyContent: 'center', borderWidth: 1, borderColor: colors.border },
+  formDot: { width: 18, height: 18, borderRadius: 2, alignItems: 'center', justifyContent: 'center' },
   formDotTxt: { fontSize: 9 },
   miniRow: { flexDirection: 'row', gap: 2 },
-  formDotMini: { width: 9, height: 9, borderRadius: 1, borderWidth: 1, borderColor: colors.border },
+  formDotMini: { width: 9, height: 9, borderRadius: 1 },
 });

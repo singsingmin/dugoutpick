@@ -2,7 +2,7 @@
 import { Modal, View, Pressable, StyleSheet } from 'react-native';
 import type { Game, LineupPlayer } from '../types';
 import PixelText from './PixelText';
-import { border, colors, spacing } from '../theme';
+import { colors, spacing } from '../theme';
 
 interface Props {
   visible: boolean;
@@ -60,8 +60,6 @@ const styles = StyleSheet.create({
   backdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.5)', justifyContent: 'flex-end' },
   sheet: {
     backgroundColor: colors.surface,
-    borderTopWidth: border.width,
-    borderTopColor: colors.border,
     borderTopLeftRadius: 12,
     borderTopRightRadius: 12,
     padding: spacing.md,
@@ -74,7 +72,7 @@ const styles = StyleSheet.create({
   header: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: spacing.sm },
   notice: { marginBottom: spacing.sm },
   table: { flexDirection: 'row', gap: spacing.sm },
-  divider: { width: border.width, backgroundColor: colors.border },
+  divider: { width: 1, backgroundColor: colors.border },
   col: { flex: 1, gap: spacing.xs },
   colTitle: { textAlign: 'center', marginBottom: spacing.xs },
   playerRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.xs },
