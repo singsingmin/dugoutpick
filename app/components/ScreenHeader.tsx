@@ -9,20 +9,26 @@ interface Props {
   leftIcon?: string;
   rightIcon?: string;
   rightLabel?: string;  // 이모지 대신 표시할 텍스트 (예: 날짜 "6/25")
+  onLeftPress?: () => void;
   onRightPress?: () => void;
 }
 
-export default function ScreenHeader({ title, leftIcon, rightIcon, rightLabel, onRightPress }: Props) {
+export default function ScreenHeader({ title, leftIcon, rightIcon, rightLabel, onLeftPress, onRightPress }: Props) {
   const { accent } = useTeamTheme();
   const rightContent = (
     <PixelText variant="body" color={colors.onGreen} style={styles.side}>
       {rightLabel ?? rightIcon ?? ''}
     </PixelText>
   );
+  const leftContent = (
+    <PixelText variant="body" color={colors.onGreen} style={styles.side}>{leftIcon ?? ''}</PixelText>
+  );
 
   return (
     <View style={[styles.bar, { backgroundColor: accent }]}>
-      <PixelText variant="body" color={colors.onGreen} style={styles.side}>{leftIcon ?? ''}</PixelText>
+      {onLeftPress
+        ? <Pressable onPress={onLeftPress} hitSlop={8}>{leftContent}</Pressable>
+        : leftContent}
       <PixelText variant="title" color={colors.onGreen}>{title}</PixelText>
       {onRightPress
         ? <Pressable onPress={onRightPress} hitSlop={8}>{rightContent}</Pressable>

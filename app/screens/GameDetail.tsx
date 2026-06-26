@@ -1,12 +1,14 @@
 // 경기 상세: 매치업 + 꿀잼지수(골드) + 한 줄 예측 + 선발 비교 + 관전포인트 TOP3. (flow.md, ADR-004/005)
 import { useEffect, useState } from 'react';
-import { View, ScrollView, Pressable, Share, StyleSheet } from 'react-native';
+import { View, ScrollView, Pressable, StyleSheet } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/types';
 import type { Game, TeamSide } from '../types';
 import { loadGames } from '../data/load';
 import PixelText from '../components/PixelText';
 import Panel from '../components/Panel';
+import ScreenHeader from '../components/ScreenHeader';
 import TeamName from '../components/TeamName';
 import TeamBadge from '../components/TeamBadge';
 import HonjamBadge from '../components/HonjamBadge';
@@ -50,18 +52,8 @@ export default function GameDetail({ route, navigation }: Props) {
   }, [gameId]);
 
   useEffect(() => {
-    if (!game) return;
-    navigation.setOptions({
-      title: `${game.away.name} vs ${game.home.name}`,
-      headerRight: () => (
-        <Pressable
-          onPress={() => Share.share({ message: `오늘야구각 — ${game.away.name} vs ${game.home.name}${game.honjam ? ` 꿀잼지수 ${game.honjam.score}점` : ''}` })}
-        >
-          <PixelText color={colors.onGreen} style={styles.shareIcon}>↗</PixelText>
-        </Pressable>
-      ),
-    });
-  }, [game, navigation]);
+    navigation.setOptions({ headerShown: false });
+  }, [navigation]);
 
   if (!loaded) return <View style={styles.container} />;
   if (!game) {
@@ -75,8 +67,16 @@ export default function GameDetail({ route, navigation }: Props) {
   const final = game.status === 'FINAL';
   const live = game.status === 'LIVE';
 
+  const title = game ? `${game.away.name} vs ${game.home.name}` : '경기 상세';
+
   return (
-    <ScrollView style={styles.container} contentContainerStyle={styles.content}>
+    <SafeAreaView style={styles.container} edges={['top']}>
+      <ScreenHeader
+        title={title}
+        leftIcon="←"
+        onLeftPress={() => navigation.goBack()}
+      />
+      <ScrollView style={styles.scroll} contentContainerStyle={styles.content}>
       {/* 매치업 */}
       <View style={styles.matchup}>
         <View style={styles.teamCol}>
@@ -179,7 +179,8 @@ export default function GameDetail({ route, navigation }: Props) {
           matchLabel={`${game.away.name} vs ${game.home.name}`}
         />
       )}
-    </ScrollView>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
@@ -200,9 +201,9 @@ function PitcherCol({ side }: { side: TeamSide }) {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.bg },
+  scroll: { flex: 1 },
   content: { padding: spacing.md, gap: spacing.sm },
   center: { flex: 1, backgroundColor: colors.bg, alignItems: 'center', justifyContent: 'center' },
-  shareIcon: { fontSize: 16, paddingHorizontal: spacing.sm },
   matchup: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around', marginTop: spacing.md },
   teamCol: { alignItems: 'center', gap: spacing.xs },
   underline: { width: 48, borderBottomWidth: 2, borderStyle: 'dotted' },
