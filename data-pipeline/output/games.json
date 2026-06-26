@@ -1,7 +1,7 @@
 {
   "date": "20260626",
   "dateText": "2026년 6월 26일",
-  "updatedAt": "2026-06-26T12:32:17.466Z",
+  "updatedAt": "2026-06-26T12:34:17.309Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 8,
@@ -249,7 +249,7 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 0,
         "label": "9회초 8점차"
       },
