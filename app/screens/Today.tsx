@@ -126,16 +126,12 @@ function Body({
     .filter((g) => g.status !== 'LIVE' && g.gameId !== recommended?.gameId)
     .sort((a, b) => (b.honjam?.score ?? -1) - (a.honjam?.score ?? -1));
 
-  // ── 히어로 우선순위: LIVE top heat → 추천 → 오늘의 명경기 ──
+  // ── 히어로 우선순위: 추천 → 오늘의 명경기 (LIVE는 리스트 1개로 통합)
   let heroGame: Game | null = null;
   let heroIcon = '⚾';
   let heroLabel = '오늘의 경기';
 
-  if (liveGames.length > 0) {
-    heroGame = liveGames[0];
-    heroIcon = '🔴';
-    heroLabel = '지금 볼 각';
-  } else if (recommended) {
+  if (recommended) {
     heroGame = recommended;
     heroIcon = '★';
     heroLabel = '오늘의 추천';
@@ -146,7 +142,6 @@ function Body({
   }
 
   // ── 리스트: 히어로 제외한 나머지 ──
-  const remainingLive = liveGames.filter((g) => g.gameId !== heroGame?.gameId);
   const listBestRecap = heroGame?.gameId === bestRecap?.gameId ? null : bestRecap;
   const listMyFinished = heroGame?.gameId === myFinished?.gameId ? null : myFinished;
   const listRecommended = heroGame?.gameId === recommended?.gameId ? null : recommended;
@@ -182,13 +177,13 @@ function Body({
 
       {/* ── 리스트 섹션 ── */}
       <View style={styles.listSection}>
-        {remainingLive.length > 0 && (
+        {liveGames.length > 0 && (
           <View style={styles.section}>
             <SectionLabel icon="🔴" label="지금 볼 각" />
             <PixelText variant="caption" color={colors.textDim} style={styles.liveHint}>
               ⚠ 라이브 점수는 갱신 시각 기준 — 실제보다 몇 분 늦을 수 있다
             </PixelText>
-            {remainingLive.map((g) => (
+            {liveGames.map((g) => (
               <LiveCard key={g.gameId} game={g} onPress={() => open(g.gameId)} />
             ))}
           </View>
