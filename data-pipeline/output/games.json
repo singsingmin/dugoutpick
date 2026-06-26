@@ -1,7 +1,7 @@
 {
   "date": "20260626",
   "dateText": "2026년 6월 26일",
-  "updatedAt": "2026-06-26T10:40:21.684Z",
+  "updatedAt": "2026-06-26T10:42:18.893Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 5,
@@ -88,10 +88,10 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 50,
-        "label": "4회초 1점차 접전"
+        "label": "4회말 1점차 접전"
       },
       "recap": null,
       "decision": null,
@@ -376,7 +376,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "나균안",
           "era": 3.86,
@@ -410,8 +410,8 @@
         "inning": 5,
         "half": "B",
         "out": 1,
-        "heat": 64,
-        "label": "5회말 동점 접전"
+        "heat": 43,
+        "label": "5회말 2점차"
       },
       "recap": null,
       "decision": null,
