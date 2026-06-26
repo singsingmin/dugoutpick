@@ -145,12 +145,35 @@ if (!html.includes('apple-mobile-web-app-capable')) {
     [data-testid="splash-container"] div{background-position:top center!important}
   </style>
   <script>
-  /* JS 2차 폴백: React 렌더 후 실제 DOM 요소를 찾아 positioning 강제 적용.
-     CSS 선택자가 우선하지만 RN Web 버전/구조에 따라 무력화될 경우를 대비. */
+  /* 스플래시 진단 + 포지셔닝 수정 */
   (function(){
+    var fixed=false;
     function fixSplash(){
       var c=document.querySelector('[data-testid="splash-container"]');
       if(!c)return;
+      var cr=c.getBoundingClientRect();
+      if(!fixed){
+        fixed=true;
+        console.log('[splash] container:',cr.width.toFixed(0)+'x'+cr.height.toFixed(0),'top:'+cr.top.toFixed(0));
+        var cs=getComputedStyle(c);
+        console.log('[splash] container position:',cs.position,'z-index:',cs.zIndex);
+        var imgs=c.querySelectorAll('img');
+        console.log('[splash] img count:',imgs.length);
+        imgs.forEach(function(el,i){
+          var r=el.getBoundingClientRect();
+          var s=getComputedStyle(el);
+          console.log('[splash] img['+i+']:',r.width.toFixed(0)+'x'+r.height.toFixed(0),'fit:'+s.objectFit,'pos:'+s.objectPosition);
+        });
+        var bgEls=[];
+        c.querySelectorAll('*').forEach(function(el){try{if(getComputedStyle(el).backgroundImage!=='none')bgEls.push(el);}catch(e){}});
+        console.log('[splash] bg-image el count:',bgEls.length);
+        bgEls.forEach(function(el,i){
+          var r=el.getBoundingClientRect();
+          var s=getComputedStyle(el);
+          console.log('[splash] bg['+i+']:',el.tagName,r.width.toFixed(0)+'x'+r.height.toFixed(0),'bgPos:'+s.backgroundPosition,'bgSize:'+s.backgroundSize);
+        });
+      }
+      /* 수정 적용 */
       c.querySelectorAll('img').forEach(function(el){
         el.style.setProperty('object-position','top center','important');
         el.style.setProperty('object-fit','cover','important');
@@ -159,6 +182,7 @@ if (!html.includes('apple-mobile-web-app-capable')) {
         try{
           if(getComputedStyle(el).backgroundImage!=='none'){
             el.style.setProperty('background-position','top center','important');
+            el.style.setProperty('background-size','cover','important');
           }
         }catch(e){}
       });
