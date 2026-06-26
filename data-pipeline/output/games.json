@@ -1,7 +1,7 @@
 {
   "date": "20260626",
   "dateText": "2026년 6월 26일",
-  "updatedAt": "2026-06-26T08:40:23.340Z",
+  "updatedAt": "2026-06-26T08:42:17.969Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 5,
@@ -567,17 +567,17 @@
           {
             "order": 4,
             "pos": "좌익수",
-            "name": "김재환"
-          },
-          {
-            "order": 5,
-            "pos": "우익수",
             "name": "에레디아"
           },
           {
-            "order": 6,
+            "order": 5,
             "pos": "1루수",
-            "name": "전의산"
+            "name": "오태곤"
+          },
+          {
+            "order": 6,
+            "pos": "우익수",
+            "name": "김성욱"
           },
           {
             "order": 7,
@@ -598,8 +598,8 @@
         "away": [
           {
             "order": 1,
-            "pos": "2루수",
-            "name": "이도윤"
+            "pos": "좌익수",
+            "name": "이진영"
           },
           {
             "order": 2,
@@ -623,18 +623,18 @@
           },
           {
             "order": 6,
-            "pos": "1루수",
-            "name": "김태연"
-          },
-          {
-            "order": 7,
             "pos": "포수",
             "name": "허인서"
           },
           {
+            "order": 7,
+            "pos": "2루수",
+            "name": "이도윤"
+          },
+          {
             "order": 8,
-            "pos": "좌익수",
-            "name": "이진영"
+            "pos": "1루수",
+            "name": "김태연"
           },
           {
             "order": 9,
@@ -642,7 +642,7 @@
             "name": "심우준"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
