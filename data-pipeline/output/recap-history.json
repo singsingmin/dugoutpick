@@ -1,11 +1,15 @@
 {
-  "updatedAt": "2026-06-26T12:26:17.944Z",
+  "updatedAt": "2026-06-26T12:28:19.109Z",
   "window": 50,
-  "sampleSize": 6,
-  "hitRate": 17,
-  "bonusRate": 33,
+  "sampleSize": 7,
+  "hitRate": 14,
+  "bonusRate": 29,
   "ready": false,
   "recentRecapPreview": [
+    {
+      "pred": 35,
+      "verdict": "기대 이하"
+    },
     {
       "pred": 14,
       "verdict": "기대 이상"
@@ -21,10 +25,6 @@
     {
       "pred": 6,
       "verdict": "기대 이상"
-    },
-    {
-      "pred": 85,
-      "verdict": "기대 이하"
     }
   ],
   "records": [
@@ -69,6 +69,13 @@
       "pred": 14,
       "actual": 74,
       "verdict": "기대 이상"
+    },
+    {
+      "date": "20260626",
+      "gameId": "20260626HHSK0",
+      "pred": 35,
+      "actual": 4,
+      "verdict": "기대 이하"
     }
   ]
 }
