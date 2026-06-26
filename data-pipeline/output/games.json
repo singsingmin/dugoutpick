@@ -1,7 +1,7 @@
 {
   "date": "20260626",
   "dateText": "2026년 6월 26일",
-  "updatedAt": "2026-06-26T12:00:35.106Z",
+  "updatedAt": "2026-06-26T12:02:17.990Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 6,
@@ -88,10 +88,10 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 41,
-        "label": "8회초 3점차"
+        "label": "8회말 3점차"
       },
       "recap": null,
       "decision": null,
@@ -216,7 +216,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 3,
-        "score": 5,
+        "score": 8,
         "starter": {
           "name": "장찬희",
           "era": 4.86,
@@ -250,8 +250,8 @@
         "inning": 7,
         "half": "B",
         "out": 1,
-        "heat": 26,
-        "label": "7회말 4점차"
+        "heat": 0,
+        "label": "7회말 7점차"
       },
       "recap": null,
       "decision": null,
@@ -473,10 +473,10 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 0,
-        "label": "8회초 7점차"
+        "label": "8회말 7점차"
       },
       "recap": null,
       "decision": null,
@@ -634,7 +634,7 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "heat": 29,
         "label": "8회초 4점차"
       },
