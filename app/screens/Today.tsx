@@ -1,6 +1,6 @@
 // 오늘경기 탭: 야구장 히어로 배경 + 추천/LIVE/명경기 히어로 카드 + 나머지 리스트. (flow.md, ADR-004)
 import { useCallback, useRef, useState } from 'react';
-import { View, ScrollView, ActivityIndicator, ImageBackground, StyleSheet } from 'react-native';
+import { View, ScrollView, ActivityIndicator, Image, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
@@ -152,11 +152,13 @@ function Body({
   return (
     <ScrollView contentContainerStyle={styles.scrollContent}>
       {/* ── 야구장 히어로 배경 영역 ── */}
-      <ImageBackground
-        source={require('../assets/splash-intro.png')}
-        resizeMode="cover"
-        style={styles.heroBg}
-      >
+      {/* ImageBackground는 웹에서 img를 children 밑에 렌더해 레이아웃이 깨짐 → View+absoluteFill Image로 대체 */}
+      <View style={styles.heroBg}>
+        <Image
+          source={require('../assets/splash-intro.png')}
+          resizeMode="cover"
+          style={StyleSheet.absoluteFillObject}
+        />
         {/* 가독성을 위한 반투명 다크 오버레이 */}
         <View style={styles.heroOverlay}>
           <ScreenHeader
@@ -186,7 +188,7 @@ function Body({
             </View>
           </View>
         </View>
-      </ImageBackground>
+      </View>
 
       {/* ── 리스트 영역 ── */}
       <View style={styles.listSection}>
