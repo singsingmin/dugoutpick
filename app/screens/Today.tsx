@@ -173,7 +173,7 @@ function Body({
               </PixelText>
             </View>
             <PixelText variant="title" color={colors.onGreen} style={styles.tagline}>
-              오늘 KBO, 본 각인가?
+              오늘 KBO, 볼 각인가?
             </PixelText>
             {heroGame && (
               <View style={styles.heroCardWrap}>
