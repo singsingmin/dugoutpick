@@ -12,14 +12,6 @@ const appDir = join(__dirname, '..', 'app');
 const distDir = join(appDir, 'dist');
 const assetsDir = join(appDir, 'assets');
 
-// Metro가 번들 시 콘텐츠 해시를 파일명에 붙일 수 있으므로 실제 파일명을 동적으로 탐색
-let splashAssetPath = '/dugoutpick/assets/splash-intro.png';
-try {
-  const distAssetsList = readdirSync(join(distDir, 'assets'));
-  const splashFile = distAssetsList.find(f => f.startsWith('splash-intro') && /\.(png|jpg|webp)$/i.test(f));
-  if (splashFile) splashAssetPath = `/dugoutpick/assets/${splashFile}`;
-} catch {}
-
 // ── 1. Copy PWA icons ──────────────────────────────────────────────
 copyFileSync(join(assetsDir, 'icon.png'), join(distDir, 'icon.png'));
 copyFileSync(join(assetsDir, 'favicon.png'), join(distDir, 'favicon.png'));
@@ -145,11 +137,37 @@ if (!html.includes('apple-mobile-web-app-capable')) {
     @media(display-mode:standalone){
       div:has(>div[role="tablist"]){height:calc(49px + env(safe-area-inset-bottom,0px))!important;padding-bottom:env(safe-area-inset-bottom,0px)!important;box-sizing:border-box!important}
     }
-    /* 스플래시: RN Web img 구조에 의존하지 않고 container에 background-image 직접 적용 */
-    [data-testid="splash-container"]{position:fixed!important;top:0!important;left:0!important;right:0!important;bottom:0!important;width:100%!important;height:100%!important;background-image:url('${splashAssetPath}')!important;background-size:cover!important;background-position:top center!important;background-repeat:no-repeat!important;overflow:hidden!important;z-index:9999!important}
-    /* RN Web이 렌더한 img/ImageBackground div 숨김 (background-image와 이중 노출 방지) */
-    [data-testid="splash-container"]>*{display:none!important}
-  </style>`;
+    /* 스플래시: 뷰포트 고정 */
+    [data-testid="splash-container"]{position:fixed!important;top:0!important;left:0!important;right:0!important;bottom:0!important;width:100%!important;height:100%!important;overflow:hidden!important;z-index:9999!important}
+    /* CSS 1차: img 태그 기반 렌더(react-native-web ImageBackground) */
+    [data-testid="splash-container"] img{object-position:top center!important;object-fit:cover!important}
+    /* CSS 1차: background-image 기반 렌더(expo-image 등) */
+    [data-testid="splash-container"] div{background-position:top center!important}
+  </style>
+  <script>
+  /* JS 2차 폴백: React 렌더 후 실제 DOM 요소를 찾아 positioning 강제 적용.
+     CSS 선택자가 우선하지만 RN Web 버전/구조에 따라 무력화될 경우를 대비. */
+  (function(){
+    function fixSplash(){
+      var c=document.querySelector('[data-testid="splash-container"]');
+      if(!c)return;
+      c.querySelectorAll('img').forEach(function(el){
+        el.style.setProperty('object-position','top center','important');
+        el.style.setProperty('object-fit','cover','important');
+      });
+      c.querySelectorAll('*').forEach(function(el){
+        try{
+          if(getComputedStyle(el).backgroundImage!=='none'){
+            el.style.setProperty('background-position','top center','important');
+          }
+        }catch(e){}
+      });
+    }
+    var obs=new MutationObserver(fixSplash);
+    obs.observe(document.documentElement,{childList:true,subtree:true});
+    setTimeout(function(){obs.disconnect();},15000);
+  }());
+  </script>`;
 
   // Expo puts </head> right after the last element on the same line; add newline first
   html = html.replace('</head>', `\n${pwaHead}\n</head>`);
