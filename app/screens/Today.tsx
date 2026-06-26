@@ -244,7 +244,7 @@ const styles = StyleSheet.create({
   // 야구장 고정 배경 구조
   root: { flex: 1, backgroundColor: colors.bg },
   bgImage: { position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' },
-  bgOverlay: { position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(255,255,255,0.20)' },
+  bgOverlay: { position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(255,255,255,0.12)' },
   safe: { flex: 1, backgroundColor: 'transparent' },
   safeSolid: { flex: 1, backgroundColor: colors.bg },
   scroll: { flex: 1 },

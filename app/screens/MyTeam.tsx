@@ -140,7 +140,7 @@ function streakColor(streak: string): string {
 const styles = StyleSheet.create({
   root: { flex: 1, backgroundColor: colors.bg },
   bgImage: { position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' },
-  bgOverlay: { position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(255,255,255,0.20)' },
+  bgOverlay: { position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(255,255,255,0.12)' },
   safe: { flex: 1, backgroundColor: 'transparent' },
   center: { flex: 1, alignItems: 'center', justifyContent: 'center' },
   content: { padding: spacing.md },
