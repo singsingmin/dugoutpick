@@ -1,7 +1,7 @@
 {
   "date": "20260626",
   "dateText": "2026년 6월 26일",
-  "updatedAt": "2026-06-26T12:44:20.494Z",
+  "updatedAt": "2026-06-26T12:48:17.500Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 10,
@@ -25,9 +25,9 @@
         "score": 2,
         "starter": {
           "name": "황동하",
-          "era": 4.14,
+          "era": 4.1,
           "w": 6,
-          "l": 1
+          "l": 2
         }
       },
       "home": {
@@ -37,8 +37,8 @@
         "score": 3,
         "starter": {
           "name": "곽빈",
-          "era": 3.12,
-          "w": 5,
+          "era": 2.89,
+          "w": 6,
           "l": 3
         }
       },
@@ -70,9 +70,9 @@
         "verdict": "예측 적중"
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "곽빈",
+        "lose": "황동하",
+        "save": "이영하"
       },
       "lineup": null
     },
@@ -90,7 +90,7 @@
         "score": 1,
         "starter": {
           "name": "오원석",
-          "era": 5.56,
+          "era": 5.23,
           "w": 4,
           "l": 5
         }
@@ -102,7 +102,7 @@
         "score": 9,
         "starter": {
           "name": "장찬희",
-          "era": 4.86,
+          "era": 4.58,
           "w": 4,
           "l": 4
         }
@@ -135,8 +135,8 @@
         "verdict": "기대 이하"
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "최지광",
+        "lose": "이상동",
         "save": null
       },
       "lineup": null
@@ -155,9 +155,9 @@
         "score": 2,
         "starter": {
           "name": "임찬규",
-          "era": 3.45,
+          "era": 3.48,
           "w": 7,
-          "l": 1
+          "l": 2
         }
       },
       "home": {
@@ -167,8 +167,8 @@
         "score": 3,
         "starter": {
           "name": "나균안",
-          "era": 3.86,
-          "w": 3,
+          "era": 3.75,
+          "w": 4,
           "l": 6
         }
       },
@@ -200,9 +200,9 @@
         "verdict": "기대 이상"
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "나균안",
+        "lose": "임찬규",
+        "save": "최준용"
       },
       "lineup": null
     },
@@ -220,8 +220,8 @@
         "score": 9,
         "starter": {
           "name": "왕옌청",
-          "era": 3.74,
-          "w": 5,
+          "era": 3.59,
+          "w": 6,
           "l": 3
         }
       },
@@ -232,9 +232,9 @@
         "score": 2,
         "starter": {
           "name": "해치",
-          "era": 6.3,
+          "era": 6.19,
           "w": 1,
-          "l": 0
+          "l": 1
         }
       },
       "honjam": {
@@ -265,8 +265,8 @@
         "verdict": "기대 이하"
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "왕옌청",
+        "lose": "해치",
         "save": null
       },
       "lineup": null
@@ -285,7 +285,7 @@
         "score": 4,
         "starter": {
           "name": "배동현",
-          "era": 5.1,
+          "era": 4.96,
           "w": 4,
           "l": 5
         }
@@ -297,7 +297,7 @@
         "score": 11,
         "starter": {
           "name": "김태경",
-          "era": 4.5,
+          "era": 5.28,
           "w": 0,
           "l": 0
         }
@@ -330,8 +330,8 @@
         "verdict": "기대 이하"
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "임지민",
+        "lose": "전준표",
         "save": null
       },
       "lineup": null
