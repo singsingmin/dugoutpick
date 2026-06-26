@@ -13,18 +13,6 @@ interface Props {
 export default function TrackRecordBadge({ track, variant = 'today' }: Props) {
   const { accent } = useTeamTheme();
   if (!track || !track.ready) {
-    if (variant !== 'settings' && track?.recentRecapPreview && track.recentRecapPreview.length > 0) {
-      return (
-        <View style={styles.box}>
-          <PixelText variant="caption" color={colors.textDim}>최근 경기 결과 미리보기</PixelText>
-          {track.recentRecapPreview.map((item, i) => (
-            <PixelText key={i} variant="caption" color={colors.textDim}>
-              {`예측 ${item.pred} → ${item.verdict}`}
-            </PixelText>
-          ))}
-        </View>
-      );
-    }
     return (
       <View style={styles.box}>
         <PixelText variant="caption" color={colors.textDim}>적중률 집계 중</PixelText>
