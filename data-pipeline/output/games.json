@@ -1,7 +1,7 @@
 {
   "date": "20260626",
   "dateText": "2026년 6월 26일",
-  "updatedAt": "2026-06-26T10:52:17.473Z",
+  "updatedAt": "2026-06-26T10:54:16.893Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 5,
@@ -536,7 +536,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "해치",
           "era": 6.3,
@@ -569,9 +569,9 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
-        "heat": 43,
-        "label": "5회말 2점차"
+        "out": 1,
+        "heat": 55,
+        "label": "5회말 1점차 접전"
       },
       "recap": null,
       "decision": null,
