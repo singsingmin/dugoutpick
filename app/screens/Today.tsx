@@ -119,33 +119,46 @@ function Body({
     ? finished.find((g) => g.away.code === cheerTeam || g.home.code === cheerTeam)
     : undefined;
 
+  // 모든 경기 종료(FINAL/CANCELED) 시 결산 모드
+  const allDone = data.games.length > 0 && data.games.every(
+    (g) => g.status === 'FINAL' || g.status === 'CANCELED'
+  );
   const recommended: Game | undefined = data.games.find(
     (g) => g.gameId === data.recommendedGameId && g.status !== 'LIVE'
   );
+  // allDone 시 추천 경기도 rest에 포함 (별도 히어로 섹션 없이 다른경기로)
   const rest = data.games
-    .filter((g) => g.status !== 'LIVE' && g.gameId !== recommended?.gameId)
+    .filter((g) => g.status !== 'LIVE' && (allDone || g.gameId !== recommended?.gameId))
     .sort((a, b) => (b.honjam?.score ?? -1) - (a.honjam?.score ?? -1));
 
-  // ── 히어로 우선순위: 추천 → 오늘의 명경기 (LIVE는 리스트 1개로 통합)
+  // ── 히어로 우선순위: 추천 → 오늘의 명경기 (LIVE는 리스트 1개로 통합, allDone 시 히어로 없음)
   let heroGame: Game | null = null;
   let heroIcon = '⚾';
   let heroLabel = '오늘의 경기';
 
-  if (recommended) {
-    heroGame = recommended;
-    heroIcon = '★';
-    heroLabel = '오늘의 추천';
-  } else if (bestRecap) {
-    heroGame = bestRecap;
-    heroIcon = '🏁';
-    heroLabel = '오늘의 명경기';
+  if (!allDone) {
+    if (recommended) {
+      heroGame = recommended;
+      heroIcon = '★';
+      heroLabel = '오늘의 추천';
+    } else if (bestRecap) {
+      heroGame = bestRecap;
+      heroIcon = '🏁';
+      heroLabel = '오늘의 명경기';
+    }
   }
 
   // ── 리스트: 히어로 제외한 나머지 ──
   const listBestRecap = heroGame?.gameId === bestRecap?.gameId ? null : bestRecap;
   const listMyFinished = heroGame?.gameId === myFinished?.gameId ? null : myFinished;
-  const listRecommended = heroGame?.gameId === recommended?.gameId ? null : recommended;
-  const listRest = rest.filter((g) => g.gameId !== heroGame?.gameId);
+  // allDone 시 추천 섹션 숨김 (rest에 이미 포함)
+  const listRecommended = allDone ? null : (heroGame?.gameId === recommended?.gameId ? null : recommended);
+  // 버그픽스: bestRecap·myFinished 중복 제거
+  const listRest = rest.filter(
+    (g) => g.gameId !== heroGame?.gameId
+      && g.gameId !== listBestRecap?.gameId
+      && g.gameId !== listMyFinished?.gameId
+  );
 
   return (
     <ScrollView style={styles.scroll} contentContainerStyle={styles.scrollContent}>
@@ -164,14 +177,18 @@ function Body({
             갱신 {formatUpdatedAt(data.updatedAt)} · {relativeFromNow(data.updatedAt)}
           </PixelText>
         </View>
-        <PixelText variant="title" color={colors.text} style={styles.tagline}>
-          오늘 KBO, 볼 각인가?
-        </PixelText>
-        {heroGame && (
-          <View style={styles.heroCardWrap}>
-            <SectionLabel icon={heroIcon} label={heroLabel} />
-            <GameCard game={heroGame} variant="hero" onPress={() => open(heroGame!.gameId)} />
-          </View>
+        {!allDone && (
+          <>
+            <PixelText variant="title" color={colors.text} style={styles.tagline}>
+              오늘 KBO, 볼 각인가?
+            </PixelText>
+            {heroGame && (
+              <View style={styles.heroCardWrap}>
+                <SectionLabel icon={heroIcon} label={heroLabel} />
+                <GameCard game={heroGame} variant="hero" onPress={() => open(heroGame!.gameId)} />
+              </View>
+            )}
+          </>
         )}
       </View>
 
@@ -195,7 +212,7 @@ function Body({
             {listBestRecap && (
               <>
                 <PixelText variant="caption" color={colors.accent} style={styles.subLabel}>오늘의 명경기</PixelText>
-                <GameCard game={listBestRecap} variant="list" onPress={() => open(listBestRecap.gameId)} />
+                <GameCard game={listBestRecap} variant={allDone ? 'hero' : 'list'} onPress={() => open(listBestRecap.gameId)} />
               </>
             )}
             {listMyFinished && listMyFinished.gameId !== listBestRecap?.gameId && (
