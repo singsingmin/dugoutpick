@@ -206,7 +206,7 @@ function PitcherCol({ side }: { side: TeamSide }) {
 const styles = StyleSheet.create({
   root: { flex: 1, backgroundColor: colors.bg },
   bgImage: { position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' },
-  bgOverlay: { position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(255,255,255,0.38)' },
+  bgOverlay: { position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(255,255,255,0.20)' },
   container: { flex: 1, backgroundColor: 'transparent' },
   scroll: { flex: 1 },
   content: { padding: spacing.md, gap: spacing.sm },
