@@ -1,11 +1,15 @@
 {
-  "updatedAt": "2026-06-26T11:58:18.383Z",
+  "updatedAt": "2026-06-26T12:00:35.106Z",
   "window": 50,
-  "sampleSize": 5,
-  "hitRate": 20,
-  "bonusRate": 20,
+  "sampleSize": 6,
+  "hitRate": 17,
+  "bonusRate": 33,
   "ready": false,
   "recentRecapPreview": [
+    {
+      "pred": 14,
+      "verdict": "기대 이상"
+    },
     {
       "pred": 17,
       "verdict": "예측 적중"
@@ -20,10 +24,6 @@
     },
     {
       "pred": 85,
-      "verdict": "기대 이하"
-    },
-    {
-      "pred": 56,
       "verdict": "기대 이하"
     }
   ],
@@ -62,6 +62,13 @@
       "pred": 17,
       "actual": 17,
       "verdict": "예측 적중"
+    },
+    {
+      "date": "20260626",
+      "gameId": "20260626LGLT0",
+      "pred": 14,
+      "actual": 74,
+      "verdict": "기대 이상"
     }
   ]
 }
