@@ -28,13 +28,13 @@ export default function Tabs() {
       screenOptions={{
         headerShown: false,
         tabBarStyle: {
-          backgroundColor: colors.surface,
+          backgroundColor: accent,
           borderTopColor: colors.border,
           borderTopWidth: border.width,
         },
         tabBarLabelStyle: { fontFamily: fonts.pixel, fontSize: 10 },
-        tabBarActiveTintColor: accent,
-        tabBarInactiveTintColor: colors.textDim,
+        tabBarActiveTintColor: colors.onGreen,
+        tabBarInactiveTintColor: 'rgba(243,233,206,0.55)',
       }}
     >
       <Tab.Screen name="Today" component={Today} options={{ title: monday ? '월요 리포트' : '오늘경기', tabBarIcon: icon(monday ? '📋' : '⚾') }} />
