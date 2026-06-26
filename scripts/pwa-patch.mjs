@@ -145,35 +145,21 @@ if (!html.includes('apple-mobile-web-app-capable')) {
     [data-testid="splash-container"] div{background-position:top center!important}
   </style>
   <script>
-  /* 스플래시 진단 + 포지셔닝 수정 */
+  /* 스플래시 진단 오버레이 + 포지셔닝 수정 */
   (function(){
-    var fixed=false;
+    var reported=false;
+    function showOverlay(lines){
+      var d=document.createElement('div');
+      d.id='__splash_dbg';
+      d.style.cssText='position:fixed;bottom:0;left:0;right:0;z-index:999999;background:rgba(0,0,0,.85);color:#0f0;font:11px monospace;padding:6px;white-space:pre-wrap;pointer-events:none;';
+      d.textContent=lines.join('\n');
+      document.body.appendChild(d);
+      setTimeout(function(){d.remove();},20000);
+    }
     function fixSplash(){
       var c=document.querySelector('[data-testid="splash-container"]');
       if(!c)return;
-      var cr=c.getBoundingClientRect();
-      if(!fixed){
-        fixed=true;
-        console.log('[splash] container:',cr.width.toFixed(0)+'x'+cr.height.toFixed(0),'top:'+cr.top.toFixed(0));
-        var cs=getComputedStyle(c);
-        console.log('[splash] container position:',cs.position,'z-index:',cs.zIndex);
-        var imgs=c.querySelectorAll('img');
-        console.log('[splash] img count:',imgs.length);
-        imgs.forEach(function(el,i){
-          var r=el.getBoundingClientRect();
-          var s=getComputedStyle(el);
-          console.log('[splash] img['+i+']:',r.width.toFixed(0)+'x'+r.height.toFixed(0),'fit:'+s.objectFit,'pos:'+s.objectPosition);
-        });
-        var bgEls=[];
-        c.querySelectorAll('*').forEach(function(el){try{if(getComputedStyle(el).backgroundImage!=='none')bgEls.push(el);}catch(e){}});
-        console.log('[splash] bg-image el count:',bgEls.length);
-        bgEls.forEach(function(el,i){
-          var r=el.getBoundingClientRect();
-          var s=getComputedStyle(el);
-          console.log('[splash] bg['+i+']:',el.tagName,r.width.toFixed(0)+'x'+r.height.toFixed(0),'bgPos:'+s.backgroundPosition,'bgSize:'+s.backgroundSize);
-        });
-      }
-      /* 수정 적용 */
+      /* 포지셔닝 수정 */
       c.querySelectorAll('img').forEach(function(el){
         el.style.setProperty('object-position','top center','important');
         el.style.setProperty('object-fit','cover','important');
@@ -186,6 +172,29 @@ if (!html.includes('apple-mobile-web-app-capable')) {
           }
         }catch(e){}
       });
+      /* 진단 오버레이 (첫 1회만) */
+      if(reported)return;
+      reported=true;
+      var cr=c.getBoundingClientRect();
+      var cs=getComputedStyle(c);
+      var lines=['[splash-dbg] vp:'+window.innerWidth+'x'+window.innerHeight,
+        'container:'+cr.width.toFixed(0)+'x'+cr.height.toFixed(0)+' top:'+cr.top.toFixed(0)+' pos:'+cs.position];
+      c.querySelectorAll('img').forEach(function(el,i){
+        var r=el.getBoundingClientRect(),s=getComputedStyle(el);
+        lines.push('img['+i+']:'+r.width.toFixed(0)+'x'+r.height.toFixed(0)+' fit:'+s.objectFit+' objPos:'+s.objectPosition);
+      });
+      var bi=0;
+      c.querySelectorAll('*').forEach(function(el){
+        try{
+          var bg=getComputedStyle(el).backgroundImage;
+          if(bg&&bg!=='none'){
+            var r=el.getBoundingClientRect(),s=getComputedStyle(el);
+            lines.push('bg['+bi+']:'+el.tagName+' '+r.width.toFixed(0)+'x'+r.height.toFixed(0)+' sz:'+s.backgroundSize+' pos:'+s.backgroundPosition);
+            bi++;
+          }
+        }catch(e){}
+      });
+      showOverlay(lines);
     }
     var obs=new MutationObserver(fixSplash);
     obs.observe(document.documentElement,{childList:true,subtree:true});
