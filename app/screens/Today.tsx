@@ -157,7 +157,7 @@ function Body({
         <Image
           source={require('../assets/splash-intro.png')}
           resizeMode="cover"
-          style={StyleSheet.absoluteFillObject}
+          style={styles.heroBgImg}
         />
         {/* 가독성을 위한 반투명 다크 오버레이 */}
         <View style={styles.heroOverlay}>
@@ -256,7 +256,10 @@ const styles = StyleSheet.create({
   scrollContent: { flexGrow: 1 },
 
   // 히어로 배경
-  heroBg: { width: '100%' },
+  // overflow:hidden 으로 absolute Image가 heroBg 바깥으로 흘러넘치지 않도록 클리핑
+  heroBg: { width: '100%', overflow: 'hidden' },
+  // right/bottom 대신 width/height 100% 명시 — 웹에서 <img> 자연 크기가 레이아웃을 밀어내는 현상 방지
+  heroBgImg: { position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' },
   heroOverlay: {
     backgroundColor: 'rgba(0,0,0,0.18)',
   },
