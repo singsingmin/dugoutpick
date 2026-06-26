@@ -1,7 +1,7 @@
 {
   "date": "20260626",
   "dateText": "2026년 6월 26일",
-  "updatedAt": "2026-06-26T10:28:17.725Z",
+  "updatedAt": "2026-06-26T10:30:27.641Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 5,
@@ -88,10 +88,10 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 45,
-        "label": "3회초 1점차 접전"
+        "label": "3회말 1점차 접전"
       },
       "recap": null,
       "decision": null,
@@ -249,7 +249,7 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 59,
         "label": "4회초 동점 접전"
       },
@@ -409,7 +409,7 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "heat": 64,
         "label": "5회초 동점 접전"
       },
@@ -524,7 +524,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "왕옌청",
           "era": 3.74,
@@ -570,8 +570,8 @@
         "inning": 4,
         "half": "T",
         "out": 2,
-        "heat": 50,
-        "label": "4회초 1점차 접전"
+        "heat": 40,
+        "label": "4회초 2점차"
       },
       "recap": null,
       "decision": null,
