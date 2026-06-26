@@ -3,7 +3,7 @@
 
 export const colors = {
   bg: '#F3E9CE',        // 크림 배경
-  surface: '#FBF5E4',   // 카드(밝은 크림)
+  surface: 'rgba(251,245,228,0.88)', // 카드(밝은 크림, 반투명 — 배경 이미지 위에서 이미지 비쳐 보임)
   surfaceAlt: '#EADFBF', // 보조/선택 강조
   track: '#CBB98C',     // 막대 그래프 트랙(홈): surfaceAlt보다 한 톤 진해 선택 행 위에서도 구분
   goldSoft: '#F8EBB8',  // 옅은 골드 배경: 가을야구 마지노선 행(내 팀 강조의 탄 색과 구분)

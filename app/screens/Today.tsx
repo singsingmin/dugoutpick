@@ -1,4 +1,4 @@
-// 오늘경기 탭: 야구장 히어로 배경 + 추천/LIVE/명경기 히어로 카드 + 나머지 리스트. (flow.md, ADR-004)
+// 오늘경기 탭: 야구장 고정 배경 전체 + 반투명 카드. (flow.md, ADR-004)
 import { useCallback, useRef, useState } from 'react';
 import { View, ScrollView, ActivityIndicator, Image, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -17,7 +17,6 @@ import MondayReport from '../components/MondayReport';
 import TrackRecordBadge from '../components/TrackRecordBadge';
 import WeeklyScheduleSheet from '../components/WeeklyScheduleSheet';
 import { formatUpdatedAt, relativeFromNow, isKstMonday } from '../utils';
-
 import { colors, spacing } from '../theme';
 
 type Nav = NativeStackNavigationProp<RootStackParamList>;
@@ -69,9 +68,10 @@ export default function Today() {
 
   const open = (gameId: string) => navigation.navigate('GameDetail', { gameId });
 
+  // 월요일: 배경 없이 기존 스타일 유지
   if (isKstMonday()) {
     return (
-      <SafeAreaView style={styles.safe} edges={['top']}>
+      <SafeAreaView style={styles.safeSolid} edges={['top']}>
         <ScreenHeader title="월요 리포트" leftIcon="📋" />
         <MondayReport />
       </SafeAreaView>
@@ -79,18 +79,26 @@ export default function Today() {
   }
 
   return (
-    <SafeAreaView style={styles.safe} edges={['top']}>
-      <WeeklyScheduleSheet visible={weeklyVisible} onClose={() => setWeeklyVisible(false)} />
-      {failed ? (
-        <Centered text="데이터를 불러오지 못했다" />
-      ) : !data ? (
-        <View style={styles.center}><ActivityIndicator color={colors.accent} /></View>
-      ) : data.games.length === 0 ? (
-        <Centered text="오늘은 경기가 없다" />
-      ) : (
-        <Body data={data} open={open} cheerTeam={cheerTeam} onCalendar={() => setWeeklyVisible(true)} />
-      )}
-    </SafeAreaView>
+    <View style={styles.root}>
+      {/* 고정 배경 — SafeAreaView/ScrollView 바깥에 있어 스크롤에 영향받지 않음 */}
+      <Image
+        source={require('../assets/stadium-bg.png')}
+        style={styles.bgImage}
+        resizeMode="cover"
+      />
+      <SafeAreaView style={styles.safe} edges={['top']}>
+        <WeeklyScheduleSheet visible={weeklyVisible} onClose={() => setWeeklyVisible(false)} />
+        {failed ? (
+          <Centered text="데이터를 불러오지 못했다" />
+        ) : !data ? (
+          <View style={styles.center}><ActivityIndicator color={colors.accent} /></View>
+        ) : data.games.length === 0 ? (
+          <Centered text="오늘은 경기가 없다" />
+        ) : (
+          <Body data={data} open={open} cheerTeam={cheerTeam} onCalendar={() => setWeeklyVisible(true)} />
+        )}
+      </SafeAreaView>
+    </View>
   );
 }
 
@@ -143,54 +151,40 @@ function Body({
   // ── 리스트: 히어로 제외한 나머지 ──
   const remainingLive = liveGames.filter((g) => g.gameId !== heroGame?.gameId);
   const listBestRecap = heroGame?.gameId === bestRecap?.gameId ? null : bestRecap;
-  const listMyFinished =
-    heroGame?.gameId === myFinished?.gameId ? null : myFinished;
-  const listRecommended =
-    heroGame?.gameId === recommended?.gameId ? null : recommended;
+  const listMyFinished = heroGame?.gameId === myFinished?.gameId ? null : myFinished;
+  const listRecommended = heroGame?.gameId === recommended?.gameId ? null : recommended;
   const listRest = rest.filter((g) => g.gameId !== heroGame?.gameId);
 
   return (
-    <ScrollView contentContainerStyle={styles.scrollContent}>
-      {/* ── 야구장 히어로 배경 영역 ── */}
-      {/* ImageBackground는 웹에서 img를 children 밑에 렌더해 레이아웃이 깨짐 → View+absoluteFill Image로 대체 */}
-      <View style={styles.heroBg}>
-        <Image
-          source={require('../assets/splash-intro.png')}
-          resizeMode="cover"
-          style={styles.heroBgImg}
-        />
-        {/* 가독성을 위한 반투명 다크 오버레이 */}
-        <View style={styles.heroOverlay}>
-          <ScreenHeader
-            title="오늘 경기"
-            leftIcon="⚾"
-            rightIcon="🗓"
-            onRightPress={onCalendar}
-          />
-          <View style={styles.heroContent}>
-            <View style={styles.dateRow}>
-              <PixelText variant="caption" color={colors.onGreen}>{data.dateText}</PixelText>
-              <PixelText variant="caption" color={colors.onGreen}>
-                갱신 {formatUpdatedAt(data.updatedAt)} · {relativeFromNow(data.updatedAt)}
-              </PixelText>
-            </View>
-            <PixelText variant="title" color={colors.onGreen} style={styles.tagline}>
-              오늘 KBO, 볼 각인가?
-            </PixelText>
-            {heroGame && (
-              <View style={styles.heroCardWrap}>
-                <SectionLabel icon={heroIcon} label={heroLabel} />
-                <GameCard game={heroGame} variant="hero" onPress={() => open(heroGame!.gameId)} />
-              </View>
-            )}
-            <View style={styles.trackRecordRow}>
-              <TrackRecordBadge track={data.trackRecord} variant="today" />
-            </View>
-          </View>
+    <ScrollView style={styles.scroll} contentContainerStyle={styles.scrollContent}>
+      <ScreenHeader
+        title="오늘 경기"
+        leftIcon="⚾"
+        rightIcon="🗓"
+        onRightPress={onCalendar}
+      />
+
+      {/* ── 히어로 섹션 ── */}
+      <View style={styles.heroContent}>
+        <View style={styles.dateRow}>
+          <PixelText variant="caption" color={colors.text}>{data.dateText}</PixelText>
+          <PixelText variant="caption" color={colors.textDim}>
+            갱신 {formatUpdatedAt(data.updatedAt)} · {relativeFromNow(data.updatedAt)}
+          </PixelText>
         </View>
+        <PixelText variant="title" color={colors.text} style={styles.tagline}>
+          오늘 KBO, 볼 각인가?
+        </PixelText>
+        {heroGame && (
+          <View style={styles.heroCardWrap}>
+            <SectionLabel icon={heroIcon} label={heroLabel} />
+            <GameCard game={heroGame} variant="hero" onPress={() => open(heroGame!.gameId)} />
+          </View>
+        )}
+        <TrackRecordBadge track={data.trackRecord} variant="today" />
       </View>
 
-      {/* ── 리스트 영역 ── */}
+      {/* ── 리스트 섹션 ── */}
       <View style={styles.listSection}>
         {remainingLive.length > 0 && (
           <View style={styles.section}>
@@ -245,24 +239,23 @@ function Body({
 function Centered({ text }: { text: string }) {
   return (
     <View style={styles.center}>
-      <PixelText variant="title" color={colors.textDim}>{text}</PixelText>
+      <PixelText variant="title" color={colors.text}>{text}</PixelText>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  safe: { flex: 1, backgroundColor: colors.bg },
-  center: { flex: 1, backgroundColor: colors.bg, alignItems: 'center', justifyContent: 'center' },
+  // 야구장 고정 배경 구조
+  root: { flex: 1, backgroundColor: colors.bg },
+  // position/width/height 명시 — absoluteFillObject의 right/bottom 방식은 웹에서 img 자연 크기를 못 잡음
+  bgImage: { position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' },
+  safe: { flex: 1, backgroundColor: 'transparent' },
+  safeSolid: { flex: 1, backgroundColor: colors.bg },
+  scroll: { flex: 1 },
   scrollContent: { flexGrow: 1 },
+  center: { flex: 1, alignItems: 'center', justifyContent: 'center' },
 
-  // 히어로 배경
-  // overflow:hidden 으로 absolute Image가 heroBg 바깥으로 흘러넘치지 않도록 클리핑
-  heroBg: { width: '100%', overflow: 'hidden' },
-  // right/bottom 대신 width/height 100% 명시 — 웹에서 <img> 자연 크기가 레이아웃을 밀어내는 현상 방지
-  heroBgImg: { position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' },
-  heroOverlay: {
-    backgroundColor: 'rgba(0,0,0,0.18)',
-  },
+  // 히어로 섹션
   heroContent: {
     padding: spacing.md,
     paddingBottom: spacing.lg,
@@ -271,14 +264,9 @@ const styles = StyleSheet.create({
   dateRow: { gap: 2 },
   tagline: { marginTop: spacing.xs, marginBottom: spacing.xs },
   heroCardWrap: { gap: spacing.xs },
-  trackRecordRow: { marginTop: spacing.xs },
 
-  // 리스트 영역
-  listSection: {
-    backgroundColor: colors.bg,
-    padding: spacing.md,
-    flex: 1,
-  },
+  // 리스트 섹션
+  listSection: { padding: spacing.md, flex: 1 },
   section: { marginBottom: spacing.lg },
   liveHint: { marginBottom: spacing.sm },
   subLabel: { marginBottom: spacing.xs },
