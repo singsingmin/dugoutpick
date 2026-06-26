@@ -49,8 +49,9 @@
     @media(display-mode:standalone){
       div:has(>div[role="tablist"]){height:calc(49px + env(safe-area-inset-bottom,0px))!important;padding-bottom:env(safe-area-inset-bottom,0px)!important;box-sizing:border-box!important}
     }
-    /* 스플래시: dvh 계산 오차·스크롤 무관하게 뷰포트에 고정 */
-    [data-testid="splash-container"]{position:fixed!important;inset:0!important;width:100%!important;height:100svh!important}
+    /* 스플래시: position:fixed + 4방향 0 → 뷰포트 완전 고정.
+       inset 단축어/svh 단위 미지원 브라우저 대비 개별 속성으로 명시. */
+    [data-testid="splash-container"]{position:fixed!important;top:0!important;left:0!important;right:0!important;bottom:0!important;width:100%!important;height:100%!important}
   </style>
 </head>
 
