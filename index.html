@@ -49,11 +49,37 @@
     @media(display-mode:standalone){
       div:has(>div[role="tablist"]){height:calc(49px + env(safe-area-inset-bottom,0px))!important;padding-bottom:env(safe-area-inset-bottom,0px)!important;box-sizing:border-box!important}
     }
-    /* 스플래시: RN Web img 구조에 의존하지 않고 container에 background-image 직접 적용 */
-    [data-testid="splash-container"]{position:fixed!important;top:0!important;left:0!important;right:0!important;bottom:0!important;width:100%!important;height:100%!important;background-image:url('/dugoutpick/assets/splash-intro.png')!important;background-size:cover!important;background-position:top center!important;background-repeat:no-repeat!important;overflow:hidden!important;z-index:9999!important}
-    /* RN Web이 렌더한 img/ImageBackground div 숨김 (background-image와 이중 노출 방지) */
-    [data-testid="splash-container"]>*{display:none!important}
+    /* 스플래시: 뷰포트 고정 */
+    [data-testid="splash-container"]{position:fixed!important;top:0!important;left:0!important;right:0!important;bottom:0!important;width:100%!important;height:100%!important;overflow:hidden!important;z-index:9999!important}
+    /* CSS 1차: img 태그 기반 렌더(react-native-web ImageBackground) */
+    [data-testid="splash-container"] img{object-position:top center!important;object-fit:cover!important}
+    /* CSS 1차: background-image 기반 렌더(expo-image 등) */
+    [data-testid="splash-container"] div{background-position:top center!important}
   </style>
+  <script>
+  /* JS 2차 폴백: React 렌더 후 실제 DOM 요소를 찾아 positioning 강제 적용.
+     CSS 선택자가 우선하지만 RN Web 버전/구조에 따라 무력화될 경우를 대비. */
+  (function(){
+    function fixSplash(){
+      var c=document.querySelector('[data-testid="splash-container"]');
+      if(!c)return;
+      c.querySelectorAll('img').forEach(function(el){
+        el.style.setProperty('object-position','top center','important');
+        el.style.setProperty('object-fit','cover','important');
+      });
+      c.querySelectorAll('*').forEach(function(el){
+        try{
+          if(getComputedStyle(el).backgroundImage!=='none'){
+            el.style.setProperty('background-position','top center','important');
+          }
+        }catch(e){}
+      });
+    }
+    var obs=new MutationObserver(fixSplash);
+    obs.observe(document.documentElement,{childList:true,subtree:true});
+    setTimeout(function(){obs.disconnect();},15000);
+  }());
+  </script>
 </head>
 
   <body>
