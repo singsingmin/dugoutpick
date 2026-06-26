@@ -1,35 +1,13 @@
 {
   "date": "20260626",
   "dateText": "2026년 6월 26일",
-  "updatedAt": "2026-06-26T12:38:18.544Z",
+  "updatedAt": "2026-06-26T12:40:21.902Z",
   "trackRecord": {
     "window": 50,
-    "sampleSize": 9,
-    "hitRate": 11,
-    "bonusRate": 22,
-    "ready": false,
-    "recentRecapPreview": [
-      {
-        "pred": 66,
-        "verdict": "기대 이하"
-      },
-      {
-        "pred": 14,
-        "verdict": "기대 이하"
-      },
-      {
-        "pred": 35,
-        "verdict": "기대 이하"
-      },
-      {
-        "pred": 14,
-        "verdict": "기대 이상"
-      },
-      {
-        "pred": 17,
-        "verdict": "예측 적중"
-      }
-    ]
+    "sampleSize": 10,
+    "hitRate": 20,
+    "bonusRate": 20,
+    "ready": true
   },
   "recommendedGameId": "20260626HTOB0",
   "games": [
@@ -37,7 +15,7 @@
       "gameId": "20260626HTOB0",
       "time": "18:30",
       "stadium": "잠실",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SS-T",
       "away": {
@@ -86,112 +64,17 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 3,
-        "heat": 73,
-        "label": "9회초 1점차 접전"
+      "live": null,
+      "recap": {
+        "actual": 74,
+        "verdict": "예측 적중"
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "정수빈"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "류승민"
-          },
-          {
-            "order": 3,
-            "pos": "2루수",
-            "name": "박준순"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "양의지"
-          },
-          {
-            "order": 5,
-            "pos": "좌익수",
-            "name": "김민석"
-          },
-          {
-            "order": 6,
-            "pos": "1루수",
-            "name": "오명진"
-          },
-          {
-            "order": 7,
-            "pos": "3루수",
-            "name": "안재석"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "윤준호"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "박찬호"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "좌익수",
-            "name": "박재현"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "김호령"
-          },
-          {
-            "order": 3,
-            "pos": "3루수",
-            "name": "김도영"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "나성범"
-          },
-          {
-            "order": 5,
-            "pos": "1루수",
-            "name": "카스트로"
-          },
-          {
-            "order": 6,
-            "pos": "2루수",
-            "name": "김선빈"
-          },
-          {
-            "order": 7,
-            "pos": "포수",
-            "name": "한준수"
-          },
-          {
-            "order": 8,
-            "pos": "유격수",
-            "name": "박민"
-          },
-          {
-            "order": 9,
-            "pos": "우익수",
-            "name": "박정우"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260626KTSS0",
