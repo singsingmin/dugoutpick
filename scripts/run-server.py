@@ -100,6 +100,35 @@ echo "HEADLESS=${HARNESS_HEADLESS:-${BET_HEADLESS:-0}}"
 
 ITER_DIR_RE = re.compile(r"^(\d+)-")
 
+# 이 시간(시) 이내의 persuasion 리포트가 있으면 시뮬 재실행 없이 경량 이데이션
+PERSUASION_RUN_REUSE_HOURS = 24.0
+
+
+def find_recent_persuasion_run() -> tuple[str, Path] | None:
+    """Return (run_id, report_path) of the most recent persuasion run within
+    PERSUASION_RUN_REUSE_HOURS, or None if no qualifying run exists."""
+    runs_dir = ROOT / "persuasion-data" / "runs"
+    if not runs_dir.exists():
+        return None
+    best_run_id: str | None = None
+    best_report: Path | None = None
+    best_mtime = 0.0
+    for run_dir in runs_dir.iterdir():
+        if not run_dir.is_dir():
+            continue
+        report = run_dir / "report.md"
+        if not report.exists():
+            continue
+        mtime = report.stat().st_mtime
+        age_hours = (time.time() - mtime) / 3600
+        if age_hours <= PERSUASION_RUN_REUSE_HOURS and mtime > best_mtime:
+            best_mtime = mtime
+            best_run_id = run_dir.name
+            best_report = report
+    if best_run_id and best_report:
+        return best_run_id, best_report
+    return None
+
 
 def next_iteration_number() -> int:
     if not ITERATIONS_DIR.exists():
@@ -140,13 +169,13 @@ def previous_iteration_dir(current_n: int) -> Path | None:
     return best_dir
 
 
-def run_claude(prompt: str, log_file: Path, timeout_sec: float) -> int:
+def run_claude(prompt: str, log_file: Path, timeout_sec: float, model: str = "sonnet") -> int:
     """Invoke `claude -p` headlessly. Stream output to stdout and log_file.
 
     Kills the process after timeout_sec. On timeout, a note is written
     to the log and the returned exit code reflects the signal.
     """
-    cmd = [CLAUDE_BIN, "-p", "--dangerously-skip-permissions", prompt]
+    cmd = [CLAUDE_BIN, "-p", "--dangerously-skip-permissions", "--model", model, prompt]
     with open(log_file, "w", encoding="utf-8", errors="replace") as lf:
         proc = subprocess.Popen(
             cmd,
@@ -269,6 +298,47 @@ def verify_marker(pre_head: str, marker: str) -> tuple[bool, list[str], list[str
 # Prompts
 # ---------------------------------------------------------------------------
 
+def lightweight_ideation_prompt(requirement_path: Path, run_id: str, report_path: Path) -> str:
+    """Ideation without re-running persuasion-review simulation.
+
+    Reuses an existing report to select a requirement candidate via
+    tech-critic-lead only. Called when a recent run exists.
+    """
+    vp_path = report_path.parent / "value_proposition.md"
+    return f"""{HEADLESS_PREAMBLE}기존 persuasion-data 리포트를 활용해 다음 스프린트 요구사항을 선정해라.
+persuasion-review 시뮬은 이미 완료되어 있으므로 **새로 돌리지 말 것**. tech-critic-lead 결재만 진행한다.
+
+리포트: `{report_path}`
+run_id: `{run_id}`
+
+## 절차
+
+1. `{report_path}` 를 Read로 읽는다.
+2. 리포트의 우려 패턴·개선 제안·pain을 분석해 구현 후보 3-5개를 도출한다.
+   각 후보: title / 유래 pain / 구현 스케치 3-5줄 / 더 싼 대안 검토 여부.
+3. 우선순위 1위부터 `tech-critic-lead` 서브에이전트(subagent_type="tech-critic-lead")에게 결재 요청한다.
+   프롬프트는 self-contained: 요구사항·현재 구현 상태 요약·근거 인용 모두 포함.
+   거부 시 최대 1회 보강 재제안 후 다음 후보로 넘어간다.
+4. 채택된 요구사항이 확정되면 아래 내용을 합쳐 `{requirement_path}` 에 저장한다:
+
+```
+# Requirement
+
+## 가치제안
+(아래 경로 파일의 전체 내용을 그대로 복사: {vp_path})
+
+## 채택된 요구사항
+- run_id: {run_id}
+- title: <채택된 title>
+- 유래한 고객 pain + 근거 인용
+- 구현 스케치
+- CTO 승인 조건부 조건 (있으면)
+```
+
+모든 후보가 tech-critic-lead에 거부된 경우에는 파일을 만들지 말고 종료해라.
+"""
+
+
 def ideation_prompt(requirement_path: Path) -> str:
     return f"""{HEADLESS_PREAMBLE}ideation skill을 사용해 다음 스프린트에 구현할 단 하나의 요구사항을 선정해라.
 
@@ -330,7 +400,8 @@ Co-Authored-By: Claude <noreply@anthropic.com>
 def build_prompt(requirement_path: Path) -> str:
     return f"""{HEADLESS_PREAMBLE}`{requirement_path}` 를 읽고 이번 iteration의 요구사항을 파악한 다음, plan-and-build skill을 사용해 현재 구현 상태와 맞지 않는 부분을 전부 구현해라.
 
-- plan-and-build skill의 절차(docs 파악 → tech-critic-lead 논의 → 구현 계획 → 테스트 논의 → task/phase 생성 → `scripts/run-phases.py` 실행)를 그대로 따른다.
+- plan-and-build skill의 절차(docs 파악 → 구현 계획 → 테스트 논의 → task/phase 생성 → `scripts/run-phases.py` 실행)를 그대로 따른다.
+- **tech-critic-lead 논의 단계는 스킵한다.** 이 요구사항은 ideation 단계에서 이미 tech-critic-lead 결재를 통과했다. 구현 계획 작성부터 바로 시작한다.
 - 이 세션은 무인 서버에서 자동 실행된다. 사용자 확인을 일체 받지 말고 끝까지 진행해라.
 """
 
@@ -505,10 +576,19 @@ def run_iteration(n: int) -> None:
     print(f"{'=' * 60}")
 
     # 1) ideation (retry 3x on missing requirement.md)
+    recent_run = find_recent_persuasion_run()
+    if recent_run:
+        run_id, report_path_sim = recent_run
+        print(f"\n[ideation] recent persuasion run found ({run_id}, age < {PERSUASION_RUN_REUSE_HOURS}h) — using lightweight ideation (no re-simulation)")
+        ideation_prompt_fn = lambda req: lightweight_ideation_prompt(req, run_id, report_path_sim)
+    else:
+        print(f"\n[ideation] no recent persuasion run — running full ideation with simulation")
+        ideation_prompt_fn = ideation_prompt
+
     for attempt in range(1, IDEATION_MAX_ATTEMPTS + 1):
         print(f"\n[ideation] attempt {attempt}/{IDEATION_MAX_ATTEMPTS}")
         rc = run_claude(
-            ideation_prompt(requirement_path),
+            ideation_prompt_fn(requirement_path),
             iter_dir / f"ideation-{attempt}.log",
             TIMEOUT_IDEATION_SEC,
         )
