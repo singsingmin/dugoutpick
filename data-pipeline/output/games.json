@@ -1,7 +1,7 @@
 {
   "date": "20260626",
   "dateText": "2026년 6월 26일",
-  "updatedAt": "2026-06-26T10:46:17.044Z",
+  "updatedAt": "2026-06-26T10:48:17.816Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 5,
@@ -204,7 +204,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 2,
-        "score": 1,
+        "score": 0,
         "starter": {
           "name": "오원석",
           "era": 5.56,
@@ -249,9 +249,9 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 0,
-        "heat": 54,
-        "label": "5회초 1점차 접전"
+        "out": 1,
+        "heat": 64,
+        "label": "5회초 동점 접전"
       },
       "recap": null,
       "decision": null,
@@ -407,11 +407,11 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 2,
-        "heat": 43,
-        "label": "5회말 2점차"
+        "inning": 6,
+        "half": "T",
+        "out": 0,
+        "heat": 47,
+        "label": "6회초 2점차"
       },
       "recap": null,
       "decision": null,
@@ -569,7 +569,7 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 2,
+        "out": 3,
         "heat": 43,
         "label": "5회초 2점차"
       },
@@ -728,10 +728,10 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 45,
-        "label": "5회초 2점차"
+        "label": "5회말 2점차"
       },
       "recap": null,
       "decision": null,
