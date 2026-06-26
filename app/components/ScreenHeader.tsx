@@ -1,7 +1,7 @@
 // 탭 화면용 헤더 바 (목업: 야구공 아이콘 + 타이틀 + 달력 아이콘 등). 내 팀 색 동적 반영.
 import { View, Pressable, StyleSheet } from 'react-native';
 import PixelText from './PixelText';
-import { border, colors, spacing } from '../theme';
+import { colors, spacing } from '../theme';
 import { useTeamTheme } from '../context/TeamTheme';
 
 interface Props {
@@ -42,8 +42,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    borderBottomColor: colors.border,
-    borderBottomWidth: border.width,
     paddingHorizontal: spacing.md,
     paddingVertical: spacing.sm,
   },

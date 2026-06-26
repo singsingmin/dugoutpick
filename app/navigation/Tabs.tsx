@@ -5,7 +5,7 @@ import Today from '../screens/Today';
 import Standings from '../screens/Standings';
 import MyTeam from '../screens/MyTeam';
 import Settings from '../screens/Settings';
-import { colors, fonts, border } from '../theme';
+import { colors, fonts } from '../theme';
 import { isKstMonday } from '../utils';
 import { useTeamTheme } from '../context/TeamTheme';
 
@@ -29,8 +29,6 @@ export default function Tabs() {
         headerShown: false,
         tabBarStyle: {
           backgroundColor: accent,
-          borderTopColor: colors.border,
-          borderTopWidth: border.width,
         },
         tabBarLabelStyle: { fontFamily: fonts.pixel, fontSize: 10 },
         tabBarActiveTintColor: colors.onGreen,

@@ -19,8 +19,7 @@ export default function Panel({ children, style, accentColor }: PropsWithChildre
 const styles = StyleSheet.create({
   panel: {
     backgroundColor: colors.surface,
-    borderColor: colors.border,
-    borderWidth: border.width,
+    borderWidth: 0,
     borderRadius: border.radius,
     padding: spacing.md,
   },
