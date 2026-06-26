@@ -1,6 +1,6 @@
 // 경기 상세: 매치업 + 꿀잼지수(골드) + 한 줄 예측 + 선발 비교 + 관전포인트 TOP3. (flow.md, ADR-004/005)
 import { useEffect, useState } from 'react';
-import { View, ScrollView, Pressable, StyleSheet } from 'react-native';
+import { View, ScrollView, Pressable, Image, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/types';
@@ -70,7 +70,9 @@ export default function GameDetail({ route, navigation }: Props) {
   const title = game ? `${game.away.name} vs ${game.home.name}` : '경기 상세';
 
   return (
-    <SafeAreaView style={styles.container} edges={['top']}>
+    <View style={styles.root}>
+      <Image source={require('../assets/stadium-bg.png')} style={styles.bgImage} resizeMode="cover" />
+      <SafeAreaView style={styles.container} edges={['top']}>
       <ScreenHeader
         title={title}
         leftIcon="←"
@@ -180,7 +182,8 @@ export default function GameDetail({ route, navigation }: Props) {
         />
       )}
       </ScrollView>
-    </SafeAreaView>
+      </SafeAreaView>
+    </View>
   );
 }
 
@@ -200,7 +203,9 @@ function PitcherCol({ side }: { side: TeamSide }) {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: colors.bg },
+  root: { flex: 1, backgroundColor: colors.bg },
+  bgImage: { position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' },
+  container: { flex: 1, backgroundColor: 'transparent' },
   scroll: { flex: 1 },
   content: { padding: spacing.md, gap: spacing.sm },
   center: { flex: 1, backgroundColor: colors.bg, alignItems: 'center', justifyContent: 'center' },

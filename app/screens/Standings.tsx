@@ -1,6 +1,6 @@
 // 구단 순위 탭: 순위·팀·승·패·무·승률·게임차 + 최근10 폼닷·연속·승률 막대 + 가을야구 컷(5위). 내 팀 강조.
 import { useCallback, useState } from 'react';
-import { View, ScrollView, StyleSheet } from 'react-native';
+import { View, ScrollView, Image, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useFocusEffect } from '@react-navigation/native';
 import type { Standing, RecentGame } from '../types';
@@ -72,7 +72,9 @@ export default function Standings() {
   const poCutIndex = rows.reduce((acc, s, i) => (s.rank <= PO_CUT ? i : acc), -1);
 
   return (
-    <SafeAreaView style={styles.safe} edges={['top']}>
+    <View style={styles.root}>
+      <Image source={require('../assets/stadium-bg.png')} style={styles.bgImage} resizeMode="cover" />
+      <SafeAreaView style={styles.safe} edges={['top']}>
       <ScreenHeader title="구단 순위" leftIcon="📊" />
       {!loaded ? (
         <View style={styles.center} />
@@ -143,13 +145,16 @@ export default function Standings() {
           </View>
         </ScrollView>
       )}
-    </SafeAreaView>
+      </SafeAreaView>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  safe: { flex: 1, backgroundColor: colors.bg },
-  center: { flex: 1, backgroundColor: colors.bg, alignItems: 'center', justifyContent: 'center' },
+  root: { flex: 1, backgroundColor: colors.bg },
+  bgImage: { position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' },
+  safe: { flex: 1, backgroundColor: 'transparent' },
+  center: { flex: 1, alignItems: 'center', justifyContent: 'center' },
   content: { padding: spacing.md },
   table: { borderWidth: border.width, borderColor: colors.border, borderRadius: border.radius, backgroundColor: colors.surface, overflow: 'hidden' },
   headerRow: { flexDirection: 'row', alignItems: 'center', paddingVertical: 6, paddingHorizontal: spacing.sm },

@@ -1,6 +1,6 @@
 // 내 팀 탭 (피드형): 오늘 경기 + 순위/승무패·최근폼·홈원정·상대전적 차트. (ADR-010)
 import { useCallback, useState } from 'react';
-import { View, ScrollView, StyleSheet } from 'react-native';
+import { View, ScrollView, Image, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useFocusEffect, useNavigation } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
@@ -49,7 +49,9 @@ export default function MyTeam() {
   const accent = team?.color ?? colors.accent;
 
   return (
-    <SafeAreaView style={styles.safe} edges={['top']}>
+    <View style={styles.root}>
+      <Image source={require('../assets/stadium-bg.png')} style={styles.bgImage} resizeMode="cover" />
+      <SafeAreaView style={styles.safe} edges={['top']}>
       <ScreenHeader title="내 팀" leftIcon="★" />
       {!loaded ? (
         <View style={styles.center} />
@@ -123,7 +125,8 @@ export default function MyTeam() {
           )}
         </ScrollView>
       )}
-    </SafeAreaView>
+      </SafeAreaView>
+    </View>
   );
 }
 
@@ -134,8 +137,10 @@ function streakColor(streak: string): string {
 }
 
 const styles = StyleSheet.create({
-  safe: { flex: 1, backgroundColor: colors.bg },
-  center: { flex: 1, backgroundColor: colors.bg, alignItems: 'center', justifyContent: 'center' },
+  root: { flex: 1, backgroundColor: colors.bg },
+  bgImage: { position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' },
+  safe: { flex: 1, backgroundColor: 'transparent' },
+  center: { flex: 1, alignItems: 'center', justifyContent: 'center' },
   content: { padding: spacing.md },
   teamHead: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, marginBottom: spacing.md },
   section: { marginBottom: spacing.lg },

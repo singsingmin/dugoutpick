@@ -1,6 +1,6 @@
 // 설정 탭 (최소): 응원팀 변경 / 데이터 갱신시각 / 앱 정보. (flow.md)
 import { useEffect, useState } from 'react';
-import { View, ScrollView, StyleSheet } from 'react-native';
+import { View, ScrollView, Image, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
@@ -30,7 +30,9 @@ export default function Settings() {
   }, []);
 
   return (
-    <SafeAreaView style={styles.safe} edges={['top']}>
+    <View style={styles.root}>
+      <Image source={require('../assets/stadium-bg.png')} style={styles.bgImage} resizeMode="cover" />
+      <SafeAreaView style={styles.safe} edges={['top']}>
       <ScreenHeader title="설정" leftIcon="⚙" />
       <ScrollView contentContainerStyle={styles.content}>
         <View style={styles.section}>
@@ -57,13 +59,15 @@ export default function Settings() {
           </Panel>
         </View>
       </ScrollView>
-    </SafeAreaView>
+      </SafeAreaView>
+    </View>
   );
 }
 
-
 const styles = StyleSheet.create({
-  safe: { flex: 1, backgroundColor: colors.bg },
+  root: { flex: 1, backgroundColor: colors.bg },
+  bgImage: { position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' },
+  safe: { flex: 1, backgroundColor: 'transparent' },
   content: { padding: spacing.md },
   section: { marginBottom: spacing.lg },
   value: { marginTop: spacing.xs },
