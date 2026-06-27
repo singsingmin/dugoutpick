@@ -1,7 +1,7 @@
 {
   "date": "20260627",
   "dateText": "2026년 6월 27일",
-  "updatedAt": "2026-06-27T10:38:16.112Z",
+  "updatedAt": "2026-06-27T10:40:23.437Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 10,
@@ -67,7 +67,7 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "heat": 81,
         "label": "8회말 동점 접전"
       },
@@ -547,7 +547,7 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "heat": 0,
         "label": "8회말 7점차"
       },
