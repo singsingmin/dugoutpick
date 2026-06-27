@@ -213,7 +213,7 @@ function Body({
             {listBestRecap && (
               <>
                 <PixelText variant="caption" color={colors.accent} style={styles.subLabel}>오늘의 명경기</PixelText>
-                <GameCard game={listBestRecap} variant={allDone ? 'hero' : 'list'} onPress={() => open(listBestRecap.gameId)} />
+                <GameCard game={listBestRecap} variant="list" onPress={() => open(listBestRecap.gameId)} />
               </>
             )}
             {listMyFinished && listMyFinished.gameId !== listBestRecap?.gameId && (
