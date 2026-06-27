@@ -1,7 +1,7 @@
 {
   "date": "20260627",
   "dateText": "2026년 6월 27일",
-  "updatedAt": "2026-06-27T10:10:22.615Z",
+  "updatedAt": "2026-06-27T10:14:16.476Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 10,
@@ -227,7 +227,7 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 64,
         "label": "7회초 1점차 접전"
       },
@@ -502,7 +502,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 7,
+        "score": 8,
         "starter": {
           "name": "화이트",
           "era": 3.65,
@@ -547,9 +547,9 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "heat": 0,
-        "label": "7회초 7점차"
+        "label": "7회초 8점차"
       },
       "recap": null,
       "decision": null,
@@ -662,7 +662,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "하영민",
           "era": 4.5,
@@ -708,8 +708,8 @@
         "inning": 9,
         "half": "T",
         "out": 0,
-        "heat": 72,
-        "label": "9회초 1점차 접전"
+        "heat": 58,
+        "label": "9회초 2점차"
       },
       "recap": null,
       "decision": null,
