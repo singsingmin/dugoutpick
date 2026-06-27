@@ -1,12 +1,12 @@
 {
   "date": "20260627",
   "dateText": "2026년 6월 27일",
-  "updatedAt": "2026-06-27T10:40:23.437Z",
+  "updatedAt": "2026-06-27T10:42:18.861Z",
   "trackRecord": {
     "window": 50,
-    "sampleSize": 10,
-    "hitRate": 20,
-    "bonusRate": 20,
+    "sampleSize": 11,
+    "hitRate": 18,
+    "bonusRate": 27,
     "ready": true
   },
   "recommendedGameId": "20260627KTSS0",
@@ -194,7 +194,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 3,
-        "score": 2,
+        "score": 4,
         "starter": {
           "name": "원태인",
           "era": 3.57,
@@ -545,11 +545,11 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 1,
+        "inning": 9,
+        "half": "T",
+        "out": 0,
         "heat": 0,
-        "label": "8회말 7점차"
+        "label": "9회초 7점차"
       },
       "recap": null,
       "decision": null,
@@ -655,7 +655,7 @@
       "gameId": "20260627WONC0",
       "time": "17:00",
       "stadium": "창원",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "MS-T",
       "away": {
@@ -704,112 +704,17 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 2,
-        "heat": 58,
-        "label": "9회말 2점차"
+      "live": null,
+      "recap": {
+        "actual": 54,
+        "verdict": "기대 이상"
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "1루수",
-            "name": "신재인"
-          },
-          {
-            "order": 2,
-            "pos": "지명타자",
-            "name": "이우성"
-          },
-          {
-            "order": 3,
-            "pos": "2루수",
-            "name": "박민우"
-          },
-          {
-            "order": 4,
-            "pos": "우익수",
-            "name": "박건우"
-          },
-          {
-            "order": 5,
-            "pos": "좌익수",
-            "name": "권희동"
-          },
-          {
-            "order": 6,
-            "pos": "3루수",
-            "name": "김휘집"
-          },
-          {
-            "order": 7,
-            "pos": "중견수",
-            "name": "천재환"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "김형준"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "김한별"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "2루수",
-            "name": "서건창"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "박찬혁"
-          },
-          {
-            "order": 3,
-            "pos": "중견수",
-            "name": "임병욱"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "히우라"
-          },
-          {
-            "order": 5,
-            "pos": "포수",
-            "name": "김건희"
-          },
-          {
-            "order": 6,
-            "pos": "좌익수",
-            "name": "추재현"
-          },
-          {
-            "order": 7,
-            "pos": "1루수",
-            "name": "안치홍"
-          },
-          {
-            "order": 8,
-            "pos": "유격수",
-            "name": "권혁빈"
-          },
-          {
-            "order": 9,
-            "pos": "3루수",
-            "name": "여동욱"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     }
   ]
 }
