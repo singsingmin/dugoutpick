@@ -1,7 +1,7 @@
 {
   "date": "20260627",
   "dateText": "2026년 6월 27일",
-  "updatedAt": "2026-06-27T09:28:18.187Z",
+  "updatedAt": "2026-06-27T09:30:26.720Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 10,
@@ -67,7 +67,7 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "heat": 54,
         "label": "5회말 1점차 접전"
       },
@@ -227,7 +227,7 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "heat": 55,
         "label": "5회초 1점차 접전"
       },
@@ -502,7 +502,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 3,
+        "score": 5,
         "starter": {
           "name": "화이트",
           "era": 3.65,
@@ -548,8 +548,8 @@
         "inning": 5,
         "half": "T",
         "out": 1,
-        "heat": 33,
-        "label": "5회초 3점차"
+        "heat": 11,
+        "label": "5회초 5점차"
       },
       "recap": null,
       "decision": null,
