@@ -44,6 +44,6 @@ interface Props {
   color?: string; // pixel art 아이콘은 자체 색상 유지 — color prop은 API 호환성용
 }
 
-export default function AppIcon({ name, size = 18 }: Props) {
+export default function AppIcon({ name, size = 22 }: Props) {
   return <Image source={ICONS[name]} style={{ width: size, height: size }} />;
 }

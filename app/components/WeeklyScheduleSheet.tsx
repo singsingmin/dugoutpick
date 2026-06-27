@@ -19,7 +19,7 @@ interface Props {
   onClose: () => void;
 }
 
-interface GameEntry { date: string; away: string; home: string; }
+interface GameEntry { date: string; away: string; home: string; awayStarter?: string | null; homeStarter?: string | null; }
 
 export default function WeeklyScheduleSheet({ visible, onClose }: Props) {
   const [report, setReport] = useState<ReportData | null>(null);
@@ -91,9 +91,20 @@ export default function WeeklyScheduleSheet({ visible, onClose }: Props) {
                   const isMyTeam = !!cheerTeam && (g.away === cheerTeam || g.home === cheerTeam);
                   return (
                     <View key={i} style={[styles.gameRow, isMyTeam && styles.myTeamRow]}>
-                      <PixelText variant="body" color={teamColorOf(g.away)} style={styles.teamNameText} numberOfLines={1}>{teamNameOf(g.away)}</PixelText>
-                      <PixelText variant="caption" color={colors.textDim} style={styles.vs}>vs</PixelText>
-                      <PixelText variant="body" color={teamColorOf(g.home)} style={styles.teamNameText} numberOfLines={1}>{teamNameOf(g.home)}</PixelText>
+                      <View style={styles.gameRowInner}>
+                        <View style={styles.teamRow}>
+                          <PixelText variant="body" color={teamColorOf(g.away)} style={styles.teamNameText} numberOfLines={1}>{teamNameOf(g.away)}</PixelText>
+                          <PixelText variant="caption" color={colors.textDim} style={styles.vs}>vs</PixelText>
+                          <PixelText variant="body" color={teamColorOf(g.home)} style={styles.teamNameText} numberOfLines={1}>{teamNameOf(g.home)}</PixelText>
+                        </View>
+                        {(g.awayStarter || g.homeStarter) && (
+                          <View style={styles.starterRow}>
+                            <PixelText variant="caption" color={colors.textDim} style={styles.starterText} numberOfLines={1}>{g.awayStarter ?? '미정'}</PixelText>
+                            <PixelText variant="caption" color={colors.textDim} style={styles.vs}>·</PixelText>
+                            <PixelText variant="caption" color={colors.textDim} style={styles.starterText} numberOfLines={1}>{g.homeStarter ?? '미정'}</PixelText>
+                          </View>
+                        )}
+                      </View>
                     </View>
                   );
                 })}
@@ -133,13 +144,15 @@ const styles = StyleSheet.create({
     borderRadius: border.radius,
   },
   gameRow: {
-    flexDirection: 'row', alignItems: 'center',
     paddingVertical: spacing.xs,
     borderBottomWidth: 1, borderBottomColor: colors.surfaceAlt,
     borderLeftWidth: 3, borderLeftColor: 'transparent',
-    gap: spacing.sm,
   },
   myTeamRow: { backgroundColor: colors.goldSoft, borderLeftColor: colors.gold },
+  gameRowInner: { paddingHorizontal: spacing.sm, gap: 2 },
+  teamRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
+  starterRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
   teamNameText: { flex: 1, textAlign: 'center' },
+  starterText: { flex: 1, textAlign: 'center' },
   vs: { width: 20, textAlign: 'center' },
 });

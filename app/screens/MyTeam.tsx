@@ -98,7 +98,7 @@ export default function MyTeam() {
                       <PixelText variant="caption" color={poColor}>✅ 포스트시즌 진출권</PixelText>
                     ) : (
                       <View style={styles.poRow}>
-                        <AppIcon name="autumn" size={13} />
+                        <AppIcon name="autumn" size={18} />
                         <PixelText variant="caption" color={poColor}>5위까지 {gbToCut}GB</PixelText>
                       </View>
                     )}

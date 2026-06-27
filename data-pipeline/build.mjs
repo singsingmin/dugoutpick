@@ -427,7 +427,7 @@ function weeklyNote(code, rec, ctx) {
   return pick([`딱 반타작 ${rec2}, 평타는 쳤다`, `${rec2} 5할 페이스, 무난한 한 주`, `${rec2}, 이겼다 졌다 롤러코스터`]);
 }
 
-function buildReport(date, schedule, standings) {
+function buildReport(date, schedule, standings, starterMap = {}) {
   const wb = weekBounds(date);
   const stByName = Object.fromEntries(standings.map(s => [s.name, s]));
   const inRange = (d, a, b) => d >= a && d <= b;
@@ -466,7 +466,9 @@ function buildReport(date, schedule, standings) {
     .filter(Boolean).sort((x, y) => y.pred - x.pred).slice(0, 3);
   const thisTeam = {};
   for (const g of thisGames) {
-    const item = { date: g.date, away: g.away, home: g.home };
+    const key = `${g.date}${g.away}${g.home}`;
+    const st = starterMap[key] ?? {};
+    const item = { date: g.date, away: g.away, home: g.home, ...st };
     (thisTeam[g.away] ||= []).push(item);
     (thisTeam[g.home] ||= []).push(item);
   }
@@ -497,15 +499,32 @@ async function main() {
   const phase = seasonPhase(date);
   console.log(`[build] date=${date} phase=${phase.toFixed(2)}`);
 
-  const [rawGames, { standings, h2h }, pmap, schedule] = await Promise.all([
+  const tomorrow = (() => {
+    const d = new Date(+date.slice(0,4), +date.slice(4,6)-1, +date.slice(6,8)+1);
+    return d.toISOString().slice(0,10).replace(/-/g,'');
+  })();
+
+  const [rawGames, { standings, h2h }, pmap, schedule, tomorrowGames] = await Promise.all([
     fetchGames(date),
     fetchStandings(),
     fetchPitcherStats(),
     fetchSchedule2mo(date).catch(() => []), // 스케줄 실패해도 빌드 계속
+    fetchGames(tomorrow).catch(() => []),   // 내일 선발 (실패 무시)
   ]);
   const stByName = Object.fromEntries(standings.map(s => [s.name, s]));
   const recent = buildRecent(schedule);
-  const report = buildReport(date, schedule, standings);
+
+  // 오늘+내일 선발 맵: G_ID 앞 12자(YYYYMMDD+awayCode+homeCode) → {awayStarter, homeStarter}
+  const starterMap = {};
+  for (const g of [...rawGames, ...tomorrowGames]) {
+    if (!g.G_ID || g.G_ID.length < 12) continue;
+    const key = g.G_ID.slice(0, 12);
+    const awSt = (g.T_PIT_P_NM || '').trim() || null;
+    const hmSt = (g.B_PIT_P_NM || '').trim() || null;
+    if (awSt || hmSt) starterMap[key] = { awayStarter: awSt, homeStarter: hmSt };
+  }
+
+  const report = buildReport(date, schedule, standings, starterMap);
 
   // 선발 보강: 랭킹표(규정 충족)에 없는 선발만 player ID로 개별 조회 → 규정 미달 투수도 ERA/승/패 노출
   const missIds = [...new Set(

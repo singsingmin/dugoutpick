@@ -133,7 +133,7 @@ export default function Standings() {
                       <View style={styles.cutLine} />
                       <View style={styles.cutLabel}>
                         <View style={styles.cutLabelRow}>
-                          <AppIcon name="autumn" size={14} />
+                          <AppIcon name="autumn" size={18} />
                           <PixelText variant="caption" color={colors.onGold}>
                             가을야구 마지노선 {belowExpanded ? '▲' : '▼'}
                           </PixelText>

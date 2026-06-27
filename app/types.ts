@@ -145,7 +145,7 @@ export interface TeamWeekRecord { w: number; l: number; d: number; rank: number;
 export interface ReportData {
   updatedAt: string;
   lastWeek: { range: [string, string]; team: Record<string, TeamWeekRecord> };
-  thisWeek: { range: [string, string]; top: ReportUpcomingGame[]; team: Record<string, { date: string; away: string; home: string }[]> };
+  thisWeek: { range: [string, string]; top: ReportUpcomingGame[]; team: Record<string, { date: string; away: string; home: string; awayStarter?: string | null; homeStarter?: string | null }[]> };
 }
 
 export interface TeamsData {
