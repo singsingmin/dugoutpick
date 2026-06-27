@@ -1,7 +1,7 @@
 {
   "date": "20260627",
   "dateText": "2026년 6월 27일",
-  "updatedAt": "2026-06-27T09:14:17.321Z",
+  "updatedAt": "2026-06-27T09:16:17.992Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 10,
@@ -65,11 +65,11 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 2,
-        "heat": 50,
-        "label": "4회말 1점차 접전"
+        "inning": 5,
+        "half": "T",
+        "out": 0,
+        "heat": 54,
+        "label": "5회초 1점차 접전"
       },
       "recap": null,
       "decision": null,
@@ -226,10 +226,10 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 50,
-        "label": "4회초 1점차 접전"
+        "label": "4회말 1점차 접전"
       },
       "recap": null,
       "decision": null,
@@ -354,7 +354,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "김진욱",
           "era": 3.21,
@@ -385,11 +385,11 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 2,
-        "heat": 38,
-        "label": "3회말 2점차"
+        "inning": 4,
+        "half": "T",
+        "out": 0,
+        "heat": 31,
+        "label": "4회초 3점차"
       },
       "recap": null,
       "decision": null,
@@ -547,7 +547,7 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "heat": 40,
         "label": "4회말 2점차"
       },
