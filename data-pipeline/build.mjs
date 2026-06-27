@@ -204,7 +204,8 @@ const aceness = (era) => clamp01((5.0 - era) / 3.0);
 const LEAGUE_ERA = 4.20;
 // doom(멸망전): 둘 다 깊은 연패일 때 '연패 탈출 서사' 가산. 평소 경기는 0이라 기존 점수 불변(ADR-016).
 // park(파크팩터)+offense(타선득점력) 추가 — center 45→51 (+6) 보정으로 기존 점수 분포 유지.
-const W = { close: 30, quality: 20, form: 15, rivalry: 10, playoff: 10, pitcher: 15, doom: 18, park: 5, offense: 6 };
+// v2 (2026-06-27): 피드백 13건 분석 — close↑(박빙이 꿀잼 1순위), playoff↓·rivalry↓(상황만 좋고 내용 없는 경기 과대평가), pitcher↑(선발 압도 꿀잼 태그 반영). 총합 129 유지.
+const W = { close: 36, quality: 20, form: 15, rivalry: 6, playoff: 6, pitcher: 17, doom: 18, park: 5, offense: 6 };
 const calibrate = (raw) => Math.round(100 / (1 + Math.exp(-(raw - 51) / 10)));
 // 시즌 진행도 (KBO 4~10월): 0.0=4월, 1.0=10월. 후반부로 갈수록 순위전 긴박감 가산.
 const seasonPhase = (date) => Math.max(0, Math.min(1, (parseInt(date.slice(4, 6), 10) - 4) / 6));
