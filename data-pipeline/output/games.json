@@ -1,7 +1,7 @@
 {
   "date": "20260627",
   "dateText": "2026년 6월 27일",
-  "updatedAt": "2026-06-27T09:56:17.459Z",
+  "updatedAt": "2026-06-27T09:56:47.667Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 10,
@@ -387,7 +387,7 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 2,
+        "out": 3,
         "heat": 36,
         "label": "6회말 3점차"
       },
@@ -707,7 +707,7 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "heat": 68,
         "label": "8회초 1점차 접전"
       },
