@@ -1,7 +1,7 @@
 {
   "date": "20260627",
   "dateText": "2026년 6월 27일",
-  "updatedAt": "2026-06-27T08:48:17.694Z",
+  "updatedAt": "2026-06-27T08:50:21.305Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 10,
@@ -226,10 +226,10 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 45,
-        "label": "3회초 1점차 접전"
+        "label": "3회말 1점차 접전"
       },
       "recap": null,
       "decision": null,
@@ -342,7 +342,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "웰스",
           "era": 2.47,
@@ -388,8 +388,8 @@
         "inning": 3,
         "half": "T",
         "out": 0,
-        "heat": 55,
-        "label": "3회초 동점 접전"
+        "heat": 46,
+        "label": "3회초 1점차 접전"
       },
       "recap": null,
       "decision": null,
@@ -546,10 +546,10 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 37,
-        "label": "3회초 2점차"
+        "label": "3회말 2점차"
       },
       "recap": null,
       "decision": null,
@@ -707,7 +707,7 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "heat": 50,
         "label": "4회초 1점차 접전"
       },
