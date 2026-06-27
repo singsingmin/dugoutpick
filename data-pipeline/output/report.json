@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-27T11:58:16.517Z",
+  "updatedAt": "2026-06-27T13:56:16.906Z",
   "lastWeek": {
     "range": [
       "20260615",
@@ -134,12 +134,16 @@
         {
           "date": "20260627",
           "away": "KT",
-          "home": "SS"
+          "home": "SS",
+          "awayStarter": "로건",
+          "homeStarter": "원태인"
         },
         {
           "date": "20260628",
           "away": "KT",
-          "home": "SS"
+          "home": "SS",
+          "awayStarter": "고영표",
+          "homeStarter": "양창섭"
         }
       ],
       "LG": [
@@ -166,12 +170,16 @@
         {
           "date": "20260627",
           "away": "LG",
-          "home": "LT"
+          "home": "LT",
+          "awayStarter": "웰스",
+          "homeStarter": "김진욱"
         },
         {
           "date": "20260628",
           "away": "LG",
-          "home": "LT"
+          "home": "LT",
+          "awayStarter": "장현식",
+          "homeStarter": "비슬리"
         }
       ],
       "NC": [
@@ -198,12 +206,16 @@
         {
           "date": "20260627",
           "away": "WO",
-          "home": "NC"
+          "home": "NC",
+          "awayStarter": "하영민",
+          "homeStarter": "구창모"
         },
         {
           "date": "20260628",
           "away": "WO",
-          "home": "NC"
+          "home": "NC",
+          "awayStarter": "와일스",
+          "homeStarter": "라일리"
         }
       ],
       "LT": [
@@ -230,12 +242,16 @@
         {
           "date": "20260627",
           "away": "LG",
-          "home": "LT"
+          "home": "LT",
+          "awayStarter": "웰스",
+          "homeStarter": "김진욱"
         },
         {
           "date": "20260628",
           "away": "LG",
-          "home": "LT"
+          "home": "LT",
+          "awayStarter": "장현식",
+          "homeStarter": "비슬리"
         }
       ],
       "SK": [
@@ -262,12 +278,16 @@
         {
           "date": "20260627",
           "away": "HH",
-          "home": "SK"
+          "home": "SK",
+          "awayStarter": "화이트",
+          "homeStarter": "타케다"
         },
         {
           "date": "20260628",
           "away": "HH",
-          "home": "SK"
+          "home": "SK",
+          "awayStarter": "류현진",
+          "homeStarter": "최민준"
         }
       ],
       "KT": [
@@ -294,12 +314,16 @@
         {
           "date": "20260627",
           "away": "KT",
-          "home": "SS"
+          "home": "SS",
+          "awayStarter": "로건",
+          "homeStarter": "원태인"
         },
         {
           "date": "20260628",
           "away": "KT",
-          "home": "SS"
+          "home": "SS",
+          "awayStarter": "고영표",
+          "homeStarter": "양창섭"
         }
       ],
       "OB": [
@@ -326,12 +350,16 @@
         {
           "date": "20260627",
           "away": "HT",
-          "home": "OB"
+          "home": "OB",
+          "awayStarter": "시라카와",
+          "homeStarter": "잭로그"
         },
         {
           "date": "20260628",
           "away": "HT",
-          "home": "OB"
+          "home": "OB",
+          "awayStarter": "김태형",
+          "homeStarter": "최승용"
         }
       ],
       "HH": [
@@ -358,12 +386,16 @@
         {
           "date": "20260627",
           "away": "HH",
-          "home": "SK"
+          "home": "SK",
+          "awayStarter": "화이트",
+          "homeStarter": "타케다"
         },
         {
           "date": "20260628",
           "away": "HH",
-          "home": "SK"
+          "home": "SK",
+          "awayStarter": "류현진",
+          "homeStarter": "최민준"
         }
       ],
       "HT": [
@@ -390,12 +422,16 @@
         {
           "date": "20260627",
           "away": "HT",
-          "home": "OB"
+          "home": "OB",
+          "awayStarter": "시라카와",
+          "homeStarter": "잭로그"
         },
         {
           "date": "20260628",
           "away": "HT",
-          "home": "OB"
+          "home": "OB",
+          "awayStarter": "김태형",
+          "homeStarter": "최승용"
         }
       ],
       "WO": [
@@ -422,12 +458,16 @@
         {
           "date": "20260627",
           "away": "WO",
-          "home": "NC"
+          "home": "NC",
+          "awayStarter": "하영민",
+          "homeStarter": "구창모"
         },
         {
           "date": "20260628",
           "away": "WO",
-          "home": "NC"
+          "home": "NC",
+          "awayStarter": "와일스",
+          "homeStarter": "라일리"
         }
       ]
     }
