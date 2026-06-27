@@ -1,4 +1,4 @@
-// 투수 한 줄. 예정/경기중: 원정선발 ⚾ 홈선발 (팀 열 정렬). 종료: ⚾ 승 X · 패 Y (· 세 Z).
+// 투수 한 줄. 예정/경기중: 원정선발  홈선발 (팀 열 정렬). 종료: 승 X · 패 Y (· 세 Z).
 // 양쪽 다 미등록이면 줄 자체를 숨겨(null) 빈 줄이 생기지 않게 한다. 한쪽만 미등록이면 '미정'.
 import { View, StyleSheet } from 'react-native';
 import type { ViewStyle, StyleProp } from 'react-native';
@@ -17,7 +17,7 @@ export default function StarterLine({ game, style }: { game: Game; style?: Style
     return (
       <View style={[styles.row, styles.center, style]}>
         <PixelText variant="caption" color={colors.textDim} numberOfLines={1}>
-          ⚾ {parts.join(' · ')}
+          {parts.join(' · ')}
         </PixelText>
       </View>
     );
@@ -30,7 +30,6 @@ export default function StarterLine({ game, style }: { game: Game; style?: Style
   return (
     <View style={[styles.row, style]}>
       <PixelText variant="caption" color={colors.textDim} style={styles.name} numberOfLines={1}>{a ?? '미정'}</PixelText>
-      <PixelText variant="caption" color={colors.textDim} style={styles.icon}>⚾</PixelText>
       <PixelText variant="caption" color={colors.textDim} style={styles.name} numberOfLines={1}>{h ?? '미정'}</PixelText>
     </View>
   );
@@ -40,6 +39,4 @@ const styles = StyleSheet.create({
   row: { flexDirection: 'row', alignItems: 'center' },
   center: { justifyContent: 'center' },
   name: { flex: 1, textAlign: 'center' },
-  // includeFontPadding: false → 픽셀폰트+이모지 혼용 시 이모지가 아래로 치우치는 현상 제거
-  icon: { paddingHorizontal: 4, includeFontPadding: false },
 });
