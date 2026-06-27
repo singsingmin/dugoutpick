@@ -1,7 +1,7 @@
 {
   "date": "20260627",
   "dateText": "2026년 6월 27일",
-  "updatedAt": "2026-06-27T09:50:23.042Z",
+  "updatedAt": "2026-06-27T09:52:18.247Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 10,
@@ -67,7 +67,7 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "heat": 58,
         "label": "6회말 1점차 접전"
       },
@@ -194,7 +194,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 3,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "원태인",
           "era": 3.57,
@@ -227,9 +227,9 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 1,
-        "heat": 55,
-        "label": "5회말 1점차 접전"
+        "out": 3,
+        "heat": 66,
+        "label": "5회말 동점 접전"
       },
       "recap": null,
       "decision": null,
@@ -386,10 +386,10 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "heat": 36,
-        "label": "6회초 3점차"
+        "label": "6회말 3점차"
       },
       "recap": null,
       "decision": null,
