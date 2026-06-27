@@ -73,7 +73,6 @@ export default function MyTeam() {
             <TeamBadge code={code} size="md" />
             <PixelText variant="title" color={accent}>{team?.fullName ?? code}</PixelText>
           </View>
-          <View style={[styles.teamAccentLine, { backgroundColor: accent }]} />
 
           {/* 오늘 경기 */}
           <View style={styles.section}>
@@ -157,8 +156,7 @@ const styles = StyleSheet.create({
   safe: { flex: 1, backgroundColor: 'transparent' },
   center: { flex: 1, alignItems: 'center', justifyContent: 'center' },
   content: { padding: spacing.md },
-  teamHead: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, marginBottom: spacing.xs },
-  teamAccentLine: { height: 3, borderRadius: 2, marginBottom: spacing.md },
+  teamHead: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, marginBottom: spacing.md },
   poBadge: { marginBottom: spacing.sm },
   section: { marginBottom: spacing.lg },
   rankHead: { flexDirection: 'row', alignItems: 'baseline', gap: spacing.sm, marginBottom: spacing.sm, flexWrap: 'wrap' },
