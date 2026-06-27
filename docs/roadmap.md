@@ -5,6 +5,7 @@
 > 최종 정리: 2026-06-24.
 
 ## A. ✨ 기능 다듬기 (사용 경험)
+- [ ] **아이콘 Phosphor 교체** (2026-07-01 EAS 재빌드 예정) — 현재 `@expo/vector-icons(MaterialCommunityIcons)` A단계 완료. `phosphor-react-native` 설치 후 `AppIcon.tsx` 매핑만 교체(30분 작업). EAS 재빌드와 묶어서 진행.
 유저 피드백 받으며 다듬는 게 효율적.
 - [x] **라이브 인앱 폴링** (2026-06-25) — LIVE 경기 존재 시 60초 자동 갱신(useFocusEffect + interval 병행). 배터리 영향 최소화 위해 LIVE 게임 없으면 폴링 중단.
 - [x] **라인업 조회** (2026-06-25) — `Schedule.asmx/GetLineUpAnalysis` API로 선발 타순(1~9번·포지션·이름) fetch → games.json 포함. 경기 상세 선발투수 섹션 옆 버튼 → 바텀시트 표시. 발표 전 추정 타순도 "최근 기준 추정" 표시로 제공.
