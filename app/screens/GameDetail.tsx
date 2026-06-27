@@ -100,11 +100,14 @@ export default function GameDetail({ route, navigation }: Props) {
 
       {/* 꿀잼지수 */}
       {game.honjam && (
-        <View style={styles.honjamRow}>
-          <PixelText color={colors.gold} style={styles.spark}>✦</PixelText>
-          <HonjamBadge score={game.honjam.score} size="lg" />
-          <PixelText color={colors.gold} style={styles.spark}>✦</PixelText>
-        </View>
+        <>
+          <View style={styles.honjamRow}>
+            <PixelText color={colors.gold} style={styles.spark}>✦</PixelText>
+            <HonjamBadge score={game.honjam.score} size="lg" />
+            <PixelText color={colors.gold} style={styles.spark}>✦</PixelText>
+          </View>
+          <PixelText variant="caption" color={colors.textDim} style={styles.honjamNote}>경기 전 조건 기준 · 실제 결과와 다를 수 있음</PixelText>
+        </>
       )}
 
       {/* 한 줄 예측 */}
@@ -180,6 +183,7 @@ export default function GameDetail({ route, navigation }: Props) {
           gameId={game.gameId}
           predictedScore={game.honjam.score}
           matchLabel={`${game.away.name} vs ${game.home.name}`}
+          factors={game.honjam.factors}
         />
       )}
       </ScrollView>
@@ -216,6 +220,7 @@ const styles = StyleSheet.create({
   underline: { width: 48, borderBottomWidth: 2, borderStyle: 'dotted' },
   meta: { textAlign: 'center', marginTop: spacing.sm, marginBottom: spacing.sm },
   honjamRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: spacing.md, marginVertical: spacing.sm },
+  honjamNote: { textAlign: 'center', marginBottom: spacing.sm },
   spark: { fontSize: 18 },
   section: { marginTop: spacing.sm },
   sectionHeader: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },

@@ -15,11 +15,12 @@ interface FeedbackWidgetProps {
   gameId: string;
   predictedScore: number;
   matchLabel: string;
+  factors?: Record<string, number>;
 }
 
 type Step = 'idle' | 'thumbs_select' | 'tag_select' | 'submitting' | 'done';
 
-export default function FeedbackWidget({ gameId, predictedScore, matchLabel }: FeedbackWidgetProps) {
+export default function FeedbackWidget({ gameId, predictedScore, matchLabel, factors }: FeedbackWidgetProps) {
   const { accent } = useTeamTheme();
   const [step, setStep] = useState<Step>('idle');
   const [thumbs, setThumbs] = useState<'up' | 'down' | null>(null);
@@ -45,6 +46,7 @@ export default function FeedbackWidget({ gameId, predictedScore, matchLabel }: F
       reasonTag: tag.slug,
       reasonLabel: tag.label,
       ts: new Date().toISOString(),
+      factors,
     };
     await saveFeedback(entry);
     void sendToDiscord(entry, matchLabel); // fire-and-forget; sendToDiscord swallows errors internally
@@ -63,7 +65,7 @@ export default function FeedbackWidget({ gameId, predictedScore, matchLabel }: F
         {step === 'thumbs_select' && (
           <View style={styles.col}>
             <PixelText variant="caption" color={colors.textDim} style={styles.question}>
-              꿀잼지수 예측이 맞았나요?
+              이 경기, 실제로 어땠나요?
             </PixelText>
             <View style={styles.buttonRow}>
               <TouchableOpacity

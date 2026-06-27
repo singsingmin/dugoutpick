@@ -14,6 +14,7 @@ export interface FeedbackEntry {
   reasonTag: string | null;
   reasonLabel: string | null;
   ts: string;
+  factors?: Record<string, number>;
 }
 
 export const TAGS_DOWN: FeedbackTag[] = [
@@ -49,12 +50,17 @@ export async function sendToDiscord(entry: FeedbackEntry, matchLabel: string): P
     const thumbsLabel = entry.thumbs === 'up' ? '꿀잼' : '노잼';
     const date = entry.ts.slice(0, 10);
 
+    const factorsLine = entry.factors
+      ? `factors: ${Object.entries(entry.factors).map(([k, v]) => `${k}=${v.toFixed(2)}`).join(' ')}`
+      : null;
+
     const content = [
       `[피드백] ${date} ${matchLabel}`,
       `예측: ${entry.predictedScore}점 | 평가: ${thumbsEmoji} ${thumbsLabel}`,
       `이유: ${entry.reasonLabel ?? '(없음)'}`,
+      factorsLine,
       `gameId: ${entry.gameId} | ts: ${entry.ts}`,
-    ].join('\n');
+    ].filter(Boolean).join('\n');
 
     await fetch(webhookUrl, {
       method: 'POST',
