@@ -1,12 +1,12 @@
 {
   "date": "20260627",
   "dateText": "2026년 6월 27일",
-  "updatedAt": "2026-06-27T10:58:18.488Z",
+  "updatedAt": "2026-06-27T11:00:34.061Z",
   "trackRecord": {
     "window": 50,
-    "sampleSize": 11,
-    "hitRate": 18,
-    "bonusRate": 27,
+    "sampleSize": 12,
+    "hitRate": 25,
+    "bonusRate": 25,
     "ready": true
   },
   "recommendedGameId": "20260627KTSS0",
@@ -175,7 +175,7 @@
       "gameId": "20260627KTSS0",
       "time": "17:00",
       "stadium": "대구",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPO-2T",
       "away": {
@@ -224,112 +224,17 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 3,
-        "heat": 74,
-        "label": "9회초 1점차 접전"
+      "live": null,
+      "recap": {
+        "actual": 76,
+        "verdict": "예측 적중"
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "김지찬"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "김성윤"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "박승규"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "최형우"
-          },
-          {
-            "order": 5,
-            "pos": "1루수",
-            "name": "디아즈"
-          },
-          {
-            "order": 6,
-            "pos": "포수",
-            "name": "강민호"
-          },
-          {
-            "order": 7,
-            "pos": "2루수",
-            "name": "류지혁"
-          },
-          {
-            "order": 8,
-            "pos": "3루수",
-            "name": "전병우"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "심재훈"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "최원준"
-          },
-          {
-            "order": 2,
-            "pos": "1루수",
-            "name": "김현수"
-          },
-          {
-            "order": 3,
-            "pos": "우익수",
-            "name": "안현민"
-          },
-          {
-            "order": 4,
-            "pos": "좌익수",
-            "name": "힐리어드"
-          },
-          {
-            "order": 5,
-            "pos": "지명타자",
-            "name": "김민혁"
-          },
-          {
-            "order": 6,
-            "pos": "2루수",
-            "name": "김상수"
-          },
-          {
-            "order": 7,
-            "pos": "3루수",
-            "name": "허경민"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "한승택"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "권동진"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260627LGLT0",
@@ -547,7 +452,7 @@
       "live": {
         "inning": 9,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "heat": 0,
         "label": "9회말 7점차"
       },
