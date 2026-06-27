@@ -8,6 +8,7 @@ import { loadStandings, loadRecent, loadTeams } from '../data/load';
 import { getCheerTeam } from '../data/team';
 import PixelText from '../components/PixelText';
 import ScreenHeader from '../components/ScreenHeader';
+import AppIcon from '../components/AppIcon';
 import { FormDots } from '../components/charts';
 import { border, colors, spacing } from '../theme';
 import { useTeamTheme } from '../context/TeamTheme';
@@ -131,9 +132,12 @@ export default function Standings() {
                     <Pressable style={styles.cutRow} onPress={() => setBelowExpanded(v => !v)}>
                       <View style={styles.cutLine} />
                       <View style={styles.cutLabel}>
-                        <PixelText variant="caption" color={colors.onGold}>
-                          🍂 가을야구 마지노선 {belowExpanded ? '▲' : '▼'}
-                        </PixelText>
+                        <View style={styles.cutLabelRow}>
+                          <AppIcon name="autumn" size={14} />
+                          <PixelText variant="caption" color={colors.onGold}>
+                            가을야구 마지노선 {belowExpanded ? '▲' : '▼'}
+                          </PixelText>
+                        </View>
                       </View>
                       <View style={styles.cutLine} />
                     </Pressable>
@@ -181,6 +185,7 @@ const styles = StyleSheet.create({
   cutRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.xs, paddingVertical: spacing.sm, paddingHorizontal: spacing.sm, backgroundColor: colors.goldSoft },
   cutLine: { flex: 1, height: 3, backgroundColor: colors.gold, borderRadius: 2 },
   cutLabel: { backgroundColor: colors.gold, borderColor: colors.border, borderWidth: 2, borderRadius: border.radius, paddingVertical: 3, paddingHorizontal: spacing.sm },
+  cutLabelRow: { flexDirection: 'row', alignItems: 'center', gap: 5 },
   legend: { marginTop: spacing.sm, gap: 4, alignItems: 'flex-end' },
   legendRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, flexWrap: 'wrap', justifyContent: 'flex-end' },
   legendItem: { flexDirection: 'row', alignItems: 'center', gap: 3 },
