@@ -39,6 +39,8 @@ export default function TrackRecordBadge({ track, variant = 'today' }: Props) {
 
 const styles = StyleSheet.create({
   box: {
+    borderWidth: 1,
+    borderColor: 'rgba(45,36,20,0.30)',
     borderRadius: border.radius,
     backgroundColor: colors.surface,
     paddingVertical: spacing.sm,

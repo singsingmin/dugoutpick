@@ -165,7 +165,7 @@ const styles = StyleSheet.create({
   safe: { flex: 1, backgroundColor: 'transparent' },
   center: { flex: 1, alignItems: 'center', justifyContent: 'center' },
   content: { padding: spacing.md },
-  table: { borderWidth: 1, borderColor: colors.border, borderRadius: border.radius, backgroundColor: colors.surface, overflow: 'hidden' },
+  table: { borderWidth: 1, borderColor: 'rgba(45,36,20,0.30)', borderRadius: border.radius, backgroundColor: colors.surface, overflow: 'hidden' },
   headerRow: { flexDirection: 'row', alignItems: 'center', paddingVertical: 6, paddingHorizontal: spacing.sm },
   block: { paddingVertical: 7, paddingHorizontal: spacing.sm, borderTopWidth: 1, borderTopColor: colors.border, borderLeftWidth: 4, borderLeftColor: 'transparent' },
   blockMine: { backgroundColor: colors.surfaceAlt },
