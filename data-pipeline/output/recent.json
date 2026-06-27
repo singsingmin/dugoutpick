@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-27T11:22:16.958Z",
+  "updatedAt": "2026-06-27T11:24:19.410Z",
   "recent": {
     "NC": [
       {
@@ -577,14 +577,6 @@
     ],
     "HT": [
       {
-        "date": "20260616",
-        "oppCode": "LG",
-        "isHome": true,
-        "sf": 2,
-        "sa": 8,
-        "result": "L"
-      },
-      {
         "date": "20260617",
         "oppCode": "LG",
         "isHome": true,
@@ -655,17 +647,17 @@
         "sf": 2,
         "sa": 3,
         "result": "L"
+      },
+      {
+        "date": "20260627",
+        "oppCode": "OB",
+        "isHome": false,
+        "sf": 1,
+        "sa": 8,
+        "result": "L"
       }
     ],
     "OB": [
-      {
-        "date": "20260616",
-        "oppCode": "KT",
-        "isHome": true,
-        "sf": 2,
-        "sa": 6,
-        "result": "L"
-      },
       {
         "date": "20260617",
         "oppCode": "KT",
@@ -736,6 +728,14 @@
         "isHome": true,
         "sf": 3,
         "sa": 2,
+        "result": "W"
+      },
+      {
+        "date": "20260627",
+        "oppCode": "HT",
+        "isHome": true,
+        "sf": 8,
+        "sa": 1,
         "result": "W"
       }
     ],
