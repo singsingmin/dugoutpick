@@ -1,5 +1,4 @@
-import { MaterialCommunityIcons } from '@expo/vector-icons';
-import type React from 'react';
+import { Image } from 'react-native';
 
 export type AppIconName =
   | 'baseball'
@@ -16,34 +15,35 @@ export type AppIconName =
   | 'sparkles'
   | 'live'
   | 'versus'
-  | 'calendar';
+  | 'calendar'
+  | 'autumn';
 
-type MCIName = React.ComponentProps<typeof MaterialCommunityIcons>['name'];
-
-const ICON_MAP: Record<AppIconName, MCIName> = {
-  baseball: 'baseball',
-  star: 'star',
-  chart: 'poll',
-  settings: 'cog',
-  clipboard: 'clipboard-text',
-  back: 'arrow-left',
-  home: 'home',
-  fire: 'fire',
-  search: 'magnify',
-  chat: 'chat',
-  flag: 'flag-checkered',
-  sparkles: 'telescope',
-  live: 'record-circle',
-  versus: 'sword-cross',
-  calendar: 'calendar',
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const ICONS: Record<AppIconName, ReturnType<typeof require>> = {
+  baseball:  require('../assets/icons/baseball.png'),
+  star:      require('../assets/icons/star.png'),
+  chart:     require('../assets/icons/chart.png'),
+  settings:  require('../assets/icons/settings.png'),
+  clipboard: require('../assets/icons/clipboard.png'),
+  back:      require('../assets/icons/back.png'),
+  home:      require('../assets/icons/home.png'),
+  fire:      require('../assets/icons/fire.png'),
+  search:    require('../assets/icons/search.png'),
+  chat:      require('../assets/icons/chat.png'),
+  flag:      require('../assets/icons/flag.png'),
+  sparkles:  require('../assets/icons/sparkles.png'),
+  live:      require('../assets/icons/live.png'),
+  versus:    require('../assets/icons/versus.png'),
+  calendar:  require('../assets/icons/calendar.png'),
+  autumn:    require('../assets/icons/autumn.png'),
 };
 
 interface Props {
   name: AppIconName;
   size?: number;
-  color?: string;
+  color?: string; // pixel art 아이콘은 자체 색상 유지 — color prop은 API 호환성용
 }
 
-export default function AppIcon({ name, size = 18, color = '#000' }: Props) {
-  return <MaterialCommunityIcons name={ICON_MAP[name]} size={size} color={color} />;
+export default function AppIcon({ name, size = 18 }: Props) {
+  return <Image source={ICONS[name]} style={{ width: size, height: size }} />;
 }
