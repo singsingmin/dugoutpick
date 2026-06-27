@@ -499,29 +499,33 @@ async function main() {
   const phase = seasonPhase(date);
   console.log(`[build] date=${date} phase=${phase.toFixed(2)}`);
 
-  const tomorrow = (() => {
-    const d = new Date(+date.slice(0,4), +date.slice(4,6)-1, +date.slice(6,8)+1);
-    return d.toISOString().slice(0,10).replace(/-/g,'');
-  })();
-
-  const [rawGames, { standings, h2h }, pmap, schedule, tomorrowGames] = await Promise.all([
+  const [rawGames, { standings, h2h }, pmap, schedule] = await Promise.all([
     fetchGames(date),
     fetchStandings(),
     fetchPitcherStats(),
     fetchSchedule2mo(date).catch(() => []), // 스케줄 실패해도 빌드 계속
-    fetchGames(tomorrow).catch(() => []),   // 내일 선발 (실패 무시)
   ]);
   const stByName = Object.fromEntries(standings.map(s => [s.name, s]));
   const recent = buildRecent(schedule);
 
-  // 오늘+내일 선발 맵: G_ID 앞 12자(YYYYMMDD+awayCode+homeCode) → {awayStarter, homeStarter}
+  // 이번주 선발 맵: 이번주 전체 경기 날짜(최대 7일)를 병렬 fetch
+  // 오늘 경기는 rawGames에 이미 있으므로 제외
+  const wb = weekBounds(date);
+  const weekDates = [...new Set(
+    schedule.filter(g => g.date >= wb.thisMon && g.date <= wb.thisSun).map(g => g.date)
+  )].filter(d => d !== date);
+  const weekGamesList = await Promise.all(
+    weekDates.map(d => fetchGames(d).catch(() => []))
+  );
   const starterMap = {};
-  for (const g of [...rawGames, ...tomorrowGames]) {
-    if (!g.G_ID || g.G_ID.length < 12) continue;
-    const key = g.G_ID.slice(0, 12);
-    const awSt = (g.T_PIT_P_NM || '').trim() || null;
-    const hmSt = (g.B_PIT_P_NM || '').trim() || null;
-    if (awSt || hmSt) starterMap[key] = { awayStarter: awSt, homeStarter: hmSt };
+  for (const games of [[...rawGames], ...weekGamesList]) {
+    for (const g of games) {
+      if (!g.G_ID || g.G_ID.length < 12) continue;
+      const key = g.G_ID.slice(0, 12);
+      const awSt = (g.T_PIT_P_NM || '').trim() || null;
+      const hmSt = (g.B_PIT_P_NM || '').trim() || null;
+      if (awSt || hmSt) starterMap[key] = { awayStarter: awSt, homeStarter: hmSt };
+    }
   }
 
   const report = buildReport(date, schedule, standings, starterMap);
