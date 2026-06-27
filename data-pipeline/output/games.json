@@ -1,7 +1,7 @@
 {
   "date": "20260627",
   "dateText": "2026년 6월 27일",
-  "updatedAt": "2026-06-27T10:28:18.533Z",
+  "updatedAt": "2026-06-27T10:30:27.360Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 10,
@@ -22,7 +22,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "시라카와",
           "era": 4.82,
@@ -67,9 +67,9 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 1,
-        "heat": 67,
-        "label": "8회초 1점차 접전"
+        "out": 2,
+        "heat": 81,
+        "label": "8회초 동점 접전"
       },
       "recap": null,
       "decision": null,
@@ -227,7 +227,7 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 1,
+        "out": 3,
         "heat": 69,
         "label": "8회초 1점차 접전"
       },
