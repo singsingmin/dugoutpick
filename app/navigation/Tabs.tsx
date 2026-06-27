@@ -18,7 +18,7 @@ export default function Tabs() {
 
   const icon = (name: AppIconName) => ({ focused, color }: { focused: boolean; color: string }) => (
     <View style={styles.iconWrap}>
-      <AppIcon name={name} size={22} color={color} />
+      <AppIcon name={name} size={26} color={color} />
       <View style={[styles.indicator, focused && { backgroundColor: accent }]} />
     </View>
   );

@@ -22,13 +22,13 @@ export default function ScreenHeader({ title, leftIcon, rightIcon, rightLabel, o
       {rightLabel
         ? <PixelText variant="body" color={colors.onGreen}>{rightLabel}</PixelText>
         : rightIcon
-          ? <AppIcon name={rightIcon} size={26} color={colors.onGreen} />
+          ? <AppIcon name={rightIcon} size={30} color={colors.onGreen} />
           : null}
     </View>
   );
   const leftContent = (
     <View style={styles.side}>
-      {leftIcon && <AppIcon name={leftIcon} size={26} color={colors.onGreen} />}
+      {leftIcon && <AppIcon name={leftIcon} size={30} color={colors.onGreen} />}
     </View>
   );
 
@@ -53,5 +53,5 @@ const styles = StyleSheet.create({
     paddingHorizontal: spacing.md,
     paddingVertical: spacing.sm,
   },
-  side: { width: 32, alignItems: 'center' },
+  side: { width: 36, alignItems: 'center' },
 });

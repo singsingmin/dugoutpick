@@ -15,7 +15,7 @@ export default function SectionLabel({ label, icon }: Props) {
   return (
     <View style={[styles.tab, { backgroundColor: accent }]}>
       <View style={styles.row}>
-        {icon && <AppIcon name={icon} size={18} color={colors.onGreen} />}
+        {icon && <AppIcon name={icon} size={22} color={colors.onGreen} />}
         <PixelText variant="body" color={colors.onGreen}>{label}</PixelText>
       </View>
     </View>
