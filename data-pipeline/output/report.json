@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-27T14:04:17.204Z",
+  "updatedAt": "2026-06-27T15:46:26.586Z",
   "lastWeek": {
     "range": [
       "20260615",
@@ -85,9 +85,17 @@
     ],
     "top": [
       {
+        "away": "KT",
+        "home": "SS",
+        "pred": 91,
+        "reason": "게임차 0.5, 막상막하 승부",
+        "dateStart": "20260626",
+        "dateEnd": "20260628"
+      },
+      {
         "away": "OB",
         "home": "HH",
-        "pred": 86,
+        "pred": 89,
         "reason": "게임차 1, 막상막하 승부",
         "dateStart": "20260623",
         "dateEnd": "20260625"
@@ -95,16 +103,8 @@
       {
         "away": "HT",
         "home": "OB",
-        "pred": 85,
+        "pred": 87,
         "reason": "게임차 2.5의 순위 다툼",
-        "dateStart": "20260626",
-        "dateEnd": "20260628"
-      },
-      {
-        "away": "KT",
-        "home": "SS",
-        "pred": 85,
-        "reason": "게임차 0.5, 막상막하 승부",
         "dateStart": "20260626",
         "dateEnd": "20260628"
       }
