@@ -100,6 +100,7 @@ export default function WeeklyScheduleSheet({ visible, onClose }: Props) {
                         {(g.awayStarter || g.homeStarter) && (
                           <View style={styles.starterRow}>
                             <PixelText variant="caption" color={colors.textDim} style={styles.starterText} numberOfLines={1}>{g.awayStarter ?? '미정'}</PixelText>
+                            <View style={styles.vs} />
                             <PixelText variant="caption" color={colors.textDim} style={styles.starterText} numberOfLines={1}>{g.homeStarter ?? '미정'}</PixelText>
                           </View>
                         )}
