@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
   backdrop: { ...StyleSheet.absoluteFillObject, backgroundColor: 'rgba(0,0,0,0.5)' },
   sheet: {
     height: '75%',
-    backgroundColor: colors.surface,
+    backgroundColor: '#FBF5E4',
     borderTopLeftRadius: 12,
     borderTopRightRadius: 12,
     padding: spacing.md,
