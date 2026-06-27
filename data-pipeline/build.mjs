@@ -568,7 +568,17 @@ async function main() {
       const half = g.GAME_TB_SC ?? null;
       const diff = Math.abs((aScore ?? 0) - (bScore ?? 0));
       const total = (aScore ?? 0) + (bScore ?? 0);
-      live = { inning, half, out: g.OUT_CN ?? null, heat: liveHeat(inning, half, diff, total), label: liveLabel(inning, half, diff) };
+      live = {
+        inning, half,
+        out: g.OUT_CN ?? null,
+        b1: (g.B1_BAT_ORDER_NO ?? 0) !== 0,
+        b2: (g.B2_BAT_ORDER_NO ?? 0) !== 0,
+        b3: (g.B3_BAT_ORDER_NO ?? 0) !== 0,
+        pitcher: (g.B_P_NM || '').trim() || null,
+        batter: (g.T_P_NM || '').trim() || null,
+        heat: liveHeat(inning, half, diff, total),
+        label: liveLabel(inning, half, diff),
+      };
     }
     // 경기 후 꿀잼결산: 종료 박스스코어로 '실제 꿀잼' 계산(예측과 같은 보정곡선) + 판정
     let recap = null;

@@ -29,6 +29,11 @@ export interface LiveState {
   inning: number | null;   // 현재 이닝
   half: string | null;     // 'T'(초) | 'B'(말)
   out: number | null;
+  b1: boolean;             // 1루 주자
+  b2: boolean;             // 2루 주자
+  b3: boolean;             // 3루 주자
+  pitcher: string | null;  // 현재 수비팀 투수
+  batter: string | null;   // 현재 공격팀 타자
   heat: number;            // '지금 볼 각' 흥미도 0~100
   label: string;           // 예: "9회말 동점 접전"
 }
