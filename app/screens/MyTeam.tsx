@@ -14,6 +14,7 @@ import TeamBadge from '../components/TeamBadge';
 import GameCard from '../components/GameCard';
 import ScreenHeader from '../components/ScreenHeader';
 import SectionLabel from '../components/SectionLabel';
+import AppIcon from '../components/AppIcon';
 import { RankLadder, WLDBar, HomeAwayBars, H2HList, FormDots } from '../components/charts';
 import { colors, spacing } from '../theme';
 
@@ -52,10 +53,8 @@ export default function MyTeam() {
   const gbToCut = (standing && cutStanding && standing.rank > 5)
     ? Math.max(0, standing.gamesBehind - cutStanding.gamesBehind)
     : 0;
-  const poLabel = !standing ? null
-    : standing.rank <= 5 ? '✅ 포스트시즌 진출권'
-    : `🍂 5위까지 ${gbToCut}GB`;
-  const poColor = (standing && standing.rank <= 5) ? colors.good : colors.onGold;
+  const poIsIn = standing && standing.rank <= 5;
+  const poColor = poIsIn ? colors.good : colors.onGold;
 
   return (
     <View style={styles.root}>
@@ -93,8 +92,17 @@ export default function MyTeam() {
                   <PixelText variant="hero" color={accent}>{standing.rank}위</PixelText>
                   <PixelText variant="caption" color={colors.textDim}>승률 {standing.winRate.toFixed(3)} · 게임차 {standing.gamesBehind} · {standing.games}경기</PixelText>
                 </View>
-                {poLabel && (
-                  <PixelText variant="caption" color={poColor} style={styles.poBadge}>{poLabel}</PixelText>
+                {standing && (
+                  <View style={styles.poBadge}>
+                    {poIsIn ? (
+                      <PixelText variant="caption" color={poColor}>✅ 포스트시즌 진출권</PixelText>
+                    ) : (
+                      <View style={styles.poRow}>
+                        <AppIcon name="autumn" size={13} />
+                        <PixelText variant="caption" color={poColor}>5위까지 {gbToCut}GB</PixelText>
+                      </View>
+                    )}
+                  </View>
                 )}
                 <RankLadder rank={standing.rank} color={accent} />
                 <View style={styles.chartGap}>
@@ -158,6 +166,7 @@ const styles = StyleSheet.create({
   content: { padding: spacing.md },
   teamHead: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, marginBottom: spacing.md },
   poBadge: { marginBottom: spacing.sm },
+  poRow: { flexDirection: 'row', alignItems: 'center', gap: 4 },
   section: { marginBottom: spacing.lg },
   rankHead: { flexDirection: 'row', alignItems: 'baseline', gap: spacing.sm, marginBottom: spacing.sm, flexWrap: 'wrap' },
   chartGap: { marginTop: spacing.sm },
