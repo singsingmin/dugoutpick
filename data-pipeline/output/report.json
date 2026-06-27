@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-27T11:24:19.410Z",
+  "updatedAt": "2026-06-27T11:28:17.423Z",
   "lastWeek": {
     "range": [
       "20260615",
@@ -85,14 +85,6 @@
     ],
     "top": [
       {
-        "away": "NC",
-        "home": "LT",
-        "pred": 86,
-        "reason": "낙동강 더비 · 게임차 1.5, 막상막하 승부",
-        "dateStart": "20260623",
-        "dateEnd": "20260625"
-      },
-      {
         "away": "OB",
         "home": "HH",
         "pred": 86,
@@ -105,6 +97,14 @@
         "home": "OB",
         "pred": 85,
         "reason": "게임차 2.5의 순위 다툼",
+        "dateStart": "20260626",
+        "dateEnd": "20260628"
+      },
+      {
+        "away": "KT",
+        "home": "SS",
+        "pred": 85,
+        "reason": "게임차 0.5, 막상막하 승부",
         "dateStart": "20260626",
         "dateEnd": "20260628"
       }
@@ -164,6 +164,11 @@
           "home": "LT"
         },
         {
+          "date": "20260627",
+          "away": "LG",
+          "home": "LT"
+        },
+        {
           "date": "20260628",
           "away": "LG",
           "home": "LT"
@@ -219,6 +224,11 @@
         },
         {
           "date": "20260626",
+          "away": "LG",
+          "home": "LT"
+        },
+        {
+          "date": "20260627",
           "away": "LG",
           "home": "LT"
         },
