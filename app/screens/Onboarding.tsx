@@ -48,10 +48,21 @@ export default function Onboarding({ navigation }: Props) {
               <Pressable
                 key={t.code}
                 onPress={() => setSelected(t.code)}
-                style={[styles.cell, { borderColor: isSel ? colors.accent : colors.border }]}
+                style={[
+                  styles.cell,
+                  isSel
+                    ? { borderColor: t.color, backgroundColor: `${t.color}25` }
+                    : { borderColor: colors.border },
+                ]}
               >
-                <View style={[styles.colorBlock, { backgroundColor: t.color }]} />
-                <PixelText variant="body" color={isSel ? colors.accent : colors.text}>{t.name}</PixelText>
+                <View style={[styles.colorBlock, { backgroundColor: t.color }]}>
+                  {isSel && (
+                    <View style={styles.checkBadge}>
+                      <PixelText variant="caption" color="#ffffff" style={styles.checkTxt}>✓</PixelText>
+                    </View>
+                  )}
+                </View>
+                <PixelText variant="body" color={isSel ? t.color : colors.text}>{t.name}</PixelText>
                 <PixelText variant="caption" color={colors.textDim} numberOfLines={1}>{t.fullName}</PixelText>
               </Pressable>
             );
@@ -84,5 +95,17 @@ const styles = StyleSheet.create({
     gap: spacing.xs,
   },
   colorBlock: { width: '100%', height: 40, borderRadius: border.radius },
+  checkBadge: {
+    position: 'absolute',
+    top: 4,
+    right: 4,
+    width: 18,
+    height: 18,
+    borderRadius: 9,
+    backgroundColor: 'rgba(0,0,0,0.35)',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  checkTxt: { fontSize: 11 },
   cta: { marginVertical: spacing.md },
 });
