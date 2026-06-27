@@ -1,7 +1,7 @@
 {
   "date": "20260627",
   "dateText": "2026년 6월 27일",
-  "updatedAt": "2026-06-27T10:46:19.860Z",
+  "updatedAt": "2026-06-27T10:48:18.788Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 11,
@@ -342,7 +342,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": 4,
+        "score": 8,
         "starter": {
           "name": "웰스",
           "era": 2.47,
@@ -388,8 +388,8 @@
         "inning": 8,
         "half": "T",
         "out": 2,
-        "heat": 70,
-        "label": "8회초 1점차 접전"
+        "heat": 43,
+        "label": "8회초 3점차"
       },
       "recap": null,
       "decision": null,
