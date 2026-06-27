@@ -58,7 +58,7 @@ export default function FeedbackWidget({ gameId, predictedScore, matchLabel }: F
 
   return (
     <View style={styles.section}>
-      <SectionLabel icon="📊" label="경기 어땠어?" />
+      <SectionLabel icon="chart" label="경기 어땠어?" />
       <Panel>
         {step === 'thumbs_select' && (
           <View style={styles.col}>

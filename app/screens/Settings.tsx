@@ -41,7 +41,7 @@ export default function Settings() {
       <Image source={require('../assets/stadium-bg.png')} style={styles.bgImage} resizeMode="cover" />
       <View style={styles.bgOverlay} />
       <SafeAreaView style={styles.safe} edges={['top']}>
-      <ScreenHeader title="설정" leftIcon="⚙" />
+      <ScreenHeader title="설정" leftIcon="settings" />
       <ScrollView contentContainerStyle={styles.content}>
         <View style={styles.section}>
           <SectionLabel label="응원팀" />

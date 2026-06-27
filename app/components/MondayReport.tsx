@@ -45,7 +45,7 @@ export default function MondayReport() {
       {/* 지난주 리뷰 — 팀별 주간 성적표 */}
       <View style={styles.section}>
         <View style={styles.sectionHead}>
-          <SectionLabel icon="🏁" label="지난주 성적" />
+          <SectionLabel icon="flag" label="지난주 성적" />
           <PixelText variant="caption" color={colors.textDim}>승 / 무 / 패</PixelText>
         </View>
         <Panel>
@@ -70,7 +70,7 @@ export default function MondayReport() {
 
       {/* 이번주 예측 */}
       <View style={styles.section}>
-        <SectionLabel icon="🔮" label="이번주 예측" />
+        <SectionLabel icon="sparkles" label="이번주 예측" />
 
         {myThis && cheer && (
           <Panel accentColor={colors.accent} style={styles.myTeam}>

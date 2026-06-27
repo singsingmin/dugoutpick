@@ -1,10 +1,11 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import type { TabParamList } from './types';
 import Today from '../screens/Today';
 import Standings from '../screens/Standings';
 import MyTeam from '../screens/MyTeam';
 import Settings from '../screens/Settings';
+import AppIcon, { type AppIconName } from '../components/AppIcon';
 import { colors, fonts } from '../theme';
 import { isKstMonday } from '../utils';
 import { useTeamTheme } from '../context/TeamTheme';
@@ -15,10 +16,9 @@ export default function Tabs() {
   const monday = isKstMonday();
   const { accent } = useTeamTheme();
 
-  // 8비트 탭바 아이콘 (이모지) + 활성 시 팀색 언더라인 인디케이터.
-  const icon = (glyph: string) => ({ focused, color }: { focused: boolean; color: string }) => (
+  const icon = (name: AppIconName) => ({ focused, color }: { focused: boolean; color: string }) => (
     <View style={styles.iconWrap}>
-      <Text style={{ fontSize: 16, color }}>{glyph}</Text>
+      <AppIcon name={name} size={22} color={color} />
       <View style={[styles.indicator, focused && { backgroundColor: accent }]} />
     </View>
   );
@@ -35,10 +35,10 @@ export default function Tabs() {
         tabBarInactiveTintColor: 'rgba(243,233,206,0.80)',
       }}
     >
-      <Tab.Screen name="Today" component={Today} options={{ title: monday ? '월요 리포트' : '오늘경기', tabBarIcon: icon(monday ? '📋' : '⚾') }} />
-      <Tab.Screen name="Standings" component={Standings} options={{ title: '순위', tabBarIcon: icon('📊') }} />
-      <Tab.Screen name="MyTeam" component={MyTeam} options={{ title: '내 팀', tabBarIcon: icon('★') }} />
-      <Tab.Screen name="Settings" component={Settings} options={{ title: '설정', tabBarIcon: icon('⚙') }} />
+      <Tab.Screen name="Today" component={Today} options={{ title: monday ? '월요 리포트' : '오늘경기', tabBarIcon: icon(monday ? 'clipboard' : 'baseball') }} />
+      <Tab.Screen name="Standings" component={Standings} options={{ title: '순위', tabBarIcon: icon('chart') }} />
+      <Tab.Screen name="MyTeam" component={MyTeam} options={{ title: '내 팀', tabBarIcon: icon('star') }} />
+      <Tab.Screen name="Settings" component={Settings} options={{ title: '설정', tabBarIcon: icon('settings') }} />
     </Tab.Navigator>
   );
 }

@@ -76,7 +76,7 @@ export default function GameDetail({ route, navigation }: Props) {
       <SafeAreaView style={styles.container} edges={['top']}>
       <ScreenHeader
         title={title}
-        leftIcon="←"
+        leftIcon="back"
         onLeftPress={() => navigation.goBack()}
       />
       <ScrollView style={styles.scroll} contentContainerStyle={styles.content}>
@@ -110,7 +110,7 @@ export default function GameDetail({ route, navigation }: Props) {
       {/* 한 줄 예측 */}
       {game.honjam && (
         <View style={styles.section}>
-          <SectionLabel icon="💬" label="오늘의 한 줄 예측" />
+          <SectionLabel icon="chat" label="오늘의 한 줄 예측" />
           <Panel><PixelText variant="body">{game.honjam.reason}</PixelText></Panel>
         </View>
       )}
@@ -118,7 +118,7 @@ export default function GameDetail({ route, navigation }: Props) {
       {/* 선발투수 비교 */}
       <View style={styles.section}>
         <View style={styles.sectionHeader}>
-          <SectionLabel icon="⚾" label="선발투수 비교" />
+          <SectionLabel icon="baseball" label="선발투수 비교" />
           {game.lineup && (
             <Pressable onPress={() => setLineupVisible(true)} style={[styles.lineupBtn, { backgroundColor: accent }]}>
               <PixelText variant="caption" color={colors.onGreen}>타순 ▼</PixelText>
@@ -140,7 +140,7 @@ export default function GameDetail({ route, navigation }: Props) {
       {/* 관전 포인트 TOP 3 */}
       {game.honjam && game.honjam.points.length > 0 && (
         <View style={styles.section}>
-          <SectionLabel icon="★" label="관전 포인트" />
+          <SectionLabel icon="star" label="관전 포인트" />
           <Panel>
             {game.honjam.points.map((p, i) => (
               <View key={i} style={styles.pointRow}>
@@ -155,7 +155,7 @@ export default function GameDetail({ route, navigation }: Props) {
       {/* 꿀잼지수 근거 (요소별 강도) */}
       {game.honjam && (
         <View style={styles.section}>
-          <SectionLabel icon="🔍" label="꿀잼지수 근거" />
+          <SectionLabel icon="search" label="꿀잼지수 근거" />
           <Panel>
             {FACTOR_META
               .map((f) => ({ ...f, v: game.honjam!.factors[f.key] ?? 0 }))

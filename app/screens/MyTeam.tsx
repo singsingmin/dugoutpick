@@ -62,7 +62,7 @@ export default function MyTeam() {
       <Image source={require('../assets/stadium-bg.png')} style={styles.bgImage} resizeMode="cover" />
       <View style={styles.bgOverlay} />
       <SafeAreaView style={styles.safe} edges={['top']}>
-      <ScreenHeader title="내 팀" leftIcon="★" />
+      <ScreenHeader title="내 팀" leftIcon="star" />
       {!loaded ? (
         <View style={styles.center} />
       ) : !code ? (
@@ -76,7 +76,7 @@ export default function MyTeam() {
 
           {/* 오늘 경기 */}
           <View style={styles.section}>
-            <SectionLabel icon="⚾" label="오늘 경기" />
+            <SectionLabel icon="baseball" label="오늘 경기" />
             {game ? (
               <GameCard game={game} variant="list" showRecap={false} onPress={() => navigation.navigate('GameDetail', { gameId: game.gameId })} />
             ) : (
@@ -86,7 +86,7 @@ export default function MyTeam() {
 
           {/* 현재 순위 + 승무패 */}
           <View style={styles.section}>
-            <SectionLabel icon="📊" label="현재 순위" />
+            <SectionLabel icon="chart" label="현재 순위" />
             {standing ? (
               <Panel accentColor={team?.color}>
                 <View style={styles.rankHead}>
@@ -108,7 +108,7 @@ export default function MyTeam() {
 
           {/* 최근 흐름 */}
           <View style={styles.section}>
-            <SectionLabel icon="🔥" label="최근 흐름" />
+            <SectionLabel icon="fire" label="최근 흐름" />
             <Panel>
               {recent.length > 0 ? (
                 <FormDots games={recent} />
@@ -124,7 +124,7 @@ export default function MyTeam() {
           {/* 홈/원정 */}
           {standing && (
             <View style={styles.section}>
-              <SectionLabel icon="🏠" label="홈 · 원정" />
+              <SectionLabel icon="home" label="홈 · 원정" />
               <Panel><HomeAwayBars home={standing.home} away={standing.away} /></Panel>
             </View>
           )}
@@ -132,7 +132,7 @@ export default function MyTeam() {
           {/* 상대전적 */}
           {standing && standing.vs && Object.keys(standing.vs).length > 0 && (
             <View style={styles.section}>
-              <SectionLabel icon="🆚" label="상대 전적" />
+              <SectionLabel icon="versus" label="상대 전적" />
               <Panel><H2HList vs={standing.vs} myColor={accent} /></Panel>
             </View>
           )}

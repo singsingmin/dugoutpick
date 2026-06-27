@@ -77,7 +77,7 @@ export default function Standings() {
       <Image source={require('../assets/stadium-bg.png')} style={styles.bgImage} resizeMode="cover" />
       <View style={styles.bgOverlay} />
       <SafeAreaView style={styles.safe} edges={['top']}>
-      <ScreenHeader title="구단 순위" leftIcon="📊" />
+      <ScreenHeader title="구단 순위" leftIcon="chart" />
       {!loaded ? (
         <View style={styles.center} />
       ) : rows.length === 0 ? (

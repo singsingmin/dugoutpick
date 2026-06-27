@@ -12,6 +12,7 @@ import GameCard from '../components/GameCard';
 import LiveCard from '../components/LiveCard';
 import ScreenHeader from '../components/ScreenHeader';
 import SectionLabel from '../components/SectionLabel';
+import type { AppIconName } from '../components/AppIcon';
 import PixelText from '../components/PixelText';
 import MondayReport from '../components/MondayReport';
 import WeeklyScheduleSheet from '../components/WeeklyScheduleSheet';
@@ -71,7 +72,7 @@ export default function Today() {
   if (isKstMonday()) {
     return (
       <SafeAreaView style={styles.safeSolid} edges={['top']}>
-        <ScreenHeader title="월요 리포트" leftIcon="📋" />
+        <ScreenHeader title="월요 리포트" leftIcon="clipboard" />
         <MondayReport />
       </SafeAreaView>
     );
@@ -133,17 +134,17 @@ function Body({
 
   // ── 히어로 우선순위: 추천 → 오늘의 명경기 (LIVE는 리스트 1개로 통합, allDone 시 히어로 없음)
   let heroGame: Game | null = null;
-  let heroIcon = '⚾';
+  let heroIcon: AppIconName = 'baseball';
   let heroLabel = '오늘의 경기';
 
   if (!allDone) {
     if (recommended) {
       heroGame = recommended;
-      heroIcon = '★';
+      heroIcon = 'star';
       heroLabel = '오늘의 추천';
     } else if (bestRecap) {
       heroGame = bestRecap;
-      heroIcon = '🏁';
+      heroIcon = 'flag';
       heroLabel = '오늘의 명경기';
     }
   }
@@ -164,8 +165,8 @@ function Body({
     <ScrollView style={styles.scroll} contentContainerStyle={styles.scrollContent}>
       <ScreenHeader
         title="오늘 경기"
-        leftIcon="⚾"
-        rightIcon="🗓"
+        leftIcon="baseball"
+        rightIcon="calendar"
         onRightPress={onCalendar}
       />
 
@@ -196,7 +197,7 @@ function Body({
       <View style={styles.listSection}>
         {liveGames.length > 0 && (
           <View style={styles.section}>
-            <SectionLabel icon="🔴" label="지금 볼 각" />
+            <SectionLabel icon="live" label="지금 볼 각" />
             <PixelText variant="caption" color={colors.textDim} style={styles.liveHint}>
               ⚠ 라이브 점수는 갱신 시각 기준 — 실제보다 몇 분 늦을 수 있다
             </PixelText>
@@ -208,7 +209,7 @@ function Body({
 
         {(listBestRecap || listMyFinished) && (
           <View style={styles.section}>
-            <SectionLabel icon="🏁" label="오늘의 결산" />
+            <SectionLabel icon="flag" label="오늘의 결산" />
             {listBestRecap && (
               <>
                 <PixelText variant="caption" color={colors.accent} style={styles.subLabel}>오늘의 명경기</PixelText>
@@ -226,7 +227,7 @@ function Body({
 
         {listRecommended && (
           <View style={styles.section}>
-            <SectionLabel icon="★" label="오늘의 추천 경기" />
+            <SectionLabel icon="star" label="오늘의 추천 경기" />
             <GameCard game={listRecommended} variant="hero" onPress={() => open(listRecommended.gameId)} />
           </View>
         )}

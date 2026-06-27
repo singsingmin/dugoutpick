@@ -35,7 +35,7 @@ export default function Onboarding({ navigation }: Props) {
 
   return (
     <SafeAreaView style={styles.safe} edges={['top', 'bottom']}>
-      <ScreenHeader title="응원팀 선택" leftIcon="★" />
+      <ScreenHeader title="응원팀 선택" leftIcon="star" />
       <View style={styles.body}>
         <PixelText variant="caption" color={colors.textDim} style={styles.sub}>
           응원팀을 골라라 — 한 팀을 선택하면 시작할 수 있다
