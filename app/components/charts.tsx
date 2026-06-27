@@ -61,7 +61,7 @@ export function HomeAwayBars({ home, away }: { home: string; away: string }) {
 }
 
 // 상대팀별 상대전적 — 승률 높은 순
-export function H2HList({ vs }: { vs: Record<string, string> }) {
+export function H2HList({ vs, myColor }: { vs: Record<string, string>; myColor?: string }) {
   const rows = Object.entries(vs)
     .map(([code, rec]) => {
       const [w, l, d] = rec.split('-').map((n) => parseInt(n, 10) || 0);
@@ -76,9 +76,9 @@ export function H2HList({ vs }: { vs: Record<string, string> }) {
         <View key={r.code} style={s.h2hRow}>
           <PixelText variant="caption" color={r.color} style={s.h2hName}>{r.name}</PixelText>
           <View style={s.h2hTrack}>
-            {r.w > 0 && <View style={{ flex: r.w, backgroundColor: colors.good }} />}
+            {r.w > 0 && <View style={{ flex: r.w, backgroundColor: myColor ?? colors.good }} />}
             {r.d > 0 && <View style={{ flex: r.d, backgroundColor: colors.textDim }} />}
-            {r.l > 0 && <View style={{ flex: r.l, backgroundColor: colors.bad }} />}
+            {r.l > 0 && <View style={{ flex: r.l, backgroundColor: r.color }} />}
           </View>
           <PixelText variant="caption" color={colors.textDim} style={s.h2hRec}>{r.w}-{r.l}{r.d ? `-${r.d}` : ''}</PixelText>
         </View>

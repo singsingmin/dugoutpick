@@ -26,6 +26,7 @@ export default function MyTeam() {
   const [game, setGame] = useState<Game | null>(null);
   const [standing, setStanding] = useState<Standing | null>(null);
   const [recent, setRecent] = useState<RecentGame[]>([]);
+  const [cutStanding, setCutStanding] = useState<Standing | null>(null);
   const [loaded, setLoaded] = useState(false);
 
   useFocusEffect(
@@ -38,6 +39,7 @@ export default function MyTeam() {
         setCode(c);
         setGame(g.games.find((x) => x.away.code === c || x.home.code === c) ?? null);
         setStanding(s.standings.find((x) => x.code === c) ?? null);
+        setCutStanding(s.standings.find((x) => x.rank === 5) ?? null);
         setRecent(c ? r.recent[c] ?? [] : []);
         setLoaded(true);
       })();
@@ -47,6 +49,13 @@ export default function MyTeam() {
 
   const team = code ? TEAMS.find((t) => t.code === code) : undefined;
   const accent = team?.color ?? colors.accent;
+  const gbToCut = (standing && cutStanding && standing.rank > 5)
+    ? Math.max(0, standing.gamesBehind - cutStanding.gamesBehind)
+    : 0;
+  const poLabel = !standing ? null
+    : standing.rank <= 5 ? '✅ 포스트시즌 진출권'
+    : `🍂 5위까지 ${gbToCut}GB`;
+  const poColor = (standing && standing.rank <= 5) ? colors.good : colors.onGold;
 
   return (
     <View style={styles.root}>
@@ -64,6 +73,7 @@ export default function MyTeam() {
             <TeamBadge code={code} size="md" />
             <PixelText variant="title" color={accent}>{team?.fullName ?? code}</PixelText>
           </View>
+          <View style={[styles.teamAccentLine, { backgroundColor: accent }]} />
 
           {/* 오늘 경기 */}
           <View style={styles.section}>
@@ -84,6 +94,9 @@ export default function MyTeam() {
                   <PixelText variant="hero" color={accent}>{standing.rank}위</PixelText>
                   <PixelText variant="caption" color={colors.textDim}>승률 {standing.winRate.toFixed(3)} · 게임차 {standing.gamesBehind} · {standing.games}경기</PixelText>
                 </View>
+                {poLabel && (
+                  <PixelText variant="caption" color={poColor} style={styles.poBadge}>{poLabel}</PixelText>
+                )}
                 <RankLadder rank={standing.rank} color={accent} />
                 <View style={styles.chartGap}>
                   <WLDBar win={standing.win} draw={standing.draw} loss={standing.loss} />
@@ -121,7 +134,7 @@ export default function MyTeam() {
           {standing && standing.vs && Object.keys(standing.vs).length > 0 && (
             <View style={styles.section}>
               <SectionLabel icon="🆚" label="상대 전적" />
-              <Panel><H2HList vs={standing.vs} /></Panel>
+              <Panel><H2HList vs={standing.vs} myColor={accent} /></Panel>
             </View>
           )}
         </ScrollView>
@@ -144,7 +157,9 @@ const styles = StyleSheet.create({
   safe: { flex: 1, backgroundColor: 'transparent' },
   center: { flex: 1, alignItems: 'center', justifyContent: 'center' },
   content: { padding: spacing.md },
-  teamHead: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, marginBottom: spacing.md },
+  teamHead: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, marginBottom: spacing.xs },
+  teamAccentLine: { height: 3, borderRadius: 2, marginBottom: spacing.md },
+  poBadge: { marginBottom: spacing.sm },
   section: { marginBottom: spacing.lg },
   rankHead: { flexDirection: 'row', alignItems: 'baseline', gap: spacing.sm, marginBottom: spacing.sm, flexWrap: 'wrap' },
   chartGap: { marginTop: spacing.sm },
