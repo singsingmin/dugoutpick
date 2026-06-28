@@ -21,6 +21,20 @@
 - [ ] **꿀잼지수 가중치 튜닝** — 피드백 데이터 누적(👍👎 + 이유 태그) 후 진행.
   튜닝 개시 기준: 피드백 표본 30건 이상 누적 시. reasonTag 분포로 어느 요소 가중치가 실제 체감과 어긋나는지 판단.
 
+## B-2. ⚡ 실시간 갱신 (Cloudflare Worker 하이브리드)
+- [ ] **games.json만 Worker로 이전** — 라이브 데이터 갱신 지연 4~5분 → 30초로 개선.
+  - AS-IS: `cron(2분) → GitHub Actions(2분) → 정적 JSON → 앱 폴링`
+  - TO-BE: `앱 폴링(30초) → Cloudflare Worker → KBO API 직접 호출`
+  - `standings.json`, `report.json` 등 실시간성 낮은 데이터는 기존 파이프라인 유지 (하이브리드)
+  - 작업 절차:
+    1. Cloudflare 계정 + Wrangler CLI 설정
+    2. `build.mjs`의 KBO API 호출·파싱·꿀잼지수 계산 로직 → Worker(TypeScript) 이식
+    3. Worker 내 30초 캐시 적용 (KBO API 과부하 방지)
+    4. `app/data/config.ts`의 `REMOTE_BASE_URL` → Worker URL로 변경 (games.json만)
+    5. games.json 생성 Actions 비활성화
+  - 비용: 무료 플랜 100,000 req/일 → 현재 규모 충분, 수백 명 이상 시 $5/월
+  - 예상 작업: 하루 분량 (Phase 1 Worker 구축이 핵심)
+
 ## C. 🔧 기술 부채 (마감 있음)
 - [ ] **워크플로 Node20 → v5** — `actions/checkout`·`actions/setup-node` v4 → v5. **2026-09-16 전까지**(Node20 deprecation).
 - [ ] **PAT 만료 관리** — cron-job.org용 fine-grained PAT. 만료 시 cron 401로 멈춤(실패 알림으로 커버). 재발급 후 cron-job.org 헤더값 교체.
