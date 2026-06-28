@@ -614,7 +614,7 @@ async function main() {
       const extra = inning > 9 ? 1 : 0;
       const walkoff = (bScore > aScore && g.GAME_TB_SC === 'B' && inning >= 9) ? 1 : 0;
       const rawActual = 55 * Math.max(0, 1 - diff / 7) + 20 * extra + 15 * walkoff + 10 * Math.min(1, total / 16);
-      const actual = Math.round(100 / (1 + Math.exp(-(rawActual - 40) / 10)));
+      const actual = Math.round(100 / (1 + Math.exp(-(rawActual - 30) / 10)));
       const pred = honjam ? honjam.score : null;
       const verdict = pred == null ? null
         : actual >= pred + 10 ? '기대 이상'
