@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T08:14:19.090Z",
+  "updatedAt": "2026-06-28T08:16:19.377Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -232,11 +232,11 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김성윤",
+        "pitcher": "구자욱",
         "batter": "고영표",
         "heat": 43,
         "label": "1회말 동점 접전"
@@ -398,10 +398,10 @@
         "inning": 1,
         "half": "B",
         "out": 2,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "레이예스",
+        "pitcher": "한동희",
         "batter": "장현식",
         "heat": 43,
         "label": "1회말 동점 접전"
