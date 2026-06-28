@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T11:52:20.146Z",
+  "updatedAt": "2026-06-28T11:54:18.573Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 19,
@@ -197,9 +197,9 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": true,
-        "b2": true,
+        "b2": false,
         "b3": false,
         "pitcher": "최준용",
         "batter": "구본혁",
