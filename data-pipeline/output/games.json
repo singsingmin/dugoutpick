@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T11:22:18.303Z",
+  "updatedAt": "2026-06-28T11:24:18.998Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 19,
@@ -152,7 +152,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": 7,
+        "score": 9,
         "starter": {
           "name": "장현식",
           "era": 3.69,
@@ -198,13 +198,13 @@
         "inning": 8,
         "half": "T",
         "out": 1,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "이이무라",
-        "batter": "오스틴",
-        "heat": 29,
-        "label": "8회초 4점차"
+        "batter": "박동원",
+        "heat": 59,
+        "label": "8회초 2점차"
       },
       "recap": null,
       "decision": null,
