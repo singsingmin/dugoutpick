@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T11:46:19.185Z",
+  "updatedAt": "2026-06-28T11:50:22.398Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 19,
@@ -198,11 +198,11 @@
         "inning": 9,
         "half": "T",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "최준용",
-        "batter": "문성주",
+        "batter": "신민재",
         "heat": 62,
         "label": "9회초 2점차"
       },
