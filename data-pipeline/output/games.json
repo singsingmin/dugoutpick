@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T08:06:18.356Z",
+  "updatedAt": "2026-06-28T08:08:19.445Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -68,10 +68,10 @@
         "inning": 1,
         "half": "B",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "정수빈",
+        "pitcher": "류승민",
         "batter": "김태형",
         "heat": 43,
         "label": "1회말 동점 접전"
@@ -234,10 +234,10 @@
         "half": "T",
         "out": 2,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "양창섭",
-        "batter": "힐리어드",
+        "batter": "김상수",
         "heat": 43,
         "label": "1회초 동점 접전"
       },
@@ -396,15 +396,15 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "비슬리",
-        "batter": "오스틴",
+        "b3": false,
+        "pitcher": "황성빈",
+        "batter": "장현식",
         "heat": 43,
-        "label": "1회초 동점 접전"
+        "label": "1회말 동점 접전"
       },
       "recap": null,
       "decision": null,
@@ -561,15 +561,15 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
-        "out": 2,
-        "b1": true,
+        "half": "B",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "최민준",
-        "batter": "강백호",
+        "pitcher": "박성한",
+        "batter": "류현진",
         "heat": 43,
-        "label": "1회초 동점 접전"
+        "label": "1회말 동점 접전"
       },
       "recap": null,
       "decision": null,
