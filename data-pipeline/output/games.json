@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T10:08:19.238Z",
+  "updatedAt": "2026-06-28T10:10:23.927Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "김태형",
-        "batter": "김민석",
+        "batter": "안재석",
         "heat": 0,
         "label": "7회말 8점차"
       },
@@ -233,11 +233,11 @@
         "inning": 7,
         "half": "B",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "이상동",
-        "batter": "류지혁",
+        "batter": "김도환",
         "heat": 66,
         "label": "7회말 1점차 접전"
       },
@@ -352,7 +352,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "장현식",
           "era": 3.69,
@@ -401,10 +401,10 @@
         "b1": true,
         "b2": true,
         "b3": true,
-        "pitcher": "홍민기",
-        "batter": "홍창기",
-        "heat": 35,
-        "label": "5회초 3점차"
+        "pitcher": "김강현",
+        "batter": "이주헌",
+        "heat": 47,
+        "label": "5회초 2점차"
       },
       "recap": null,
       "decision": null,
@@ -562,12 +562,12 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "문승원",
-        "batter": "문현빈",
+        "batter": "노시환",
         "heat": 55,
         "label": "8회초 2점차"
       },
@@ -730,9 +730,9 @@
         "out": 0,
         "b1": true,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "김윤하",
-        "batter": "이우성",
+        "batter": "박건우",
         "heat": 0,
         "label": "6회말 6점차"
       },
