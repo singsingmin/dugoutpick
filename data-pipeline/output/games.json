@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T08:20:21.810Z",
+  "updatedAt": "2026-06-28T08:22:19.251Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -66,15 +66,15 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
-        "out": 2,
-        "b1": true,
+        "half": "B",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "최승용",
-        "batter": "윤도현",
+        "pitcher": "양의지",
+        "batter": "김태형",
         "heat": 49,
-        "label": "2회초 동점 접전"
+        "label": "2회말 동점 접전"
       },
       "recap": null,
       "decision": null,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "양창섭",
-        "batter": "류현인",
+        "batter": "장진혁",
         "heat": 49,
         "label": "2회초 동점 접전"
       },
@@ -561,15 +561,15 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "최민준",
-        "batter": "이도윤",
+        "pitcher": "김재환",
+        "batter": "류현진",
         "heat": 49,
-        "label": "2회초 동점 접전"
+        "label": "2회말 동점 접전"
       },
       "recap": null,
       "decision": null,
@@ -694,7 +694,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "라일리",
           "era": 3.42,
@@ -731,10 +731,10 @@
         "b1": true,
         "b2": false,
         "b3": true,
-        "pitcher": "박민우",
+        "pitcher": "이우성",
         "batter": "와일스",
-        "heat": 37,
-        "label": "1회말 1점차 접전"
+        "heat": 44,
+        "label": "1회말 동점 접전"
       },
       "recap": null,
       "decision": null,
