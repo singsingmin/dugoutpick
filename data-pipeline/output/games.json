@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T08:12:18.182Z",
+  "updatedAt": "2026-06-28T08:14:19.090Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -232,11 +232,11 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김지찬",
+        "pitcher": "김성윤",
         "batter": "고영표",
         "heat": 43,
         "label": "1회말 동점 접전"
@@ -397,11 +397,11 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "노진혁",
+        "pitcher": "레이예스",
         "batter": "장현식",
         "heat": 43,
         "label": "1회말 동점 접전"
@@ -560,16 +560,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 2,
+        "inning": 2,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "최정",
-        "batter": "류현진",
-        "heat": 43,
-        "label": "1회말 동점 접전"
+        "pitcher": "최민준",
+        "batter": "노시환",
+        "heat": 49,
+        "label": "2회초 동점 접전"
       },
       "recap": null,
       "decision": null,
@@ -727,12 +727,12 @@
       "live": {
         "inning": 1,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "b1": false,
         "b2": true,
         "b3": true,
         "pitcher": "라일리",
-        "batter": "김건희",
+        "batter": "박찬혁",
         "heat": 37,
         "label": "1회초 1점차 접전"
       },
