@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T10:22:17.832Z",
+  "updatedAt": "2026-06-28T10:24:18.433Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "한재승",
-        "batter": "김기연",
+        "batter": "박지훈",
         "heat": 0,
         "label": "8회말 8점차"
       },
@@ -234,10 +234,10 @@
         "half": "B",
         "out": 1,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": true,
         "pitcher": "스기모토",
-        "batter": "구자욱",
+        "batter": "최형우",
         "heat": 40,
         "label": "7회말 3점차"
       },
@@ -397,12 +397,12 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
-        "b2": true,
-        "b3": false,
+        "b2": false,
+        "b3": true,
         "pitcher": "김영우",
-        "batter": "김동혁",
+        "batter": "노진혁",
         "heat": 60,
         "label": "5회말 1점차 접전"
       },
@@ -529,7 +529,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 1,
+        "score": 3,
         "starter": {
           "name": "최민준",
           "era": 4.84,
@@ -563,13 +563,13 @@
         "inning": 8,
         "half": "B",
         "out": 2,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "이상규",
-        "batter": "김재환",
-        "heat": 55,
-        "label": "8회말 2점차"
+        "batter": "고명준",
+        "heat": 83,
+        "label": "8회말 동점 접전"
       },
       "recap": null,
       "decision": null,
