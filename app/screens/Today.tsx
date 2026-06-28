@@ -42,7 +42,7 @@ export default function Today() {
             setFailed(false);
             const hasLive = d.games.some((g) => g.status === 'LIVE');
             if (hasLive && !intervalRef.current) {
-              intervalRef.current = setInterval(refresh, 60_000);
+              intervalRef.current = setInterval(refresh, 30_000);
             } else if (!hasLive && intervalRef.current) {
               clearInterval(intervalRef.current);
               intervalRef.current = null;
