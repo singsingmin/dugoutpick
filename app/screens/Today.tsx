@@ -132,25 +132,17 @@ function Body({
     .filter((g) => g.status !== 'LIVE' && (allDone || g.gameId !== recommended?.gameId))
     .sort((a, b) => (b.honjam?.score ?? -1) - (a.honjam?.score ?? -1));
 
-  // ── 히어로 우선순위: 추천 → 오늘의 명경기 (LIVE는 리스트 1개로 통합, allDone 시 히어로 없음)
+  // ── 히어로: 추천 경기(SCHEDULED)일 때만 표시
   let heroGame: Game | null = null;
-  let heroIcon: AppIconName = 'baseball';
-  let heroLabel = '오늘의 경기';
+  let heroIcon: AppIconName = 'star';
+  let heroLabel = '오늘의 추천';
 
-  if (!allDone) {
-    if (recommended) {
-      heroGame = recommended;
-      heroIcon = 'star';
-      heroLabel = '오늘의 추천';
-    } else if (bestRecap) {
-      heroGame = bestRecap;
-      heroIcon = 'flag';
-      heroLabel = '오늘의 명경기';
-    }
+  if (!allDone && recommended) {
+    heroGame = recommended;
   }
 
-  // ── 리스트: 히어로 제외한 나머지 ──
-  const listBestRecap = heroGame?.gameId === bestRecap?.gameId ? null : bestRecap;
+  // ── 리스트: 명경기는 항상 결산 섹션에 표시
+  const listBestRecap = bestRecap ?? null;
   const listMyFinished = heroGame?.gameId === myFinished?.gameId ? null : myFinished;
   // allDone 시 추천 섹션 숨김 (rest에 이미 포함)
   const listRecommended = allDone ? null : (heroGame?.gameId === recommended?.gameId ? null : recommended);
