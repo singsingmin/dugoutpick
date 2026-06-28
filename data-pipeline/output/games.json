@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T09:18:18.459Z",
+  "updatedAt": "2026-06-28T09:20:24.346Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "김태형",
-        "batter": "박찬호",
+        "batter": "윤준호",
         "heat": 43,
         "label": "5회말 2점차"
       },
@@ -231,15 +231,15 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 3,
+        "half": "B",
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "양창섭",
-        "batter": "최원준",
+        "pitcher": "고영표",
+        "batter": "전병우",
         "heat": 65,
-        "label": "5회초 동점 접전"
+        "label": "5회말 동점 접전"
       },
       "recap": null,
       "decision": null,
@@ -397,12 +397,12 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 2,
+        "out": 3,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "김진수",
-        "batter": "손성빈",
+        "batter": "황성빈",
         "heat": 19,
         "label": "3회말 4점차"
       },
@@ -726,15 +726,15 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "라일리",
-        "batter": "임병욱",
+        "pitcher": "박지성",
+        "batter": "한석현",
         "heat": 0,
-        "label": "4회초 6점차"
+        "label": "4회말 6점차"
       },
       "recap": null,
       "decision": null,
