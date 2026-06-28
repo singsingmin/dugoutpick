@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T10:40:22.352Z",
+  "updatedAt": "2026-06-28T10:42:18.027Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -22,7 +22,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 9,
+        "score": 11,
         "starter": {
           "name": "김태형",
           "era": 5.49,
@@ -67,14 +67,14 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "b1": true,
         "b2": true,
-        "b3": true,
+        "b3": false,
         "pitcher": "최지강",
-        "batter": "변우혁",
+        "batter": "박재현",
         "heat": 0,
-        "label": "9회초 8점차"
+        "label": "9회초 10점차"
       },
       "recap": null,
       "decision": null,
@@ -231,15 +231,15 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 3,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "최지광",
-        "batter": "김상수",
+        "pitcher": "손동현",
+        "batter": "전병우",
         "heat": 43,
-        "label": "8회초 3점차"
+        "label": "8회말 3점차"
       },
       "recap": null,
       "decision": null,
@@ -563,11 +563,11 @@
         "inning": 9,
         "half": "T",
         "out": 2,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "조병현",
-        "batter": "문현빈",
+        "batter": "강백호",
         "heat": 45,
         "label": "9회초 3점차"
       },
