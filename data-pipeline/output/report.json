@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-28T11:02:19.279Z",
+  "updatedAt": "2026-06-28T11:06:17.684Z",
   "lastWeek": {
     "range": [
       "20260615",
@@ -34,19 +34,19 @@
         "rank": 4,
         "note": "LG 잡고 4승2패 위닝 — 윗물 정조준"
       },
+      "HH": {
+        "w": 1,
+        "l": 4,
+        "d": 1,
+        "rank": 5,
+        "note": "1승4패 1무 루징, 그래도 이번주 SSG 만나니까 해볼 만해"
+      },
       "OB": {
         "w": 1,
         "l": 5,
         "d": 0,
         "rank": 5,
-        "note": "4연승 질주 — 상승세 제대로다"
-      },
-      "HH": {
-        "w": 1,
-        "l": 4,
-        "d": 1,
-        "rank": 6,
-        "note": "1승4패 1무 루징, 그래도 이번주 SSG 만나니까 해볼 만해"
+        "note": "1승5패, 다음주 반등을 노린다"
       },
       "NC": {
         "w": 4,
@@ -85,6 +85,14 @@
     ],
     "top": [
       {
+        "away": "OB",
+        "home": "HH",
+        "pred": 91,
+        "reason": "게임차 없는 동률 초접전",
+        "dateStart": "20260623",
+        "dateEnd": "20260625"
+      },
+      {
         "away": "KT",
         "home": "SS",
         "pred": 91,
@@ -93,20 +101,12 @@
         "dateEnd": "20260627"
       },
       {
-        "away": "OB",
-        "home": "HH",
-        "pred": 89,
-        "reason": "게임차 0.5, 막상막하 승부",
+        "away": "SS",
+        "home": "LG",
+        "pred": 81,
+        "reason": "게임차 3.5의 순위 다툼 · 리그 1위·2위 상위권 빅매치",
         "dateStart": "20260623",
         "dateEnd": "20260625"
-      },
-      {
-        "away": "HT",
-        "home": "OB",
-        "pred": 87,
-        "reason": "게임차 2.5의 순위 다툼",
-        "dateStart": "20260626",
-        "dateEnd": "20260627"
       }
     ],
     "team": {
@@ -381,6 +381,13 @@
           "home": "OB",
           "awayStarter": "시라카와",
           "homeStarter": "잭로그"
+        },
+        {
+          "date": "20260628",
+          "away": "HT",
+          "home": "OB",
+          "awayStarter": "김태형",
+          "homeStarter": "최승용"
         }
       ],
       "HH": [
@@ -462,6 +469,13 @@
           "home": "OB",
           "awayStarter": "시라카와",
           "homeStarter": "잭로그"
+        },
+        {
+          "date": "20260628",
+          "away": "HT",
+          "home": "OB",
+          "awayStarter": "김태형",
+          "homeStarter": "최승용"
         }
       ],
       "WO": [

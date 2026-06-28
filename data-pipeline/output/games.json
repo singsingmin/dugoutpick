@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T11:02:19.279Z",
+  "updatedAt": "2026-06-28T11:06:17.684Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 19,
@@ -197,12 +197,12 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 0,
-        "b1": true,
-        "b2": true,
-        "b3": false,
-        "pitcher": "박정민",
-        "batter": "문성주",
+        "out": 2,
+        "b1": false,
+        "b2": false,
+        "b3": true,
+        "pitcher": "이이무라",
+        "batter": "신민재",
         "heat": 28,
         "label": "7회초 4점차"
       },
@@ -316,7 +316,7 @@
       "away": {
         "code": "HH",
         "name": "한화",
-        "rank": 6,
+        "rank": 5,
         "score": 6,
         "starter": {
           "name": "류현진",
