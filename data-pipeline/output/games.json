@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T08:56:18.471Z",
+  "updatedAt": "2026-06-28T08:58:19.099Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 2,
+        "inning": 5,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "양의지",
-        "batter": "김태형",
-        "heat": 59,
-        "label": "4회말 동점 접전"
+        "pitcher": "최승용",
+        "batter": "윤도현",
+        "heat": 64,
+        "label": "5회초 동점 접전"
       },
       "recap": null,
       "decision": null,
@@ -199,7 +199,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "양창섭",
           "era": 4.53,
@@ -232,14 +232,14 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 0,
-        "b1": true,
-        "b2": false,
+        "out": 1,
+        "b1": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "김성윤",
+        "pitcher": "최형우",
         "batter": "고영표",
-        "heat": 59,
-        "label": "4회말 동점 접전"
+        "heat": 50,
+        "label": "4회말 1점차 접전"
       },
       "recap": null,
       "decision": null,
@@ -397,11 +397,11 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "노진혁",
+        "pitcher": "레이예스",
         "batter": "장현식",
         "heat": 46,
         "label": "3회말 1점차 접전"
@@ -561,15 +561,15 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이로운",
-        "batter": "심우준",
+        "pitcher": "박성한",
+        "batter": "류현진",
         "heat": 30,
-        "label": "4회초 3점차"
+        "label": "4회말 3점차"
       },
       "recap": null,
       "decision": null,
@@ -727,12 +727,12 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "라일리",
-        "batter": "추재현",
+        "batter": "안치홍",
         "heat": 10,
         "label": "3회초 5점차"
       },
