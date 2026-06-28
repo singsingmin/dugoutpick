@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T09:50:22.467Z",
+  "updatedAt": "2026-06-28T09:54:19.288Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -66,15 +66,15 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 3,
+        "half": "B",
+        "out": 1,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "박신지",
-        "batter": "나성범",
+        "pitcher": "김태형",
+        "batter": "정수빈",
         "heat": 0,
-        "label": "6회초 9점차"
+        "label": "6회말 9점차"
       },
       "recap": null,
       "decision": null,
@@ -233,11 +233,11 @@
         "inning": 7,
         "half": "T",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "양창섭",
-        "batter": "장진혁",
+        "pitcher": "김태훈",
+        "batter": "김민혁",
         "heat": 39,
         "label": "7회초 3점차"
       },
@@ -562,12 +562,12 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "노경은",
-        "batter": "심우준",
+        "batter": "최인호",
         "heat": 51,
         "label": "7회초 2점차"
       },
@@ -725,16 +725,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 2,
+        "inning": 6,
+        "half": "T",
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "김윤하",
-        "batter": "한석현",
+        "pitcher": "라일리",
+        "batter": "안치홍",
         "heat": 0,
-        "label": "5회말 6점차"
+        "label": "6회초 6점차"
       },
       "recap": null,
       "decision": null,
