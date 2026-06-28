@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T09:28:19.002Z",
+  "updatedAt": "2026-06-28T09:30:31.043Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -68,11 +68,11 @@
         "inning": 6,
         "half": "T",
         "out": 1,
-        "b1": false,
-        "b2": false,
+        "b1": true,
+        "b2": true,
         "b3": false,
         "pitcher": "최승용",
-        "batter": "카스트로",
+        "batter": "변우혁",
         "heat": 35,
         "label": "6회초 3점차"
       },
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 3,
-        "b1": false,
+        "inning": 6,
+        "half": "T",
+        "out": 0,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "고영표",
-        "batter": "김도환",
-        "heat": 65,
-        "label": "5회말 동점 접전"
+        "pitcher": "양창섭",
+        "batter": "안현민",
+        "heat": 70,
+        "label": "6회초 동점 접전"
       },
       "recap": null,
       "decision": null,
@@ -397,12 +397,12 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "김진수",
-        "batter": "노진혁",
+        "batter": "레이예스",
         "heat": 21,
         "label": "4회말 4점차"
       },
@@ -560,16 +560,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 2,
+        "inning": 6,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "류현진",
-        "batter": "정준재",
-        "heat": 44,
-        "label": "5회말 2점차"
+        "pitcher": "이건욱",
+        "batter": "노시환",
+        "heat": 48,
+        "label": "6회초 2점차"
       },
       "recap": null,
       "decision": null,
@@ -725,16 +725,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 2,
+        "inning": 5,
+        "half": "T",
+        "out": 0,
         "b1": false,
-        "b2": true,
-        "b3": true,
-        "pitcher": "박지성",
-        "batter": "김휘집",
+        "b2": false,
+        "b3": false,
+        "pitcher": "라일리",
+        "batter": "어준서",
         "heat": 0,
-        "label": "4회말 6점차"
+        "label": "5회초 6점차"
       },
       "recap": null,
       "decision": null,
