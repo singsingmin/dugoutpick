@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T09:14:18.495Z",
+  "updatedAt": "2026-06-28T09:16:18.476Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "김태형",
-        "batter": "김민석",
+        "batter": "안재석",
         "heat": 43,
         "label": "5회말 2점차"
       },
@@ -398,11 +398,11 @@
         "inning": 3,
         "half": "B",
         "out": 2,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "김윤식",
-        "batter": "박승욱",
+        "pitcher": "김진수",
+        "batter": "손성빈",
         "heat": 19,
         "label": "3회말 4점차"
       },
@@ -563,11 +563,11 @@
         "inning": 5,
         "half": "T",
         "out": 1,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "이건욱",
-        "batter": "페라자",
+        "batter": "문현빈",
         "heat": 44,
         "label": "5회초 2점차"
       },
@@ -727,12 +727,12 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "라일리",
-        "batter": "김건희",
+        "batter": "박찬혁",
         "heat": 0,
         "label": "4회초 6점차"
       },
