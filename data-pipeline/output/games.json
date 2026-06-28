@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T11:20:23.580Z",
+  "updatedAt": "2026-06-28T11:22:18.303Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 19,
@@ -198,11 +198,11 @@
         "inning": 8,
         "half": "T",
         "out": 1,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "이이무라",
-        "batter": "박해민",
+        "batter": "오스틴",
         "heat": 29,
         "label": "8회초 4점차"
       },
