@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T08:28:17.854Z",
+  "updatedAt": "2026-06-28T08:30:27.674Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "최승용",
-        "batter": "박민",
+        "batter": "박재현",
         "heat": 54,
         "label": "3회초 동점 접전"
       },
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
-        "out": 2,
+        "inning": 3,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "전병우",
-        "batter": "고영표",
-        "heat": 49,
-        "label": "2회말 동점 접전"
+        "pitcher": "양창섭",
+        "batter": "권동진",
+        "heat": 54,
+        "label": "3회초 동점 접전"
       },
       "recap": null,
       "decision": null,
@@ -727,11 +727,11 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김형준",
+        "pitcher": "김한별",
         "batter": "와일스",
         "heat": 15,
         "label": "1회말 4점차"
