@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-28T07:12:19.980Z",
+  "updatedAt": "2026-06-28T07:14:18.101Z",
   "lastWeek": {
     "range": [
       "20260615",
@@ -219,13 +219,6 @@
           "home": "NC",
           "awayStarter": "하영민",
           "homeStarter": "구창모"
-        },
-        {
-          "date": "20260628",
-          "away": "WO",
-          "home": "NC",
-          "awayStarter": "와일스",
-          "homeStarter": "라일리"
         }
       ],
       "LT": [
@@ -485,13 +478,6 @@
           "home": "NC",
           "awayStarter": "하영민",
           "homeStarter": "구창모"
-        },
-        {
-          "date": "20260628",
-          "away": "WO",
-          "home": "NC",
-          "awayStarter": "와일스",
-          "homeStarter": "라일리"
         }
       ]
     }
