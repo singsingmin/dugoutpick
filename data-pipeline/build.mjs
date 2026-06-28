@@ -209,6 +209,8 @@ const W = { close: 36, quality: 20, form: 15, rivalry: 6, playoff: 6, pitcher: 1
 const calibrate = (raw) => Math.round(100 / (1 + Math.exp(-(raw - 51) / 10)));
 // 시즌 진행도 (KBO 4~10월): 0.0=4월, 1.0=10월. 후반부로 갈수록 순위전 긴박감 가산.
 const seasonPhase = (date) => Math.max(0, Math.min(1, (parseInt(date.slice(4, 6), 10) - 4) / 6));
+// 팀 별명·팬덤 애칭 (한줄평 문구 변주용)
+const TEAM_NICK = { LG:'쌍둥이', KT:'위즈', SS:'라이온즈', HT:'타이거즈', HH:'이글스', OB:'베어스', NC:'다이노스', SK:'랜더스', LT:'자이언츠', WO:'히어로즈' };
 
 // 파크팩터: 구장별 타자/투수 유불리 (1.0=리그평균). 부분 문자열 매칭.
 // 라팍·사직 타자 유리, 잠실·고척 투수 유리 — KBO 통계적 경향 반영.
@@ -390,11 +392,14 @@ const WEEKLY_ERA = 3.2;
 // AI 없음·환각 없음. 실데이터만 사용. 경기 내 사건은 데이터 없으므로 지어내지 않는다.
 // 조합형 opener+closer 구조 + seed 슬롯 분리로 같은 상황에서도 다양한 변주.
 function weeklyNote(code, rec, ctx) {
-  const tn = (c) => ctx.byCode[c]?.name ?? c;
+  const tn  = (c) => ctx.byCode[c]?.name ?? c;           // 정식 팀명
+  const tnk = (c) => TEAM_NICK[c] ?? tn(c);              // 별명 우선
   const { w, l, d, rank } = rec;
   const g = w + l + d;
-  const { streak, beat, lost, nextOppRank, rankOf = {}, streakOf = {}, thisOpps = [], phase = 0.5 } = ctx;
-  const seed = (w * 131 + l * 977 + rank * 31) >>> 0;
+  const { streak, beat, lost, nextOppRank, rankOf = {}, streakOf = {}, thisOpps = [], phase = 0.5, date = '20260101' } = ctx;
+  // 날짜 성분(주차) 추가 → 같은 성적·순위여도 주마다 다른 변형 선택
+  const wk = (parseInt(date.slice(4, 6), 10) * 4 + Math.floor(parseInt(date.slice(6, 8), 10) / 7));
+  const seed = (w * 131 + l * 977 + rank * 31 + wk * 53) >>> 0;
   const p0 = (arr) => arr[seed % arr.length];
   const p1 = (arr) => arr[(seed >> 3) % arr.length];
   const p2 = (arr) => arr[(seed >> 6) % arr.length];
@@ -423,7 +428,7 @@ function weeklyNote(code, rec, ctx) {
     .map(o => ({ code: o, rank: rankOf[o] ?? 99, streak: streakOf[o] ?? 0 }))
     .filter(o => o.streak < 3 && (o.rank >= 8 || (o.streak <= -3 && o.rank >= rank - 2)))
     .sort((a, b) => (b.rank - a.rank) || (a.streak - b.streak))[0];
-  const hope = winnable ? `그래도 이번주 ${tn(winnable.code)} 만나니까 해볼 만해` : null;
+  const hope = winnable ? p2([`그래도 이번주 ${tn(winnable.code)} 만나니까 해볼 만해`, `이번주 ${tnk(winnable.code)} 만나니까 뒤집을 수 있어`, `그래도 ${tnk(winnable.code)} 상대가 남았으니까`]) : null;
 
   // ── 극단 케이스 ──
   if (g === 0) return '지난주 경기 없이 재정비 — 이번주를 노린다';
@@ -471,8 +476,9 @@ function weeklyNote(code, rec, ctx) {
   if (ironic) return p0([
     `${tn(upset.code)} 잡고 ${tn(slip.code)}한테 지는 롤러코스터 (${rec2})`,
     `강팀 격파에 약팀 덜미 — 뭔가 아쉬운 한 주 (${rec2})`,
-    `${tn(upset.code)} 꺾었는데 ${tn(slip.code)}한테 발목, 야구는 알 수가 없어`,
+    `${tnk(upset.code)} 꺾었는데 ${tnk(slip.code)}한테 발목, 야구는 알 수가 없어`,
     `이기다 지다 사건 많은 한 주 — ${rec2}`,
+    `${tn(upset.code)} 잡고 ${tnk(slip.code)}한테 터진 아이러니 (${rec2})`,
   ]);
 
   // ── 2~3연승 ──
@@ -503,13 +509,14 @@ function weeklyNote(code, rec, ctx) {
   // ── 서사(업셋/덜미) ──
   if (w > l && upset) return p0([
     `${tn(upset.code)} 잡고 ${rec2} 위닝 — 윗물 정조준`,
-    `윗물 ${tn(upset.code)} 잡은 ${rec2}, 무섭다`,
+    `윗물 ${tnk(upset.code)} 잡은 ${rec2}, 무섭다`,
     `${tn(upset.code)} 격파 포함 ${rec2} 위닝, 해냈다`,
-    join(`${tn(upset.code)} 꺾으면서 ${rec2}`, schedClose),
+    join(`${tnk(upset.code)} 꺾으면서 ${rec2}`, schedClose),
+    `${tn(upset.code)} 상대로 꿀잼 위닝 — ${rec2}`,
   ]);
 
   if (l > w && slip) {
-    const base = p0([`${tn(slip.code)}한테 덜미, ${rec2} 뼈아픈 한 주`, `${tn(slip.code)}한테 발목… ${rec2} 아쉽다`, `${tn(slip.code)}한테 잡히다니… ${rec2} 씁쓸`]);
+    const base = p0([`${tn(slip.code)}한테 덜미, ${rec2} 뼈아픈 한 주`, `${tnk(slip.code)}한테 발목… ${rec2} 아쉽다`, `${tn(slip.code)}한테 잡히다니… ${rec2} 씁쓸`, `${tnk(slip.code)}한테 발목 잡힌 한 주 — ${rec2}`]);
     return join(base, hope);
   }
 
@@ -584,6 +591,7 @@ function buildReport(date, schedule, standings, starterMap = {}) {
       lost: beatLost[code]?.lost ?? [],
       nextOppRank: firstOpp ? (rankOf[firstOpp] ?? null) : null,
       phase: seasonPhase(date),
+      date,
     });
   }
 
