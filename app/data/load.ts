@@ -19,7 +19,7 @@ const bundledReport = reportJson as unknown as ReportData;
 async function loadJson<T>(fileName: string, cacheKey: string, fallback: T): Promise<T> {
   if (!REMOTE_BASE_URL) return fallback;
   try {
-    const res = await fetch(`${REMOTE_BASE_URL}/${fileName}`);
+    const res = await fetch(`${REMOTE_BASE_URL}/${fileName}?t=${Date.now()}`);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = (await res.json()) as T;
     try {
