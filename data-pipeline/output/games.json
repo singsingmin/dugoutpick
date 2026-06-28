@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T10:44:19.098Z",
+  "updatedAt": "2026-06-28T10:46:19.139Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "손동현",
-        "batter": "류지혁",
+        "batter": "심재훈",
         "heat": 43,
         "label": "8회말 3점차"
       },
@@ -725,16 +725,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
-        "b1": true,
+        "inning": 9,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김윤하",
-        "batter": "천재환",
+        "pitcher": "최우석",
+        "batter": "히우라",
         "heat": 0,
-        "label": "8회말 7점차"
+        "label": "9회초 7점차"
       },
       "recap": null,
       "decision": null,
