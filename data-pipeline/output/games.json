@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T08:52:18.253Z",
+  "updatedAt": "2026-06-28T08:54:17.631Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -67,11 +67,11 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "류승민",
+        "pitcher": "박준순",
         "batter": "김태형",
         "heat": 59,
         "label": "4회말 동점 접전"
@@ -364,7 +364,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "비슬리",
           "era": 4.5,
@@ -398,13 +398,13 @@
         "inning": 3,
         "half": "B",
         "out": 0,
-        "b1": false,
-        "b2": true,
+        "b1": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "황성빈",
+        "pitcher": "노진혁",
         "batter": "장현식",
-        "heat": 37,
-        "label": "3회말 2점차"
+        "heat": 46,
+        "label": "3회말 1점차 접전"
       },
       "recap": null,
       "decision": null,
@@ -562,12 +562,12 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "이로운",
-        "batter": "이도윤",
+        "batter": "최재훈",
         "heat": 30,
         "label": "4회초 3점차"
       },
@@ -725,16 +725,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
-        "out": 2,
+        "inning": 3,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박건우",
-        "batter": "박지성",
-        "heat": 9,
-        "label": "2회말 5점차"
+        "pitcher": "라일리",
+        "batter": "서건창",
+        "heat": 10,
+        "label": "3회초 5점차"
       },
       "recap": null,
       "decision": null,
