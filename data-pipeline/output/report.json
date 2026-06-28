@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-28T11:08:19.806Z",
+  "updatedAt": "2026-06-28T11:10:23.394Z",
   "lastWeek": {
     "range": [
       "20260615",
@@ -18,7 +18,7 @@
         "l": 1,
         "d": 1,
         "rank": 2,
-        "note": "4승1패 1무, 다음주 선두 직접 잡으러 간다"
+        "note": "4연승 폭주 기관차 🚂 누가 좀 말려봐"
       },
       "KT": {
         "w": 3,
@@ -95,16 +95,16 @@
       {
         "away": "KT",
         "home": "SS",
-        "pred": 91,
-        "reason": "게임차 0.5, 막상막하 승부",
+        "pred": 89,
+        "reason": "게임차 1.5, 막상막하 승부",
         "dateStart": "20260626",
-        "dateEnd": "20260627"
+        "dateEnd": "20260628"
       },
       {
         "away": "SS",
         "home": "LG",
-        "pred": 81,
-        "reason": "게임차 3.5의 순위 다툼 · 리그 1위·2위 상위권 빅매치",
+        "pred": 85,
+        "reason": "게임차 3의 순위 다툼 · 리그 1위·2위 상위권 빅매치",
         "dateStart": "20260623",
         "dateEnd": "20260625"
       }
@@ -145,6 +145,13 @@
           "home": "SS",
           "awayStarter": "로건",
           "homeStarter": "원태인"
+        },
+        {
+          "date": "20260628",
+          "away": "KT",
+          "home": "SS",
+          "awayStarter": "고영표",
+          "homeStarter": "양창섭"
         }
       ],
       "LG": [
@@ -344,6 +351,13 @@
           "home": "SS",
           "awayStarter": "로건",
           "homeStarter": "원태인"
+        },
+        {
+          "date": "20260628",
+          "away": "KT",
+          "home": "SS",
+          "awayStarter": "고영표",
+          "homeStarter": "양창섭"
         }
       ],
       "OB": [
