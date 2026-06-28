@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T08:48:19.244Z",
+  "updatedAt": "2026-06-28T08:50:22.451Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -66,15 +66,15 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "최승용",
-        "batter": "카스트로",
+        "pitcher": "류승민",
+        "batter": "김태형",
         "heat": 59,
-        "label": "4회초 동점 접전"
+        "label": "4회말 동점 접전"
       },
       "recap": null,
       "decision": null,
@@ -399,9 +399,9 @@
         "half": "B",
         "out": 0,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "손성빈",
+        "pitcher": "황성빈",
         "batter": "장현식",
         "heat": 37,
         "label": "3회말 2점차"
@@ -562,11 +562,11 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "조형우",
+        "pitcher": "정준재",
         "batter": "류현진",
         "heat": 28,
         "label": "3회말 3점차"
@@ -727,11 +727,11 @@
       "live": {
         "inning": 2,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "한석현",
+        "pitcher": "박민우",
         "batter": "박지성",
         "heat": 17,
         "label": "2회말 4점차"
