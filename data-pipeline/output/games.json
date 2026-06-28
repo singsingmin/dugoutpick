@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T09:00:35.246Z",
+  "updatedAt": "2026-06-28T09:02:16.958Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -68,11 +68,11 @@
         "inning": 5,
         "half": "T",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "최승용",
-        "batter": "윤도현",
+        "batter": "박민",
         "heat": 64,
         "label": "5회초 동점 접전"
       },
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 2,
-        "b1": true,
+        "inning": 5,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "디아즈",
-        "batter": "고영표",
-        "heat": 50,
-        "label": "4회말 1점차 접전"
+        "pitcher": "양창섭",
+        "batter": "류현인",
+        "heat": 54,
+        "label": "5회초 1점차 접전"
       },
       "recap": null,
       "decision": null,
@@ -562,11 +562,11 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "에레디아",
+        "pitcher": "최정",
         "batter": "류현진",
         "heat": 30,
         "label": "4회말 3점차"
@@ -727,7 +727,7 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 2,
+        "out": 3,
         "b1": true,
         "b2": false,
         "b3": false,
