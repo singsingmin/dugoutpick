@@ -1,12 +1,12 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T10:56:21.180Z",
+  "updatedAt": "2026-06-28T11:00:34.834Z",
   "trackRecord": {
     "window": 50,
-    "sampleSize": 18,
-    "hitRate": 17,
-    "bonusRate": 28,
+    "sampleSize": 19,
+    "hitRate": 16,
+    "bonusRate": 26,
     "ready": true
   },
   "recommendedGameId": "20260628KTSS0",
@@ -15,7 +15,7 @@
       "gameId": "20260628HTOB0",
       "time": "17:00",
       "stadium": "잠실",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SS-T",
       "away": {
@@ -64,117 +64,17 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 3,
-        "b1": true,
-        "b2": false,
-        "b3": false,
-        "pitcher": "성영탁",
-        "batter": "김민석",
-        "heat": 0,
-        "label": "9회말 11점차"
+      "live": null,
+      "recap": {
+        "actual": 4,
+        "verdict": "기대 이하"
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "정수빈"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "류승민"
-          },
-          {
-            "order": 3,
-            "pos": "2루수",
-            "name": "박준순"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "양의지"
-          },
-          {
-            "order": 5,
-            "pos": "좌익수",
-            "name": "김민석"
-          },
-          {
-            "order": 6,
-            "pos": "3루수",
-            "name": "안재석"
-          },
-          {
-            "order": 7,
-            "pos": "유격수",
-            "name": "박찬호"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "윤준호"
-          },
-          {
-            "order": 9,
-            "pos": "1루수",
-            "name": "박성재"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "김호령"
-          },
-          {
-            "order": 2,
-            "pos": "2루수",
-            "name": "김선빈"
-          },
-          {
-            "order": 3,
-            "pos": "3루수",
-            "name": "김도영"
-          },
-          {
-            "order": 4,
-            "pos": "우익수",
-            "name": "나성범"
-          },
-          {
-            "order": 5,
-            "pos": "지명타자",
-            "name": "카스트로"
-          },
-          {
-            "order": 6,
-            "pos": "포수",
-            "name": "한준수"
-          },
-          {
-            "order": 7,
-            "pos": "1루수",
-            "name": "윤도현"
-          },
-          {
-            "order": 8,
-            "pos": "유격수",
-            "name": "박민"
-          },
-          {
-            "order": 9,
-            "pos": "좌익수",
-            "name": "박재현"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260628KTSS0",
@@ -298,11 +198,11 @@
         "inning": 7,
         "half": "T",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "박정민",
-        "batter": "오지환",
+        "batter": "홍창기",
         "heat": 28,
         "label": "7회초 4점차"
       },
