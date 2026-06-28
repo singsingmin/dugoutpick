@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T11:30:29.980Z",
+  "updatedAt": "2026-06-28T11:32:16.733Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 19,
@@ -66,7 +66,7 @@
       },
       "live": null,
       "recap": {
-        "actual": 4,
+        "actual": 10,
         "verdict": "기대 이하"
       },
       "decision": {
@@ -131,7 +131,7 @@
       },
       "live": null,
       "recap": {
-        "actual": 46,
+        "actual": 70,
         "verdict": "기대 이하"
       },
       "decision": {
@@ -197,12 +197,12 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "b1": true,
         "b2": true,
         "b3": false,
         "pitcher": "이이무라",
-        "batter": "오지환",
+        "batter": "홍창기",
         "heat": 59,
         "label": "8회초 2점차"
       },
@@ -361,7 +361,7 @@
       },
       "live": null,
       "recap": {
-        "actual": 43,
+        "actual": 67,
         "verdict": "기대 이상"
       },
       "decision": {
@@ -426,8 +426,8 @@
       },
       "live": null,
       "recap": {
-        "actual": 4,
-        "verdict": "기대 이하"
+        "actual": 9,
+        "verdict": "예측 적중"
       },
       "decision": {
         "win": null,
