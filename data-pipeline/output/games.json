@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T11:38:19.404Z",
+  "updatedAt": "2026-06-28T11:40:23.450Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 19,
@@ -198,11 +198,11 @@
         "inning": 8,
         "half": "B",
         "out": 1,
-        "b1": false,
-        "b2": false,
+        "b1": true,
+        "b2": true,
         "b3": false,
         "pitcher": "우강훈",
-        "batter": "윤동희",
+        "batter": "박승욱",
         "heat": 59,
         "label": "8회말 2점차"
       },
