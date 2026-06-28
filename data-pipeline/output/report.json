@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-28T10:54:19.224Z",
+  "updatedAt": "2026-06-28T10:56:21.180Z",
   "lastWeek": {
     "range": [
       "20260615",
@@ -67,7 +67,7 @@
         "l": 3,
         "d": 1,
         "rank": 9,
-        "note": "살짝 삐끗한 한 주 2승3패 1무"
+        "note": "4연패째… 이러다 큰일 난다"
       },
       "WO": {
         "w": 0,
@@ -96,7 +96,7 @@
         "away": "OB",
         "home": "HH",
         "pred": 89,
-        "reason": "게임차 1, 막상막하 승부",
+        "reason": "게임차 0.5, 막상막하 승부",
         "dateStart": "20260623",
         "dateEnd": "20260625"
       },
@@ -293,6 +293,13 @@
           "home": "SK",
           "awayStarter": "화이트",
           "homeStarter": "타케다"
+        },
+        {
+          "date": "20260628",
+          "away": "HH",
+          "home": "SK",
+          "awayStarter": "류현진",
+          "homeStarter": "최민준"
         }
       ],
       "KT": [
@@ -404,6 +411,13 @@
           "home": "SK",
           "awayStarter": "화이트",
           "homeStarter": "타케다"
+        },
+        {
+          "date": "20260628",
+          "away": "HH",
+          "home": "SK",
+          "awayStarter": "류현진",
+          "homeStarter": "최민준"
         }
       ],
       "HT": [

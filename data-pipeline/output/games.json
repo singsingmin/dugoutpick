@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T10:54:19.224Z",
+  "updatedAt": "2026-06-28T10:56:21.180Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 18,
@@ -295,16 +295,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 2,
+        "inning": 7,
+        "half": "T",
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "김진성",
-        "batter": "김동혁",
-        "heat": 26,
-        "label": "6회말 4점차"
+        "pitcher": "박정민",
+        "batter": "오지환",
+        "heat": 28,
+        "label": "7회초 4점차"
       },
       "recap": null,
       "decision": null,
