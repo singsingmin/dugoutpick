@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T11:06:17.684Z",
+  "updatedAt": "2026-06-28T11:08:19.806Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 19,
@@ -196,15 +196,15 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "이이무라",
-        "batter": "신민재",
+        "b3": false,
+        "pitcher": "함덕주",
+        "batter": "노진혁",
         "heat": 28,
-        "label": "7회초 4점차"
+        "label": "7회말 4점차"
       },
       "recap": null,
       "decision": null,
