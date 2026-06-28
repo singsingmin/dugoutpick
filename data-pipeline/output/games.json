@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T11:28:19.011Z",
+  "updatedAt": "2026-06-28T11:30:29.980Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 19,
@@ -199,10 +199,10 @@
         "half": "T",
         "out": 1,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "이이무라",
-        "batter": "문정빈",
+        "batter": "오지환",
         "heat": 59,
         "label": "8회초 2점차"
       },
