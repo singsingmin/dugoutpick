@@ -12,8 +12,16 @@ const BASE_OFF = '#C8C8C8';
 const BASE_SIZE = 14;
 const OUT_SIZE = 10;
 
-function Base({ on }: { on: boolean }) {
-  return <View style={[s.base, on && { backgroundColor: BASE_ON }]} />;
+// 절대 좌표로 배치: center 간 거리 = 14px → 45° 회전 사각형이 면을 완전히 공유.
+// 2루(21,7) · 3루(11,17) · 1루(31,17). container 42×28.
+function BaseDiamond({ lv }: { lv: LiveState }) {
+  return (
+    <View style={s.diamondContainer}>
+      <View style={[s.base, s.pos2, lv.b2 && s.baseOn]} />
+      <View style={[s.base, s.pos3, lv.b3 && s.baseOn]} />
+      <View style={[s.base, s.pos1, lv.b1 && s.baseOn]} />
+    </View>
+  );
 }
 
 function OutDot({ filled }: { filled: boolean }) {
@@ -24,18 +32,7 @@ function DiamondAndOuts({ lv }: { lv: LiveState }) {
   const outs = lv.out ?? 0;
   return (
     <View style={s.diamondWrap}>
-      {/* 1~3루 다이아몬드: spacer로 원래 홈베이스 자리 보존해 삼각형 모양 유지 */}
-      <View style={s.diamond}>
-        <View style={s.diamondTop}>
-          <Base on={lv.b2} />
-        </View>
-        <View style={s.diamondMid}>
-          <Base on={lv.b3} />
-          <View style={s.baseSpacer} />
-          <Base on={lv.b1} />
-        </View>
-      </View>
-      {/* 아웃 카운트 */}
+      <BaseDiamond lv={lv} />
       <View style={s.outs}>
         <OutDot filled={outs >= 1} />
         <OutDot filled={outs >= 2} />
@@ -94,12 +91,12 @@ const s = StyleSheet.create({
   main: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around' },
   teamCol: { flex: 1, alignItems: 'center', gap: 2 },
   diamondWrap: { alignItems: 'center', gap: 6 },
-  diamond: { alignItems: 'center', gap: 0 },
-  diamondTop: { alignItems: 'center' },
-  // spacer가 원래 홈베이스 자리를 차지해 3루·1루 꼭짓점이 떨어지고 2루와 삼각형 정렬됨
-  diamondMid: { flexDirection: 'row', alignItems: 'center', gap: 4 },
-  baseSpacer: { width: BASE_SIZE },
-  base: { width: BASE_SIZE, height: BASE_SIZE, backgroundColor: BASE_OFF, transform: [{ rotate: '45deg' }] },
+  diamondContainer: { width: 42, height: 28 },
+  base: { width: BASE_SIZE, height: BASE_SIZE, backgroundColor: BASE_OFF, transform: [{ rotate: '45deg' }], position: 'absolute' },
+  baseOn: { backgroundColor: BASE_ON },
+  pos2: { left: 14, top: 0 },
+  pos3: { left: 4, top: 10 },
+  pos1: { left: 24, top: 10 },
   outs: { flexDirection: 'row', gap: 5 },
   outDot: { width: OUT_SIZE, height: OUT_SIZE, borderRadius: OUT_SIZE / 2, backgroundColor: BASE_OFF },
   outFilled: { backgroundColor: LIVE_RED },
