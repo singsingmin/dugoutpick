@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T08:18:19.209Z",
+  "updatedAt": "2026-06-28T08:20:21.810Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 1,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "최승용",
-        "batter": "카스트로",
+        "batter": "윤도현",
         "heat": 49,
         "label": "2회초 동점 접전"
       },
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 2,
+        "inning": 2,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "구자욱",
-        "batter": "고영표",
-        "heat": 43,
-        "label": "1회말 동점 접전"
+        "pitcher": "양창섭",
+        "batter": "류현인",
+        "heat": 49,
+        "label": "2회초 동점 접전"
       },
       "recap": null,
       "decision": null,
@@ -395,16 +395,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 2,
-        "b1": true,
+        "inning": 2,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "한동희",
-        "batter": "장현식",
-        "heat": 43,
-        "label": "1회말 동점 접전"
+        "pitcher": "비슬리",
+        "batter": "문정빈",
+        "heat": 49,
+        "label": "2회초 동점 접전"
       },
       "recap": null,
       "decision": null,
@@ -562,12 +562,12 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "최민준",
-        "batter": "김태연",
+        "batter": "이도윤",
         "heat": 49,
         "label": "2회초 동점 접전"
       },
@@ -728,10 +728,10 @@
         "inning": 1,
         "half": "B",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
-        "b3": false,
-        "pitcher": "김주원",
+        "b3": true,
+        "pitcher": "박민우",
         "batter": "와일스",
         "heat": 37,
         "label": "1회말 1점차 접전"
