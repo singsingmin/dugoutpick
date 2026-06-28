@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T09:04:17.732Z",
+  "updatedAt": "2026-06-28T09:06:18.288Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "최승용",
-        "batter": "박재현",
+        "batter": "김호령",
         "heat": 64,
         "label": "5회초 동점 접전"
       },
@@ -232,12 +232,12 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "양창섭",
-        "batter": "류현인",
+        "batter": "장진혁",
         "heat": 54,
         "label": "5회초 1점차 접전"
       },
@@ -399,10 +399,10 @@
         "half": "B",
         "out": 2,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": true,
-        "pitcher": "윤동희",
-        "batter": "장현식",
+        "pitcher": "전민재",
+        "batter": "김윤식",
         "heat": 46,
         "label": "3회말 1점차 접전"
       },
@@ -529,7 +529,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "최민준",
           "era": 4.84,
@@ -566,10 +566,10 @@
         "b1": true,
         "b2": true,
         "b3": false,
-        "pitcher": "김재환",
+        "pitcher": "고명준",
         "batter": "류현진",
-        "heat": 30,
-        "label": "4회말 3점차"
+        "heat": 41,
+        "label": "4회말 2점차"
       },
       "recap": null,
       "decision": null,
@@ -694,7 +694,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 6,
+        "score": 7,
         "starter": {
           "name": "라일리",
           "era": 3.42,
@@ -727,14 +727,14 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김휘집",
+        "pitcher": "김한별",
         "batter": "박지성",
-        "heat": 10,
-        "label": "3회말 5점차"
+        "heat": 0,
+        "label": "3회말 6점차"
       },
       "recap": null,
       "decision": null,
