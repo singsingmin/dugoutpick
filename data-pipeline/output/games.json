@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T09:58:17.299Z",
+  "updatedAt": "2026-06-28T10:00:34.814Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "박신지",
-        "batter": "카스트로",
+        "batter": "변우혁",
         "heat": 0,
         "label": "7회초 9점차"
       },
@@ -187,7 +187,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 3,
-        "score": 2,
+        "score": 4,
         "starter": {
           "name": "고영표",
           "era": 4.28,
@@ -234,12 +234,12 @@
         "half": "T",
         "out": 2,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "김태훈",
-        "batter": "최원준",
-        "heat": 39,
-        "label": "7회초 3점차"
+        "pitcher": "최지광",
+        "batter": "김현수",
+        "heat": 66,
+        "label": "7회초 1점차 접전"
       },
       "recap": null,
       "decision": null,
@@ -562,12 +562,12 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "조동욱",
-        "batter": "최지훈",
+        "batter": "조형우",
         "heat": 51,
         "label": "7회말 2점차"
       },
@@ -727,12 +727,12 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 1,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "김태훈",
-        "batter": "히우라",
+        "batter": "박찬혁",
         "heat": 0,
         "label": "6회초 6점차"
       },
