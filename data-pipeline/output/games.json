@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T10:32:19.000Z",
+  "updatedAt": "2026-06-28T10:34:18.184Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "최지광",
-        "batter": "안현민",
+        "batter": "힐리어드",
         "heat": 43,
         "label": "8회초 3점차"
       },
@@ -727,12 +727,12 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "하준영",
-        "batter": "서건창",
+        "batter": "추재현",
         "heat": 0,
         "label": "8회초 7점차"
       },
