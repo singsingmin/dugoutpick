@@ -171,33 +171,26 @@ function Body({
       />
 
       {/* ── 히어로 섹션 ── */}
-      <View style={styles.heroContent}>
-        <View style={styles.dateRow}>
-          <PixelText variant="caption" color={colors.text}>{data.dateText}</PixelText>
-          <PixelText variant="caption" color={colors.textDim}>
-            갱신 {formatUpdatedAt(data.updatedAt)} · {relativeFromNow(data.updatedAt)}
-          </PixelText>
+      {!allDone && heroGame && (
+        <View style={styles.heroContent}>
+          <SectionLabel icon={heroIcon} label={heroLabel} />
+          <GameCard game={heroGame} variant="hero" onPress={() => open(heroGame!.gameId)} />
         </View>
-        {!allDone && (
-          <>
-            <PixelText variant="title" color={colors.text} style={styles.tagline}>
-              오늘 KBO, 볼 각인가?
-            </PixelText>
-            {heroGame && (
-              <View style={styles.heroCardWrap}>
-                <SectionLabel icon={heroIcon} label={heroLabel} />
-                <GameCard game={heroGame} variant="hero" onPress={() => open(heroGame!.gameId)} />
-              </View>
-            )}
-          </>
-        )}
-      </View>
+      )}
 
       {/* ── 리스트 섹션 ── */}
       <View style={styles.listSection}>
         {liveGames.length > 0 && (
           <View style={styles.section}>
-            <SectionLabel icon="live" label="지금 볼 각" />
+            <View style={styles.liveHeader}>
+              <SectionLabel icon="live" label="지금 볼 각" />
+              <View style={styles.liveMeta}>
+                <PixelText variant="caption" color={colors.text}>{data.dateText}</PixelText>
+                <PixelText variant="caption" color={colors.textDim}>
+                  갱신 {formatUpdatedAt(data.updatedAt)} · {relativeFromNow(data.updatedAt)}
+                </PixelText>
+              </View>
+            </View>
             <PixelText variant="caption" color={colors.textDim} style={styles.liveHint}>
               ⚠ 라이브 점수는 갱신 시각 기준 — 실제보다 몇 분 늦을 수 있다
             </PixelText>
@@ -266,17 +259,17 @@ const styles = StyleSheet.create({
 
   // 히어로 섹션
   heroContent: {
-    padding: spacing.md,
-    paddingBottom: spacing.lg,
-    gap: spacing.sm,
+    paddingHorizontal: spacing.md,
+    paddingTop: spacing.sm,
+    paddingBottom: spacing.sm,
+    gap: spacing.xs,
   },
-  dateRow: { gap: 2 },
-  tagline: { marginTop: spacing.xs, marginBottom: spacing.xs },
-  heroCardWrap: { gap: spacing.xs },
 
   // 리스트 섹션
   listSection: { padding: spacing.md, flex: 1 },
   section: { marginBottom: spacing.lg },
+  liveHeader: { flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: spacing.xs },
+  liveMeta: { alignItems: 'flex-end', gap: 2 },
   liveHint: { marginBottom: spacing.sm },
   subLabel: { marginBottom: spacing.xs },
 });
