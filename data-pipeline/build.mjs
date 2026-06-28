@@ -598,8 +598,9 @@ async function main() {
         b1: (g.B1_BAT_ORDER_NO ?? 0) !== 0,
         b2: (g.B2_BAT_ORDER_NO ?? 0) !== 0,
         b3: (g.B3_BAT_ORDER_NO ?? 0) !== 0,
-        pitcher: (g.B_P_NM || '').trim() || null,
-        batter: (g.T_P_NM || '').trim() || null,
+        // T(초)=원정팀 공격: 홈팀(B)이 투수, 원정팀(T)이 타자. B(말)=반대.
+        pitcher: half === 'T' ? (g.B_P_NM || '').trim() || null : (g.T_P_NM || '').trim() || null,
+        batter:  half === 'T' ? (g.T_P_NM || '').trim() || null : (g.B_P_NM || '').trim() || null,
         heat: liveHeat(inning, half, diff, total),
         label: liveLabel(inning, half, diff),
       };

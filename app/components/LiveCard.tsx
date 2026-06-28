@@ -8,7 +8,7 @@ import { colors, spacing } from '../theme';
 
 const LIVE_RED = '#E03131';
 const BASE_ON = LIVE_RED;
-const BASE_OFF = colors.surfaceAlt;
+const BASE_OFF = colors.track;
 
 function BaseDiamond({ lv }: { lv: LiveState }) {
   return (
@@ -18,7 +18,6 @@ function BaseDiamond({ lv }: { lv: LiveState }) {
       </View>
       <View style={s.diamondMid}>
         <Base on={lv.b3} />
-        <View style={s.homeBase} />
         <Base on={lv.b1} />
       </View>
     </View>
@@ -84,6 +83,5 @@ const s = StyleSheet.create({
   diamondRow: { alignItems: 'center' },
   diamondMid: { flexDirection: 'row', alignItems: 'center', gap: 4 },
   base: { width: BASE_SIZE, height: BASE_SIZE, backgroundColor: BASE_OFF, transform: [{ rotate: '45deg' }] },
-  homeBase: { width: BASE_SIZE, height: BASE_SIZE, backgroundColor: BASE_OFF, transform: [{ rotate: '45deg' }] },
   players: { textAlign: 'center' },
 });
