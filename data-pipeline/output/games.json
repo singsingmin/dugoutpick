@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T11:14:18.618Z",
+  "updatedAt": "2026-06-28T11:16:17.632Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 19,
@@ -195,16 +195,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 2,
+        "inning": 8,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "함덕주",
-        "batter": "한동희",
-        "heat": 28,
-        "label": "7회말 4점차"
+        "pitcher": "이이무라",
+        "batter": "이영빈",
+        "heat": 29,
+        "label": "8회초 4점차"
       },
       "recap": null,
       "decision": null,
