@@ -125,7 +125,7 @@ function Body({
     (g) => g.status === 'FINAL' || g.status === 'CANCELED'
   );
   const recommended: Game | undefined = data.games.find(
-    (g) => g.gameId === data.recommendedGameId && g.status !== 'LIVE'
+    (g) => g.gameId === data.recommendedGameId && g.status === 'SCHEDULED'
   );
   // allDone 시 추천 경기도 rest에 포함 (별도 히어로 섹션 없이 다른경기로)
   const rest = data.games
