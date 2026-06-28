@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T11:32:16.733Z",
+  "updatedAt": "2026-06-28T11:36:18.816Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 19,
@@ -196,15 +196,15 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "half": "B",
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "이이무라",
-        "batter": "홍창기",
+        "pitcher": "우강훈",
+        "batter": "윤동희",
         "heat": 59,
-        "label": "8회초 2점차"
+        "label": "8회말 2점차"
       },
       "recap": null,
       "decision": null,
