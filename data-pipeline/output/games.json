@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T08:22:19.251Z",
+  "updatedAt": "2026-06-28T08:24:19.077Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -67,11 +67,11 @@
       "live": {
         "inning": 2,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "양의지",
+        "pitcher": "김민석",
         "batter": "김태형",
         "heat": 49,
         "label": "2회말 동점 접전"
@@ -231,15 +231,15 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "양창섭",
-        "batter": "장진혁",
+        "pitcher": "최형우",
+        "batter": "고영표",
         "heat": 49,
-        "label": "2회초 동점 접전"
+        "label": "2회말 동점 접전"
       },
       "recap": null,
       "decision": null,
@@ -352,7 +352,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "장현식",
           "era": 3.69,
@@ -402,9 +402,9 @@
         "b2": false,
         "b3": false,
         "pitcher": "비슬리",
-        "batter": "문정빈",
-        "heat": 49,
-        "label": "2회초 동점 접전"
+        "batter": "오지환",
+        "heat": 41,
+        "label": "2회초 1점차 접전"
       },
       "recap": null,
       "decision": null,
