@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T09:54:19.288Z",
+  "updatedAt": "2026-06-28T09:56:19.017Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 1,
+        "out": 3,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "김태형",
-        "batter": "정수빈",
+        "batter": "류승민",
         "heat": 0,
         "label": "6회말 9점차"
       },
@@ -400,9 +400,9 @@
         "out": 1,
         "b1": true,
         "b2": true,
-        "b3": false,
+        "b3": true,
         "pitcher": "현도훈",
-        "batter": "박해민",
+        "batter": "오스틴",
         "heat": 0,
         "label": "5회초 6점차"
       },
@@ -562,12 +562,12 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "노경은",
-        "batter": "최인호",
+        "batter": "페라자",
         "heat": 51,
         "label": "7회초 2점차"
       },
@@ -731,7 +731,7 @@
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "라일리",
+        "pitcher": "김태훈",
         "batter": "안치홍",
         "heat": 0,
         "label": "6회초 6점차"
