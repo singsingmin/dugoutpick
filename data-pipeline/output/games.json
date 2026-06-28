@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T10:42:18.027Z",
+  "updatedAt": "2026-06-28T10:44:19.098Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -22,7 +22,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 11,
+        "score": 12,
         "starter": {
           "name": "김태형",
           "era": 5.49,
@@ -72,9 +72,9 @@
         "b2": true,
         "b3": false,
         "pitcher": "최지강",
-        "batter": "박재현",
+        "batter": "김호령",
         "heat": 0,
-        "label": "9회초 10점차"
+        "label": "9회초 11점차"
       },
       "recap": null,
       "decision": null,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "손동현",
-        "batter": "전병우",
+        "batter": "류지혁",
         "heat": 43,
         "label": "8회말 3점차"
       },
@@ -396,15 +396,15 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "half": "B",
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "박정민",
-        "batter": "문정빈",
+        "pitcher": "김진성",
+        "batter": "윤동희",
         "heat": 52,
-        "label": "6회초 2점차"
+        "label": "6회말 2점차"
       },
       "recap": null,
       "decision": null,
@@ -561,15 +561,15 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
-        "out": 2,
-        "b1": true,
+        "half": "B",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "조병현",
-        "batter": "강백호",
+        "pitcher": "이민우",
+        "batter": "오태곤",
         "heat": 45,
-        "label": "9회초 3점차"
+        "label": "9회말 3점차"
       },
       "recap": null,
       "decision": null,
@@ -727,12 +727,12 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 1,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "김윤하",
-        "batter": "도태훈",
+        "batter": "천재환",
         "heat": 0,
         "label": "8회말 7점차"
       },
