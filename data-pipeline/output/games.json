@@ -1,12 +1,12 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T10:50:23.938Z",
+  "updatedAt": "2026-06-28T10:52:17.595Z",
   "trackRecord": {
     "window": 50,
-    "sampleSize": 15,
-    "hitRate": 20,
-    "bonusRate": 27,
+    "sampleSize": 16,
+    "hitRate": 19,
+    "bonusRate": 25,
     "ready": true
   },
   "recommendedGameId": "20260628KTSS0",
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 1,
+        "inning": 10,
+        "half": "T",
+        "out": 3,
         "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "성영탁",
-        "batter": "양의지",
+        "batter": "김민석",
         "heat": 0,
-        "label": "9회말 11점차"
+        "label": "10회초 11점차"
       },
       "recap": null,
       "decision": null,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "김재윤",
-        "batter": "류현인",
+        "batter": "장진혁",
         "heat": 45,
         "label": "9회초 3점차"
       },
@@ -398,11 +398,11 @@
         "inning": 6,
         "half": "B",
         "out": 2,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "김진성",
-        "batter": "고승민",
+        "batter": "박승욱",
         "heat": 52,
         "label": "6회말 2점차"
       },
@@ -675,7 +675,7 @@
       "gameId": "20260628WONC0",
       "time": "17:00",
       "stadium": "창원",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "MS-T",
       "away": {
@@ -724,117 +724,17 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 0,
-        "b1": true,
-        "b2": true,
-        "b3": false,
-        "pitcher": "최우석",
-        "batter": "박찬혁",
-        "heat": 0,
-        "label": "9회초 7점차"
+      "live": null,
+      "recap": {
+        "actual": 4,
+        "verdict": "기대 이하"
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "지명타자",
-            "name": "김주원"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "한석현"
-          },
-          {
-            "order": 3,
-            "pos": "2루수",
-            "name": "박민우"
-          },
-          {
-            "order": 4,
-            "pos": "좌익수",
-            "name": "이우성"
-          },
-          {
-            "order": 5,
-            "pos": "우익수",
-            "name": "박건우"
-          },
-          {
-            "order": 6,
-            "pos": "3루수",
-            "name": "김휘집"
-          },
-          {
-            "order": 7,
-            "pos": "포수",
-            "name": "김형준"
-          },
-          {
-            "order": 8,
-            "pos": "유격수",
-            "name": "김한별"
-          },
-          {
-            "order": 9,
-            "pos": "1루수",
-            "name": "신재인"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "2루수",
-            "name": "서건창"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "추재현"
-          },
-          {
-            "order": 3,
-            "pos": "1루수",
-            "name": "안치홍"
-          },
-          {
-            "order": 4,
-            "pos": "좌익수",
-            "name": "히우라"
-          },
-          {
-            "order": 5,
-            "pos": "포수",
-            "name": "김건희"
-          },
-          {
-            "order": 6,
-            "pos": "지명타자",
-            "name": "박찬혁"
-          },
-          {
-            "order": 7,
-            "pos": "중견수",
-            "name": "임병욱"
-          },
-          {
-            "order": 8,
-            "pos": "유격수",
-            "name": "권혁빈"
-          },
-          {
-            "order": 9,
-            "pos": "3루수",
-            "name": "여동욱"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     }
   ]
 }
