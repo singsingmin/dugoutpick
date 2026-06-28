@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T11:56:19.111Z",
+  "updatedAt": "2026-06-28T12:00:35.319Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 20,
@@ -25,8 +25,8 @@
         "score": 12,
         "starter": {
           "name": "김태형",
-          "era": 5.49,
-          "w": 1,
+          "era": 4.86,
+          "w": 2,
           "l": 2
         }
       },
@@ -37,9 +37,9 @@
         "score": 1,
         "starter": {
           "name": "최승용",
-          "era": 5.46,
+          "era": 5.69,
           "w": 1,
-          "l": 6
+          "l": 7
         }
       },
       "honjam": {
@@ -70,8 +70,8 @@
         "verdict": "기대 이하"
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "김태형",
+        "lose": "최승용",
         "save": null
       },
       "lineup": null
@@ -90,9 +90,9 @@
         "score": 4,
         "starter": {
           "name": "고영표",
-          "era": 4.28,
+          "era": 4.5,
           "w": 6,
-          "l": 4
+          "l": 5
         }
       },
       "home": {
@@ -102,8 +102,8 @@
         "score": 7,
         "starter": {
           "name": "양창섭",
-          "era": 4.53,
-          "w": 5,
+          "era": 4.37,
+          "w": 6,
           "l": 0
         }
       },
@@ -135,9 +135,9 @@
         "verdict": "기대 이하"
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "양창섭",
+        "lose": "고영표",
+        "save": "김재윤"
       },
       "lineup": null
     },
@@ -155,9 +155,9 @@
         "score": 9,
         "starter": {
           "name": "장현식",
-          "era": 3.69,
+          "era": 4.32,
           "w": 6,
-          "l": 2
+          "l": 3
         }
       },
       "home": {
@@ -167,7 +167,7 @@
         "score": 11,
         "starter": {
           "name": "비슬리",
-          "era": 4.5,
+          "era": 4.71,
           "w": 4,
           "l": 4
         }
@@ -200,9 +200,9 @@
         "verdict": "기대 이상"
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "김강현",
+        "lose": "장현식",
+        "save": "최준용"
       },
       "lineup": null
     },
@@ -220,7 +220,7 @@
         "score": 6,
         "starter": {
           "name": "류현진",
-          "era": 2.76,
+          "era": 2.67,
           "w": 8,
           "l": 2
         }
@@ -232,7 +232,7 @@
         "score": 3,
         "starter": {
           "name": "최민준",
-          "era": 4.84,
+          "era": 5.07,
           "w": 1,
           "l": 4
         }
@@ -265,9 +265,9 @@
         "verdict": "기대 이상"
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "이상규",
+        "lose": "조병현",
+        "save": "이민우"
       },
       "lineup": null
     },
@@ -285,9 +285,9 @@
         "score": 2,
         "starter": {
           "name": "와일스",
-          "era": 4.13,
+          "era": 5.4,
           "w": 0,
-          "l": 3
+          "l": 4
         }
       },
       "home": {
@@ -297,8 +297,8 @@
         "score": 9,
         "starter": {
           "name": "라일리",
-          "era": 3.42,
-          "w": 2,
+          "era": 3.43,
+          "w": 3,
           "l": 0
         }
       },
@@ -330,8 +330,8 @@
         "verdict": "예측 적중"
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "라일리",
+        "lose": "와일스",
         "save": null
       },
       "lineup": null
