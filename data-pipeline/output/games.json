@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T07:14:18.101Z",
+  "updatedAt": "2026-06-28T08:02:21.165Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -15,14 +15,14 @@
       "gameId": "20260628HTOB0",
       "time": "17:00",
       "stadium": "잠실",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SS-T",
       "away": {
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "김태형",
           "era": 5.49,
@@ -34,7 +34,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "최승용",
           "era": 5.46,
@@ -61,9 +61,21 @@
           "doom": 0,
           "park": 0.09,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 2,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "최승용",
+        "batter": "김도영",
+        "heat": 43,
+        "label": "1회초 동점 접전"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
@@ -168,14 +180,14 @@
       "gameId": "20260628KTSS0",
       "time": "17:00",
       "stadium": "대구",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SPO-2T",
       "away": {
         "code": "KT",
         "name": "KT",
         "rank": 3,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "고영표",
           "era": 4.28,
@@ -187,7 +199,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "양창섭",
           "era": 4.53,
@@ -214,9 +226,21 @@
           "doom": 0,
           "park": 1,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 1,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "양창섭",
+        "batter": "김현수",
+        "heat": 43,
+        "label": "1회초 동점 접전"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
@@ -321,14 +345,14 @@
       "gameId": "20260628LGLT0",
       "time": "17:00",
       "stadium": "사직",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "KN-T",
       "away": {
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "장현식",
           "era": 3.69,
@@ -340,7 +364,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "비슬리",
           "era": 4.5,
@@ -367,9 +391,21 @@
           "doom": 0,
           "park": 0.77,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 0,
+        "b1": false,
+        "b2": true,
+        "b3": false,
+        "pitcher": "비슬리",
+        "batter": "박해민",
+        "heat": 43,
+        "label": "1회초 동점 접전"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
@@ -474,14 +510,14 @@
       "gameId": "20260628HHSK0",
       "time": "17:00",
       "stadium": "문학",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SPO-T",
       "away": {
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "류현진",
           "era": 2.76,
@@ -493,7 +529,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "최민준",
           "era": 4.84,
@@ -520,9 +556,21 @@
           "doom": 0,
           "park": 0.55,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 0,
+        "b1": true,
+        "b2": false,
+        "b3": false,
+        "pitcher": "최민준",
+        "batter": "페라자",
+        "heat": 43,
+        "label": "1회초 동점 접전"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
@@ -627,14 +675,14 @@
       "gameId": "20260628WONC0",
       "time": "17:00",
       "stadium": "창원",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "MS-T",
       "away": {
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "와일스",
           "era": 4.13,
@@ -646,7 +694,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "라일리",
           "era": 3.42,
@@ -673,9 +721,21 @@
           "doom": 0,
           "park": 0.64,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 0,
+        "b1": true,
+        "b2": false,
+        "b3": false,
+        "pitcher": "라일리",
+        "batter": "추재현",
+        "heat": 43,
+        "label": "1회초 동점 접전"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
