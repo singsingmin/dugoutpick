@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T08:08:19.445Z",
+  "updatedAt": "2026-06-28T08:10:22.397Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -231,15 +231,15 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "half": "B",
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "양창섭",
-        "batter": "김상수",
+        "pitcher": "김지찬",
+        "batter": "고영표",
         "heat": 43,
-        "label": "1회초 동점 접전"
+        "label": "1회말 동점 접전"
       },
       "recap": null,
       "decision": null,
@@ -397,11 +397,11 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "황성빈",
+        "pitcher": "노진혁",
         "batter": "장현식",
         "heat": 43,
         "label": "1회말 동점 접전"
@@ -562,11 +562,11 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박성한",
+        "pitcher": "에레디아",
         "batter": "류현진",
         "heat": 43,
         "label": "1회말 동점 접전"
@@ -682,7 +682,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "와일스",
           "era": 4.13,
@@ -727,14 +727,14 @@
       "live": {
         "inning": 1,
         "half": "T",
-        "out": 0,
-        "b1": true,
+        "out": 1,
+        "b1": false,
         "b2": true,
-        "b3": false,
+        "b3": true,
         "pitcher": "라일리",
-        "batter": "안치홍",
-        "heat": 43,
-        "label": "1회초 동점 접전"
+        "batter": "김건희",
+        "heat": 37,
+        "label": "1회초 1점차 접전"
       },
       "recap": null,
       "decision": null,
