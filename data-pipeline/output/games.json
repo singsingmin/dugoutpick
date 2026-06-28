@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T09:10:23.357Z",
+  "updatedAt": "2026-06-28T09:14:18.495Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -71,8 +71,8 @@
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김민석",
-        "batter": "김태형",
+        "pitcher": "김태형",
+        "batter": "김민석",
         "heat": 43,
         "label": "5회말 2점차"
       },
@@ -187,7 +187,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 3,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "고영표",
           "era": 4.28,
@@ -232,14 +232,14 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "b1": false,
         "b2": true,
         "b3": false,
         "pitcher": "양창섭",
-        "batter": "한승택",
-        "heat": 54,
-        "label": "5회초 1점차 접전"
+        "batter": "최원준",
+        "heat": 65,
+        "label": "5회초 동점 접전"
       },
       "recap": null,
       "decision": null,
@@ -364,7 +364,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": 1,
+        "score": 6,
         "starter": {
           "name": "비슬리",
           "era": 4.5,
@@ -398,13 +398,13 @@
         "inning": 3,
         "half": "B",
         "out": 2,
-        "b1": true,
-        "b2": true,
-        "b3": true,
-        "pitcher": "전민재",
-        "batter": "김윤식",
-        "heat": 46,
-        "label": "3회말 1점차 접전"
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "김윤식",
+        "batter": "박승욱",
+        "heat": 19,
+        "label": "3회말 4점차"
       },
       "recap": null,
       "decision": null,
@@ -562,12 +562,12 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "이건욱",
-        "batter": "최인호",
+        "batter": "페라자",
         "heat": 44,
         "label": "5회초 2점차"
       },
@@ -725,16 +725,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 2,
+        "inning": 4,
+        "half": "T",
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "김주원",
-        "batter": "박지성",
+        "pitcher": "라일리",
+        "batter": "김건희",
         "heat": 0,
-        "label": "3회말 6점차"
+        "label": "4회초 6점차"
       },
       "recap": null,
       "decision": null,
