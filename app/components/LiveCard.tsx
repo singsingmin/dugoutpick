@@ -8,9 +8,9 @@ import { colors, spacing } from '../theme';
 
 const LIVE_RED = '#E03131';
 const BASE_ON = LIVE_RED;
-const BASE_OFF = colors.track;
+const BASE_OFF = '#C8C8C8';
 const BASE_SIZE = 14;
-const OUT_SIZE = 7;
+const OUT_SIZE = 10;
 
 function Base({ on }: { on: boolean }) {
   return <View style={[s.base, on && { backgroundColor: BASE_ON }]} />;
@@ -94,14 +94,14 @@ const s = StyleSheet.create({
   main: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around' },
   teamCol: { flex: 1, alignItems: 'center', gap: 2 },
   diamondWrap: { alignItems: 'center', gap: 6 },
-  diamond: { alignItems: 'center', gap: 2 },
+  diamond: { alignItems: 'center', gap: 0 },
   diamondTop: { alignItems: 'center' },
   // spacer가 원래 홈베이스 자리를 차지해 3루·1루 꼭짓점이 떨어지고 2루와 삼각형 정렬됨
   diamondMid: { flexDirection: 'row', alignItems: 'center', gap: 4 },
   baseSpacer: { width: BASE_SIZE },
   base: { width: BASE_SIZE, height: BASE_SIZE, backgroundColor: BASE_OFF, transform: [{ rotate: '45deg' }] },
   outs: { flexDirection: 'row', gap: 5 },
-  outDot: { width: OUT_SIZE, height: OUT_SIZE, borderRadius: OUT_SIZE / 2, borderWidth: 1.5, borderColor: colors.textDim },
-  outFilled: { backgroundColor: LIVE_RED, borderColor: LIVE_RED },
+  outDot: { width: OUT_SIZE, height: OUT_SIZE, borderRadius: OUT_SIZE / 2, backgroundColor: BASE_OFF },
+  outFilled: { backgroundColor: LIVE_RED },
   players: { textAlign: 'center' },
 });
