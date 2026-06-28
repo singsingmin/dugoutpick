@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T09:30:31.043Z",
+  "updatedAt": "2026-06-28T09:34:17.581Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -71,7 +71,7 @@
         "b1": true,
         "b2": true,
         "b3": false,
-        "pitcher": "최승용",
+        "pitcher": "김동주",
         "batter": "변우혁",
         "heat": 35,
         "label": "6회초 3점차"
@@ -232,12 +232,12 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "양창섭",
-        "batter": "안현민",
+        "batter": "힐리어드",
         "heat": 70,
         "label": "6회초 동점 접전"
       },
@@ -398,11 +398,11 @@
         "inning": 4,
         "half": "B",
         "out": 1,
-        "b1": false,
-        "b2": false,
+        "b1": true,
+        "b2": true,
         "b3": false,
         "pitcher": "김진수",
-        "batter": "레이예스",
+        "batter": "윤동희",
         "heat": 21,
         "label": "4회말 4점차"
       },
@@ -566,7 +566,7 @@
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이건욱",
+        "pitcher": "김민",
         "batter": "노시환",
         "heat": 48,
         "label": "6회초 2점차"
@@ -729,10 +729,10 @@
         "half": "T",
         "out": 0,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "라일리",
-        "batter": "어준서",
+        "batter": "여동욱",
         "heat": 0,
         "label": "5회초 6점차"
       },
