@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-28T07:00:35.904Z",
+  "updatedAt": "2026-06-28T07:02:17.891Z",
   "lastWeek": {
     "range": [
       "20260615",
@@ -321,13 +321,6 @@
           "home": "SK",
           "awayStarter": "화이트",
           "homeStarter": "타케다"
-        },
-        {
-          "date": "20260628",
-          "away": "HH",
-          "home": "SK",
-          "awayStarter": "류현진",
-          "homeStarter": "최민준"
         }
       ],
       "KT": [
@@ -446,13 +439,6 @@
           "home": "SK",
           "awayStarter": "화이트",
           "homeStarter": "타케다"
-        },
-        {
-          "date": "20260628",
-          "away": "HH",
-          "home": "SK",
-          "awayStarter": "류현진",
-          "homeStarter": "최민준"
         }
       ],
       "HT": [
