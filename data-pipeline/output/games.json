@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T10:36:18.093Z",
+  "updatedAt": "2026-06-28T10:38:35.203Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": true,
         "b2": true,
         "b3": false,
         "pitcher": "최지강",
-        "batter": "김태군",
+        "batter": "한준수",
         "heat": 0,
         "label": "9회초 8점차"
       },
@@ -232,12 +232,12 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "최지광",
-        "batter": "힐리어드",
+        "batter": "김상수",
         "heat": 43,
         "label": "8회초 3점차"
       },
@@ -402,7 +402,7 @@
         "b2": false,
         "b3": false,
         "pitcher": "김강현",
-        "batter": "오스틴",
+        "batter": "박동원",
         "heat": 52,
         "label": "6회초 2점차"
       },
@@ -562,12 +562,12 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "b1": false,
         "b2": true,
-        "b3": false,
+        "b3": true,
         "pitcher": "조병현",
-        "batter": "심우준",
+        "batter": "페라자",
         "heat": 88,
         "label": "9회초 동점 접전"
       },
@@ -726,15 +726,15 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "하준영",
-        "batter": "김웅빈",
+        "pitcher": "김윤하",
+        "batter": "한석현",
         "heat": 0,
-        "label": "8회초 7점차"
+        "label": "8회말 7점차"
       },
       "recap": null,
       "decision": null,
