@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T09:22:17.949Z",
+  "updatedAt": "2026-06-28T09:24:19.828Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "고영표",
-        "batter": "류지혁",
+        "batter": "김도환",
         "heat": 65,
         "label": "5회말 동점 접전"
       },
@@ -397,12 +397,12 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "비슬리",
-        "batter": "문정빈",
+        "batter": "오지환",
         "heat": 21,
         "label": "4회초 4점차"
       },
@@ -562,12 +562,12 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "류현진",
-        "batter": "최지훈",
+        "batter": "조형우",
         "heat": 44,
         "label": "5회말 2점차"
       },
@@ -727,12 +727,12 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "박지성",
-        "batter": "한석현",
+        "batter": "박민우",
         "heat": 0,
         "label": "4회말 6점차"
       },
