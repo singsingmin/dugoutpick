@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-27T15:46:26.586Z",
+  "updatedAt": "2026-06-28T07:00:35.904Z",
   "lastWeek": {
     "range": [
       "20260615",
@@ -106,7 +106,7 @@
         "pred": 87,
         "reason": "게임차 2.5의 순위 다툼",
         "dateStart": "20260626",
-        "dateEnd": "20260628"
+        "dateEnd": "20260627"
       }
     ],
     "team": {
@@ -409,13 +409,6 @@
           "home": "OB",
           "awayStarter": "시라카와",
           "homeStarter": "잭로그"
-        },
-        {
-          "date": "20260628",
-          "away": "HT",
-          "home": "OB",
-          "awayStarter": "김태형",
-          "homeStarter": "최승용"
         }
       ],
       "HH": [
@@ -497,13 +490,6 @@
           "home": "OB",
           "awayStarter": "시라카와",
           "homeStarter": "잭로그"
-        },
-        {
-          "date": "20260628",
-          "away": "HT",
-          "home": "OB",
-          "awayStarter": "김태형",
-          "homeStarter": "최승용"
         }
       ],
       "WO": [
