@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-28T07:02:17.891Z",
+  "updatedAt": "2026-06-28T07:04:19.706Z",
   "lastWeek": {
     "range": [
       "20260615",
@@ -189,13 +189,6 @@
           "home": "LT",
           "awayStarter": "웰스",
           "homeStarter": "김진욱"
-        },
-        {
-          "date": "20260628",
-          "away": "LG",
-          "home": "LT",
-          "awayStarter": "장현식",
-          "homeStarter": "비슬리"
         }
       ],
       "NC": [
@@ -277,13 +270,6 @@
           "home": "LT",
           "awayStarter": "웰스",
           "homeStarter": "김진욱"
-        },
-        {
-          "date": "20260628",
-          "away": "LG",
-          "home": "LT",
-          "awayStarter": "장현식",
-          "homeStarter": "비슬리"
         }
       ],
       "SK": [
