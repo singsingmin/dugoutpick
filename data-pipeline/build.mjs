@@ -386,46 +386,144 @@ function weekBounds(ymd) {
 // 이번주 예측용 가정 선발 ERA(선발 미정이라 평균 에이스 가정 → 점수 보정). LEAGUE_ERA(4.20)보다 좋게.
 const WEEKLY_ERA = 3.2;
 
-// 지난주 성적 한줄평 (하이브리드: 규칙으로 상황 판별 + 손수 쓴 밈/드립 문구 라이브러리).
-// AI 없음·환각 없음. 실데이터(주간 승패·현재 순위·연속·지난주 잡은/진 상대·다음주 상대)만 사용.
-// 경기 내 사건(역전/끝내기 등)은 데이터에 없으므로 절대 지어내지 않는다.
-// 같은 데이터엔 항상 같은 문구(결정적), 팀마다 시드가 달라 변주 — seed로 변형 선택.
+// 지난주 성적 한줄평 v2 (하이브리드: 규칙 판별 + 손수 쓴 밈/드립 라이브러리).
+// AI 없음·환각 없음. 실데이터만 사용. 경기 내 사건은 데이터 없으므로 지어내지 않는다.
+// 조합형 opener+closer 구조 + seed 슬롯 분리로 같은 상황에서도 다양한 변주.
 function weeklyNote(code, rec, ctx) {
   const tn = (c) => ctx.byCode[c]?.name ?? c;
   const { w, l, d, rank } = rec;
   const g = w + l + d;
-  const { streak, beat, lost, nextOppRank, rankOf = {}, streakOf = {}, thisOpps = [] } = ctx;
-  const seed = (w * 131 + l * 977 + rank * 31) >>> 0; // 인접 값이 다른 변형에 흩어지도록 혼합
-  const pick = (arr) => arr[seed % arr.length];
+  const { streak, beat, lost, nextOppRank, rankOf = {}, streakOf = {}, thisOpps = [], phase = 0.5 } = ctx;
+  const seed = (w * 131 + l * 977 + rank * 31) >>> 0;
+  const p0 = (arr) => arr[seed % arr.length];
+  const p1 = (arr) => arr[(seed >> 3) % arr.length];
+  const p2 = (arr) => arr[(seed >> 6) % arr.length];
+  const join = (a, b) => (b ? `${a} — ${b}` : a);
 
-  // 지난주 잡은 '윗물'(나보다 순위 높고 4위 이내) / 덜미 잡힌 '아랫물'(나보다 낮고 8위 이하)
-  const upset = beat.filter((o) => o.rank < rank && o.rank <= 4).sort((a, b) => a.rank - b.rank)[0];
-  const slip = lost.filter((o) => o.rank > rank && o.rank >= 8).sort((a, b) => b.rank - a.rank)[0];
   const rec2 = `${w}승${l}패${d ? ` ${d}무` : ''}`;
+  const isLate = phase >= 0.6; // 8월 이후
 
-  // 이번주 '해볼 만한 상대': 하위권(8위↓)이거나 연패 중인 약체. 단 상승세(3연승↑) 상대는 제외.
-  // 나보다 크게 강하지 않은(순위 비슷↓ 또는 같이 연패) 상대 중 가장 약체를 고른다. 부진한 팀에만 희망 클로즈로 붙임.
+  // 서사 재료
+  const upset = beat.filter(o => o.rank < rank && o.rank <= 4).sort((a, b) => a.rank - b.rank)[0];
+  const slip  = lost.filter(o => o.rank > rank && o.rank >= 8).sort((a, b) => b.rank - a.rank)[0];
+  const ironic = !!(upset && slip);
+
+  // 이번주 일정 강도
+  const oppRanks = thisOpps.filter(o => o !== code).map(o => rankOf[o] ?? 5);
+  const avgOppRank = oppRanks.length ? oppRanks.reduce((a, b) => a + b, 0) / oppRanks.length : 5;
+  const toughWeek = avgOppRank <= 3;
+  const easyWeek  = avgOppRank >= 7.5;
+  const schedClose = toughWeek ? p1([`이번주 일정이 고비다`, `이번주 벽이 있다`, `이번주 일정도 만만치 않아`])
+                   : easyWeek  ? p1([`이번주는 점프업 찬스`, `이번주 일정 해볼 만해`, `이번주 잡아야 순위 움직인다`])
+                   : null;
+
+  // 희망 클로즈: 이번주 약체 상대 있을 때
   const winnable = thisOpps
-    .filter((o) => o !== code)
-    .map((o) => ({ code: o, rank: rankOf[o] ?? 99, streak: streakOf[o] ?? 0 }))
-    .filter((o) => o.streak < 3 && (o.rank >= 8 || (o.streak <= -3 && o.rank >= rank - 2))) // 하위권 약체 or (연패 중 & 나보다 크게 높지 않음). 상승세 상대는 제외
+    .filter(o => o !== code)
+    .map(o => ({ code: o, rank: rankOf[o] ?? 99, streak: streakOf[o] ?? 0 }))
+    .filter(o => o.streak < 3 && (o.rank >= 8 || (o.streak <= -3 && o.rank >= rank - 2)))
     .sort((a, b) => (b.rank - a.rank) || (a.streak - b.streak))[0];
   const hope = winnable ? `그래도 이번주 ${tn(winnable.code)} 만나니까 해볼 만해` : null;
 
-  // 우선순위: 극단(전승/장기연속/전패) → 순위 특수(1위/꼴찌/선두권) → 서사(업셋/덜미) → 위닝/루징/반타작
+  // ── 극단 케이스 ──
   if (g === 0) return '지난주 경기 없이 재정비 — 이번주를 노린다';
-  if (l === 0 && w >= 3) return pick([`${w}전 ${w}승, 거칠 것 없는 무패 주간 🔥`, `지난주 ${w}연승 싹쓸이 — 폼 미쳤다`, `${w}경기 전부 승, 이번주도 못 막는다`]);
-  if (streak <= -4) return hope ? `${-streak}연패… ${hope}` : pick([`${-streak}연패 늪, 탈출이 급하다`, `${-streak}연패째… 이러다 큰일 난다`, `${-streak}연패 행진, 분위기 반전이 절실`]);
-  if (w === 0 && l >= 3) return hope ? `${l}전 ${l}패… ${hope}` : pick([`${l}전 ${l}패… 출구가 안 보인다`, `지난주 한 경기도 못 잡았다, 단체로 멘탈 가출`, `${l}연패로 마감… 다음주는 제발`]);
-  if (streak >= 4) return pick([`${streak}연승 폭주 기관차 🚂 누가 좀 말려봐`, `${streak}연승, 지금이 전성기`, `${streak}연승 질주 — 상승세 제대로다`]);
-  if (rank === 1) return pick([`선두 수성 중 — 어쩌라고, 1위인데 (${rec2})`, `${rec2}, 1위는 1위가 한다`, `${rec2}로 선두 유지, 클래스가 다르다`]);
+
+  if (l === 0 && w >= 3) return p0([
+    `${w}전 ${w}승, 거칠 것 없는 무패 주간 🔥`,
+    `지난주 ${w}연승 싹쓸이 — 폼 미쳤다`,
+    `${w}경기 전부 승, 이번주도 못 막는다`,
+    `${w}전승으로 마감, 지금 이 팀 뭔가 달라`,
+    `지난주 완벽했다 — ${w}전 ${w}승`,
+  ]);
+
+  if (streak <= -4) {
+    const base = p0([`${-streak}연패 늪, 탈출이 급하다`, `${-streak}연패째… 이러다 큰일 난다`, `${-streak}연패 행진, 분위기 반전이 절실`, `${-streak}연패, 뭔가 터져야 한다`]);
+    return join(base, hope);
+  }
+
+  if (w === 0 && l >= 3) {
+    const base = p0([`${l}전 ${l}패… 출구가 안 보인다`, `지난주 한 경기도 못 잡았다, 단체로 멘탈 가출`, `${l}연패로 마감… 다음주는 제발`, `${l}전 전패, 이번주가 분수령`]);
+    return join(base, hope);
+  }
+
+  if (streak >= 4) return p0([
+    `${streak}연승 폭주 기관차 🚂 누가 좀 말려봐`,
+    `${streak}연승, 지금이 전성기`,
+    `${streak}연승 질주 — 상승세 제대로다`,
+    `${streak}연승, 이 팀 지금 무서운 거 맞아`,
+    `${streak}연승 행진 중 — 멈출 이유가 없다`,
+  ]);
+
+  // ── 순위 특수 ──
+  if (rank === 1) {
+    const base = p0([`선두 수성 중 — 어쩌라고, 1위인데 (${rec2})`, `${rec2}, 1위는 1위가 한다`, `${rec2}로 선두 유지, 클래스가 다르다`, `${rec2}, 독주 중 — 따라잡힐 기미 없다`]);
+    return join(base, isLate ? p1([`독주 체제 굳히나`, `포스트시즌까지 이 기세`]) : schedClose);
+  }
+
   if (rank === 2 && nextOppRank === 1) return `${rec2}, 다음주 선두 직접 잡으러 간다`;
-  if (rank === 10) return hope ? `최하위지만 ${hope}` : pick([`${rec2}, 탈꼴찌가 간절하다`, `10위 바닥에서 반등을 노린다 (${rec2})`, `${rec2}, 더 내려갈 곳도 없다`]);
-  if (w > l && upset) return pick([`${tn(upset.code)} 잡고 ${rec2} 위닝 — 윗물 정조준`, `윗물 ${tn(upset.code)} 잡은 ${rec2}, 무섭다`]);
-  if (l > w && slip) return pick([`${tn(slip.code)}한테 덜미, ${rec2} 뼈아픈 한 주`, `${tn(slip.code)}한테 발목… ${rec2} 아쉽다`]);
-  if (w > l) return pick([`${rec2} 위닝, 분위기 탄다`, `이기는 맛 아는 한 주 — ${rec2}`, `${rec2}로 위닝 마감, 상승 기류`]);
-  if (l > w) return hope ? `${rec2} 루징, ${hope}` : pick([`${rec2} 루징, 반등이 필요해`, `살짝 삐끗한 한 주 ${rec2}`, `${rec2}, 다음주 반등을 노린다`]);
-  return pick([`딱 반타작 ${rec2}, 평타는 쳤다`, `${rec2} 5할 페이스, 무난한 한 주`, `${rec2}, 이겼다 졌다 롤러코스터`]);
+
+  if (rank === 10) {
+    const base = p0([`${rec2}, 탈꼴찌가 간절하다`, `10위 바닥에서 반등을 노린다 (${rec2})`, `${rec2}, 더 내려갈 곳도 없다`, `꼴찌에서 탈출하자 — ${rec2}`]);
+    return join(base, hope);
+  }
+
+  // ── 아이러니 주간: 윗물 잡고 아랫물한테 짐 ──
+  if (ironic) return p0([
+    `${tn(upset.code)} 잡고 ${tn(slip.code)}한테 지는 롤러코스터 (${rec2})`,
+    `강팀 격파에 약팀 덜미 — 뭔가 아쉬운 한 주 (${rec2})`,
+    `${tn(upset.code)} 꺾었는데 ${tn(slip.code)}한테 발목, 야구는 알 수가 없어`,
+    `이기다 지다 사건 많은 한 주 — ${rec2}`,
+  ]);
+
+  // ── 2~3연승 ──
+  if (streak >= 2 && streak <= 3) {
+    const base = p0([`${streak}연승 흐름 탔다`, `${streak}연승으로 상승세`, `${streak}연승 — 좀 더 달린다`, `${streak}연승, 분위기 좋다`]);
+    return join(base, schedClose ?? p2([`${rec2} 위닝`, `이번주도 기대해볼 만`]));
+  }
+
+  // ── 2~3연패 ──
+  if (streak <= -2 && streak >= -3) {
+    const base = p0([`${-streak}연패, 살짝 흔들린다`, `${-streak}연패째 — 분위기 잡아야 해`, `${-streak}연패 중, 한숨이 나온다`, `${-streak}연패, 이번주 끊어야 한다`]);
+    return join(base, hope ?? schedClose);
+  }
+
+  // ── 시즌 후반 순위 맥락 ──
+  if (isLate) {
+    if (rank <= 4 && w > l) return p0([`${rec2}, 가을야구 굳히기 모드`, `${rec2} 위닝, 포스트시즌 자리 지킨다`, `${rec2}로 가을야구 청신호`]);
+    if (rank >= 5 && rank <= 8 && l > w) {
+      const base = p0([`${rec2}, 가을야구 적신호 — 지금부터가 진짜`, `${rec2} 루징, 탈락 카운트다운 시작되나`, `${rec2}, 이번주 못 잡으면 가을야구 멀어진다`]);
+      return join(base, hope);
+    }
+    if (rank >= 9) {
+      const base = p0([`${rec2}, 가을야구는 내년에`, `${rec2} — 시즌 마무리가 남았다`, `탈락권이지만 자존심 경기는 남았다 (${rec2})`]);
+      return join(base, hope);
+    }
+  }
+
+  // ── 서사(업셋/덜미) ──
+  if (w > l && upset) return p0([
+    `${tn(upset.code)} 잡고 ${rec2} 위닝 — 윗물 정조준`,
+    `윗물 ${tn(upset.code)} 잡은 ${rec2}, 무섭다`,
+    `${tn(upset.code)} 격파 포함 ${rec2} 위닝, 해냈다`,
+    join(`${tn(upset.code)} 꺾으면서 ${rec2}`, schedClose),
+  ]);
+
+  if (l > w && slip) {
+    const base = p0([`${tn(slip.code)}한테 덜미, ${rec2} 뼈아픈 한 주`, `${tn(slip.code)}한테 발목… ${rec2} 아쉽다`, `${tn(slip.code)}한테 잡히다니… ${rec2} 씁쓸`]);
+    return join(base, hope);
+  }
+
+  // ── 위닝 / 루징 / 반타작 ──
+  if (w > l) {
+    const base = p0([`${rec2} 위닝, 분위기 탄다`, `이기는 맛 아는 한 주 — ${rec2}`, `${rec2}로 위닝 마감, 상승 기류`, `${rec2}, 해냈다 — 위닝 마감`]);
+    return join(base, schedClose);
+  }
+  if (l > w) {
+    const base = p0([`${rec2} 루징, 반등이 필요해`, `살짝 삐끗한 한 주 ${rec2}`, `${rec2}, 다음주 반등을 노린다`, `아쉬운 한 주 ${rec2}, 이번주는 달라야 해`]);
+    return join(base, hope ?? schedClose);
+  }
+
+  return p0([`딱 반타작 ${rec2}, 평타는 쳤다`, `${rec2} 5할 페이스, 무난한 한 주`, `${rec2}, 이겼다 졌다 롤러코스터`, `${rec2}, 딱 중간 — 이번주 방향 잡는다`]);
 }
 
 function buildReport(date, schedule, standings, starterMap = {}) {
@@ -485,6 +583,7 @@ function buildReport(date, schedule, standings, starterMap = {}) {
       beat: beatLost[code]?.beat ?? [],
       lost: beatLost[code]?.lost ?? [],
       nextOppRank: firstOpp ? (rankOf[firstOpp] ?? null) : null,
+      phase: seasonPhase(date),
     });
   }
 
