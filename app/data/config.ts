@@ -3,4 +3,4 @@
 // 문자열 = 원격 베이스 URL. load.ts가 fetch + AsyncStorage 캐시(오프라인 시 캐시→번들 폴백).
 // GitHub Actions가 하루 5회 data-pipeline/output/*.json을 갱신/커밋 → 아래 raw URL이 자동 최신화.
 export const REMOTE_BASE_URL: string | null =
-  'https://raw.githubusercontent.com/singsingmin/dugoutpick/main/data-pipeline/output';
+  'https://dugoutpick-kbo-live.tkdals8401.workers.dev';
