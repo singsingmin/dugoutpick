@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T08:24:19.077Z",
+  "updatedAt": "2026-06-28T08:26:18.279Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -68,10 +68,10 @@
         "inning": 2,
         "half": "B",
         "out": 1,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "김민석",
+        "pitcher": "안재석",
         "batter": "김태형",
         "heat": 49,
         "label": "2회말 동점 접전"
@@ -232,11 +232,11 @@
       "live": {
         "inning": 2,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "최형우",
+        "pitcher": "디아즈",
         "batter": "고영표",
         "heat": 49,
         "label": "2회말 동점 접전"
@@ -397,12 +397,12 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "비슬리",
-        "batter": "오지환",
+        "batter": "홍창기",
         "heat": 41,
         "label": "2회초 1점차 접전"
       },
@@ -562,11 +562,11 @@
       "live": {
         "inning": 2,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김재환",
+        "pitcher": "오태곤",
         "batter": "류현진",
         "heat": 49,
         "label": "2회말 동점 접전"
@@ -694,7 +694,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 1,
+        "score": 5,
         "starter": {
           "name": "라일리",
           "era": 3.42,
@@ -728,13 +728,13 @@
         "inning": 1,
         "half": "B",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "이우성",
+        "b3": false,
+        "pitcher": "박건우",
         "batter": "와일스",
-        "heat": 44,
-        "label": "1회말 동점 접전"
+        "heat": 15,
+        "label": "1회말 4점차"
       },
       "recap": null,
       "decision": null,
