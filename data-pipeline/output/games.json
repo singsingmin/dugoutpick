@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T08:50:22.451Z",
+  "updatedAt": "2026-06-28T08:52:18.253Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -233,10 +233,10 @@
         "inning": 4,
         "half": "B",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "김지찬",
+        "pitcher": "김성윤",
         "batter": "고영표",
         "heat": 59,
         "label": "4회말 동점 접전"
@@ -560,16 +560,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 2,
+        "inning": 4,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "정준재",
-        "batter": "류현진",
-        "heat": 28,
-        "label": "3회말 3점차"
+        "pitcher": "이로운",
+        "batter": "이도윤",
+        "heat": 30,
+        "label": "4회초 3점차"
       },
       "recap": null,
       "decision": null,
@@ -694,7 +694,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "라일리",
           "era": 3.42,
@@ -727,14 +727,14 @@
       "live": {
         "inning": 2,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박민우",
+        "pitcher": "박건우",
         "batter": "박지성",
-        "heat": 17,
-        "label": "2회말 4점차"
+        "heat": 9,
+        "label": "2회말 5점차"
       },
       "recap": null,
       "decision": null,
