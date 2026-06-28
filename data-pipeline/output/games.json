@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T10:18:17.922Z",
+  "updatedAt": "2026-06-28T10:20:24.820Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -66,15 +66,15 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "박신지",
-        "batter": "정현창",
+        "pitcher": "한재승",
+        "batter": "조수행",
         "heat": 0,
-        "label": "8회초 8점차"
+        "label": "8회말 8점차"
       },
       "recap": null,
       "decision": null,
@@ -234,10 +234,10 @@
         "half": "B",
         "out": 1,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "스기모토",
-        "batter": "김성윤",
+        "batter": "구자욱",
         "heat": 40,
         "label": "7회말 3점차"
       },
@@ -401,7 +401,7 @@
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김진수",
+        "pitcher": "김영우",
         "batter": "손성빈",
         "heat": 60,
         "label": "5회말 1점차 접전"
@@ -562,12 +562,12 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "이상규",
-        "batter": "에레디아",
+        "batter": "최정",
         "heat": 55,
         "label": "8회말 2점차"
       },
@@ -727,12 +727,12 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "손주환",
-        "batter": "임병욱",
+        "batter": "최주환",
         "heat": 0,
         "label": "7회초 7점차"
       },
