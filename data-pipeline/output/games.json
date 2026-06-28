@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T10:30:29.337Z",
+  "updatedAt": "2026-06-28T10:32:19.000Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -68,11 +68,11 @@
         "inning": 9,
         "half": "T",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "최지강",
-        "batter": "김규성",
+        "batter": "박정우",
         "heat": 0,
         "label": "9회초 8점차"
       },
@@ -395,16 +395,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 3,
-        "b1": true,
+        "inning": 6,
+        "half": "T",
+        "out": 1,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김영우",
-        "batter": "한동희",
-        "heat": 48,
-        "label": "5회말 2점차"
+        "pitcher": "김강현",
+        "batter": "박해민",
+        "heat": 52,
+        "label": "6회초 2점차"
       },
       "recap": null,
       "decision": null,
@@ -562,12 +562,12 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 0,
-        "b1": true,
-        "b2": false,
+        "out": 1,
+        "b1": false,
+        "b2": true,
         "b3": false,
         "pitcher": "조병현",
-        "batter": "황영묵",
+        "batter": "심우준",
         "heat": 88,
         "label": "9회초 동점 접전"
       },
