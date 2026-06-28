@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T10:14:17.403Z",
+  "updatedAt": "2026-06-28T10:16:18.938Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -69,10 +69,10 @@
         "half": "T",
         "out": 1,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "박신지",
-        "batter": "박재현",
+        "batter": "김호령",
         "heat": 0,
         "label": "8회초 8점차"
       },
@@ -199,7 +199,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "양창섭",
           "era": 4.53,
@@ -232,14 +232,14 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 0,
-        "b1": true,
+        "out": 1,
+        "b1": false,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "스기모토",
-        "batter": "김도환",
-        "heat": 66,
-        "label": "7회말 1점차 접전"
+        "batter": "김지찬",
+        "heat": 53,
+        "label": "7회말 2점차"
       },
       "recap": null,
       "decision": null,
@@ -352,7 +352,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": 6,
+        "score": 7,
         "starter": {
           "name": "장현식",
           "era": 3.69,
@@ -402,9 +402,9 @@
         "b2": true,
         "b3": true,
         "pitcher": "김강현",
-        "batter": "문성주",
-        "heat": 47,
-        "label": "5회초 2점차"
+        "batter": "신민재",
+        "heat": 60,
+        "label": "5회초 1점차 접전"
       },
       "recap": null,
       "decision": null,
@@ -725,16 +725,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 2,
-        "b1": true,
+        "inning": 7,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김윤하",
-        "batter": "김형준",
+        "pitcher": "김태훈",
+        "batter": "임병욱",
         "heat": 0,
-        "label": "6회말 7점차"
+        "label": "7회초 7점차"
       },
       "recap": null,
       "decision": null,
