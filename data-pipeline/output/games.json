@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T07:04:19.706Z",
+  "updatedAt": "2026-06-28T07:06:18.418Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -381,8 +381,8 @@
           },
           {
             "order": 2,
-            "pos": "2루수",
-            "name": "고승민"
+            "pos": "1루수",
+            "name": "노진혁"
           },
           {
             "order": 3,
@@ -401,18 +401,18 @@
           },
           {
             "order": 6,
-            "pos": "1루수",
-            "name": "나승엽"
-          },
-          {
-            "order": 7,
             "pos": "유격수",
             "name": "전민재"
           },
           {
+            "order": 7,
+            "pos": "2루수",
+            "name": "고승민"
+          },
+          {
             "order": 8,
             "pos": "3루수",
-            "name": "손호영"
+            "name": "박승욱"
           },
           {
             "order": 9,
@@ -433,23 +433,23 @@
           },
           {
             "order": 3,
-            "pos": "1루수",
+            "pos": "지명타자",
             "name": "오스틴"
           },
           {
             "order": 4,
             "pos": "3루수",
-            "name": "문정빈"
+            "name": "문보경"
           },
           {
             "order": 5,
-            "pos": "포수",
-            "name": "박동원"
+            "pos": "1루수",
+            "name": "문정빈"
           },
           {
             "order": 6,
-            "pos": "지명타자",
-            "name": "문성주"
+            "pos": "유격수",
+            "name": "오지환"
           },
           {
             "order": 7,
@@ -458,8 +458,8 @@
           },
           {
             "order": 8,
-            "pos": "유격수",
-            "name": "구본혁"
+            "pos": "포수",
+            "name": "이주헌"
           },
           {
             "order": 9,
@@ -467,7 +467,7 @@
             "name": "신민재"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {

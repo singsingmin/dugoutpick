@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-28T07:04:19.706Z",
+  "updatedAt": "2026-06-28T07:06:18.418Z",
   "lastWeek": {
     "range": [
       "20260615",
@@ -90,7 +90,7 @@
         "pred": 91,
         "reason": "게임차 0.5, 막상막하 승부",
         "dateStart": "20260626",
-        "dateEnd": "20260628"
+        "dateEnd": "20260627"
       },
       {
         "away": "OB",
@@ -145,13 +145,6 @@
           "home": "SS",
           "awayStarter": "로건",
           "homeStarter": "원태인"
-        },
-        {
-          "date": "20260628",
-          "away": "KT",
-          "home": "SS",
-          "awayStarter": "고영표",
-          "homeStarter": "양창섭"
         }
       ],
       "LG": [
@@ -344,13 +337,6 @@
           "home": "SS",
           "awayStarter": "로건",
           "homeStarter": "원태인"
-        },
-        {
-          "date": "20260628",
-          "away": "KT",
-          "home": "SS",
-          "awayStarter": "고영표",
-          "homeStarter": "양창섭"
         }
       ],
       "OB": [
