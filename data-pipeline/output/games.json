@@ -1,7 +1,7 @@
 {
   "date": "20260628",
   "dateText": "2026년 6월 28일",
-  "updatedAt": "2026-06-28T10:10:23.927Z",
+  "updatedAt": "2026-06-28T10:12:20.370Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 15,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 2,
+        "inning": 8,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김태형",
-        "batter": "안재석",
+        "pitcher": "박신지",
+        "batter": "박민",
         "heat": 0,
-        "label": "7회말 8점차"
+        "label": "8회초 8점차"
       },
       "recap": null,
       "decision": null,
@@ -236,7 +236,7 @@
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "이상동",
+        "pitcher": "스기모토",
         "batter": "김도환",
         "heat": 66,
         "label": "7회말 1점차 접전"
@@ -402,7 +402,7 @@
         "b2": true,
         "b3": true,
         "pitcher": "김강현",
-        "batter": "이주헌",
+        "batter": "문성주",
         "heat": 47,
         "label": "5회초 2점차"
       },
@@ -563,11 +563,11 @@
         "inning": 8,
         "half": "T",
         "out": 2,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "문승원",
-        "batter": "노시환",
+        "batter": "김태연",
         "heat": 55,
         "label": "8회초 2점차"
       },
@@ -694,7 +694,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 8,
+        "score": 9,
         "starter": {
           "name": "라일리",
           "era": 3.42,
@@ -727,14 +727,14 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": true,
         "b2": false,
-        "b3": true,
+        "b3": false,
         "pitcher": "김윤하",
-        "batter": "박건우",
+        "batter": "김휘집",
         "heat": 0,
-        "label": "6회말 6점차"
+        "label": "6회말 7점차"
       },
       "recap": null,
       "decision": null,
