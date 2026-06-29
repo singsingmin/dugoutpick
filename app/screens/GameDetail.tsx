@@ -11,7 +11,7 @@ import Panel from '../components/Panel';
 import ScreenHeader from '../components/ScreenHeader';
 import TeamName from '../components/TeamName';
 import TeamBadge from '../components/TeamBadge';
-import HonjamBadge from '../components/HonjamBadge';
+import JerseyScoreBadge from '../components/JerseyScoreBadge';
 import SectionLabel from '../components/SectionLabel';
 import { loadTeams } from '../data/load';
 import { border, colors, spacing } from '../theme';
@@ -103,7 +103,7 @@ export default function GameDetail({ route, navigation }: Props) {
         <>
           <View style={styles.honjamRow}>
             <PixelText color={colors.gold} style={styles.spark}>✦</PixelText>
-            <HonjamBadge score={game.honjam.score} size="lg" awayColor={teamColor(game.away.code)} homeColor={teamColor(game.home.code)} />
+            <JerseyScoreBadge score={game.honjam.score} variant="detail" teamColor={teamColor(game.home.code)} />
             <PixelText color={colors.gold} style={styles.spark}>✦</PixelText>
           </View>
           <PixelText variant="caption" color={colors.textDim} style={styles.honjamNote}>경기 전 조건 기준 · 실제 결과와 다를 수 있음</PixelText>

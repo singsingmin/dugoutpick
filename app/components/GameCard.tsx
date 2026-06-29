@@ -5,7 +5,7 @@ import type { Game } from '../types';
 import PixelText from './PixelText';
 import Panel from './Panel';
 import TeamName from './TeamName';
-import HonjamBadge from './HonjamBadge';
+import JerseyScoreBadge from './JerseyScoreBadge';
 import StatusChip from './StatusChip';
 import StarterLine from './StarterLine';
 import { colors, spacing } from '../theme';
@@ -81,7 +81,7 @@ export default function GameCard({ game, variant, onPress, showRecap = true }: P
                 {game.time} · {game.stadium}
               </PixelText>
             </View>
-            {game.honjam && <HonjamBadge score={game.honjam.score} size="lg" awayColor={teamColor(game.away.code)} homeColor={teamColor(game.home.code)} />}
+            {game.honjam && <JerseyScoreBadge score={game.honjam.score} variant="hero" teamColor={teamColor(game.home.code)} />}
           </View>
           {game.honjam && (
             <PixelText variant="body" color={colors.text} style={styles.reasonHero}>
@@ -107,7 +107,7 @@ export default function GameCard({ game, variant, onPress, showRecap = true }: P
           <StatusChip game={game} />
           <PixelText variant="caption" color={colors.textDim}>{game.time}</PixelText>
         </View>
-        {game.honjam && <HonjamBadge score={game.honjam.score} size="sm" />}
+        {game.honjam && <JerseyScoreBadge score={game.honjam.score} variant="compact" teamColor={teamColor(game.home.code)} />}
       </Panel>
     </Pressable>
   );
