@@ -5,8 +5,7 @@
 > 최종 정리: 2026-06-24.
 
 ## A. ✨ 기능 다듬기 (사용 경험)
-- [ ] **아이콘 Phosphor 교체** (2026-07-01 EAS 재빌드 예정) — 현재 `@expo/vector-icons(MaterialCommunityIcons)` A단계 완료. `phosphor-react-native` 설치 후 `AppIcon.tsx` 매핑만 교체(30분 작업). EAS 재빌드와 묶어서 진행.
-유저 피드백 받으며 다듬는 게 효율적.
+- [x] **아이콘 커스텀 SVG 교체** (2026-06-29) — 커스텀 SVG로 교체 완료.
 - [x] **라이브 인앱 폴링** (2026-06-25) — LIVE 경기 존재 시 60초 자동 갱신(useFocusEffect + interval 병행). 배터리 영향 최소화 위해 LIVE 게임 없으면 폴링 중단.
 - [x] **라인업 조회** (2026-06-25) — `Schedule.asmx/GetLineUpAnalysis` API로 선발 타순(1~9번·포지션·이름) fetch → games.json 포함. 경기 상세 선발투수 섹션 옆 버튼 → 바텀시트 표시. 발표 전 추정 타순도 "최근 기준 추정" 표시로 제공.
 - [ ] **로컬 알림** — 내 팀 경기 시작/접전 알림. 서버 없이 가능(PRD에서 "추후"로 미룬 것).
@@ -22,7 +21,7 @@
   튜닝 개시 기준: 피드백 표본 30건 이상 누적 시. reasonTag 분포로 어느 요소 가중치가 실제 체감과 어긋나는지 판단.
 
 ## B-2. ⚡ 실시간 갱신 (Cloudflare Worker 하이브리드)
-- [ ] **games.json만 Worker로 이전** — 라이브 데이터 갱신 지연 4~5분 → 30초로 개선.
+- [x] **games.json만 Worker로 이전** (2026-06-29) — 라이브 데이터 갱신 지연 4~5분 → 30초로 개선. 배포 완료(`dugoutpick-kbo-live.tkdals8401.workers.dev`).
   - AS-IS: `cron(2분) → GitHub Actions(2분) → 정적 JSON → 앱 폴링`
   - TO-BE: `앱 폴링(30초) → Cloudflare Worker → KBO API 직접 호출`
   - `standings.json`, `report.json` 등 실시간성 낮은 데이터는 기존 파이프라인 유지 (하이브리드)
@@ -36,7 +35,7 @@
   - 예상 작업: 하루 분량 (Phase 1 Worker 구축이 핵심)
 
 ## C. 🔧 기술 부채 (마감 있음)
-- [ ] **워크플로 Node20 → v5** — `actions/checkout`·`actions/setup-node` v4 → v5. **2026-09-16 전까지**(Node20 deprecation).
+- [x] **워크플로 Node20 → v5** (2026-06-29) — `actions/checkout`·`actions/setup-node` v4 → v5 완료.
 - [ ] **PAT 만료 관리** — cron-job.org용 fine-grained PAT. 만료 시 cron 401로 멈춤(실패 알림으로 커버). 재발급 후 cron-job.org 헤더값 교체.
 - [ ] **Play Store 공개 전 Discord 웹훅 재검토** — 현재 APK 번들에 웹훅 URL 포함(2명 내부 테스터용). 공개 배포 전 서버 프록시 또는 웹훅 전용 채널 교체 필요.
 
