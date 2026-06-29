@@ -103,7 +103,7 @@ export default function GameDetail({ route, navigation }: Props) {
         <>
           <View style={styles.honjamRow}>
             <PixelText color={colors.gold} style={styles.spark}>✦</PixelText>
-            <HonjamBadge score={game.honjam.score} size="lg" />
+            <HonjamBadge score={game.honjam.score} size="lg" awayColor={teamColor(game.away.code)} homeColor={teamColor(game.home.code)} />
             <PixelText color={colors.gold} style={styles.spark}>✦</PixelText>
           </View>
           <PixelText variant="caption" color={colors.textDim} style={styles.honjamNote}>경기 전 조건 기준 · 실제 결과와 다를 수 있음</PixelText>

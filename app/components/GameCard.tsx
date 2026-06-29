@@ -9,6 +9,10 @@ import HonjamBadge from './HonjamBadge';
 import StatusChip from './StatusChip';
 import StarterLine from './StarterLine';
 import { colors, spacing } from '../theme';
+import { loadTeams } from '../data/load';
+
+const TEAMS = loadTeams().teams;
+const teamColor = (code: string) => TEAMS.find((t) => t.code === code)?.color;
 
 interface Props {
   game: Game;
@@ -77,7 +81,7 @@ export default function GameCard({ game, variant, onPress, showRecap = true }: P
                 {game.time} · {game.stadium}
               </PixelText>
             </View>
-            {game.honjam && <HonjamBadge score={game.honjam.score} size="lg" />}
+            {game.honjam && <HonjamBadge score={game.honjam.score} size="lg" awayColor={teamColor(game.away.code)} homeColor={teamColor(game.home.code)} />}
           </View>
           {game.honjam && (
             <PixelText variant="body" color={colors.text} style={styles.reasonHero}>
