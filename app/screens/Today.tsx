@@ -68,13 +68,16 @@ export default function Today() {
 
   const open = (gameId: string) => navigation.navigate('GameDetail', { gameId });
 
-  // 월요일: 배경 없이 기존 스타일 유지
   if (isKstMonday()) {
     return (
-      <SafeAreaView style={styles.safeSolid} edges={['top']}>
-        <ScreenHeader title="월요 리포트" leftIcon="clipboard" />
-        <MondayReport />
-      </SafeAreaView>
+      <View style={styles.root}>
+        <Image source={require('../assets/stadium-bg.png')} style={styles.bgImage} resizeMode="cover" />
+        <View style={styles.bgOverlay} />
+        <SafeAreaView style={styles.safe} edges={['top']}>
+          <ScreenHeader title="월요 리포트" leftIcon="clipboard" />
+          <MondayReport />
+        </SafeAreaView>
+      </View>
     );
   }
 
