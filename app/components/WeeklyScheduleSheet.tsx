@@ -7,7 +7,7 @@ import { getCheerTeam } from '../data/team';
 import type { ReportData } from '../types';
 import PixelText from './PixelText';
 import { border, colors, spacing } from '../theme';
-import { shortDateDow } from '../utils';
+import { shortDateDow, teamColorLight } from '../utils';
 import { useTeamTheme } from '../context/TeamTheme';
 
 const TEAMS = loadTeams().teams;
@@ -89,8 +89,10 @@ export default function WeeklyScheduleSheet({ visible, onClose }: Props) {
                 </View>
                 {games.map((g, i) => {
                   const isMyTeam = !!cheerTeam && (g.away === cheerTeam || g.home === cheerTeam);
+                  const myColor = isMyTeam ? teamColorLight(teamColorOf(cheerTeam!)) : undefined;
+                  const myBorder = isMyTeam ? teamColorOf(cheerTeam!) : undefined;
                   return (
-                    <View key={i} style={[styles.gameRow, isMyTeam && styles.myTeamRow]}>
+                    <View key={i} style={[styles.gameRow, isMyTeam && { backgroundColor: myColor, borderLeftColor: myBorder }]}>
                       <View style={styles.gameRowInner}>
                         <View style={styles.teamRow}>
                           <PixelText variant="body" color={teamColorOf(g.away)} style={styles.teamNameText} numberOfLines={1}>{teamNameOf(g.away)}</PixelText>
@@ -148,7 +150,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1, borderBottomColor: colors.surfaceAlt,
     borderLeftWidth: 3, borderLeftColor: 'transparent',
   },
-  myTeamRow: { backgroundColor: colors.goldSoft, borderLeftColor: colors.gold },
+  myTeamRow: {},
   gameRowInner: { paddingHorizontal: spacing.sm, gap: 2 },
   teamRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
   starterRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
