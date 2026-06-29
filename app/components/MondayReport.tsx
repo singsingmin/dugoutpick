@@ -9,11 +9,12 @@ import Panel from './Panel';
 import TeamName from './TeamName';
 import HonjamBadge from './HonjamBadge';
 import SectionLabel from './SectionLabel';
-import { shortDateDow, dateRangeDow } from '../utils';
+import { shortDateDow, dateRangeDow, teamColorLight } from '../utils';
 import { colors, spacing } from '../theme';
 
 const TEAMS = loadTeams().teams;
 const teamName = (code: string) => TEAMS.find((t) => t.code === code)?.name ?? code;
+const getTeamColor = (code: string) => TEAMS.find((t) => t.code === code)?.color ?? '#888888';
 
 export default function MondayReport() {
   const [report, setReport] = useState<ReportData | null>(null);
@@ -52,7 +53,7 @@ export default function MondayReport() {
           {teamRows.map((r) => {
             const mine = r.code === cheer;
             return (
-              <View key={r.code} style={[styles.teamBlock, mine && styles.teamRowMine]}>
+              <View key={r.code} style={[styles.teamBlock, mine && styles.teamRowMine, mine && { backgroundColor: teamColorLight(getTeamColor(r.code)) }]}>
                 <View style={styles.teamRow}>
                   <PixelText variant="caption" color={colors.textDim} style={styles.rankCol}>{r.rank ? `${r.rank}위` : '-'}</PixelText>
                   <View style={styles.nameCol}><TeamName code={r.code} variant="body" /></View>
@@ -129,7 +130,7 @@ const styles = StyleSheet.create({
   sectionHead: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
   teamBlock: { paddingVertical: 5 },
   teamRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
-  teamRowMine: { backgroundColor: colors.surfaceAlt, marginHorizontal: -spacing.sm, paddingHorizontal: spacing.sm, borderRadius: 4 },
+  teamRowMine: { marginHorizontal: -spacing.sm, paddingHorizontal: spacing.sm, borderRadius: 4 },
   noteLine: { marginTop: 3, marginLeft: 30 + spacing.sm, lineHeight: 14 },
   rankCol: { width: 30 },
   nameCol: { flex: 1 },

@@ -1,5 +1,13 @@
 // 공용 유틸.
 
+// 팀 컬러 hex → 연한 rgba (내 팀 행 강조 배경용)
+export function teamColorLight(hex: string, alpha = 0.13): string {
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+  return `rgba(${r},${g},${b},${alpha})`;
+}
+
 // KST 기준 월요일인가 (월요 리포트 노출 판단)
 const FORCE_MONDAY = false; // 임시 미리보기용 플래그(평시 false)
 export function isKstMonday(): boolean {

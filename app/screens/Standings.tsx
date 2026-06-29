@@ -12,6 +12,7 @@ import AppIcon from '../components/AppIcon';
 import { FormDots } from '../components/charts';
 import { border, colors, spacing } from '../theme';
 import { useTeamTheme } from '../context/TeamTheme';
+import { teamColorLight } from '../utils';
 
 const TEAMS = loadTeams().teams;
 const teamColor = (code: string | null) => TEAMS.find((t) => t.code === code)?.color ?? colors.text;
@@ -105,7 +106,7 @@ export default function Standings() {
                 <View key={`${s.rank}-${s.name}`}>
                   {/* 가을야구 마지노선 아래 팀은 접힌 상태에서 숨김 */}
                   {(!isBelowCut || belowExpanded) && (
-                    <View style={[styles.block, mine && styles.blockMine, mine && { borderLeftColor: teamColor(s.code) }]}>
+                    <View style={[styles.block, mine && { backgroundColor: teamColorLight(teamColor(s.code)) }, mine && { borderLeftColor: teamColor(s.code) }]}>
                       {/* 1줄: 숫자 표 */}
                       <View style={styles.row}>
                         <PixelText style={[styles.cell, COLS.rank, styles.rankText]} color={colors.text}>{s.rank}</PixelText>
@@ -172,7 +173,7 @@ const styles = StyleSheet.create({
   table: { borderWidth: 1, borderColor: 'rgba(45,36,20,0.30)', borderRadius: border.radius, backgroundColor: colors.surface, overflow: 'hidden' },
   headerRow: { flexDirection: 'row', alignItems: 'center', paddingVertical: 6, paddingHorizontal: spacing.sm },
   block: { paddingVertical: 7, paddingHorizontal: spacing.sm, borderTopWidth: 1, borderTopColor: colors.border, borderLeftWidth: 4, borderLeftColor: 'transparent' },
-  blockMine: { backgroundColor: colors.surfaceAlt },
+  blockMine: {},
   row: { flexDirection: 'row', alignItems: 'center' },
   // 모든 셀 통일: 같은 폰트 크기 + 가운데 정렬 → 행 간 정렬 일치 (영문/한글 폭차 흡수)
   cell: { fontSize: 12, textAlign: 'center' },
