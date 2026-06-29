@@ -104,11 +104,17 @@ async function fetchMonthSchedule(year, month) {
   return out;
 }
 
-// 지난달+이번달 스케줄(주간 리포트·최근경기 공용 소스)
+// 지난달+이번달(+이번주 끝이 다음달이면 다음달까지) 스케줄
 async function fetchSchedule2mo(date) {
   const y = date.slice(0, 4), m = date.slice(4, 6);
   const prevM = +m - 1;
   const months = prevM >= 1 ? [[y, String(prevM).padStart(2, '0')], [y, m]] : [[String(+y - 1), '12'], [y, m]];
+  // 이번주 일요일이 다음 달이면 다음 달 스케줄도 추가
+  const wb = weekBounds(date);
+  if (wb.thisSun.slice(0, 6) !== date.slice(0, 6)) {
+    const nextY = wb.thisSun.slice(0, 4), nextM = wb.thisSun.slice(4, 6);
+    months.push([nextY, nextM]);
+  }
   let all = [];
   for (const [yy, mm] of months) all = all.concat(await fetchMonthSchedule(yy, mm));
   return all.sort((a, b) => a.date.localeCompare(b.date));
