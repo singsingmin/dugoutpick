@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-28T15:46:01.722Z",
+  "updatedAt": "2026-06-29T09:22:12.221Z",
   "lastWeek": {
     "range": [
       "20260622",
@@ -25,7 +25,7 @@
         "l": 4,
         "d": 0,
         "rank": 3,
-        "note": "3연패, 이번주 끊어야 한다"
+        "note": "3연패, 이번주 끊어야 한다 — 그래도 자이언츠 상대가 남았으니까"
       },
       "HT": {
         "w": 4,
@@ -90,7 +90,7 @@
         "pred": 67,
         "reason": "게임차 5.5의 순위 다툼",
         "dateStart": "20260630",
-        "dateEnd": "20260630"
+        "dateEnd": "20260702"
       },
       {
         "away": "LT",
@@ -98,15 +98,15 @@
         "pred": 62,
         "reason": "게임차 4의 순위 다툼",
         "dateStart": "20260630",
-        "dateEnd": "20260630"
+        "dateEnd": "20260702"
       },
       {
-        "away": "SS",
-        "home": "NC",
-        "pred": 31,
-        "reason": "양 팀 에이스 투수전(ERA 3.2·3.2) · 게임차 9의 순위 다툼",
-        "dateStart": "20260630",
-        "dateEnd": "20260630"
+        "away": "NC",
+        "home": "HT",
+        "pred": 61,
+        "reason": "게임차 5.5의 순위 다툼",
+        "dateStart": "20260703",
+        "dateEnd": "20260705"
       }
     ],
     "team": {
@@ -114,27 +114,135 @@
         {
           "date": "20260630",
           "away": "LT",
+          "home": "OB",
+          "awayStarter": "박세웅",
+          "homeStarter": "최민석"
+        },
+        {
+          "date": "20260701",
+          "away": "LT",
           "home": "OB"
+        },
+        {
+          "date": "20260702",
+          "away": "LT",
+          "home": "OB"
+        },
+        {
+          "date": "20260703",
+          "away": "LT",
+          "home": "KT"
+        },
+        {
+          "date": "20260704",
+          "away": "LT",
+          "home": "KT"
+        },
+        {
+          "date": "20260705",
+          "away": "LT",
+          "home": "KT"
         }
       ],
       "OB": [
         {
           "date": "20260630",
           "away": "LT",
+          "home": "OB",
+          "awayStarter": "박세웅",
+          "homeStarter": "최민석"
+        },
+        {
+          "date": "20260701",
+          "away": "LT",
           "home": "OB"
+        },
+        {
+          "date": "20260702",
+          "away": "LT",
+          "home": "OB"
+        },
+        {
+          "date": "20260703",
+          "away": "OB",
+          "home": "WO"
+        },
+        {
+          "date": "20260704",
+          "away": "OB",
+          "home": "WO"
+        },
+        {
+          "date": "20260705",
+          "away": "OB",
+          "home": "WO"
         }
       ],
       "SK": [
         {
           "date": "20260630",
           "away": "SK",
+          "home": "HT",
+          "awayStarter": "김건우",
+          "homeStarter": "올러"
+        },
+        {
+          "date": "20260701",
+          "away": "SK",
           "home": "HT"
+        },
+        {
+          "date": "20260702",
+          "away": "SK",
+          "home": "HT"
+        },
+        {
+          "date": "20260703",
+          "away": "SS",
+          "home": "SK"
+        },
+        {
+          "date": "20260704",
+          "away": "SS",
+          "home": "SK"
+        },
+        {
+          "date": "20260705",
+          "away": "SS",
+          "home": "SK"
         }
       ],
       "HT": [
         {
           "date": "20260630",
           "away": "SK",
+          "home": "HT",
+          "awayStarter": "김건우",
+          "homeStarter": "올러"
+        },
+        {
+          "date": "20260701",
+          "away": "SK",
+          "home": "HT"
+        },
+        {
+          "date": "20260702",
+          "away": "SK",
+          "home": "HT"
+        },
+        {
+          "date": "20260703",
+          "away": "NC",
+          "home": "HT"
+        },
+        {
+          "date": "20260704",
+          "away": "NC",
+          "home": "HT"
+        },
+        {
+          "date": "20260705",
+          "away": "NC",
           "home": "HT"
         }
       ],
@@ -142,41 +250,203 @@
         {
           "date": "20260630",
           "away": "SS",
+          "home": "NC",
+          "awayStarter": "오러클린",
+          "homeStarter": "테일러"
+        },
+        {
+          "date": "20260701",
+          "away": "SS",
           "home": "NC"
+        },
+        {
+          "date": "20260702",
+          "away": "SS",
+          "home": "NC"
+        },
+        {
+          "date": "20260703",
+          "away": "SS",
+          "home": "SK"
+        },
+        {
+          "date": "20260704",
+          "away": "SS",
+          "home": "SK"
+        },
+        {
+          "date": "20260705",
+          "away": "SS",
+          "home": "SK"
         }
       ],
       "NC": [
         {
           "date": "20260630",
           "away": "SS",
+          "home": "NC",
+          "awayStarter": "오러클린",
+          "homeStarter": "테일러"
+        },
+        {
+          "date": "20260701",
+          "away": "SS",
           "home": "NC"
+        },
+        {
+          "date": "20260702",
+          "away": "SS",
+          "home": "NC"
+        },
+        {
+          "date": "20260703",
+          "away": "NC",
+          "home": "HT"
+        },
+        {
+          "date": "20260704",
+          "away": "NC",
+          "home": "HT"
+        },
+        {
+          "date": "20260705",
+          "away": "NC",
+          "home": "HT"
         }
       ],
       "KT": [
         {
           "date": "20260630",
           "away": "KT",
+          "home": "HH",
+          "awayStarter": "사우어",
+          "homeStarter": "에르난데스"
+        },
+        {
+          "date": "20260701",
+          "away": "KT",
           "home": "HH"
+        },
+        {
+          "date": "20260702",
+          "away": "KT",
+          "home": "HH"
+        },
+        {
+          "date": "20260703",
+          "away": "LT",
+          "home": "KT"
+        },
+        {
+          "date": "20260704",
+          "away": "LT",
+          "home": "KT"
+        },
+        {
+          "date": "20260705",
+          "away": "LT",
+          "home": "KT"
         }
       ],
       "HH": [
         {
           "date": "20260630",
           "away": "KT",
+          "home": "HH",
+          "awayStarter": "사우어",
+          "homeStarter": "에르난데스"
+        },
+        {
+          "date": "20260701",
+          "away": "KT",
           "home": "HH"
+        },
+        {
+          "date": "20260702",
+          "away": "KT",
+          "home": "HH"
+        },
+        {
+          "date": "20260703",
+          "away": "HH",
+          "home": "LG"
+        },
+        {
+          "date": "20260704",
+          "away": "HH",
+          "home": "LG"
+        },
+        {
+          "date": "20260705",
+          "away": "HH",
+          "home": "LG"
         }
       ],
       "LG": [
         {
           "date": "20260630",
           "away": "LG",
+          "home": "WO",
+          "awayStarter": "톨허스트",
+          "homeStarter": "안우진"
+        },
+        {
+          "date": "20260701",
+          "away": "LG",
           "home": "WO"
+        },
+        {
+          "date": "20260702",
+          "away": "LG",
+          "home": "WO"
+        },
+        {
+          "date": "20260703",
+          "away": "HH",
+          "home": "LG"
+        },
+        {
+          "date": "20260704",
+          "away": "HH",
+          "home": "LG"
+        },
+        {
+          "date": "20260705",
+          "away": "HH",
+          "home": "LG"
         }
       ],
       "WO": [
         {
           "date": "20260630",
           "away": "LG",
+          "home": "WO",
+          "awayStarter": "톨허스트",
+          "homeStarter": "안우진"
+        },
+        {
+          "date": "20260701",
+          "away": "LG",
+          "home": "WO"
+        },
+        {
+          "date": "20260702",
+          "away": "LG",
+          "home": "WO"
+        },
+        {
+          "date": "20260703",
+          "away": "OB",
+          "home": "WO"
+        },
+        {
+          "date": "20260704",
+          "away": "OB",
+          "home": "WO"
+        },
+        {
+          "date": "20260705",
+          "away": "OB",
           "home": "WO"
         }
       ]
