@@ -25,16 +25,17 @@ export default function LineupSheet({ visible, onClose, game }: Props) {
               <PixelText variant="body" color={colors.textDim}>✕</PixelText>
             </Pressable>
           </View>
-          {!lineup.confirmed && (
-            <PixelText variant="caption" color={colors.textDim} style={styles.notice}>
-              ※ 라인업 발표 전 — 최근 기준 추정
+          {lineup.confirmed ? (
+            <View style={styles.table}>
+              <LineupCol title={game.away.name} players={lineup.away} />
+              <View style={styles.divider} />
+              <LineupCol title={game.home.name} players={lineup.home} />
+            </View>
+          ) : (
+            <PixelText variant="body" color={colors.textDim} style={styles.pending}>
+              경기 1시간 전 라인업 확정 후 업데이트됩니다
             </PixelText>
           )}
-          <View style={styles.table}>
-            <LineupCol title={game.away.name} players={lineup.away} />
-            <View style={styles.divider} />
-            <LineupCol title={game.home.name} players={lineup.home} />
-          </View>
         </Pressable>
       </Pressable>
     </Modal>
@@ -71,6 +72,7 @@ const styles = StyleSheet.create({
   },
   header: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: spacing.sm },
   notice: { marginBottom: spacing.sm },
+  pending: { textAlign: 'center', marginVertical: spacing.xl },
   table: { flexDirection: 'row', gap: spacing.sm },
   divider: { width: 1, backgroundColor: colors.border },
   col: { flex: 1, gap: spacing.xs },
