@@ -162,18 +162,24 @@ function Body({
         rightIcon="calendar"
         onRightPress={onCalendar}
       />
-      <View style={styles.dateMeta}>
-        <PixelText variant="caption" color={colors.text}>{data.dateText}</PixelText>
-        <PixelText variant="caption" color={colors.textDim}>
-          갱신 {relativeFromNow(data.updatedAt)}
-        </PixelText>
-      </View>
-
       {/* ── 히어로 섹션 ── */}
       {!allDone && heroGame && (
         <View style={styles.heroContent}>
-          <SectionLabel icon={heroIcon} label={heroLabel} />
+          <View style={styles.heroLabelRow}>
+            <SectionLabel icon={heroIcon} label={heroLabel} />
+            <View style={styles.heroMeta}>
+              <PixelText variant="caption" color={colors.text}>{data.dateText}</PixelText>
+              <PixelText variant="caption" color={colors.textDim}>갱신 {relativeFromNow(data.updatedAt)}</PixelText>
+            </View>
+          </View>
           <GameCard game={heroGame} variant="hero" onPress={() => open(heroGame!.gameId)} />
+        </View>
+      )}
+      {/* allDone 또는 추천 경기 없을 때 날짜/갱신 폴백 */}
+      {(allDone || !heroGame) && (
+        <View style={styles.dateMeta}>
+          <PixelText variant="caption" color={colors.text}>{data.dateText}</PixelText>
+          <PixelText variant="caption" color={colors.textDim}>갱신 {relativeFromNow(data.updatedAt)}</PixelText>
         </View>
       )}
 
@@ -253,7 +259,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: spacing.md,
     paddingTop: spacing.sm,
     paddingBottom: spacing.sm,
-    gap: spacing.xs,
   },
 
   // 리스트 섹션
@@ -261,6 +266,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center',
     paddingHorizontal: spacing.md, paddingVertical: spacing.xs,
   },
+  heroLabelRow: {
+    flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start',
+    marginBottom: spacing.xs,
+  },
+  heroMeta: { alignItems: 'flex-end' },
   listSection: { padding: spacing.md, flex: 1 },
   section: { marginBottom: spacing.lg },
   liveHint: { marginBottom: spacing.sm },
