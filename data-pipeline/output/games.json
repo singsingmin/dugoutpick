@@ -1,7 +1,7 @@
 {
   "date": "20260630",
   "dateText": "2026년 6월 30일",
-  "updatedAt": "2026-06-30T11:30:31.798Z",
+  "updatedAt": "2026-06-30T11:40:23.610Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 20,
@@ -66,15 +66,15 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 0,
+        "half": "B",
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이용찬",
-        "batter": "전민재",
+        "pitcher": "김강현",
+        "batter": "류승민",
         "heat": 13,
-        "label": "7회초 5점차"
+        "label": "7회말 5점차"
       },
       "recap": null,
       "decision": null,
@@ -199,7 +199,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 9,
+        "score": 10,
         "starter": {
           "name": "올러",
           "era": 2.51,
@@ -232,14 +232,14 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "박시후",
-        "batter": "나성범",
+        "batter": "한준수",
         "heat": 0,
-        "label": "6회말 6점차"
+        "label": "6회말 7점차"
       },
       "recap": null,
       "decision": null,
@@ -352,7 +352,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "오러클린",
           "era": 3.86,
@@ -396,15 +396,15 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 1,
-        "b1": true,
+        "half": "B",
+        "out": 0,
+        "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "테일러",
-        "batter": "류지혁",
-        "heat": 35,
-        "label": "5회초 3점차"
+        "b3": false,
+        "pitcher": "김태훈",
+        "batter": "천재환",
+        "heat": 47,
+        "label": "5회말 2점차"
       },
       "recap": null,
       "decision": null,
@@ -726,15 +726,15 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
+        "half": "B",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "전준표",
-        "batter": "박동원",
+        "pitcher": "김윤식",
+        "batter": "서건창",
         "heat": 13,
-        "label": "7회초 5점차"
+        "label": "7회말 5점차"
       },
       "recap": null,
       "decision": null,
