@@ -80,5 +80,5 @@ const styles = StyleSheet.create({
   playerRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.xs },
   orderNum: { width: 14, textAlign: 'center' },
   playerName: { flex: 1 },
-  pos: { width: 36, textAlign: 'right' },
+  pos: { width: 54, textAlign: 'right' },
 });
