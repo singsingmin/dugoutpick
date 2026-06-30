@@ -1,7 +1,7 @@
 {
   "date": "20260630",
   "dateText": "2026년 6월 30일",
-  "updatedAt": "2026-06-30T10:40:25.785Z",
+  "updatedAt": "2026-06-30T10:50:25.981Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 20,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 2,
+        "inning": 5,
+        "half": "T",
+        "out": 3,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "박세웅",
-        "batter": "박찬호",
-        "heat": 50,
-        "label": "4회말 1점차 접전"
+        "pitcher": "최민석",
+        "batter": "노진혁",
+        "heat": 54,
+        "label": "5회초 1점차 접전"
       },
       "recap": null,
       "decision": null,
@@ -199,7 +199,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 6,
+        "score": 7,
         "starter": {
           "name": "올러",
           "era": 2.51,
@@ -231,15 +231,15 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 1,
-        "b1": false,
+        "half": "B",
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "올러",
-        "batter": "고명준",
+        "pitcher": "김건우",
+        "batter": "카스트로",
         "heat": 0,
-        "label": "4회초 6점차"
+        "label": "4회말 7점차"
       },
       "recap": null,
       "decision": null,
@@ -364,7 +364,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 4,
+        "score": 6,
         "starter": {
           "name": "테일러",
           "era": 4.3,
@@ -397,14 +397,14 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": false,
         "b2": false,
-        "b3": false,
-        "pitcher": "오러클린",
-        "batter": "박건우",
-        "heat": 58,
-        "label": "3회말 동점 접전"
+        "b3": true,
+        "pitcher": "이재익",
+        "batter": "신재인",
+        "heat": 39,
+        "label": "3회말 2점차"
       },
       "recap": null,
       "decision": null,
@@ -726,15 +726,15 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 0,
+        "half": "B",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "안우진",
-        "batter": "박동원",
+        "pitcher": "톨허스트",
+        "batter": "안치홍",
         "heat": 22,
-        "label": "5회초 4점차"
+        "label": "5회말 4점차"
       },
       "recap": null,
       "decision": null,
