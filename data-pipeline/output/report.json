@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-29T16:49:47.064Z",
+  "updatedAt": "2026-06-30T08:10:25.586Z",
   "lastWeek": {
     "range": [
       "20260622",
@@ -89,7 +89,7 @@
         "home": "HH",
         "pred": 67,
         "reason": "게임차 5.5의 순위 다툼",
-        "dateStart": "20260630",
+        "dateStart": "20260701",
         "dateEnd": "20260702"
       },
       {
@@ -314,74 +314,6 @@
           "home": "HT"
         }
       ],
-      "KT": [
-        {
-          "date": "20260630",
-          "away": "KT",
-          "home": "HH",
-          "awayStarter": "사우어",
-          "homeStarter": "에르난데스"
-        },
-        {
-          "date": "20260701",
-          "away": "KT",
-          "home": "HH"
-        },
-        {
-          "date": "20260702",
-          "away": "KT",
-          "home": "HH"
-        },
-        {
-          "date": "20260703",
-          "away": "LT",
-          "home": "KT"
-        },
-        {
-          "date": "20260704",
-          "away": "LT",
-          "home": "KT"
-        },
-        {
-          "date": "20260705",
-          "away": "LT",
-          "home": "KT"
-        }
-      ],
-      "HH": [
-        {
-          "date": "20260630",
-          "away": "KT",
-          "home": "HH",
-          "awayStarter": "사우어",
-          "homeStarter": "에르난데스"
-        },
-        {
-          "date": "20260701",
-          "away": "KT",
-          "home": "HH"
-        },
-        {
-          "date": "20260702",
-          "away": "KT",
-          "home": "HH"
-        },
-        {
-          "date": "20260703",
-          "away": "HH",
-          "home": "LG"
-        },
-        {
-          "date": "20260704",
-          "away": "HH",
-          "home": "LG"
-        },
-        {
-          "date": "20260705",
-          "away": "HH",
-          "home": "LG"
-        }
-      ],
       "LG": [
         {
           "date": "20260630",
@@ -448,6 +380,60 @@
           "date": "20260705",
           "away": "OB",
           "home": "WO"
+        }
+      ],
+      "KT": [
+        {
+          "date": "20260701",
+          "away": "KT",
+          "home": "HH"
+        },
+        {
+          "date": "20260702",
+          "away": "KT",
+          "home": "HH"
+        },
+        {
+          "date": "20260703",
+          "away": "LT",
+          "home": "KT"
+        },
+        {
+          "date": "20260704",
+          "away": "LT",
+          "home": "KT"
+        },
+        {
+          "date": "20260705",
+          "away": "LT",
+          "home": "KT"
+        }
+      ],
+      "HH": [
+        {
+          "date": "20260701",
+          "away": "KT",
+          "home": "HH"
+        },
+        {
+          "date": "20260702",
+          "away": "KT",
+          "home": "HH"
+        },
+        {
+          "date": "20260703",
+          "away": "HH",
+          "home": "LG"
+        },
+        {
+          "date": "20260704",
+          "away": "HH",
+          "home": "LG"
+        },
+        {
+          "date": "20260705",
+          "away": "HH",
+          "home": "LG"
         }
       ]
     }
