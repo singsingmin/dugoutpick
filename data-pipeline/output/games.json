@@ -1,7 +1,7 @@
 {
   "date": "20260630",
   "dateText": "2026년 6월 30일",
-  "updatedAt": "2026-06-30T12:00:39.463Z",
+  "updatedAt": "2026-06-30T12:10:24.660Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 20,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
-        "b3": false,
-        "pitcher": "김기준",
-        "batter": "박준순",
+        "b3": true,
+        "pitcher": "이진하",
+        "batter": "박찬호",
         "heat": 14,
         "label": "8회말 5점차"
       },
@@ -231,15 +231,15 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 0,
-        "b1": false,
+        "half": "B",
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "한재승",
-        "batter": "김재환",
+        "pitcher": "서진용",
+        "batter": "한준수",
         "heat": 0,
-        "label": "8회초 7점차"
+        "label": "8회말 7점차"
       },
       "recap": null,
       "decision": null,
@@ -397,12 +397,12 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": true,
-        "b2": false,
-        "b3": false,
-        "pitcher": "김진호",
-        "batter": "김성윤",
+        "b2": true,
+        "b3": true,
+        "pitcher": "신영우",
+        "batter": "디아즈",
         "heat": 50,
         "label": "6회초 2점차"
       },
@@ -510,14 +510,14 @@
       "gameId": "20260630KTHH0",
       "time": "18:30",
       "stadium": "대전",
-      "status": "LIVE",
-      "cancelReason": null,
+      "status": "CANCELED",
+      "cancelReason": "우천취소",
       "broadcast": "SPO-T",
       "away": {
         "code": "KT",
         "name": "KT",
         "rank": 3,
-        "score": 0,
+        "score": null,
         "starter": {
           "name": "사우어",
           "era": 4.48,
@@ -529,7 +529,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 5,
-        "score": 7,
+        "score": null,
         "starter": {
           "name": "에르난데스",
           "era": 4.54,
@@ -559,117 +559,10 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 4,
-        "half": "T",
-        "out": 0,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "에르난데스",
-        "batter": "김민혁",
-        "heat": 0,
-        "label": "4회초 7점차"
-      },
+      "live": null,
       "recap": null,
       "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "좌익수",
-            "name": "최인호"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "페라자"
-          },
-          {
-            "order": 3,
-            "pos": "중견수",
-            "name": "문현빈"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "강백호"
-          },
-          {
-            "order": 5,
-            "pos": "3루수",
-            "name": "노시환"
-          },
-          {
-            "order": 6,
-            "pos": "포수",
-            "name": "허인서"
-          },
-          {
-            "order": 7,
-            "pos": "1루수",
-            "name": "김태연"
-          },
-          {
-            "order": 8,
-            "pos": "2루수",
-            "name": "이도윤"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "심우준"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "우익수",
-            "name": "최원준"
-          },
-          {
-            "order": 2,
-            "pos": "좌익수",
-            "name": "김민혁"
-          },
-          {
-            "order": 3,
-            "pos": "지명타자",
-            "name": "안현민"
-          },
-          {
-            "order": 4,
-            "pos": "중견수",
-            "name": "힐리어드"
-          },
-          {
-            "order": 5,
-            "pos": "1루수",
-            "name": "김현수"
-          },
-          {
-            "order": 6,
-            "pos": "2루수",
-            "name": "김상수"
-          },
-          {
-            "order": 7,
-            "pos": "3루수",
-            "name": "허경민"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "한승택"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "권동진"
-          }
-        ],
-        "confirmed": true
-      }
+      "lineup": null
     },
     {
       "gameId": "20260630LGWO0",
@@ -694,7 +587,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "안우진",
           "era": 4.06,
@@ -726,15 +619,15 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 2,
-        "b1": false,
-        "b2": true,
-        "b3": false,
-        "pitcher": "박정훈",
-        "batter": "문정빈",
-        "heat": 14,
-        "label": "8회초 5점차"
+        "half": "B",
+        "out": 1,
+        "b1": true,
+        "b2": false,
+        "b3": true,
+        "pitcher": "조원태",
+        "batter": "권혁빈",
+        "heat": 0,
+        "label": "8회말 6점차"
       },
       "recap": null,
       "decision": null,
