@@ -1,7 +1,7 @@
 {
   "date": "20260630",
   "dateText": "2026년 6월 30일",
-  "updatedAt": "2026-06-30T12:40:26.758Z",
+  "updatedAt": "2026-06-30T12:50:26.195Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 23,
@@ -152,7 +152,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 8,
+        "score": 9,
         "starter": {
           "name": "오러클린",
           "era": 3.86,
@@ -197,14 +197,14 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 2,
+        "out": 3,
         "b1": true,
-        "b2": false,
-        "b3": false,
-        "pitcher": "전사민",
-        "batter": "최형우",
-        "heat": 68,
-        "label": "7회초 1점차 접전"
+        "b2": true,
+        "b3": true,
+        "pitcher": "송명기",
+        "batter": "전병우",
+        "heat": 55,
+        "label": "7회초 2점차"
       },
       "recap": null,
       "decision": null,
