@@ -24,6 +24,14 @@
 
 ## 항목
 
+### 2026-06-30 Cloudflare Worker 배포 — 인증 필요
+- 상황: `cf-worker` 변경(예: liveHeat v1.1)은 `wrangler deploy`로 반영해야 라이브가 바뀐다. 그러나 헤드리스 세션에 Cloudflare 인증이 없다(`wrangler whoami` = not authenticated, `CLOUDFLARE_API_TOKEN`/`CLOUDFLARE_ACCOUNT_ID` 미설정). `wrangler login`은 브라우저 OAuth라 세션에서 직접 못 띄움.
+- 필요한 수동 조치(둘 중 택1):
+  1. **대화형 로그인(권장, 1회):** 프롬프트에 `!npx wrangler login` 입력 → 브라우저 인증. 이후 같은 머신/유저의 세션이 저장된 OAuth 자격으로 `npx wrangler deploy` 가능.
+  2. **API 토큰(헤드리스 친화):** Cloudflare 대시보드에서 "Edit Cloudflare Workers" 토큰 발급 → `cf-worker/.dev.vars` 또는 환경변수로 `CLOUDFLARE_API_TOKEN`(+필요시 `CLOUDFLARE_ACCOUNT_ID`) 주입 → `npx wrangler deploy`. 토큰은 `.gitignore` 처리.
+- 배포 커맨드: `cd cf-worker && npx wrangler deploy` (dry-run 검증: `--dry-run --outdir /tmp/wout`).
+- 차단 여부: non-blocking — 코드·dry-run 번들은 CLI로 완결. 실제 배포만 인증 필요(Worker가 죽어도 정적 데이터 폴백이라 앱은 생존, ADR-018).
+
 ### 2026-06-24 피드백 웹훅 — Discord 웹훅 URL 생성 + .env.local 설정
 - 상황: Discord 웹훅 URL은 CLI로 생성 불가(Discord 웹 UI 필요). `.env.local`에 수동 입력 필요.
 - 필요한 수동 조치:
