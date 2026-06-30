@@ -1,4 +1,4 @@
-// 오늘야구각 전용 유니폼 배지 v5 — 귀여운 키링/아크릴 굿즈 배지 스타일
+// 오늘야구각 전용 유니폼 배지 v6 — 귀여운 키링/아크릴 굿즈 배지 스타일
 // hero=추천카드  compact=리스트  detail=상세화면
 import { useState } from 'react';
 import { View } from 'react-native';
@@ -32,6 +32,7 @@ interface PresetConfig {
   cuffOp: number;      // 소매 커프 라인 opacity
   borderOp: number;    // 외곽선 opacity
   shadowOp: number;    // 드롭쉐도우 opacity
+  bodyColor?: string;  // undefined = 팀 컬러 사용, 값 있으면 고정색 스킨
 }
 
 const PRESETS: Record<UniformPreset, PresetConfig> = {
@@ -71,41 +72,41 @@ function badgeColor(hex: string): string {
   return `#${nr.toString(16).padStart(2, '0')}${ng.toString(16).padStart(2, '0')}${nb.toString(16).padStart(2, '0')}`;
 }
 
-// ── 대형 유니폼 실루엣 (뒷면 백넘버) — V4 ────────────────────────────────────
+// ── 대형 유니폼 실루엣 (뒷면 백넘버) — V6 ────────────────────────────────────
 // viewBox -4 -4 104 100
-// 어깨: x=8/92 (y=18), 소매 끝: x=4/96 (y=31), 커프: x=20/80 (y=39)
-// body: x=23~77, y=39~84, center y=61.5
+// 어깨: x=16/84 (y=15), 소매 끝: x=10/90 (y=28), 커프: x=22/78 (y=38)
+// body: x=22~78, y=38~80, center y=59
 const JERSEY =
-  'M 36,6 Q 22,9 8,18' +    // 칼라→왼쪽 어깨 접합
-  ' L 4,31' +                // 왼쪽 소매 외곽 끝
-  ' L 20,39' +               // 왼쪽 소매 커프 (안쪽 수렴)
-  ' L 23,84' +               // 왼쪽 몸통
-  ' Q 23,89 29,89' +         // 왼쪽 밑단 코너
-  ' L 71,89' +               // 밑단
-  ' Q 77,89 77,84' +         // 오른쪽 밑단 코너
-  ' L 80,39' +               // 오른쪽 몸통
-  ' L 96,31' +               // 오른쪽 소매 커프
-  ' L 92,18' +               // 오른쪽 소매 외곽 끝
-  ' Q 78,9 64,6' +           // 오른쪽 어깨→칼라
-  ' Q 50,13 36,6 Z';         // 뒷목 칼라 U
+  'M 37,6 Q 22,10 16,15' +  // 칼라→왼쪽 어깨 (곡선)
+  ' L 10,28' +               // 왼쪽 소매 외곽 끝 (아래로 떨어짐)
+  ' L 22,38' +               // 왼쪽 소매 커프→몸통 연결
+  ' L 22,80' +               // 왼쪽 몸통
+  ' Q 22,85 28,85' +         // 왼쪽 밑단 코너
+  ' L 72,85' +               // 밑단
+  ' Q 78,85 78,80' +         // 오른쪽 밑단 코너
+  ' L 78,38' +               // 오른쪽 몸통
+  ' L 90,28' +               // 오른쪽 소매 커프→외곽
+  ' L 84,15' +               // 오른쪽 어깨
+  ' Q 78,10 63,6' +          // 오른쪽 어깨→칼라 (곡선)
+  ' Q 50,14 37,6 Z';         // 뒷목 칼라 U
 
-// ── 소형 유니폼 실루엣 (뒷면 백넘버) — V4 ────────────────────────────────────
+// ── 소형 유니폼 실루엣 (뒷면 백넘버) — V6 ────────────────────────────────────
 // viewBox -3 -3 56 62
-// 어깨: x=3/47 (y=11), 소매 끝: x=1/49 (y=18), 커프: x=11/39 (y=21)
-// body: x=12~38, y=21~47, center y=34
+// 어깨: x=8/42 (y=7), 소매 끝: x=5/45 (y=14), 커프: x=11/39 (y=19)
+// body: x=11~39, y=19~40, center y=29.5
 const JERSEY_SM =
-  'M 18,4 Q 11,6 3,11' +    // 칼라→왼쪽 어깨 접합
-  ' L 1,18' +                // 왼쪽 소매 외곽 끝
-  ' L 11,21' +               // 왼쪽 소매 커프
-  ' L 12,47' +               // 왼쪽 몸통
-  ' Q 12,51 17,51' +         // 왼쪽 밑단 코너
-  ' L 33,51' +               // 밑단
-  ' Q 38,51 38,47' +         // 오른쪽 밑단 코너
-  ' L 39,21' +               // 오른쪽 몸통
-  ' L 49,18' +               // 오른쪽 소매 커프
-  ' L 47,11' +               // 오른쪽 소매 외곽 끝
-  ' Q 39,6 32,4' +           // 오른쪽 어깨→칼라
-  ' Q 25,9 18,4 Z';          // 뒷목 칼라 U
+  'M 19,3 Q 11,5 8,7' +     // 칼라→왼쪽 어깨
+  ' L 5,14' +                // 왼쪽 소매 외곽 끝
+  ' L 11,19' +               // 왼쪽 소매 커프→몸통
+  ' L 11,40' +               // 왼쪽 몸통
+  ' Q 11,43 14,43' +         // 왼쪽 밑단 코너
+  ' L 36,43' +               // 밑단
+  ' Q 39,43 39,40' +         // 오른쪽 밑단 코너
+  ' L 39,19' +               // 오른쪽 몸통
+  ' L 45,14' +               // 오른쪽 소매 외곽
+  ' L 42,7' +                // 오른쪽 어깨
+  ' Q 39,5 32,3' +           // 오른쪽 어깨→칼라
+  ' Q 25,7 19,3 Z';          // 뒷목 칼라 U
 
 let _seq = 0;
 
@@ -116,23 +117,23 @@ function digitCount(score: number): 1 | 2 | 3 {
 
 // ── 숫자 위치·크기 테이블 ────────────────────────────────────────────────────
 // dominantBaseline="middle" → y = 시각 중심
-// 대형 V4 body center=61.5 (y=39~84) → target y=58 (시각 중앙보다 살짝 위)
-// 소형 V4 body center=34 (y=21~47) → target y=33 (살짝 위)
+// 대형 V6 body center=59 (y=38~80) → target y=57 (시각 중앙보다 살짝 위)
+// 소형 V6 body center=29.5 (y=19~40) → target y=29
 const SCORE_TEXT = {
   hero: {
-    1: { fontSize: 44, y: 58 },
-    2: { fontSize: 38, y: 58 },
-    3: { fontSize: 30, y: 57 },
+    1: { fontSize: 44, y: 57 },
+    2: { fontSize: 38, y: 57 },
+    3: { fontSize: 30, y: 56 },
   },
   detail: {
-    1: { fontSize: 44, y: 58 },
-    2: { fontSize: 38, y: 58 },
-    3: { fontSize: 30, y: 57 },
+    1: { fontSize: 44, y: 57 },
+    2: { fontSize: 38, y: 57 },
+    3: { fontSize: 30, y: 56 },
   },
   compact: {
-    1: { fontSize: 20, y: 33 },
-    2: { fontSize: 16, y: 33 },
-    3: { fontSize: 13, y: 32 },
+    1: { fontSize: 20, y: 30 },
+    2: { fontSize: 16, y: 30 },
+    3: { fontSize: 13, y: 29 },
   },
 } as const;
 
@@ -144,6 +145,7 @@ function LargeJersey({ score, tc, cid, w, h, variant, preset }: {
   const dc = digitCount(score);
   const { fontSize, y } = SCORE_TEXT[variant][dc];
   const STRIPES = [36, 43, 50, 57, 64];
+  const fill = preset.bodyColor ?? tc;
 
   return (
     <Svg width={w} height={h} viewBox="-4 -4 104 100">
@@ -156,12 +158,12 @@ function LargeJersey({ score, tc, cid, w, h, variant, preset }: {
 
       {/* 클립 내부 레이어 */}
       <G clipPath={`url(#${cid})`}>
-        <Path d={JERSEY} fill={tc} />
+        <Path d={JERSEY} fill={fill} />
         {/* 파이핑 */}
         <Path d={JERSEY} fill="none" stroke={preset.piping} strokeWidth={preset.pipingW} strokeLinejoin="round" />
         {/* 핀스트라이프 */}
         {preset.stripes && STRIPES.map((x) => (
-          <Line key={x} x1={x} y1={10} x2={x} y2={87}
+          <Line key={x} x1={x} y1={10} x2={x} y2={83}
             stroke={preset.piping} strokeWidth={0.5} opacity={preset.stripeOp} />
         ))}
       </G>
@@ -171,9 +173,9 @@ function LargeJersey({ score, tc, cid, w, h, variant, preset }: {
         stroke={BORDER_COLOR} strokeWidth={2.0} strokeLinejoin="round" opacity={preset.borderOp} />
 
       {/* 소매 커프 실밥 라인 */}
-      <Path d="M 6,32 L 20,40" fill="none"
+      <Path d="M 11,29 L 22,39" fill="none"
         stroke={preset.piping} strokeWidth={1.6} strokeLinecap="round" opacity={preset.cuffOp} />
-      <Path d="M 80,40 L 94,32" fill="none"
+      <Path d="M 78,39 L 89,29" fill="none"
         stroke={preset.piping} strokeWidth={1.6} strokeLinecap="round" opacity={preset.cuffOp} />
 
       {/* 등번호 */}
@@ -200,6 +202,7 @@ function CompactJersey({ score, tc, cid, preset }: {
 }) {
   const dc = digitCount(score);
   const { fontSize, y } = SCORE_TEXT.compact[dc];
+  const fill = preset.bodyColor ?? tc;
 
   return (
     <Svg width={48} height={53} viewBox="-3 -3 56 62">
@@ -209,7 +212,7 @@ function CompactJersey({ score, tc, cid, preset }: {
 
       <Path d={JERSEY_SM} fill={`rgba(60,40,20,${preset.shadowOp})`} translateX={1} translateY={2} />
       <G clipPath={`url(#${cid})`}>
-        <Path d={JERSEY_SM} fill={tc} />
+        <Path d={JERSEY_SM} fill={fill} />
         {/* compact: 핀스트라이프 항상 생략 */}
         <Path d={JERSEY_SM} fill="none" stroke={preset.piping} strokeWidth={4} strokeLinejoin="round" />
       </G>
@@ -217,9 +220,9 @@ function CompactJersey({ score, tc, cid, preset }: {
         stroke={BORDER_COLOR} strokeWidth={1.5} strokeLinejoin="round" opacity={preset.borderOp} />
 
       {/* 소매 커프 실밥 라인 */}
-      <Path d="M 2,19 L 11,22" fill="none"
+      <Path d="M 6,15 L 11,20" fill="none"
         stroke={preset.piping} strokeWidth={1} strokeLinecap="round" opacity={preset.cuffOp} />
-      <Path d="M 39,22 L 48,19" fill="none"
+      <Path d="M 39,20 L 44,15" fill="none"
         stroke={preset.piping} strokeWidth={1} strokeLinecap="round" opacity={preset.cuffOp} />
 
       {/* 숫자 */}
