@@ -187,7 +187,13 @@ function Body({
       <View style={styles.listSection}>
         {liveGames.length > 0 && (
           <View style={styles.section}>
-            <SectionLabel icon="live" label="지금 볼 각" />
+            <View style={styles.heroLabelRow}>
+              <SectionLabel icon="live" label="지금 볼 각" />
+              <View style={styles.heroMeta}>
+                <PixelText variant="caption" color={colors.text}>{data.dateText}</PixelText>
+                <PixelText variant="caption" color={colors.textDim}>갱신 {relativeFromNow(data.updatedAt)}</PixelText>
+              </View>
+            </View>
             <PixelText variant="caption" color={colors.textDim} style={styles.liveHint}>
               ⚠ 라이브 점수는 30초 간격 갱신 — 실제보다 몇 초 늦을 수 있다
             </PixelText>

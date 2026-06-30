@@ -8,6 +8,20 @@ const ST_MAP: Record<string, string> = {
   '1': 'SCHEDULED', '2': 'LIVE', '3': 'FINAL', '4': 'CANCELED', '9': 'CANCELED',
 };
 
+// build.mjs 검증 완료: GAME_STATE_SC가 정확한 상태 필드. GAME_SC_ID와 다를 수 있음.
+function resolveStatus(g: any, fallback: string): string {
+  if (g.CANCEL_SC_ID && g.CANCEL_SC_ID !== '0') return 'CANCELED';
+  if (g.GAME_RESULT_CK === 1 || g.GAME_STATE_SC === '3') return 'FINAL';
+  if (g.GAME_STATE_SC === '2') return 'LIVE';
+  return ST_MAP[g.GAME_SC_ID] ?? fallback;
+}
+
+function parseScore(v: any): number | null {
+  if (v == null || v === '') return null;
+  const n = +v;
+  return isNaN(n) ? null : n;
+}
+
 function kstToday(): string {
   const kst = new Date(Date.now() + 9 * 3600 * 1000);
   return kst.toISOString().slice(0, 10).replace(/-/g, '');
@@ -76,10 +90,10 @@ export default {
           const g = kboById[game.gameId];
           if (!g) return game;
 
-          const status = ST_MAP[g.GAME_SC_ID] ?? game.status;
-          const hasScore = g.GAME_SC_ID === '2' || g.GAME_SC_ID === '3';
-          const aScore = hasScore ? +g.T_SCORE_CN : null;
-          const bScore = hasScore ? +g.B_SCORE_CN : null;
+          const status = resolveStatus(g, game.status);
+          const hasScore = status === 'FINAL' || status === 'LIVE';
+          const aScore = hasScore ? parseScore(g.T_SCORE_CN) : null;
+          const bScore = hasScore ? parseScore(g.B_SCORE_CN) : null;
 
           let live = null;
           if (status === 'LIVE') {
