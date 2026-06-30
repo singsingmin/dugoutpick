@@ -1,7 +1,7 @@
 {
   "date": "20260630",
   "dateText": "2026년 6월 30일",
-  "updatedAt": "2026-06-30T11:10:23.799Z",
+  "updatedAt": "2026-06-30T11:20:25.050Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 20,
@@ -34,7 +34,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "최민석",
           "era": 2.57,
@@ -67,14 +67,14 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "out": 1,
+        "b1": true,
+        "b2": true,
         "b3": false,
         "pitcher": "박세웅",
-        "batter": "류승민",
-        "heat": 58,
-        "label": "6회말 1점차 접전"
+        "batter": "안재석",
+        "heat": 47,
+        "label": "6회말 2점차"
       },
       "recap": null,
       "decision": null,
@@ -199,7 +199,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 7,
+        "score": 9,
         "starter": {
           "name": "올러",
           "era": 2.51,
@@ -232,14 +232,14 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "전영준",
-        "batter": "한준수",
-        "heat": 23,
-        "label": "5회말 4점차"
+        "batter": "김도영",
+        "heat": 0,
+        "label": "5회말 6점차"
       },
       "recap": null,
       "decision": null,
@@ -395,16 +395,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 1,
+        "inning": 5,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이재익",
-        "batter": "박민우",
-        "heat": 32,
-        "label": "4회말 3점차"
+        "pitcher": "테일러",
+        "batter": "구자욱",
+        "heat": 35,
+        "label": "5회초 3점차"
       },
       "recap": null,
       "decision": null,
@@ -694,7 +694,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "안우진",
           "era": 4.06,
@@ -726,15 +726,15 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 2,
-        "b1": true,
+        "half": "B",
+        "out": 1,
+        "b1": false,
         "b2": true,
         "b3": false,
-        "pitcher": "조영건",
-        "batter": "오지환",
-        "heat": 24,
-        "label": "6회초 4점차"
+        "pitcher": "김윤식",
+        "batter": "권혁빈",
+        "heat": 12,
+        "label": "6회말 5점차"
       },
       "recap": null,
       "decision": null,
