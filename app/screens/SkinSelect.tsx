@@ -6,7 +6,7 @@ import { useTeamTheme } from '../context/TeamTheme';
 import { useScoreSkin } from '../context/ScoreSkin';
 import { SCORE_SKIN_LIST, type ScoreSkinId, type ScoreSkinConfig } from '../utils/scoreSkinConfig';
 import JerseyScoreBadge from '../components/JerseyScoreBadge';
-import ScoreboardScoreBadge from '../components/ScoreboardScoreBadge';
+import ScoreboardScoreBadge, { type ScoreboardVariant } from '../components/ScoreboardScoreBadge';
 import PixelText from '../components/PixelText';
 import ScreenHeader from '../components/ScreenHeader';
 import { border, colors, spacing } from '../theme';
@@ -18,19 +18,20 @@ function SkinPreviewBadge({
   teamColor,
   variant,
   showLabel,
+  scoreboardVariant,
 }: {
   config: ScoreSkinConfig;
   teamColor: string;
   variant: 'hero' | 'compact' | 'detail';
   showLabel: boolean;
+  scoreboardVariant?: ScoreboardVariant; // scoreboard kind 전용 override
 }) {
   if (config.kind === 'scoreboard') {
     return (
       <ScoreboardScoreBadge
         score={PREVIEW_SCORE}
-        variant={variant}
+        variant={scoreboardVariant ?? (variant as ScoreboardVariant)}
         teamColor={teamColor}
-        showLabel={showLabel}
       />
     );
   }
@@ -77,6 +78,7 @@ export default function SkinSelect() {
               teamColor={accent}
               variant="detail"
               showLabel
+              scoreboardVariant="preview"
             />
           </View>
 

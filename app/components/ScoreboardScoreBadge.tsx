@@ -1,4 +1,4 @@
-// 야구장 레트로 전광판 스킨 V2 — 3단 구조 (헤더/숫자/LED라인)
+// 야구장 레트로 전광판 스킨 V3 — 가로형 비율 + preview variant
 import { View, StyleSheet } from 'react-native';
 import PixelText from './PixelText';
 
@@ -7,33 +7,34 @@ const BOARD_BG = '#142719';
 const HEADER_BG = '#101E14';
 const NUMBER_COLOR = '#F4D37A';
 const LABEL_COLOR = '#F6D784';
-const LED_DIM = 'rgba(246,215,132,0.18)';
+const LED_DIM = 'rgba(246,215,132,0.14)';   // V3: 상단 점 opacity 낮춤
 const BORDER_COLOR = '#D8C7A4';
+
+export type ScoreboardVariant = 'hero' | 'compact' | 'detail' | 'preview';
 
 interface Props {
   score: number;
-  variant?: 'hero' | 'compact' | 'detail';
+  variant?: ScoreboardVariant;
   teamColor?: string;
   showLabel?: boolean; // 내부 헤더에 포함 — 이 prop은 무시됨
 }
 
-type V = 'hero' | 'compact' | 'detail';
-
-const DIMS: Record<V, { w: number; h: number }> = {
-  compact: { w: 52, h: 52 },
-  hero:    { w: 88, h: 96 },
-  detail:  { w: 110, h: 120 },
+const DIMS: Record<ScoreboardVariant, { w: number; h: number }> = {
+  compact: { w: 52,  h: 52  },
+  hero:    { w: 112, h: 96  },
+  detail:  { w: 148, h: 120 },
+  preview: { w: 162, h: 132 },
 };
 
-const NUM_FONT: Record<V, number>    = { compact: 22, hero: 38, detail: 48 };
-const RADIUS:   Record<V, number>    = { compact: 4,  hero: 6,  detail: 7  };
-const FRAME_PAD: Record<V, number>   = { compact: 2,  hero: 3,  detail: 3  };
-const HEADER_H:  Record<V, number>   = { compact: 0,  hero: 22, detail: 26 };
-const HEADER_FONT: Record<V, number> = { compact: 0,  hero: 9,  detail: 10 };
-const LED_DOT:  Record<V, number>    = { compact: 2,  hero: 3,  detail: 4  };
-const BOT_DOT:  Record<V, number>    = { compact: 3,  hero: 4,  detail: 5  };
-const BOT_CNT:  Record<V, number>    = { compact: 4,  hero: 6,  detail: 7  };
-const LIT_CNT:  Record<V, number>    = { compact: 1,  hero: 2,  detail: 2  };
+const NUM_FONT: Record<ScoreboardVariant, number>    = { compact: 22, hero: 40, detail: 50, preview: 54 };
+const RADIUS:   Record<ScoreboardVariant, number>    = { compact: 4,  hero: 6,  detail: 7,  preview: 8  };
+const FRAME_PAD: Record<ScoreboardVariant, number>   = { compact: 2,  hero: 3,  detail: 3,  preview: 3  };
+const HEADER_H:  Record<ScoreboardVariant, number>   = { compact: 0,  hero: 22, detail: 26, preview: 28 };
+const HEADER_FONT: Record<ScoreboardVariant, number> = { compact: 0,  hero: 9,  detail: 10, preview: 11 };
+const LED_DOT:  Record<ScoreboardVariant, number>    = { compact: 2,  hero: 2,  detail: 3,  preview: 3  };  // V3: hero 3→2
+const BOT_DOT:  Record<ScoreboardVariant, number>    = { compact: 3,  hero: 4,  detail: 5,  preview: 5  };
+const BOT_CNT:  Record<ScoreboardVariant, number>    = { compact: 4,  hero: 6,  detail: 7,  preview: 8  };
+const LIT_CNT:  Record<ScoreboardVariant, number>    = { compact: 1,  hero: 2,  detail: 2,  preview: 2  };
 
 export default function ScoreboardScoreBadge({
   score,
@@ -107,7 +108,7 @@ export default function ScoreboardScoreBadge({
                 width: botSz, height: botSz, borderRadius: botSz / 2,
                 backgroundColor: i < litCnt ? teamColor : LED_DIM,
                 marginHorizontal: variant === 'compact' ? 2 : 3,
-                opacity: i < litCnt ? 0.9 : 1,
+                opacity: i < litCnt ? 0.85 : 1,
               }}
             />
           ))}
