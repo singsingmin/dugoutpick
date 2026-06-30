@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-30T08:40:25.049Z",
+  "updatedAt": "2026-06-30T08:50:25.555Z",
   "lastWeek": {
     "range": [
       "20260622",
@@ -97,7 +97,7 @@
         "home": "OB",
         "pred": 62,
         "reason": "게임차 4의 순위 다툼",
-        "dateStart": "20260630",
+        "dateStart": "20260701",
         "dateEnd": "20260702"
       },
       {
@@ -111,13 +111,6 @@
     ],
     "team": {
       "LT": [
-        {
-          "date": "20260630",
-          "away": "LT",
-          "home": "OB",
-          "awayStarter": "박세웅",
-          "homeStarter": "최민석"
-        },
         {
           "date": "20260701",
           "away": "LT",
@@ -146,13 +139,6 @@
       ],
       "OB": [
         {
-          "date": "20260630",
-          "away": "LT",
-          "home": "OB",
-          "awayStarter": "박세웅",
-          "homeStarter": "최민석"
-        },
-        {
           "date": "20260701",
           "away": "LT",
           "home": "OB"
@@ -180,13 +166,6 @@
       ],
       "SK": [
         {
-          "date": "20260630",
-          "away": "SK",
-          "home": "HT",
-          "awayStarter": "김건우",
-          "homeStarter": "올러"
-        },
-        {
           "date": "20260701",
           "away": "SK",
           "home": "HT"
@@ -213,13 +192,6 @@
         }
       ],
       "HT": [
-        {
-          "date": "20260630",
-          "away": "SK",
-          "home": "HT",
-          "awayStarter": "김건우",
-          "homeStarter": "올러"
-        },
         {
           "date": "20260701",
           "away": "SK",
