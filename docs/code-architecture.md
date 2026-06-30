@@ -51,7 +51,7 @@ DugoutPick/
   - **꿀잼지수는 손대지 않음** — 정적 frozen 값 그대로 통과(라이브 층은 점수/상태만).
   - KBO API 실패 → 정적 games.json 그대로 반환(폴백).
 - **그 외(`standings.json`/`recent.json`/`report.json` 등)**: GitHub raw로 패스스루(CORS 헤더만 부착).
-- `liveHeat()`는 Worker와 `build.mjs` 양쪽에 동일 구현(라이브=Worker, 사후 라벨=파이프라인). 수정 시 두 곳을 함께 고쳐야 함.
+- **live.heat v1.1(ADR-021):** raw 계산은 `data-pipeline/liveHeatCore.mjs`(순수 모듈, build.mjs가 import) + Worker에 동일 로직 복제. momentum·smooth(직전 상태 필요)는 앱 전용(`app/utils/liveHeat.ts`). 수정 시 Worker 카피 + `test/liveheat.test.mjs` 골든 테이블을 함께 갱신.
 
 ## 앱 (Expo / React Native + TypeScript)
 | 영역 | 선택 | 비고 |

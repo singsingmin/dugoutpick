@@ -27,24 +27,62 @@ function kstToday(): string {
   return kst.toISOString().slice(0, 10).replace(/-/g, '');
 }
 
-function liveHeat(inning: number, half: string, diff: number, total: number): number {
-  const inn = inning || 1;
-  const innF = Math.min(1, inn / 9);
-  const closeF = Math.max(0, 1 - diff / 6);
-  let heat = 85 * closeF * (0.45 + 0.55 * innF);
-  if (inn >= 9 && half === 'B' && diff <= 1) heat += 10;
-  if (inn > 9) heat += closeF * Math.min(12, (inn - 9) * 4);
-  return Math.round(Math.max(0, Math.min(100, heat)));
+// liveHeat v1.1 raw core — data-pipeline/liveHeatCore.mjs 와 동일 로직(복제).
+// ⚠️ 수정 시 liveHeatCore.mjs + test/liveheat.test.mjs 골든 테이블을 함께 갱신할 것(ADR-021).
+// 무상태 raw 만 계산. momentum/smooth 는 앱 클라이언트(app/utils/liveHeat.ts) 전용.
+function isBottom(half: string): boolean {
+  return half === 'B' || half === 'bottom';
 }
 
-function liveLabel(inning: number, half: string, diff: number): string {
-  const hk = half === 'B' ? '말' : '초';
-  const inn = inning ? `${inning}회${hk}` : '경기 중';
-  if (inning >= 9 && half === 'B' && diff <= 1) return `${inn} 끝내기 찬스`;
-  if (inning > 9 && diff === 0) return `${inn} 연장 혈투`;
-  if (diff === 0) return `${inn} 동점 접전`;
-  if (diff <= 1) return `${inn} ${diff}점차 접전`;
-  return `${inn} ${diff}점차`;
+function getCloseFactor(diff: number): number {
+  if (diff <= 0) return 1.0;
+  if (diff === 1) return 0.94;
+  if (diff === 2) return 0.78;
+  if (diff === 3) return 0.58;
+  if (diff === 4) return 0.38;
+  if (diff === 5) return 0.20;
+  return 0.06;
+}
+
+function liveHeat(inning: number, half: string, scoreDiff: number, totalRuns: number): number {
+  const inn = inning || 1;
+  const bottom = isBottom(half);
+  const diff = Math.abs(scoreDiff);
+
+  const closeF = getCloseFactor(diff);
+  const halfProgress = inn + (bottom ? 0.5 : 0);
+  const cappedProgress = Math.min(halfProgress, 9.5);
+  const lateF = 0.35 + 0.65 * Math.pow(cappedProgress / 9.5, 1.2);
+
+  let heat = 78 * closeF * lateF;
+
+  if (inn >= 9 && bottom && diff <= 1) heat += 12;
+  else if (inn >= 9 && diff <= 1) heat += 5;
+
+  const isExtra = inn > 9;
+  if (isExtra && diff <= 2) heat += Math.min(12, 6 + Math.max(0, inn - 10) * 3);
+
+  const runs = totalRuns || 0;
+  if (diff <= 3) heat += Math.min(8, Math.max(0, runs - 7) * 1.5);
+
+  return Math.max(0, Math.min(100, Math.round(heat)));
+}
+
+function liveLabel(inning: number, half: string, scoreDiff: number, totalRuns: number): string {
+  const inn = inning || 1;
+  const bottom = isBottom(half);
+  const diff = Math.abs(scoreDiff);
+  const runs = totalRuns || 0;
+  const isExtra = inn > 9;
+
+  if (inn >= 9 && bottom && diff <= 1) return '끝내기 한 방 찬스';
+  if (isExtra && diff <= 2) return '연장 혈투 진행 중';
+  if (inn >= 9 && diff <= 1) return '9회 1점 승부';
+  if (inn >= 7 && diff <= 2) return '후반 박빙 승부';
+  if (runs >= 10 && diff <= 3) return '점수 나는 난타전';
+  if (inn <= 5 && diff <= 2) return '초반 팽팽한 흐름';
+  if (diff >= 6) return '점수차가 벌어진 경기';
+  return '경기 흐름 체크 중';
 }
 
 async function fetchKboGames(date: string): Promise<any[]> {
@@ -110,7 +148,7 @@ export default {
               pitcher: half === 'T' ? (g.B_P_NM || '').trim() || null : (g.T_P_NM || '').trim() || null,
               batter:  half === 'T' ? (g.T_P_NM || '').trim() || null : (g.B_P_NM || '').trim() || null,
               heat: liveHeat(inning, half, diff, total),
-              label: liveLabel(inning, half, diff),
+              label: liveLabel(inning, half, diff, total),
             };
           }
 

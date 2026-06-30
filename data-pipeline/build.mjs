@@ -6,6 +6,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { TEAMS, byName, byCode } from './teams.mjs';
 import { resolveFrozen, toRecord, mergeHistory, aggregate, WINDOW, MIN_SAMPLE } from './recap.mjs';
+import { rawLiveHeat, liveLabel } from './liveHeatCore.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const OUT_DIR = path.join(__dirname, 'output');
@@ -353,30 +354,9 @@ function gameStatus(g) {
   if (g.GAME_STATE_SC === '2') return 'LIVE';
   return 'SCHEDULED';
 }
-// '지금 볼 각' 라이브 흥미도(0~100): 박빙×늦은이닝 코어 + 끝내기 찬스·연장·난타전 드라마 가산.
-// 코어 천장을 85로 두고 드라마 가산분(끝내기/연장/난타전)에 헤드룸을 남겨, 진짜 명장면이 평범한 9회보다 위로 오게 함.
-function liveHeat(inning, half, scoreDiff, totalRuns) {
-  const inn = inning || 1;
-  const innF = Math.min(1, inn / 9);              // 이닝 진행 0~1 (9회 만점)
-  const closeF = Math.max(0, 1 - scoreDiff / 6);  // 박빙 0~1 (6점차+ = 코어 0 → 볼 각 없음)
-  let heat = 85 * closeF * (0.45 + 0.55 * innF);  // 코어: 9회 동점 ≈ 85
-  // 끝내기 찬스: 9회+ 말에 동점/1점차(말 진행 자체가 홈 동점·열세 의미) → 한 방이면 끝
-  if (inn >= 9 && half === 'B' && scoreDiff <= 1) heat += 10;
-  // 연장: 회를 거듭할수록 가산(박빙일 때만 의미 있게). 회당 +4, 최대 +12
-  if (inn > 9) heat += closeF * Math.min(12, (inn - 9) * 4);
-  // 난타전: 총득점 많으면 소폭 가산(박빙 한정 — 대량점수차 콜드성 경기는 제외)
-  heat += closeF * Math.min(8, (totalRuns || 0) / 2);
-  return Math.round(Math.max(0, Math.min(100, heat)));
-}
-function liveLabel(inning, half, scoreDiff) {
-  const hk = half === 'B' ? '말' : '초';
-  const inn = inning ? `${inning}회${hk}` : '경기 중';
-  if (inning >= 9 && half === 'B' && scoreDiff <= 1) return `${inn} 끝내기 찬스`;
-  if (inning > 9 && scoreDiff === 0) return `${inn} 연장 혈투`;
-  if (scoreDiff === 0) return `${inn} 동점 접전`;
-  if (scoreDiff <= 1) return `${inn} ${scoreDiff}점차 접전`;
-  return `${inn} ${scoreDiff}점차`;
-}
+// '지금 볼 각' 라이브 흥미도/라벨 raw core — liveHeatCore.mjs(순수 모듈)에서 import.
+// Worker(cf-worker/src/index.ts)에 동일 로직 복제. momentum/smooth는 앱 전용(ADR-021).
+// 단위 테스트: data-pipeline/test/liveheat.test.mjs
 
 // ---------------- 월요 리포트 ----------------
 // 주(KST, 월~일) 경계 계산
@@ -725,8 +705,8 @@ async function main() {
         // T(초)=원정팀 공격: 홈팀(B)이 투수, 원정팀(T)이 타자. B(말)=반대.
         pitcher: half === 'T' ? (g.B_P_NM || '').trim() || null : (g.T_P_NM || '').trim() || null,
         batter:  half === 'T' ? (g.T_P_NM || '').trim() || null : (g.B_P_NM || '').trim() || null,
-        heat: liveHeat(inning, half, diff, total),
-        label: liveLabel(inning, half, diff),
+        heat: rawLiveHeat(inning, half, diff, total),
+        label: liveLabel(inning, half, diff, total),
       };
     }
     // 경기 후 꿀잼결산: 종료 박스스코어로 '실제 꿀잼' 계산(예측과 같은 보정곡선) + 판정

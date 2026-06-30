@@ -107,6 +107,14 @@
 - **결정:** FINAL 경기에서만(`status==='FINAL' && honjam!=null`) 👍/👎 + 이유 태그(꿀잼지수 6요소 대응 slug)를 받아 AsyncStorage 저장 + **Discord 웹훅**으로 전송. 웹훅 URL은 `app.config.js`의 `extra.discordWebhookUrl`(`.env.local`→`DISCORD_WEBHOOK_URL`, `.gitignore`). 전송 실패는 무음 처리(앱 크래시·UX 방해 없음).
 - **의도:** Discord 웹훅은 우리가 유지하는 백엔드가 아니라 외부 SaaS 수신점이라 "서버 없음" 위배 아님. FINAL 게이팅으로 미완료 경기 노이즈 차단. 수집 표본은 가중치 튜닝 기준 표본 수 충족 시 활용(roadmap.md).
 
+### ADR-021 — live.heat v1.1: raw(무상태)/display(앱) 2층 분리 (ADR-018 보강)
+- **맥락:** 초기 liveHeat는 선형 closeF + `85×closeF×(0.45+0.55×inning/9)` 코어라 ① 점수차 변화가 딱딱하고 ② 9회말 끝내기 보너스가 빠지는 순간 숫자가 급락("역전했는데 왜 떨어져?")했다. 또 "방금 동점/추격" 같은 momentum은 **직전 상태**가 있어야 계산 가능한데 Worker는 무상태(ADR-018)라 불가능.
+- **결정 ① raw/display 분리:** raw(closeF lookup·비선형 lateF·끝내기/연장/난타전 보너스)는 무상태라 Worker·build.mjs가 계산해 `live.heat`/`live.label`에 담는다. momentum·smooth는 직전 상태가 필요하므로 **앱 클라이언트**가 30초 폴링으로 직전 점수·직전 표시값을 들고 처리(`app/utils/liveHeat.ts`, `useLiveHeatDisplay`).
+- **결정 ② 공식 개선:** closeF를 점수차별 lookup으로(0~2점차 확실히 뜨겁게, 6점차+도 0으로 죽이지 않음). lateF에 half-inning 반영(cap 9.5 → 9회초<9회말). 코어 78 + 보너스 헤드룸. label은 우선순위 기반 고정 문구로 교체.
+- **결정 ③ smooth:** 30초 폴링 기준 상승은 즉시, 하락은 폴당 최대 15점. 역전 직후 급락 체감 완화. 경기 종료 시 미적용.
+- **결정 ④ 중복:** raw core는 Worker(TS)와 build.mjs(ESM)에 **복제 유지**(빌드 구조 차이). 대신 `data-pipeline/liveHeatCore.mjs` 순수 모듈 + `test/liveheat.test.mjs` 골든 테이블로 양쪽 결과가 어긋나지 않게 가드. 추후 `shared/liveHeatCore`로 단일화.
+- **의도:** 야구팬 체감(박빙·추격·끝내기)에 맞추되 Worker 무상태 단순함을 유지. 경기 전 꿀잼지수(frozen)와는 끝까지 분리.
+
 ### ADR-016 — 꿀잼지수: form 대칭화 + 멸망전(doom) 팩터 (ADR-004/007 개정)
 - **맥락:** 코어팬 사용자가 "이번주 진짜 꿀잼은 멸망전(SSG 12연패 vs 키움 8연패)인데 상위권 매치(LG·KT)만 최상단"이라 지적. 요소 분해 결과: ① `form`이 `0.6×최근10승수`라 **지는 팀을 구조적으로 과소평가**(ADR-007의 "연승·연패 대칭" 선언과 모순) ② 멸망전 화제성을 보는 요소 부재.
 - **결정:** ① **form 대칭화** — `최근10승수` → `.500에서의 이탈도(|승수-5|)`로 교체해 연패도 연승만큼 기세로 인정. ② **doom 팩터 신설(가중 18)** — 양 팀 모두 5연패↑일 때 더 얕은 쪽 연패 깊이로 강도 산정("누가 먼저 끊나" 서사). 평소 경기는 doom=0이라 **기존 점수 불변**, 멸망전만 상승(SSG·키움 38→81, 상위권은 form 대칭화로 ~3점만 하락).

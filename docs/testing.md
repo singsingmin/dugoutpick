@@ -27,6 +27,7 @@ node data-pipeline/build.mjs    # exit 0 + output/*.json 생성/갱신
 
 **순수 로직 테스트 컨벤션 (파이프라인):**
 - 파이프라인 순수 로직 테스트는 `node:assert` + **의존성 0** 으로 작성하고, `node data-pipeline/test/*.test.mjs` 로 실행한다.
+- 예: `test/liveheat.test.mjs` — `liveHeatCore.mjs`(live.heat raw core)의 골든 테이블. Worker 카피(cf-worker)와 결과가 어긋나지 않게 가드(ADR-021). Worker 로직 수정 시 이 테이블도 갱신.
 - **`build.mjs` 는 top-level `main().catch()` 구동이라 import 하면 실제 네트워크 빌드가 돌므로 테스트에서 import 금지.** 순수 로직은 `data-pipeline/recap.mjs` 같은 부작용 없는 모듈로 분리해 테스트한다.
 - 헤드리스 환경에서 dev 번들 시드(`app/assets/data/games.json`)에는 `trackRecord` 가 없어 배지가 '집계 중'으로 뜨는 것이 **정상**(번들 시드는 라이브가 아니므로 트랙레코드가 없는 게 정직). QA 가 버그로 오인하지 않도록 주의.
 

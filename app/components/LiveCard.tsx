@@ -4,6 +4,7 @@ import type { Game, LiveState } from '../types';
 import PixelText from './PixelText';
 import Panel from './Panel';
 import TeamName from './TeamName';
+import { useLiveHeatDisplay } from '../utils/liveHeat';
 import { colors, spacing } from '../theme';
 
 const LIVE_RED = '#E03131';
@@ -43,15 +44,17 @@ function DiamondAndOuts({ lv }: { lv: LiveState }) {
 
 export default function LiveCard({ game, onPress }: { game: Game; onPress: () => void }) {
   const lv = game.live;
+  // raw(Worker) → display(momentum + smooth) 보정값. ADR-021.
+  const { heat, label } = useLiveHeatDisplay(game);
   return (
     <Pressable onPress={onPress}>
       <Panel accentColor={LIVE_RED} style={s.card}>
         <View style={s.top}>
           <PixelText variant="caption" color={LIVE_RED}>● LIVE</PixelText>
-          {lv && <PixelText variant="caption" color={colors.textDim}>{lv.label}</PixelText>}
+          {lv && <PixelText variant="caption" color={colors.textDim}>{label}</PixelText>}
           {lv && (
             <View style={s.heat}>
-              <PixelText variant="caption" color={colors.onGold}>지금 {lv.heat}</PixelText>
+              <PixelText variant="caption" color={colors.onGold}>지금 {heat}</PixelText>
             </View>
           )}
         </View>
