@@ -1,7 +1,7 @@
 {
   "date": "20260630",
   "dateText": "2026년 6월 30일",
-  "updatedAt": "2026-06-30T10:30:33.037Z",
+  "updatedAt": "2026-06-30T10:40:25.785Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 20,
@@ -66,15 +66,15 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
+        "half": "B",
         "out": 2,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "최민석",
-        "batter": "윤동희",
+        "pitcher": "박세웅",
+        "batter": "박찬호",
         "heat": 50,
-        "label": "4회초 1점차 접전"
+        "label": "4회말 1점차 접전"
       },
       "recap": null,
       "decision": null,
@@ -199,7 +199,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 3,
+        "score": 6,
         "starter": {
           "name": "올러",
           "era": 2.51,
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
+        "inning": 4,
+        "half": "T",
         "out": 1,
-        "b1": true,
-        "b2": true,
-        "b3": true,
-        "pitcher": "김건우",
-        "batter": "한준수",
-        "heat": 28,
-        "label": "3회말 3점차"
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "올러",
+        "batter": "고명준",
+        "heat": 0,
+        "label": "4회초 6점차"
       },
       "recap": null,
       "decision": null,
@@ -395,16 +395,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
+        "inning": 3,
         "half": "B",
-        "out": 2,
+        "out": 1,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
         "pitcher": "오러클린",
-        "batter": "박민우",
-        "heat": 53,
-        "label": "2회말 동점 접전"
+        "batter": "박건우",
+        "heat": 58,
+        "label": "3회말 동점 접전"
       },
       "recap": null,
       "decision": null,
@@ -560,16 +560,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 2,
+        "inning": 4,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "사우어",
-        "batter": "이도윤",
+        "pitcher": "에르난데스",
+        "batter": "김민혁",
         "heat": 0,
-        "label": "3회말 7점차"
+        "label": "4회초 7점차"
       },
       "recap": null,
       "decision": null,
@@ -725,16 +725,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
+        "inning": 5,
         "half": "T",
-        "out": 2,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "안우진",
-        "batter": "홍창기",
-        "heat": 20,
-        "label": "4회초 4점차"
+        "batter": "박동원",
+        "heat": 22,
+        "label": "5회초 4점차"
       },
       "recap": null,
       "decision": null,
