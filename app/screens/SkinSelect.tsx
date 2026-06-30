@@ -47,6 +47,7 @@ export default function SkinSelect() {
                   variant="hero"
                   homeTeamColor={accent}
                   uniformPreset={p.id}
+                  showLabel={false}
                 />
                 <PixelText
                   variant="body"

@@ -21,6 +21,7 @@ interface Props {
   homeTeamColor?: string;
   teamColor?: string;       // 하위 호환
   uniformPreset?: UniformPreset;
+  showLabel?: boolean;
 }
 
 // 팀 컬러 배지 보정: 밝은 색 어둡게, 어두운 색 유지
@@ -216,7 +217,7 @@ function CompactJersey({ score, cid, resolved }: {
 
 // ── 공개 컴포넌트 ─────────────────────────────────────────────────────────────
 export default function JerseyScoreBadge({
-  score, variant = 'hero', homeTeamColor, teamColor, uniformPreset,
+  score, variant = 'hero', homeTeamColor, teamColor, uniformPreset, showLabel = true,
 }: Props) {
   const [cid] = useState<string>(() => `jsb_${++_seq}`);
   const { preset: contextPreset } = useUniformPreset();
@@ -232,7 +233,7 @@ export default function JerseyScoreBadge({
   const [w, h] = variant === 'detail' ? [110, 106] : [88, 85];
   return (
     <View style={{ alignItems: 'center', gap: 5 }}>
-      <GguljamScoreLabel variant={variant} />
+      {showLabel && <GguljamScoreLabel variant={variant} />}
       <LargeJersey score={score} cid={cid} w={w} h={h} variant={variant} resolved={resolved} />
     </View>
   );
