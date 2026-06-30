@@ -1,7 +1,7 @@
 {
   "date": "20260630",
   "dateText": "2026년 6월 30일",
-  "updatedAt": "2026-06-30T09:50:25.037Z",
+  "updatedAt": "2026-06-30T10:00:38.325Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 20,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "B",
-        "out": 2,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "박세웅",
-        "batter": "양의지",
-        "heat": 43,
-        "label": "1회말 동점 접전"
+        "batter": "김민석",
+        "heat": 49,
+        "label": "2회말 동점 접전"
       },
       "recap": null,
       "decision": null,
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "B",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
         "pitcher": "김건우",
-        "batter": "김선빈",
-        "heat": 37,
-        "label": "1회말 1점차 접전"
+        "batter": "한준수",
+        "heat": 41,
+        "label": "2회말 1점차 접전"
       },
       "recap": null,
       "decision": null,
@@ -364,7 +364,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 0,
+        "score": 4,
         "starter": {
           "name": "테일러",
           "era": 4.3,
@@ -397,14 +397,14 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 1,
-        "b1": true,
-        "b2": false,
+        "out": 2,
+        "b1": false,
+        "b2": true,
         "b3": false,
         "pitcher": "오러클린",
-        "batter": "박민우",
-        "heat": 22,
-        "label": "1회말 3점차"
+        "batter": "천재환",
+        "heat": 39,
+        "label": "1회말 1점차 접전"
       },
       "recap": null,
       "decision": null,
@@ -529,7 +529,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 5,
-        "score": 2,
+        "score": 5,
         "starter": {
           "name": "에르난데스",
           "era": 4.54,
@@ -560,16 +560,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 2,
-        "b1": true,
+        "inning": 2,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "사우어",
-        "batter": "김태연",
-        "heat": 30,
-        "label": "1회말 2점차"
+        "b3": false,
+        "pitcher": "에르난데스",
+        "batter": "힐리어드",
+        "heat": 9,
+        "label": "2회초 5점차"
       },
       "recap": null,
       "decision": null,
@@ -694,7 +694,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "안우진",
           "era": 4.06,
@@ -726,15 +726,15 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
-        "out": 0,
-        "b1": false,
+        "half": "B",
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "안우진",
-        "batter": "오지환",
-        "heat": 33,
-        "label": "2회초 2점차"
+        "pitcher": "톨허스트",
+        "batter": "서건창",
+        "heat": 25,
+        "label": "2회말 3점차"
       },
       "recap": null,
       "decision": null,
