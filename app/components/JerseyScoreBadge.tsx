@@ -30,42 +30,42 @@ function badgeColor(hex: string): string {
   return `#${nr.toString(16).padStart(2, '0')}${ng.toString(16).padStart(2, '0')}${nb.toString(16).padStart(2, '0')}`;
 }
 
-// ── 대형 유니폼 실루엣 ────────────────────────────────────────────────────────
-// 귀여운 비율 + 모든 코너 Q 곡선으로 부드럽게
+// ── 대형 유니폼 실루엣 (뒷면 백넘버 기준) ────────────────────────────────────
 // x: 8~92 (84 wide), y: 6~89 (83 tall) / viewBox -4 -4 104 100
 // 몸통 body: y=40~89 (49 tall), center=64.5
+// 칼라: 얕은 뒷목 U (앞면 V넥 아님), 소매: 야구 저지 길이
 const JERSEY =
   'M 36,6' +
   ' Q 22,9 8,18' +       // 왼쪽 어깨 곡선
-  ' L 8,30' +            // 왼쪽 소매 (짧게)
+  ' L 8,33' +            // 왼쪽 소매 (~10% 연장, 야구 저지 길이)
   ' Q 8,37 20,40' +      // 왼쪽 겨드랑이 곡선
   ' L 23,84' +           // 왼쪽 몸통 (살짝 테이퍼)
   ' Q 23,89 29,89' +     // 왼쪽 밑단 모서리 둥글게
   ' L 71,89' +           // 밑단
   ' Q 77,89 77,84' +     // 오른쪽 밑단 모서리 둥글게
   ' L 80,40' +           // 오른쪽 몸통
-  ' Q 92,37 92,30' +     // 오른쪽 겨드랑이 곡선
+  ' Q 92,37 92,33' +     // 오른쪽 겨드랑이 곡선 (소매 연장)
   ' L 92,18' +           // 오른쪽 소매
   ' Q 78,9 64,6' +       // 오른쪽 어깨 곡선
-  ' Q 50,21 36,6 Z';     // 칼라 U곡선
+  ' Q 50,13 36,6 Z';     // 뒷목 칼라 — 얕은 U (앞면보다 파임 적음)
 
-// ── 소형 유니폼 실루엣 ────────────────────────────────────────────────────────
+// ── 소형 유니폼 실루엣 (뒷면 백넘버 기준) ────────────────────────────────────
 // x: 3~47 (44 wide), y: 4~51 (47 tall) / viewBox -3 -3 56 62
 // 몸통 body: y=25~51 (26 tall), center=38
 const JERSEY_SM =
   'M 18,4' +
   ' Q 11,6 3,11' +
-  ' L 3,20' +
+  ' L 3,22' +            // 소매 연장 (기존 20 → 22)
   ' Q 3,24 11,25' +
   ' L 12,47' +
   ' Q 12,51 17,51' +
   ' L 33,51' +
   ' Q 38,51 38,47' +
   ' L 39,25' +
-  ' Q 47,24 47,20' +
+  ' Q 47,24 47,22' +     // 소매 연장 (기존 20 → 22)
   ' L 47,11' +
   ' Q 39,6 32,4' +
-  ' Q 25,13 18,4 Z';
+  ' Q 25,9 18,4 Z';      // 뒷목 칼라 얕게 (기존 13 → 9)
 
 let _seq = 0;
 
@@ -120,24 +120,27 @@ function LargeJersey({ score, tc, cid, w, h, variant }: {
         <Path d={JERSEY} fill={tc} />
         {/* 크림 파이핑 (칼라·소매·몸통 외형 동시 처리) */}
         <Path d={JERSEY} fill="none" stroke={CREAM} strokeWidth={6} strokeLinejoin="round" />
-        {/* 핀스트라이프 — y1=10으로 위로 올려서 전체 몸통에 걸치게 (clip이 알아서 자름) */}
+        {/* 핀스트라이프 */}
         {STRIPES.map((x) => (
           <Line key={x} x1={x} y1={10} x2={x} y2={87}
             stroke={CREAM} strokeWidth={0.5} opacity={0.08} />
         ))}
-        {/* 중앙 버튼 라인 */}
-        <Line x1={50} y1={22} x2={50} y2={86}
-          stroke={CREAM} strokeWidth={0.7} opacity={0.11} />
+        {/* 요크/패널 라인 — 어깨 아래 야구 유니폼 뒷면 패널 경계 */}
+        <Path d="M 22,50 Q 50,47 78,50"
+          fill="none" stroke={CREAM} strokeWidth={1.0} opacity={0.10} />
+        {/* 네임패치 영역 힌트 — 텍스트 없이 위치만 암시 */}
+        <Path d="M 34,56 Q 50,54 66,56"
+          fill="none" stroke={CREAM} strokeWidth={0.7} opacity={0.07} />
       </G>
 
       {/* 극히 얇은 외곽선 — 형태 구분 최소한만 */}
       <Path d={JERSEY} fill="none"
         stroke={BORDER_COLOR} strokeWidth={2.5} strokeLinejoin="round" opacity={0.32} />
 
-      {/* 소매 끝단 파이핑 */}
-      <Path d="M 9,26 L 19,29" fill="none"
+      {/* 소매 끝단 파이핑 (소매 연장에 맞춰 2 하향) */}
+      <Path d="M 9,28 L 19,31" fill="none"
         stroke={CREAM} strokeWidth={1.8} strokeLinecap="round" opacity={0.60} />
-      <Path d="M 81,29 L 91,26" fill="none"
+      <Path d="M 81,31 L 91,28" fill="none"
         stroke={CREAM} strokeWidth={1.8} strokeLinecap="round" opacity={0.60} />
 
       {/* 등번호 — dominantBaseline="middle"로 y=시각 중심 */}
