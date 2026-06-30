@@ -613,12 +613,23 @@ async function main() {
   const phase = seasonPhase(date);
   console.log(`[build] date=${date} phase=${phase.toFixed(2)}`);
 
-  const [rawGames, { standings, h2h }, pmap, schedule] = await Promise.all([
+  const [rawGames, { standings, h2h }, pmap, scheduleBase] = await Promise.all([
     fetchGames(date),
     fetchStandings(),
     fetchPitcherStats(),
     fetchSchedule2mo(date).catch(() => []), // 스케줄 실패해도 빌드 계속
   ]);
+  // 월별 스케줄 HTML 파싱이 오늘 경기를 누락하는 경우 보완: rawGames 병합
+  const rawEntries = rawGames
+    .filter(g => g.G_ID && g.G_ID.length >= 12)
+    .map(g => ({
+      date: g.G_ID.slice(0, 8), away: g.G_ID.slice(8, 10), home: g.G_ID.slice(10, 12),
+      aS: (g.GAME_SC_ID === '2' || g.GAME_SC_ID === '3') ? +g.T_SCORE_CN : null,
+      hS: (g.GAME_SC_ID === '2' || g.GAME_SC_ID === '3') ? +g.B_SCORE_CN : null,
+      finished: g.GAME_SC_ID === '3',
+    }));
+  const baseKeys = new Set(scheduleBase.map(g => `${g.date}${g.away}${g.home}`));
+  const schedule = [...scheduleBase, ...rawEntries.filter(g => !baseKeys.has(`${g.date}${g.away}${g.home}`))].sort((a, b) => a.date.localeCompare(b.date));
   const stByName = Object.fromEntries(standings.map(s => [s.name, s]));
   const recent = buildRecent(schedule);
 
