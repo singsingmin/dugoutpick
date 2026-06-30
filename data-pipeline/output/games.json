@@ -1,7 +1,7 @@
 {
   "date": "20260630",
   "dateText": "2026년 6월 30일",
-  "updatedAt": "2026-06-30T13:10:25.515Z",
+  "updatedAt": "2026-06-30T13:19:59.298Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 23,
@@ -197,12 +197,12 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "최지광",
-        "batter": "신재인",
+        "batter": "권희동",
         "heat": 59,
         "label": "8회말 2점차"
       },
