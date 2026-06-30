@@ -1,7 +1,7 @@
 {
   "date": "20260630",
   "dateText": "2026년 6월 30일",
-  "updatedAt": "2026-06-30T11:00:41.760Z",
+  "updatedAt": "2026-06-30T11:10:23.799Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 20,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
+        "inning": 6,
         "half": "B",
-        "out": 3,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "박세웅",
-        "batter": "정수빈",
-        "heat": 54,
-        "label": "5회말 1점차 접전"
+        "batter": "류승민",
+        "heat": 58,
+        "label": "6회말 1점차 접전"
       },
       "recap": null,
       "decision": null,
@@ -187,7 +187,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 0,
+        "score": 3,
         "starter": {
           "name": "김건우",
           "era": 5.63,
@@ -231,15 +231,15 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "올러",
-        "batter": "정준재",
-        "heat": 0,
-        "label": "5회초 7점차"
+        "pitcher": "전영준",
+        "batter": "한준수",
+        "heat": 23,
+        "label": "5회말 4점차"
       },
       "recap": null,
       "decision": null,
@@ -396,15 +396,15 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "테일러",
-        "batter": "김지찬",
+        "pitcher": "이재익",
+        "batter": "박민우",
         "heat": 32,
-        "label": "4회초 3점차"
+        "label": "4회말 3점차"
       },
       "recap": null,
       "decision": null,
@@ -727,12 +727,12 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 1,
-        "b1": false,
-        "b2": false,
+        "out": 2,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "안우진",
-        "batter": "박해민",
+        "pitcher": "조영건",
+        "batter": "오지환",
         "heat": 24,
         "label": "6회초 4점차"
       },
