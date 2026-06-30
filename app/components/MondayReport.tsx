@@ -7,7 +7,7 @@ import { getCheerTeam } from '../data/team';
 import PixelText from './PixelText';
 import Panel from './Panel';
 import TeamName from './TeamName';
-import JerseyScoreBadge from './JerseyScoreBadge';
+import ScoreSkinRenderer from './ScoreSkinRenderer';
 import SectionLabel from './SectionLabel';
 import { shortDateDow, dateRangeDow, teamColorLight } from '../utils';
 import { colors, spacing } from '../theme';
@@ -107,7 +107,7 @@ export default function MondayReport() {
                   </View>
                   {g.reason ? <PixelText variant="caption" color={colors.textDim} style={styles.reason}>{g.reason}</PixelText> : null}
                 </View>
-                <JerseyScoreBadge score={g.pred} variant="compact" teamColor={getTeamColor(g.home)} />
+                <ScoreSkinRenderer score={g.pred} variant="compact" teamColor={getTeamColor(g.home)} />
               </View>
             </Panel>
           );

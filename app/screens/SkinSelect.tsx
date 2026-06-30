@@ -1,25 +1,59 @@
-// 유니폼 스킨 선택 화면. 3종 프리셋을 팀 컬러 미리보기로 표시.
+// 꿀잼지수 스킨 선택 화면. 4종 프리셋, 상단 미리보기, 탭=즉시적용·화면유지.
 import { View, Image, ScrollView, Pressable, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { useTeamTheme } from '../context/TeamTheme';
-import { useUniformPreset } from '../context/UniformPreset';
-import { UNIFORM_PRESETS, type UniformPresetId } from '../utils/uniformResolver';
+import { useScoreSkin } from '../context/ScoreSkin';
+import { SCORE_SKIN_LIST, type ScoreSkinId, type ScoreSkinConfig } from '../utils/scoreSkinConfig';
 import JerseyScoreBadge from '../components/JerseyScoreBadge';
+import ScoreboardScoreBadge from '../components/ScoreboardScoreBadge';
 import PixelText from '../components/PixelText';
 import ScreenHeader from '../components/ScreenHeader';
 import { border, colors, spacing } from '../theme';
 
-const PRESETS = Object.values(UNIFORM_PRESETS) as (typeof UNIFORM_PRESETS)[UniformPresetId][];
+const PREVIEW_SCORE = 75;
+
+function SkinPreviewBadge({
+  config,
+  teamColor,
+  variant,
+  showLabel,
+}: {
+  config: ScoreSkinConfig;
+  teamColor: string;
+  variant: 'hero' | 'compact' | 'detail';
+  showLabel: boolean;
+}) {
+  if (config.kind === 'scoreboard') {
+    return (
+      <ScoreboardScoreBadge
+        score={PREVIEW_SCORE}
+        variant={variant}
+        teamColor={teamColor}
+        showLabel={showLabel}
+      />
+    );
+  }
+  return (
+    <JerseyScoreBadge
+      score={PREVIEW_SCORE}
+      variant={variant}
+      teamColor={teamColor}
+      uniformPreset={config.uniformPreset}
+      showLabel={showLabel}
+    />
+  );
+}
 
 export default function SkinSelect() {
   const navigation = useNavigation();
   const { accent } = useTeamTheme();
-  const { preset, setPreset } = useUniformPreset();
+  const { skinId, setSkin } = useScoreSkin();
 
-  const handleSelect = async (id: UniformPresetId) => {
-    await setPreset(id);
-    navigation.goBack();
+  const selectedConfig = SCORE_SKIN_LIST.find((s) => s.id === skinId) ?? SCORE_SKIN_LIST[0];
+
+  const handleSelect = async (id: ScoreSkinId) => {
+    await setSkin(id);
   };
 
   return (
@@ -28,53 +62,74 @@ export default function SkinSelect() {
       <View style={styles.bgOverlay} />
       <SafeAreaView style={styles.safe} edges={['top']}>
         <ScreenHeader
-          title="유니폼 스킨"
+          title="꿀잼지수 스킨"
           leftIcon="back"
           onLeftPress={() => navigation.goBack()}
         />
         <ScrollView contentContainerStyle={styles.content}>
+          {/* 상단 미리보기 */}
+          <View style={styles.previewBox}>
+            <PixelText variant="caption" color={colors.textDim} style={styles.previewLabel}>
+              미리보기 · {selectedConfig.label}
+            </PixelText>
+            <SkinPreviewBadge
+              config={selectedConfig}
+              teamColor={accent}
+              variant="detail"
+              showLabel
+            />
+          </View>
+
           <PixelText variant="caption" color={colors.textDim} style={styles.hint}>
-            원하는 스킨을 선택하세요
+            탭하면 즉시 적용돼요
           </PixelText>
+
+          {/* 4종 카드 그리드 */}
           <View style={styles.grid}>
-            {PRESETS.map((p) => {
-              const selected = p.id === preset;
+            {SCORE_SKIN_LIST.map((s) => {
+              const selected = s.id === skinId;
               return (
                 <Pressable
-                  key={p.id}
+                  key={s.id}
                   style={[
                     styles.card,
                     selected
                       ? { borderColor: accent, borderWidth: 2 }
                       : { borderColor: 'rgba(45,36,20,0.18)', borderWidth: 1 },
                   ]}
-                  onPress={() => handleSelect(p.id)}
+                  onPress={() => handleSelect(s.id)}
                 >
-                  {/* badgeLabel 태그 */}
                   <View style={[styles.badgeTag, selected && { backgroundColor: accent }]}>
                     <PixelText
                       variant="caption"
                       color={selected ? '#fff' : colors.textDim}
                       style={styles.badgeTagText}
                     >
-                      {p.badgeLabel}
+                      {s.badgeLabel}
                     </PixelText>
                   </View>
 
-                  <JerseyScoreBadge
-                    score={75}
+                  <SkinPreviewBadge
+                    config={s}
+                    teamColor={accent}
                     variant="hero"
-                    homeTeamColor={accent}
-                    uniformPreset={p.id}
                     showLabel={false}
                   />
 
                   <PixelText
                     variant="body"
                     color={selected ? accent : colors.text}
-                    style={styles.label}
+                    style={styles.cardLabel}
                   >
-                    {p.label}
+                    {s.label}
+                  </PixelText>
+
+                  <PixelText
+                    variant="caption"
+                    color={colors.textDim}
+                    style={styles.cardDesc}
+                  >
+                    {s.description}
                   </PixelText>
 
                   {selected && (
@@ -100,8 +155,18 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(243,233,206,0.35)',
   },
   safe: { flex: 1, backgroundColor: 'transparent' },
-  content: { padding: spacing.md },
-  hint: { textAlign: 'center', marginBottom: spacing.md },
+  content: { padding: spacing.md, gap: spacing.md },
+  previewBox: {
+    alignItems: 'center',
+    backgroundColor: 'rgba(255,252,245,0.92)',
+    borderRadius: border.radius,
+    paddingVertical: spacing.lg,
+    borderWidth: 1,
+    borderColor: 'rgba(45,36,20,0.12)',
+    gap: spacing.md,
+  },
+  previewLabel: { textAlign: 'center' },
+  hint: { textAlign: 'center' },
   grid: { flexDirection: 'row', flexWrap: 'wrap', gap: spacing.sm },
   card: {
     width: '47%',
@@ -119,6 +184,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(45,36,20,0.10)',
   },
   badgeTagText: { fontSize: 10 },
-  label: { textAlign: 'center' },
+  cardLabel: { textAlign: 'center' },
+  cardDesc: { textAlign: 'center', fontSize: 9 },
   inUse: { textAlign: 'center' },
 });

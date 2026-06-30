@@ -50,7 +50,7 @@ export default function Settings() {
 
         <View style={styles.section}>
           <SectionLabel label="꾸미기" />
-          <PixelButton label="유니폼 스킨" onPress={() => navigation.navigate('SkinSelect')} />
+          <PixelButton label="꿀잼지수 스킨" onPress={() => navigation.navigate('SkinSelect')} />
         </View>
 
         <View style={styles.section}>

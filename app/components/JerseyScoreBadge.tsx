@@ -11,7 +11,7 @@ import {
   UNIFORM_PRESETS,
   resolveUniformPreset,
 } from '../utils/uniformResolver';
-import { useUniformPreset } from '../context/UniformPreset';
+import { useUniformPreset } from '../context/ScoreSkin';
 
 export type UniformPreset = UniformPresetId;
 
