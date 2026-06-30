@@ -117,8 +117,10 @@ function Body({
   const bestRecap = finished.length
     ? finished.slice().sort((a, b) => (b.recap?.actual ?? 0) - (a.recap?.actual ?? 0))[0]
     : null;
+  // 내 팀 결과는 recap(파이프라인, 최대 5분 지연) 유무와 무관하게 결산 섹션에 노출.
+  // recap 없는 FINAL이 '다른 경기'로 밀려나지 않도록 status===FINAL 기준으로 매칭.
   const myFinished = cheerTeam
-    ? finished.find((g) => g.away.code === cheerTeam || g.home.code === cheerTeam)
+    ? data.games.find((g) => g.status === 'FINAL' && (g.away.code === cheerTeam || g.home.code === cheerTeam))
     : undefined;
 
   // 모든 경기 종료(FINAL/CANCELED) 시 결산 모드
