@@ -1,5 +1,5 @@
 // 유니폼 스킨 선택 화면. 5종 프리셋을 팀 컬러 미리보기로 표시.
-import { View, ScrollView, Pressable, StyleSheet } from 'react-native';
+import { View, Image, ScrollView, Pressable, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { useTeamTheme } from '../context/TeamTheme';
@@ -23,60 +23,73 @@ export default function SkinSelect() {
   };
 
   return (
-    <SafeAreaView style={styles.root} edges={['top']}>
-      <ScreenHeader
-        title="유니폼 스킨"
-        leftIcon="back"
-        onLeftPress={() => navigation.goBack()}
-      />
-      <ScrollView contentContainerStyle={styles.content}>
-        <PixelText variant="caption" color={colors.textDim} style={styles.hint}>
-          탭해서 스킨 선택
-        </PixelText>
-        <View style={styles.grid}>
-          {PRESETS.map((p) => {
-            const selected = p.id === preset;
-            return (
-              <Pressable
-                key={p.id}
-                style={[styles.card, selected && { borderColor: accent, borderWidth: 2 }]}
-                onPress={() => handleSelect(p.id)}
-              >
-                <JerseyScoreBadge
-                  score={75}
-                  variant="hero"
-                  homeTeamColor={accent}
-                  uniformPreset={p.id}
-                  showLabel={false}
-                />
-                <PixelText
-                  variant="body"
-                  color={selected ? accent : colors.text}
-                  style={styles.label}
+    <View style={styles.root}>
+      <Image source={require('../assets/stadium-bg.png')} style={styles.bgImage} resizeMode="cover" />
+      <View style={styles.bgOverlay} />
+      <SafeAreaView style={styles.safe} edges={['top']}>
+        <ScreenHeader
+          title="유니폼 스킨"
+          leftIcon="back"
+          onLeftPress={() => navigation.goBack()}
+        />
+        <ScrollView contentContainerStyle={styles.content}>
+          <PixelText variant="caption" color={colors.textDim} style={styles.hint}>
+            원하는 스킨을 선택하세요
+          </PixelText>
+          <View style={styles.grid}>
+            {PRESETS.map((p) => {
+              const selected = p.id === preset;
+              return (
+                <Pressable
+                  key={p.id}
+                  style={[
+                    styles.card,
+                    selected
+                      ? { borderColor: accent, borderWidth: 2 }
+                      : { borderColor: 'rgba(45,36,20,0.18)', borderWidth: 1 },
+                  ]}
+                  onPress={() => handleSelect(p.id)}
                 >
-                  {selected ? '✓ ' : ''}{p.label}
-                </PixelText>
-              </Pressable>
-            );
-          })}
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+                  <JerseyScoreBadge
+                    score={75}
+                    variant="hero"
+                    homeTeamColor={accent}
+                    uniformPreset={p.id}
+                    showLabel={false}
+                  />
+                  <PixelText
+                    variant="body"
+                    color={selected ? accent : colors.text}
+                    style={styles.label}
+                  >
+                    {selected ? '✓ ' : ''}{p.label}
+                  </PixelText>
+                </Pressable>
+              );
+            })}
+          </View>
+        </ScrollView>
+      </SafeAreaView>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   root: { flex: 1, backgroundColor: colors.bg },
+  bgImage: { position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' },
+  bgOverlay: {
+    position: 'absolute', top: 0, left: 0, width: '100%', height: '100%',
+    backgroundColor: 'rgba(243,233,206,0.35)',
+  },
+  safe: { flex: 1, backgroundColor: 'transparent' },
   content: { padding: spacing.md },
   hint: { textAlign: 'center', marginBottom: spacing.md },
   grid: { flexDirection: 'row', flexWrap: 'wrap', gap: spacing.sm },
   card: {
     width: '47%',
     alignItems: 'center',
-    backgroundColor: colors.surface,
+    backgroundColor: 'rgba(255,252,245,0.92)',
     borderRadius: border.radius,
-    borderWidth: 1,
-    borderColor: colors.border,
     paddingVertical: spacing.md,
     paddingHorizontal: spacing.sm,
     gap: spacing.xs,

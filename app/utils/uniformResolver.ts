@@ -7,7 +7,7 @@ export type UniformPresetId = 'default' | 'classic' | 'pinstripe' | 'vintage' | 
 type BodyMode = 'team' | 'cream';
 type PipingStyle = 'cream' | 'gold' | 'team';
 type StripeStyle = 'none' | 'subtle' | 'strong';
-type NumberStyle = 'default' | 'classic' | 'vintage';
+type NumberStyle = 'default' | 'classic' | 'vintage' | 'team';
 type OutlineStyle = 'minimal' | 'soft' | 'sticker';
 
 export interface UniformPresetConfig {
@@ -83,15 +83,16 @@ export const UNIFORM_PRESETS: Record<UniformPresetId, UniformPresetConfig> = {
     bodyMode: 'cream',
     pipingStyle: 'team',
     stripeStyle: 'none',
-    numberStyle: 'classic',
+    numberStyle: 'team',   // 크림 바탕 가독성: 팀 컬러 숫자 + 아이보리 외곽선
     outlineStyle: 'soft',
   },
 };
 
-const NUMBER_STYLES: Record<NumberStyle, Pick<ResolvedUniformStyle, 'numberFill' | 'numberStroke' | 'numberStrokeWidth'>> = {
+const NUMBER_STYLES: Record<Exclude<NumberStyle, 'team'>, Pick<ResolvedUniformStyle, 'numberFill' | 'numberStroke' | 'numberStrokeWidth'>> = {
   default: { numberFill: CREAM,      numberStroke: 'rgba(0,0,0,0.20)',      numberStrokeWidth: 3.5 },
   classic: { numberFill: '#FFF7E6',  numberStroke: 'rgba(35,30,24,0.35)',   numberStrokeWidth: 4.0 },
   vintage: { numberFill: '#F3E2B8',  numberStroke: '#6B4A1E',               numberStrokeWidth: 3.8 },
+  // 'team': teamColor 동적 값이므로 resolveUniformPreset 내부에서 처리
 };
 
 const OUTLINE_STYLES: Record<OutlineStyle, Pick<ResolvedUniformStyle, 'outerStrokeColor' | 'outerStrokeWidth' | 'shadowOpacity' | 'shadowOffsetY'>> = {
@@ -142,7 +143,9 @@ export function resolveUniformPreset(
     cuffWidth,
     stripeColor,
     stripeOpacity,
-    ...NUMBER_STYLES[config.numberStyle],
+    ...(config.numberStyle === 'team'
+      ? { numberFill: teamColor, numberStroke: 'rgba(245,237,218,0.80)', numberStrokeWidth: 2.5 }
+      : NUMBER_STYLES[config.numberStyle]),
     outerStrokeColor: outline.outerStrokeColor,
     outerStrokeWidth,
     shadowOpacity: outline.shadowOpacity,
