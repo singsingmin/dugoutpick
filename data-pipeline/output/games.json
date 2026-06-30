@@ -1,7 +1,7 @@
 {
   "date": "20260630",
   "dateText": "2026년 6월 30일",
-  "updatedAt": "2026-06-30T11:40:23.610Z",
+  "updatedAt": "2026-06-30T11:50:26.405Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 20,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 2,
-        "b1": false,
-        "b2": false,
+        "inning": 8,
+        "half": "T",
+        "out": 0,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "김강현",
-        "batter": "류승민",
-        "heat": 13,
-        "label": "7회말 5점차"
+        "pitcher": "김택연",
+        "batter": "레이예스",
+        "heat": 14,
+        "label": "8회초 5점차"
       },
       "recap": null,
       "decision": null,
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 1,
-        "b1": true,
+        "inning": 7,
+        "half": "T",
+        "out": 2,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박시후",
-        "batter": "한준수",
+        "pitcher": "김범수",
+        "batter": "최정",
         "heat": 0,
-        "label": "6회말 7점차"
+        "label": "7회초 7점차"
       },
       "recap": null,
       "decision": null,
@@ -397,12 +397,12 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "김태훈",
-        "batter": "천재환",
+        "batter": "김주원",
         "heat": 47,
         "label": "5회말 2점차"
       },
@@ -725,16 +725,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 0,
+        "inning": 8,
+        "half": "T",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김윤식",
-        "batter": "서건창",
-        "heat": 13,
-        "label": "7회말 5점차"
+        "pitcher": "유토",
+        "batter": "박해민",
+        "heat": 14,
+        "label": "8회초 5점차"
       },
       "recap": null,
       "decision": null,
