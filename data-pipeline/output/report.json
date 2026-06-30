@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-30T12:10:24.660Z",
+  "updatedAt": "2026-06-30T12:20:25.243Z",
   "lastWeek": {
     "range": [
       "20260622",
@@ -121,7 +121,9 @@
         {
           "date": "20260701",
           "away": "LT",
-          "home": "OB"
+          "home": "OB",
+          "awayStarter": "로드리게스",
+          "homeStarter": "벤자민"
         },
         {
           "date": "20260702",
@@ -155,7 +157,9 @@
         {
           "date": "20260701",
           "away": "LT",
-          "home": "OB"
+          "home": "OB",
+          "awayStarter": "로드리게스",
+          "homeStarter": "벤자민"
         },
         {
           "date": "20260702",
@@ -325,7 +329,9 @@
         {
           "date": "20260701",
           "away": "KT",
-          "home": "HH"
+          "home": "HH",
+          "awayStarter": "소형준",
+          "homeStarter": "박준영"
         },
         {
           "date": "20260702",
@@ -359,7 +365,9 @@
         {
           "date": "20260701",
           "away": "KT",
-          "home": "HH"
+          "home": "HH",
+          "awayStarter": "소형준",
+          "homeStarter": "박준영"
         },
         {
           "date": "20260702",

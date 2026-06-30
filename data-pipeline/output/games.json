@@ -1,12 +1,12 @@
 {
   "date": "20260630",
   "dateText": "2026년 6월 30일",
-  "updatedAt": "2026-06-30T12:10:24.660Z",
+  "updatedAt": "2026-06-30T12:20:25.243Z",
   "trackRecord": {
     "window": 50,
-    "sampleSize": 20,
-    "hitRate": 15,
-    "bonusRate": 30,
+    "sampleSize": 21,
+    "hitRate": 14,
+    "bonusRate": 29,
     "ready": true
   },
   "recommendedGameId": "20260630LTOB0",
@@ -15,7 +15,7 @@
       "gameId": "20260630LTOB0",
       "time": "18:30",
       "stadium": "잠실",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "KN-T",
       "away": {
@@ -64,117 +64,17 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
-        "b1": true,
-        "b2": false,
-        "b3": true,
-        "pitcher": "이진하",
-        "batter": "박찬호",
-        "heat": 14,
-        "label": "8회말 5점차"
+      "live": null,
+      "recap": {
+        "actual": 25,
+        "verdict": "기대 이하"
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "정수빈"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "류승민"
-          },
-          {
-            "order": 3,
-            "pos": "지명타자",
-            "name": "박준순"
-          },
-          {
-            "order": 4,
-            "pos": "포수",
-            "name": "양의지"
-          },
-          {
-            "order": 5,
-            "pos": "좌익수",
-            "name": "김민석"
-          },
-          {
-            "order": 6,
-            "pos": "3루수",
-            "name": "안재석"
-          },
-          {
-            "order": 7,
-            "pos": "유격수",
-            "name": "박찬호"
-          },
-          {
-            "order": 8,
-            "pos": "1루수",
-            "name": "박지훈"
-          },
-          {
-            "order": 9,
-            "pos": "2루수",
-            "name": "이유찬"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "황성빈"
-          },
-          {
-            "order": 2,
-            "pos": "1루수",
-            "name": "노진혁"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "레이예스"
-          },
-          {
-            "order": 4,
-            "pos": "3루수",
-            "name": "한동희"
-          },
-          {
-            "order": 5,
-            "pos": "우익수",
-            "name": "윤동희"
-          },
-          {
-            "order": 6,
-            "pos": "2루수",
-            "name": "고승민"
-          },
-          {
-            "order": 7,
-            "pos": "유격수",
-            "name": "전민재"
-          },
-          {
-            "order": 8,
-            "pos": "지명타자",
-            "name": "나승엽"
-          },
-          {
-            "order": 9,
-            "pos": "포수",
-            "name": "박건우"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260630SKHT0",
@@ -230,16 +130,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 1,
-        "b1": true,
+        "inning": 9,
+        "half": "T",
+        "out": 3,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "서진용",
-        "batter": "한준수",
+        "pitcher": "최지민",
+        "batter": "김성욱",
         "heat": 0,
-        "label": "8회말 7점차"
+        "label": "9회초 7점차"
       },
       "recap": null,
       "decision": null,
@@ -352,7 +252,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "오러클린",
           "era": 3.86,
@@ -396,15 +296,15 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 1,
-        "b1": true,
-        "b2": true,
-        "b3": true,
-        "pitcher": "신영우",
-        "batter": "디아즈",
-        "heat": 50,
-        "label": "6회초 2점차"
+        "half": "B",
+        "out": 0,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "이승민",
+        "batter": "김주원",
+        "heat": 63,
+        "label": "6회말 1점차 접전"
       },
       "recap": null,
       "decision": null,
@@ -618,16 +518,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 1,
+        "inning": 9,
+        "half": "T",
+        "out": 0,
         "b1": true,
-        "b2": false,
-        "b3": true,
-        "pitcher": "조원태",
-        "batter": "권혁빈",
+        "b2": true,
+        "b3": false,
+        "pitcher": "박정훈",
+        "batter": "박동원",
         "heat": 0,
-        "label": "8회말 6점차"
+        "label": "9회초 6점차"
       },
       "recap": null,
       "decision": null,
