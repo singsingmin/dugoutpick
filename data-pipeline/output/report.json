@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-30T14:20:28.478Z",
+  "updatedAt": "2026-06-30T15:59:00.894Z",
   "lastWeek": {
     "range": [
       "20260622",
@@ -87,15 +87,15 @@
       {
         "away": "KT",
         "home": "HH",
-        "pred": 65,
+        "pred": 67,
         "reason": "게임차 5.5의 순위 다툼",
-        "dateStart": "20260630",
+        "dateStart": "20260701",
         "dateEnd": "20260702"
       },
       {
         "away": "NC",
         "home": "HT",
-        "pred": 58,
+        "pred": 60,
         "reason": "게임차 6.5의 순위 다툼",
         "dateStart": "20260703",
         "dateEnd": "20260705"
@@ -103,7 +103,7 @@
       {
         "away": "LT",
         "home": "OB",
-        "pred": 54,
+        "pred": 57,
         "reason": "게임차 5의 순위 다툼",
         "dateStart": "20260630",
         "dateEnd": "20260702"
@@ -400,13 +400,6 @@
       ],
       "KT": [
         {
-          "date": "20260630",
-          "away": "KT",
-          "home": "HH",
-          "awayStarter": "사우어",
-          "homeStarter": "에르난데스"
-        },
-        {
           "date": "20260701",
           "away": "KT",
           "home": "HH",
@@ -435,13 +428,6 @@
         }
       ],
       "HH": [
-        {
-          "date": "20260630",
-          "away": "KT",
-          "home": "HH",
-          "awayStarter": "사우어",
-          "homeStarter": "에르난데스"
-        },
         {
           "date": "20260701",
           "away": "KT",
