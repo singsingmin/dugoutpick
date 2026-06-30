@@ -15,12 +15,12 @@ export default function ScoreSkinRenderer({ score, variant = 'hero', teamColor, 
   const config = SCORE_SKINS[skinId];
 
   if (config.kind === 'scoreboard') {
+    // 라벨은 전광판 내부 헤더에 포함 — 외부 showLabel 무관
     return (
       <ScoreboardScoreBadge
         score={score}
         variant={variant}
         teamColor={teamColor}
-        showLabel={showLabel}
       />
     );
   }
