@@ -1,8 +1,10 @@
 // 오늘야구각 전용 유니폼 배지 v5 — 귀여운 키링/아크릴 굿즈 배지 스타일
 // hero=추천카드  compact=리스트  detail=상세화면
 import { useState } from 'react';
+import { View } from 'react-native';
 import Svg, { Path, Defs, ClipPath, G, Text as SvgText, Line } from 'react-native-svg';
 import { colors } from '../theme';
+import GguljamScoreLabel from './GguljamScoreLabel';
 
 interface Props {
   score: number;
@@ -210,5 +212,10 @@ export default function JerseyScoreBadge({ score, variant = 'hero', homeTeamColo
 
   // hero: 88×85 / detail: 110×106  (viewBox 104:100 = 1.04 비율)
   const [w, h] = variant === 'detail' ? [110, 106] : [88, 85];
-  return <LargeJersey score={score} tc={tc} cid={cid} w={w} h={h} variant={variant} />;
+  return (
+    <View style={{ alignItems: 'center', gap: 5 }}>
+      <GguljamScoreLabel variant={variant} />
+      <LargeJersey score={score} tc={tc} cid={cid} w={w} h={h} variant={variant} />
+    </View>
+  );
 }
