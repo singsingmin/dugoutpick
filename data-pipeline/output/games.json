@@ -1,7 +1,7 @@
 {
   "date": "20260630",
   "dateText": "2026년 6월 30일",
-  "updatedAt": "2026-06-30T13:00:39.727Z",
+  "updatedAt": "2026-06-30T13:10:25.515Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 23,
@@ -195,16 +195,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
+        "inning": 8,
         "half": "B",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
         "pitcher": "최지광",
-        "batter": "김형준",
-        "heat": 55,
-        "label": "7회말 2점차"
+        "batter": "신재인",
+        "heat": 59,
+        "label": "8회말 2점차"
       },
       "recap": null,
       "decision": null,
