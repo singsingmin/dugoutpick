@@ -1,11 +1,11 @@
 import { View, StyleSheet } from 'react-native';
 import PixelText from './PixelText';
 
-const BG = '#1B3A2A';
+const BG = '#2B2620';      // 앱 border 색과 동일 — 레트로 UI 통합
 const BORDER = '#C8BFA8';
 const CREAM = '#F5EDDA';
-const DOT_GOLD = '#F5C542';
-const DOT_GREEN = '#5BAD6F';
+const DOT_A = '#F2C53D';   // 앱 골드 (colors.gold)
+const DOT_B = '#8A7A5E';   // 웜그레이 (중립 뮤트)
 
 const DOT_SIZE = 3;
 const DOT_GAP = 2;
@@ -18,8 +18,8 @@ interface Props {
 function Dots() {
   return (
     <View style={styles.dotCol}>
-      <View style={[styles.dot, { backgroundColor: DOT_GOLD }]} />
-      <View style={[styles.dot, { backgroundColor: DOT_GREEN }]} />
+      <View style={[styles.dot, { backgroundColor: DOT_A }]} />
+      <View style={[styles.dot, { backgroundColor: DOT_B }]} />
     </View>
   );
 }
