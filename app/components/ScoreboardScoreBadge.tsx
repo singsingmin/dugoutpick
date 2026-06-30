@@ -7,10 +7,12 @@ import { View, StyleSheet } from 'react-native';
 import PixelText from './PixelText';
 
 // ── 색상 토큰(스펙)
-const IVORY = '#D8C7A4';        // outerFrame
+const IVORY = '#CBB98F';        // outerFrame (V6.1: 살짝 차분한 베이지)
+const IVORY_EDGE = '#B0A074';   // 프레임 외곽 1px 선명 라인
 const FRAME_DARK = '#1A2B1D';   // innerFrame / 구획선
 const BOARD_BG = '#0E2518';     // 전광판 본체
 const HEADER_BG = '#0A1E12';    // 헤더 캡(본체보다 어둡게)
+const BSO_BAR_BG = '#09190F';   // 하단 B/S/O 바(본판보다 더 어둡게 → 별도 패널감)
 const NUMBER_COLOR = '#EFD479'; // 숫자(크림-옐로우 LED)
 const LABEL_COLOR = '#E7C766';  // 헤더 라벨(숫자보다 덜 강조)
 const DOT_COLOR = '#2A553A';    // 도트 매트릭스(은은)
@@ -21,8 +23,8 @@ const LAMP_S = '#C88A3D';
 const LAMP_O = '#B85A4E';
 const LAMP_OFF = '#2D3A2F';
 const BSO_LETTER = '#C7B789';
-const DIVIDER = 'rgba(216,199,164,0.16)';
-const BAR_LINE = 'rgba(0,0,0,0.28)';
+const DIVIDER = 'rgba(216,199,164,0.24)';  // V6.1: 그룹 구분선 약간 선명
+const BAR_LINE = 'rgba(0,0,0,0.30)';
 
 // 야구식 B=3/S=2/O=2, 부분 점등(켜짐/꺼짐 구분 — 실데이터 무관 장식).
 const BSO: { letter: string; color: string; pattern: boolean[] }[] = [
@@ -55,12 +57,13 @@ interface VConf {
   numGap: number;       // 숫자~BSO 여백(숫자영역 하단 패딩 → 숫자 살짝 위)
 }
 
-// 비율: preview/detail ~1.43~1.45, hero ~1.33, compact ~1.27 (가로형, 카드 침범 안 함).
+// 비율: preview/detail ~1.43~1.45, hero ~1.33, compact ~1.22 (가로형, 카드 침범 안 함).
+// V6.1: 헤더 캡 낮고 넓게(capH↓ capW↑), compact 여백·점 미세조정.
 const CONF: Record<ScoreboardVariant, VConf> = {
-  compact: { w: 66,  cap: false, capW: 0,   capH: 0,  overlap: 0, bodyH: 52,  headerH: 13, num: 20, pad: 2, radius: 4, lamp: 3, bsoFont: 0,  dots: null,    numGap: 3 },
-  hero:    { w: 128, cap: true,  capW: 84,  capH: 20, overlap: 6, bodyH: 82,  headerH: 0,  num: 40, pad: 3, radius: 6, lamp: 4, bsoFont: 8,  dots: [7, 4],  numGap: 6 },
-  detail:  { w: 168, cap: true,  capW: 108, capH: 24, overlap: 7, bodyH: 100, headerH: 0,  num: 50, pad: 3, radius: 7, lamp: 5, bsoFont: 9,  dots: [8, 5],  numGap: 8 },
-  preview: { w: 180, cap: true,  capW: 116, capH: 26, overlap: 8, bodyH: 108, headerH: 0,  num: 54, pad: 3, radius: 8, lamp: 5, bsoFont: 10, dots: [9, 5],  numGap: 8 },
+  compact: { w: 66,  cap: false, capW: 0,   capH: 0,  overlap: 0, bodyH: 54,  headerH: 13, num: 20, pad: 2, radius: 4, lamp: 2.5, bsoFont: 0,  dots: null,    numGap: 5 },
+  hero:    { w: 128, cap: true,  capW: 92,  capH: 17, overlap: 6, bodyH: 82,  headerH: 0,  num: 40, pad: 3, radius: 6, lamp: 4,   bsoFont: 8,  dots: [7, 4],  numGap: 6 },
+  detail:  { w: 168, cap: true,  capW: 118, capH: 21, overlap: 7, bodyH: 100, headerH: 0,  num: 50, pad: 3, radius: 7, lamp: 5,   bsoFont: 9,  dots: [8, 5],  numGap: 8 },
+  preview: { w: 180, cap: true,  capW: 126, capH: 23, overlap: 8, bodyH: 108, headerH: 0,  num: 54, pad: 3, radius: 8, lamp: 5,   bsoFont: 10, dots: [9, 5],  numGap: 8 },
 };
 
 // 은은한 LED 도트 매트릭스(절대배치, 숫자 뒤). 터치 비간섭.
@@ -152,7 +155,7 @@ export default function ScoreboardScoreBadge({ score, variant = 'hero', teamColo
           {/* compact: 플랫 헤더 스트립 */}
           {!c.cap && (
             <View style={[styles.flatHeader, { height: c.headerH, borderBottomColor: headerAccent }]}>
-              <PixelText style={{ fontSize: 7, color: LABEL_COLOR, letterSpacing: 0.5 }}>꿀잼지수</PixelText>
+              <PixelText style={{ fontSize: 6, color: LABEL_COLOR, letterSpacing: 0.5 }}>꿀잼지수</PixelText>
             </View>
           )}
           {/* 중앙 숫자(+ 도트 매트릭스 배경) */}
@@ -173,12 +176,12 @@ export default function ScoreboardScoreBadge({ score, variant = 'hero', teamColo
               styles.cap,
               {
                 width: c.capW, height: c.capH,
-                borderTopLeftRadius: c.radius, borderTopRightRadius: c.radius,
+                borderTopLeftRadius: Math.max(2, c.radius - 3), borderTopRightRadius: Math.max(2, c.radius - 3),
                 borderColor: headerAccent === 'transparent' ? IVORY : headerAccent,
               },
             ]}
           >
-            <PixelText style={{ fontSize: c.capH * 0.42, color: LABEL_COLOR, letterSpacing: 1 }}>꿀잼지수</PixelText>
+            <PixelText style={{ fontSize: c.capH * 0.46, color: LABEL_COLOR, letterSpacing: 1 }}>꿀잼지수</PixelText>
           </View>
         </View>
       )}
@@ -190,6 +193,8 @@ const styles = StyleSheet.create({
   frame: {
     width: '100%',
     backgroundColor: IVORY,
+    borderWidth: 1,           // V6.1: 아이보리 외곽 1px 선명하게
+    borderColor: IVORY_EDGE,
     // 그림자 절제 — 설치형 패널 인상(붕 뜬 카드 X)
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 1 },
@@ -236,6 +241,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     alignSelf: 'stretch',
+    backgroundColor: BSO_BAR_BG,  // V6.1: 본판보다 어둡게 → 하단 패널 구획감
     borderTopWidth: 1,
     borderTopColor: BAR_LINE,
     paddingTop: 3,
