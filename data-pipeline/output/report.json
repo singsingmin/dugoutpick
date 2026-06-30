@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-30T14:10:24.290Z",
+  "updatedAt": "2026-06-30T14:20:28.478Z",
   "lastWeek": {
     "range": [
       "20260622",
@@ -18,7 +18,7 @@
         "l": 2,
         "d": 0,
         "rank": 2,
-        "note": "4연승 행진 중 — 멈출 이유가 없다"
+        "note": "5연승 행진 중 — 멈출 이유가 없다"
       },
       "KT": {
         "w": 2,
@@ -95,8 +95,8 @@
       {
         "away": "NC",
         "home": "HT",
-        "pred": 59,
-        "reason": "게임차 6의 순위 다툼",
+        "pred": 58,
+        "reason": "게임차 6.5의 순위 다툼",
         "dateStart": "20260703",
         "dateEnd": "20260705"
       },
@@ -254,6 +254,78 @@
           "home": "HT"
         }
       ],
+      "SS": [
+        {
+          "date": "20260630",
+          "away": "SS",
+          "home": "NC",
+          "awayStarter": "오러클린",
+          "homeStarter": "테일러"
+        },
+        {
+          "date": "20260701",
+          "away": "SS",
+          "home": "NC",
+          "awayStarter": "후라도",
+          "homeStarter": "토다"
+        },
+        {
+          "date": "20260702",
+          "away": "SS",
+          "home": "NC"
+        },
+        {
+          "date": "20260703",
+          "away": "SS",
+          "home": "SK"
+        },
+        {
+          "date": "20260704",
+          "away": "SS",
+          "home": "SK"
+        },
+        {
+          "date": "20260705",
+          "away": "SS",
+          "home": "SK"
+        }
+      ],
+      "NC": [
+        {
+          "date": "20260630",
+          "away": "SS",
+          "home": "NC",
+          "awayStarter": "오러클린",
+          "homeStarter": "테일러"
+        },
+        {
+          "date": "20260701",
+          "away": "SS",
+          "home": "NC",
+          "awayStarter": "후라도",
+          "homeStarter": "토다"
+        },
+        {
+          "date": "20260702",
+          "away": "SS",
+          "home": "NC"
+        },
+        {
+          "date": "20260703",
+          "away": "NC",
+          "home": "HT"
+        },
+        {
+          "date": "20260704",
+          "away": "NC",
+          "home": "HT"
+        },
+        {
+          "date": "20260705",
+          "away": "NC",
+          "home": "HT"
+        }
+      ],
       "LG": [
         {
           "date": "20260630",
@@ -324,74 +396,6 @@
           "date": "20260705",
           "away": "OB",
           "home": "WO"
-        }
-      ],
-      "SS": [
-        {
-          "date": "20260630",
-          "away": "SS",
-          "home": "NC",
-          "awayStarter": "오러클린",
-          "homeStarter": "테일러"
-        },
-        {
-          "date": "20260701",
-          "away": "SS",
-          "home": "NC"
-        },
-        {
-          "date": "20260702",
-          "away": "SS",
-          "home": "NC"
-        },
-        {
-          "date": "20260703",
-          "away": "SS",
-          "home": "SK"
-        },
-        {
-          "date": "20260704",
-          "away": "SS",
-          "home": "SK"
-        },
-        {
-          "date": "20260705",
-          "away": "SS",
-          "home": "SK"
-        }
-      ],
-      "NC": [
-        {
-          "date": "20260630",
-          "away": "SS",
-          "home": "NC",
-          "awayStarter": "오러클린",
-          "homeStarter": "테일러"
-        },
-        {
-          "date": "20260701",
-          "away": "SS",
-          "home": "NC"
-        },
-        {
-          "date": "20260702",
-          "away": "SS",
-          "home": "NC"
-        },
-        {
-          "date": "20260703",
-          "away": "NC",
-          "home": "HT"
-        },
-        {
-          "date": "20260704",
-          "away": "NC",
-          "home": "HT"
-        },
-        {
-          "date": "20260705",
-          "away": "NC",
-          "home": "HT"
         }
       ],
       "KT": [

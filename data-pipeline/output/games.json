@@ -1,7 +1,7 @@
 {
   "date": "20260630",
   "dateText": "2026년 6월 30일",
-  "updatedAt": "2026-06-30T14:10:24.290Z",
+  "updatedAt": "2026-06-30T14:20:28.478Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 24,
@@ -25,9 +25,9 @@
         "score": 0,
         "starter": {
           "name": "박세웅",
-          "era": 4.52,
+          "era": 4.75,
           "w": 2,
-          "l": 5
+          "l": 6
         }
       },
       "home": {
@@ -37,8 +37,8 @@
         "score": 5,
         "starter": {
           "name": "최민석",
-          "era": 2.57,
-          "w": 7,
+          "era": 2.39,
+          "w": 8,
           "l": 2
         }
       },
@@ -70,8 +70,8 @@
         "verdict": "기대 이하"
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "최민석",
+        "lose": "박세웅",
         "save": null
       },
       "lineup": null
@@ -90,9 +90,9 @@
         "score": 3,
         "starter": {
           "name": "김건우",
-          "era": 5.63,
+          "era": 6.19,
           "w": 6,
-          "l": 5
+          "l": 6
         }
       },
       "home": {
@@ -102,8 +102,8 @@
         "score": 10,
         "starter": {
           "name": "올러",
-          "era": 2.51,
-          "w": 8,
+          "era": 2.36,
+          "w": 9,
           "l": 5
         }
       },
@@ -135,8 +135,8 @@
         "verdict": "예측 적중"
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "올러",
+        "lose": "김건우",
         "save": null
       },
       "lineup": null
@@ -155,7 +155,7 @@
         "score": 13,
         "starter": {
           "name": "오러클린",
-          "era": 3.86,
+          "era": 4.52,
           "w": 5,
           "l": 4
         }
@@ -167,7 +167,7 @@
         "score": 7,
         "starter": {
           "name": "테일러",
-          "era": 4.3,
+          "era": 4.48,
           "w": 5,
           "l": 4
         }
@@ -200,9 +200,9 @@
         "verdict": "예측 적중"
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "이승민",
+        "lose": "김태훈",
+        "save": "김재윤"
       },
       "lineup": null
     },
@@ -278,9 +278,9 @@
         "score": 0,
         "starter": {
           "name": "톨허스트",
-          "era": 3.73,
+          "era": 4.02,
           "w": 8,
-          "l": 5
+          "l": 6
         }
       },
       "home": {
@@ -290,8 +290,8 @@
         "score": 6,
         "starter": {
           "name": "안우진",
-          "era": 4.06,
-          "w": 1,
+          "era": 3.6,
+          "w": 2,
           "l": 4
         }
       },
@@ -323,8 +323,8 @@
         "verdict": "예측 적중"
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "안우진",
+        "lose": "톨허스트",
         "save": null
       },
       "lineup": null
