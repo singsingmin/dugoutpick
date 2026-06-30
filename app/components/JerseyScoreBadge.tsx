@@ -6,15 +6,56 @@ import Svg, { Path, Defs, ClipPath, G, Text as SvgText, Line } from 'react-nativ
 import { colors } from '../theme';
 import GguljamScoreLabel from './GguljamScoreLabel';
 
+export type UniformPreset = 'default' | 'classic' | 'pinstripe' | 'vintage';
+
 interface Props {
   score: number;
   variant?: 'hero' | 'compact' | 'detail';
   homeTeamColor?: string;
-  teamColor?: string;  // 하위 호환
+  teamColor?: string;       // 하위 호환
+  uniformPreset?: UniformPreset;
 }
 
 const CREAM = '#F5EDDA';
-const BORDER_COLOR = '#2A201A';   // 짙은 다크 브라운 (pure black 아님)
+const BORDER_COLOR = '#2A201A';
+
+// ── 유니폼 프리셋 ──────────────────────────────────────────────────────────────
+// default:   크림 파이핑 + 약한 핀스트라이프 (V5 final 기본)
+// classic:   크림 파이핑 + 스트라이프 없음 (깔끔·클래식)
+// pinstripe: 크림 파이핑 + 핀스트라이프 두드러지게 (양키스풍)
+// vintage:   골드 파이핑 + 스트라이프 없음 + 테두리 강조 (복고풍)
+interface PresetConfig {
+  piping: string;      // 파이핑 색상
+  pipingW: number;     // 파이핑 strokeWidth
+  stripes: boolean;    // 핀스트라이프 표시 여부 (compact 항상 false)
+  stripeOp: number;    // 핀스트라이프 opacity
+  cuffOp: number;      // 소매 커프 라인 opacity
+  borderOp: number;    // 외곽선 opacity
+  shadowOp: number;    // 드롭쉐도우 opacity
+}
+
+const PRESETS: Record<UniformPreset, PresetConfig> = {
+  default: {
+    piping: CREAM, pipingW: 5,
+    stripes: true,  stripeOp: 0.07,
+    cuffOp: 0.50, borderOp: 0.18, shadowOp: 0.08,
+  },
+  classic: {
+    piping: CREAM, pipingW: 5,
+    stripes: false, stripeOp: 0,
+    cuffOp: 0.55, borderOp: 0.22, shadowOp: 0.10,
+  },
+  pinstripe: {
+    piping: CREAM, pipingW: 4,
+    stripes: true,  stripeOp: 0.15,
+    cuffOp: 0.50, borderOp: 0.18, shadowOp: 0.08,
+  },
+  vintage: {
+    piping: '#D4AF37', pipingW: 6,
+    stripes: false, stripeOp: 0,
+    cuffOp: 0.70, borderOp: 0.28, shadowOp: 0.12,
+  },
+};
 
 // 팀 컬러 배지 보정: 밝은 색 어둡게, 어두운 색 유지
 function badgeColor(hex: string): string {
@@ -96,9 +137,9 @@ const SCORE_TEXT = {
 } as const;
 
 // ── 대형 배지 (hero / detail) ─────────────────────────────────────────────────
-function LargeJersey({ score, tc, cid, w, h, variant }: {
+function LargeJersey({ score, tc, cid, w, h, variant, preset }: {
   score: number; tc: string; cid: string; w: number; h: number;
-  variant: 'hero' | 'detail';
+  variant: 'hero' | 'detail'; preset: PresetConfig;
 }) {
   const dc = digitCount(score);
   const { fontSize, y } = SCORE_TEXT[variant][dc];
@@ -111,29 +152,29 @@ function LargeJersey({ score, tc, cid, w, h, variant }: {
       </Defs>
 
       {/* 드롭 쉐도우 */}
-      <Path d={JERSEY} fill="rgba(60,40,20,0.08)" translateX={2} translateY={3} />
+      <Path d={JERSEY} fill={`rgba(60,40,20,${preset.shadowOp})`} translateX={2} translateY={3} />
 
       {/* 클립 내부 레이어 */}
       <G clipPath={`url(#${cid})`}>
         <Path d={JERSEY} fill={tc} />
-        {/* 크림 파이핑 */}
-        <Path d={JERSEY} fill="none" stroke={CREAM} strokeWidth={5} strokeLinejoin="round" />
-        {/* 핀스트라이프 (대형만, 아주 약하게) */}
-        {STRIPES.map((x) => (
+        {/* 파이핑 */}
+        <Path d={JERSEY} fill="none" stroke={preset.piping} strokeWidth={preset.pipingW} strokeLinejoin="round" />
+        {/* 핀스트라이프 */}
+        {preset.stripes && STRIPES.map((x) => (
           <Line key={x} x1={x} y1={10} x2={x} y2={87}
-            stroke={CREAM} strokeWidth={0.5} opacity={0.07} />
+            stroke={preset.piping} strokeWidth={0.5} opacity={preset.stripeOp} />
         ))}
       </G>
 
-      {/* 외곽선 — 최소한만 */}
+      {/* 외곽선 */}
       <Path d={JERSEY} fill="none"
-        stroke={BORDER_COLOR} strokeWidth={2.0} strokeLinejoin="round" opacity={0.18} />
+        stroke={BORDER_COLOR} strokeWidth={2.0} strokeLinejoin="round" opacity={preset.borderOp} />
 
       {/* 소매 커프 실밥 라인 */}
       <Path d="M 6,32 L 20,40" fill="none"
-        stroke={CREAM} strokeWidth={1.6} strokeLinecap="round" opacity={0.50} />
+        stroke={preset.piping} strokeWidth={1.6} strokeLinecap="round" opacity={preset.cuffOp} />
       <Path d="M 80,40 L 94,32" fill="none"
-        stroke={CREAM} strokeWidth={1.6} strokeLinecap="round" opacity={0.50} />
+        stroke={preset.piping} strokeWidth={1.6} strokeLinecap="round" opacity={preset.cuffOp} />
 
       {/* 등번호 */}
       <SvgText
@@ -154,7 +195,9 @@ function LargeJersey({ score, tc, cid, w, h, variant }: {
 }
 
 // ── 소형 배지 (compact) ───────────────────────────────────────────────────────
-function CompactJersey({ score, tc, cid }: { score: number; tc: string; cid: string }) {
+function CompactJersey({ score, tc, cid, preset }: {
+  score: number; tc: string; cid: string; preset: PresetConfig;
+}) {
   const dc = digitCount(score);
   const { fontSize, y } = SCORE_TEXT.compact[dc];
 
@@ -164,20 +207,20 @@ function CompactJersey({ score, tc, cid }: { score: number; tc: string; cid: str
         <ClipPath id={cid}><Path d={JERSEY_SM} /></ClipPath>
       </Defs>
 
-      <Path d={JERSEY_SM} fill="rgba(60,40,20,0.08)" translateX={1} translateY={2} />
+      <Path d={JERSEY_SM} fill={`rgba(60,40,20,${preset.shadowOp})`} translateX={1} translateY={2} />
       <G clipPath={`url(#${cid})`}>
         <Path d={JERSEY_SM} fill={tc} />
-        {/* compact: 핀스트라이프 없음 */}
-        <Path d={JERSEY_SM} fill="none" stroke={CREAM} strokeWidth={4} strokeLinejoin="round" />
+        {/* compact: 핀스트라이프 항상 생략 */}
+        <Path d={JERSEY_SM} fill="none" stroke={preset.piping} strokeWidth={4} strokeLinejoin="round" />
       </G>
       <Path d={JERSEY_SM} fill="none"
-        stroke={BORDER_COLOR} strokeWidth={1.5} strokeLinejoin="round" opacity={0.16} />
+        stroke={BORDER_COLOR} strokeWidth={1.5} strokeLinejoin="round" opacity={preset.borderOp} />
 
       {/* 소매 커프 실밥 라인 */}
       <Path d="M 2,19 L 11,22" fill="none"
-        stroke={CREAM} strokeWidth={1} strokeLinecap="round" opacity={0.50} />
+        stroke={preset.piping} strokeWidth={1} strokeLinecap="round" opacity={preset.cuffOp} />
       <Path d="M 39,22 L 48,19" fill="none"
-        stroke={CREAM} strokeWidth={1} strokeLinecap="round" opacity={0.50} />
+        stroke={preset.piping} strokeWidth={1} strokeLinecap="round" opacity={preset.cuffOp} />
 
       {/* 숫자 */}
       <SvgText
@@ -198,12 +241,15 @@ function CompactJersey({ score, tc, cid }: { score: number; tc: string; cid: str
 }
 
 // ── 공개 컴포넌트 ─────────────────────────────────────────────────────────────
-export default function JerseyScoreBadge({ score, variant = 'hero', homeTeamColor, teamColor }: Props) {
+export default function JerseyScoreBadge({
+  score, variant = 'hero', homeTeamColor, teamColor, uniformPreset = 'default',
+}: Props) {
   const [cid] = useState<string>(() => `jsb_${++_seq}`);
   const tc = badgeColor(homeTeamColor ?? teamColor ?? colors.accent);
+  const preset = PRESETS[uniformPreset];
 
   if (variant === 'compact') {
-    return <CompactJersey score={score} tc={tc} cid={cid} />;
+    return <CompactJersey score={score} tc={tc} cid={cid} preset={preset} />;
   }
 
   // hero: 88×85 / detail: 110×106  (viewBox 104:100 = 1.04 비율)
@@ -211,7 +257,7 @@ export default function JerseyScoreBadge({ score, variant = 'hero', homeTeamColo
   return (
     <View style={{ alignItems: 'center', gap: 5 }}>
       <GguljamScoreLabel variant={variant} />
-      <LargeJersey score={score} tc={tc} cid={cid} w={w} h={h} variant={variant} />
+      <LargeJersey score={score} tc={tc} cid={cid} w={w} h={h} variant={variant} preset={preset} />
     </View>
   );
 }

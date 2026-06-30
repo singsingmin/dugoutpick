@@ -63,9 +63,8 @@
 > 재화 도입 전에 반드시 계정 시스템이 선행되어야 함 — 재화 초기화·스킨 유실 불만 방지.
 
 ### Phase 1 — 스킨 다양화 (서버 불필요, 현재 아키텍처)
-- [ ] `uniformPreset` 구현: keyring · classic · pinstripe · vintage 등 3~5종
+- [x] `uniformPreset` 구현: default · classic · pinstripe · vintage 4종
 - [ ] 야구공 외 배지 스킨: 글러브·헬멧·심판 카운터 등 야구 관련 오브젝트
-- [ ] 일부 스킨은 잠금 상태로 출시 → 달성 조건(AsyncStorage 플래그)으로 해제
 - [ ] 스킨 선택 UI (Settings 또는 별도 탭)
 
 ### Phase 2 — 계정 시스템 (Phase 1 이후 필수 선행)
