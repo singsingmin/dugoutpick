@@ -1,12 +1,12 @@
 {
   "date": "20260630",
   "dateText": "2026년 6월 30일",
-  "updatedAt": "2026-06-30T12:20:25.243Z",
+  "updatedAt": "2026-06-30T12:30:31.337Z",
   "trackRecord": {
     "window": 50,
-    "sampleSize": 21,
-    "hitRate": 14,
-    "bonusRate": 29,
+    "sampleSize": 23,
+    "hitRate": 22,
+    "bonusRate": 26,
     "ready": true
   },
   "recommendedGameId": "20260630LTOB0",
@@ -80,7 +80,7 @@
       "gameId": "20260630SKHT0",
       "time": "18:30",
       "stadium": "광주",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "MS-T",
       "away": {
@@ -129,117 +129,17 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 3,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "최지민",
-        "batter": "김성욱",
-        "heat": 0,
-        "label": "9회초 7점차"
+      "live": null,
+      "recap": {
+        "actual": 10,
+        "verdict": "예측 적중"
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "김호령"
-          },
-          {
-            "order": 2,
-            "pos": "좌익수",
-            "name": "박재현"
-          },
-          {
-            "order": 3,
-            "pos": "3루수",
-            "name": "김도영"
-          },
-          {
-            "order": 4,
-            "pos": "우익수",
-            "name": "나성범"
-          },
-          {
-            "order": 5,
-            "pos": "지명타자",
-            "name": "카스트로"
-          },
-          {
-            "order": 6,
-            "pos": "2루수",
-            "name": "김선빈"
-          },
-          {
-            "order": 7,
-            "pos": "포수",
-            "name": "한준수"
-          },
-          {
-            "order": 8,
-            "pos": "1루수",
-            "name": "변우혁"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "박민"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "2루수",
-            "name": "정준재"
-          },
-          {
-            "order": 2,
-            "pos": "유격수",
-            "name": "박성한"
-          },
-          {
-            "order": 3,
-            "pos": "지명타자",
-            "name": "최정"
-          },
-          {
-            "order": 4,
-            "pos": "좌익수",
-            "name": "김재환"
-          },
-          {
-            "order": 5,
-            "pos": "우익수",
-            "name": "에레디아"
-          },
-          {
-            "order": 6,
-            "pos": "1루수",
-            "name": "전의산"
-          },
-          {
-            "order": 7,
-            "pos": "3루수",
-            "name": "고명준"
-          },
-          {
-            "order": 8,
-            "pos": "중견수",
-            "name": "최지훈"
-          },
-          {
-            "order": 9,
-            "pos": "포수",
-            "name": "조형우"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260630SSNC0",
@@ -295,16 +195,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 0,
-        "b1": false,
-        "b2": false,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "이승민",
-        "batter": "김주원",
-        "heat": 63,
-        "label": "6회말 1점차 접전"
+        "pitcher": "김태훈",
+        "batter": "김지찬",
+        "heat": 68,
+        "label": "7회초 1점차 접전"
       },
       "recap": null,
       "decision": null,
@@ -428,7 +328,7 @@
       "home": {
         "code": "HH",
         "name": "한화",
-        "rank": 5,
+        "rank": 6,
         "score": null,
         "starter": {
           "name": "에르난데스",
@@ -468,7 +368,7 @@
       "gameId": "20260630LGWO0",
       "time": "18:30",
       "stadium": "고척",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPO-2T",
       "away": {
@@ -517,117 +417,17 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 0,
-        "b1": true,
-        "b2": true,
-        "b3": false,
-        "pitcher": "박정훈",
-        "batter": "박동원",
-        "heat": 0,
-        "label": "9회초 6점차"
+      "live": null,
+      "recap": {
+        "actual": 14,
+        "verdict": "예측 적중"
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "2루수",
-            "name": "서건창"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "추재현"
-          },
-          {
-            "order": 3,
-            "pos": "1루수",
-            "name": "안치홍"
-          },
-          {
-            "order": 4,
-            "pos": "좌익수",
-            "name": "히우라"
-          },
-          {
-            "order": 5,
-            "pos": "포수",
-            "name": "김건희"
-          },
-          {
-            "order": 6,
-            "pos": "지명타자",
-            "name": "김웅빈"
-          },
-          {
-            "order": 7,
-            "pos": "우익수",
-            "name": "박찬혁"
-          },
-          {
-            "order": 8,
-            "pos": "유격수",
-            "name": "권혁빈"
-          },
-          {
-            "order": 9,
-            "pos": "3루수",
-            "name": "여동욱"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "지명타자",
-            "name": "송찬의"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "박해민"
-          },
-          {
-            "order": 3,
-            "pos": "1루수",
-            "name": "오스틴"
-          },
-          {
-            "order": 4,
-            "pos": "3루수",
-            "name": "문정빈"
-          },
-          {
-            "order": 5,
-            "pos": "유격수",
-            "name": "오지환"
-          },
-          {
-            "order": 6,
-            "pos": "우익수",
-            "name": "홍창기"
-          },
-          {
-            "order": 7,
-            "pos": "포수",
-            "name": "박동원"
-          },
-          {
-            "order": 8,
-            "pos": "좌익수",
-            "name": "문성주"
-          },
-          {
-            "order": 9,
-            "pos": "2루수",
-            "name": "신민재"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     }
   ]
 }
