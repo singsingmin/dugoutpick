@@ -110,8 +110,8 @@ function LargeJersey({ score, tc, cid, w, h, variant }: {
         <ClipPath id={cid}><Path d={JERSEY} /></ClipPath>
       </Defs>
 
-      {/* 은은한 드롭 쉐도우 */}
-      <Path d={JERSEY} fill="rgba(0,0,0,0.11)" translateX={2} translateY={3} />
+      {/* 은은한 드롭 쉐도우 — 웜그레이 */}
+      <Path d={JERSEY} fill="rgba(60,40,20,0.14)" translateX={2} translateY={3} />
 
       {/* 클립 내부 레이어 */}
       <G clipPath={`url(#${cid})`}>
@@ -143,7 +143,7 @@ function LargeJersey({ score, tc, cid, w, h, variant }: {
         x={50} y={y}
         fontSize={fontSize} fontWeight="900"
         fill="none"
-        stroke="rgba(0,0,0,0.26)" strokeWidth={3} strokeLinejoin="round"
+        stroke="rgba(0,0,0,0.26)" strokeWidth={4} strokeLinejoin="round"
         textAnchor="middle" dominantBaseline="middle"
       >{score}</SvgText>
       <SvgText
@@ -167,7 +167,7 @@ function CompactJersey({ score, tc, cid }: { score: number; tc: string; cid: str
         <ClipPath id={cid}><Path d={JERSEY_SM} /></ClipPath>
       </Defs>
 
-      <Path d={JERSEY_SM} fill="rgba(0,0,0,0.09)" translateX={1} translateY={2} />
+      <Path d={JERSEY_SM} fill="rgba(60,40,20,0.12)" translateX={1} translateY={2} />
       <G clipPath={`url(#${cid})`}>
         <Path d={JERSEY_SM} fill={tc} />
         <Path d={JERSEY_SM} fill="none" stroke={CREAM} strokeWidth={4} strokeLinejoin="round" />
@@ -186,7 +186,7 @@ function CompactJersey({ score, tc, cid }: { score: number; tc: string; cid: str
         x={25} y={y}
         fontSize={fontSize} fontWeight="900"
         fill="none"
-        stroke="rgba(0,0,0,0.25)" strokeWidth={2.5} strokeLinejoin="round"
+        stroke="rgba(0,0,0,0.25)" strokeWidth={3} strokeLinejoin="round"
         textAnchor="middle" dominantBaseline="middle"
       >{score}</SvgText>
       <SvgText
