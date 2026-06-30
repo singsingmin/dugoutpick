@@ -263,7 +263,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: spacing.md, paddingVertical: spacing.xs,
   },
   heroLabelRow: {
-    flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start',
+    flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end',
     marginBottom: spacing.xs,
   },
   heroMeta: { alignItems: 'flex-end' },
