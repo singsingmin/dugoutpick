@@ -52,3 +52,12 @@ export function formatUpdatedAt(iso: string): string {
   const p = (n: number) => String(n).padStart(2, '0');
   return `${k.getUTCFullYear()}-${p(k.getUTCMonth() + 1)}-${p(k.getUTCDate())} ${p(k.getUTCHours())}:${p(k.getUTCMinutes())} (KST)`;
 }
+
+// ISO(UTC) → KST "YYYY년 M월 D일 HH:MM"
+export function kstDatetime(iso: string): string {
+  const d = new Date(iso);
+  if (isNaN(d.getTime())) return '';
+  const k = new Date(d.getTime() + 9 * 60 * 60 * 1000);
+  const p = (n: number) => String(n).padStart(2, '0');
+  return `${k.getUTCFullYear()}년 ${k.getUTCMonth() + 1}월 ${k.getUTCDate()}일 ${p(k.getUTCHours())}:${p(k.getUTCMinutes())}`;
+}

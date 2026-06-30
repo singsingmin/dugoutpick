@@ -16,7 +16,7 @@ import type { AppIconName } from '../components/AppIcon';
 import PixelText from '../components/PixelText';
 import MondayReport from '../components/MondayReport';
 import WeeklyScheduleSheet from '../components/WeeklyScheduleSheet';
-import { relativeFromNow, isKstMonday } from '../utils';
+import { relativeFromNow, isKstMonday, kstDatetime } from '../utils';
 import { colors, spacing } from '../theme';
 
 type Nav = NativeStackNavigationProp<RootStackParamList>;
@@ -175,14 +175,6 @@ function Body({
           <GameCard game={heroGame} variant="hero" onPress={() => open(heroGame!.gameId)} />
         </View>
       )}
-      {/* allDone 또는 추천 경기 없을 때 날짜/갱신 폴백 */}
-      {(allDone || !heroGame) && (
-        <View style={styles.dateMeta}>
-          <PixelText variant="caption" color={colors.text}>{data.dateText}</PixelText>
-          <PixelText variant="caption" color={colors.textDim}>갱신 {relativeFromNow(data.updatedAt)}</PixelText>
-        </View>
-      )}
-
       {/* ── 리스트 섹션 ── */}
       <View style={styles.listSection}>
         {liveGames.length > 0 && (
@@ -190,8 +182,7 @@ function Body({
             <View style={styles.heroLabelRow}>
               <SectionLabel icon="live" label="지금 볼 각" />
               <View style={styles.heroMeta}>
-                <PixelText variant="caption" color={colors.text}>{data.dateText}</PixelText>
-                <PixelText variant="caption" color={colors.textDim}>갱신 {relativeFromNow(data.updatedAt)}</PixelText>
+                <PixelText variant="caption" color={colors.textDim}>갱신 {kstDatetime(data.updatedAt)}</PixelText>
               </View>
             </View>
             <PixelText variant="caption" color={colors.textDim} style={styles.liveHint}>
