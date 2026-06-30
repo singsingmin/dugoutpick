@@ -30,48 +30,41 @@ function badgeColor(hex: string): string {
   return `#${nr.toString(16).padStart(2, '0')}${ng.toString(16).padStart(2, '0')}${nb.toString(16).padStart(2, '0')}`;
 }
 
-// ── 대형 유니폼 실루엣 (뒷면 백넘버) ─────────────────────────────────────────
+// ── 대형 유니폼 실루엣 (뒷면 백넘버) — V4 ────────────────────────────────────
 // viewBox -4 -4 104 100
-// 어깨 접합: x=18/82 (y=15), 소매 끝: x=12/88 (y=28), 커프: x=22/78 (y=36)
-// 소매: 어깨에서 13↓ 6← (주로 하향), 커프: 10→ 8↓ (안쪽으로 수렴)
-// body: x=32~68 (36 wide), y=44~86 (42 tall), center x=50 y=65
+// 어깨: x=8/92 (y=18), 소매 끝: x=4/96 (y=31), 커프: x=20/80 (y=39)
+// body: x=23~77, y=39~84, center y=61.5
 const JERSEY =
-  'M 40,4' +
-  ' Q 50,12 60,4' +      // 뒷목 칼라 U
-  ' Q 74,4 82,15' +      // 오른쪽 어깨 (칼라→접합점, 완만한 곡선)
-  ' L 88,28' +           // 오른쪽 소매 외곽 끝 (6→ 13↓ — 주로 하향)
-  ' L 78,36' +           // 오른쪽 소매 커프 (10← 8↓ — 안쪽 수렴)
-  ' Q 74,42 68,44' +     // 오른쪽 겨드랑이 곡선
-  ' L 68,86' +           // 오른쪽 몸통
-  ' Q 68,92 62,92' +     // 오른쪽 밑단 모서리
-  ' L 38,92' +           // 밑단
-  ' Q 32,92 32,86' +     // 왼쪽 밑단 모서리
-  ' L 32,44' +           // 왼쪽 몸통
-  ' Q 26,42 22,36' +     // 왼쪽 겨드랑이 곡선
-  ' L 12,28' +           // 왼쪽 소매 커프
-  ' L 18,15' +           // 왼쪽 소매 외곽 끝 (어깨 접합점으로)
-  ' Q 26,4 40,4 Z';      // 왼쪽 어깨 (접합점→칼라)
+  'M 36,6 Q 22,9 8,18' +    // 칼라→왼쪽 어깨 접합
+  ' L 4,31' +                // 왼쪽 소매 외곽 끝
+  ' L 20,39' +               // 왼쪽 소매 커프 (안쪽 수렴)
+  ' L 23,84' +               // 왼쪽 몸통
+  ' Q 23,89 29,89' +         // 왼쪽 밑단 코너
+  ' L 71,89' +               // 밑단
+  ' Q 77,89 77,84' +         // 오른쪽 밑단 코너
+  ' L 80,39' +               // 오른쪽 몸통
+  ' L 96,31' +               // 오른쪽 소매 커프
+  ' L 92,18' +               // 오른쪽 소매 외곽 끝
+  ' Q 78,9 64,6' +           // 오른쪽 어깨→칼라
+  ' Q 50,13 36,6 Z';         // 뒷목 칼라 U
 
-// ── 소형 유니폼 실루엣 (뒷면 백넘버) ─────────────────────────────────────────
+// ── 소형 유니폼 실루엣 (뒷면 백넘버) — V4 ────────────────────────────────────
 // viewBox -3 -3 56 62
-// 어깨 접합: x=6/44 (y=10), 소매 끝: x=2/48 (y=19), 커프: x=10/40 (y=24)
-// body: x=14~36 (22 wide), y=28~48 (20 tall), center x=25 y=38
+// 어깨: x=3/47 (y=11), 소매 끝: x=1/49 (y=18), 커프: x=11/39 (y=21)
+// body: x=12~38, y=21~47, center y=34
 const JERSEY_SM =
-  'M 20,3' +
-  ' Q 25,8 30,3' +       // 뒷목 칼라 U
-  ' Q 38,3 44,10' +      // 오른쪽 어깨
-  ' L 48,19' +           // 오른쪽 소매 외곽 끝 (4→ 9↓ — 주로 하향)
-  ' L 40,24' +           // 오른쪽 소매 커프 (8← 5↓)
-  ' Q 38,27 36,28' +     // 오른쪽 겨드랑이
-  ' L 36,48' +           // 오른쪽 몸통
-  ' Q 36,52 32,52' +     // 오른쪽 밑단 모서리
-  ' L 18,52' +           // 밑단
-  ' Q 14,52 14,48' +     // 왼쪽 밑단 모서리
-  ' L 14,28' +           // 왼쪽 몸통
-  ' Q 12,27 10,24' +     // 왼쪽 겨드랑이
-  ' L 2,19' +            // 왼쪽 소매 커프
-  ' L 6,10' +            // 왼쪽 소매 외곽 끝
-  ' Q 12,3 20,3 Z';      // 왼쪽 어깨
+  'M 18,4 Q 11,6 3,11' +    // 칼라→왼쪽 어깨 접합
+  ' L 1,18' +                // 왼쪽 소매 외곽 끝
+  ' L 11,21' +               // 왼쪽 소매 커프
+  ' L 12,47' +               // 왼쪽 몸통
+  ' Q 12,51 17,51' +         // 왼쪽 밑단 코너
+  ' L 33,51' +               // 밑단
+  ' Q 38,51 38,47' +         // 오른쪽 밑단 코너
+  ' L 39,21' +               // 오른쪽 몸통
+  ' L 49,18' +               // 오른쪽 소매 커프
+  ' L 47,11' +               // 오른쪽 소매 외곽 끝
+  ' Q 39,6 32,4' +           // 오른쪽 어깨→칼라
+  ' Q 25,9 18,4 Z';          // 뒷목 칼라 U
 
 let _seq = 0;
 
@@ -82,23 +75,23 @@ function digitCount(score: number): 1 | 2 | 3 {
 
 // ── 숫자 위치·크기 테이블 ────────────────────────────────────────────────────
 // dominantBaseline="middle" → y = 시각 중심
-// 대형 body center=65 (y=44~86) → target y≈64 (살짝 위)
-// 소형 body center=38 (y=28~48) → target y≈37 (살짝 위)
+// 대형 V4 body center=61.5 (y=39~84) → target y=58 (시각 중앙보다 살짝 위)
+// 소형 V4 body center=34 (y=21~47) → target y=33 (살짝 위)
 const SCORE_TEXT = {
   hero: {
-    1: { fontSize: 44, y: 64 },
-    2: { fontSize: 38, y: 63 },
-    3: { fontSize: 30, y: 62 },
+    1: { fontSize: 44, y: 58 },
+    2: { fontSize: 38, y: 58 },
+    3: { fontSize: 30, y: 57 },
   },
   detail: {
-    1: { fontSize: 44, y: 64 },
-    2: { fontSize: 38, y: 63 },
-    3: { fontSize: 30, y: 62 },
+    1: { fontSize: 44, y: 58 },
+    2: { fontSize: 38, y: 58 },
+    3: { fontSize: 30, y: 57 },
   },
   compact: {
-    1: { fontSize: 20, y: 37 },
-    2: { fontSize: 16, y: 36 },
-    3: { fontSize: 13, y: 35 },
+    1: { fontSize: 20, y: 33 },
+    2: { fontSize: 16, y: 33 },
+    3: { fontSize: 13, y: 32 },
   },
 } as const;
 
@@ -117,43 +110,37 @@ function LargeJersey({ score, tc, cid, w, h, variant }: {
         <ClipPath id={cid}><Path d={JERSEY} /></ClipPath>
       </Defs>
 
-      {/* 은은한 드롭 쉐도우 — 웜그레이 */}
-      <Path d={JERSEY} fill="rgba(60,40,20,0.14)" translateX={2} translateY={3} />
+      {/* 드롭 쉐도우 */}
+      <Path d={JERSEY} fill="rgba(60,40,20,0.08)" translateX={2} translateY={3} />
 
       {/* 클립 내부 레이어 */}
       <G clipPath={`url(#${cid})`}>
         <Path d={JERSEY} fill={tc} />
-        {/* 크림 파이핑 (칼라·소매·몸통 외형 동시 처리) */}
-        <Path d={JERSEY} fill="none" stroke={CREAM} strokeWidth={6} strokeLinejoin="round" />
-        {/* 핀스트라이프 */}
+        {/* 크림 파이핑 */}
+        <Path d={JERSEY} fill="none" stroke={CREAM} strokeWidth={5} strokeLinejoin="round" />
+        {/* 핀스트라이프 (대형만, 아주 약하게) */}
         {STRIPES.map((x) => (
-          <Line key={x} x1={x} y1={14} x2={x} y2={90}
-            stroke={CREAM} strokeWidth={0.5} opacity={0.08} />
+          <Line key={x} x1={x} y1={10} x2={x} y2={87}
+            stroke={CREAM} strokeWidth={0.5} opacity={0.07} />
         ))}
-        {/* 요크/패널 라인 */}
-        <Path d="M 30,54 Q 50,51 70,54"
-          fill="none" stroke={CREAM} strokeWidth={1.0} opacity={0.10} />
-        {/* 네임패치 영역 힌트 */}
-        <Path d="M 36,62 Q 50,60 64,62"
-          fill="none" stroke={CREAM} strokeWidth={0.7} opacity={0.07} />
       </G>
 
-      {/* 극히 얇은 외곽선 — 형태 구분 최소한만 */}
+      {/* 외곽선 — 최소한만 */}
       <Path d={JERSEY} fill="none"
-        stroke={BORDER_COLOR} strokeWidth={2.5} strokeLinejoin="round" opacity={0.32} />
+        stroke={BORDER_COLOR} strokeWidth={2.0} strokeLinejoin="round" opacity={0.18} />
 
-      {/* 소매 커프 파이핑 (커프 안쪽 방향에 나란히) */}
-      <Path d="M 14,29 L 22,37" fill="none"
-        stroke={CREAM} strokeWidth={1.8} strokeLinecap="round" opacity={0.60} />
-      <Path d="M 78,37 L 86,29" fill="none"
-        stroke={CREAM} strokeWidth={1.8} strokeLinecap="round" opacity={0.60} />
+      {/* 소매 커프 실밥 라인 */}
+      <Path d="M 6,32 L 20,40" fill="none"
+        stroke={CREAM} strokeWidth={1.6} strokeLinecap="round" opacity={0.50} />
+      <Path d="M 80,40 L 94,32" fill="none"
+        stroke={CREAM} strokeWidth={1.6} strokeLinecap="round" opacity={0.50} />
 
-      {/* 등번호 — dominantBaseline="middle"로 y=시각 중심 */}
+      {/* 등번호 */}
       <SvgText
         x={50} y={y}
         fontSize={fontSize} fontWeight="900"
         fill="none"
-        stroke="rgba(0,0,0,0.26)" strokeWidth={4} strokeLinejoin="round"
+        stroke="rgba(0,0,0,0.20)" strokeWidth={3.5} strokeLinejoin="round"
         textAnchor="middle" dominantBaseline="middle"
       >{score}</SvgText>
       <SvgText
@@ -177,26 +164,27 @@ function CompactJersey({ score, tc, cid }: { score: number; tc: string; cid: str
         <ClipPath id={cid}><Path d={JERSEY_SM} /></ClipPath>
       </Defs>
 
-      <Path d={JERSEY_SM} fill="rgba(60,40,20,0.12)" translateX={1} translateY={2} />
+      <Path d={JERSEY_SM} fill="rgba(60,40,20,0.08)" translateX={1} translateY={2} />
       <G clipPath={`url(#${cid})`}>
         <Path d={JERSEY_SM} fill={tc} />
+        {/* compact: 핀스트라이프 없음 */}
         <Path d={JERSEY_SM} fill="none" stroke={CREAM} strokeWidth={4} strokeLinejoin="round" />
       </G>
       <Path d={JERSEY_SM} fill="none"
-        stroke={BORDER_COLOR} strokeWidth={1.5} strokeLinejoin="round" opacity={0.28} />
+        stroke={BORDER_COLOR} strokeWidth={1.5} strokeLinejoin="round" opacity={0.16} />
 
-      {/* 소매 커프 트림 */}
-      <Path d="M 4,20 L 10,25" fill="none"
-        stroke={CREAM} strokeWidth={1} strokeLinecap="round" opacity={0.56} />
-      <Path d="M 40,25 L 46,20" fill="none"
-        stroke={CREAM} strokeWidth={1} strokeLinecap="round" opacity={0.56} />
+      {/* 소매 커프 실밥 라인 */}
+      <Path d="M 2,19 L 11,22" fill="none"
+        stroke={CREAM} strokeWidth={1} strokeLinecap="round" opacity={0.50} />
+      <Path d="M 39,22 L 48,19" fill="none"
+        stroke={CREAM} strokeWidth={1} strokeLinecap="round" opacity={0.50} />
 
       {/* 숫자 */}
       <SvgText
         x={25} y={y}
         fontSize={fontSize} fontWeight="900"
         fill="none"
-        stroke="rgba(0,0,0,0.25)" strokeWidth={3} strokeLinejoin="round"
+        stroke="rgba(0,0,0,0.20)" strokeWidth={2.5} strokeLinejoin="round"
         textAnchor="middle" dominantBaseline="middle"
       >{score}</SvgText>
       <SvgText
