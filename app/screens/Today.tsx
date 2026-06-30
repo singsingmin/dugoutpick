@@ -16,7 +16,7 @@ import type { AppIconName } from '../components/AppIcon';
 import PixelText from '../components/PixelText';
 import MondayReport from '../components/MondayReport';
 import WeeklyScheduleSheet from '../components/WeeklyScheduleSheet';
-import { formatUpdatedAt, relativeFromNow, isKstMonday } from '../utils';
+import { relativeFromNow, isKstMonday } from '../utils';
 import { colors, spacing } from '../theme';
 
 type Nav = NativeStackNavigationProp<RootStackParamList>;
@@ -41,12 +41,10 @@ export default function Today() {
             setData(d);
             setFailed(false);
             const hasLive = d.games.some((g) => g.status === 'LIVE');
-            if (hasLive && !intervalRef.current) {
-              intervalRef.current = setInterval(refresh, 30_000);
-            } else if (!hasLive && intervalRef.current) {
-              clearInterval(intervalRef.current);
-              intervalRef.current = null;
-            }
+            // LIVE: 30s 갱신 / 비LIVE: 60s 베이스라인(SCHEDULED→LIVE 전환 감지)
+            const targetMs = hasLive ? 30_000 : 60_000;
+            if (intervalRef.current) clearInterval(intervalRef.current);
+            intervalRef.current = setInterval(refresh, targetMs);
           })
           .catch(() => {
             if (active) setFailed(true);
@@ -164,6 +162,12 @@ function Body({
         rightIcon="calendar"
         onRightPress={onCalendar}
       />
+      <View style={styles.dateMeta}>
+        <PixelText variant="caption" color={colors.text}>{data.dateText}</PixelText>
+        <PixelText variant="caption" color={colors.textDim}>
+          갱신 {relativeFromNow(data.updatedAt)}
+        </PixelText>
+      </View>
 
       {/* ── 히어로 섹션 ── */}
       {!allDone && heroGame && (
@@ -177,17 +181,9 @@ function Body({
       <View style={styles.listSection}>
         {liveGames.length > 0 && (
           <View style={styles.section}>
-            <View style={styles.liveHeader}>
-              <SectionLabel icon="live" label="지금 볼 각" />
-              <View style={styles.liveMeta}>
-                <PixelText variant="caption" color={colors.text}>{data.dateText}</PixelText>
-                <PixelText variant="caption" color={colors.textDim}>
-                  갱신 {formatUpdatedAt(data.updatedAt)} · {relativeFromNow(data.updatedAt)}
-                </PixelText>
-              </View>
-            </View>
+            <SectionLabel icon="live" label="지금 볼 각" />
             <PixelText variant="caption" color={colors.textDim} style={styles.liveHint}>
-              ⚠ 라이브 점수는 갱신 시각 기준 — 실제보다 몇 분 늦을 수 있다
+              ⚠ 라이브 점수는 30초 간격 갱신 — 실제보다 몇 초 늦을 수 있다
             </PixelText>
             {liveGames.map((g) => (
               <LiveCard key={g.gameId} game={g} onPress={() => open(g.gameId)} />
@@ -261,10 +257,12 @@ const styles = StyleSheet.create({
   },
 
   // 리스트 섹션
+  dateMeta: {
+    flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center',
+    paddingHorizontal: spacing.md, paddingVertical: spacing.xs,
+  },
   listSection: { padding: spacing.md, flex: 1 },
   section: { marginBottom: spacing.lg },
-  liveHeader: { flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: spacing.xs },
-  liveMeta: { alignItems: 'flex-end', gap: 2 },
   liveHint: { marginBottom: spacing.sm },
   subLabel: { marginBottom: spacing.xs },
 });
