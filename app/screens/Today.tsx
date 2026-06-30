@@ -16,7 +16,7 @@ import type { AppIconName } from '../components/AppIcon';
 import PixelText from '../components/PixelText';
 import MondayReport from '../components/MondayReport';
 import WeeklyScheduleSheet from '../components/WeeklyScheduleSheet';
-import { relativeFromNow, isKstMonday, kstDatetime } from '../utils';
+import { isKstMonday, kstDatetime } from '../utils';
 import { colors, spacing } from '../theme';
 
 type Nav = NativeStackNavigationProp<RootStackParamList>;
@@ -168,8 +168,7 @@ function Body({
           <View style={styles.heroLabelRow}>
             <SectionLabel icon={heroIcon} label={heroLabel} />
             <View style={styles.heroMeta}>
-              <PixelText variant="caption" color={colors.text}>{data.dateText}</PixelText>
-              <PixelText variant="caption" color={colors.textDim}>갱신 {relativeFromNow(data.updatedAt)}</PixelText>
+              <PixelText variant="caption" color={colors.textDim}>갱신 {kstDatetime(data.updatedAt)}</PixelText>
             </View>
           </View>
           <GameCard game={heroGame} variant="hero" onPress={() => open(heroGame!.gameId)} />
