@@ -5,8 +5,14 @@ import { View } from 'react-native';
 import Svg, { Path, Defs, ClipPath, G, Text as SvgText, Line } from 'react-native-svg';
 import { colors } from '../theme';
 import GguljamScoreLabel from './GguljamScoreLabel';
+import {
+  type UniformPresetId,
+  type ResolvedUniformStyle,
+  UNIFORM_PRESETS,
+  resolveUniformPreset,
+} from '../utils/uniformResolver';
 
-export type UniformPreset = 'default' | 'classic' | 'pinstripe' | 'vintage';
+export type UniformPreset = UniformPresetId;
 
 interface Props {
   score: number;
@@ -15,48 +21,6 @@ interface Props {
   teamColor?: string;       // 하위 호환
   uniformPreset?: UniformPreset;
 }
-
-const CREAM = '#F5EDDA';
-const BORDER_COLOR = '#2A201A';
-
-// ── 유니폼 프리셋 ──────────────────────────────────────────────────────────────
-// default:   크림 파이핑 + 약한 핀스트라이프 (V5 final 기본)
-// classic:   크림 파이핑 + 스트라이프 없음 (깔끔·클래식)
-// pinstripe: 크림 파이핑 + 핀스트라이프 두드러지게 (양키스풍)
-// vintage:   골드 파이핑 + 스트라이프 없음 + 테두리 강조 (복고풍)
-interface PresetConfig {
-  piping: string;      // 파이핑 색상
-  pipingW: number;     // 파이핑 strokeWidth
-  stripes: boolean;    // 핀스트라이프 표시 여부 (compact 항상 false)
-  stripeOp: number;    // 핀스트라이프 opacity
-  cuffOp: number;      // 소매 커프 라인 opacity
-  borderOp: number;    // 외곽선 opacity
-  shadowOp: number;    // 드롭쉐도우 opacity
-  bodyColor?: string;  // undefined = 팀 컬러 사용, 값 있으면 고정색 스킨
-}
-
-const PRESETS: Record<UniformPreset, PresetConfig> = {
-  default: {
-    piping: CREAM, pipingW: 5,
-    stripes: true,  stripeOp: 0.07,
-    cuffOp: 0.50, borderOp: 0.18, shadowOp: 0.08,
-  },
-  classic: {
-    piping: CREAM, pipingW: 5,
-    stripes: false, stripeOp: 0,
-    cuffOp: 0.55, borderOp: 0.22, shadowOp: 0.10,
-  },
-  pinstripe: {
-    piping: CREAM, pipingW: 4,
-    stripes: true,  stripeOp: 0.15,
-    cuffOp: 0.50, borderOp: 0.18, shadowOp: 0.08,
-  },
-  vintage: {
-    piping: '#D4AF37', pipingW: 6,
-    stripes: false, stripeOp: 0,
-    cuffOp: 0.70, borderOp: 0.28, shadowOp: 0.12,
-  },
-};
 
 // 팀 컬러 배지 보정: 밝은 색 어둡게, 어두운 색 유지
 function badgeColor(hex: string): string {
@@ -138,14 +102,13 @@ const SCORE_TEXT = {
 } as const;
 
 // ── 대형 배지 (hero / detail) ─────────────────────────────────────────────────
-function LargeJersey({ score, tc, cid, w, h, variant, preset }: {
-  score: number; tc: string; cid: string; w: number; h: number;
-  variant: 'hero' | 'detail'; preset: PresetConfig;
+function LargeJersey({ score, cid, w, h, variant, resolved }: {
+  score: number; cid: string; w: number; h: number;
+  variant: 'hero' | 'detail'; resolved: ResolvedUniformStyle;
 }) {
   const dc = digitCount(score);
   const { fontSize, y } = SCORE_TEXT[variant][dc];
   const STRIPES = [36, 43, 50, 57, 64];
-  const fill = preset.bodyColor ?? tc;
 
   return (
     <Svg width={w} height={h} viewBox="-4 -4 104 100">
@@ -154,42 +117,46 @@ function LargeJersey({ score, tc, cid, w, h, variant, preset }: {
       </Defs>
 
       {/* 드롭 쉐도우 */}
-      <Path d={JERSEY} fill={`rgba(60,40,20,${preset.shadowOp})`} translateX={2} translateY={3} />
+      <Path d={JERSEY} fill={`rgba(60,40,20,${resolved.shadowOpacity})`} translateX={2} translateY={3} />
 
       {/* 클립 내부 레이어 */}
       <G clipPath={`url(#${cid})`}>
-        <Path d={JERSEY} fill={fill} />
+        <Path d={JERSEY} fill={resolved.bodyColor} />
         {/* 파이핑 */}
-        <Path d={JERSEY} fill="none" stroke={preset.piping} strokeWidth={preset.pipingW} strokeLinejoin="round" />
+        <Path d={JERSEY} fill="none"
+          stroke={resolved.pipingColor} strokeWidth={resolved.pipingWidth} strokeLinejoin="round" />
         {/* 핀스트라이프 */}
-        {preset.stripes && STRIPES.map((x) => (
+        {resolved.stripeOpacity > 0 && STRIPES.map((x) => (
           <Line key={x} x1={x} y1={10} x2={x} y2={83}
-            stroke={preset.piping} strokeWidth={0.5} opacity={preset.stripeOp} />
+            stroke={resolved.stripeColor} strokeWidth={0.5} opacity={resolved.stripeOpacity} />
         ))}
       </G>
 
       {/* 외곽선 */}
       <Path d={JERSEY} fill="none"
-        stroke={BORDER_COLOR} strokeWidth={2.0} strokeLinejoin="round" opacity={preset.borderOp} />
+        stroke={resolved.outerStrokeColor} strokeWidth={resolved.outerStrokeWidth}
+        strokeLinejoin="round" />
 
       {/* 소매 커프 실밥 라인 */}
       <Path d="M 11,29 L 22,39" fill="none"
-        stroke={preset.piping} strokeWidth={1.6} strokeLinecap="round" opacity={preset.cuffOp} />
+        stroke={resolved.cuffColor} strokeWidth={resolved.cuffWidth}
+        strokeLinecap="round" opacity={resolved.cuffOpacity} />
       <Path d="M 78,39 L 89,29" fill="none"
-        stroke={preset.piping} strokeWidth={1.6} strokeLinecap="round" opacity={preset.cuffOp} />
+        stroke={resolved.cuffColor} strokeWidth={resolved.cuffWidth}
+        strokeLinecap="round" opacity={resolved.cuffOpacity} />
 
       {/* 등번호 */}
       <SvgText
         x={50} y={y}
         fontSize={fontSize} fontWeight="900"
         fill="none"
-        stroke="rgba(0,0,0,0.20)" strokeWidth={3.5} strokeLinejoin="round"
+        stroke={resolved.numberStroke} strokeWidth={resolved.numberStrokeWidth} strokeLinejoin="round"
         textAnchor="middle" dominantBaseline="middle"
       >{score}</SvgText>
       <SvgText
         x={50} y={y}
         fontSize={fontSize} fontWeight="900"
-        fill={CREAM}
+        fill={resolved.numberFill}
         textAnchor="middle" dominantBaseline="middle"
       >{score}</SvgText>
     </Svg>
@@ -197,12 +164,11 @@ function LargeJersey({ score, tc, cid, w, h, variant, preset }: {
 }
 
 // ── 소형 배지 (compact) ───────────────────────────────────────────────────────
-function CompactJersey({ score, tc, cid, preset }: {
-  score: number; tc: string; cid: string; preset: PresetConfig;
+function CompactJersey({ score, cid, resolved }: {
+  score: number; cid: string; resolved: ResolvedUniformStyle;
 }) {
   const dc = digitCount(score);
   const { fontSize, y } = SCORE_TEXT.compact[dc];
-  const fill = preset.bodyColor ?? tc;
 
   return (
     <Svg width={48} height={53} viewBox="-3 -3 56 62">
@@ -210,33 +176,37 @@ function CompactJersey({ score, tc, cid, preset }: {
         <ClipPath id={cid}><Path d={JERSEY_SM} /></ClipPath>
       </Defs>
 
-      <Path d={JERSEY_SM} fill={`rgba(60,40,20,${preset.shadowOp})`} translateX={1} translateY={2} />
+      <Path d={JERSEY_SM} fill={`rgba(60,40,20,${resolved.shadowOpacity})`} translateX={1} translateY={2} />
       <G clipPath={`url(#${cid})`}>
-        <Path d={JERSEY_SM} fill={fill} />
-        {/* compact: 핀스트라이프 항상 생략 */}
-        <Path d={JERSEY_SM} fill="none" stroke={preset.piping} strokeWidth={4} strokeLinejoin="round" />
+        <Path d={JERSEY_SM} fill={resolved.bodyColor} />
+        {/* compact: 핀스트라이프 항상 생략 (resolver가 stripeOpacity=0 보장) */}
+        <Path d={JERSEY_SM} fill="none"
+          stroke={resolved.pipingColor} strokeWidth={resolved.pipingWidth} strokeLinejoin="round" />
       </G>
       <Path d={JERSEY_SM} fill="none"
-        stroke={BORDER_COLOR} strokeWidth={1.5} strokeLinejoin="round" opacity={preset.borderOp} />
+        stroke={resolved.outerStrokeColor} strokeWidth={resolved.outerStrokeWidth}
+        strokeLinejoin="round" />
 
       {/* 소매 커프 실밥 라인 */}
       <Path d="M 6,15 L 11,20" fill="none"
-        stroke={preset.piping} strokeWidth={1} strokeLinecap="round" opacity={preset.cuffOp} />
+        stroke={resolved.cuffColor} strokeWidth={resolved.cuffWidth}
+        strokeLinecap="round" opacity={resolved.cuffOpacity} />
       <Path d="M 39,20 L 44,15" fill="none"
-        stroke={preset.piping} strokeWidth={1} strokeLinecap="round" opacity={preset.cuffOp} />
+        stroke={resolved.cuffColor} strokeWidth={resolved.cuffWidth}
+        strokeLinecap="round" opacity={resolved.cuffOpacity} />
 
       {/* 숫자 */}
       <SvgText
         x={25} y={y}
         fontSize={fontSize} fontWeight="900"
         fill="none"
-        stroke="rgba(0,0,0,0.20)" strokeWidth={2.5} strokeLinejoin="round"
+        stroke={resolved.numberStroke} strokeWidth={resolved.numberStrokeWidth * 0.7} strokeLinejoin="round"
         textAnchor="middle" dominantBaseline="middle"
       >{score}</SvgText>
       <SvgText
         x={25} y={y}
         fontSize={fontSize} fontWeight="900"
-        fill={CREAM}
+        fill={resolved.numberFill}
         textAnchor="middle" dominantBaseline="middle"
       >{score}</SvgText>
     </Svg>
@@ -249,10 +219,11 @@ export default function JerseyScoreBadge({
 }: Props) {
   const [cid] = useState<string>(() => `jsb_${++_seq}`);
   const tc = badgeColor(homeTeamColor ?? teamColor ?? colors.accent);
-  const preset = PRESETS[uniformPreset];
+  const config = UNIFORM_PRESETS[uniformPreset];
+  const resolved = resolveUniformPreset(config, tc, variant);
 
   if (variant === 'compact') {
-    return <CompactJersey score={score} tc={tc} cid={cid} preset={preset} />;
+    return <CompactJersey score={score} cid={cid} resolved={resolved} />;
   }
 
   // hero: 88×85 / detail: 110×106  (viewBox 104:100 = 1.04 비율)
@@ -260,7 +231,7 @@ export default function JerseyScoreBadge({
   return (
     <View style={{ alignItems: 'center', gap: 5 }}>
       <GguljamScoreLabel variant={variant} />
-      <LargeJersey score={score} tc={tc} cid={cid} w={w} h={h} variant={variant} preset={preset} />
+      <LargeJersey score={score} cid={cid} w={w} h={h} variant={variant} resolved={resolved} />
     </View>
   );
 }
