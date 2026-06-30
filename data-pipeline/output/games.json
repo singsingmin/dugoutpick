@@ -1,7 +1,7 @@
 {
   "date": "20260630",
   "dateText": "2026년 6월 30일",
-  "updatedAt": "2026-06-30T12:50:26.195Z",
+  "updatedAt": "2026-06-30T13:00:39.727Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 23,
@@ -196,15 +196,15 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 3,
+        "half": "B",
+        "out": 2,
         "b1": true,
         "b2": true,
-        "b3": true,
-        "pitcher": "송명기",
-        "batter": "전병우",
+        "b3": false,
+        "pitcher": "최지광",
+        "batter": "김형준",
         "heat": 55,
-        "label": "7회초 2점차"
+        "label": "7회말 2점차"
       },
       "recap": null,
       "decision": null,
