@@ -49,6 +49,11 @@ export default function Settings() {
         </View>
 
         <View style={styles.section}>
+          <SectionLabel label="꾸미기" />
+          <PixelButton label="유니폼 스킨" onPress={() => navigation.navigate('SkinSelect')} accentColor={accent} />
+        </View>
+
+        <View style={styles.section}>
           <SectionLabel label="데이터" />
           <Panel>
             <PixelText variant="body">갱신 시각</PixelText>

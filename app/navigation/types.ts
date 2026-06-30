@@ -4,6 +4,7 @@ export type RootStackParamList = {
   Onboarding: undefined;
   Tabs: undefined;
   GameDetail: { gameId: string };
+  SkinSelect: undefined;
 };
 
 export type TabParamList = {

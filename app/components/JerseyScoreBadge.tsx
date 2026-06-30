@@ -11,6 +11,7 @@ import {
   UNIFORM_PRESETS,
   resolveUniformPreset,
 } from '../utils/uniformResolver';
+import { useUniformPreset } from '../context/UniformPreset';
 
 export type UniformPreset = UniformPresetId;
 
@@ -215,11 +216,12 @@ function CompactJersey({ score, cid, resolved }: {
 
 // ── 공개 컴포넌트 ─────────────────────────────────────────────────────────────
 export default function JerseyScoreBadge({
-  score, variant = 'hero', homeTeamColor, teamColor, uniformPreset = 'default',
+  score, variant = 'hero', homeTeamColor, teamColor, uniformPreset,
 }: Props) {
   const [cid] = useState<string>(() => `jsb_${++_seq}`);
+  const { preset: contextPreset } = useUniformPreset();
   const tc = badgeColor(homeTeamColor ?? teamColor ?? colors.accent);
-  const config = UNIFORM_PRESETS[uniformPreset];
+  const config = UNIFORM_PRESETS[uniformPreset ?? contextPreset];
   const resolved = resolveUniformPreset(config, tc, variant);
 
   if (variant === 'compact') {
