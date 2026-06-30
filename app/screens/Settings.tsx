@@ -45,12 +45,12 @@ export default function Settings() {
       <ScrollView contentContainerStyle={styles.content}>
         <View style={styles.section}>
           <SectionLabel label="응원팀" />
-          <PixelButton label="응원팀 변경" onPress={() => navigation.navigate('Onboarding')} accentColor={accent} />
+          <PixelButton label="응원팀 변경" onPress={() => navigation.navigate('Onboarding')} />
         </View>
 
         <View style={styles.section}>
           <SectionLabel label="꾸미기" />
-          <PixelButton label="유니폼 스킨" onPress={() => navigation.navigate('SkinSelect')} accentColor={accent} />
+          <PixelButton label="유니폼 스킨" onPress={() => navigation.navigate('SkinSelect')} />
         </View>
 
         <View style={styles.section}>
