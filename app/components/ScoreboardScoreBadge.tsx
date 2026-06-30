@@ -1,27 +1,26 @@
-// 야구장 레트로 전광판 스킨 V4 — B/S/O 램프 문법 + 상단 깃발 + 가로형 패널.
-// 의미 없는 장식 점을 제거하고, 하단을 야구 전광판 B/S/O 램프(장식형, 실데이터 아님)로 재구성.
-// 숫자 가독성 최우선. 유니폼 SVG는 무관(별도 kind).
+// 야구장 레트로 전광판 스킨 V5 — 가로형 패널 + 3단 구조(헤더/숫자/BSO) 전 variant 통일.
+// V4 대비: 상단 깃발 제거, compact에도 헤더+BSO 유지, 더 가로형 비율, 숫자 살짝 위+여백 확대,
+//          외곽선·그림자 최소화(스티커가 아닌 '전광판 숫자'). 유니폼 SVG는 무관(별도 kind).
 import { Fragment } from 'react';
 import { View, StyleSheet } from 'react-native';
 import PixelText from './PixelText';
 
 const OUTER_BG = '#243026';      // 외곽 프레임
 const BOARD_BG = '#142719';      // 본판(딥그린 LED 패널)
-const HEADER_BG = '#101E14';     // 헤더(본판보다 약간 어둡게)
-const NUMBER_COLOR = '#F4D37A';  // 숫자(크림/옅은 노랑)
+const HEADER_BG = '#101E14';     // 헤더(본판보다 더 어둡게)
+const NUMBER_COLOR = '#F4D37A';  // 숫자(크림-옐로우 LED)
 const LABEL_COLOR = '#F6D784';   // 헤더 라벨
-const BORDER_COLOR = '#D8C7A4';  // 얇은 외곽선(웜그레이/크림)
+const BORDER_COLOR = '#C9BA98';  // 얇은 외곽선
 
-// V4 B/S/O 램프 — 레트로 채도 낮춤
-const LAMP_B = '#6FA86B';        // B: 레트로 그린
-const LAMP_S = '#D99A4E';        // S: 레트로 주황/앰버
-const LAMP_O = '#C45B4D';        // O: 레트로 레드
-const LAMP_OFF = '#2E3B30';      // 비점등: 어두운 올리브/차콜
+// B/S/O 램프 — 레트로 채도(낮춤)
+const LAMP_B = '#6FA86B';        // B: 그린
+const LAMP_S = '#D99A4E';        // S: 앰버/주황
+const LAMP_O = '#C45B4D';        // O: 레드
+const LAMP_OFF = '#2E3B30';      // 꺼진 점: 다크 올리브
 const BSO_LETTER = '#C7B789';    // B/S/O 글자(숫자보다 덜 강조)
 const DIVIDER = 'rgba(216,199,164,0.16)';
-const FLAG_COLOR = '#3E6B46';    // 상단 깃발(본판보다 살짝 밝은 그린)
 
-// 장식형 B/S/O 램프(3/2/2, 부분 점등 — 실제 카운트와 무관).
+// 실제 야구식 점 개수 B=3/S=2/O=2, 부분 점등(켜짐/꺼짐 구분 — 실데이터 무관 장식).
 const BSO: { letter: string; color: string; pattern: boolean[] }[] = [
   { letter: 'B', color: LAMP_B, pattern: [true, true, false] },
   { letter: 'S', color: LAMP_S, pattern: [true, false] },
@@ -37,42 +36,23 @@ interface Props {
   showLabel?: boolean; // 내부 헤더에 포함 — 이 prop은 무시됨
 }
 
+// 가로형 비율(1.23~1.31:1). 정사각 배지가 아닌 가로 패널 인상.
 const DIMS: Record<ScoreboardVariant, { w: number; h: number }> = {
-  compact: { w: 52,  h: 52  },
-  hero:    { w: 112, h: 96  },
-  detail:  { w: 148, h: 120 },
-  preview: { w: 162, h: 132 },
+  compact: { w: 64,  h: 52  },
+  hero:    { w: 124, h: 96  },
+  detail:  { w: 156, h: 120 },
+  preview: { w: 168, h: 128 },
 };
 
-const NUM_FONT:    Record<ScoreboardVariant, number> = { compact: 22, hero: 40, detail: 50, preview: 54 };
+const NUM_FONT:    Record<ScoreboardVariant, number> = { compact: 20, hero: 40, detail: 50, preview: 54 };
 const RADIUS:      Record<ScoreboardVariant, number> = { compact: 4,  hero: 6,  detail: 7,  preview: 8  };
 const FRAME_PAD:   Record<ScoreboardVariant, number> = { compact: 2,  hero: 3,  detail: 3,  preview: 3  };
-const HEADER_H:    Record<ScoreboardVariant, number> = { compact: 0,  hero: 22, detail: 26, preview: 28 };
-const HEADER_FONT: Record<ScoreboardVariant, number> = { compact: 0,  hero: 9,  detail: 10, preview: 11 };
+const HEADER_H:    Record<ScoreboardVariant, number> = { compact: 13, hero: 22, detail: 26, preview: 28 };
+const HEADER_FONT: Record<ScoreboardVariant, number> = { compact: 7,  hero: 9,  detail: 10, preview: 11 };
 const LAMP_DOT:    Record<ScoreboardVariant, number> = { compact: 3,  hero: 4,  detail: 5,  preview: 5  };
 const BSO_FONT:    Record<ScoreboardVariant, number> = { compact: 0,  hero: 8,  detail: 9,  preview: 10 };
-const FLAG_SIZE:   Record<ScoreboardVariant, number> = { compact: 0,  hero: 7,  detail: 8,  preview: 9  };
-
-// 작은 펜넌트 깃발 — 삼각형 1개(border 트릭). dir로 좌/우 방향.
-function Flag({ size, dir }: { size: number; dir: 'left' | 'right' }) {
-  const tri =
-    dir === 'left'
-      ? { borderLeftWidth: size * 1.5, borderLeftColor: FLAG_COLOR }
-      : { borderRightWidth: size * 1.5, borderRightColor: FLAG_COLOR };
-  return (
-    <View
-      style={{
-        width: 0,
-        height: 0,
-        borderTopWidth: size,
-        borderTopColor: 'transparent',
-        borderBottomWidth: size,
-        borderBottomColor: 'transparent',
-        ...tri,
-      }}
-    />
-  );
-}
+// 숫자를 중앙보다 살짝 위로 + 숫자~BSO 여백 확보(숫자 영역 하단 패딩).
+const NUM_GAP:     Record<ScoreboardVariant, number> = { compact: 3,  hero: 7,  detail: 9,  preview: 9  };
 
 function Lamp({ on, color, size }: { on: boolean; color: string; size: number }) {
   return (
@@ -97,12 +77,9 @@ export default function ScoreboardScoreBadge({
   const pad = FRAME_PAD[variant];
   const boardRadius = Math.max(1, RADIUS[variant] - pad);
   const isCompact = variant === 'compact';
-  const showHeader = !isCompact;
-  const showFlags = !isCompact;
   const numSize = NUM_FONT[variant];
   const lampSz = LAMP_DOT[variant];
-  const flagSz = FLAG_SIZE[variant];
-  // teamColor 은은한 헤더 accent(≈12%). hex(#RRGGBB)에만 적용.
+  // teamColor 은은한 헤더 accent(≈12%). hex(#RRGGBB)에만 적용 — 과사용 금지.
   const headerAccent =
     teamColor && /^#[0-9a-fA-F]{6}$/.test(teamColor) ? `${teamColor}1F` : 'transparent';
 
@@ -110,42 +87,25 @@ export default function ScoreboardScoreBadge({
     <View
       style={[styles.outer, { width: w, height: h, borderRadius: RADIUS[variant], padding: pad }]}
     >
-      {/* 상단 깃발(hero/detail/preview) */}
-      {showFlags && (
-        <>
-          <View style={[styles.flagLeft, { top: -flagSz }]}>
-            <Flag size={flagSz} dir="left" />
-          </View>
-          <View style={[styles.flagRight, { top: -flagSz }]}>
-            <Flag size={flagSz} dir="right" />
-          </View>
-        </>
-      )}
-
       <View style={[styles.board, { borderRadius: boardRadius }]}>
-        {/* 상단 헤더 — 꿀잼지수 (compact 생략) */}
-        {showHeader && (
-          <View
-            style={[
-              styles.header,
-              { height: HEADER_H[variant], borderBottomColor: headerAccent },
-            ]}
-          >
-            <PixelText style={{ fontSize: HEADER_FONT[variant], color: LABEL_COLOR, letterSpacing: 1 }}>
-              꿀잼지수
-            </PixelText>
-          </View>
-        )}
+        {/* 상단: 꿀잼지수 헤더 (전 variant 유지) */}
+        <View
+          style={[styles.header, { height: HEADER_H[variant], borderBottomColor: headerAccent }]}
+        >
+          <PixelText style={{ fontSize: HEADER_FONT[variant], color: LABEL_COLOR, letterSpacing: isCompact ? 0.5 : 1 }}>
+            꿀잼지수
+          </PixelText>
+        </View>
 
-        {/* 중앙 숫자 — 가장 먼저 보여야 함 */}
-        <View style={styles.numberArea}>
+        {/* 중앙: 큰 숫자 (중앙보다 살짝 위) */}
+        <View style={[styles.numberArea, { paddingBottom: NUM_GAP[variant] }]}>
           <PixelText
             style={{
               fontSize: numSize,
               color: NUMBER_COLOR,
               fontFamily: 'Galmuri11Bold',
               lineHeight: numSize * 1.1,
-              textShadowColor: 'rgba(0,0,0,0.35)',
+              textShadowColor: 'rgba(0,0,0,0.30)',
               textShadowOffset: { width: 1, height: 1 },
               textShadowRadius: 0,
             }}
@@ -154,11 +114,11 @@ export default function ScoreboardScoreBadge({
           </PixelText>
         </View>
 
-        {/* 하단 B/S/O 램프 */}
+        {/* 하단: B/S/O 바 (compact는 글자·구분선 생략, 점만 축약) */}
         {isCompact ? (
-          <View style={[styles.compactLamps, { paddingBottom: 5 }]}>
+          <View style={[styles.bsoRow, { paddingBottom: 5, gap: 5 }]}>
             {BSO.map((g) => (
-              <View key={g.letter} style={styles.compactGroup}>
+              <View key={g.letter} style={styles.bsoGroup}>
                 {g.pattern.map((on, i) => (
                   <Lamp key={i} on={on} color={g.color} size={lampSz} />
                 ))}
@@ -166,7 +126,7 @@ export default function ScoreboardScoreBadge({
             ))}
           </View>
         ) : (
-          <View style={[styles.bsoRow, { paddingBottom: 7 }]}>
+          <View style={[styles.bsoRow, { paddingBottom: 7, gap: 6 }]}>
             {BSO.map((g, gi) => (
               <Fragment key={g.letter}>
                 {gi > 0 && <View style={styles.divider} />}
@@ -192,14 +152,13 @@ const styles = StyleSheet.create({
     backgroundColor: OUTER_BG,
     borderWidth: 1,
     borderColor: BORDER_COLOR,
+    // 그림자 최소화 — 스티커가 아닌 전광판 패널 인상
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.22,
-    shadowRadius: 4,
-    elevation: 4,
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.12,
+    shadowRadius: 2,
+    elevation: 2,
   },
-  flagLeft: { position: 'absolute', left: 6, zIndex: 2 },
-  flagRight: { position: 'absolute', right: 6, zIndex: 2 },
   board: {
     flex: 1,
     backgroundColor: BOARD_BG,
@@ -224,7 +183,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 6,
   },
   bsoGroup: {
     flexDirection: 'row',
@@ -235,16 +193,5 @@ const styles = StyleSheet.create({
     width: 1,
     height: 10,
     backgroundColor: DIVIDER,
-  },
-  compactLamps: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 5,
-  },
-  compactGroup: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 2,
   },
 });
