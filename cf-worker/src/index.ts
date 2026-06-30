@@ -117,6 +117,7 @@ export default {
           return {
             ...game,
             status,
+            cancelReason: status === 'CANCELED' ? (g.CANCEL_SC_NM || game.cancelReason || '취소') : game.cancelReason,
             away: { ...game.away, score: aScore },
             home: { ...game.home, score: bScore },
             live,

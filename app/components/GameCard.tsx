@@ -29,7 +29,7 @@ export default function GameCard({ game, variant, onPress, showRecap = true }: P
   const tv = hero ? 'hero' : 'body';
 
   const middle = canceled ? (
-    <PixelText variant="body" color={colors.bad}>취소</PixelText>
+    <PixelText variant="body" color={colors.bad}>{game.cancelReason || '취소'}</PixelText>
   ) : final || live ? (
     <PixelText variant={hero ? 'hero' : 'body'} color={live ? colors.bad : colors.text}>
       {game.away.score ?? '-'} : {game.home.score ?? '-'}
