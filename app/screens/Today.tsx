@@ -117,10 +117,14 @@ function Body({
   const bestRecap = finished.length
     ? finished.slice().sort((a, b) => (b.recap?.actual ?? 0) - (a.recap?.actual ?? 0))[0]
     : null;
-  // 내 팀 결과는 recap(파이프라인, 최대 5분 지연) 유무와 무관하게 결산 섹션에 노출.
-  // recap 없는 FINAL이 '다른 경기'로 밀려나지 않도록 status===FINAL 기준으로 매칭.
-  const myFinished = cheerTeam
-    ? data.games.find((g) => g.status === 'FINAL' && (g.away.code === cheerTeam || g.home.code === cheerTeam))
+  // 내 팀 경기는 '오늘 끝난/취소된 경기'면 recap(파이프라인, 최대 5분 지연) 유무와 무관하게
+  // 결산 섹션에 노출. FINAL뿐 아니라 CANCELED(우천취소 등)도 포함 — '다른 경기'로 밀리지 않게.
+  const myDone = cheerTeam
+    ? data.games.find(
+        (g) =>
+          (g.status === 'FINAL' || g.status === 'CANCELED') &&
+          (g.away.code === cheerTeam || g.home.code === cheerTeam)
+      )
     : undefined;
 
   // 모든 경기 종료(FINAL/CANCELED) 시 결산 모드
@@ -146,14 +150,14 @@ function Body({
 
   // ── 리스트: 명경기는 항상 결산 섹션에 표시
   const listBestRecap = bestRecap ?? null;
-  const listMyFinished = heroGame?.gameId === myFinished?.gameId ? null : myFinished;
+  const listMyDone = heroGame?.gameId === myDone?.gameId ? null : myDone;
   // allDone 시 추천 섹션 숨김 (rest에 이미 포함)
   const listRecommended = allDone ? null : (heroGame?.gameId === recommended?.gameId ? null : recommended);
-  // 버그픽스: bestRecap·myFinished 중복 제거
+  // 버그픽스: bestRecap·myDone 중복 제거
   const listRest = rest.filter(
     (g) => g.gameId !== heroGame?.gameId
       && g.gameId !== listBestRecap?.gameId
-      && g.gameId !== listMyFinished?.gameId
+      && g.gameId !== listMyDone?.gameId
   );
 
   return (
@@ -195,7 +199,7 @@ function Body({
           </View>
         )}
 
-        {(listBestRecap || listMyFinished) && (
+        {(listBestRecap || listMyDone) && (
           <View style={styles.section}>
             <SectionLabel icon="flag" label="오늘의 결산" />
             {listBestRecap && (
@@ -204,10 +208,10 @@ function Body({
                 <GameCard game={listBestRecap} variant="list" onPress={() => open(listBestRecap.gameId)} />
               </>
             )}
-            {listMyFinished && listMyFinished.gameId !== listBestRecap?.gameId && (
+            {listMyDone && listMyDone.gameId !== listBestRecap?.gameId && (
               <>
                 <PixelText variant="caption" color={colors.accent} style={styles.subLabel}>내 팀 결과</PixelText>
-                <GameCard game={listMyFinished} variant="list" onPress={() => open(listMyFinished.gameId)} />
+                <GameCard game={listMyDone} variant="list" onPress={() => open(listMyDone.gameId)} />
               </>
             )}
           </View>
