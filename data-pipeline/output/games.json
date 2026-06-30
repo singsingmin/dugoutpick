@@ -1,7 +1,7 @@
 {
   "date": "20260630",
   "dateText": "2026년 6월 30일",
-  "updatedAt": "2026-06-30T13:30:35.462Z",
+  "updatedAt": "2026-06-30T13:40:37.086Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 23,
@@ -195,16 +195,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "inning": 9,
+        "half": "T",
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "김재윤",
-        "batter": "이우성",
-        "heat": 59,
-        "label": "8회말 2점차"
+        "pitcher": "하준영",
+        "batter": "김성윤",
+        "heat": 62,
+        "label": "9회초 2점차"
       },
       "recap": null,
       "decision": null,
