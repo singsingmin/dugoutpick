@@ -118,13 +118,13 @@ function LargeJersey({ score, tc, cid, w, h, variant }: {
         <Path d={JERSEY} fill={tc} />
         {/* 크림 파이핑 (칼라·소매·몸통 외형 동시 처리) */}
         <Path d={JERSEY} fill="none" stroke={CREAM} strokeWidth={6} strokeLinejoin="round" />
-        {/* 핀스트라이프 */}
+        {/* 핀스트라이프 — y1=10으로 위로 올려서 전체 몸통에 걸치게 (clip이 알아서 자름) */}
         {STRIPES.map((x) => (
-          <Line key={x} x1={x} y1={40} x2={x} y2={87}
+          <Line key={x} x1={x} y1={10} x2={x} y2={87}
             stroke={CREAM} strokeWidth={0.5} opacity={0.08} />
         ))}
         {/* 중앙 버튼 라인 */}
-        <Line x1={50} y1={45} x2={50} y2={86}
+        <Line x1={50} y1={22} x2={50} y2={86}
           stroke={CREAM} strokeWidth={0.7} opacity={0.11} />
       </G>
 
