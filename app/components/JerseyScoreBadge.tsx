@@ -30,44 +30,48 @@ function badgeColor(hex: string): string {
   return `#${nr.toString(16).padStart(2, '0')}${ng.toString(16).padStart(2, '0')}${nb.toString(16).padStart(2, '0')}`;
 }
 
-// ── 대형 유니폼 실루엣 (뒷면 백넘버, 자연스러운 대각 소매) ──────────────────
-// body: x=26~74 (48 wide), y=45~89 (44 tall), center=67 / viewBox -4 -4 104 100
-// 소매: 어깨→외곽 끝(~63°) → 커프(~35°) → 겨드랑이 순서로 자연스럽게 하향
+// ── 대형 유니폼 실루엣 (뒷면 백넘버) ─────────────────────────────────────────
+// viewBox -4 -4 104 100
+// 어깨 접합: x=18/82 (y=15), 소매 끝: x=12/88 (y=28), 커프: x=22/78 (y=36)
+// 소매: 어깨에서 13↓ 6← (주로 하향), 커프: 10→ 8↓ (안쪽으로 수렴)
+// body: x=32~68 (36 wide), y=44~86 (42 tall), center x=50 y=65
 const JERSEY =
-  'M 38,6' +
-  ' Q 22,7 10,14' +      // 왼쪽 어깨 사선 (목→어깨 접합점)
-  ' L 2,30' +            // 왼쪽 소매 외곽 (대각 하향 ~63°)
-  ' L 16,40' +           // 왼쪽 소매 커프 (내측으로 ~35°)
-  ' Q 18,44 26,45' +     // 왼쪽 겨드랑이 곡선
-  ' L 26,84' +           // 왼쪽 몸통
-  ' Q 26,89 32,89' +     // 왼쪽 밑단 모서리
-  ' L 68,89' +           // 밑단
-  ' Q 74,89 74,84' +     // 오른쪽 밑단 모서리
-  ' L 74,45' +           // 오른쪽 몸통
-  ' Q 82,44 84,40' +     // 오른쪽 겨드랑이 곡선
-  ' L 98,30' +           // 오른쪽 소매 커프 (대칭)
-  ' L 90,14' +           // 오른쪽 소매 외곽 (어깨 접합점으로)
-  ' Q 78,7 62,6' +       // 오른쪽 어깨 사선
-  ' Q 50,13 38,6 Z';     // 뒷목 칼라 (얕은 U)
+  'M 40,4' +
+  ' Q 50,12 60,4' +      // 뒷목 칼라 U
+  ' Q 74,4 82,15' +      // 오른쪽 어깨 (칼라→접합점, 완만한 곡선)
+  ' L 88,28' +           // 오른쪽 소매 외곽 끝 (6→ 13↓ — 주로 하향)
+  ' L 78,36' +           // 오른쪽 소매 커프 (10← 8↓ — 안쪽 수렴)
+  ' Q 74,42 68,44' +     // 오른쪽 겨드랑이 곡선
+  ' L 68,86' +           // 오른쪽 몸통
+  ' Q 68,92 62,92' +     // 오른쪽 밑단 모서리
+  ' L 38,92' +           // 밑단
+  ' Q 32,92 32,86' +     // 왼쪽 밑단 모서리
+  ' L 32,44' +           // 왼쪽 몸통
+  ' Q 26,42 22,36' +     // 왼쪽 겨드랑이 곡선
+  ' L 12,28' +           // 왼쪽 소매 커프
+  ' L 18,15' +           // 왼쪽 소매 외곽 끝 (어깨 접합점으로)
+  ' Q 26,4 40,4 Z';      // 왼쪽 어깨 (접합점→칼라)
 
-// ── 소형 유니폼 실루엣 (뒷면 백넘버, 자연스러운 대각 소매) ──────────────────
-// body: x=14~36 (22 wide), y=27~51 (24 tall), center=39 / viewBox -3 -3 56 62
+// ── 소형 유니폼 실루엣 (뒷면 백넘버) ─────────────────────────────────────────
+// viewBox -3 -3 56 62
+// 어깨 접합: x=6/44 (y=10), 소매 끝: x=2/48 (y=19), 커프: x=10/40 (y=24)
+// body: x=14~36 (22 wide), y=28~48 (20 tall), center x=25 y=38
 const JERSEY_SM =
-  'M 18,4' +
-  ' Q 11,5 6,8' +        // 왼쪽 어깨 사선
-  ' L 0,18' +            // 왼쪽 소매 외곽 (대각 하향)
-  ' L 8,23' +            // 왼쪽 소매 커프
-  ' Q 10,26 14,27' +     // 왼쪽 겨드랑이
-  ' L 14,46' +           // 왼쪽 몸통
-  ' Q 14,51 18,51' +     // 왼쪽 밑단 모서리
-  ' L 32,51' +           // 밑단
-  ' Q 36,51 36,46' +     // 오른쪽 밑단 모서리
-  ' L 36,27' +           // 오른쪽 몸통
-  ' Q 40,26 42,23' +     // 오른쪽 겨드랑이
-  ' L 50,18' +           // 오른쪽 소매 커프 (대칭)
-  ' L 44,8' +            // 오른쪽 소매 외곽
-  ' Q 39,5 32,4' +       // 오른쪽 어깨 사선
-  ' Q 25,10 18,4 Z';     // 뒷목 칼라
+  'M 20,3' +
+  ' Q 25,8 30,3' +       // 뒷목 칼라 U
+  ' Q 38,3 44,10' +      // 오른쪽 어깨
+  ' L 48,19' +           // 오른쪽 소매 외곽 끝 (4→ 9↓ — 주로 하향)
+  ' L 40,24' +           // 오른쪽 소매 커프 (8← 5↓)
+  ' Q 38,27 36,28' +     // 오른쪽 겨드랑이
+  ' L 36,48' +           // 오른쪽 몸통
+  ' Q 36,52 32,52' +     // 오른쪽 밑단 모서리
+  ' L 18,52' +           // 밑단
+  ' Q 14,52 14,48' +     // 왼쪽 밑단 모서리
+  ' L 14,28' +           // 왼쪽 몸통
+  ' Q 12,27 10,24' +     // 왼쪽 겨드랑이
+  ' L 2,19' +            // 왼쪽 소매 커프
+  ' L 6,10' +            // 왼쪽 소매 외곽 끝
+  ' Q 12,3 20,3 Z';      // 왼쪽 어깨
 
 let _seq = 0;
 
@@ -78,23 +82,23 @@ function digitCount(score: number): 1 | 2 | 3 {
 
 // ── 숫자 위치·크기 테이블 ────────────────────────────────────────────────────
 // dominantBaseline="middle" → y = 시각 중심
-// 대형 body center=67 (y=45~89) → target y≈65 (살짝 위)
-// 소형 body center=39 (y=27~51) → target y≈38 (살짝 위)
+// 대형 body center=65 (y=44~86) → target y≈64 (살짝 위)
+// 소형 body center=38 (y=28~48) → target y≈37 (살짝 위)
 const SCORE_TEXT = {
   hero: {
-    1: { fontSize: 44, y: 65 },
-    2: { fontSize: 38, y: 64 },
-    3: { fontSize: 32, y: 63 },
+    1: { fontSize: 44, y: 64 },
+    2: { fontSize: 38, y: 63 },
+    3: { fontSize: 30, y: 62 },
   },
   detail: {
-    1: { fontSize: 44, y: 65 },
-    2: { fontSize: 38, y: 64 },
-    3: { fontSize: 32, y: 63 },
+    1: { fontSize: 44, y: 64 },
+    2: { fontSize: 38, y: 63 },
+    3: { fontSize: 30, y: 62 },
   },
   compact: {
-    1: { fontSize: 20, y: 38 },
-    2: { fontSize: 16, y: 37 },
-    3: { fontSize: 13, y: 36 },
+    1: { fontSize: 20, y: 37 },
+    2: { fontSize: 16, y: 36 },
+    3: { fontSize: 13, y: 35 },
   },
 } as const;
 
@@ -105,7 +109,7 @@ function LargeJersey({ score, tc, cid, w, h, variant }: {
 }) {
   const dc = digitCount(score);
   const { fontSize, y } = SCORE_TEXT[variant][dc];
-  const STRIPES = [31, 39, 47, 55, 63, 71];
+  const STRIPES = [36, 43, 50, 57, 64];
 
   return (
     <Svg width={w} height={h} viewBox="-4 -4 104 100">
@@ -123,14 +127,14 @@ function LargeJersey({ score, tc, cid, w, h, variant }: {
         <Path d={JERSEY} fill="none" stroke={CREAM} strokeWidth={6} strokeLinejoin="round" />
         {/* 핀스트라이프 */}
         {STRIPES.map((x) => (
-          <Line key={x} x1={x} y1={10} x2={x} y2={87}
+          <Line key={x} x1={x} y1={14} x2={x} y2={90}
             stroke={CREAM} strokeWidth={0.5} opacity={0.08} />
         ))}
-        {/* 요크/패널 라인 — 어깨 아래 야구 유니폼 뒷면 패널 경계 */}
-        <Path d="M 22,50 Q 50,47 78,50"
+        {/* 요크/패널 라인 */}
+        <Path d="M 30,54 Q 50,51 70,54"
           fill="none" stroke={CREAM} strokeWidth={1.0} opacity={0.10} />
-        {/* 네임패치 영역 힌트 — 텍스트 없이 위치만 암시 */}
-        <Path d="M 34,56 Q 50,54 66,56"
+        {/* 네임패치 영역 힌트 */}
+        <Path d="M 36,62 Q 50,60 64,62"
           fill="none" stroke={CREAM} strokeWidth={0.7} opacity={0.07} />
       </G>
 
@@ -138,10 +142,10 @@ function LargeJersey({ score, tc, cid, w, h, variant }: {
       <Path d={JERSEY} fill="none"
         stroke={BORDER_COLOR} strokeWidth={2.5} strokeLinejoin="round" opacity={0.32} />
 
-      {/* 소매 커프 파이핑 (커프 방향에 나란히 배치) */}
-      <Path d="M 4,32 L 14,38" fill="none"
+      {/* 소매 커프 파이핑 (커프 안쪽 방향에 나란히) */}
+      <Path d="M 14,29 L 22,37" fill="none"
         stroke={CREAM} strokeWidth={1.8} strokeLinecap="round" opacity={0.60} />
-      <Path d="M 86,38 L 96,32" fill="none"
+      <Path d="M 78,37 L 86,29" fill="none"
         stroke={CREAM} strokeWidth={1.8} strokeLinecap="round" opacity={0.60} />
 
       {/* 등번호 — dominantBaseline="middle"로 y=시각 중심 */}
@@ -182,9 +186,9 @@ function CompactJersey({ score, tc, cid }: { score: number; tc: string; cid: str
         stroke={BORDER_COLOR} strokeWidth={1.5} strokeLinejoin="round" opacity={0.28} />
 
       {/* 소매 커프 트림 */}
-      <Path d="M 1,19 L 7,22" fill="none"
+      <Path d="M 4,20 L 10,25" fill="none"
         stroke={CREAM} strokeWidth={1} strokeLinecap="round" opacity={0.56} />
-      <Path d="M 43,22 L 49,19" fill="none"
+      <Path d="M 40,25 L 46,20" fill="none"
         stroke={CREAM} strokeWidth={1} strokeLinecap="round" opacity={0.56} />
 
       {/* 숫자 */}
