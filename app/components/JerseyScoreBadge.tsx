@@ -82,9 +82,6 @@ function digitCount(score: number): 1 | 2 | 3 {
 }
 
 // ── 숫자 위치·크기 테이블 ────────────────────────────────────────────────────
-// dominantBaseline="middle" → y = 시각 중심
-// 대형 V6 body center=59 (y=38~80) → target y=57 (시각 중앙보다 살짝 위)
-// 소형 V6 body center=29.5 (y=19~40) → target y=29
 const SCORE_TEXT = {
   hero: {
     1: { fontSize: 44, y: 57 },
@@ -103,6 +100,16 @@ const SCORE_TEXT = {
   },
 } as const;
 
+// ── 핀스트라이프 동적 좌표 계산 ──────────────────────────────────────────────
+// bodyStart/bodyEnd: 몸통 x 범위, gap: 줄 간격
+function calcStripeXs(bodyStart: number, bodyEnd: number, gap: number): number[] {
+  const center = (bodyStart + bodyEnd) / 2;
+  const xs: number[] = [center];
+  for (let x = center - gap; x >= bodyStart + 2; x -= gap) xs.push(x);
+  for (let x = center + gap; x <= bodyEnd - 2; x += gap) xs.push(x);
+  return xs.sort((a, b) => a - b);
+}
+
 // ── 대형 배지 (hero / detail) ─────────────────────────────────────────────────
 function LargeJersey({ score, cid, w, h, variant, resolved }: {
   score: number; cid: string; w: number; h: number;
@@ -110,7 +117,8 @@ function LargeJersey({ score, cid, w, h, variant, resolved }: {
 }) {
   const dc = digitCount(score);
   const { fontSize, y } = SCORE_TEXT[variant][dc];
-  const STRIPES = [36, 43, 50, 57, 64];
+  // 대형: 몸통 x=22~78. 핀스트라이프용 동적 좌표
+  const stripeXs = calcStripeXs(22, 78, resolved.stripeGap);
 
   return (
     <Svg width={w} height={h} viewBox="-4 -4 104 100">
@@ -119,7 +127,9 @@ function LargeJersey({ score, cid, w, h, variant, resolved }: {
       </Defs>
 
       {/* 드롭 쉐도우 */}
-      <Path d={JERSEY} fill={`rgba(60,40,20,${resolved.shadowOpacity})`} translateX={2} translateY={3} />
+      <Path d={JERSEY}
+        fill={`rgba(60,40,20,${resolved.shadowOpacity})`}
+        translateX={resolved.shadowOffsetY * 0.8} translateY={resolved.shadowOffsetY} />
 
       {/* 클립 내부 레이어 */}
       <G clipPath={`url(#${cid})`}>
@@ -128,9 +138,10 @@ function LargeJersey({ score, cid, w, h, variant, resolved }: {
         <Path d={JERSEY} fill="none"
           stroke={resolved.pipingColor} strokeWidth={resolved.pipingWidth} strokeLinejoin="round" />
         {/* 핀스트라이프 */}
-        {resolved.stripeOpacity > 0 && STRIPES.map((x) => (
+        {resolved.stripeOpacity > 0 && stripeXs.map((x) => (
           <Line key={x} x1={x} y1={10} x2={x} y2={83}
-            stroke={resolved.stripeColor} strokeWidth={0.5} opacity={resolved.stripeOpacity} />
+            stroke={resolved.stripeColor} strokeWidth={resolved.stripeWidth}
+            opacity={resolved.stripeOpacity} />
         ))}
       </G>
 
@@ -147,14 +158,26 @@ function LargeJersey({ score, cid, w, h, variant, resolved }: {
         stroke={resolved.cuffColor} strokeWidth={resolved.cuffWidth}
         strokeLinecap="round" opacity={resolved.cuffOpacity} />
 
-      {/* 등번호 */}
+      {/* 숫자 그림자 (offset text) */}
+      {resolved.numberShadowOpacity > 0 && (
+        <SvgText
+          x={50} y={y + 1.5}
+          fontSize={fontSize} fontWeight="900"
+          fill={resolved.numberShadowColor}
+          opacity={resolved.numberShadowOpacity}
+          textAnchor="middle" dominantBaseline="middle"
+        >{score}</SvgText>
+      )}
+      {/* 숫자 외곽선 */}
       <SvgText
         x={50} y={y}
         fontSize={fontSize} fontWeight="900"
         fill="none"
-        stroke={resolved.numberStroke} strokeWidth={resolved.numberStrokeWidth} strokeLinejoin="round"
+        stroke={resolved.numberStroke} strokeWidth={resolved.numberStrokeWidth}
+        strokeLinejoin="round"
         textAnchor="middle" dominantBaseline="middle"
       >{score}</SvgText>
+      {/* 숫자 fill */}
       <SvgText
         x={50} y={y}
         fontSize={fontSize} fontWeight="900"
@@ -171,6 +194,8 @@ function CompactJersey({ score, cid, resolved }: {
 }) {
   const dc = digitCount(score);
   const { fontSize, y } = SCORE_TEXT.compact[dc];
+  // 소형: 몸통 x=11~39
+  const stripeXs = calcStripeXs(11, 39, resolved.stripeGap);
 
   return (
     <Svg width={48} height={53} viewBox="-3 -3 56 62">
@@ -178,12 +203,18 @@ function CompactJersey({ score, cid, resolved }: {
         <ClipPath id={cid}><Path d={JERSEY_SM} /></ClipPath>
       </Defs>
 
-      <Path d={JERSEY_SM} fill={`rgba(60,40,20,${resolved.shadowOpacity})`} translateX={1} translateY={2} />
+      <Path d={JERSEY_SM}
+        fill={`rgba(60,40,20,${resolved.shadowOpacity})`}
+        translateX={resolved.shadowOffsetY * 0.8} translateY={resolved.shadowOffsetY} />
       <G clipPath={`url(#${cid})`}>
         <Path d={JERSEY_SM} fill={resolved.bodyColor} />
-        {/* compact: 핀스트라이프 항상 생략 (resolver가 stripeOpacity=0 보장) */}
         <Path d={JERSEY_SM} fill="none"
           stroke={resolved.pipingColor} strokeWidth={resolved.pipingWidth} strokeLinejoin="round" />
+        {resolved.stripeOpacity > 0 && stripeXs.map((x) => (
+          <Line key={x} x1={x} y1={5} x2={x} y2={42}
+            stroke={resolved.stripeColor} strokeWidth={resolved.stripeWidth}
+            opacity={resolved.stripeOpacity} />
+        ))}
       </G>
       <Path d={JERSEY_SM} fill="none"
         stroke={resolved.outerStrokeColor} strokeWidth={resolved.outerStrokeWidth}
@@ -197,14 +228,26 @@ function CompactJersey({ score, cid, resolved }: {
         stroke={resolved.cuffColor} strokeWidth={resolved.cuffWidth}
         strokeLinecap="round" opacity={resolved.cuffOpacity} />
 
-      {/* 숫자 */}
+      {/* 숫자 그림자 */}
+      {resolved.numberShadowOpacity > 0 && (
+        <SvgText
+          x={25} y={y + 1}
+          fontSize={fontSize} fontWeight="900"
+          fill={resolved.numberShadowColor}
+          opacity={resolved.numberShadowOpacity}
+          textAnchor="middle" dominantBaseline="middle"
+        >{score}</SvgText>
+      )}
+      {/* 숫자 외곽선 */}
       <SvgText
         x={25} y={y}
         fontSize={fontSize} fontWeight="900"
         fill="none"
-        stroke={resolved.numberStroke} strokeWidth={resolved.numberStrokeWidth * 0.7} strokeLinejoin="round"
+        stroke={resolved.numberStroke} strokeWidth={resolved.numberStrokeWidth * 0.7}
+        strokeLinejoin="round"
         textAnchor="middle" dominantBaseline="middle"
       >{score}</SvgText>
+      {/* 숫자 fill */}
       <SvgText
         x={25} y={y}
         fontSize={fontSize} fontWeight="900"

@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useEffect, useCallback, type ReactNode } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import type { UniformPresetId } from '../utils/uniformResolver';
+import { type UniformPresetId, normalizePresetId } from '../utils/uniformResolver';
 
 const PRESET_KEY = 'user.uniformPreset';
 
@@ -10,7 +10,7 @@ interface UniformPresetCtx {
 }
 
 const UniformPresetContext = createContext<UniformPresetCtx>({
-  preset: 'default',
+  preset: 'classic',
   setPreset: async () => {},
 });
 
@@ -19,11 +19,12 @@ export function useUniformPreset() {
 }
 
 export function UniformPresetProvider({ children }: { children: ReactNode }) {
-  const [preset, setPresetState] = useState<UniformPresetId>('default');
+  const [preset, setPresetState] = useState<UniformPresetId>('classic');
 
   useEffect(() => {
     AsyncStorage.getItem(PRESET_KEY).then((v) => {
-      if (v) setPresetState(v as UniformPresetId);
+      // default/vintage 등 구 프리셋 → classic으로 정규화
+      setPresetState(normalizePresetId(v));
     }).catch(() => {});
   }, []);
 

@@ -1,4 +1,4 @@
-// 유니폼 스킨 선택 화면. 5종 프리셋을 팀 컬러 미리보기로 표시.
+// 유니폼 스킨 선택 화면. 3종 프리셋을 팀 컬러 미리보기로 표시.
 import { View, Image, ScrollView, Pressable, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
@@ -50,6 +50,17 @@ export default function SkinSelect() {
                   ]}
                   onPress={() => handleSelect(p.id)}
                 >
+                  {/* badgeLabel 태그 */}
+                  <View style={[styles.badgeTag, selected && { backgroundColor: accent }]}>
+                    <PixelText
+                      variant="caption"
+                      color={selected ? '#fff' : colors.textDim}
+                      style={styles.badgeTagText}
+                    >
+                      {p.badgeLabel}
+                    </PixelText>
+                  </View>
+
                   <JerseyScoreBadge
                     score={75}
                     variant="hero"
@@ -57,13 +68,20 @@ export default function SkinSelect() {
                     uniformPreset={p.id}
                     showLabel={false}
                   />
+
                   <PixelText
                     variant="body"
                     color={selected ? accent : colors.text}
                     style={styles.label}
                   >
-                    {selected ? '✓ ' : ''}{p.label}
+                    {p.label}
                   </PixelText>
+
+                  {selected && (
+                    <PixelText variant="caption" color={accent} style={styles.inUse}>
+                      사용 중
+                    </PixelText>
+                  )}
                 </Pressable>
               );
             })}
@@ -94,5 +112,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: spacing.sm,
     gap: spacing.xs,
   },
+  badgeTag: {
+    paddingHorizontal: 8,
+    paddingVertical: 2,
+    borderRadius: 4,
+    backgroundColor: 'rgba(45,36,20,0.10)',
+  },
+  badgeTagText: { fontSize: 10 },
   label: { textAlign: 'center' },
+  inUse: { textAlign: 'center' },
 });
