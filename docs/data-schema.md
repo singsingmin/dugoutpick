@@ -1,6 +1,13 @@
 # Data Schema
 
-앱이 소비하는 정적 JSON 3종. 파이프라인(`data-pipeline/build.mjs`)이 KBO 실데이터로 생성. **앱은 읽기 전용 — 꿀잼지수는 파이프라인에서 이미 계산됨**(앱은 재계산 안 함, 의도: adr.md ADR-004).
+앱이 소비하는 JSON. 파이프라인(`data-pipeline/build.mjs`)이 KBO 실데이터로 생성하고, **앱이 실제로 fetch하는 엔드포인트는 Cloudflare Worker**(`cf-worker`)다. **앱은 읽기 전용 — 꿀잼지수는 파이프라인에서 이미 계산됨**(앱은 재계산 안 함, 의도: adr.md ADR-004).
+
+## Worker 라이브 오버레이 (중요)
+앱의 `REMOTE_BASE_URL`은 GitHub raw가 아니라 **Worker**를 가리킨다(ADR-018). Worker가 경로별로:
+- **`games.json`**: 정적 파이프라인 JSON 위에 KBO 실시간 데이터를 덧씌운다 — `status`(LIVE 포함 재판정), `score`(LIVE/FINAL), `cancelReason`, `live`(라이브 오버레이 객체). `honjam`은 손대지 않음(frozen 그대로). KBO API 실패 시 정적 데이터로 폴백.
+- **그 외(`standings.json`/`recent.json`/`report.json`)**: GitHub raw 패스스루.
+
+따라서 아래 스키마에서 `status: 'LIVE'`, `live`, FINAL의 `score`/`recap`/`decision`, `cancelReason`은 **Worker가 채우거나 갱신**하는 필드다(정적 JSON에는 비어있거나 직전 값).
 
 ## games.json
 오늘 경기 + 꿀잼지수. 앱의 메인 데이터.
@@ -24,14 +31,15 @@
     "gameId": "20260531LTNC0",     // = KBO G_ID (YYYYMMDD+원정코드+홈코드+N)
     "time": "14:00",
     "stadium": "창원",
-    "status": "SCHEDULED",         // SCHEDULED | FINAL | CANCELED
+    "status": "SCHEDULED",         // SCHEDULED | LIVE | FINAL | CANCELED (LIVE는 Worker가 판정)
+    "cancelReason": null,          // CANCELED일 때 사유(예: "우천취소"), 아니면 null (Worker가 CANCEL_SC_NM로 채움)
     "broadcast": "M-T",            // 중계 채널코드(원문), 표시용
     "away": {
       "code": "LT",                // 팀코드, teams.json과 매칭
       "name": "롯데",
       "rank": 8,                   // 당일 순위
-      "score": null,              // FINAL일 때만 숫자, 아니면 null
-      "starter": { "name": "비슬리", "era": 3.71 }  // 미등록/미규정시 null 또는 era:null
+      "score": null,              // LIVE/FINAL일 때만 숫자(Worker 오버레이), 아니면 null
+      "starter": { "name": "비슬리", "era": 3.71, "w": 4, "l": 2 }  // 미등록/미규정시 null 또는 필드 null
     },
     "home": { /* away와 동일 구조 */ },
     "honjam": {                    // 순위 데이터 없으면 null (계산 불가)
@@ -40,11 +48,39 @@
       "points": ["낙동강 더비", "...", "..."],  // 관전포인트 최대 3개(상세용)
       "factors": { "close":1.0, "quality":0.22, "form":0.30, "rivalry":0.7, "playoff":1.0, "pitcher":0.27 },  // 0~1 원시 기여값(디버그/튜닝용)
       "frozen": true               // 경기 전 freeze된 예측임을 표시(정직성 게이트용). 앱은 무시. 옵셔널 — 경기 전 스냅샷 없이 FINAL로 처음 수집된 경기는 없음(영원히 false)
+    },
+    "live": {                      // status==='LIVE'일 때만 Worker가 채움. 아니면 null
+      "inning": 8, "half": "B",   // 이닝 / 'T'(초)·'B'(말)
+      "out": 2,
+      "b1": true, "b2": false, "b3": true,  // 루상 주자 점유
+      "pitcher": "원종현",          // 현재 수비팀 투수
+      "batter": "최정",             // 현재 공격팀 타자
+      "heat": 78,                  // '지금 볼 각' 실시간 흥미도 0~100 (liveHeat: 점수차·이닝·끝내기/연장 기반)
+      "label": "8회말 1점차 접전"     // 상황 요약 문자열(liveLabel)
+    },
+    "recap": {                     // status==='FINAL'일 때만. 경기 후 꿀잼결산
+      "actual": 84,                // 실제 꿀잼(예측과 같은 0~100 보정 척도)
+      "verdict": "예측보다 더 꿀잼! 🔥"  // 판정 문구, null 가능
+    },
+    "decision": {                  // status==='FINAL'일 때만. 승/패/세이브 투수
+      "win": "임찬규", "lose": "원태인", "save": "고우석"  // 각각 null 가능(무승부·세이브 없음)
+    },
+    "lineup": {                    // SCHEDULED/LIVE만 — null이면 미제공
+      "confirmed": true,           // 정식 라인업 확정 여부
+      "home": [{ "order": 1, "pos": "지명타자", "name": "..." }],  // 타순
+      "away": [/* 동일 */]
     }
   }]
 }
 ```
-**nullable 규칙:** `score`는 경기 전 null. `starter`/`starter.era`는 선발 미등록·미규정시 null → UI는 '미정'. `honjam`은 순위 매칭 실패시 null. `trackRecord`는 표본 부족(sampleSize < 10)·구버전 시드에서 없을 수 있음(옵셔널) — 이 경우 배지는 '집계 중'으로 표시하는 것이 의도된 동작.
+**nullable 규칙:** `score`는 경기 전 null(LIVE/FINAL에서 Worker가 채움). `starter`/`starter.era`/`w`/`l`은 미등록·미규정시 null → UI는 '미정'. `honjam`은 순위 매칭 실패시 null. `live`는 LIVE에서만, `recap`/`decision`은 FINAL에서만, `lineup`은 SCHEDULED/LIVE에서만 존재(그 외 null). `trackRecord`는 표본 부족(sampleSize < 10)·구버전 시드에서 없을 수 있음(옵셔널) — 이 경우 배지는 '집계 중'으로 표시하는 것이 의도된 동작.
+
+### `live.heat` — '지금 볼 각' 실시간 흥미도
+경기중 점수판 우상단에 "지금 N"으로 노출(LiveCard). 꿀잼지수(경기 전 예측, frozen)와 **별개**의 실시간 지표. `liveHeat(inning, half, scoreDiff, totalRuns)` 공식(Worker·build.mjs 양쪽 동일):
+- `closeF = max(0, 1 - scoreDiff/6)` — 점수차 0=박빙 1.0, 6점차+=0. **절대 점수차**라 이기든 지든 동일.
+- `heat = 85 × closeF × (0.45 + 0.55 × inning/9)` — 이닝 진행할수록 가산.
+- 9회말 1점차 이하 → **끝내기 찬스 +10**. 연장·난타전 추가 가산.
+- 주의: 1점차로 추격하던 팀이 역전하면 `heat`가 **떨어질 수 있음** — 9회말 끝내기 보너스(+10)가 빠지고, 역전=긴장 완화로 보기 때문. 의도된 동작.
 
 ## standings.json
 10팀 순위표. 내 팀 탭 / 순위 표시용.
@@ -68,6 +104,41 @@
 { "teams": [{ "code": "HT", "name": "KIA", "fullName": "KIA 타이거즈", "color": "#EA0029" }] }
 ```
 코드 매핑: HT=KIA, SS=삼성, LG=LG, OB=두산, KT=KT, SK=SSG, LT=롯데, HH=한화, NC=NC, WO=키움.
+
+## recent.json
+팀별 최근 경기 결과. 내 팀 탭(MyTeam) 피드의 '최근 결과' 표시용.
+```jsonc
+{
+  "updatedAt": "...",
+  "recent": {                      // 팀코드 → 최근 경기 배열(오래된→최신)
+    "LG": [{
+      "date": "20260530",
+      "oppCode": "OB",             // 상대 팀코드
+      "isHome": true,
+      "sf": 7,                     // 득점(우리 팀)
+      "sa": 3,                     // 실점
+      "result": "W"                // 'W' | 'L' | 'D'
+    }]
+  }
+}
+```
+
+## report.json
+월요 리포트(주간 결산 + 이번 주 빅매치). MondayReport 컴포넌트용.
+```jsonc
+{
+  "updatedAt": "...",
+  "lastWeek": {
+    "range": ["20260623", "20260629"],
+    "team": { "LG": { "w": 4, "l": 2, "d": 0, "rank": 1, "note": "..." } }  // 팀코드별 지난주 성적
+  },
+  "thisWeek": {
+    "range": ["20260630", "20260706"],
+    "top": [{ "away": "SS", "home": "LG", "pred": 88, "reason": "...", "dateStart": "...", "dateEnd": "..." }],  // 이번주 추천 빅매치
+    "team": { "LG": [{ "date": "...", "away": "...", "home": "...", "awayStarter": "...", "homeStarter": "..." }] }  // 팀별 이번주 일정
+  }
+}
+```
 
 ## recap-history.json
 크로스데이트 누적 적중률 파일. 파이프라인 산출물. **append-only** — 같은 gameId가 이미 있으면 덮어쓰지 않는다(5분 주기 재실행·재빌드에 중복·드리프트 방지).

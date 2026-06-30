@@ -88,6 +88,25 @@
 - **기각안:** ① `recap-history.json` 전체를 앱이 fetch — 시간이 지날수록 무한 증가, 네트워크 낭비. ② `prevStatus`만으로 게이트 — 재시작/재빌드 시 post-hoc 둔갑 버그 발생 가능.
 - **의도:** 트랙레코드가 "경기 전 예측" 기준임을 코드 수준에서 강제해 앱이 노출하는 적중률이 과장되지 않도록 보장.
 
+### ADR-018 — 라이브 점수: Cloudflare Worker 엣지 오버레이 (ADR-002 보강)
+- **맥락:** 파이프라인은 5분 주기 정적 JSON이라 경기중 점수·이닝을 실시간으로 못 따라간다. "서버 없음"(ADR-002)을 지키면서 라이브 점수를 주려면 상시 운영 백엔드 없이 요청 시점에 KBO 실시간 데이터를 합쳐야 한다.
+- **결정:** Cloudflare Worker(`cf-worker/src/index.ts`)를 라이브 오버레이 엣지 함수로 둔다. 앱의 `REMOTE_BASE_URL`이 Worker를 가리킨다. `games.json` 요청 시 GitHub raw 정적 데이터 + KBO 실시간 경기목록을 `Promise.all`로 fetch → `gameId(G_ID)` 기준 병합. 덮어쓰는 것: `status`(LIVE 판정 포함), `score`(LIVE/FINAL), `cancelReason`, `live` 객체(이닝·주자·투수·타자·heat·label). **`honjam`은 손대지 않음**(frozen 정직성 유지). standings/recent/report는 패스스루.
+- **상태 판정 버그 수정:** KBO `GAME_SC_ID`는 신뢰 불가(점수 0 표시 버그 원인). `GAME_STATE_SC`가 정확한 상태 필드 — `resolveStatus()`가 취소(`CANCEL_SC_ID`)→종료(`GAME_RESULT_CK`/`GAME_STATE_SC===3`)→라이브(`===2`) 순으로 판정.
+- **의도/결과:** Worker는 무상태·무유지보수(상시 서버 아님, 무료 티어 엣지). KBO API가 죽으면 정적 games.json으로 폴백 → 앱은 절대 안 죽음. "서버 없음"의 정신(유지할 백엔드·비용 없음)은 지키되 실시간성을 확보. `liveHeat`/`liveLabel`은 Worker와 build.mjs 양쪽에 동일 구현(수정 시 두 곳 동기 필수).
+- **트리거:** 스케줄 cron 신뢰성 우회를 위해 외부 cron(cron-job.org)이 5분마다 GitHub `workflow_dispatch`를 호출(concurrency 가드). Worker 자체는 요청 기반이라 cron 무관.
+
+### ADR-019 — 꿀잼지수 배지 스킨 시스템 (ScoreSkin)
+- **맥락:** 꿀잼지수 배지에 개성을 주되, 유니폼 SVG와 전혀 다른 표현(레트로 전광판)도 한 선택지로 묶고 싶다. 기존엔 유니폼 프리셋(classic/pinstripe/cream)만 있었다.
+- **결정:** 스킨을 `kind`로 추상화 — `jersey`(유니폼 SVG, `JerseyScoreBadge`) / `scoreboard`(전광판 View, `ScoreboardScoreBadge`). `ScoreSkinRenderer`가 선택 스킨의 kind로 분기. ID 네임스페이스 `jersey.*`/`scoreboard.*`를 `utils/scoreSkinConfig.ts`에 단일 정의. 전역 상태는 `context/ScoreSkin.tsx`(`useScoreSkin`).
+- **마이그레이션:** AsyncStorage 신규 키 `user.scoreSkinId`. 구키 `user.uniformPreset`(classic/pinstripe/cream)은 `normalizeScoreSkinId()`가 `jersey.*`로 변환 후 신규 키에 저장. 구 `context/UniformPreset.tsx`는 죽은 코드(ScoreSkin이 `useUniformPreset` 별칭으로 하위호환 제공).
+- **제약:** 전광판은 `uniformPreset`에 넣지 않는다(별도 kind). scoreboard kind는 외부 `GguljamScoreLabel`을 표시하지 않고 내부 헤더에 "꿀잼지수"를 포함(라벨 중복 금지). 유니폼 V6 SVG는 수정하지 않는다.
+- **의도:** 표현이 근본적으로 다른 스킨도 단일 선택 UI(SkinSelect)에서 동등하게 다룰 수 있게. 숫자 가독성 최우선.
+
+### ADR-020 — 경기 후 피드백: Discord 웹훅(상시 서버 아님)
+- **맥락:** 꿀잼지수 가중치가 검증 안 된 추측이라 실사용 피드백 없이는 튜닝 불가. 수기 수집은 마찰이 높아 실제로 안 됨(시뮬에서 확인). 그러나 "서버 없음"(ADR-002)은 지켜야 함.
+- **결정:** FINAL 경기에서만(`status==='FINAL' && honjam!=null`) 👍/👎 + 이유 태그(꿀잼지수 6요소 대응 slug)를 받아 AsyncStorage 저장 + **Discord 웹훅**으로 전송. 웹훅 URL은 `app.config.js`의 `extra.discordWebhookUrl`(`.env.local`→`DISCORD_WEBHOOK_URL`, `.gitignore`). 전송 실패는 무음 처리(앱 크래시·UX 방해 없음).
+- **의도:** Discord 웹훅은 우리가 유지하는 백엔드가 아니라 외부 SaaS 수신점이라 "서버 없음" 위배 아님. FINAL 게이팅으로 미완료 경기 노이즈 차단. 수집 표본은 가중치 튜닝 기준 표본 수 충족 시 활용(roadmap.md).
+
 ### ADR-016 — 꿀잼지수: form 대칭화 + 멸망전(doom) 팩터 (ADR-004/007 개정)
 - **맥락:** 코어팬 사용자가 "이번주 진짜 꿀잼은 멸망전(SSG 12연패 vs 키움 8연패)인데 상위권 매치(LG·KT)만 최상단"이라 지적. 요소 분해 결과: ① `form`이 `0.6×최근10승수`라 **지는 팀을 구조적으로 과소평가**(ADR-007의 "연승·연패 대칭" 선언과 모순) ② 멸망전 화제성을 보는 요소 부재.
 - **결정:** ① **form 대칭화** — `최근10승수` → `.500에서의 이탈도(|승수-5|)`로 교체해 연패도 연승만큼 기세로 인정. ② **doom 팩터 신설(가중 18)** — 양 팀 모두 5연패↑일 때 더 얕은 쪽 연패 깊이로 강도 산정("누가 먼저 끊나" 서사). 평소 경기는 doom=0이라 **기존 점수 불변**, 멸망전만 상승(SSG·키움 38→81, 상위권은 form 대칭화로 ~3점만 하락).
