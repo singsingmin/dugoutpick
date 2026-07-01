@@ -8,8 +8,8 @@ const FRAME = require('../assets/scoreboard-frame.png');
 const ASPECT = 1448 / 1086; // ≈1.333 (4:3)
 
 // 디스플레이 창(헤더캡 아래 ~ B/S/O 바 위)의 세로 중심 — 이미지 대비 비율.
-// 실기기 스샷 보정(v7.1): 0.45 → 0.475 (숫자가 창에서 살짝 위로 떠서 내림).
-const WINDOW_CENTER_Y = 0.475;
+// 실기기 스샷 보정: 0.45 → 0.475(v7.1) → 0.49(v7.2, 살짝 더 내림).
+const WINDOW_CENTER_Y = 0.49;
 // 숫자 텍스트 세로 센터링 오프셋 = lineHeight 절반(≈0.52). 과보정(0.62) → 0.52로 교정.
 const CENTER_OFFSET = 0.52;
 // 숫자 폰트 = 배지 높이 × 비율 (창 높이 ~0.46h 안에서 시원하게). v7.1: 0.34 → 0.36.
