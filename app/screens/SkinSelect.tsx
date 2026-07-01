@@ -8,6 +8,8 @@ import { useScoreSkin } from '../context/ScoreSkin';
 import {
   SCORE_SKIN_LIST,
   getScoreSkinById,
+  getSkinSectionKey,
+  getSkinSectionTitle,
   resolveJerseyColor,
   resolveJerseyNumberMode,
   type ScoreSkinId,
@@ -42,6 +44,27 @@ const TABS: { key: TabKey; label: string }[] = [
   { key: 'stadium', label: '야구장' },
   { key: 'special', label: '스페셜' },
 ];
+
+// 탭에 해당하는 스킨을 섹션별로 묶는다. 섹션 정의·제목·순서는 전부 config가 결정하므로
+// 새 스킨팩이 생겨도 이 화면은 수정할 필요 없음(빈 섹션은 자연히 제외됨).
+// SCORE_SKIN_LIST가 sortOrder 순 정렬이라 섹션도 첫 스킨의 sortOrder 순으로 노출된다.
+type Section = { key: string; title: string; items: ScoreSkin[] };
+function buildSections(tab: TabKey): Section[] {
+  const sections: Section[] = [];
+  const byKey = new Map<string, Section>();
+  for (const s of SCORE_SKIN_LIST) {
+    if (!(tab === 'all' || s.category === tab)) continue;
+    const key = getSkinSectionKey(s);
+    let sec = byKey.get(key);
+    if (!sec) {
+      sec = { key, title: getSkinSectionTitle(key), items: [] };
+      byKey.set(key, sec);
+      sections.push(sec);
+    }
+    sec.items.push(s);
+  }
+  return sections;
+}
 
 // 그리드/바 공용 썸네일 — hero variant를 목표 폭(targetW)으로 스케일(다운스케일=선명).
 // kind별 자연 크기가 달라도 targetW 폭으로 통일 → 그리드에서 footprint 일치.
@@ -81,7 +104,7 @@ export default function SkinSelect() {
   useEffect(() => () => { if (toastTimer.current) clearTimeout(toastTimer.current); }, []);
 
   const selectedConfig = getScoreSkinById(skinId);
-  const visible = tab === 'all' ? SCORE_SKIN_LIST : SCORE_SKIN_LIST.filter((s) => s.category === tab);
+  const sections = buildSections(tab);
 
   const handleSelect = async (s: ScoreSkin) => {
     await setSkin(s.id);
@@ -127,44 +150,51 @@ export default function SkinSelect() {
         </View>
 
         <ScrollView contentContainerStyle={styles.content}>
-          {visible.length === 0 ? (
+          {sections.length === 0 ? (
             <View style={styles.empty}>
               <PixelText variant="body" color={colors.textDim}>준비 중인 스킨이에요</PixelText>
             </View>
           ) : (
-            <View style={styles.grid}>
-              {visible.map((s) => {
-                const selected = s.id === skinId;
-                return (
-                  <Pressable
-                    key={s.id}
-                    onPress={() => handleSelect(s)}
-                    accessibilityRole="button"
-                    accessibilityLabel={s.label}
-                    accessibilityState={{ selected }}
-                    style={[
-                      styles.cell,
-                      { width: CELL_W },
-                      selected
-                        ? { borderColor: accent, borderWidth: 2, backgroundColor: CREAM_SELECTED }
-                        : { borderColor: CREAM_BORDER, borderWidth: 1 },
-                    ]}
-                  >
-                    {selected && (
-                      <View style={[styles.selectedTint, { backgroundColor: accent }]} pointerEvents="none" />
-                    )}
-                    <View style={styles.thumbBox}>
-                      <SkinThumb skin={s} teamColor={accent} targetW={THUMB_W} />
-                    </View>
-                    {selected && (
-                      <View style={[styles.check, { backgroundColor: accent }]}>
-                        <PixelText variant="caption" color="#fff" style={styles.checkMark}>✓</PixelText>
-                      </View>
-                    )}
-                  </Pressable>
-                );
-              })}
-            </View>
+            sections.map((sec) => (
+              <View key={sec.key} style={styles.section}>
+                <PixelText variant="caption" color={colors.textDim} style={styles.sectionTitle}>
+                  {sec.title}
+                </PixelText>
+                <View style={styles.grid}>
+                  {sec.items.map((s) => {
+                    const selected = s.id === skinId;
+                    return (
+                      <Pressable
+                        key={s.id}
+                        onPress={() => handleSelect(s)}
+                        accessibilityRole="button"
+                        accessibilityLabel={s.label}
+                        accessibilityState={{ selected }}
+                        style={[
+                          styles.cell,
+                          { width: CELL_W },
+                          selected
+                            ? { borderColor: accent, borderWidth: 2, backgroundColor: CREAM_SELECTED }
+                            : { borderColor: CREAM_BORDER, borderWidth: 1 },
+                        ]}
+                      >
+                        {selected && (
+                          <View style={[styles.selectedTint, { backgroundColor: accent }]} pointerEvents="none" />
+                        )}
+                        <View style={styles.thumbBox}>
+                          <SkinThumb skin={s} teamColor={accent} targetW={THUMB_W} />
+                        </View>
+                        {selected && (
+                          <View style={[styles.check, { backgroundColor: accent }]}>
+                            <PixelText variant="caption" color="#fff" style={styles.checkMark}>✓</PixelText>
+                          </View>
+                        )}
+                      </Pressable>
+                    );
+                  })}
+                </View>
+              </View>
+            ))
           )}
         </ScrollView>
       </SafeAreaView>
@@ -217,6 +247,8 @@ const styles = StyleSheet.create({
   },
 
   content: { paddingHorizontal: spacing.md, paddingTop: spacing.sm, paddingBottom: spacing.md },
+  section: { marginBottom: spacing.md },
+  sectionTitle: { marginLeft: 2, marginBottom: spacing.xs, opacity: 0.85, letterSpacing: 0.5 },
   grid: { flexDirection: 'row', flexWrap: 'wrap', gap: GRID_GAP },
   cell: {
     aspectRatio: 1.23,  // width:height ≈ 1:0.81 (슬롯형, 카드 높이 ~7%↓)

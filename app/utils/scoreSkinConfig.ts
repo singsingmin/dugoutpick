@@ -146,6 +146,30 @@ export const SCORE_SKINS: ScoreSkin[] = [
   })),
 ];
 
+// ── 섹션 그룹 (스킨샵 정리용) ──────────────────────────────────────────────
+// 유니폼은 unlockGroup별로, 그 외 에셋은 category별로 섹션이 나뉜다.
+// 새 스킨팩을 추가할 때: 스킨에 unlockGroup + sortOrder만 부여하면 섹션이 자동 생성되고,
+// 제목을 지정하려면 여기 한 줄만 추가하면 된다(SkinSelect.tsx는 손댈 필요 없음).
+// 섹션 노출 순서는 각 섹션 첫 스킨의 sortOrder를 따른다.
+export const SKIN_SECTION_TITLES: Record<string, string> = {
+  'uniform:__basic': '기본 유니폼',
+  'uniform:color_uniform_pack': '컬러 유니폼',
+  'uniform:white_uniform_pack': '화이트 유니폼',
+  stadium: '야구장 스킨',
+  special: '스페셜 스킨',
+};
+
+// 스킨이 속한 섹션 키. 유니폼은 unlockGroup(없으면 기본), 에셋은 category.
+export function getSkinSectionKey(s: ScoreSkin): string {
+  if (s.category === 'uniform') return `uniform:${s.unlockGroup ?? '__basic'}`;
+  return s.category;
+}
+
+// 섹션 제목. 등록 안 된 키는 유니폼/에셋에 맞는 기본값으로 폴백(제목 누락돼도 안전).
+export function getSkinSectionTitle(key: string): string {
+  return SKIN_SECTION_TITLES[key] ?? (key.startsWith('uniform:') ? '기타 유니폼' : '기타 스킨');
+}
+
 const DEFAULT_ID = 'jersey.classic.team';
 const BY_ID = new Map<string, ScoreSkin>(SCORE_SKINS.map((s) => [s.id, s]));
 
