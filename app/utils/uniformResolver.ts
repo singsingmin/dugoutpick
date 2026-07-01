@@ -151,11 +151,13 @@ export function resolveUniformPreset(
       default:           sleeveColor = bodyColor; break; // sameAsBody
     }
   }
-  // 소매 seam: 아주 약하게(색차 위주). compact는 생략(0).
-  const sleeveSeamColor = 'rgba(60,45,30,0.16)';
+  // 소매 seam: 아주 약하게(색차 위주). 바디색에 따라 밝은/어두운 선. compact는 생략(0).
+  const sleeveSeamColor = config.bodyMode === 'cream'
+    ? 'rgba(90,65,40,0.18)'      // 크림 바디 → 어두운 seam
+    : 'rgba(255,240,204,0.18)';  // 팀컬러 바디 → 밝은 seam
   const sleeveSeamOpacity = !sleeveSplit
     ? 0
-    : variant === 'compact' ? 0 : variant === 'hero' ? 0.7 : 1.0;
+    : variant === 'compact' ? 0 : variant === 'hero' ? 0.8 : 1.0;
 
   // 파이핑/커프: variant별 두께
   const pipingWidth = variant === 'compact' ? 1.0 : variant === 'hero' ? 1.5 : 1.8;
