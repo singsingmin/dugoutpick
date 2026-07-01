@@ -82,21 +82,22 @@ function digitCount(score: number): 1 | 2 | 3 {
 }
 
 // ── 숫자 위치·크기 테이블 ────────────────────────────────────────────────────
+// y = 숫자 세로 중심(SVG viewBox 좌표). 낮출수록 위로. 실기기 보정: 위로 ~3 올림.
 const SCORE_TEXT = {
   hero: {
-    1: { fontSize: 44, y: 57 },
-    2: { fontSize: 38, y: 57 },
-    3: { fontSize: 30, y: 56 },
+    1: { fontSize: 44, y: 54 },
+    2: { fontSize: 38, y: 54 },
+    3: { fontSize: 30, y: 53 },
   },
   detail: {
-    1: { fontSize: 44, y: 57 },
-    2: { fontSize: 38, y: 57 },
-    3: { fontSize: 30, y: 56 },
+    1: { fontSize: 44, y: 54 },
+    2: { fontSize: 38, y: 54 },
+    3: { fontSize: 30, y: 53 },
   },
   compact: {
-    1: { fontSize: 20, y: 30 },
-    2: { fontSize: 16, y: 30 },
-    3: { fontSize: 13, y: 29 },
+    1: { fontSize: 20, y: 28 },
+    2: { fontSize: 16, y: 28 },
+    3: { fontSize: 13, y: 27 },
   },
 } as const;
 
