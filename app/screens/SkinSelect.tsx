@@ -12,6 +12,7 @@ import {
   getSkinSectionTitle,
   resolveJerseyColor,
   resolveJerseyNumberMode,
+  resolveUniformOverride,
   type ScoreSkinId,
   type ScoreSkin,
   type ScoreSkinCategory,
@@ -93,6 +94,7 @@ function SkinThumb({ skin, teamColor, targetW }: { skin: ScoreSkin; teamColor: s
             uniformPreset={skin.styleId}
             showLabel={false}
             numberMode={resolveJerseyNumberMode(skin)}
+            colorOverride={resolveUniformOverride(skin)}
           />
         )}
       </View>

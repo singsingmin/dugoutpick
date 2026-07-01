@@ -35,6 +35,14 @@ function adjustColor(hex: string, amount: number): string {
 
 export type BadgeVariant = 'hero' | 'compact' | 'detail';
 
+// 고정색 유니폼(컬러팩)용 팔레트 오버라이드 — 트림/숫자색을 파생 대신 명시값으로.
+// classic 실루엣은 단일 몸통이라 몸통색은 baseColor(teamColor 경로)로 처리, 여기선 트림/숫자만.
+export interface UniformColorOverride {
+  trimColor?: string;    // 목라인/소매라인
+  numberFill?: string;
+  numberStroke?: string;
+}
+
 export interface ResolvedUniformStyle {
   bodyColor: string;
   // V6.5 소매 분리
@@ -165,6 +173,7 @@ export function resolveUniformPreset(
   teamColor: string,
   variant: BadgeVariant,
   numberMode?: 'dark',   // 밝은 바탕 고정색 유니폼: 숫자를 어둡게(가독성)
+  override?: UniformColorOverride,   // 컬러팩 팔레트 명시색(트림/숫자)
 ): ResolvedUniformStyle {
   const bodyColor = config.bodyMode === 'cream' ? CREAM_BODY
     : config.bodyMode === 'white' ? WARM_WHITE
@@ -192,11 +201,12 @@ export function resolveUniformPreset(
 
   // V6.6 트림(목라인/소매끝) 대비색 — 어두운 바디→크림 / 밝은 바디→같은 색조 딥톤 / 크림 바디→팀·팔레트색.
   const CREAM_TRIM = '#F3E7C7';  // 웜 화이트(순백 대비 밝은 배경서도 톤 유지)
-  const trimColor = (config.bodyMode === 'cream' || config.bodyMode === 'white')
+  let trimColor = (config.bodyMode === 'cream' || config.bodyMode === 'white')
     ? pipingColor                       // 크림/화이트 바디 → 팀/팔레트 포인트색
     : numberMode === 'dark'
       ? adjustColor(teamColor, -0.6)    // 밝은 바디 → 같은 색조 딥톤(핑크→와인, 스카이→네이비)
       : CREAM_TRIM;                     // 어두운 바디 → 크림
+  if (override?.trimColor) trimColor = override.trimColor;  // 컬러팩 명시 트림
 
   // 파이핑/커프/목라인: variant별 두께
   const pipingWidth = variant === 'compact' ? 1.0 : variant === 'hero' ? 1.5 : 1.8;
@@ -277,6 +287,13 @@ export function resolveUniformPreset(
     numberStrokeWidth   = variant === 'compact' ? 0.8 : variant === 'hero' ? 1.1 : 1.4;
     numberShadowColor   = '#000000';
     numberShadowOpacity = 0.08;
+  }
+
+  // 컬러팩 명시 숫자색 — 파생값 위에 덮어씀(핑크=흰숫자, 하늘=빨강숫자 등). 얇은 외곽선 유지, 드롭섀도우 off.
+  if (override?.numberFill) {
+    numberFill = override.numberFill;
+    if (override.numberStroke) numberStroke = override.numberStroke;
+    numberShadowOpacity = 0;
   }
 
   // 외곽선 & 드롭쉐도우

@@ -1,6 +1,6 @@
 // 꿀잼지수 스킨 데이터모델 — styleId × paletteId × colorMode(유니폼) / assetKey × renderType(에셋).
 // 사용자는 완성형 스킨 하나를 선택(UX 동일). 내부만 확장형 구조(고정색/스킨팩/프리미엄 대비).
-import type { UniformPresetId } from './uniformResolver';
+import type { UniformPresetId, UniformColorOverride } from './uniformResolver';
 
 export type ScoreSkinKind = 'jersey' | 'asset';
 export type ScoreSkinCategory = 'uniform' | 'stadium' | 'special';
@@ -58,13 +58,13 @@ export const JERSEY_PALETTES: Record<JerseyPaletteId, JerseyPalette> = {
   team:   { id: 'team',   label: '내 팀 컬러', colorMode: 'team', resolveFromTeamColor: true },
   red:    { id: 'red',    label: '레드',   colorMode: 'fixed', baseColor: '#C91F37' },
   orange: { id: 'orange', label: '오렌지', colorMode: 'fixed', baseColor: '#F15A24' },
-  yellow: { id: 'yellow', label: '옐로우', colorMode: 'fixed', baseColor: '#F2C230', darkNumber: true },
+  yellow: { id: 'yellow', label: '옐로우', colorMode: 'fixed', baseColor: '#F4D84E', darkNumber: true },
   green:  { id: 'green',  label: '그린',   colorMode: 'fixed', baseColor: '#2E8B57' },
-  sky:    { id: 'sky',    label: '스카이', colorMode: 'fixed', baseColor: '#4FB0E5', darkNumber: true },
+  sky:    { id: 'sky',    label: '스카이', colorMode: 'fixed', baseColor: '#8FD8FF', darkNumber: true },
   blue:   { id: 'blue',   label: '블루',   colorMode: 'fixed', baseColor: '#1E6BB8' },
   navy:   { id: 'navy',   label: '네이비', colorMode: 'fixed', baseColor: '#1B3A6B' },
   purple: { id: 'purple', label: '퍼플',   colorMode: 'fixed', baseColor: '#7A4FA3' },
-  pink:   { id: 'pink',   label: '핑크',   colorMode: 'fixed', baseColor: '#E86AA6', darkNumber: true },
+  pink:   { id: 'pink',   label: '핑크',   colorMode: 'fixed', baseColor: '#F4A9C8', darkNumber: true },
   black:  { id: 'black',  label: '블랙',   colorMode: 'fixed', baseColor: '#1F1F1F' },
   cream:  { id: 'cream',  label: '크림',   colorMode: 'fixed', baseColor: '#F2ECD9', darkNumber: true },
   gray:   { id: 'gray',   label: '그레이', colorMode: 'fixed', baseColor: '#8A8A8A' },
@@ -74,6 +74,14 @@ export const JERSEY_PALETTES: Record<JerseyPaletteId, JerseyPalette> = {
 export const WHITE_POINT_COLORS: Partial<Record<JerseyPaletteId, string>> = {
   red: '#C92A3A', pink: '#D96B96', orange: '#E9551C', yellow: '#C99A12',
   green: '#2E8B57', sky: '#2E8FBD', blue: '#1E63B6', black: '#1F1F1F',
+};
+
+// 컬러 유니폼(classic 고정색)용 명시 트림/숫자색 — 팔레트 baseColor(=몸통)와 별개로 지정.
+// 밝은 몸통에서 숫자 가독성·색 성격을 팔레트별로 최적화(핑크=흰숫자, 하늘=빨강숫자, 노랑=차콜숫자).
+export const COLOR_UNIFORM_OVERRIDES: Partial<Record<JerseyPaletteId, UniformColorOverride>> = {
+  pink:   { trimColor: '#9C4F73', numberFill: '#FFFDF8', numberStroke: '#B56A8C' },
+  sky:    { trimColor: '#2F6F94', numberFill: '#E94B4B', numberStroke: '#9E2F2F' },
+  yellow: { trimColor: '#6A5A1E', numberFill: '#2B2B2B', numberStroke: '#FFF4B8' },
 };
 
 // ── 스킨 목록 (isHidden=false만 노출, sortOrder 순) ───────────────────────────
@@ -125,6 +133,12 @@ export const SCORE_SKINS: ScoreSkin[] = [
     label: '홈플레이트', description: '홈플레이트 프레임 스타일',
     assetKey: 'homePlate', renderType: 'imageFrame',
     unlockType: 'free', sortOrder: 520,   // 티켓 다음(야구장 섹션).
+  },
+  {
+    id: 'medal.special', kind: 'asset', category: 'special',
+    label: '꿀잼 메달', description: '스페셜 골드 메달',
+    assetKey: 'medalSpecial', renderType: 'imageFrame',
+    unlockType: 'free', sortOrder: 600,   // 스페셜 섹션 첫 항목.
   },
   // ── 고정색 컬러 유니폼(컬러팩) — classic × 고정 팔레트. 응원팀 무관 동일색. ──
   ...( ['red', 'pink', 'orange', 'yellow', 'green', 'sky', 'blue', 'black'] as JerseyPaletteId[]
@@ -226,6 +240,13 @@ export function resolveJerseyColor(skin: JerseySkin, teamColor: string | undefin
 export function resolveJerseyNumberMode(skin: JerseySkin): 'dark' | undefined {
   if (skin.styleId === 'white' || skin.styleId === 'stripe') return undefined;
   return JERSEY_PALETTES[skin.paletteId]?.darkNumber ? 'dark' : undefined;
+}
+
+// 컬러팩(classic 고정색) 유니폼의 명시 트림/숫자색 오버라이드. 그 외(팀색·white·stripe)는 없음.
+export function resolveUniformOverride(skin: ScoreSkin): UniformColorOverride | undefined {
+  if (skin.kind !== 'jersey') return undefined;
+  if (skin.styleId === 'classic' && skin.colorMode === 'fixed') return COLOR_UNIFORM_OVERRIDES[skin.paletteId];
+  return undefined;
 }
 
 // ── 저장값 마이그레이션 (구 id/프리셋 → 새 id) ────────────────────────────────

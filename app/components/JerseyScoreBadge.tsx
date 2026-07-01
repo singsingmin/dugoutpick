@@ -8,6 +8,7 @@ import GguljamScoreLabel from './GguljamScoreLabel';
 import {
   type UniformPresetId,
   type ResolvedUniformStyle,
+  type UniformColorOverride,
   UNIFORM_PRESETS,
   resolveUniformPreset,
 } from '../utils/uniformResolver';
@@ -23,6 +24,7 @@ interface Props {
   uniformPreset?: UniformPreset;
   showLabel?: boolean;
   numberMode?: 'dark';      // 밝은 바탕 고정색 유니폼 숫자 가독성 보정
+  colorOverride?: UniformColorOverride;  // 컬러팩 팔레트 명시 트림/숫자색
 }
 
 // 팀 컬러 배지 보정: 밝은 색 어둡게, 어두운 색 유지
@@ -298,13 +300,15 @@ function CompactJersey({ score, cid, resolved }: {
 
 // ── 공개 컴포넌트 ─────────────────────────────────────────────────────────────
 export default function JerseyScoreBadge({
-  score, variant = 'hero', homeTeamColor, teamColor, uniformPreset, showLabel = true, numberMode,
+  score, variant = 'hero', homeTeamColor, teamColor, uniformPreset, showLabel = true, numberMode, colorOverride,
 }: Props) {
   const [cid] = useState<string>(() => `jsb_${++_seq}`);
   const { preset: contextPreset } = useUniformPreset();
-  const tc = badgeColor(homeTeamColor ?? teamColor ?? colors.accent);
+  const rawColor = homeTeamColor ?? teamColor ?? colors.accent;
+  // 컬러팩 override 유니폼은 지정한 밝은 톤을 그대로(badgeColor 어둡게 보정 우회). 그 외는 팀색 보정 유지.
+  const tc = colorOverride ? rawColor : badgeColor(rawColor);
   const config = UNIFORM_PRESETS[uniformPreset ?? contextPreset];
-  const resolved = resolveUniformPreset(config, tc, variant, numberMode);
+  const resolved = resolveUniformPreset(config, tc, variant, numberMode, colorOverride);
 
   if (variant === 'compact') {
     return <CompactJersey score={score} cid={cid} resolved={resolved} />;

@@ -55,6 +55,21 @@ export const IMAGE_FRAME_ASSETS: Record<string, ImageFrameConfig> = {
     // 폭은 전광판(128) footprint에 맞춤. 정사각이라 같은 폭이면 128×119(세로만 조금 큼).
     widths: { compact: 64, hero: 128, detail: 156, preview: 168 },
   },
+  medalSpecial: {
+    source: require('../assets/medal-frame.webp'),
+    aspect: 1168 / 1213,       // ≈0.963 (크롭 후 실측, 리본 포함 세로가 조금 김)
+    numberCenterX: 0.5,
+    numberCenterY: 0.546,      // 링 중심 — 상단 리본이 솟아 중앙보다 약간 아래
+    numberColor: '#26365F',    // 투명 링 뒤=크림 카드 → 네이비(메달 네이비 밴드와 조화)
+    fontRatio: 0.30,           // 링 원 안에 여유있게
+    threeDigitScale: 0.72,
+    centerOffset: 0.52,
+    fontFamily: 'Galmuri11Bold',
+    shadowColor: 'rgba(15,22,50,0.45)',
+    shadowDy: 1.2,
+    shadowRadius: 0.9,
+    widths: { compact: 64, hero: 128, detail: 156, preview: 168 },
+  },
 };
 
 export function getImageFrameConfig(assetKey: string): ImageFrameConfig | undefined {

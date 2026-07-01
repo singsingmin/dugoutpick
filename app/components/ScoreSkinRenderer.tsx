@@ -1,5 +1,5 @@
 import { useScoreSkin } from '../context/ScoreSkin';
-import { getScoreSkinById, resolveJerseyColor, resolveJerseyNumberMode } from '../utils/scoreSkinConfig';
+import { getScoreSkinById, resolveJerseyColor, resolveJerseyNumberMode, resolveUniformOverride } from '../utils/scoreSkinConfig';
 import JerseyScoreBadge from './JerseyScoreBadge';
 import ScoreboardScoreBadge from './ScoreboardScoreBadge';
 import ImageFrameScoreBadge from './ImageFrameScoreBadge';
@@ -33,6 +33,7 @@ export default function ScoreSkinRenderer({ score, variant = 'hero', teamColor, 
       uniformPreset={skin.styleId}
       showLabel={showLabel}
       numberMode={resolveJerseyNumberMode(skin)}
+      colorOverride={resolveUniformOverride(skin)}
     />
   );
 }
