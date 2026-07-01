@@ -19,10 +19,16 @@ import { border, colors, spacing } from '../theme';
 
 const PREVIEW_SCORE = 75;
 
-// 3열 그리드 셀 폭(화면폭 - 좌우패딩 - 셀 간격 2개) / 3.
+// 갤러리 그리드 — 기본 3열, 넓은 화면(태블릿)은 4열. 100개+ 스킨 확장 전제.
 const SCREEN_W = Dimensions.get('window').width;
 const GRID_GAP = spacing.sm;
-const CELL_W = Math.floor((SCREEN_W - spacing.md * 2 - GRID_GAP * 2) / 3);
+const COLS = SCREEN_W >= 600 ? 4 : 3;
+const CELL_W = Math.floor((SCREEN_W - spacing.md * 2 - GRID_GAP * (COLS - 1)) / COLS);
+
+// 따뜻한 크림/아이보리 토큰(순백 금지 — 야구장 배경과 자연스럽게).
+const CREAM = 'rgba(250,245,235,0.92)';
+const CREAM_SELECTED = 'rgba(255,252,244,0.97)';
+const CREAM_BORDER = 'rgba(150,120,80,0.32)';
 
 type TabKey = 'all' | ScoreSkinCategory;
 const TABS: { key: TabKey; label: string }[] = [
@@ -124,10 +130,13 @@ export default function SkinSelect() {
                       styles.cell,
                       { width: CELL_W },
                       selected
-                        ? { borderColor: accent, borderWidth: 2 }
-                        : { borderColor: 'rgba(45,36,20,0.16)', borderWidth: 1 },
+                        ? { borderColor: accent, borderWidth: 2, backgroundColor: CREAM_SELECTED }
+                        : { borderColor: CREAM_BORDER, borderWidth: 1 },
                     ]}
                   >
+                    {selected && (
+                      <View style={[styles.selectedTint, { backgroundColor: accent }]} pointerEvents="none" />
+                    )}
                     <View style={styles.thumbBox}>
                       <SkinThumb config={s} teamColor={accent} />
                     </View>
@@ -169,36 +178,39 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: spacing.md,
-    height: 92,
+    height: 88,
+    marginTop: spacing.md,       // 헤더에 너무 붙지 않게 상단 여백
     marginHorizontal: spacing.md,
     paddingHorizontal: spacing.md,
-    backgroundColor: 'rgba(255,252,245,0.92)',
+    backgroundColor: CREAM,
     borderRadius: border.radius,
     borderWidth: 1,
-    borderColor: 'rgba(45,36,20,0.12)',
+    borderColor: CREAM_BORDER,
   },
   currentThumb: { width: 72, alignItems: 'center', justifyContent: 'center' },
   currentText: { gap: 2 },
 
-  tabs: { flexDirection: 'row', gap: spacing.xs, paddingHorizontal: spacing.md, marginTop: spacing.md },
+  tabs: { flexDirection: 'row', gap: spacing.xs, paddingHorizontal: spacing.md, marginTop: spacing.sm },
   tab: {
-    paddingHorizontal: spacing.md,
-    paddingVertical: 5,
+    paddingHorizontal: spacing.sm,
+    paddingVertical: 4,
     borderRadius: 999,
     borderWidth: 1,
-    borderColor: 'rgba(45,36,20,0.18)',
-    backgroundColor: 'rgba(255,252,245,0.85)',
+    borderColor: CREAM_BORDER,
+    backgroundColor: CREAM,
   },
 
-  content: { padding: spacing.md },
+  content: { paddingHorizontal: spacing.md, paddingTop: spacing.sm, paddingBottom: spacing.md },
   grid: { flexDirection: 'row', flexWrap: 'wrap', gap: GRID_GAP },
   cell: {
     aspectRatio: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'rgba(255,252,245,0.92)',
+    backgroundColor: CREAM,
     borderRadius: border.radius,
+    overflow: 'hidden',
   },
+  selectedTint: { ...StyleSheet.absoluteFillObject, opacity: 0.08 },
   thumbBox: { alignItems: 'center', justifyContent: 'center' },
   check: {
     position: 'absolute',
