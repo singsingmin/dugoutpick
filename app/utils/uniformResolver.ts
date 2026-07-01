@@ -3,7 +3,7 @@ const CREAM_PIPING = '#FFF0CC'; // 크림 파이핑/숫자
 const CREAM_NUMBER = '#FFF3D6'; // classic/pinstripe 숫자
 const WARM_WHITE = '#FFF4DC';   // white 스타일 몸판 (순백 회피 — 밝은 배경 분리)
 
-export type UniformPresetId = 'classic' | 'pinstripe' | 'cream' | 'classicSplit' | 'creamSplit' | 'white';
+export type UniformPresetId = 'classic' | 'pinstripe' | 'cream' | 'classicSplit' | 'creamSplit' | 'white' | 'stripe';
 
 // V6.5: 소매 배색 모드. useSleeveSplit=true일 때만 적용(false면 소매=몸통).
 export type SleeveMode = 'sameAsBody' | 'team' | 'cream' | 'tintedTeam';
@@ -15,7 +15,7 @@ export interface UniformPresetConfig {
   badgeLabel: string;
   bodyMode: 'team' | 'cream' | 'white';
   pipingStyle: 'cream' | 'team';
-  stripeStyle: 'none' | 'strong';
+  stripeStyle: 'none' | 'strong' | 'colored';   // colored=흰 바디 위 팔레트색 세로 줄무늬(stripe)
   numberStyle: 'classic' | 'team';
   outlineStyle: 'soft';
   useSleeveSplit?: boolean;   // false/미지정 = 기존 V6 (소매=몸통, 렌더 동일)
@@ -138,10 +138,23 @@ export const UNIFORM_PRESETS: Record<UniformPresetId, UniformPresetConfig> = {
     useSleeveSplit: true,
     sleeveMode: 'team',         // 소매를 팀색으로
   },
+  // 줄무늬 컬렉션 — 흰/아이보리 바디 + 팔레트색 세로 줄무늬 + 팔레트색 숫자/목/소매.
+  // pinstripe(팀색 바디+크림 줄무늬)와 별개. bodyMode white가 숫자/외곽/트림 보정을 담당.
+  stripe: {
+    id: 'stripe',
+    label: '줄무늬',
+    description: '흰 바탕 + 컬러 줄무늬',
+    badgeLabel: '신규',
+    bodyMode: 'white',
+    pipingStyle: 'team',        // 파이핑/트림 = 팔레트 포인트색
+    stripeStyle: 'colored',     // 팔레트색 세로 줄무늬(아래 colored 분기)
+    numberStyle: 'team',        // white 분기가 최종 숫자 stroke 보정
+    outlineStyle: 'soft',
+  },
 };
 
 // 유효하지 않은 저장값(default/vintage 등) → classic 정규화
-const VALID_PRESET_IDS = new Set<string>(['classic', 'pinstripe', 'cream', 'classicSplit', 'creamSplit', 'white']);
+const VALID_PRESET_IDS = new Set<string>(['classic', 'pinstripe', 'cream', 'classicSplit', 'creamSplit', 'white', 'stripe']);
 export function normalizePresetId(v: string | null | undefined): UniformPresetId {
   if (v && VALID_PRESET_IDS.has(v)) return v as UniformPresetId;
   return 'classic';
@@ -204,6 +217,17 @@ export function resolveUniformPreset(
       stripeOpacity = 0.21; stripeWidth = 1.0; stripeGap = 7;
     } else {
       stripeOpacity = 0.25; stripeWidth = 1.2; stripeGap = 8;
+    }
+  } else if (config.stripeStyle === 'colored') {
+    // 흰 바디 위 팔레트색 세로 줄무늬 — pinstripe보다 또렷하되 숫자와 싸우지 않는 선.
+    // 작은 썸네일에서도 "줄무늬 있음"이 읽히도록 opacity를 유지(0.5~0.6).
+    stripeColor = pipingColor;   // 팔레트 포인트색(pipingStyle=team)
+    if (variant === 'compact') {
+      stripeOpacity = 0.55; stripeWidth = 1.0; stripeGap = 6;  // 작은 크기 가시성 위해 +0.05
+    } else if (variant === 'hero') {
+      stripeOpacity = 0.55; stripeWidth = 1.2; stripeGap = 7;
+    } else {
+      stripeOpacity = 0.6;  stripeWidth = 1.3; stripeGap = 7;
     }
   }
 

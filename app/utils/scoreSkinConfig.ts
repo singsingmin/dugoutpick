@@ -112,7 +112,7 @@ export const SCORE_SKINS: ScoreSkin[] = [
     id: 'scoreboard.vintage', kind: 'asset', category: 'stadium',
     label: '전광판', description: '야구장 레트로 점수판',
     assetKey: 'scoreboardVintage', renderType: 'scoreboard',
-    unlockType: 'free', sortOrder: 300,
+    unlockType: 'free', sortOrder: 500,   // 유니폼 섹션(줄무늬 310~380) 뒤로. 야구장 탭에선 단독 첫번째.
   },
   // ── 고정색 컬러 유니폼(컬러팩) — classic × 고정 팔레트. 응원팀 무관 동일색. ──
   ...( ['red', 'pink', 'orange', 'yellow', 'green', 'sky', 'blue', 'black'] as JerseyPaletteId[]
@@ -144,6 +144,21 @@ export const SCORE_SKINS: ScoreSkin[] = [
     unlockGroup: 'white_uniform_pack',
     sortOrder: 210 + i * 10,
   })),
+  // ── 줄무늬 유니폼(줄무늬팩) — stripe 스타일 × 포인트 컬러. 흰 바탕 + 컬러 세로 줄무늬. ──
+  ...( ['red', 'pink', 'orange', 'yellow', 'green', 'sky', 'blue', 'black'] as JerseyPaletteId[]
+  ).map((p, i): JerseySkin => ({
+    id: `jersey.stripe.${p}`,
+    kind: 'jersey',
+    category: 'uniform',
+    label: `줄무늬 ${JERSEY_PALETTES[p].label}`,
+    description: `흰색 바탕 + ${JERSEY_PALETTES[p].label} 줄무늬`,
+    styleId: 'stripe',
+    paletteId: p,
+    colorMode: 'fixed',
+    unlockType: 'free',
+    unlockGroup: 'stripe_uniform_pack',
+    sortOrder: 310 + i * 10,
+  })),
 ];
 
 // ── 섹션 그룹 (스킨샵 정리용) ──────────────────────────────────────────────
@@ -155,6 +170,7 @@ export const SKIN_SECTION_TITLES: Record<string, string> = {
   'uniform:__basic': '기본 유니폼',
   'uniform:color_uniform_pack': '컬러 유니폼',
   'uniform:white_uniform_pack': '화이트 유니폼',
+  'uniform:stripe_uniform_pack': '줄무늬 유니폼',
   stadium: '야구장 스킨',
   special: '스페셜 스킨',
 };
@@ -182,10 +198,11 @@ export function getScoreSkinById(id: string | null | undefined): ScoreSkin {
   return (id && BY_ID.get(id)) || BY_ID.get(DEFAULT_ID)!;
 }
 
-// 유니폼 스킨의 실효 색상 — team이면 teamColor, fixed면 팔레트색(white 스타일은 포인트색).
+// 유니폼 스킨의 실효 색상 — team이면 teamColor, fixed면 팔레트색.
+// white/stripe 스타일은 흰 바디 위 가독성 위해 보정된 포인트색(WHITE_POINT_COLORS) 사용.
 export function resolveJerseyColor(skin: JerseySkin, teamColor: string | undefined): string | undefined {
   if (skin.colorMode === 'fixed') {
-    if (skin.styleId === 'white') {
+    if (skin.styleId === 'white' || skin.styleId === 'stripe') {
       return WHITE_POINT_COLORS[skin.paletteId] ?? JERSEY_PALETTES[skin.paletteId]?.baseColor ?? teamColor;
     }
     return JERSEY_PALETTES[skin.paletteId]?.baseColor ?? teamColor;
@@ -193,9 +210,9 @@ export function resolveJerseyColor(skin: JerseySkin, teamColor: string | undefin
   return teamColor;
 }
 
-// 밝은 바탕 고정색 유니폼은 숫자를 어둡게(가독성). white 스타일은 포인트색 숫자라 미적용.
+// 밝은 바탕 고정색 유니폼은 숫자를 어둡게(가독성). white/stripe 스타일은 포인트색 숫자라 미적용.
 export function resolveJerseyNumberMode(skin: JerseySkin): 'dark' | undefined {
-  if (skin.styleId === 'white') return undefined;
+  if (skin.styleId === 'white' || skin.styleId === 'stripe') return undefined;
   return JERSEY_PALETTES[skin.paletteId]?.darkNumber ? 'dark' : undefined;
 }
 
