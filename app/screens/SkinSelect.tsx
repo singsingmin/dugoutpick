@@ -18,6 +18,8 @@ import {
 } from '../utils/scoreSkinConfig';
 import JerseyScoreBadge from '../components/JerseyScoreBadge';
 import ScoreboardScoreBadge, { type ScoreboardVariant } from '../components/ScoreboardScoreBadge';
+import ImageFrameScoreBadge from '../components/ImageFrameScoreBadge';
+import { getImageFrameConfig } from '../utils/assetFrameConfig';
 import PixelText from '../components/PixelText';
 import ScreenHeader from '../components/ScreenHeader';
 import { border, colors, spacing } from '../theme';
@@ -70,13 +72,18 @@ function buildSections(tab: TabKey): Section[] {
 // kind별 자연 크기가 달라도 targetW 폭으로 통일 → 그리드에서 footprint 일치.
 function SkinThumb({ skin, teamColor, targetW }: { skin: ScoreSkin; teamColor: string; targetW: number }) {
   const isAsset = skin.kind === 'asset';
-  const nW = isAsset ? 128 : 88;   // hero 자연 폭
-  const nH = isAsset ? 96 : 85;    // hero 자연 높이
+  const assetKey = skin.kind === 'asset' ? skin.assetKey : '';
+  const frameCfg = skin.kind === 'asset' && skin.renderType === 'imageFrame' ? getImageFrameConfig(skin.assetKey) : undefined;
+  // hero 자연 크기 — imageFrame은 에셋별 실측 비율, 그 외 asset(전광판)=128×96, 유니폼=88×85.
+  const nW = frameCfg ? frameCfg.widths.hero : isAsset ? 128 : 88;
+  const nH = frameCfg ? Math.round(frameCfg.widths.hero / frameCfg.aspect) : isAsset ? 96 : 85;
   const scale = targetW / nW;
   return (
     <View style={{ width: targetW, height: Math.round(nH * scale), alignItems: 'center', justifyContent: 'center' }}>
       <View style={{ transform: [{ scale }] }}>
-        {isAsset ? (
+        {frameCfg ? (
+          <ImageFrameScoreBadge score={PREVIEW_SCORE} variant="hero" assetKey={assetKey} />
+        ) : isAsset ? (
           <ScoreboardScoreBadge score={PREVIEW_SCORE} variant={'hero' as ScoreboardVariant} teamColor={teamColor} />
         ) : (
           <JerseyScoreBadge

@@ -114,6 +114,12 @@ export const SCORE_SKINS: ScoreSkin[] = [
     assetKey: 'scoreboardVintage', renderType: 'scoreboard',
     unlockType: 'free', sortOrder: 500,   // 유니폼 섹션(줄무늬 310~380) 뒤로. 야구장 탭에선 단독 첫번째.
   },
+  {
+    id: 'ticket.retro', kind: 'asset', category: 'stadium',
+    label: '레트로 티켓', description: '야구장 입장권 스타일',
+    assetKey: 'ticketRetro', renderType: 'imageFrame',
+    unlockType: 'free', sortOrder: 510,   // 전광판 다음(야구장 섹션).
+  },
   // ── 고정색 컬러 유니폼(컬러팩) — classic × 고정 팔레트. 응원팀 무관 동일색. ──
   ...( ['red', 'pink', 'orange', 'yellow', 'green', 'sky', 'blue', 'black'] as JerseyPaletteId[]
   ).map((p, i): JerseySkin => ({

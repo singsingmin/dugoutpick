@@ -2,6 +2,7 @@ import { useScoreSkin } from '../context/ScoreSkin';
 import { getScoreSkinById, resolveJerseyColor, resolveJerseyNumberMode } from '../utils/scoreSkinConfig';
 import JerseyScoreBadge from './JerseyScoreBadge';
 import ScoreboardScoreBadge from './ScoreboardScoreBadge';
+import ImageFrameScoreBadge from './ImageFrameScoreBadge';
 
 interface Props {
   score: number;
@@ -17,7 +18,10 @@ export default function ScoreSkinRenderer({ score, variant = 'hero', teamColor, 
   const skin = getScoreSkinById(skinId);
 
   if (skin.kind === 'asset') {
-    // 현재 renderType은 scoreboard만. 라벨은 에셋 내부 포함 — 외부 showLabel 무관.
+    // 라벨은 에셋 내부에 포함 — 외부 showLabel 무관. renderType별 렌더러 분기.
+    if (skin.renderType === 'imageFrame') {
+      return <ImageFrameScoreBadge score={score} variant={variant} assetKey={skin.assetKey} />;
+    }
     return <ScoreboardScoreBadge score={score} variant={variant} teamColor={teamColor} />;
   }
 
