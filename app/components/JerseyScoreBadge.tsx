@@ -171,16 +171,16 @@ function LargeJersey({ score, cid, w, h, variant, resolved }: {
         stroke={resolved.outerStrokeColor} strokeWidth={resolved.outerStrokeWidth}
         strokeLinejoin="round" />
 
-      {/* V6.6 목라인 collar trim — 뒷목 U라인 따라 대비색 포인트 */}
-      <Path d="M 37,7 Q 50,15 63,7" fill="none"
+      {/* V6.6 목라인 collar trim — 목 파임 안쪽으로 inset(외곽선과 분리된 내부 밴드) */}
+      <Path d="M 36,10 Q 50,19 64,10" fill="none"
         stroke={resolved.trimColor} strokeWidth={resolved.collarWidth}
         strokeLinecap="round" opacity={resolved.cuffOpacity} />
 
-      {/* 소매 커프 실밥 라인 (트림색) */}
-      <Path d="M 11,29 L 22,39" fill="none"
+      {/* 소매끝 밴드 (트림색) — 소매 안쪽으로 inset, 외곽선과 평행 */}
+      <Path d="M 13,28 L 22,36" fill="none"
         stroke={resolved.cuffColor} strokeWidth={resolved.cuffWidth}
         strokeLinecap="round" opacity={resolved.cuffOpacity} />
-      <Path d="M 78,39 L 89,29" fill="none"
+      <Path d="M 87,28 L 78,36" fill="none"
         stroke={resolved.cuffColor} strokeWidth={resolved.cuffWidth}
         strokeLinecap="round" opacity={resolved.cuffOpacity} />
 
@@ -253,16 +253,16 @@ function CompactJersey({ score, cid, resolved }: {
         stroke={resolved.outerStrokeColor} strokeWidth={resolved.outerStrokeWidth}
         strokeLinejoin="round" />
 
-      {/* V6.6 목라인 collar trim */}
-      <Path d="M 19,4 Q 25,8 32,4" fill="none"
+      {/* V6.6 목라인 collar trim — 안쪽 inset */}
+      <Path d="M 19,6 Q 25,11 31,6" fill="none"
         stroke={resolved.trimColor} strokeWidth={resolved.collarWidth}
         strokeLinecap="round" opacity={resolved.cuffOpacity} />
 
-      {/* 소매 커프 실밥 라인 (트림색) */}
-      <Path d="M 6,15 L 11,20" fill="none"
+      {/* 소매끝 밴드 (트림색) — 안쪽 inset */}
+      <Path d="M 7.5,14 L 11,18" fill="none"
         stroke={resolved.cuffColor} strokeWidth={resolved.cuffWidth}
         strokeLinecap="round" opacity={resolved.cuffOpacity} />
-      <Path d="M 39,20 L 44,15" fill="none"
+      <Path d="M 42.5,14 L 39,18" fill="none"
         stroke={resolved.cuffColor} strokeWidth={resolved.cuffWidth}
         strokeLinecap="round" opacity={resolved.cuffOpacity} />
 

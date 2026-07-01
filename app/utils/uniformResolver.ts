@@ -164,7 +164,7 @@ export function resolveUniformPreset(
     : variant === 'compact' ? 0 : variant === 'hero' ? 0.45 : 0.55; // 선보다 면 분할 우선
 
   // V6.6 트림(목라인/소매끝) 대비색 — 어두운 바디→크림 / 밝은 바디→같은 색조 딥톤 / 크림 바디→팀·팔레트색.
-  const CREAM_TRIM = '#F7EFD8';
+  const CREAM_TRIM = '#F3E7C7';  // 웜 화이트(순백 대비 밝은 배경서도 톤 유지)
   const trimColor = config.bodyMode === 'cream'
     ? pipingColor                       // 크림 바디 → 팀/팔레트 색 포인트
     : numberMode === 'dark'
