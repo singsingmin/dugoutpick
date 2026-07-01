@@ -135,18 +135,19 @@ function LargeJersey({ score, cid, w, h, variant, resolved }: {
       {/* 클립 내부 레이어 */}
       <G clipPath={`url(#${cid})`}>
         <Path d={JERSEY} fill={resolved.bodyColor} />
-        {/* V6.5 소매 배색 — 라글란형 반소매(목→어깨→소매끝→겨드랑이 y=48).
-            clip으로 실루엣 보존, 몸통 위로 올라와도 무방. 숫자 영역(x40~60) 침범 안 함. */}
+        {/* V6.5 라글란 소매 — 칼라(37/63,8)에서 어깨·팔 전체를 덮고 겨드랑이(22/78,47)로 이어짐.
+            seam은 목→겨드랑이 라글란 대각 곡선. 몸통 중앙은 body색 유지, 숫자(x40~60) 미침범.
+            clip으로 V6 실루엣 100% 보존. */}
         {resolved.sleeveSplit && (
           <>
-            <Path d="M 34,14 L 16,15 L 10,28 L 22,49 Q 28,32 34,14 Z" fill={resolved.leftSleeveColor} />
-            <Path d="M 66,14 L 84,15 L 90,28 L 78,49 Q 72,32 66,14 Z" fill={resolved.rightSleeveColor} />
+            <Path d="M 37,8 L 16,15 L 10,28 L 22,47 Q 27,26 37,8 Z" fill={resolved.leftSleeveColor} />
+            <Path d="M 63,8 L 84,15 L 90,28 L 78,47 Q 73,26 63,8 Z" fill={resolved.rightSleeveColor} />
             {resolved.sleeveSeamOpacity > 0 && (
               <>
-                <Path d="M 22,49 Q 28,32 34,14" fill="none"
+                <Path d="M 22,47 Q 27,26 37,8" fill="none"
                   stroke={resolved.sleeveSeamColor} strokeWidth={0.8}
                   opacity={resolved.sleeveSeamOpacity} strokeLinecap="round" />
-                <Path d="M 78,49 Q 72,32 66,14" fill="none"
+                <Path d="M 78,47 Q 73,26 63,8" fill="none"
                   stroke={resolved.sleeveSeamColor} strokeWidth={0.8}
                   opacity={resolved.sleeveSeamOpacity} strokeLinecap="round" />
               </>
@@ -227,11 +228,11 @@ function CompactJersey({ score, cid, resolved }: {
         translateX={resolved.shadowOffsetY * 0.8} translateY={resolved.shadowOffsetY} />
       <G clipPath={`url(#${cid})`}>
         <Path d={JERSEY_SM} fill={resolved.bodyColor} />
-        {/* V6.5 소매 배색 (compact: 라글란형, seam 생략, 색상만) */}
+        {/* V6.5 라글란 소매 (compact: seam 생략, 색상만) */}
         {resolved.sleeveSplit && (
           <>
-            <Path d="M 17,7 L 8,7 L 5,14 L 11,25 Q 14,16 17,7 Z" fill={resolved.leftSleeveColor} />
-            <Path d="M 33,7 L 42,7 L 45,14 L 39,25 Q 36,16 33,7 Z" fill={resolved.rightSleeveColor} />
+            <Path d="M 19,4 L 8,7 L 5,14 L 11,24 Q 13,13 19,4 Z" fill={resolved.leftSleeveColor} />
+            <Path d="M 31,4 L 42,7 L 45,14 L 39,24 Q 37,13 31,4 Z" fill={resolved.rightSleeveColor} />
           </>
         )}
         <Path d={JERSEY_SM} fill="none"
