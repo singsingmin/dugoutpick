@@ -36,7 +36,8 @@ export const IMAGE_FRAME_ASSETS: Record<string, ImageFrameConfig> = {
     shadowColor: 'rgba(90,25,18,0.5)',  // 다크레드 아래 그림자 → 두께감 + 약한 눌림
     shadowDy: 1.2,
     shadowRadius: 0.8,
-    widths: { compact: 84, hero: 150, detail: 176, preview: 190 },
+    // 히어로 카드 팀명 잘림 방지 위해 전광판(128) footprint에 맞춤(넓은 티켓이라 같은 폭이면 128×73).
+    widths: { compact: 64, hero: 128, detail: 156, preview: 168 },
   },
 };
 
