@@ -51,21 +51,22 @@ export interface JerseyPalette {
   colorMode: JerseyColorMode;
   baseColor?: string;          // fixed일 때 사용
   resolveFromTeamColor?: boolean;
+  darkNumber?: boolean;        // 밝은 바탕 → 숫자를 어두운 색으로(가독성)
 }
 
 export const JERSEY_PALETTES: Record<JerseyPaletteId, JerseyPalette> = {
   team:   { id: 'team',   label: '내 팀 컬러', colorMode: 'team', resolveFromTeamColor: true },
   red:    { id: 'red',    label: '레드',   colorMode: 'fixed', baseColor: '#C91F37' },
   orange: { id: 'orange', label: '오렌지', colorMode: 'fixed', baseColor: '#F15A24' },
-  yellow: { id: 'yellow', label: '옐로우', colorMode: 'fixed', baseColor: '#F2C230' },
+  yellow: { id: 'yellow', label: '옐로우', colorMode: 'fixed', baseColor: '#F2C230', darkNumber: true },
   green:  { id: 'green',  label: '그린',   colorMode: 'fixed', baseColor: '#2E8B57' },
-  sky:    { id: 'sky',    label: '스카이', colorMode: 'fixed', baseColor: '#4FB0E5' },
+  sky:    { id: 'sky',    label: '스카이', colorMode: 'fixed', baseColor: '#4FB0E5', darkNumber: true },
   blue:   { id: 'blue',   label: '블루',   colorMode: 'fixed', baseColor: '#1E6BB8' },
   navy:   { id: 'navy',   label: '네이비', colorMode: 'fixed', baseColor: '#1B3A6B' },
   purple: { id: 'purple', label: '퍼플',   colorMode: 'fixed', baseColor: '#7A4FA3' },
-  pink:   { id: 'pink',   label: '핑크',   colorMode: 'fixed', baseColor: '#E86AA6' },
+  pink:   { id: 'pink',   label: '핑크',   colorMode: 'fixed', baseColor: '#E86AA6', darkNumber: true },
   black:  { id: 'black',  label: '블랙',   colorMode: 'fixed', baseColor: '#1F1F1F' },
-  cream:  { id: 'cream',  label: '크림',   colorMode: 'fixed', baseColor: '#F2ECD9' },
+  cream:  { id: 'cream',  label: '크림',   colorMode: 'fixed', baseColor: '#F2ECD9', darkNumber: true },
   gray:   { id: 'gray',   label: '그레이', colorMode: 'fixed', baseColor: '#8A8A8A' },
 };
 
@@ -107,6 +108,21 @@ export const SCORE_SKINS: ScoreSkin[] = [
     assetKey: 'scoreboardVintage', renderType: 'scoreboard',
     unlockType: 'free', sortOrder: 100,
   },
+  // ── 고정색 유니폼(컬러팩) — classic 스타일 × 고정 팔레트. 응원팀 무관 동일색. ──
+  ...( ['red', 'pink', 'orange', 'yellow', 'green', 'sky', 'blue', 'black'] as JerseyPaletteId[]
+  ).map((p, i): JerseySkin => ({
+    id: `jersey.classic.${p}`,
+    kind: 'jersey',
+    category: 'uniform',
+    label: `${JERSEY_PALETTES[p].label} 유니폼`,
+    description: '고정 컬러 유니폼',
+    styleId: 'classic',
+    paletteId: p,
+    colorMode: 'fixed',
+    unlockType: 'free',
+    unlockGroup: 'color_uniform_pack',
+    sortOrder: 110 + i * 10,
+  })),
 ];
 
 const DEFAULT_ID = 'jersey.classic.team';
@@ -127,6 +143,11 @@ export function resolveJerseyColor(skin: JerseySkin, teamColor: string | undefin
     return JERSEY_PALETTES[skin.paletteId]?.baseColor ?? teamColor;
   }
   return teamColor;
+}
+
+// 밝은 바탕 고정색 유니폼은 숫자를 어둡게(가독성). 팀스킨/어두운 고정색은 기본(크림).
+export function resolveJerseyNumberMode(skin: JerseySkin): 'dark' | undefined {
+  return JERSEY_PALETTES[skin.paletteId]?.darkNumber ? 'dark' : undefined;
 }
 
 // ── 저장값 마이그레이션 (구 id/프리셋 → 새 id) ────────────────────────────────

@@ -136,6 +136,7 @@ export function resolveUniformPreset(
   config: UniformPresetConfig,
   teamColor: string,
   variant: BadgeVariant,
+  numberMode?: 'dark',   // 밝은 바탕 고정색 유니폼: 숫자를 어둡게(가독성)
 ): ResolvedUniformStyle {
   const bodyColor = config.bodyMode === 'cream' ? CREAM_BODY : teamColor;
   const pipingColor = config.pipingStyle === 'team' ? teamColor : CREAM_PIPING;
@@ -208,6 +209,15 @@ export function resolveUniformPreset(
     numberStrokeWidth   = variant === 'compact' ? 0.9 : variant === 'hero' ? 1.2 : 1.5;
     numberShadowColor   = '#000000';
     numberShadowOpacity = 0.10;
+  }
+
+  // 밝은 바탕(yellow/pink/sky/cream 등) 고정색 유니폼: 숫자를 어둡게 + 크림 얇은 외곽선.
+  if (numberMode === 'dark') {
+    numberFill          = '#241E17';
+    numberStroke        = 'rgba(255,246,222,0.6)';
+    numberStrokeWidth   = variant === 'compact' ? 0.9 : variant === 'hero' ? 1.2 : 1.5;
+    numberShadowColor   = '#000000';
+    numberShadowOpacity = 0;
   }
 
   // 외곽선 & 드롭쉐도우

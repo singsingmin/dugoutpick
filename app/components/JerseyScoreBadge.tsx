@@ -22,6 +22,7 @@ interface Props {
   teamColor?: string;       // 하위 호환
   uniformPreset?: UniformPreset;
   showLabel?: boolean;
+  numberMode?: 'dark';      // 밝은 바탕 고정색 유니폼 숫자 가독성 보정
 }
 
 // 팀 컬러 배지 보정: 밝은 색 어둡게, 어두운 색 유지
@@ -287,13 +288,13 @@ function CompactJersey({ score, cid, resolved }: {
 
 // ── 공개 컴포넌트 ─────────────────────────────────────────────────────────────
 export default function JerseyScoreBadge({
-  score, variant = 'hero', homeTeamColor, teamColor, uniformPreset, showLabel = true,
+  score, variant = 'hero', homeTeamColor, teamColor, uniformPreset, showLabel = true, numberMode,
 }: Props) {
   const [cid] = useState<string>(() => `jsb_${++_seq}`);
   const { preset: contextPreset } = useUniformPreset();
   const tc = badgeColor(homeTeamColor ?? teamColor ?? colors.accent);
   const config = UNIFORM_PRESETS[uniformPreset ?? contextPreset];
-  const resolved = resolveUniformPreset(config, tc, variant);
+  const resolved = resolveUniformPreset(config, tc, variant, numberMode);
 
   if (variant === 'compact') {
     return <CompactJersey score={score} cid={cid} resolved={resolved} />;
