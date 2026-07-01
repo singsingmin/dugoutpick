@@ -71,7 +71,7 @@ export default function GameDetail({ route, navigation }: Props) {
 
   return (
     <View style={styles.root}>
-      <Image source={require('../assets/stadium-bg.png')} style={styles.bgImage} resizeMode="cover" />
+      <Image source={require('../assets/stadium-bg.webp')} style={styles.bgImage} resizeMode="cover" />
       <View style={styles.bgOverlay} />
       <SafeAreaView style={styles.container} edges={['top']}>
       <ScreenHeader

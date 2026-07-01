@@ -122,7 +122,7 @@ export default function SkinSelect() {
 
   return (
     <View style={styles.root}>
-      <Image source={require('../assets/stadium-bg.png')} style={styles.bgImage} resizeMode="cover" />
+      <Image source={require('../assets/stadium-bg.webp')} style={styles.bgImage} resizeMode="cover" />
       <View style={styles.bgOverlay} />
       <SafeAreaView style={styles.safe} edges={['top']}>
         <ScreenHeader title="꿀잼지수 스킨" leftIcon="back" onLeftPress={() => navigation.goBack()} />

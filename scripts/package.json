@@ -1,0 +1,9 @@
+{
+  "name": "dugoutpick-scripts",
+  "private": true,
+  "type": "module",
+  "description": "로컬 개발용 스크립트(에셋 변환 등). CI 파이프라인과 분리.",
+  "devDependencies": {
+    "sharp": "^0.33.5"
+  }
+}

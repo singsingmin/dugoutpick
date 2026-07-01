@@ -24,7 +24,7 @@ export interface ImageFrameConfig {
 
 export const IMAGE_FRAME_ASSETS: Record<string, ImageFrameConfig> = {
   ticketRetro: {
-    source: require('../assets/ticket-frame.png'),
+    source: require('../assets/ticket-frame.webp'),
     aspect: 1166 / 664,        // ≈1.756 (크롭 후 실측)
     numberCenterX: 0.41,       // 좌측 메인 패널 중심(우측 스텁 제외)
     numberCenterY: 0.47,       // 상단 리본 아래 ~ 하단 엠블럼 위 빈칸

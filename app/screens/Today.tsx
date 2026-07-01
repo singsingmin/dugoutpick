@@ -69,7 +69,7 @@ export default function Today() {
   if (isKstMonday()) {
     return (
       <View style={styles.root}>
-        <Image source={require('../assets/stadium-bg.png')} style={styles.bgImage} resizeMode="cover" />
+        <Image source={require('../assets/stadium-bg.webp')} style={styles.bgImage} resizeMode="cover" />
         <View style={styles.bgOverlay} />
         <SafeAreaView style={styles.safe} edges={['top']}>
           <ScreenHeader title="월요 리포트" leftIcon="clipboard" />
@@ -82,7 +82,7 @@ export default function Today() {
   return (
     <View style={styles.root}>
       {/* 고정 배경 — SafeAreaView/ScrollView 바깥에 있어 스크롤에 영향받지 않음 */}
-      <Image source={require('../assets/stadium-bg.png')} style={styles.bgImage} resizeMode="cover" />
+      <Image source={require('../assets/stadium-bg.webp')} style={styles.bgImage} resizeMode="cover" />
       {/* 흰색 오버레이 — 채도 낮춰 눈 부담 감소 */}
       <View style={styles.bgOverlay} />
       <SafeAreaView style={styles.safe} edges={['top']}>

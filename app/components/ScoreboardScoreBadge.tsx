@@ -1,10 +1,10 @@
 // 야구장 레트로 전광판 스킨 V7 — 고정 프레임 PNG 에셋 + 숫자만 동적 오버레이.
-// 프레임/헤더캡/B/S/O 바(3/2/2 부분점등)/도트매트릭스는 에셋(scoreboard-frame.png, 1448x1086, 4:3)에 구워짐.
+// 프레임/헤더캡/B/S/O 바(3/2/2 부분점등)/도트매트릭스는 에셋(scoreboard-frame.webp, 1448x1086, 4:3)에 구워짐.
 // 앱은 디스플레이 창 중심에 score 숫자만 올린다. 유니폼 SVG는 무관(별도 kind).
 import { View, Image, StyleSheet } from 'react-native';
 import PixelText from './PixelText';
 
-const FRAME = require('../assets/scoreboard-frame.png');
+const FRAME = require('../assets/scoreboard-frame.webp');
 const ASPECT = 1448 / 1086; // ≈1.333 (4:3)
 
 // 디스플레이 창(헤더캡 아래 ~ B/S/O 바 위)의 세로 중심 — 이미지 대비 비율.

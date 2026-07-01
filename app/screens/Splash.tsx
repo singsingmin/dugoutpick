@@ -39,7 +39,7 @@ export default function Splash({ navigation }: Props) {
     >
       <StatusBar hidden />
       <ImageBackground
-        source={require('../assets/splash-intro.png')}
+        source={require('../assets/splash-intro.webp')}
         style={styles.image}
         resizeMode="cover"
       />

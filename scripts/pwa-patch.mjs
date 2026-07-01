@@ -15,8 +15,8 @@ const assetsDir = join(appDir, 'assets');
 // ── 1. Copy PWA icons + splash image ──────────────────────────────
 copyFileSync(join(assetsDir, 'icon.png'), join(distDir, 'icon.png'));
 copyFileSync(join(assetsDir, 'favicon.png'), join(distDir, 'favicon.png'));
-// splash-intro.png을 dist 루트에 직접 복사 → 정적 HTML 스플래시가 /dugoutpick/splash-intro.png 로 직접 참조
-copyFileSync(join(assetsDir, 'splash-intro.png'), join(distDir, 'splash-intro.png'));
+// splash-intro.webp를 dist 루트에 직접 복사 → 정적 HTML 스플래시가 /dugoutpick/splash-intro.webp 로 직접 참조
+copyFileSync(join(assetsDir, 'splash-intro.webp'), join(distDir, 'splash-intro.webp'));
 
 // ── 2. manifest.json ───────────────────────────────────────────────
 const manifest = {
@@ -150,11 +150,11 @@ if (!html.includes('apple-mobile-web-app-capable')) {
 
   // ── 정적 HTML 스플래시 ────────────────────────────────────────────
   // React 계층(NavigationContainer, native-stack 등) 을 완전히 우회.
-  // splash-intro.png를 dist 루트에 직접 복사했으므로 /dugoutpick/splash-intro.png 로 참조.
+  // splash-intro.webp를 dist 루트에 직접 복사했으므로 /dugoutpick/splash-intro.webp 로 참조.
   // pointer-events:none → 탭이 아래 React Pressable(#splash-container)까지 투과.
   // body click listener → React 탭 이벤트가 body로 버블링될 때 스플래시 제거.
   const staticSplash = `
-<div id="__ss" style="position:fixed;top:0;left:0;right:0;bottom:0;z-index:99999;background:url('/dugoutpick/splash-intro.png')top center/cover no-repeat;pointer-events:none;"></div>
+<div id="__ss" style="position:fixed;top:0;left:0;right:0;bottom:0;z-index:99999;background:url('/dugoutpick/splash-intro.webp')top center/cover no-repeat;pointer-events:none;"></div>
 <script>(function(){var s=document.getElementById('__ss');if(!s)return;function rm(){if(!s.parentNode)return;s.style.cssText+=';transition:opacity 0.25s;opacity:0';setTimeout(function(){if(s.parentNode)s.remove();},300);}document.body.addEventListener('click',rm,{once:true,capture:true});setTimeout(rm,25000);})();</script>`;
   html = html.replace('</body>', staticSplash + '\n</body>');
 
@@ -180,7 +180,7 @@ for (const bundleFile of jsBundles) {
 }
 
 console.log('✓ PWA patch done');
-console.log('  icon.png, favicon.png, splash-intro.png copied');
+console.log('  icon.png, favicon.png, splash-intro.webp copied');
 console.log('  manifest.json created');
 console.log('  sw.js created');
 console.log('  index.html patched (viewport, favicon, Apple meta, manifest link, SW, static splash)');
