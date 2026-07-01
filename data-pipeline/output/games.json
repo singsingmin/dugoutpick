@@ -1,7 +1,7 @@
 {
   "date": "20260701",
   "dateText": "2026년 7월 1일",
-  "updatedAt": "2026-07-01T13:40:27.469Z",
+  "updatedAt": "2026-07-01T13:50:23.985Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 28,
@@ -99,7 +99,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 4,
+        "score": 6,
         "starter": {
           "name": "양현종",
           "era": 4.21,
@@ -132,14 +132,14 @@
       "live": {
         "inning": 11,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 1,
+        "b1": true,
         "b2": true,
-        "b3": false,
+        "b3": true,
         "pitcher": "김민",
-        "batter": "변우혁",
-        "heat": 74,
-        "label": "연장 혈투 진행 중"
+        "batter": "박정우",
+        "heat": 100,
+        "label": "끝내기 한 방 찬스"
       },
       "recap": null,
       "decision": null,
