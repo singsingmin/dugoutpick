@@ -140,14 +140,14 @@ function LargeJersey({ score, cid, w, h, variant, resolved }: {
             clip으로 V6 실루엣 100% 보존. */}
         {resolved.sleeveSplit && (
           <>
-            <Path d="M 37,8 L 16,15 L 10,28 L 22,47 Q 27,26 37,8 Z" fill={resolved.leftSleeveColor} />
-            <Path d="M 63,8 L 84,15 L 90,28 L 78,47 Q 73,26 63,8 Z" fill={resolved.rightSleeveColor} />
+            <Path d="M 37,8 L 16,15 L 10,28 L 22,46 C 24,34 29,16 37,8 Z" fill={resolved.leftSleeveColor} />
+            <Path d="M 63,8 L 84,15 L 90,28 L 78,46 C 76,34 71,16 63,8 Z" fill={resolved.rightSleeveColor} />
             {resolved.sleeveSeamOpacity > 0 && (
               <>
-                <Path d="M 22,47 Q 27,26 37,8" fill="none"
+                <Path d="M 22,46 C 24,34 29,16 37,8" fill="none"
                   stroke={resolved.sleeveSeamColor} strokeWidth={0.8}
                   opacity={resolved.sleeveSeamOpacity} strokeLinecap="round" />
-                <Path d="M 78,47 Q 73,26 63,8" fill="none"
+                <Path d="M 78,46 C 76,34 71,16 63,8" fill="none"
                   stroke={resolved.sleeveSeamColor} strokeWidth={0.8}
                   opacity={resolved.sleeveSeamOpacity} strokeLinecap="round" />
               </>
@@ -231,8 +231,8 @@ function CompactJersey({ score, cid, resolved }: {
         {/* V6.5 라글란 소매 (compact: seam 생략, 색상만) */}
         {resolved.sleeveSplit && (
           <>
-            <Path d="M 19,4 L 8,7 L 5,14 L 11,24 Q 13,13 19,4 Z" fill={resolved.leftSleeveColor} />
-            <Path d="M 31,4 L 42,7 L 45,14 L 39,24 Q 37,13 31,4 Z" fill={resolved.rightSleeveColor} />
+            <Path d="M 19,4 L 8,7 L 5,14 L 11,24 C 12,17 15,9 19,4 Z" fill={resolved.leftSleeveColor} />
+            <Path d="M 31,4 L 42,7 L 45,14 L 39,24 C 38,17 35,9 31,4 Z" fill={resolved.rightSleeveColor} />
           </>
         )}
         <Path d={JERSEY_SM} fill="none"

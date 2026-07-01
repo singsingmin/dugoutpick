@@ -157,7 +157,7 @@ export function resolveUniformPreset(
     : 'rgba(255,240,204,0.18)';  // 팀컬러 바디 → 밝은 seam
   const sleeveSeamOpacity = !sleeveSplit
     ? 0
-    : variant === 'compact' ? 0 : variant === 'hero' ? 0.6 : 0.75; // 딱딱함 완화
+    : variant === 'compact' ? 0 : variant === 'hero' ? 0.45 : 0.55; // 선보다 면 분할 우선
 
   // 파이핑/커프: variant별 두께
   const pipingWidth = variant === 'compact' ? 1.0 : variant === 'hero' ? 1.5 : 1.8;
