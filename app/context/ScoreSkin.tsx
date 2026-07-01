@@ -29,6 +29,8 @@ export function useUniformPreset() {
       classic: 'jersey.classic',
       pinstripe: 'jersey.pinstripe',
       cream: 'jersey.cream',
+      classicSplit: 'jersey.classicSplit',
+      creamSplit: 'jersey.creamSplit',
     };
     await setSkin(mapped[id] ?? 'jersey.classic');
   }, [setSkin]);

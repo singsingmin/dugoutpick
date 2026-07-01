@@ -9,6 +9,8 @@ export type ScoreSkinId =
   | 'jersey.classic'
   | 'jersey.pinstripe'
   | 'jersey.cream'
+  | 'jersey.classicSplit'
+  | 'jersey.creamSplit'
   | 'scoreboard.vintage';
 
 export interface ScoreSkinConfig {
@@ -36,6 +38,16 @@ export const SCORE_SKINS: Record<ScoreSkinId, ScoreSkinConfig> = {
     id: 'jersey.cream', kind: 'jersey', category: 'uniform',
     label: '크림', description: '부드럽고 고급스러운 느낌', badgeLabel: '프리미엄',
     uniformPreset: 'cream',
+  },
+  'jersey.classicSplit': {
+    id: 'jersey.classicSplit', kind: 'jersey', category: 'uniform',
+    label: '클래식 스플릿', description: '몸통·소매 톤 분리', badgeLabel: '신규',
+    uniformPreset: 'classicSplit',
+  },
+  'jersey.creamSplit': {
+    id: 'jersey.creamSplit', kind: 'jersey', category: 'uniform',
+    label: '크림 스플릿', description: '크림 몸통·팀색 소매', badgeLabel: '신규',
+    uniformPreset: 'creamSplit',
   },
   'scoreboard.vintage': {
     id: 'scoreboard.vintage', kind: 'scoreboard', category: 'stadium',

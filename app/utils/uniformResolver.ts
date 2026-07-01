@@ -2,7 +2,10 @@ const CREAM_BODY = '#F7E8C8';    // cream 몸판 (따뜻한 아이보리)
 const CREAM_PIPING = '#FFF0CC'; // 크림 파이핑/숫자
 const CREAM_NUMBER = '#FFF3D6'; // classic/pinstripe 숫자
 
-export type UniformPresetId = 'classic' | 'pinstripe' | 'cream';
+export type UniformPresetId = 'classic' | 'pinstripe' | 'cream' | 'classicSplit' | 'creamSplit';
+
+// V6.5: 소매 배색 모드. useSleeveSplit=true일 때만 적용(false면 소매=몸통).
+export type SleeveMode = 'sameAsBody' | 'team' | 'cream' | 'tintedTeam';
 
 export interface UniformPresetConfig {
   id: UniformPresetId;
@@ -14,12 +17,31 @@ export interface UniformPresetConfig {
   stripeStyle: 'none' | 'strong';
   numberStyle: 'classic' | 'team';
   outlineStyle: 'soft';
+  useSleeveSplit?: boolean;   // false/미지정 = 기존 V6 (소매=몸통, 렌더 동일)
+  sleeveMode?: SleeveMode;
+}
+
+// 색 밝기 조정: amount<0 어둡게, >0 밝게 ([-1,1]).
+function adjustColor(hex: string, amount: number): string {
+  if (!hex || !hex.startsWith('#') || hex.length !== 7) return hex;
+  const ch = (i: number) => parseInt(hex.slice(i, i + 2), 16);
+  const adj = (c: number) => amount < 0
+    ? Math.round(c * (1 + amount))
+    : Math.round(c + (255 - c) * amount);
+  const h2 = (c: number) => Math.max(0, Math.min(255, c)).toString(16).padStart(2, '0');
+  return `#${h2(adj(ch(1)))}${h2(adj(ch(3)))}${h2(adj(ch(5)))}`;
 }
 
 export type BadgeVariant = 'hero' | 'compact' | 'detail';
 
 export interface ResolvedUniformStyle {
   bodyColor: string;
+  // V6.5 소매 분리
+  sleeveSplit: boolean;
+  leftSleeveColor: string;
+  rightSleeveColor: string;
+  sleeveSeamColor: string;
+  sleeveSeamOpacity: number;
   pipingColor: string;
   pipingWidth: number;
   cuffColor: string;
@@ -74,10 +96,37 @@ export const UNIFORM_PRESETS: Record<UniformPresetId, UniformPresetConfig> = {
     numberStyle: 'team',
     outlineStyle: 'soft',
   },
+  // V6.5 테스트 프리셋 — 소매/몸통 배색 분리
+  classicSplit: {
+    id: 'classicSplit',
+    label: '클래식 스플릿',
+    description: '몸통·소매 톤 분리',
+    badgeLabel: '신규',
+    bodyMode: 'team',
+    pipingStyle: 'cream',
+    stripeStyle: 'none',
+    numberStyle: 'classic',
+    outlineStyle: 'soft',
+    useSleeveSplit: true,
+    sleeveMode: 'tintedTeam',   // 소매를 팀색보다 살짝 어둡게
+  },
+  creamSplit: {
+    id: 'creamSplit',
+    label: '크림 스플릿',
+    description: '크림 몸통 · 팀색 소매',
+    badgeLabel: '신규',
+    bodyMode: 'cream',
+    pipingStyle: 'team',
+    stripeStyle: 'none',
+    numberStyle: 'team',
+    outlineStyle: 'soft',
+    useSleeveSplit: true,
+    sleeveMode: 'team',         // 소매를 팀색으로
+  },
 };
 
 // 유효하지 않은 저장값(default/vintage 등) → classic 정규화
-const VALID_PRESET_IDS = new Set<string>(['classic', 'pinstripe', 'cream']);
+const VALID_PRESET_IDS = new Set<string>(['classic', 'pinstripe', 'cream', 'classicSplit', 'creamSplit']);
 export function normalizePresetId(v: string | null | undefined): UniformPresetId {
   if (v && VALID_PRESET_IDS.has(v)) return v as UniformPresetId;
   return 'classic';
@@ -90,6 +139,23 @@ export function resolveUniformPreset(
 ): ResolvedUniformStyle {
   const bodyColor = config.bodyMode === 'cream' ? CREAM_BODY : teamColor;
   const pipingColor = config.pipingStyle === 'team' ? teamColor : CREAM_PIPING;
+
+  // V6.5 소매 색상 — useSleeveSplit=false면 소매=몸통(기존 V6와 동일 렌더).
+  const sleeveSplit = !!config.useSleeveSplit;
+  let sleeveColor = bodyColor;
+  if (sleeveSplit) {
+    switch (config.sleeveMode) {
+      case 'team':       sleeveColor = teamColor; break;
+      case 'cream':      sleeveColor = CREAM_BODY; break;
+      case 'tintedTeam': sleeveColor = adjustColor(teamColor, -0.08); break;
+      default:           sleeveColor = bodyColor; break; // sameAsBody
+    }
+  }
+  // 소매 seam: 아주 약하게(색차 위주). compact는 생략(0).
+  const sleeveSeamColor = 'rgba(60,45,30,0.16)';
+  const sleeveSeamOpacity = !sleeveSplit
+    ? 0
+    : variant === 'compact' ? 0 : variant === 'hero' ? 0.7 : 1.0;
 
   // 파이핑/커프: variant별 두께
   const pipingWidth = variant === 'compact' ? 1.0 : variant === 'hero' ? 1.5 : 1.8;
@@ -151,7 +217,10 @@ export function resolveUniformPreset(
   const shadowOffsetY    = variant === 'compact' ? 1 : 2;
 
   return {
-    bodyColor, pipingColor, pipingWidth,
+    bodyColor,
+    sleeveSplit, leftSleeveColor: sleeveColor, rightSleeveColor: sleeveColor,
+    sleeveSeamColor, sleeveSeamOpacity,
+    pipingColor, pipingWidth,
     cuffColor: pipingColor, cuffOpacity, cuffWidth,
     stripeColor, stripeOpacity, stripeWidth, stripeGap,
     numberFill, numberStroke, numberStrokeWidth,

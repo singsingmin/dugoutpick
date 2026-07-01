@@ -135,6 +135,23 @@ function LargeJersey({ score, cid, w, h, variant, resolved }: {
       {/* 클립 내부 레이어 */}
       <G clipPath={`url(#${cid})`}>
         <Path d={JERSEY} fill={resolved.bodyColor} />
+        {/* V6.5 소매 배색 — 어깨→커프 대각 삼각형(외곽 좌표와 동일, clip으로 실루엣 보존) */}
+        {resolved.sleeveSplit && (
+          <>
+            <Path d="M 16,15 L 10,28 L 22,38 Z" fill={resolved.leftSleeveColor} />
+            <Path d="M 84,15 L 90,28 L 78,38 Z" fill={resolved.rightSleeveColor} />
+            {resolved.sleeveSeamOpacity > 0 && (
+              <>
+                <Line x1={16} y1={15} x2={22} y2={38}
+                  stroke={resolved.sleeveSeamColor} strokeWidth={0.8}
+                  opacity={resolved.sleeveSeamOpacity} strokeLinecap="round" />
+                <Line x1={84} y1={15} x2={78} y2={38}
+                  stroke={resolved.sleeveSeamColor} strokeWidth={0.8}
+                  opacity={resolved.sleeveSeamOpacity} strokeLinecap="round" />
+              </>
+            )}
+          </>
+        )}
         {/* 파이핑 */}
         <Path d={JERSEY} fill="none"
           stroke={resolved.pipingColor} strokeWidth={resolved.pipingWidth} strokeLinejoin="round" />
@@ -209,6 +226,13 @@ function CompactJersey({ score, cid, resolved }: {
         translateX={resolved.shadowOffsetY * 0.8} translateY={resolved.shadowOffsetY} />
       <G clipPath={`url(#${cid})`}>
         <Path d={JERSEY_SM} fill={resolved.bodyColor} />
+        {/* V6.5 소매 배색 (compact: seam 생략, 색상만) */}
+        {resolved.sleeveSplit && (
+          <>
+            <Path d="M 8,7 L 5,14 L 11,19 Z" fill={resolved.leftSleeveColor} />
+            <Path d="M 42,7 L 45,14 L 39,19 Z" fill={resolved.rightSleeveColor} />
+          </>
+        )}
         <Path d={JERSEY_SM} fill="none"
           stroke={resolved.pipingColor} strokeWidth={resolved.pipingWidth} strokeLinejoin="round" />
         {resolved.stripeOpacity > 0 && stripeXs.map((x) => (
