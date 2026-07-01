@@ -1,7 +1,7 @@
 {
   "date": "20260701",
   "dateText": "2026년 7월 1일",
-  "updatedAt": "2026-07-01T13:00:40.161Z",
+  "updatedAt": "2026-07-01T13:10:25.158Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 28,
@@ -134,10 +134,10 @@
         "half": "B",
         "out": 0,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "조병현",
-        "batter": "김호령",
+        "pitcher": "문승원",
+        "batter": "박재현",
         "heat": 91,
         "label": "끝내기 한 방 찬스"
       },
