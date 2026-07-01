@@ -25,7 +25,7 @@ const SCREEN_W = Dimensions.get('window').width;
 const GRID_GAP = spacing.xs;
 const COLS = SCREEN_W >= 600 ? 6 : SCREEN_W >= 430 ? 5 : 4;
 const CELL_W = Math.floor((SCREEN_W - spacing.md * 2 - GRID_GAP * (COLS - 1)) / COLS);
-const THUMB_W = Math.round(CELL_W * 0.8); // 썸네일 = 카드 폭 80%
+const THUMB_W = Math.round(CELL_W * 0.86); // 썸네일 = 카드 폭 86%(빈 공간 축소)
 
 // 따뜻한 크림/아이보리 토큰(순백 금지 — 야구장 배경과 자연스럽게).
 const CREAM = 'rgba(250,245,235,0.92)';
@@ -191,7 +191,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: spacing.md,
     height: 68,                  // 더 압축
-    marginTop: spacing.md,       // 헤더에 너무 붙지 않게 상단 여백
+    marginTop: spacing.md + 8,   // 헤더~바 여백 확대(+8)
     marginHorizontal: spacing.md,
     paddingHorizontal: spacing.md,
     backgroundColor: CREAM,
@@ -215,7 +215,7 @@ const styles = StyleSheet.create({
   content: { paddingHorizontal: spacing.md, paddingTop: spacing.sm, paddingBottom: spacing.md },
   grid: { flexDirection: 'row', flexWrap: 'wrap', gap: GRID_GAP },
   cell: {
-    aspectRatio: 1.15,  // width:height ≈ 1:0.87 (정사각보다 살짝 낮게)
+    aspectRatio: 1.23,  // width:height ≈ 1:0.81 (슬롯형, 카드 높이 ~7%↓)
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: CREAM,
@@ -228,13 +228,13 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 4,
     right: 4,
-    width: 18,
-    height: 18,
-    borderRadius: 9,
+    width: 15,
+    height: 15,
+    borderRadius: 7.5,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  checkMark: { fontSize: 11, lineHeight: 13 },
+  checkMark: { fontSize: 9, lineHeight: 11 },
 
   empty: { alignItems: 'center', paddingVertical: spacing.xl },
 
