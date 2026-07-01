@@ -1,7 +1,7 @@
 {
   "date": "20260701",
   "dateText": "2026년 7월 1일",
-  "updatedAt": "2026-07-01T14:00:39.081Z",
+  "updatedAt": "2026-07-01T14:09:02.441Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 29,
@@ -25,7 +25,7 @@
         "score": 5,
         "starter": {
           "name": "로드리게스",
-          "era": 4.82,
+          "era": 4.52,
           "w": 4,
           "l": 5
         }
@@ -37,7 +37,7 @@
         "score": 2,
         "starter": {
           "name": "벤자민",
-          "era": 2.9,
+          "era": 2.66,
           "w": 4,
           "l": 6
         }
@@ -70,8 +70,8 @@
         "verdict": "기대 이상"
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "이이무라",
+        "lose": "이영하",
         "save": null
       },
       "lineup": null
@@ -90,7 +90,7 @@
         "score": 6,
         "starter": {
           "name": "김민준",
-          "era": 5.54,
+          "era": 5.6,
           "w": 1,
           "l": 1
         }
@@ -102,7 +102,7 @@
         "score": 6,
         "starter": {
           "name": "양현종",
-          "era": 4.21,
+          "era": 4.05,
           "w": 5,
           "l": 5
         }
@@ -155,7 +155,7 @@
         "score": 5,
         "starter": {
           "name": "후라도",
-          "era": 2.95,
+          "era": 3.12,
           "w": 4,
           "l": 1
         }
@@ -167,7 +167,7 @@
         "score": 10,
         "starter": {
           "name": "토다",
-          "era": 4.52,
+          "era": 4.74,
           "w": 4,
           "l": 5
         }
@@ -200,8 +200,8 @@
         "verdict": "기대 이상"
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "손주환",
+        "lose": "백정현",
         "save": null
       },
       "lineup": null
@@ -220,7 +220,7 @@
         "score": 7,
         "starter": {
           "name": "소형준",
-          "era": 3.94,
+          "era": 3.67,
           "w": 3,
           "l": 0
         }
@@ -232,7 +232,7 @@
         "score": 4,
         "starter": {
           "name": "박준영",
-          "era": 4.22,
+          "era": 4.42,
           "w": 2,
           "l": 3
         }
@@ -265,8 +265,8 @@
         "verdict": "기대 이상"
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "박영현",
+        "lose": "이민우",
         "save": null
       },
       "lineup": null
@@ -285,7 +285,7 @@
         "score": 10,
         "starter": {
           "name": "함덕주",
-          "era": 5.19,
+          "era": 4.82,
           "w": 2,
           "l": 1
         }
@@ -297,7 +297,7 @@
         "score": 4,
         "starter": {
           "name": "알칸타라",
-          "era": 3.12,
+          "era": 3.32,
           "w": 7,
           "l": 6
         }
@@ -330,9 +330,9 @@
         "verdict": "기대 이상"
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "김진성",
+        "lose": "원종현",
+        "save": "손주영"
       },
       "lineup": null
     }

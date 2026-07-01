@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-01T14:00:39.081Z",
+  "updatedAt": "2026-07-01T14:09:02.441Z",
   "lastWeek": {
     "range": [
       "20260622",
@@ -95,7 +95,7 @@
       {
         "away": "NC",
         "home": "HT",
-        "pred": 64,
+        "pred": 62,
         "reason": "게임차 6의 순위 다툼",
         "dateStart": "20260703",
         "dateEnd": "20260705"
