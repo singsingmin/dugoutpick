@@ -1,7 +1,7 @@
 {
   "date": "20260701",
   "dateText": "2026년 7월 1일",
-  "updatedAt": "2026-07-01T12:50:24.570Z",
+  "updatedAt": "2026-07-01T13:00:40.161Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 28,
@@ -87,7 +87,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "김민준",
           "era": 5.54,
@@ -131,15 +131,15 @@
       },
       "live": {
         "inning": 10,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "한재승",
-        "batter": "고명준",
-        "heat": 89,
-        "label": "연장 혈투 진행 중"
+        "pitcher": "조병현",
+        "batter": "김호령",
+        "heat": 91,
+        "label": "끝내기 한 방 찬스"
       },
       "recap": null,
       "decision": null,
