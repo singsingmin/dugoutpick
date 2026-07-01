@@ -100,7 +100,7 @@ export const SCORE_SKINS: ScoreSkin[] = [
     id: 'jersey.classicSplit.team', kind: 'jersey', category: 'uniform',
     label: '클래식 소매', description: '내 팀 컬러 + 소매 배색',
     styleId: 'classicSplit', paletteId: 'team', colorMode: 'team',
-    unlockType: 'free', sortOrder: 40,
+    unlockType: 'free', sortOrder: 40, isHidden: true,   // 일단 숨김(목록 비노출)
   },
   {
     id: 'jersey.creamSplit.team', kind: 'jersey', category: 'uniform',
