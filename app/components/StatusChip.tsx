@@ -2,13 +2,17 @@
 import { View, StyleSheet } from 'react-native';
 import PixelText from './PixelText';
 import type { Game } from '../types';
+import { formatInning } from '../utils/inning';
 import { border, colors } from '../theme';
 
 const LIVE_RED = '#E03131';
 
 function info(game: Game): { label: string; color: string } {
   switch (game.status) {
-    case 'LIVE': return { label: '경기중', color: LIVE_RED };
+    case 'LIVE': {
+      const inning = formatInning(game.live?.inning, game.live?.half);
+      return { label: inning ? `경기중 ${inning}` : '경기중', color: LIVE_RED };
+    }
     case 'FINAL': return { label: '종료', color: colors.textDim };
     case 'CANCELED': return { label: game.cancelReason || '취소', color: colors.bad };
     default: return { label: '경기전', color: colors.accent };

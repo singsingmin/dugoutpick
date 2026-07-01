@@ -5,6 +5,7 @@ import PixelText from './PixelText';
 import Panel from './Panel';
 import TeamName from './TeamName';
 import { useLiveHeatDisplay } from '../utils/liveHeat';
+import { formatInning } from '../utils/inning';
 import { colors, spacing } from '../theme';
 
 const LIVE_RED = '#E03131';
@@ -31,8 +32,10 @@ function OutDot({ filled }: { filled: boolean }) {
 
 function DiamondAndOuts({ lv }: { lv: LiveState }) {
   const outs = lv.out ?? 0;
+  const inning = formatInning(lv.inning, lv.half);
   return (
     <View style={s.diamondWrap}>
+      {inning && <PixelText variant="caption" color={colors.text} style={s.inning}>{inning}</PixelText>}
       <BaseDiamond lv={lv} />
       <View style={s.outs}>
         <OutDot filled={outs >= 1} />
@@ -94,6 +97,7 @@ const s = StyleSheet.create({
   main: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around' },
   teamCol: { flex: 1, alignItems: 'center', gap: 2 },
   diamondWrap: { alignItems: 'center', gap: 6 },
+  inning: { fontWeight: '700' },
   diamondContainer: { width: 42, height: 30 },
   base: { width: BASE_SIZE, height: BASE_SIZE, backgroundColor: BASE_OFF, borderRadius: 3, transform: [{ rotate: '45deg' }], position: 'absolute' },
   baseOn: { backgroundColor: BASE_ON },
