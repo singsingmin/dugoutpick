@@ -1,7 +1,7 @@
 {
   "date": "20260701",
   "dateText": "2026년 7월 1일",
-  "updatedAt": "2026-07-01T12:00:39.301Z",
+  "updatedAt": "2026-07-01T12:10:25.262Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 24,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 9,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "최준용",
-        "batter": "양의지",
+        "batter": "안재석",
         "heat": 85,
         "label": "끝내기 한 방 찬스"
       },
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "정해영",
-        "batter": "에레디아",
-        "heat": 53,
+        "pitcher": "이건욱",
+        "batter": "박재현",
+        "heat": 56,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -364,7 +364,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 6,
+        "score": 10,
         "starter": {
           "name": "토다",
           "era": 4.52,
@@ -395,16 +395,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
+        "inning": 8,
+        "half": "T",
         "out": 1,
-        "b1": true,
-        "b2": true,
-        "b3": true,
-        "pitcher": "이재희",
-        "batter": "천재환",
-        "heat": 68,
-        "label": "후반 박빙 승부"
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "전사민",
+        "batter": "디아즈",
+        "heat": 14,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -529,7 +529,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 1,
+        "score": 3,
         "starter": {
           "name": "박준영",
           "era": 4.22,
@@ -560,16 +560,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
+        "inning": 9,
+        "half": "T",
         "out": 0,
-        "b1": true,
-        "b2": true,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "전용주",
-        "batter": "페라자",
-        "heat": 56,
-        "label": "후반 박빙 승부"
+        "pitcher": "이민우",
+        "batter": "허경민",
+        "heat": 80,
+        "label": "9회 1점 승부"
       },
       "recap": null,
       "decision": null,
@@ -682,7 +682,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": 4,
+        "score": 8,
         "starter": {
           "name": "함덕주",
           "era": 5.19,
@@ -727,14 +727,14 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "b1": true,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "원종현",
-        "batter": "천성호",
-        "heat": 70,
-        "label": "후반 박빙 승부"
+        "pitcher": "이준우",
+        "batter": "신민재",
+        "heat": 26,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
