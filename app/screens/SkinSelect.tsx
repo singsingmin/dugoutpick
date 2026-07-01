@@ -7,8 +7,10 @@ import { useTeamTheme } from '../context/TeamTheme';
 import { useScoreSkin } from '../context/ScoreSkin';
 import {
   SCORE_SKIN_LIST,
+  getScoreSkinById,
+  resolveJerseyColor,
   type ScoreSkinId,
-  type ScoreSkinConfig,
+  type ScoreSkin,
   type ScoreSkinCategory,
 } from '../utils/scoreSkinConfig';
 import JerseyScoreBadge from '../components/JerseyScoreBadge';
@@ -42,22 +44,22 @@ const TABS: { key: TabKey; label: string }[] = [
 
 // 그리드/바 공용 썸네일 — hero variant를 목표 폭(targetW)으로 스케일(다운스케일=선명).
 // kind별 자연 크기가 달라도 targetW 폭으로 통일 → 그리드에서 footprint 일치.
-function SkinThumb({ config, teamColor, targetW }: { config: ScoreSkinConfig; teamColor: string; targetW: number }) {
-  const isSb = config.kind === 'scoreboard';
-  const nW = isSb ? 128 : 88;   // hero 자연 폭
-  const nH = isSb ? 96 : 85;    // hero 자연 높이
+function SkinThumb({ skin, teamColor, targetW }: { skin: ScoreSkin; teamColor: string; targetW: number }) {
+  const isAsset = skin.kind === 'asset';
+  const nW = isAsset ? 128 : 88;   // hero 자연 폭
+  const nH = isAsset ? 96 : 85;    // hero 자연 높이
   const scale = targetW / nW;
   return (
     <View style={{ width: targetW, height: Math.round(nH * scale), alignItems: 'center', justifyContent: 'center' }}>
       <View style={{ transform: [{ scale }] }}>
-        {isSb ? (
+        {isAsset ? (
           <ScoreboardScoreBadge score={PREVIEW_SCORE} variant={'hero' as ScoreboardVariant} teamColor={teamColor} />
         ) : (
           <JerseyScoreBadge
             score={PREVIEW_SCORE}
             variant="hero"
-            teamColor={teamColor}
-            uniformPreset={config.uniformPreset}
+            teamColor={resolveJerseyColor(skin, teamColor)}
+            uniformPreset={skin.styleId}
             showLabel={false}
           />
         )}
@@ -76,10 +78,10 @@ export default function SkinSelect() {
 
   useEffect(() => () => { if (toastTimer.current) clearTimeout(toastTimer.current); }, []);
 
-  const selectedConfig = SCORE_SKIN_LIST.find((s) => s.id === skinId) ?? SCORE_SKIN_LIST[0];
+  const selectedConfig = getScoreSkinById(skinId);
   const visible = tab === 'all' ? SCORE_SKIN_LIST : SCORE_SKIN_LIST.filter((s) => s.category === tab);
 
-  const handleSelect = async (s: ScoreSkinConfig) => {
+  const handleSelect = async (s: ScoreSkin) => {
     await setSkin(s.id);
     setToast(`${s.label} 적용됨`);
     if (toastTimer.current) clearTimeout(toastTimer.current);
@@ -96,7 +98,7 @@ export default function SkinSelect() {
         {/* 현재 적용 바 (작게) */}
         <View style={styles.currentBar}>
           <View style={styles.currentThumb}>
-            <SkinThumb config={selectedConfig} teamColor={accent} targetW={52} />
+            <SkinThumb skin={selectedConfig} teamColor={accent} targetW={52} />
           </View>
           <View style={styles.currentText}>
             <PixelText variant="caption" color={colors.textDim}>현재 적용</PixelText>
@@ -150,7 +152,7 @@ export default function SkinSelect() {
                       <View style={[styles.selectedTint, { backgroundColor: accent }]} pointerEvents="none" />
                     )}
                     <View style={styles.thumbBox}>
-                      <SkinThumb config={s} teamColor={accent} targetW={THUMB_W} />
+                      <SkinThumb skin={s} teamColor={accent} targetW={THUMB_W} />
                     </View>
                     {selected && (
                       <View style={[styles.check, { backgroundColor: accent }]}>
