@@ -1,15 +1,7 @@
 {
-  "updatedAt": "2026-07-01T12:40:23.263Z",
+  "updatedAt": "2026-07-01T12:50:24.570Z",
   "recent": {
     "HH": [
-      {
-        "date": "20260618",
-        "oppCode": "NC",
-        "isHome": false,
-        "sf": 0,
-        "sa": 6,
-        "result": "L"
-      },
       {
         "date": "20260619",
         "oppCode": "SS",
@@ -81,6 +73,14 @@
         "sf": 6,
         "sa": 3,
         "result": "W"
+      },
+      {
+        "date": "20260701",
+        "oppCode": "KT",
+        "isHome": true,
+        "sf": 4,
+        "sa": 7,
+        "result": "L"
       }
     ],
     "OB": [
@@ -167,14 +167,6 @@
     ],
     "NC": [
       {
-        "date": "20260619",
-        "oppCode": "SK",
-        "isHome": true,
-        "sf": 9,
-        "sa": 3,
-        "result": "W"
-      },
-      {
         "date": "20260620",
         "oppCode": "SK",
         "isHome": true,
@@ -245,17 +237,17 @@
         "sf": 7,
         "sa": 13,
         "result": "L"
+      },
+      {
+        "date": "20260701",
+        "oppCode": "SS",
+        "isHome": true,
+        "sf": 10,
+        "sa": 5,
+        "result": "W"
       }
     ],
     "SS": [
-      {
-        "date": "20260619",
-        "oppCode": "HH",
-        "isHome": false,
-        "sf": 3,
-        "sa": 3,
-        "result": "D"
-      },
       {
         "date": "20260620",
         "oppCode": "HH",
@@ -327,17 +319,17 @@
         "sf": 13,
         "sa": 7,
         "result": "W"
+      },
+      {
+        "date": "20260701",
+        "oppCode": "NC",
+        "isHome": false,
+        "sf": 5,
+        "sa": 10,
+        "result": "L"
       }
     ],
     "WO": [
-      {
-        "date": "20260619",
-        "oppCode": "LT",
-        "isHome": true,
-        "sf": 1,
-        "sa": 2,
-        "result": "L"
-      },
       {
         "date": "20260620",
         "oppCode": "LT",
@@ -409,6 +401,14 @@
         "sf": 6,
         "sa": 0,
         "result": "W"
+      },
+      {
+        "date": "20260701",
+        "oppCode": "LG",
+        "isHome": true,
+        "sf": 4,
+        "sa": 10,
+        "result": "L"
       }
     ],
     "SK": [
@@ -659,14 +659,6 @@
     ],
     "LG": [
       {
-        "date": "20260619",
-        "oppCode": "OB",
-        "isHome": true,
-        "sf": 3,
-        "sa": 2,
-        "result": "W"
-      },
-      {
         "date": "20260620",
         "oppCode": "OB",
         "isHome": true,
@@ -737,17 +729,17 @@
         "sf": 0,
         "sa": 6,
         "result": "L"
+      },
+      {
+        "date": "20260701",
+        "oppCode": "WO",
+        "isHome": false,
+        "sf": 10,
+        "sa": 4,
+        "result": "W"
       }
     ],
     "KT": [
-      {
-        "date": "20260618",
-        "oppCode": "OB",
-        "isHome": false,
-        "sf": 1,
-        "sa": 2,
-        "result": "L"
-      },
       {
         "date": "20260619",
         "oppCode": "HT",
@@ -819,6 +811,14 @@
         "sf": 4,
         "sa": 7,
         "result": "L"
+      },
+      {
+        "date": "20260701",
+        "oppCode": "HH",
+        "isHome": false,
+        "sf": 7,
+        "sa": 4,
+        "result": "W"
       }
     ]
   }
