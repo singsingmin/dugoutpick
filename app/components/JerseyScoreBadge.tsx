@@ -85,17 +85,17 @@ function digitCount(score: number): 1 | 2 | 3 {
 // y = 숫자 세로 중심(SVG viewBox 좌표). 낮출수록 위로. 실기기 보정: 위로 ~3 올림.
 const SCORE_TEXT = {
   hero: {
-    1: { fontSize: 44, y: 54 },
+    1: { fontSize: 47, y: 54 },  // 1자리 +7%(2자리와 시각 무게 맞춤)
     2: { fontSize: 38, y: 54 },
     3: { fontSize: 30, y: 53 },
   },
   detail: {
-    1: { fontSize: 44, y: 54 },
+    1: { fontSize: 47, y: 54 },
     2: { fontSize: 38, y: 54 },
     3: { fontSize: 30, y: 53 },
   },
   compact: {
-    1: { fontSize: 20, y: 28 },
+    1: { fontSize: 21, y: 28 },
     2: { fontSize: 16, y: 28 },
     3: { fontSize: 13, y: 27 },
   },
@@ -144,10 +144,10 @@ function LargeJersey({ score, cid, w, h, variant, resolved }: {
             {resolved.sleeveSeamOpacity > 0 && (
               <>
                 <Path d="M 22,49 Q 28,32 34,14" fill="none"
-                  stroke={resolved.sleeveSeamColor} strokeWidth={1.0}
+                  stroke={resolved.sleeveSeamColor} strokeWidth={0.8}
                   opacity={resolved.sleeveSeamOpacity} strokeLinecap="round" />
                 <Path d="M 78,49 Q 72,32 66,14" fill="none"
-                  stroke={resolved.sleeveSeamColor} strokeWidth={1.0}
+                  stroke={resolved.sleeveSeamColor} strokeWidth={0.8}
                   opacity={resolved.sleeveSeamOpacity} strokeLinecap="round" />
               </>
             )}
@@ -301,7 +301,7 @@ export default function JerseyScoreBadge({
   // hero: 88×85 / detail: 110×106  (viewBox 104:100 = 1.04 비율)
   const [w, h] = variant === 'detail' ? [110, 106] : [88, 85];
   return (
-    <View style={{ alignItems: 'center', gap: 5 }}>
+    <View style={{ alignItems: 'center', gap: 5, marginTop: variant === 'hero' ? 3 : 0 }}>
       {showLabel && <GguljamScoreLabel variant={variant} />}
       <LargeJersey score={score} cid={cid} w={w} h={h} variant={variant} resolved={resolved} />
     </View>
