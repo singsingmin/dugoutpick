@@ -1,7 +1,7 @@
 {
   "date": "20260701",
   "dateText": "2026년 7월 1일",
-  "updatedAt": "2026-07-01T11:30:31.962Z",
+  "updatedAt": "2026-07-01T11:40:23.902Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 24,
@@ -22,7 +22,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "로드리게스",
           "era": 4.82,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이용찬",
-        "batter": "박건우",
-        "heat": 69,
+        "pitcher": "로드리게스",
+        "batter": "정수빈",
+        "heat": 67,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -233,11 +233,11 @@
         "inning": 7,
         "half": "T",
         "out": 1,
-        "b1": false,
-        "b2": false,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "조상우",
-        "batter": "조형우",
+        "pitcher": "곽도규",
+        "batter": "박성한",
         "heat": 49,
         "label": "후반 박빙 승부"
       },
@@ -364,7 +364,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 1,
+        "score": 3,
         "starter": {
           "name": "토다",
           "era": 4.52,
@@ -397,14 +397,14 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "후라도",
-        "batter": "천재환",
-        "heat": 25,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "백정현",
+        "batter": "오장한",
+        "heat": 53,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
+        "inning": 8,
         "half": "T",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박상원",
-        "batter": "김현수",
-        "heat": 49,
+        "pitcher": "정우주",
+        "batter": "안현민",
+        "heat": 53,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -725,16 +725,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
+        "inning": 7,
         "half": "B",
-        "out": 2,
-        "b1": false,
+        "out": 1,
+        "b1": true,
         "b2": false,
-        "b3": true,
-        "pitcher": "리오스",
-        "batter": "권혁빈",
-        "heat": 61,
-        "label": "경기 흐름 체크 중"
+        "b3": false,
+        "pitcher": "이우찬",
+        "batter": "추재현",
+        "heat": 67,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
