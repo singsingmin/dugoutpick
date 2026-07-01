@@ -19,11 +19,13 @@ import { border, colors, spacing } from '../theme';
 
 const PREVIEW_SCORE = 75;
 
-// 갤러리 그리드 — 기본 3열, 넓은 화면(태블릿)은 4열. 100개+ 스킨 확장 전제.
+// 갤러리 그리드 — 일반 폰 4열, 화면 폭 따라 5/6열 자동 확장. 100개+ 스킨 확장 전제.
+// 360~429=4열 / 430~599=5열 / >=600=6열 (그 이하도 4열 유지).
 const SCREEN_W = Dimensions.get('window').width;
-const GRID_GAP = spacing.sm;
-const COLS = SCREEN_W >= 600 ? 4 : 3;
+const GRID_GAP = spacing.xs;
+const COLS = SCREEN_W >= 600 ? 6 : SCREEN_W >= 430 ? 5 : 4;
 const CELL_W = Math.floor((SCREEN_W - spacing.md * 2 - GRID_GAP * (COLS - 1)) / COLS);
+const THUMB_W = Math.round(CELL_W * 0.8); // 썸네일 = 카드 폭 80%
 
 // 따뜻한 크림/아이보리 토큰(순백 금지 — 야구장 배경과 자연스럽게).
 const CREAM = 'rgba(250,245,235,0.92)';
@@ -38,19 +40,29 @@ const TABS: { key: TabKey; label: string }[] = [
   { key: 'special', label: '스페셜' },
 ];
 
-// 그리드/바 공용 썸네일 — kind별로 compact 렌더(전 스킨 시각 footprint 통일).
-function SkinThumb({ config, teamColor }: { config: ScoreSkinConfig; teamColor: string }) {
-  if (config.kind === 'scoreboard') {
-    return <ScoreboardScoreBadge score={PREVIEW_SCORE} variant={'compact' as ScoreboardVariant} teamColor={teamColor} />;
-  }
+// 그리드/바 공용 썸네일 — hero variant를 목표 폭(targetW)으로 스케일(다운스케일=선명).
+// kind별 자연 크기가 달라도 targetW 폭으로 통일 → 그리드에서 footprint 일치.
+function SkinThumb({ config, teamColor, targetW }: { config: ScoreSkinConfig; teamColor: string; targetW: number }) {
+  const isSb = config.kind === 'scoreboard';
+  const nW = isSb ? 128 : 88;   // hero 자연 폭
+  const nH = isSb ? 96 : 85;    // hero 자연 높이
+  const scale = targetW / nW;
   return (
-    <JerseyScoreBadge
-      score={PREVIEW_SCORE}
-      variant="compact"
-      teamColor={teamColor}
-      uniformPreset={config.uniformPreset}
-      showLabel={false}
-    />
+    <View style={{ width: targetW, height: Math.round(nH * scale), alignItems: 'center', justifyContent: 'center' }}>
+      <View style={{ transform: [{ scale }] }}>
+        {isSb ? (
+          <ScoreboardScoreBadge score={PREVIEW_SCORE} variant={'hero' as ScoreboardVariant} teamColor={teamColor} />
+        ) : (
+          <JerseyScoreBadge
+            score={PREVIEW_SCORE}
+            variant="hero"
+            teamColor={teamColor}
+            uniformPreset={config.uniformPreset}
+            showLabel={false}
+          />
+        )}
+      </View>
+    </View>
   );
 }
 
@@ -84,7 +96,7 @@ export default function SkinSelect() {
         {/* 현재 적용 바 (작게) */}
         <View style={styles.currentBar}>
           <View style={styles.currentThumb}>
-            <SkinThumb config={selectedConfig} teamColor={accent} />
+            <SkinThumb config={selectedConfig} teamColor={accent} targetW={52} />
           </View>
           <View style={styles.currentText}>
             <PixelText variant="caption" color={colors.textDim}>현재 적용</PixelText>
@@ -138,7 +150,7 @@ export default function SkinSelect() {
                       <View style={[styles.selectedTint, { backgroundColor: accent }]} pointerEvents="none" />
                     )}
                     <View style={styles.thumbBox}>
-                      <SkinThumb config={s} teamColor={accent} />
+                      <SkinThumb config={s} teamColor={accent} targetW={THUMB_W} />
                     </View>
                     {selected && (
                       <View style={[styles.check, { backgroundColor: accent }]}>
@@ -178,7 +190,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: spacing.md,
-    height: 88,
+    height: 68,                  // 더 압축
     marginTop: spacing.md,       // 헤더에 너무 붙지 않게 상단 여백
     marginHorizontal: spacing.md,
     paddingHorizontal: spacing.md,
@@ -187,7 +199,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: CREAM_BORDER,
   },
-  currentThumb: { width: 72, alignItems: 'center', justifyContent: 'center' },
+  currentThumb: { width: 54, alignItems: 'center', justifyContent: 'center' },
   currentText: { gap: 2 },
 
   tabs: { flexDirection: 'row', gap: spacing.xs, paddingHorizontal: spacing.md, marginTop: spacing.sm },
@@ -203,7 +215,7 @@ const styles = StyleSheet.create({
   content: { paddingHorizontal: spacing.md, paddingTop: spacing.sm, paddingBottom: spacing.md },
   grid: { flexDirection: 'row', flexWrap: 'wrap', gap: GRID_GAP },
   cell: {
-    aspectRatio: 1,
+    aspectRatio: 1.15,  // width:height ≈ 1:0.87 (정사각보다 살짝 낮게)
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: CREAM,
