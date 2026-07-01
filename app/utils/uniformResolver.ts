@@ -147,7 +147,7 @@ export function resolveUniformPreset(
     switch (config.sleeveMode) {
       case 'team':       sleeveColor = teamColor; break;
       case 'cream':      sleeveColor = CREAM_BODY; break;
-      case 'tintedTeam': sleeveColor = adjustColor(teamColor, -0.08); break;
+      case 'tintedTeam': sleeveColor = adjustColor(teamColor, -0.15); break; // 팀색보다 15% 어둡게
       default:           sleeveColor = bodyColor; break; // sameAsBody
     }
   }
