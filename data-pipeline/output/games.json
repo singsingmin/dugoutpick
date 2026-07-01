@@ -1,7 +1,7 @@
 {
   "date": "20260701",
   "dateText": "2026년 7월 1일",
-  "updatedAt": "2026-07-01T10:20:23.771Z",
+  "updatedAt": "2026-07-01T10:30:32.887Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 24,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "로드리게스",
-        "batter": "박준순",
+        "batter": "김인태",
         "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
+        "inning": 4,
         "half": "T",
-        "out": 1,
-        "b1": true,
-        "b2": true,
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
         "pitcher": "양현종",
-        "batter": "최정",
-        "heat": 31,
+        "batter": "김재환",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
+        "inning": 4,
+        "half": "T",
         "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "후라도",
-        "batter": "이우성",
-        "heat": 43,
+        "pitcher": "토다",
+        "batter": "디아즈",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
+        "inning": 4,
         "half": "B",
-        "out": 2,
-        "b1": true,
+        "out": 1,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "소형준",
-        "batter": "페라자",
-        "heat": 40,
+        "batter": "강백호",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -694,7 +694,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "알칸타라",
           "era": 3.12,
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 1,
-        "b1": true,
-        "b2": true,
+        "inning": 4,
+        "half": "T",
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "김진수",
-        "batter": "서건창",
-        "heat": 33,
+        "pitcher": "알칸타라",
+        "batter": "문정빈",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
