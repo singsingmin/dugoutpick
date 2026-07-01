@@ -1,8 +1,9 @@
 const CREAM_BODY = '#F7E8C8';    // cream 몸판 (따뜻한 아이보리)
 const CREAM_PIPING = '#FFF0CC'; // 크림 파이핑/숫자
 const CREAM_NUMBER = '#FFF3D6'; // classic/pinstripe 숫자
+const WARM_WHITE = '#FFF4DC';   // white 스타일 몸판 (순백 회피 — 밝은 배경 분리)
 
-export type UniformPresetId = 'classic' | 'pinstripe' | 'cream' | 'classicSplit' | 'creamSplit';
+export type UniformPresetId = 'classic' | 'pinstripe' | 'cream' | 'classicSplit' | 'creamSplit' | 'white';
 
 // V6.5: 소매 배색 모드. useSleeveSplit=true일 때만 적용(false면 소매=몸통).
 export type SleeveMode = 'sameAsBody' | 'team' | 'cream' | 'tintedTeam';
@@ -12,7 +13,7 @@ export interface UniformPresetConfig {
   label: string;
   description: string;
   badgeLabel: string;
-  bodyMode: 'team' | 'cream';
+  bodyMode: 'team' | 'cream' | 'white';
   pipingStyle: 'cream' | 'team';
   stripeStyle: 'none' | 'strong';
   numberStyle: 'classic' | 'team';
@@ -113,6 +114,17 @@ export const UNIFORM_PRESETS: Record<UniformPresetId, UniformPresetConfig> = {
     useSleeveSplit: true,
     sleeveMode: 'tintedTeam',   // 소매를 팀색보다 살짝 어둡게
   },
+  white: {
+    id: 'white',
+    label: '화이트',
+    description: '흰 바탕 + 컬러 포인트',
+    badgeLabel: '신규',
+    bodyMode: 'white',
+    pipingStyle: 'team',    // 포인트 컬러 파이핑
+    stripeStyle: 'none',
+    numberStyle: 'team',    // 포인트 컬러 숫자(white 분기가 stroke 보정)
+    outlineStyle: 'soft',
+  },
   creamSplit: {
     id: 'creamSplit',
     label: '크림 스플릿',
@@ -129,7 +141,7 @@ export const UNIFORM_PRESETS: Record<UniformPresetId, UniformPresetConfig> = {
 };
 
 // 유효하지 않은 저장값(default/vintage 등) → classic 정규화
-const VALID_PRESET_IDS = new Set<string>(['classic', 'pinstripe', 'cream', 'classicSplit', 'creamSplit']);
+const VALID_PRESET_IDS = new Set<string>(['classic', 'pinstripe', 'cream', 'classicSplit', 'creamSplit', 'white']);
 export function normalizePresetId(v: string | null | undefined): UniformPresetId {
   if (v && VALID_PRESET_IDS.has(v)) return v as UniformPresetId;
   return 'classic';
@@ -141,7 +153,9 @@ export function resolveUniformPreset(
   variant: BadgeVariant,
   numberMode?: 'dark',   // 밝은 바탕 고정색 유니폼: 숫자를 어둡게(가독성)
 ): ResolvedUniformStyle {
-  const bodyColor = config.bodyMode === 'cream' ? CREAM_BODY : teamColor;
+  const bodyColor = config.bodyMode === 'cream' ? CREAM_BODY
+    : config.bodyMode === 'white' ? WARM_WHITE
+    : teamColor;
   const pipingColor = config.pipingStyle === 'team' ? teamColor : CREAM_PIPING;
 
   // V6.5 소매 색상 — useSleeveSplit=false면 소매=몸통(기존 V6와 동일 렌더).
@@ -165,8 +179,8 @@ export function resolveUniformPreset(
 
   // V6.6 트림(목라인/소매끝) 대비색 — 어두운 바디→크림 / 밝은 바디→같은 색조 딥톤 / 크림 바디→팀·팔레트색.
   const CREAM_TRIM = '#F3E7C7';  // 웜 화이트(순백 대비 밝은 배경서도 톤 유지)
-  const trimColor = config.bodyMode === 'cream'
-    ? pipingColor                       // 크림 바디 → 팀/팔레트 색 포인트
+  const trimColor = (config.bodyMode === 'cream' || config.bodyMode === 'white')
+    ? pipingColor                       // 크림/화이트 바디 → 팀/팔레트 포인트색
     : numberMode === 'dark'
       ? adjustColor(teamColor, -0.6)    // 밝은 바디 → 같은 색조 딥톤(핑크→와인, 스카이→네이비)
       : CREAM_TRIM;                     // 어두운 바디 → 크림
@@ -232,10 +246,21 @@ export function resolveUniformPreset(
     numberShadowOpacity = 0;
   }
 
+  // white 스타일: 숫자=포인트 컬러(teamColor) + 흰 바디용 얇은 다크 외곽선.
+  if (config.bodyMode === 'white') {
+    numberFill          = teamColor;
+    numberStroke        = 'rgba(45,35,22,0.4)';
+    numberStrokeWidth   = variant === 'compact' ? 0.8 : variant === 'hero' ? 1.1 : 1.4;
+    numberShadowColor   = '#000000';
+    numberShadowOpacity = 0.08;
+  }
+
   // 외곽선 & 드롭쉐도우
-  const outerStrokeColor = config.stripeStyle === 'strong'
-    ? 'rgba(80,65,45,0.38)'
-    : 'rgba(80,65,45,0.35)';
+  const outerStrokeColor = config.bodyMode === 'white'
+    ? '#8A6A42'                          // 흰 바디: 배경과 분리되는 웜브라운 외곽
+    : config.stripeStyle === 'strong'
+      ? 'rgba(80,65,45,0.38)'
+      : 'rgba(80,65,45,0.35)';
   const outerStrokeWidth = variant === 'compact' ? 1.0 : variant === 'hero' ? 1.5 : 2.0;
   const shadowOpacity    = variant === 'compact' ? 0.08 : variant === 'hero' ? 0.15 : 0.20;
   const shadowOffsetY    = variant === 'compact' ? 1 : 2;
