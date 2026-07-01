@@ -171,7 +171,12 @@ function LargeJersey({ score, cid, w, h, variant, resolved }: {
         stroke={resolved.outerStrokeColor} strokeWidth={resolved.outerStrokeWidth}
         strokeLinejoin="round" />
 
-      {/* 소매 커프 실밥 라인 */}
+      {/* V6.6 목라인 collar trim — 뒷목 U라인 따라 대비색 포인트 */}
+      <Path d="M 37,7 Q 50,15 63,7" fill="none"
+        stroke={resolved.trimColor} strokeWidth={resolved.collarWidth}
+        strokeLinecap="round" opacity={resolved.cuffOpacity} />
+
+      {/* 소매 커프 실밥 라인 (트림색) */}
       <Path d="M 11,29 L 22,39" fill="none"
         stroke={resolved.cuffColor} strokeWidth={resolved.cuffWidth}
         strokeLinecap="round" opacity={resolved.cuffOpacity} />
@@ -248,7 +253,12 @@ function CompactJersey({ score, cid, resolved }: {
         stroke={resolved.outerStrokeColor} strokeWidth={resolved.outerStrokeWidth}
         strokeLinejoin="round" />
 
-      {/* 소매 커프 실밥 라인 */}
+      {/* V6.6 목라인 collar trim */}
+      <Path d="M 19,4 Q 25,8 32,4" fill="none"
+        stroke={resolved.trimColor} strokeWidth={resolved.collarWidth}
+        strokeLinecap="round" opacity={resolved.cuffOpacity} />
+
+      {/* 소매 커프 실밥 라인 (트림색) */}
       <Path d="M 6,15 L 11,20" fill="none"
         stroke={resolved.cuffColor} strokeWidth={resolved.cuffWidth}
         strokeLinecap="round" opacity={resolved.cuffOpacity} />

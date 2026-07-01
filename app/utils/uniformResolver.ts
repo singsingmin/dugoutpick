@@ -42,6 +42,9 @@ export interface ResolvedUniformStyle {
   rightSleeveColor: string;
   sleeveSeamColor: string;
   sleeveSeamOpacity: number;
+  // V6.6 유니폼 디테일 — 목라인/소매끝 대비 트림
+  trimColor: string;
+  collarWidth: number;
   pipingColor: string;
   pipingWidth: number;
   cuffColor: string;
@@ -160,10 +163,19 @@ export function resolveUniformPreset(
     ? 0
     : variant === 'compact' ? 0 : variant === 'hero' ? 0.45 : 0.55; // 선보다 면 분할 우선
 
-  // 파이핑/커프: variant별 두께
+  // V6.6 트림(목라인/소매끝) 대비색 — 어두운 바디→크림 / 밝은 바디→같은 색조 딥톤 / 크림 바디→팀·팔레트색.
+  const CREAM_TRIM = '#F7EFD8';
+  const trimColor = config.bodyMode === 'cream'
+    ? pipingColor                       // 크림 바디 → 팀/팔레트 색 포인트
+    : numberMode === 'dark'
+      ? adjustColor(teamColor, -0.6)    // 밝은 바디 → 같은 색조 딥톤(핑크→와인, 스카이→네이비)
+      : CREAM_TRIM;                     // 어두운 바디 → 크림
+
+  // 파이핑/커프/목라인: variant별 두께
   const pipingWidth = variant === 'compact' ? 1.0 : variant === 'hero' ? 1.5 : 1.8;
-  const cuffWidth   = variant === 'compact' ? 0.8 : 1.2;
-  const cuffOpacity = variant === 'compact' ? 0.70 : variant === 'hero' ? 0.85 : 0.90;
+  const cuffWidth   = variant === 'compact' ? 1.25 : 2.0;  // V6.6 트림 두께
+  const collarWidth = variant === 'compact' ? 1.25 : 2.0;
+  const cuffOpacity = variant === 'compact' ? 0.85 : 0.92;
 
   // 핀스트라이프 파라미터 (variant별)
   let stripeColor   = CREAM_PIPING;
@@ -232,8 +244,9 @@ export function resolveUniformPreset(
     bodyColor,
     sleeveSplit, leftSleeveColor: sleeveColor, rightSleeveColor: sleeveColor,
     sleeveSeamColor, sleeveSeamOpacity,
+    trimColor, collarWidth,
     pipingColor, pipingWidth,
-    cuffColor: pipingColor, cuffOpacity, cuffWidth,
+    cuffColor: trimColor, cuffOpacity, cuffWidth,
     stripeColor, stripeOpacity, stripeWidth, stripeGap,
     numberFill, numberStroke, numberStrokeWidth,
     numberShadowColor, numberShadowOpacity,
