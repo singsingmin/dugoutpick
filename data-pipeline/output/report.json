@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-01T13:50:23.985Z",
+  "updatedAt": "2026-07-01T14:00:39.081Z",
   "lastWeek": {
     "range": [
       "20260622",
@@ -204,7 +204,9 @@
         {
           "date": "20260702",
           "away": "SK",
-          "home": "HT"
+          "home": "HT",
+          "awayStarter": "베니지아노",
+          "homeStarter": "네일"
         },
         {
           "date": "20260703",
@@ -240,7 +242,9 @@
         {
           "date": "20260702",
           "away": "SK",
-          "home": "HT"
+          "home": "HT",
+          "awayStarter": "베니지아노",
+          "homeStarter": "네일"
         },
         {
           "date": "20260703",
