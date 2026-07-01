@@ -1,7 +1,7 @@
 {
   "date": "20260701",
   "dateText": "2026년 7월 1일",
-  "updatedAt": "2026-07-01T13:30:32.429Z",
+  "updatedAt": "2026-07-01T13:40:27.469Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 28,
@@ -131,13 +131,13 @@
       },
       "live": {
         "inning": 11,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": true,
         "b3": false,
-        "pitcher": "최지민",
-        "batter": "오태곤",
+        "pitcher": "김민",
+        "batter": "변우혁",
         "heat": 74,
         "label": "연장 혈투 진행 중"
       },
