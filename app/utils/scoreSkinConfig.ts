@@ -120,6 +120,12 @@ export const SCORE_SKINS: ScoreSkin[] = [
     assetKey: 'ticketRetro', renderType: 'imageFrame',
     unlockType: 'free', sortOrder: 510,   // 전광판 다음(야구장 섹션).
   },
+  {
+    id: 'homeplate.retro', kind: 'asset', category: 'stadium',
+    label: '홈플레이트', description: '홈플레이트 프레임 스타일',
+    assetKey: 'homePlate', renderType: 'imageFrame',
+    unlockType: 'free', sortOrder: 520,   // 티켓 다음(야구장 섹션).
+  },
   // ── 고정색 컬러 유니폼(컬러팩) — classic × 고정 팔레트. 응원팀 무관 동일색. ──
   ...( ['red', 'pink', 'orange', 'yellow', 'green', 'sky', 'blue', 'black'] as JerseyPaletteId[]
   ).map((p, i): JerseySkin => ({

@@ -39,6 +39,22 @@ export const IMAGE_FRAME_ASSETS: Record<string, ImageFrameConfig> = {
     // 히어로 카드 팀명 잘림 방지 위해 전광판(128) footprint에 맞춤(넓은 티켓이라 같은 폭이면 128×73).
     widths: { compact: 64, hero: 128, detail: 156, preview: 168 },
   },
+  homePlate: {
+    source: require('../assets/homeplate-frame.webp'),
+    aspect: 1058 / 981,        // ≈1.078 (크롭 후 실측, 거의 정사각)
+    numberCenterX: 0.5,        // 좌우 대칭 → 중앙
+    numberCenterY: 0.50,       // 상단 배너 아래 ~ 하단 야구공 위 크림 빈칸
+    numberColor: '#2C3E6B',    // 크림 바탕 + 네이비 테두리 → 네이비 스탬프
+    fontRatio: 0.34,
+    threeDigitScale: 0.72,
+    centerOffset: 0.52,
+    fontFamily: 'Galmuri11Bold',
+    shadowColor: 'rgba(20,28,55,0.45)',  // 네이비 아래 그림자 → 두께감·눌림
+    shadowDy: 1.2,
+    shadowRadius: 0.8,
+    // 폭은 전광판(128) footprint에 맞춤. 정사각이라 같은 폭이면 128×119(세로만 조금 큼).
+    widths: { compact: 64, hero: 128, detail: 156, preview: 168 },
+  },
 };
 
 export function getImageFrameConfig(assetKey: string): ImageFrameConfig | undefined {
