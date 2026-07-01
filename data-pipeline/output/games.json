@@ -1,7 +1,7 @@
 {
   "date": "20260701",
   "dateText": "2026년 7월 1일",
-  "updatedAt": "2026-07-01T11:20:23.919Z",
+  "updatedAt": "2026-07-01T11:30:31.962Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 24,
@@ -34,7 +34,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "벤자민",
           "era": 2.9,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
+        "inning": 8,
+        "half": "T",
         "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "로드리게스",
-        "batter": "김인태",
-        "heat": 62,
+        "pitcher": "이용찬",
+        "batter": "박건우",
+        "heat": 69,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 0,
+        "inning": 7,
+        "half": "T",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이로운",
-        "batter": "나성범",
-        "heat": 46,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "조상우",
+        "batter": "조형우",
+        "heat": 49,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
+        "inning": 7,
         "half": "B",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "후라도",
-        "batter": "김휘집",
-        "heat": 23,
+        "batter": "천재환",
+        "heat": 25,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -560,16 +560,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "소형준",
-        "batter": "문현빈",
-        "heat": 46,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "박상원",
+        "batter": "김현수",
+        "heat": 49,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -694,7 +694,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "알칸타라",
           "era": 3.12,
@@ -727,13 +727,13 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "리오스",
-        "batter": "히우라",
-        "heat": 56,
+        "batter": "권혁빈",
+        "heat": 61,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
