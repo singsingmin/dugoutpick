@@ -1,7 +1,7 @@
 {
   "date": "20260701",
   "dateText": "2026년 7월 1일",
-  "updatedAt": "2026-07-01T11:50:26.001Z",
+  "updatedAt": "2026-07-01T11:51:32.158Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 24,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "노경은",
-        "batter": "한준수",
+        "batter": "박상준",
         "heat": 51,
         "label": "후반 박빙 승부"
       },
@@ -561,14 +561,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 3,
+        "half": "B",
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "정우주",
-        "batter": "김상수",
-        "heat": 53,
+        "pitcher": "우규민",
+        "batter": "심우준",
+        "heat": 56,
         "label": "후반 박빙 승부"
       },
       "recap": null,
