@@ -1,7 +1,7 @@
 {
   "date": "20260701",
   "dateText": "2026년 7월 1일",
-  "updatedAt": "2026-07-01T11:00:37.186Z",
+  "updatedAt": "2026-07-01T11:10:25.624Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 24,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
+        "inning": 7,
         "half": "T",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "벤자민",
-        "batter": "한동희",
-        "heat": 53,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "박치국",
+        "batter": "윤동희",
+        "heat": 59,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -199,7 +199,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "양현종",
           "era": 4.21,
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 1,
+        "inning": 6,
+        "half": "T",
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "김민준",
-        "batter": "김호령",
-        "heat": 50,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "전상현",
+        "batter": "김재환",
+        "heat": 44,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -352,7 +352,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 3,
+        "score": 5,
         "starter": {
           "name": "후라도",
           "era": 2.95,
@@ -395,16 +395,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 1,
+        "inning": 6,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "후라도",
-        "batter": "오장한",
-        "heat": 42,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "토다",
+        "batter": "강민호",
+        "heat": 21,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -560,16 +560,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 0,
-        "b1": true,
+        "inning": 6,
+        "half": "T",
+        "out": 1,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "소형준",
-        "batter": "김태연",
-        "heat": 42,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "조동욱",
+        "batter": "허경민",
+        "heat": 44,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -694,7 +694,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "알칸타라",
           "era": 3.12,
@@ -727,13 +727,13 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
+        "out": 3,
         "b1": true,
         "b2": false,
-        "b3": true,
-        "pitcher": "김영우",
-        "batter": "서건창",
-        "heat": 42,
+        "b3": false,
+        "pitcher": "리오스",
+        "batter": "안치홍",
+        "heat": 50,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
