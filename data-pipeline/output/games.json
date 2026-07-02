@@ -1,7 +1,7 @@
 {
   "date": "20260702",
   "dateText": "2026년 7월 2일",
-  "updatedAt": "2026-07-02T12:40:26.864Z",
+  "updatedAt": "2026-07-02T12:50:28.929Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 32,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": true,
-        "b2": false,
-        "b3": false,
-        "pitcher": "나균안",
-        "batter": "류승민",
+        "b2": true,
+        "b3": true,
+        "pitcher": "현도훈",
+        "batter": "김민석",
         "heat": 23,
         "label": "경기 흐름 체크 중"
       },
@@ -199,7 +199,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 5,
+        "score": 7,
         "starter": {
           "name": "네일",
           "era": 3.15,
@@ -232,14 +232,14 @@
       "live": {
         "inning": 9,
         "half": "B",
-        "out": 0,
-        "b1": true,
-        "b2": false,
+        "out": 1,
+        "b1": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "노경은",
-        "batter": "나성범",
-        "heat": 68,
-        "label": "후반 박빙 승부"
+        "pitcher": "이건욱",
+        "batter": "박상준",
+        "heat": 98,
+        "label": "끝내기 한 방 찬스"
       },
       "recap": null,
       "decision": null,
@@ -428,7 +428,7 @@
       "home": {
         "code": "HH",
         "name": "한화",
-        "rank": 6,
+        "rank": 5,
         "score": 14,
         "starter": {
           "name": "왕옌청",
