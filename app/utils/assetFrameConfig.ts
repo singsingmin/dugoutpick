@@ -120,8 +120,8 @@ export const IMAGE_FRAME_ASSETS: Record<string, ImageFrameConfig> = {
   ballparkGate: {
     source: require('../assets/gate-frame.webp'),
     aspect: 1118 / 863,        // ≈1.296
-    numberCenterX: 0.52,       // 살짝 우측
-    numberCenterY: 0.50,       // 상단 깃발·아치 아래 크림 사인 중심(살짝 아래)
+    numberCenterX: 0.51,       // 미세 좌측
+    numberCenterY: 0.51,       // 상단 깃발·아치 아래 크림 사인 중심(미세 아래)
     numberColor: '#2C3E6B',    // 크림 사인 → 네이비 잉크
     fontRatio: 0.30,
     threeDigitScale: 0.72,
@@ -167,8 +167,8 @@ export const IMAGE_FRAME_ASSETS: Record<string, ImageFrameConfig> = {
   champRing: {
     source: require('../assets/ring-frame.webp'),
     aspect: 982 / 995,         // ≈0.987 (2D 교체본)
-    numberCenterX: 0.52,       // 살짝 우측
-    numberCenterY: 0.51,       // 다이아 링 중앙 크림 명판(살짝 아래)
+    numberCenterX: 0.51,       // 미세 좌측
+    numberCenterY: 0.51,       // 다이아 링 중앙 크림 명판
     numberColor: '#26365F',    // 크림 명판 → 네이비 잉크
     fontRatio: 0.26,
     threeDigitScale: 0.72,
