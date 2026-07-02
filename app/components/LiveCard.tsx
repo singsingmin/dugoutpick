@@ -93,7 +93,7 @@ export default function LiveCard({ game, onPress }: { game: Game; onPress: () =>
 const s = StyleSheet.create({
   card: { gap: spacing.sm, marginBottom: spacing.sm },
   top: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
-  heat: { marginLeft: 'auto', backgroundColor: colors.gold, paddingHorizontal: spacing.sm, paddingVertical: 1, borderRadius: 4 },
+  heat: { marginLeft: 'auto', backgroundColor: colors.gold, paddingHorizontal: spacing.sm, paddingVertical: 1, borderRadius: 4, borderWidth: 1, borderColor: colors.border },
   main: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around' },
   teamCol: { flex: 1, alignItems: 'center', gap: 2 },
   diamondWrap: { alignItems: 'center', gap: 6 },

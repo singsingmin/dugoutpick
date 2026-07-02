@@ -26,6 +26,8 @@ const styles = StyleSheet.create({
   tab: {
     alignSelf: 'flex-start',
     borderRadius: border.radius,
+    borderWidth: border.width,     // 8비트 다크 테두리
+    borderColor: colors.border,
     paddingVertical: spacing.xs,
     paddingHorizontal: spacing.sm,
     marginBottom: spacing.xs,

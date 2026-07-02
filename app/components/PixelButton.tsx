@@ -34,6 +34,8 @@ export default function PixelButton({ label, onPress, accentColor, selected, dis
 const styles = StyleSheet.create({
   btn: {
     borderRadius: border.radius,
+    borderWidth: border.width,     // 8비트 다크 테두리(주석대로 복원)
+    borderColor: colors.border,
     paddingVertical: spacing.md,
     paddingHorizontal: spacing.md,
     alignItems: 'center',
