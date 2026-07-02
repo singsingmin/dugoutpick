@@ -39,3 +39,14 @@ export function newTxId(): string {
 export function cyclePosition(streak: number): number {
   return streak <= 0 ? 0 : ((streak - 1) % ATTENDANCE_CYCLE) + 1;
 }
+
+const KST_WEEKDAYS = ['일', '월', '화', '수', '목', '금', '토'];
+// ISO → KST "7/2(목)"
+export function kstDateLabel(iso: string): string {
+  const kst = new Date(new Date(iso).getTime() + 9 * 3600 * 1000);
+  return `${kst.getUTCMonth() + 1}/${kst.getUTCDate()}(${KST_WEEKDAYS[kst.getUTCDay()]})`;
+}
+// iso가 KST 기준 오늘인지
+export function isKstToday(iso: string): boolean {
+  return kstDateStr(new Date(iso)) === kstDateStr();
+}

@@ -5,13 +5,14 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { useTeamTheme } from '../context/TeamTheme';
 import { useScoreSkin } from '../context/ScoreSkin';
-import { ATTENDANCE_REWARD, ATTENDANCE_BONUS, ATTENDANCE_CYCLE } from '../utils/attendance';
+import { ATTENDANCE_REWARD, ATTENDANCE_BONUS, ATTENDANCE_CYCLE, isKstToday, kstDateLabel } from '../utils/attendance';
 import PixelText from '../components/PixelText';
 import Panel from '../components/Panel';
 import PixelButton from '../components/PixelButton';
 import ScreenHeader from '../components/ScreenHeader';
 import SectionLabel from '../components/SectionLabel';
 import AppIcon from '../components/AppIcon';
+import TxHistorySheet from '../components/TxHistorySheet';
 import { border, colors, spacing } from '../theme';
 
 export default function BaseballCenter() {
@@ -22,7 +23,13 @@ export default function BaseballCenter() {
     transactions, claimAttendance,
   } = useScoreSkin();
   const [toast, setToast] = useState<string | null>(null);
+  const [historyOpen, setHistoryOpen] = useState(false);
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // 오늘(KST) 받은 출석 보상 합계(기본+보너스) — 완료 카드 표시용. 재시작 후에도 내역에서 도출.
+  const todayEarned = transactions
+    .filter((t) => (t.reason === 'attendance' || t.reason === 'attendance_bonus') && isKstToday(t.createdAt))
+    .reduce((sum, t) => sum + t.amount, 0);
 
   useEffect(() => () => { if (toastTimer.current) clearTimeout(toastTimer.current); }, []);
 
@@ -39,7 +46,7 @@ export default function BaseballCenter() {
     }
   };
 
-  const recent = transactions.slice(0, 10);
+  const recent = transactions.slice(0, 5);
 
   return (
     <View style={styles.root}>
@@ -71,7 +78,10 @@ export default function BaseballCenter() {
               ) : (
                 <>
                   <PixelText variant="body" color={accent}>오늘 출석 완료 ✓</PixelText>
-                  <PixelText variant="caption" color={colors.textDim} style={styles.line}>내일 다시 받을 수 있어요</PixelText>
+                  {todayEarned > 0 && (
+                    <PixelText variant="body" color={colors.text} style={styles.line}>야구공 {todayEarned}개 받았어요</PixelText>
+                  )}
+                  <PixelText variant="caption" color={colors.textDim}>내일 다시 받을 수 있어요</PixelText>
                 </>
               )}
               <PixelText variant="caption" color={colors.textDim} style={styles.streakLine}>
@@ -124,19 +134,27 @@ export default function BaseballCenter() {
               {recent.length === 0 ? (
                 <PixelText variant="body" color={colors.textDim}>내역이 없어요</PixelText>
               ) : (
-                recent.map((tx) => (
-                  <View key={tx.id} style={styles.txRow}>
-                    <PixelText variant="caption" color={colors.text} style={styles.txLabel} numberOfLines={1}>{tx.label}</PixelText>
-                    <PixelText variant="caption" color={tx.type === 'earn' ? colors.good : colors.bad}>
-                      {tx.type === 'earn' ? '+' : '-'}{tx.amount}
-                    </PixelText>
-                  </View>
-                ))
+                <>
+                  {recent.map((tx) => (
+                    <View key={tx.id} style={styles.txRow}>
+                      <PixelText variant="caption" color={colors.textDim} style={styles.txDate}>{kstDateLabel(tx.createdAt)}</PixelText>
+                      <PixelText variant="caption" color={colors.text} style={styles.txLabel} numberOfLines={1}>{tx.label}</PixelText>
+                      <PixelText variant="caption" color={tx.type === 'earn' ? colors.good : colors.bad}>
+                        {tx.type === 'earn' ? '+' : '-'}{tx.amount}
+                      </PixelText>
+                    </View>
+                  ))}
+                  <Pressable onPress={() => setHistoryOpen(true)} style={styles.moreBtn} hitSlop={6}>
+                    <PixelText variant="caption" color={accent}>전체 내역 보기 ›</PixelText>
+                  </Pressable>
+                </>
               )}
             </Panel>
           </View>
         </ScrollView>
       </SafeAreaView>
+
+      <TxHistorySheet visible={historyOpen} onClose={() => setHistoryOpen(false)} transactions={transactions} days={30} />
 
       {toast && (
         <View style={styles.toastWrap} pointerEvents="none">
@@ -173,8 +191,10 @@ const styles = StyleSheet.create({
   dayBonus: { borderColor: colors.gold, borderWidth: 1.5 },
   bonusTag: { fontSize: 8, lineHeight: 10 },
 
-  txRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingVertical: 3 },
-  txLabel: { flex: 1, marginRight: spacing.sm },
+  txRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, paddingVertical: 3 },
+  txDate: { width: 62 },
+  txLabel: { flex: 1 },
+  moreBtn: { alignSelf: 'flex-end', marginTop: spacing.xs, paddingVertical: 2 },
 
   toastWrap: { position: 'absolute', left: 0, right: 0, bottom: 40, alignItems: 'center' },
   toast: { backgroundColor: 'rgba(30,24,12,0.92)', paddingHorizontal: spacing.lg, paddingVertical: spacing.sm, borderRadius: 999 },
