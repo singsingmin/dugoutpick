@@ -100,9 +100,53 @@ async function fetchKboGames(date: string): Promise<any[]> {
   return json.game ?? [];
 }
 
+// ── KBO live fetch 캐시 + stale fallback (Cloudflare Cache API, 엣지 colo별) ──
+// fresh: LIVE 있으면 15초 / 없으면 60초. stale 허용: 5분(KBO 장애 시 마지막 성공값 반환).
+const FRESH_LIVE_MS = 15_000;
+const FRESH_IDLE_MS = 60_000;
+const STALE_MAX_MS = 300_000;
+type CacheState = 'HIT' | 'MISS' | 'STALE' | 'FALLBACK_STATIC';
+interface CachedLive { games: any[]; fetchedAt: number; }
+
+function liveCacheKey(date: string): Request {
+  return new Request(`https://dugout-live-cache.internal/kbo-live/${date}`);
+}
+
+async function getLiveGames(date: string): Promise<{ games: any[]; state: CacheState }> {
+  const key = liveCacheKey(date);
+  let cached: CachedLive | null = null;
+  const hit = await caches.default.match(key);
+  if (hit) { try { cached = (await hit.json()) as CachedLive; } catch { cached = null; } }
+
+  const now = Date.now();
+  if (cached && Array.isArray(cached.games)) {
+    const age = now - cached.fetchedAt;
+    const hasLive = cached.games.some((g) => resolveStatus(g, '') === 'LIVE');
+    const freshMs = hasLive ? FRESH_LIVE_MS : FRESH_IDLE_MS;
+    if (age <= freshMs) return { games: cached.games, state: 'HIT' };   // 신선 → KBO 호출 안 함
+  }
+
+  // 신선 캐시 없음 → KBO 재요청
+  try {
+    const games = await fetchKboGames(date);
+    const body = JSON.stringify({ games, fetchedAt: now } as CachedLive);
+    await caches.default.put(key, new Response(body, {
+      headers: { 'Content-Type': 'application/json', 'Cache-Control': `max-age=${STALE_MAX_MS / 1000}` },
+    }));
+    return { games, state: 'MISS' };
+  } catch (e) {
+    // 재요청 실패 → stale 캐시(5분 내) 있으면 그걸로, 없으면 상위에서 정적 폴백
+    if (cached && Array.isArray(cached.games) && (now - cached.fetchedAt) <= STALE_MAX_MS) {
+      return { games: cached.games, state: 'STALE' };
+    }
+    throw e;
+  }
+}
+
 const CORS: HeadersInit = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Methods': 'GET, OPTIONS',
+  'Access-Control-Expose-Headers': 'X-Live-Cache',
   'Content-Type': 'application/json',
   'Cache-Control': 'no-store',
 };
@@ -114,13 +158,24 @@ export default {
     const path = new URL(request.url).pathname.replace(/^\//, '') || 'games.json';
 
     if (path === 'games.json') {
+      const date = kstToday();
+      // 정적 데이터(GitHub)는 항상 fetch. 실패 시 텍스트 폴백.
+      let staticData: any;
       try {
-        const date = kstToday();
-        const [staticData, kboGames] = await Promise.all([
-          fetch(`${GITHUB_RAW}/games.json?t=${Date.now()}`).then(r => r.json()) as Promise<any>,
-          fetchKboGames(date),
-        ]);
+        staticData = await fetch(`${GITHUB_RAW}/games.json?t=${Date.now()}`).then(r => r.json());
+      } catch {
+        const fb = await fetch(`${GITHUB_RAW}/games.json?t=${Date.now()}`);
+        return new Response(await fb.text(), { headers: { ...CORS, 'X-Live-Cache': 'FALLBACK_STATIC' } });
+      }
+      // 라이브는 캐시 경유(신선 15/60초, stale 5분). 완전 실패면 오버레이 없이 정적만.
+      let kboGames: any[] = [];
+      let cacheState: CacheState = 'FALLBACK_STATIC';
+      try {
+        const live = await getLiveGames(date);
+        kboGames = live.games; cacheState = live.state;
+      } catch { /* kboGames=[] → 오버레이 없이 정적 그대로, 헤더 FALLBACK_STATIC */ }
 
+      {
         const kboById: Record<string, any> = {};
         for (const g of kboGames) if (g.G_ID) kboById[g.G_ID] = g;
 
@@ -164,12 +219,8 @@ export default {
 
         return new Response(
           JSON.stringify({ ...staticData, updatedAt: new Date().toISOString(), games }),
-          { headers: CORS }
+          { headers: { ...CORS, 'X-Live-Cache': cacheState } }
         );
-      } catch {
-        // KBO API 실패 시 정적 데이터로 폴백
-        const fallback = await fetch(`${GITHUB_RAW}/games.json?t=${Date.now()}`);
-        return new Response(await fallback.text(), { headers: CORS });
       }
     }
 

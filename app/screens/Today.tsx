@@ -1,6 +1,6 @@
 // 오늘경기 탭: 야구장 고정 배경 전체 + 반투명 카드. (flow.md, ADR-004)
 import { useCallback, useRef, useState } from 'react';
-import { View, ScrollView, ActivityIndicator, Image, StyleSheet } from 'react-native';
+import { View, ScrollView, ActivityIndicator, Image, StyleSheet, RefreshControl } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
@@ -28,42 +28,51 @@ export default function Today() {
   const [cheerTeam, setCheerTeam] = useState<string | null>(null);
   const [failed, setFailed] = useState(false);
   const [weeklyVisible, setWeeklyVisible] = useState(false);
+  const [refreshing, setRefreshing] = useState(false);
 
+  const activeRef = useRef(true);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
+  // 데이터 로드 + 상태별 폴링 재예약. 전 경기 종료(+highlight 없음)·경기 없는 날엔 폴링 중단.
+  const load = useCallback((): Promise<void> => {
+    return loadGames()
+      .then((d) => {
+        if (!activeRef.current) return;
+        setData(d);
+        setFailed(false);
+        const hasLive = d.games.some((g) => g.status === 'LIVE');
+        const anyWalkoff = d.games.some((g) => !!getActiveWalkoff(g.gameId));
+        const allDone = d.games.length > 0 && d.games.every((g) => g.status === 'FINAL' || g.status === 'CANCELED');
+        // 유지: LIVE거나 끝내기 highlight 활성이거나 아직 안 끝난 경기가 있을 때. 그 외(전경기 종료·경기 없음)는 중단.
+        const keepPolling = hasLive || anyWalkoff || (d.games.length > 0 && !allDone);
+        if (intervalRef.current) { clearInterval(intervalRef.current); intervalRef.current = null; }
+        if (keepPolling) {
+          const targetMs = hasLive ? 30_000 : 60_000;   // LIVE 30s / 그 외 60s
+          intervalRef.current = setInterval(() => { void load(); }, targetMs);
+        }
+      })
+      .catch(() => { if (activeRef.current) setFailed(true); });
+  }, []);
+
+  // foreground 복귀(탭 focus)마다 재fetch + 폴링 재개.
   useFocusEffect(
     useCallback(() => {
-      let active = true;
-
-      const refresh = () => {
-        loadGames()
-          .then((d) => {
-            if (!active) return;
-            setData(d);
-            setFailed(false);
-            const hasLive = d.games.some((g) => g.status === 'LIVE');
-            // LIVE: 30s 갱신 / 비LIVE: 60s 베이스라인(SCHEDULED→LIVE 전환 감지)
-            const targetMs = hasLive ? 30_000 : 60_000;
-            if (intervalRef.current) clearInterval(intervalRef.current);
-            intervalRef.current = setInterval(refresh, targetMs);
-          })
-          .catch(() => {
-            if (active) setFailed(true);
-          });
-      };
-
-      refresh();
-      getCheerTeam().then((c) => active && setCheerTeam(c));
-
+      activeRef.current = true;
+      void load();
+      getCheerTeam().then((c) => activeRef.current && setCheerTeam(c));
       return () => {
-        active = false;
-        if (intervalRef.current) {
-          clearInterval(intervalRef.current);
-          intervalRef.current = null;
-        }
+        activeRef.current = false;
+        if (intervalRef.current) { clearInterval(intervalRef.current); intervalRef.current = null; }
       };
-    }, [])
+    }, [load])
   );
+
+  // 수동 새로고침(pull-to-refresh)
+  const onManualRefresh = useCallback(async () => {
+    setRefreshing(true);
+    await load();
+    setRefreshing(false);
+  }, [load]);
 
   const open = (gameId: string) => navigation.navigate('GameDetail', { gameId });
 
@@ -95,7 +104,7 @@ export default function Today() {
         ) : data.games.length === 0 ? (
           <Centered text="오늘은 경기가 없다" />
         ) : (
-          <Body data={data} open={open} cheerTeam={cheerTeam} onCalendar={() => setWeeklyVisible(true)} />
+          <Body data={data} open={open} cheerTeam={cheerTeam} onCalendar={() => setWeeklyVisible(true)} refreshing={refreshing} onRefresh={onManualRefresh} />
         )}
       </SafeAreaView>
     </View>
@@ -103,12 +112,14 @@ export default function Today() {
 }
 
 function Body({
-  data, open, cheerTeam, onCalendar,
+  data, open, cheerTeam, onCalendar, refreshing, onRefresh,
 }: {
   data: GamesData;
   open: (id: string) => void;
   cheerTeam: string | null;
   onCalendar: () => void;
+  refreshing: boolean;
+  onRefresh: () => void;
 }) {
   // LIVE + 끝내기 역전 highlight(FINAL 후 2분) 를 '지금 볼 각'에 표시.
   const liveGames = data.games
@@ -165,7 +176,11 @@ function Body({
   );
 
   return (
-    <ScrollView style={styles.scroll} contentContainerStyle={styles.scrollContent}>
+    <ScrollView
+      style={styles.scroll}
+      contentContainerStyle={styles.scrollContent}
+      refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor={colors.accent} colors={[colors.accent]} />}
+    >
       <ScreenHeader
         title="오늘 경기"
         leftIcon="baseball"

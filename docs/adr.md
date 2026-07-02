@@ -93,7 +93,8 @@
 - **결정:** Cloudflare Worker(`cf-worker/src/index.ts`)를 라이브 오버레이 엣지 함수로 둔다. 앱의 `REMOTE_BASE_URL`이 Worker를 가리킨다. `games.json` 요청 시 GitHub raw 정적 데이터 + KBO 실시간 경기목록을 `Promise.all`로 fetch → `gameId(G_ID)` 기준 병합. 덮어쓰는 것: `status`(LIVE 판정 포함), `score`(LIVE/FINAL), `cancelReason`, `live` 객체(이닝·주자·투수·타자·heat·label). **`honjam`은 손대지 않음**(frozen 정직성 유지). standings/recent/report는 패스스루.
 - **상태 판정 버그 수정:** KBO `GAME_SC_ID`는 신뢰 불가(점수 0 표시 버그 원인). `GAME_STATE_SC`가 정확한 상태 필드 — `resolveStatus()`가 취소(`CANCEL_SC_ID`)→종료(`GAME_RESULT_CK`/`GAME_STATE_SC===3`)→라이브(`===2`) 순으로 판정.
 - **의도/결과:** Worker는 무상태·무유지보수(상시 서버 아님, 무료 티어 엣지). KBO API가 죽으면 정적 games.json으로 폴백 → 앱은 절대 안 죽음. "서버 없음"의 정신(유지할 백엔드·비용 없음)은 지키되 실시간성을 확보. `liveHeat`/`liveLabel`은 Worker와 build.mjs 양쪽에 동일 구현(수정 시 두 곳 동기 필수).
-- **트리거:** 스케줄 cron 신뢰성 우회를 위해 외부 cron(cron-job.org)이 5분마다 GitHub `workflow_dispatch`를 호출(concurrency 가드). Worker 자체는 요청 기반이라 cron 무관.
+- **트리거:** 스케줄 cron 신뢰성 우회를 위해 외부 cron(cron-job.org)이 경기시간대 2분(월요·경기없는날 제외) GitHub `workflow_dispatch`를 호출(concurrency 가드). Worker 자체는 요청 기반이라 cron 무관.
+- **live fetch 캐시 + stale fallback(2026-07):** Worker가 유저 요청마다 KBO live를 직접 fetch하던 것을 Cloudflare **Cache API**(엣지 colo별)로 감쌈. fresh=LIVE 있으면 15초/없으면 60초 → 신선하면 KBO 미호출(HIT). 만료 시 재fetch(MISS), 실패 시 **stale 캐시(최대 5분) 반환(STALE)**, stale도 없으면 정적 폴백(FALLBACK_STATIC). 캐시 body에 `fetchedAt` 포함, 디버그 헤더 `X-Live-Cache`. 효과: 동시 유저 무관 KBO 호출 급감 + KBO 순간 장애에도 라이브가 뚝 끊기지 않음(앱 우선순위=안 죽는 것). 앱 폴링도 보완 — 전 경기 종료(+끝내기 highlight 없음)·경기 없는 날엔 폴링 중단, foreground/pull-to-refresh로 재개.
 
 ### ADR-019 — 꿀잼지수 배지 스킨 시스템 (ScoreSkin)
 - **맥락:** 꿀잼지수 배지에 개성을 주되, 유니폼 SVG와 전혀 다른 표현(레트로 전광판)도 한 선택지로 묶고 싶다. 기존엔 유니폼 프리셋(classic/pinstripe/cream)만 있었다.
