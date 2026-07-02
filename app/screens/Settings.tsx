@@ -7,6 +7,7 @@ import { useNavigation } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/types';
 import { useTeamTheme } from '../context/TeamTheme';
+import { useScoreSkin } from '../context/ScoreSkin';
 import { loadGames } from '../data/load';
 import PixelText from '../components/PixelText';
 import Panel from '../components/Panel';
@@ -23,6 +24,7 @@ const APP_VERSION = '1.0.0';
 export default function Settings() {
   const navigation = useNavigation<Nav>();
   const { accent } = useTeamTheme();
+  const { baseballBalance, addBaseballs, resetProgress } = useScoreSkin();
   const [updatedAt, setUpdatedAt] = useState<string | null>(null);
   const [trackRecord, setTrackRecord] = useState<TrackRecord | null>(null);
 
@@ -68,6 +70,18 @@ export default function Settings() {
           <TrackRecordBadge track={trackRecord} variant="settings" />
         </View>
 
+        {/* 개발/테스트용 — 추후 제거 */}
+        <View style={styles.section}>
+          <SectionLabel label="야구공 (테스트)" />
+          <Panel>
+            <PixelText variant="body">현재 잔액: {baseballBalance}</PixelText>
+            <View style={styles.debugRow}>
+              <PixelButton label="야구공 +100" onPress={() => { void addBaseballs(100); }} style={styles.debugBtn} />
+              <PixelButton label="초기화" accentColor={colors.bad} onPress={() => { void resetProgress(); }} style={styles.debugBtn} />
+            </View>
+          </Panel>
+        </View>
+
         <View style={styles.section}>
           <SectionLabel label="앱 정보" />
           <Panel>
@@ -90,4 +104,6 @@ const styles = StyleSheet.create({
   content: { padding: spacing.md },
   section: { marginBottom: spacing.lg },
   value: { marginTop: spacing.xs },
+  debugRow: { flexDirection: 'row', gap: spacing.sm, marginTop: spacing.sm },
+  debugBtn: { flex: 1 },
 });

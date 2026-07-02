@@ -11,7 +11,8 @@ export type JerseyPaletteId =
   | 'team' | 'red' | 'orange' | 'yellow' | 'green' | 'sky'
   | 'blue' | 'navy' | 'purple' | 'pink' | 'black' | 'cream' | 'gray';
 export type JerseyColorMode = 'team' | 'fixed';
-export type UnlockType = 'free' | 'premium' | 'event' | 'season' | 'pack';
+export type UnlockType = 'free' | 'currency' | 'event' | 'premium';  // MVP 동작=free/currency, event/premium=미래용
+export type CurrencyType = 'baseball';
 export type AssetRenderType = 'scoreboard' | 'imageFrame';
 
 interface BaseSkin {
@@ -20,7 +21,9 @@ interface BaseSkin {
   description?: string;
   category: ScoreSkinCategory;
   unlockType: UnlockType;
-  unlockGroup?: string;   // 스킨팩 관리용(예: color_uniform_pack)
+  price?: number;              // currency 스킨의 야구공 가격(1~99)
+  currencyType?: CurrencyType; // 현재 'baseball'만
+  unlockGroup?: string;        // 섹션 그룹핑용(예: color_uniform_pack) — 구매 여부와 무관
   isDefault?: boolean;
   isHidden?: boolean;
   sortOrder: number;
@@ -120,25 +123,25 @@ export const SCORE_SKINS: ScoreSkin[] = [
     id: 'scoreboard.vintage', kind: 'asset', category: 'stadium',
     label: '전광판', description: '야구장 레트로 점수판',
     assetKey: 'scoreboardVintage', renderType: 'scoreboard',
-    unlockType: 'free', sortOrder: 500,   // 유니폼 섹션(줄무늬 310~380) 뒤로. 야구장 탭에선 단독 첫번째.
+    unlockType: 'currency', price: 30, currencyType: 'baseball', sortOrder: 500,   // 유니폼 섹션(줄무늬 310~380) 뒤로. 야구장 탭에선 단독 첫번째.
   },
   {
     id: 'ticket.retro', kind: 'asset', category: 'stadium',
     label: '레트로 티켓', description: '야구장 입장권 스타일',
     assetKey: 'ticketRetro', renderType: 'imageFrame',
-    unlockType: 'free', sortOrder: 510,   // 전광판 다음(야구장 섹션).
+    unlockType: 'currency', price: 30, currencyType: 'baseball', sortOrder: 510,   // 전광판 다음(야구장 섹션).
   },
   {
     id: 'homeplate.retro', kind: 'asset', category: 'stadium',
     label: '홈플레이트', description: '홈플레이트 프레임 스타일',
     assetKey: 'homePlate', renderType: 'imageFrame',
-    unlockType: 'free', sortOrder: 520,   // 티켓 다음(야구장 섹션).
+    unlockType: 'currency', price: 30, currencyType: 'baseball', sortOrder: 520,   // 티켓 다음(야구장 섹션).
   },
   {
     id: 'medal.special', kind: 'asset', category: 'special',
     label: '꿀잼 메달', description: '스페셜 골드 메달',
     assetKey: 'medalSpecial', renderType: 'imageFrame',
-    unlockType: 'free', sortOrder: 600,   // 스페셜 섹션 첫 항목.
+    unlockType: 'currency', price: 60, currencyType: 'baseball', sortOrder: 600,   // 스페셜 섹션 첫 항목.
   },
   // ── 고정색 컬러 유니폼(컬러팩) — classic × 고정 팔레트. 응원팀 무관 동일색. ──
   ...( ['red', 'pink', 'orange', 'yellow', 'green', 'sky', 'blue', 'black'] as JerseyPaletteId[]
@@ -151,7 +154,7 @@ export const SCORE_SKINS: ScoreSkin[] = [
     styleId: 'classic',
     paletteId: p,
     colorMode: 'fixed',
-    unlockType: 'free',
+    unlockType: 'currency', price: 10, currencyType: 'baseball',
     unlockGroup: 'color_uniform_pack',
     sortOrder: 110 + i * 10,
   })),
@@ -166,7 +169,7 @@ export const SCORE_SKINS: ScoreSkin[] = [
     styleId: 'white',
     paletteId: p,
     colorMode: 'fixed',
-    unlockType: 'free',
+    unlockType: 'currency', price: 15, currencyType: 'baseball',
     unlockGroup: 'white_uniform_pack',
     sortOrder: 210 + i * 10,
   })),
@@ -181,7 +184,7 @@ export const SCORE_SKINS: ScoreSkin[] = [
     styleId: 'stripe',
     paletteId: p,
     colorMode: 'fixed',
-    unlockType: 'free',
+    unlockType: 'currency', price: 20, currencyType: 'baseball',
     unlockGroup: 'stripe_uniform_pack',
     sortOrder: 310 + i * 10,
   })),
@@ -222,6 +225,11 @@ export const SCORE_SKIN_LIST: ScoreSkin[] = SCORE_SKINS
 
 export function getScoreSkinById(id: string | null | undefined): ScoreSkin {
   return (id && BY_ID.get(id)) || BY_ID.get(DEFAULT_ID)!;
+}
+
+// 보유 판정 — free이거나 구매목록에 있거나 현재 적용 중(grandfather).
+export function isSkinOwned(skin: ScoreSkin, ownedIds: readonly string[], selectedId: string | null): boolean {
+  return skin.unlockType === 'free' || ownedIds.includes(skin.id) || selectedId === skin.id;
 }
 
 // 유니폼 스킨의 실효 색상 — team이면 teamColor, fixed면 팔레트색.
