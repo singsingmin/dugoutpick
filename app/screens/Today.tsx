@@ -1,6 +1,6 @@
 // 오늘경기 탭: 야구장 고정 배경 전체 + 반투명 카드. (flow.md, ADR-004)
-import { useCallback, useRef, useState } from 'react';
-import { View, ScrollView, ActivityIndicator, Image, StyleSheet, RefreshControl } from 'react-native';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { View, ScrollView, ActivityIndicator, Image, StyleSheet, RefreshControl, AppState } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
@@ -73,6 +73,16 @@ export default function Today() {
       };
     }, [load])
   );
+
+  // 앱 백그라운드→foreground 복귀 시 즉시 재fetch. useFocusEffect는 탭 focus에만 발동하고
+  // 앱 재진입(화면 유지)엔 발동하지 않으므로, 이게 없으면 다음 폴(최대 60초)까지 갱신이 밀린다.
+  // Today가 현재 focus된 화면일 때만(activeRef) 재요청 — 다른 탭이면 스킵.
+  useEffect(() => {
+    const sub = AppState.addEventListener('change', (s) => {
+      if (s === 'active' && activeRef.current) void load();
+    });
+    return () => sub.remove();
+  }, [load]);
 
   // 수동 새로고침(pull-to-refresh)
   const onManualRefresh = useCallback(async () => {
