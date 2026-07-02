@@ -32,19 +32,24 @@ export default function Today() {
 
   const activeRef = useRef(true);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const dataRef = useRef<GamesData | null>(null);   // 현재 표시본(폴백 되돌림 방지 비교용)
 
   // 데이터 로드 + 상태별 폴링 재예약. 전 경기 종료(+highlight 없음)·경기 없는 날엔 폴링 중단.
   const load = useCallback((): Promise<void> => {
     return loadGames()
       .then((d) => {
         if (!activeRef.current) return;
-        setData(d);
+        // 폴백(캐시/번들)로 updatedAt이 현재 표시본보다 과거로 뒤로 가지 않게: 더 오래되면 유지.
+        const prev = dataRef.current;
+        const chosen = prev && new Date(d.updatedAt).getTime() < new Date(prev.updatedAt).getTime() ? prev : d;
+        dataRef.current = chosen;
+        setData(chosen);
         setFailed(false);
-        const hasLive = d.games.some((g) => g.status === 'LIVE');
-        const anyWalkoff = d.games.some((g) => !!getActiveWalkoff(g.gameId));
-        const allDone = d.games.length > 0 && d.games.every((g) => g.status === 'FINAL' || g.status === 'CANCELED');
+        const hasLive = chosen.games.some((g) => g.status === 'LIVE');
+        const anyWalkoff = chosen.games.some((g) => !!getActiveWalkoff(g.gameId));
+        const allDone = chosen.games.length > 0 && chosen.games.every((g) => g.status === 'FINAL' || g.status === 'CANCELED');
         // 유지: LIVE거나 끝내기 highlight 활성이거나 아직 안 끝난 경기가 있을 때. 그 외(전경기 종료·경기 없음)는 중단.
-        const keepPolling = hasLive || anyWalkoff || (d.games.length > 0 && !allDone);
+        const keepPolling = hasLive || anyWalkoff || (chosen.games.length > 0 && !allDone);
         if (intervalRef.current) { clearInterval(intervalRef.current); intervalRef.current = null; }
         if (keepPolling) {
           const targetMs = hasLive ? 30_000 : 60_000;   // LIVE 30s / 그 외 60s
