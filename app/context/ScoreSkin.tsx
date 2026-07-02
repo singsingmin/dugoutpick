@@ -17,7 +17,7 @@ const ATT_DATE_KEY = 'user.attClaimDate';
 const ATT_STREAK_KEY = 'user.attStreak';
 const ATT_COUNT_KEY = 'user.attCount';
 const DEFAULT_SKIN_ID = 'jersey.classic.team';
-const INITIAL_GRANT = 500;
+const INITIAL_GRANT = 15;   // 첫 지급·초기화 공통. 싼 스킨 1개 체험용(수집 루프 유지)
 
 export interface ClaimResult { claimed: boolean; earned: number; base: number; bonus: number; streak: number; }
 
