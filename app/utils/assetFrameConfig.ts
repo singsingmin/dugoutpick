@@ -25,9 +25,9 @@ export interface ImageFrameConfig {
 export const IMAGE_FRAME_ASSETS: Record<string, ImageFrameConfig> = {
   ticketRetro: {
     source: require('../assets/ticket-frame.webp'),
-    aspect: 1166 / 664,        // ≈1.756 (크롭 후 실측)
-    numberCenterX: 0.41,       // 좌측 메인 패널 중심(우측 스텁 제외)
-    numberCenterY: 0.47,       // 상단 리본 아래 ~ 하단 엠블럼 위 빈칸
+    aspect: 1176 / 714,        // ≈1.647 (2D 교체본, 크롭 실측)
+    numberCenterX: 0.40,       // 좌측 메인 패널 중심(우측 스텁 제외)
+    numberCenterY: 0.47,       // 상단 꿀잼지수 배너 아래 ~ 하단 엠블럼 위 빈칸
     numberColor: '#B23A2E',    // 크림 바탕 → 레트로 레드 스탬프
     fontRatio: 0.40,           // 빈칸 대비 스탬프 존재감(+약 5%)
     threeDigitScale: 0.72,
@@ -41,9 +41,9 @@ export const IMAGE_FRAME_ASSETS: Record<string, ImageFrameConfig> = {
   },
   homePlate: {
     source: require('../assets/homeplate-frame.webp'),
-    aspect: 1058 / 981,        // ≈1.078 (크롭 후 실측, 거의 정사각)
-    numberCenterX: 0.5,        // 좌우 대칭 → 중앙
-    numberCenterY: 0.50,       // 상단 배너 아래 ~ 하단 야구공 위 크림 빈칸
+    aspect: 1078 / 1033,       // ≈1.044 (2D 교체본, 거의 정사각)
+    numberCenterX: 0.50,       // 좌우 대칭 → 중앙
+    numberCenterY: 0.51,       // 상단 HOME PLATE 배너 아래 ~ 하단 야구공 위 크림 빈칸
     numberColor: '#2C3E6B',    // 크림 바탕 + 네이비 테두리 → 네이비 스탬프
     fontRatio: 0.34,
     threeDigitScale: 0.72,
