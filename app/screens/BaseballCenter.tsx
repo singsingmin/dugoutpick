@@ -68,25 +68,31 @@ export default function BaseballCenter() {
           <View style={styles.section}>
             <SectionLabel icon="star" label="오늘 출석 보상" />
             <Panel>
+              {/* 1) 메인 상태 / 보상 결과 */}
               {canClaimAttendance ? (
                 <>
-                  <PixelText variant="body" color={colors.text} style={styles.line}>
-                    매일 출석하고 야구공 {ATTENDANCE_REWARD}개를 받아보세요
-                  </PixelText>
-                  <PixelButton label={`야구공 ${ATTENDANCE_REWARD}개 받기`} onPress={onClaim} />
+                  <PixelText variant="body" color={colors.text}>매일 출석하고 야구공 {ATTENDANCE_REWARD}개를 받아보세요</PixelText>
+                  <PixelButton label={`야구공 ${ATTENDANCE_REWARD}개 받기`} onPress={onClaim} style={styles.claimBtn} />
                 </>
               ) : (
                 <>
-                  <PixelText variant="body" color={accent}>오늘 출석 완료 ✓</PixelText>
+                  <PixelText variant="title" color={accent}>오늘 출석 완료 ✓</PixelText>
                   {todayEarned > 0 && (
-                    <PixelText variant="body" color={colors.text} style={styles.line}>야구공 {todayEarned}개 받았어요</PixelText>
+                    <PixelText variant="body" color={colors.text} style={styles.rewardLine}>야구공 {todayEarned}개 받았어요</PixelText>
                   )}
-                  <PixelText variant="caption" color={colors.textDim}>내일 다시 받을 수 있어요</PixelText>
                 </>
               )}
-              <PixelText variant="caption" color={colors.textDim} style={styles.streakLine}>
-                {attendanceStreak > 0 ? `${attendanceStreak}일 연속 출석 중` : '아직 연속 출석이 없어요'}
-              </PixelText>
+
+              {/* 2) 보조 정보 — 연속 출석(강조 칩) + 내일 안내 */}
+              {attendanceStreak > 0 && (
+                <View style={styles.streakChip}>
+                  <AppIcon name="fire" size={16} />
+                  <PixelText variant="body" color={accent}>{attendanceStreak}일 연속 출석 중</PixelText>
+                </View>
+              )}
+              {!canClaimAttendance && (
+                <PixelText variant="caption" color={colors.textDim} style={styles.subInfo}>내일 다시 받을 수 있어요</PixelText>
+              )}
             </Panel>
           </View>
 
@@ -129,25 +135,27 @@ export default function BaseballCenter() {
 
           {/* 최근 야구공 내역 */}
           <View style={styles.section}>
-            <SectionLabel icon="chart" label="최근 야구공 내역" />
+            <View style={styles.sectionHead}>
+              <SectionLabel icon="chart" label="최근 야구공 내역" />
+              {transactions.length > 0 && (
+                <Pressable onPress={() => setHistoryOpen(true)} hitSlop={8} style={styles.moreBtn}>
+                  <PixelText variant="caption" color={accent}>전체 내역 ›</PixelText>
+                </Pressable>
+              )}
+            </View>
             <Panel>
               {recent.length === 0 ? (
                 <PixelText variant="body" color={colors.textDim}>내역이 없어요</PixelText>
               ) : (
-                <>
-                  {recent.map((tx) => (
-                    <View key={tx.id} style={styles.txRow}>
-                      <PixelText variant="caption" color={colors.textDim} style={styles.txDate}>{kstDateLabel(tx.createdAt)}</PixelText>
-                      <PixelText variant="caption" color={colors.text} style={styles.txLabel} numberOfLines={1}>{tx.label}</PixelText>
-                      <PixelText variant="caption" color={tx.type === 'earn' ? colors.good : colors.bad}>
-                        {tx.type === 'earn' ? '+' : '-'}{tx.amount}
-                      </PixelText>
-                    </View>
-                  ))}
-                  <Pressable onPress={() => setHistoryOpen(true)} style={styles.moreBtn} hitSlop={6}>
-                    <PixelText variant="caption" color={accent}>전체 내역 보기 ›</PixelText>
-                  </Pressable>
-                </>
+                recent.map((tx) => (
+                  <View key={tx.id} style={styles.txRow}>
+                    <PixelText variant="caption" color={colors.textDim} style={styles.txDate}>{kstDateLabel(tx.createdAt)}</PixelText>
+                    <PixelText variant="caption" color={colors.text} style={styles.txLabel} numberOfLines={1}>{tx.label}</PixelText>
+                    <PixelText variant="caption" color={tx.type === 'earn' ? colors.good : colors.bad}>
+                      {tx.type === 'earn' ? '+' : '-'}{tx.amount}
+                    </PixelText>
+                  </View>
+                ))
               )}
             </Panel>
           </View>
@@ -180,8 +188,18 @@ const styles = StyleSheet.create({
   balanceText: { gap: 2 },
 
   section: { marginBottom: spacing.lg },
+  sectionHead: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
   line: { marginBottom: spacing.sm },
-  streakLine: { marginTop: spacing.sm },
+
+  // 출석 카드 3단
+  claimBtn: { marginTop: spacing.sm },
+  rewardLine: { marginTop: 2 },
+  streakChip: {
+    flexDirection: 'row', alignItems: 'center', gap: 5, alignSelf: 'flex-start',
+    marginTop: spacing.sm, paddingHorizontal: spacing.sm, paddingVertical: 3,
+    backgroundColor: colors.surfaceAlt, borderWidth: 1, borderColor: colors.border, borderRadius: 999,
+  },
+  subInfo: { marginTop: spacing.xs },
 
   board: { flexDirection: 'row', justifyContent: 'space-between', marginBottom: spacing.sm },
   dayCell: {
@@ -194,7 +212,7 @@ const styles = StyleSheet.create({
   txRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, paddingVertical: 3 },
   txDate: { width: 62 },
   txLabel: { flex: 1 },
-  moreBtn: { alignSelf: 'flex-end', marginTop: spacing.xs, paddingVertical: 2 },
+  moreBtn: { paddingVertical: 2, paddingLeft: spacing.sm },
 
   toastWrap: { position: 'absolute', left: 0, right: 0, bottom: 40, alignItems: 'center' },
   toast: { backgroundColor: 'rgba(30,24,12,0.92)', paddingHorizontal: spacing.lg, paddingVertical: spacing.sm, borderRadius: 999 },
