@@ -30,7 +30,8 @@ module.exports = {
       favicon: "./assets/favicon.png"
     },
     plugins: [
-      "expo-font"
+      "expo-font",
+      "expo-notifications"
     ],
     extra: {
       eas: {

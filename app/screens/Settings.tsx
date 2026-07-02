@@ -8,6 +8,7 @@ import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/types';
 import { useScoreSkin } from '../context/ScoreSkin';
 import { loadGames } from '../data/load';
+import { getNotifyEnabled, setNotifyEnabled, requestPermission, rescheduleMyTeamGameStart, disableAndCancel } from '../utils/notifications';
 import PixelText from '../components/PixelText';
 import Panel from '../components/Panel';
 import PixelButton from '../components/PixelButton';
@@ -27,6 +28,8 @@ export default function Settings() {
   const { baseballBalance, addBaseballs, resetProgress } = useScoreSkin();
   const [updatedAt, setUpdatedAt] = useState<string | null>(null);
   const [trackRecord, setTrackRecord] = useState<TrackRecord | null>(null);
+  const [notify, setNotify] = useState(false);
+  const [permDenied, setPermDenied] = useState(false);
 
   useEffect(() => {
     let active = true;
@@ -35,8 +38,22 @@ export default function Settings() {
       setUpdatedAt(d.updatedAt);
       setTrackRecord(d.trackRecord ?? null);
     }).catch(() => {});
+    getNotifyEnabled().then((v) => { if (active) setNotify(v); });
     return () => { active = false; };
   }, []);
+
+  const toggleNotify = async () => {
+    if (notify) {                         // 끄기
+      setNotify(false); setPermDenied(false);
+      await disableAndCancel();
+      return;
+    }
+    const ok = await requestPermission();  // 켜기 — 권한 먼저
+    if (!ok) { setPermDenied(true); return; }
+    setNotify(true); setPermDenied(false);
+    await setNotifyEnabled(true);
+    await rescheduleMyTeamGameStart();
+  };
 
   return (
     <View style={styles.root}>
@@ -45,6 +62,27 @@ export default function Settings() {
       <SafeAreaView style={styles.safe} edges={['top']}>
       <ScreenHeader title="설정" leftIcon="back" onLeftPress={() => navigation.goBack()} />
       <ScrollView contentContainerStyle={styles.content}>
+        <View style={styles.section}>
+          <SectionLabel label="알림" />
+          <Panel>
+            <PixelText variant="body">내 팀 경기 시작 알림</PixelText>
+            <PixelText variant="caption" color={colors.textDim} style={styles.value}>
+              경기 시작 30분 전, 응원팀 경기가 있는 날에만 울려요
+            </PixelText>
+            <PixelButton
+              label={notify ? '알림 켜짐 (탭해서 끄기)' : '알림 켜기'}
+              accentColor={notify ? colors.good : undefined}
+              onPress={() => { void toggleNotify(); }}
+              style={styles.notifyBtn}
+            />
+            {permDenied && (
+              <PixelText variant="caption" color={colors.bad} style={styles.value}>
+                알림 권한이 거부됐어요. 기기 설정에서 허용해 주세요.
+              </PixelText>
+            )}
+          </Panel>
+        </View>
+
         <View style={styles.section}>
           <SectionLabel label="데이터" />
           <Panel>
@@ -96,6 +134,7 @@ const styles = StyleSheet.create({
   content: { padding: spacing.md },
   section: { marginBottom: spacing.lg },
   value: { marginTop: spacing.xs },
+  notifyBtn: { marginTop: spacing.sm },
   debugRow: { flexDirection: 'row', gap: spacing.sm, marginTop: spacing.sm },
   debugBtn: { flex: 1 },
 });
