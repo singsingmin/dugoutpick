@@ -1,7 +1,7 @@
 {
   "date": "20260702",
   "dateText": "2026년 7월 2일",
-  "updatedAt": "2026-07-02T13:30:39.586Z",
+  "updatedAt": "2026-07-02T13:40:31.048Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 33,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
+        "half": "B",
         "out": 1,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "김정우",
-        "batter": "한동희",
-        "heat": 43,
+        "pitcher": "김강현",
+        "batter": "김민석",
+        "heat": 45,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
