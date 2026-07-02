@@ -137,11 +137,55 @@ export const SCORE_SKINS: ScoreSkin[] = [
     assetKey: 'homePlate', renderType: 'imageFrame',
     unlockType: 'currency', price: 30, currencyType: 'baseball', sortOrder: 520,   // 티켓 다음(야구장 섹션).
   },
+  // ── 야구장 에셋 5종 (imageFrame) ──
+  {
+    id: 'nameplate.dugout', kind: 'asset', category: 'stadium',
+    label: '더그아웃 네임플레이트', description: '더그아웃 명패 스타일',
+    assetKey: 'nameplateDugout', renderType: 'imageFrame',
+    unlockType: 'currency', price: 30, currencyType: 'baseball', sortOrder: 530,
+  },
+  {
+    id: 'lineup.card', kind: 'asset', category: 'stadium',
+    label: '라인업 카드', description: '선발 라인업 카드 스타일',
+    assetKey: 'lineupCard', renderType: 'imageFrame',
+    unlockType: 'currency', price: 35, currencyType: 'baseball', sortOrder: 540,
+  },
+  {
+    id: 'tacticboard.retro', kind: 'asset', category: 'stadium',
+    label: '작전보드', description: '더그아웃 작전보드 스타일',
+    assetKey: 'tacticBoard', renderType: 'imageFrame',
+    unlockType: 'currency', price: 35, currencyType: 'baseball', sortOrder: 550,
+  },
+  {
+    id: 'gate.ballpark', kind: 'asset', category: 'stadium',
+    label: '구장 게이트 사인', description: '야구장 입구 사인 스타일',
+    assetKey: 'ballparkGate', renderType: 'imageFrame',
+    unlockType: 'currency', price: 40, currencyType: 'baseball', sortOrder: 560,
+  },
+  {
+    id: 'speedgun.bullpen', kind: 'asset', category: 'stadium',
+    label: '불펜 스피드건 보드', description: '불펜 구속 전광 보드 스타일',
+    assetKey: 'speedgunBoard', renderType: 'imageFrame',
+    unlockType: 'currency', price: 45, currencyType: 'baseball', sortOrder: 570,
+  },
+  // ── 스페셜 에셋 ──
   {
     id: 'medal.special', kind: 'asset', category: 'special',
     label: '꿀잼 메달', description: '스페셜 골드 메달',
     assetKey: 'medalSpecial', renderType: 'imageFrame',
     unlockType: 'currency', price: 60, currencyType: 'baseball', sortOrder: 600,   // 스페셜 섹션 첫 항목.
+  },
+  {
+    id: 'trophy.mvp', kind: 'asset', category: 'special',
+    label: 'MVP 트로피 플라크', description: '스페셜 MVP 트로피',
+    assetKey: 'mvpTrophy', renderType: 'imageFrame',
+    unlockType: 'currency', price: 75, currencyType: 'baseball', sortOrder: 610,
+  },
+  {
+    id: 'ring.champ', kind: 'asset', category: 'special',
+    label: '챔피언십 링', description: '스페셜 챔피언십 링',
+    assetKey: 'champRing', renderType: 'imageFrame',
+    unlockType: 'currency', price: 90, currencyType: 'baseball', sortOrder: 620,
   },
   // ── 고정색 컬러 유니폼(컬러팩) — classic × 고정 팔레트. 응원팀 무관 동일색. ──
   ...( ['red', 'pink', 'orange', 'yellow', 'green', 'sky', 'blue', 'black'] as JerseyPaletteId[]
