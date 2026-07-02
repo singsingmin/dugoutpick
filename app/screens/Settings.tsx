@@ -1,4 +1,4 @@
-// 설정 탭 (최소): 응원팀 변경 / 데이터 갱신시각 / 앱 정보. (flow.md)
+// 설정 화면 — 라커룸 우상단 톱니로 진입. 데이터 갱신 / 적중률 / (디버그) / 앱 정보.
 import { useEffect, useState } from 'react';
 import { View, ScrollView, Image, StyleSheet } from 'react-native';
 import type { TrackRecord } from '../types';
@@ -6,7 +6,6 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/types';
-import { useTeamTheme } from '../context/TeamTheme';
 import { useScoreSkin } from '../context/ScoreSkin';
 import { loadGames } from '../data/load';
 import PixelText from '../components/PixelText';
@@ -25,7 +24,6 @@ const DEBUG_TOOLS = __DEV__ || process.env.EXPO_PUBLIC_DEBUG_TOOLS === '1';
 
 export default function Settings() {
   const navigation = useNavigation<Nav>();
-  const { accent } = useTeamTheme();
   const { baseballBalance, addBaseballs, resetProgress } = useScoreSkin();
   const [updatedAt, setUpdatedAt] = useState<string | null>(null);
   const [trackRecord, setTrackRecord] = useState<TrackRecord | null>(null);
@@ -45,23 +43,8 @@ export default function Settings() {
       <Image source={require('../assets/stadium-bg.webp')} style={styles.bgImage} resizeMode="cover" />
       <View style={styles.bgOverlay} />
       <SafeAreaView style={styles.safe} edges={['top']}>
-      <ScreenHeader title="설정" leftIcon="settings" />
+      <ScreenHeader title="설정" leftIcon="back" onLeftPress={() => navigation.goBack()} />
       <ScrollView contentContainerStyle={styles.content}>
-        <View style={styles.section}>
-          <SectionLabel label="응원팀" />
-          <PixelButton label="응원팀 변경" onPress={() => navigation.navigate('Onboarding')} />
-        </View>
-
-        <View style={styles.section}>
-          <SectionLabel label="꾸미기" />
-          <PixelButton label="꿀잼지수 스킨" onPress={() => navigation.navigate('SkinSelect')} />
-        </View>
-
-        <View style={styles.section}>
-          <SectionLabel label="야구공" />
-          <PixelButton label="야구공 센터" onPress={() => navigation.navigate('BaseballCenter')} />
-        </View>
-
         <View style={styles.section}>
           <SectionLabel label="데이터" />
           <Panel>

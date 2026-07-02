@@ -6,13 +6,14 @@ export type RootStackParamList = {
   GameDetail: { gameId: string };
   SkinSelect: undefined;
   BaseballCenter: undefined;
+  Settings: undefined;
 };
 
 export type TabParamList = {
   Today: undefined;
   Standings: undefined;
   MyTeam: undefined;
-  Settings: undefined;
+  LockerRoom: undefined;
 };
 
 // 전역 navigation 타입 보강 (useNavigation 등에서 타입 추론).

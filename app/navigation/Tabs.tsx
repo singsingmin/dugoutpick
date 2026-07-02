@@ -4,7 +4,7 @@ import type { TabParamList } from './types';
 import Today from '../screens/Today';
 import Standings from '../screens/Standings';
 import MyTeam from '../screens/MyTeam';
-import Settings from '../screens/Settings';
+import LockerRoom from '../screens/LockerRoom';
 import AppIcon, { type AppIconName } from '../components/AppIcon';
 import { colors, fonts } from '../theme';
 import { isKstMonday } from '../utils';
@@ -38,7 +38,7 @@ export default function Tabs() {
       <Tab.Screen name="Today" component={Today} options={{ title: monday ? '월요 리포트' : '오늘경기', tabBarIcon: icon(monday ? 'clipboard' : 'baseball') }} />
       <Tab.Screen name="Standings" component={Standings} options={{ title: '순위', tabBarIcon: icon('chart') }} />
       <Tab.Screen name="MyTeam" component={MyTeam} options={{ title: '내 팀', tabBarIcon: icon('star') }} />
-      <Tab.Screen name="Settings" component={Settings} options={{ title: '설정', tabBarIcon: icon('settings') }} />
+      <Tab.Screen name="LockerRoom" component={LockerRoom} options={{ title: '라커룸', tabBarIcon: icon('lockerroom') }} />
     </Tab.Navigator>
   );
 }

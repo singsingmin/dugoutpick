@@ -16,7 +16,8 @@ export type AppIconName =
   | 'live'
   | 'versus'
   | 'calendar'
-  | 'autumn';
+  | 'autumn'
+  | 'lockerroom';
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const ICONS: Record<AppIconName, ReturnType<typeof require>> = {
@@ -36,6 +37,7 @@ const ICONS: Record<AppIconName, ReturnType<typeof require>> = {
   versus:    require('../assets/icons/versus.png'),
   calendar:  require('../assets/icons/calendar.png'),
   autumn:    require('../assets/icons/autumn.png'),
+  lockerroom: require('../assets/icons/lockerroom.png'),
 };
 
 interface Props {
