@@ -49,15 +49,17 @@ export default function LiveCard({ game, onPress }: { game: Game; onPress: () =>
   const lv = game.live;
   // raw(Worker) → display(momentum + smooth) 보정값. ADR-021.
   const { heat, label } = useLiveHeatDisplay(game);
+  // live=null이지만 label이 있으면 끝내기 역전 post-game highlight(결정 2).
+  const isHighlight = !lv && !!label;
   return (
     <Pressable onPress={onPress}>
       <Panel accentColor={LIVE_RED} style={s.card}>
         <View style={s.top}>
-          <PixelText variant="caption" color={LIVE_RED}>● LIVE</PixelText>
-          {lv && <PixelText variant="caption" color={colors.textDim}>{label}</PixelText>}
-          {lv && (
+          <PixelText variant="caption" color={LIVE_RED}>{lv ? '● LIVE' : '● 끝내기'}</PixelText>
+          {(lv || isHighlight) && <PixelText variant="caption" color={colors.textDim}>{label}</PixelText>}
+          {(lv || isHighlight) && (
             <View style={s.heat}>
-              <PixelText variant="caption" color={colors.onGold}>지금 {heat}</PixelText>
+              <PixelText variant="caption" color={colors.onGold}>{lv ? '지금 ' : ''}{heat}</PixelText>
             </View>
           )}
         </View>
@@ -71,7 +73,7 @@ export default function LiveCard({ game, onPress }: { game: Game; onPress: () =>
           {lv ? (
             <DiamondAndOuts lv={lv} />
           ) : (
-            <PixelText variant="title" color={colors.textDim}>VS</PixelText>
+            <PixelText variant="title" color={colors.textDim}>{isHighlight ? '끝' : 'VS'}</PixelText>
           )}
 
           <View style={s.teamCol}>

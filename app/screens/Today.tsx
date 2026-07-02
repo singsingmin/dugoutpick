@@ -10,6 +10,7 @@ import { loadGames } from '../data/load';
 import { getCheerTeam } from '../data/team';
 import GameCard from '../components/GameCard';
 import LiveCard from '../components/LiveCard';
+import { getActiveWalkoff } from '../utils/liveHeat';
 import ScreenHeader from '../components/ScreenHeader';
 import SectionLabel from '../components/SectionLabel';
 import type { AppIconName } from '../components/AppIcon';
@@ -109,11 +110,13 @@ function Body({
   cheerTeam: string | null;
   onCalendar: () => void;
 }) {
+  // LIVE + 끝내기 역전 highlight(FINAL 후 2분) 를 '지금 볼 각'에 표시.
   const liveGames = data.games
-    .filter((g) => g.status === 'LIVE')
+    .filter((g) => g.status === 'LIVE' || !!getActiveWalkoff(g.gameId))
     .sort((a, b) => (b.live?.heat ?? 0) - (a.live?.heat ?? 0));
+  const liveIds = new Set(liveGames.map((g) => g.gameId));
 
-  const finished = data.games.filter((g) => g.status === 'FINAL' && g.recap);
+  const finished = data.games.filter((g) => g.status === 'FINAL' && g.recap && !liveIds.has(g.gameId));
   const bestRecap = finished.length
     ? finished.slice().sort((a, b) => (b.recap?.actual ?? 0) - (a.recap?.actual ?? 0))[0]
     : null;
@@ -123,6 +126,7 @@ function Body({
     ? data.games.find(
         (g) =>
           (g.status === 'FINAL' || g.status === 'CANCELED') &&
+          !liveIds.has(g.gameId) &&
           (g.away.code === cheerTeam || g.home.code === cheerTeam)
       )
     : undefined;
@@ -136,7 +140,7 @@ function Body({
   );
   // allDone 시 추천 경기도 rest에 포함 (별도 히어로 섹션 없이 다른경기로)
   const rest = data.games
-    .filter((g) => g.status !== 'LIVE' && (allDone || g.gameId !== recommended?.gameId))
+    .filter((g) => !liveIds.has(g.gameId) && (allDone || g.gameId !== recommended?.gameId))
     .sort((a, b) => (b.honjam?.score ?? -1) - (a.honjam?.score ?? -1));
 
   // ── 히어로: 추천 경기(SCHEDULED)일 때만 표시

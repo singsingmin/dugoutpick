@@ -32,13 +32,26 @@ function reversalBase(inning: number | null, half: string | null): number {
   if (inn >= 7) return 14;                    // 후반
   return 10;                                  // 일반
 }
-// 역전 라벨 + 최상위 raw 라벨을 덮어쓸지(force). 9회말/연장말 역전만 force.
+// 역전 라벨 — leadChange 이벤트는 최상위 raw 라벨보다 우선(force=true, 결정 1).
 function reversalLabel(inning: number | null, half: string | null): { label: string; force: boolean } {
   const inn = inning ?? 0;
-  if (inn >= 9 && half === 'B') return { label: '끝내기 역전극', force: true };
-  if (inn >= 9) return { label: '9회 역전극', force: false };
-  if (inn >= 7) return { label: '후반 역전 드라마', force: false };
-  return { label: '방금 역전!', force: false };
+  if (inn >= 9 && half === 'B') return { label: '끝내기 역전극', force: true };   // 9회말/연장말
+  if (inn >= 10) return { label: '연장 역전극', force: true };                     // 연장초
+  if (inn >= 9) return { label: '9회 역전극', force: true };                        // 9회초
+  if (inn >= 7) return { label: '후반 역전 드라마', force: true };                  // 후반
+  return { label: '방금 역전!', force: true };                                     // 그 외
+}
+
+// ── 끝내기 역전 post-game highlight (결정 2) ──
+// 9회말/연장말 역전으로 홈팀이 리드하며 끝난 경기는 FINAL 전환 후에도 2분간 라벨 유지.
+// 모듈 레벨 레지스트리(컴포넌트 언마운트에도 생존, 시간 만료로 자동 정리).
+const WALKOFF_HOLD_MS = 120_000;
+const walkoffHighlights = new Map<string, { label: string; expiresAt: number }>();
+export function getActiveWalkoff(gameId: string): string | null {
+  const w = walkoffHighlights.get(gameId);
+  if (!w) return null;
+  if (Date.now() >= w.expiresAt) { walkoffHighlights.delete(gameId); return null; }
+  return w.label;
 }
 // 역전 후 점수차 multiplier(0=동점도 1.0 — 최대 긴장).
 function gapMultiplier(diff: number): number {
@@ -117,6 +130,10 @@ export function useLiveHeatDisplay(game: Game): LiveDisplay {
         prev.evtBonus = reversalBase(lv.inning, lv.half) * gapMultiplier(currDiff);
         prev.evtLabel = rl;
         prev.evtForce = force;
+        // 끝내기 역전(9회말/연장말 + 홈 리드) → 종료 후 2분 highlight 등록
+        if ((lv.inning ?? 0) >= 9 && lv.half === 'B' && currSigned > 0) {
+          walkoffHighlights.set(game.gameId, { label: '끝내기 역전극', expiresAt: now + WALKOFF_HOLD_MS });
+        }
       } else if (tieMade) {
         prev.evtAt = now;
         prev.evtBonus = 6 * gapMultiplier(0);            // 동점 +6
@@ -147,6 +164,13 @@ export function useLiveHeatDisplay(game: Game): LiveDisplay {
     const momLabel = evtBonus > 0 ? evtLabel : chase.label;
     if (momLabel && (evtForce || !TOP_PRIORITY_LABELS.has(lv.label))) label = momLabel;
     else label = lv.label;
+  } else {
+    // 라이브 종료(live=null)여도 끝내기 역전 highlight 창(2분) 내면 라벨/직전 heat 유지(결정 2).
+    const w = getActiveWalkoff(game.gameId);
+    if (w) {
+      heat = ref.current.prevDisplay ?? heat;
+      label = w;
+    }
   }
 
   // 렌더 후 직전 점수/표시값 갱신(다음 폴 비교용). 이벤트 상태는 위에서 즉시 갱신.
