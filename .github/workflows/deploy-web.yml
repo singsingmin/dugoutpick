@@ -36,6 +36,7 @@ jobs:
         working-directory: app
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          EXPO_PUBLIC_DEBUG_TOOLS: '1'   # 테스트용 디버그 버튼 노출(공개 전 제거)
         run: npx expo export --platform web
 
       - name: Patch PWA
