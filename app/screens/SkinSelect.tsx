@@ -31,7 +31,9 @@ const SCREEN_W = Dimensions.get('window').width;
 const GRID_GAP = spacing.xs;
 const COLS = SCREEN_W >= 600 ? 6 : SCREEN_W >= 430 ? 5 : 4;
 const CELL_W = Math.floor((SCREEN_W - spacing.md * 2 - GRID_GAP * (COLS - 1)) / COLS);
-const THUMB_W = Math.round(CELL_W * 0.86);
+const CELL_ASPECT = 1.23;                                   // 카드 width:height (styles.cell와 동일)
+const THUMB_W = Math.round(CELL_W * 0.86);                  // 썸네일 = 카드 폭 86%
+const THUMB_H = Math.round((CELL_W / CELL_ASPECT) * 0.92);  // 카드 높이의 92% — 세로 큰 스킨(메달) 잘림 방지
 
 const CREAM = 'rgba(250,245,235,0.92)';
 const CREAM_SELECTED = 'rgba(255,252,244,0.97)';
@@ -73,13 +75,14 @@ function BaseballAmount({ n, size = 16, color = colors.text }: { n: number; size
   );
 }
 
-function SkinThumb({ skin, teamColor, targetW }: { skin: ScoreSkin; teamColor: string; targetW: number }) {
+function SkinThumb({ skin, teamColor, targetW, maxH }: { skin: ScoreSkin; teamColor: string; targetW: number; maxH?: number }) {
   const isAsset = skin.kind === 'asset';
   const assetKey = skin.kind === 'asset' ? skin.assetKey : '';
   const frameCfg = skin.kind === 'asset' && skin.renderType === 'imageFrame' ? getImageFrameConfig(skin.assetKey) : undefined;
   const nW = frameCfg ? frameCfg.widths.hero : isAsset ? 128 : 88;
   const nH = frameCfg ? Math.round(frameCfg.widths.hero / frameCfg.aspect) : isAsset ? 96 : 85;
-  const scale = targetW / nW;
+  // 폭·높이 둘 다 맞추는 contain 스케일 — 세로 큰 스킨(메달)이 카드 높이를 넘어 잘리지 않게.
+  const scale = maxH ? Math.min(targetW / nW, maxH / nH) : targetW / nW;
   return (
     <View style={{ width: targetW, height: Math.round(nH * scale), alignItems: 'center', justifyContent: 'center' }}>
       <View style={{ transform: [{ scale }] }}>
@@ -231,7 +234,7 @@ export default function SkinSelect() {
                           <View style={[styles.selectedTint, { backgroundColor: accent }]} pointerEvents="none" />
                         )}
                         <View style={[styles.thumbBox, showPrice && styles.thumbLocked]}>
-                          <SkinThumb skin={s} teamColor={accent} targetW={THUMB_W} />
+                          <SkinThumb skin={s} teamColor={accent} targetW={THUMB_W} maxH={THUMB_H} />
                         </View>
                         {selected && (
                           <View style={[styles.check, { backgroundColor: accent }]}>
