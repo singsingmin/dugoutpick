@@ -75,8 +75,8 @@ export const IMAGE_FRAME_ASSETS: Record<string, ImageFrameConfig> = {
   nameplateDugout: {
     source: require('../assets/nameplate-frame.webp'),
     aspect: 1230 / 666,        // ≈1.847 (가로형 명패)
-    numberCenterX: 0.49,
-    numberCenterY: 0.54,       // 상단 공·별 장식 아래 크림 명패 중심
+    numberCenterX: 0.51,       // 살짝 우측
+    numberCenterY: 0.56,       // 상단 공·별 장식 아래 크림 명패 중심(살짝 아래)
     numberColor: '#2F4A32',    // 크림 명패 → 더그아웃 그린 잉크
     fontRatio: 0.34,
     threeDigitScale: 0.72,
@@ -90,8 +90,8 @@ export const IMAGE_FRAME_ASSETS: Record<string, ImageFrameConfig> = {
   lineupCard: {
     source: require('../assets/lineup-frame.webp'),
     aspect: 1131 / 916,        // ≈1.235
-    numberCenterX: 0.48,       // 우측 연필만큼 카드 중심이 살짝 좌측
-    numberCenterY: 0.52,       // 상단 클립 아래 카드 중심
+    numberCenterX: 0.50,       // 살짝 우측
+    numberCenterY: 0.54,       // 상단 클립 아래 카드 중심(살짝 아래)
     numberColor: '#2C3E6B',    // 크림 카드 → 네이비 펜 잉크
     fontRatio: 0.36,
     threeDigitScale: 0.72,
@@ -105,7 +105,7 @@ export const IMAGE_FRAME_ASSETS: Record<string, ImageFrameConfig> = {
   tacticBoard: {
     source: require('../assets/tacticboard-frame.webp'),
     aspect: 1200 / 968,        // ≈1.240
-    numberCenterX: 0.50,
+    numberCenterX: 0.52,       // 살짝 우측
     numberCenterY: 0.47,       // 상단 크림 보드 중심(하단 작전 다이어그램 제외)
     numberColor: '#26402C',    // 크림 보드 → 딥 그린 분필
     fontRatio: 0.32,
@@ -121,7 +121,7 @@ export const IMAGE_FRAME_ASSETS: Record<string, ImageFrameConfig> = {
     source: require('../assets/gate-frame.webp'),
     aspect: 1241 / 839,        // ≈1.479
     numberCenterX: 0.50,
-    numberCenterY: 0.47,       // 상단 깃발·아치 아래 크림 사인 중심
+    numberCenterY: 0.49,       // 상단 깃발·아치 아래 크림 사인 중심(살짝 아래)
     numberColor: '#2C3E6B',    // 크림 사인 → 네이비 잉크
     fontRatio: 0.28,
     threeDigitScale: 0.72,
@@ -136,7 +136,7 @@ export const IMAGE_FRAME_ASSETS: Record<string, ImageFrameConfig> = {
     source: require('../assets/speedgun-frame.webp'),
     aspect: 1114 / 889,        // ≈1.253
     numberCenterX: 0.50,
-    numberCenterY: 0.54,       // 검은 도트매트릭스 디스플레이 중심(하단 MPH 라벨 위)
+    numberCenterY: 0.51,       // 검은 도트매트릭스 디스플레이 중심(살짝 위, 하단 MPH 라벨 위)
     numberColor: '#8DF06A',    // 어두운 디스플레이 → 밝은 LED 그린(유일한 밝은 숫자)
     fontRatio: 0.34,
     threeDigitScale: 0.72,
@@ -152,8 +152,8 @@ export const IMAGE_FRAME_ASSETS: Record<string, ImageFrameConfig> = {
   mvpTrophy: {
     source: require('../assets/trophy-frame.webp'),
     aspect: 1097 / 1090,       // ≈1.006 (거의 정사각)
-    numberCenterX: 0.50,
-    numberCenterY: 0.44,       // 상단 원형 명판 중심(하단 트로피·배트 위)
+    numberCenterX: 0.52,       // 살짝 우측
+    numberCenterY: 0.46,       // 상단 원형 명판 중심(살짝 아래, 하단 트로피·배트 위)
     numberColor: '#26365F',    // 크림 명판 → 네이비 잉크
     fontRatio: 0.30,
     threeDigitScale: 0.72,
@@ -167,8 +167,8 @@ export const IMAGE_FRAME_ASSETS: Record<string, ImageFrameConfig> = {
   champRing: {
     source: require('../assets/ring-frame.webp'),
     aspect: 1054 / 974,        // ≈1.082
-    numberCenterX: 0.49,
-    numberCenterY: 0.46,       // 다이아 링 중앙 크림 명판
+    numberCenterX: 0.51,       // 살짝 우측
+    numberCenterY: 0.48,       // 다이아 링 중앙 크림 명판(살짝 아래)
     numberColor: '#26365F',    // 크림 명판 → 네이비 잉크
     fontRatio: 0.26,
     threeDigitScale: 0.72,
