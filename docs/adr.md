@@ -115,7 +115,8 @@
 - **결정 ③ smooth:** 30초 폴링 기준 상승은 즉시, 하락은 폴당 최대 15점. 역전 직후 급락 체감 완화. 경기 종료 시 미적용.
 - **결정 ③b 역전/동점 이벤트 보너스(2026-07):** momentum이 절대 점수차 변화만 봐서 "역전=드라마"인데 오히려 heat가 떨어지던 문제. **부호 있는 점수차**(홈-원정)의 뒤집힘으로 역전(leadChange)·동점(tieMade)을 감지해 이벤트 보너스 부여 — 역전 기본 10(후반14·9회18·9회말/연장말22)×점수차 multiplier(1점차1.0→4점차+0.25), 동점 +6. **~2분 시간 decay**(30초 단위 1.0→0.7→0.45→0.25→0). 추격(점수차 좁힘)은 이벤트 없을 때만 적용. 이벤트 상태는 앱 display 층(`useLiveHeatDisplay` ref)이 보유(Worker 무상태 유지).
   - **라벨 우선(결정 1):** leadChange 이벤트 라벨(방금 역전!/후반 역전 드라마/9회 역전극/연장 역전극/끝내기 역전극)은 정적 상황 라벨보다 강한 이벤트라 **최상위 raw 라벨도 override**(force). 동점("방금 동점!")은 override 안 함.
-  - **끝내기 post-game highlight(결정 2):** 9회말/연장말 역전으로 홈팀이 리드하며 끝난 경기는 FINAL 전환(live=null) 후에도 **2분간 "끝내기 역전극" 라벨+직전 heat 유지**(모듈 레벨 `walkoffHighlights` 레지스트리, Today가 해당 게임을 '지금 볼 각'에 계속 노출). "종료 시 momentum/smooth 미적용" 원칙의 예외 = 종료 직전 major moment의 짧은 하이라이트. 한계: 역전과 동시에 곧장 FINAL로 넘어가 LIVE 스냅샷을 못 잡으면 미등록(폴링 특성).
+  - **끝내기 이벤트(결정 2·보완):** ① **역전 끝내기**(9회말/연장말 지다가 리드, leadChange) = "끝내기 역전극". ② **동점 끝내기(sayonara)**(9회말/연장말 동점→홈 리드, `prevSigned===0 && currSigned>0`) = "끝내기!" **+14, force** — raw 공식은 동점(closeF 1.0)이 1점차(0.94)보다 높아 끝내기 순간 heat가 오히려 떨어지는 사각지대를 momentum 층이 보정(clamp 100). 둘 다 FINAL 후 **2분 highlight 유지**(`walkoffHighlights`, Today가 '지금 볼 각'에 계속 노출).
+  - **FINAL 전환 추론:** 역전/끝내기와 동시에 곧장 FINAL이라 LIVE 스냅샷을 못 잡은 경우도, `lastLiveState`(마지막 LIVE 이닝/점수, 모듈 레벨) 기준으로 "직전 9말/연장말 동점 or 홈 열세 + 최종 홈 승"이면 `inferWalkoffOnFinal()`이 highlight를 게임당 1회 추론 등록(Today가 매 로드 시 호출). "종료 시 momentum/smooth 미적용" 원칙의 예외 = 종료 직전 major moment 하이라이트.
 - **결정 ④ 중복:** raw core는 Worker(TS)와 build.mjs(ESM)에 **복제 유지**(빌드 구조 차이). 대신 `data-pipeline/liveHeatCore.mjs` 순수 모듈 + `test/liveheat.test.mjs` 골든 테이블로 양쪽 결과가 어긋나지 않게 가드. 추후 `shared/liveHeatCore`로 단일화.
 - **의도:** 야구팬 체감(박빙·추격·끝내기)에 맞추되 Worker 무상태 단순함을 유지. 경기 전 꿀잼지수(frozen)와는 끝까지 분리.
 

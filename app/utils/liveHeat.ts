@@ -53,6 +53,29 @@ export function getActiveWalkoff(gameId: string): string | null {
   if (Date.now() >= w.expiresAt) { walkoffHighlights.delete(gameId); return null; }
   return w.label;
 }
+
+// 마지막 LIVE 상태(이닝/half/점수) — FINAL 전환 끝내기 추론용. LiveCard 언마운트에도 생존(모듈 레벨).
+const lastLiveState = new Map<string, { inning: number; half: string; homeScore: number; awayScore: number }>();
+const inferredWalkoffs = new Set<string>();
+
+// FINAL인데 LIVE 스냅샷을 못 잡은 끝내기 추론: 직전이 9회말/연장말 동점 또는 홈 열세였고
+// 최종 점수가 홈팀 승리면 walkoff highlight를 추론 등록(게임당 1회). (결정: 동점→끝내기 보완)
+export function inferWalkoffOnFinal(game: Game): void {
+  if (game.status !== 'FINAL') return;
+  if (inferredWalkoffs.has(game.gameId) || getActiveWalkoff(game.gameId)) return;
+  const prev = lastLiveState.get(game.gameId);
+  if (!prev) return;
+  const homeWin = (game.home.score ?? 0) > (game.away.score ?? 0);
+  const prevBottomLate = prev.inning >= 9 && prev.half === 'B';
+  const prevSigned = prev.homeScore - prev.awayScore;   // 홈-원정
+  if (homeWin && prevBottomLate && prevSigned <= 0) {    // 직전 동점 or 홈 열세 → 끝내기 승
+    inferredWalkoffs.add(game.gameId);
+    walkoffHighlights.set(game.gameId, {
+      label: prevSigned < 0 ? '끝내기 역전극' : '끝내기!',
+      expiresAt: Date.now() + WALKOFF_HOLD_MS,
+    });
+  }
+}
 // 역전 후 점수차 multiplier(0=동점도 1.0 — 최대 긴장).
 function gapMultiplier(diff: number): number {
   if (diff <= 1) return 1.0;
@@ -119,10 +142,14 @@ export function useLiveHeatDisplay(game: Game): LiveDisplay {
     const havePrev = prev.prevAway != null && prev.prevHome != null;
     const prevSigned = havePrev ? (prev.prevHome as number) - (prev.prevAway as number) : null;
     const prevDiff = prevSigned != null ? Math.abs(prevSigned) : null;
+    const bottomLate = (lv.inning ?? 0) >= 9 && lv.half === 'B';   // 9회말/연장말
+    // FINAL 전환 추론용으로 이번 LIVE 상태 기록(언마운트에도 생존).
+    lastLiveState.set(game.gameId, { inning: lv.inning ?? 0, half: lv.half ?? '', homeScore: home, awayScore: away });
 
-    // 1) 이번 폴에서 새 이벤트(역전/동점) 감지 — 부호 기반.
+    // 1) 이번 폴에서 새 이벤트(역전/끝내기/동점) 감지 — 부호 기반.
     if (prevSigned != null) {
       const leadChange = prevSigned !== 0 && currSigned !== 0 && Math.sign(prevSigned) !== Math.sign(currSigned);
+      const sayonaraFromTie = bottomLate && prevSigned === 0 && currSigned > 0;   // 동점→홈 리드로 끝내기
       const tieMade = prevSigned !== 0 && currSigned === 0;
       if (leadChange) {
         const { label: rl, force } = reversalLabel(lv.inning, lv.half);
@@ -131,9 +158,15 @@ export function useLiveHeatDisplay(game: Game): LiveDisplay {
         prev.evtLabel = rl;
         prev.evtForce = force;
         // 끝내기 역전(9회말/연장말 + 홈 리드) → 종료 후 2분 highlight 등록
-        if ((lv.inning ?? 0) >= 9 && lv.half === 'B' && currSigned > 0) {
+        if (bottomLate && currSigned > 0) {
           walkoffHighlights.set(game.gameId, { label: '끝내기 역전극', expiresAt: now + WALKOFF_HOLD_MS });
         }
+      } else if (sayonaraFromTie) {
+        prev.evtAt = now;
+        prev.evtBonus = 14;                               // 끝내기(동점→리드) +14
+        prev.evtLabel = '끝내기!';
+        prev.evtForce = true;
+        walkoffHighlights.set(game.gameId, { label: '끝내기!', expiresAt: now + WALKOFF_HOLD_MS });
       } else if (tieMade) {
         prev.evtAt = now;
         prev.evtBonus = 6 * gapMultiplier(0);            // 동점 +6

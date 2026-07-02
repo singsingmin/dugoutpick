@@ -10,7 +10,7 @@ import { loadGames } from '../data/load';
 import { getCheerTeam } from '../data/team';
 import GameCard from '../components/GameCard';
 import LiveCard from '../components/LiveCard';
-import { getActiveWalkoff } from '../utils/liveHeat';
+import { getActiveWalkoff, inferWalkoffOnFinal } from '../utils/liveHeat';
 import ScreenHeader from '../components/ScreenHeader';
 import SectionLabel from '../components/SectionLabel';
 import type { AppIconName } from '../components/AppIcon';
@@ -45,6 +45,8 @@ export default function Today() {
         dataRef.current = chosen;
         setData(chosen);
         setFailed(false);
+        // FINAL 전환 끝내기 추론(LIVE 스냅샷 못 잡은 경우 walkoff highlight 등록).
+        chosen.games.forEach((g) => inferWalkoffOnFinal(g));
         const hasLive = chosen.games.some((g) => g.status === 'LIVE');
         const anyWalkoff = chosen.games.some((g) => !!getActiveWalkoff(g.gameId));
         const allDone = chosen.games.length > 0 && chosen.games.every((g) => g.status === 'FINAL' || g.status === 'CANCELED');
