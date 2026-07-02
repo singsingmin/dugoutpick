@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-02T12:20:29.073Z",
+  "updatedAt": "2026-07-02T12:40:26.864Z",
   "lastWeek": {
     "range": [
       "20260622",
@@ -95,8 +95,8 @@
       {
         "away": "NC",
         "home": "HT",
-        "pred": 62,
-        "reason": "게임차 6의 순위 다툼",
+        "pred": 58,
+        "reason": "게임차 6.5의 순위 다툼",
         "dateStart": "20260703",
         "dateEnd": "20260705"
       },
@@ -363,7 +363,9 @@
         {
           "date": "20260703",
           "away": "HH",
-          "home": "LG"
+          "home": "LG",
+          "awayStarter": "화이트",
+          "homeStarter": "웰스"
         },
         {
           "date": "20260704",
@@ -463,7 +465,9 @@
         {
           "date": "20260703",
           "away": "HH",
-          "home": "LG"
+          "home": "LG",
+          "awayStarter": "화이트",
+          "homeStarter": "웰스"
         },
         {
           "date": "20260704",
