@@ -224,7 +224,7 @@ const styles = StyleSheet.create({
   spark: { fontSize: 18 },
   section: { marginTop: spacing.sm },
   sectionHeader: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
-  lineupBtn: { borderRadius: border.radius, paddingHorizontal: spacing.sm, paddingVertical: 2 },
+  lineupBtn: { borderRadius: border.radius, borderWidth: 1, borderColor: colors.border, paddingHorizontal: spacing.sm, paddingVertical: 2 },
   starterRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around' },
   pitcherCol: { alignItems: 'center', gap: spacing.xs, flex: 1 },
   pitcherName: { marginTop: spacing.xs },
