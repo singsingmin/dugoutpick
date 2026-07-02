@@ -26,8 +26,8 @@ export const IMAGE_FRAME_ASSETS: Record<string, ImageFrameConfig> = {
   ticketRetro: {
     source: require('../assets/ticket-frame.webp'),
     aspect: 1176 / 714,        // ≈1.647 (2D 교체본, 크롭 실측)
-    numberCenterX: 0.40,       // 좌측 메인 패널 중심(우측 스텁 제외)
-    numberCenterY: 0.47,       // 상단 꿀잼지수 배너 아래 ~ 하단 엠블럼 위 빈칸
+    numberCenterX: 0.42,       // 좌측 메인 패널 중심(우측 스텁 제외, 살짝 우측)
+    numberCenterY: 0.49,       // 상단 꿀잼지수 배너 아래 ~ 하단 엠블럼 위 빈칸(살짝 아래)
     numberColor: '#B23A2E',    // 크림 바탕 → 레트로 레드 스탬프
     fontRatio: 0.40,           // 빈칸 대비 스탬프 존재감(+약 5%)
     threeDigitScale: 0.72,
@@ -42,7 +42,7 @@ export const IMAGE_FRAME_ASSETS: Record<string, ImageFrameConfig> = {
   homePlate: {
     source: require('../assets/homeplate-frame.webp'),
     aspect: 1078 / 1033,       // ≈1.044 (2D 교체본, 거의 정사각)
-    numberCenterX: 0.50,       // 좌우 대칭 → 중앙
+    numberCenterX: 0.52,       // 살짝 우측
     numberCenterY: 0.51,       // 상단 HOME PLATE 배너 아래 ~ 하단 야구공 위 크림 빈칸
     numberColor: '#2C3E6B',    // 크림 바탕 + 네이비 테두리 → 네이비 스탬프
     fontRatio: 0.34,
@@ -58,8 +58,8 @@ export const IMAGE_FRAME_ASSETS: Record<string, ImageFrameConfig> = {
   medalSpecial: {
     source: require('../assets/medal-frame.webp'),
     aspect: 1153 / 1234,       // ≈0.934 (2D 교체본, 월계관 링·세로형)
-    numberCenterX: 0.50,
-    numberCenterY: 0.53,       // 투명 링 홀 중심 — 상단 꿀잼지수 배너 아래
+    numberCenterX: 0.52,       // 살짝 우측
+    numberCenterY: 0.55,       // 투명 링 홀 중심 — 상단 꿀잼지수 배너 아래(살짝 아래)
     numberColor: '#26365F',    // 투명 링 뒤=크림 카드 → 네이비(메달 네이비 밴드와 조화)
     fontRatio: 0.30,           // 링 원 안에 여유있게
     threeDigitScale: 0.72,
@@ -76,7 +76,7 @@ export const IMAGE_FRAME_ASSETS: Record<string, ImageFrameConfig> = {
     source: require('../assets/nameplate-frame.webp'),
     aspect: 1192 / 612,        // ≈1.948 (가로형 명패)
     numberCenterX: 0.50,
-    numberCenterY: 0.55,       // 상단 공·별 장식 아래 크림 명패 중심
+    numberCenterY: 0.57,       // 상단 공·별 장식 아래 크림 명패 중심(살짝 아래)
     numberColor: '#2F4A32',    // 크림 명패 → 더그아웃 그린 잉크
     fontRatio: 0.34,
     threeDigitScale: 0.72,
@@ -91,7 +91,7 @@ export const IMAGE_FRAME_ASSETS: Record<string, ImageFrameConfig> = {
     source: require('../assets/lineup-frame.webp'),
     aspect: 1054 / 935,        // ≈1.127
     numberCenterX: 0.50,
-    numberCenterY: 0.52,       // 상단 클립 아래 카드 중심
+    numberCenterY: 0.54,       // 상단 클립 아래 카드 중심(살짝 아래)
     numberColor: '#2C3E6B',    // 크림 카드 → 네이비 펜 잉크
     fontRatio: 0.36,
     threeDigitScale: 0.72,
@@ -120,8 +120,8 @@ export const IMAGE_FRAME_ASSETS: Record<string, ImageFrameConfig> = {
   ballparkGate: {
     source: require('../assets/gate-frame.webp'),
     aspect: 1118 / 863,        // ≈1.296
-    numberCenterX: 0.50,
-    numberCenterY: 0.48,       // 상단 깃발·아치 아래 크림 사인 중심
+    numberCenterX: 0.52,       // 살짝 우측
+    numberCenterY: 0.50,       // 상단 깃발·아치 아래 크림 사인 중심(살짝 아래)
     numberColor: '#2C3E6B',    // 크림 사인 → 네이비 잉크
     fontRatio: 0.30,
     threeDigitScale: 0.72,
@@ -135,8 +135,8 @@ export const IMAGE_FRAME_ASSETS: Record<string, ImageFrameConfig> = {
   speedgunBoard: {
     source: require('../assets/speedgun-frame.webp'),
     aspect: 1074 / 833,        // ≈1.289
-    numberCenterX: 0.50,
-    numberCenterY: 0.52,       // 검은 도트매트릭스 디스플레이 중심(하단 MPH 라벨 위)
+    numberCenterX: 0.52,       // 살짝 우측
+    numberCenterY: 0.50,       // 검은 도트매트릭스 디스플레이 중심(살짝 위, 하단 MPH 라벨 위)
     numberColor: '#8DF06A',    // 어두운 디스플레이 → 밝은 LED 그린(유일한 밝은 숫자)
     fontRatio: 0.34,
     threeDigitScale: 0.72,
@@ -152,8 +152,8 @@ export const IMAGE_FRAME_ASSETS: Record<string, ImageFrameConfig> = {
   mvpTrophy: {
     source: require('../assets/trophy-frame.webp'),
     aspect: 969 / 1031,        // ≈0.940 (2D 교체본, 세로형)
-    numberCenterX: 0.50,
-    numberCenterY: 0.47,       // 상단 타원 명판 중심(하단 트로피·배트·명패 위)
+    numberCenterX: 0.52,       // 살짝 우측
+    numberCenterY: 0.45,       // 상단 타원 명판 중심(살짝 위, 하단 트로피·배트·명패 위)
     numberColor: '#26365F',    // 크림 명판 → 네이비 잉크
     fontRatio: 0.30,
     threeDigitScale: 0.72,
@@ -167,8 +167,8 @@ export const IMAGE_FRAME_ASSETS: Record<string, ImageFrameConfig> = {
   champRing: {
     source: require('../assets/ring-frame.webp'),
     aspect: 982 / 995,         // ≈0.987 (2D 교체본)
-    numberCenterX: 0.50,
-    numberCenterY: 0.49,       // 다이아 링 중앙 크림 명판
+    numberCenterX: 0.52,       // 살짝 우측
+    numberCenterY: 0.51,       // 다이아 링 중앙 크림 명판(살짝 아래)
     numberColor: '#26365F',    // 크림 명판 → 네이비 잉크
     fontRatio: 0.26,
     threeDigitScale: 0.72,
