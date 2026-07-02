@@ -1,7 +1,7 @@
 {
   "date": "20260702",
   "dateText": "2026년 7월 2일",
-  "updatedAt": "2026-07-02T11:40:26.625Z",
+  "updatedAt": "2026-07-02T12:00:40.070Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 29,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
+        "inning": 4,
         "half": "B",
         "out": 2,
-        "b1": true,
+        "b1": false,
         "b2": false,
-        "b3": true,
+        "b3": false,
         "pitcher": "나균안",
-        "batter": "박준순",
-        "heat": 43,
+        "batter": "박찬호",
+        "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -199,7 +199,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "네일",
           "era": 3.15,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
+        "inning": 8,
         "half": "T",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이형범",
-        "batter": "에레디아",
-        "heat": 50,
+        "pitcher": "정해영",
+        "batter": "오태곤",
+        "heat": 67,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
+        "inning": 8,
         "half": "B",
-        "out": 1,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이승민",
-        "batter": "신재인",
-        "heat": 25,
+        "pitcher": "최지광",
+        "batter": "박민우",
+        "heat": 27,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -517,7 +517,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 3,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "오원석",
           "era": 5.23,
@@ -529,7 +529,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 13,
+        "score": 14,
         "starter": {
           "name": "왕옌청",
           "era": 3.59,
@@ -561,14 +561,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "half": "B",
+        "out": 2,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "강재민",
-        "batter": "류현인",
-        "heat": 3,
+        "pitcher": "배제성",
+        "batter": "문현빈",
+        "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
       "recap": null,
@@ -725,16 +725,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
+        "inning": 9,
         "half": "T",
-        "out": 1,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "박지성",
-        "batter": "문보경",
-        "heat": 65,
-        "label": "후반 박빙 승부"
+        "batter": "신민재",
+        "heat": 81,
+        "label": "9회 1점 승부"
       },
       "recap": null,
       "decision": null,
