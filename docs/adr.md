@@ -19,7 +19,7 @@
 
 ### ADR-003 — KBO 비공식 내부 엔드포인트 사용
 - **맥락:** 공식 API 없음. 후보: ①공식 동적페이지(Playwright 필요) ②비공식 내부 엔드포인트 ③유료 API.
-- **결정:** ②. `Main.asmx/GetKboGameList`(경기·선발·순위, POST JSON) + 순위/투수 페이지(GET HTML). 전부 **단순 HTTP, 브라우저 불필요**(스파이크로 검증).
+- **결정:** ②. `Main.asmx/GetKboGameList`(경기·선발·스코어, POST JSON) + 팀순위(`TeamRankDaily.aspx`)·투수ERA(`PitcherBasic`/개별 `PitcherDetail`) 페이지(GET HTML). 이후 일정(`Schedule.asmx/GetScheduleList`)·라인업(`Schedule.asmx/GetLineUpAnalysis`) POST 추가 → 총 5개 소스. 전부 **단순 HTTP, 브라우저 불필요**(스파이크로 검증). 정밀 목록은 code-architecture.md.
 - **의도/리스크:** 비공식이라 깨질 수 있음 → ADR-002 파이프라인 구조가 리스크를 격리(앱 영향 없음, 스크립트만 수정). mykbostats는 403 차단으로 제외.
 
 ### ADR-004 — 꿀잼지수: 규칙 기반 (AI 아님)

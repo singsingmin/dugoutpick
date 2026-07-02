@@ -34,7 +34,11 @@ DugoutPick/
 ```
 
 ## 파이프라인 (data-pipeline/build.mjs)
-- 입력: KBO 3개 엔드포인트(소스는 data-schema.md). 전부 단순 HTTP, 브라우저 불필요.
+- 입력: KBO 5개 소스(전부 koreabaseball.com 비공식 HTTP, 브라우저 불필요):
+  ① 경기목록·선발·스코어 `Main.asmx/GetKboGameList`(POST) ② 팀순위 `Record/TeamRank/TeamRankDaily.aspx`(GET)
+  ③ 투수ERA `Record/Player/PitcherBasic/Basic1.aspx`(GET, 규정미달은 개별 `PitcherDetail/Basic.aspx?playerId=`로 보완)
+  ④ 일정 `Schedule.asmx/GetScheduleList`(POST, 월요/주간) ⑤ 라인업 `Schedule.asmx/GetLineUpAnalysis`(POST, 타순).
+  Worker는 ①을 라이브 점수용으로 재사용.
 - 처리: 순위표→팀별 지표 맵 / 경기+선발 / 투수ERA맵 → `computeHonjam()`으로 점수·이유·관전포인트 생성.
 - 산출물: `games.json`(오늘 경기 + 꿀잼지수 + 트랙레코드 임베드), `standings.json`, `teams.json`, `recent.json`(팀별 최근 결과), `report.json`(월요 리포트), `recap-history.json`(누적 적중률, append-only).
 - 꿀잼지수 로직은 **이 파일에 응집**(앱과 공유 안 함 — 앱은 결과만 소비). 공식 튜닝 시 앱 재배포 불필요.

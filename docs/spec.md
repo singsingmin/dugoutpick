@@ -77,7 +77,7 @@ native-stack + bottom-tabs 조합. 화면명은 `app/navigation/` 및 `app/scree
 - 환경 분기는 `data/config.ts` **한 곳**에만 격리.
 
 ## 6. 파이프라인 계약 (`data-pipeline/build.mjs`)
-- 입력: KBO 3개 HTTP 엔드포인트(브라우저 불필요). 처리: 순위→지표맵 / 경기+선발 / 투수ERA맵 → `computeHonjam()`.
+- 입력: KBO 5개 HTTP 소스(브라우저 불필요) — 경기목록·선발·스코어 / 팀순위 / 투수ERA(규정미달 개별 보완) / 일정(월요·주간) / 라인업(타순). 처리: 순위→지표맵 / 경기+선발 / 투수ERA맵 → `computeHonjam()`.
 - 꿀잼지수 로직은 이 파일에 **응집**(앱과 공유 안 함). 공식 튜닝 시 앱 재배포 불필요.
 - **실패 시 exit 1** → Actions 가 커밋 안 함 → 앱은 직전 JSON 유지.
 - teams 단일 출처 = `data-pipeline/teams.mjs` → `teams.json`.
