@@ -70,17 +70,19 @@ export default function Settings() {
           <TrackRecordBadge track={trackRecord} variant="settings" />
         </View>
 
-        {/* 개발/테스트용 — 추후 제거 */}
-        <View style={styles.section}>
-          <SectionLabel label="야구공 (테스트)" />
-          <Panel>
-            <PixelText variant="body">현재 잔액: {baseballBalance}</PixelText>
-            <View style={styles.debugRow}>
-              <PixelButton label="야구공 +100" onPress={() => { void addBaseballs(100); }} style={styles.debugBtn} />
-              <PixelButton label="초기화" accentColor={colors.bad} onPress={() => { void resetProgress(); }} style={styles.debugBtn} />
-            </View>
-          </Panel>
-        </View>
+        {/* 개발/테스트용 — dev 빌드에서만 노출(출시 빌드 미노출) */}
+        {__DEV__ && (
+          <View style={styles.section}>
+            <SectionLabel label="야구공 (테스트)" />
+            <Panel>
+              <PixelText variant="body">현재 잔액: {baseballBalance}</PixelText>
+              <View style={styles.debugRow}>
+                <PixelButton label="야구공 +100" onPress={() => { void addBaseballs(100); }} style={styles.debugBtn} />
+                <PixelButton label="초기화" accentColor={colors.bad} onPress={() => { void resetProgress(); }} style={styles.debugBtn} />
+              </View>
+            </Panel>
+          </View>
+        )}
 
         <View style={styles.section}>
           <SectionLabel label="앱 정보" />

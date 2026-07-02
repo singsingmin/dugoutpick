@@ -384,7 +384,7 @@ const styles = StyleSheet.create({
   },
   selectedTint: { ...StyleSheet.absoluteFillObject, opacity: 0.08 },
   thumbBox: { alignItems: 'center', justifyContent: 'center' },
-  thumbLocked: { opacity: 0.5 },   // 미보유는 살짝 흐리게
+  thumbLocked: { opacity: 0.72 },   // 미보유는 살짝만 흐리게(스킨 매력 유지)
   check: {
     position: 'absolute',
     top: 4,
@@ -400,7 +400,9 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 4,
     right: 4,
-    backgroundColor: 'rgba(30,24,12,0.82)',
+    backgroundColor: '#4A3826',   // 앱 톤 진한 브라운
+    borderWidth: 1,
+    borderColor: colors.border,
     borderRadius: 999,
     paddingHorizontal: 5,
     paddingVertical: 1,
