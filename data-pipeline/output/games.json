@@ -1,7 +1,7 @@
 {
   "date": "20260702",
   "dateText": "2026년 7월 2일",
-  "updatedAt": "2026-07-02T13:00:47.597Z",
+  "updatedAt": "2026-07-02T13:10:27.807Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 33,
@@ -65,14 +65,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 1,
+        "inning": 7,
+        "half": "T",
+        "out": 2,
         "b1": true,
         "b2": true,
-        "b3": true,
-        "pitcher": "이진하",
-        "batter": "박준순",
+        "b3": false,
+        "pitcher": "박치국",
+        "batter": "박찬형",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },

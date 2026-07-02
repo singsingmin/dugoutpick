@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-02T13:00:47.597Z",
+  "updatedAt": "2026-07-02T13:10:27.807Z",
   "lastWeek": {
     "range": [
       "20260622",
@@ -32,7 +32,7 @@
         "l": 2,
         "d": 0,
         "rank": 4,
-        "note": "2연승 — 좀 더 달린다 — 이번주는 점프업 찬스"
+        "note": "3연승 — 좀 더 달린다 — 이번주는 점프업 찬스"
       },
       "HH": {
         "w": 4,
@@ -67,7 +67,7 @@
         "l": 5,
         "d": 0,
         "rank": 9,
-        "note": "5연패, 뭔가 터져야 한다"
+        "note": "6연패, 뭔가 터져야 한다"
       },
       "WO": {
         "w": 1,
@@ -103,8 +103,8 @@
       {
         "away": "NC",
         "home": "HT",
-        "pred": 58,
-        "reason": "게임차 6.5의 순위 다툼",
+        "pred": 59,
+        "reason": "게임차 7의 순위 다툼 · 양 팀 에이스 투수전(ERA 3.2·3.2)",
         "dateStart": "20260703",
         "dateEnd": "20260705"
       }
@@ -211,7 +211,9 @@
         {
           "date": "20260703",
           "away": "SS",
-          "home": "SK"
+          "home": "SK",
+          "awayStarter": "원태인",
+          "homeStarter": "해치"
         },
         {
           "date": "20260704",
@@ -249,7 +251,9 @@
         {
           "date": "20260703",
           "away": "NC",
-          "home": "HT"
+          "home": "HT",
+          "awayStarter": "구창모",
+          "homeStarter": "황동하"
         },
         {
           "date": "20260704",
@@ -287,7 +291,9 @@
         {
           "date": "20260703",
           "away": "SS",
-          "home": "SK"
+          "home": "SK",
+          "awayStarter": "원태인",
+          "homeStarter": "해치"
         },
         {
           "date": "20260704",
@@ -325,7 +331,9 @@
         {
           "date": "20260703",
           "away": "NC",
-          "home": "HT"
+          "home": "HT",
+          "awayStarter": "구창모",
+          "homeStarter": "황동하"
         },
         {
           "date": "20260704",
