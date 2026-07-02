@@ -1,7 +1,7 @@
 {
   "date": "20260702",
   "dateText": "2026년 7월 2일",
-  "updatedAt": "2026-07-02T13:40:31.048Z",
+  "updatedAt": "2026-07-02T13:50:27.323Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 33,
@@ -34,7 +34,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 6,
+        "score": 8,
         "starter": {
           "name": "곽빈",
           "era": 2.89,
@@ -67,13 +67,13 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 1,
+        "out": 3,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "김강현",
-        "batter": "김민석",
-        "heat": 45,
+        "batter": "안재석",
+        "heat": 14,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
