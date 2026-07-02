@@ -121,7 +121,7 @@ export const IMAGE_FRAME_ASSETS: Record<string, ImageFrameConfig> = {
     source: require('../assets/gate-frame.webp'),
     aspect: 1241 / 839,        // ≈1.479
     numberCenterX: 0.50,
-    numberCenterY: 0.49,       // 상단 깃발·아치 아래 크림 사인 중심(살짝 아래)
+    numberCenterY: 0.51,       // 상단 깃발·아치 아래 크림 사인 중심(살짝 아래·재조정)
     numberColor: '#2C3E6B',    // 크림 사인 → 네이비 잉크
     fontRatio: 0.28,
     threeDigitScale: 0.72,
@@ -168,7 +168,7 @@ export const IMAGE_FRAME_ASSETS: Record<string, ImageFrameConfig> = {
     source: require('../assets/ring-frame.webp'),
     aspect: 1054 / 974,        // ≈1.082
     numberCenterX: 0.51,       // 살짝 우측
-    numberCenterY: 0.48,       // 다이아 링 중앙 크림 명판(살짝 아래)
+    numberCenterY: 0.50,       // 다이아 링 중앙 크림 명판(살짝 아래·재조정)
     numberColor: '#26365F',    // 크림 명판 → 네이비 잉크
     fontRatio: 0.26,
     threeDigitScale: 0.72,
