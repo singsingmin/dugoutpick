@@ -24,11 +24,13 @@ native-stack + bottom-tabs 조합. 화면명은 `app/navigation/` 및 `app/scree
 | `Onboarding` | stack | — | 응원팀 선택(팀명+색상 그리드) → AsyncStorage 저장. 최초 1회 / 설정에서 재사용 |
 | `Tabs` | bottom-tabs | — | 기본 진입 = `Today` |
 | `Today` | tab | — | 추천 히어로(최고 꿀잼) + 지금 볼 각(LIVE) + 나머지 경기(꿀잼 높은 순) |
+| `Standings` | tab | — | 10팀 순위표 전체 |
 | `MyTeam` | tab | — | 피드형: 내 팀 다음경기 · 순위 · 최근결과 · 월요 리포트 |
-| `Settings` | tab | — | 응원팀 변경 · 꿀잼지수 스킨 · 데이터 갱신시각 · 앱 정보 |
+| `LockerRoom` | tab | — | 활동·꾸미기·보상 허브: 응원팀 변경 · 스킨 · 야구공 센터 (+ 우상단 톱니 → `Settings`) |
 | `GameDetail` | stack | `gameId: string` | 꿀잼지수 / reason / points / 선발 매치업 / 양팀 rank / 라인업 / (FINAL)결산·피드백 |
-| `Standings` | stack | — | 10팀 순위표 전체 |
-| `SkinSelect` | stack | — | 꿀잼지수 배지 스킨 선택(유니폼 3종 + 전광판). 탭=즉시 적용 |
+| `SkinSelect` | stack | — | 스킨 선택·구매. 보유=즉시 적용 / 미보유 currency=구매 모달(가격·잔액) |
+| `BaseballCenter` | stack | — | 야구공 잔액 · 출석 보상 · 7일 보드 · 거래내역(바텀시트) |
+| `Settings` | stack | — | 데이터 갱신 · 적중률 · (dev/preview 디버그) · 앱 정보. 라커룸 톱니로 진입 |
 
 분기 규칙: `Splash`에서 AsyncStorage 응원팀 있으면 `Tabs`, 없으면 `Onboarding`. (상세 → [flow.md](flow.md))
 
@@ -56,10 +58,17 @@ native-stack + bottom-tabs 조합. 화면명은 `app/navigation/` 및 `app/scree
 - 웹훅 URL: `app.config.js`의 `extra.discordWebhookUrl` 환경변수로 주입 (`.env.local` → `DISCORD_WEBHOOK_URL`)
 
 ## 4b. 꿀잼지수 배지 스킨 (ScoreSkin)
-- `ScoreSkinRenderer`가 선택 스킨의 `kind`로 분기: `jersey`(유니폼 SVG, `JerseyScoreBadge`) / `scoreboard`(레트로 전광판, `ScoreboardScoreBadge`).
-- 스킨 ID: `jersey.classic`/`jersey.pinstripe`/`jersey.cream`/`scoreboard.vintage` (`utils/scoreSkinConfig.ts` 단일 출처).
-- AsyncStorage 키 `user.scoreSkinId`. 구키 `user.uniformPreset`은 `normalizeScoreSkinId()`가 `jersey.*`로 마이그레이션.
+- `ScoreSkinRenderer`가 선택 스킨의 `kind`로 분기: `jersey`(유니폼 SVG, `JerseyScoreBadge`) / `asset`(고정 이미지+숫자 오버레이). asset은 `renderType`으로 재분기 — `scoreboard`(`ScoreboardScoreBadge`) / `imageFrame`(`ImageFrameScoreBadge`+`assetFrameConfig`).
+- 스킨 ID 예: `jersey.classic.team`·`jersey.stripe.red`·`scoreboard.vintage`·`ticket.retro`·`homeplate.retro`·`medal.special` (`utils/scoreSkinConfig.ts` 단일 출처, `styleId×paletteId`/assetKey 확장형).
+- AsyncStorage 키 `user.scoreSkinId`. 구키 `user.uniformPreset`은 `normalizeScoreSkinId()`가 마이그레이션.
 - 전역 상태는 `context/ScoreSkin.tsx`(Provider + `useScoreSkin`). 상세·제약 → ADR-019.
+
+## 4c. 야구공 재화·구매·출석 (로컬 MVP, ADR-022)
+- 계정·서버 없이 **로컬(AsyncStorage)** 로 구현한 UX 검증 단계. 재설치 시 소실(계정 前 한계, 정식 수익화 전 서버 이관 필수).
+- 스킨 `unlockType` `free`/`currency` + `price`(1~99). 가격: 컬러10·화이트15·줄무늬20·전광판/티켓/홈플레이트30·메달60, 기본 유니폼=free.
+- 보유 판정 = `free ∥ ownedSkinIds ∥ 적용중`. 구매 = 잔액 검증→차감→보유추가(모두 서버 X, 클라 로컬).
+- 출석(KST): 하루 1회 +5, 7일 연속 +20 보너스, 놓치면 streak 리셋. 거래는 `baseballTx`에 기록.
+- 로컬 키·거래 구조 → [data-schema.md](data-schema.md) "클라이언트 로컬 상태". 화면=`BaseballCenter`/`SkinSelect`.
 
 ## 5. 데이터 로딩 계약 (`app/data/`)
 - **dev/MVP 폴백**: `assets/data/*.json` 번들 import.

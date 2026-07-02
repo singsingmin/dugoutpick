@@ -10,9 +10,9 @@
      있음 → Today
 ```
 
-## 탭 네비게이션 (하단 3탭, 기본=Today)
+## 탭 네비게이션 (하단 4탭, 기본=Today)
 ```
-[⚾ 오늘경기 Today] [👤 내 팀 MyTeam] [⚙️ 설정 Settings]
+[⚾ 오늘경기 Today] [📊 순위 Standings] [👤 내 팀 MyTeam] [🎒 라커룸 LockerRoom]
 ```
 
 ## Today (오늘경기)
@@ -51,17 +51,34 @@ recommendedGameId = 히어로 카드(대형 꿀잼지수+한줄이유+양팀 배
   → 뒤로 → MyTeam
 ```
 
-## Settings (설정)
+## LockerRoom (라커룸 — 활동·꾸미기·보상 허브)
 ```
 응원팀 변경 → Onboarding 재사용(변경 후 저장)
 꿀잼지수 스킨 → SkinSelect
-데이터 갱신시각(games.updatedAt, KST) 표시
-앱 정보(버전)
+야구공 센터 → BaseballCenter
+우상단 톱니(⚙️) → Settings(실제 앱 설정)
 ```
 
-## SkinSelect (꿀잼지수 스킨 선택)
+## Settings (설정 — 라커룸 톱니로 진입, 스택)
 ```
-상단 미리보기(현재 선택 스킨 큰 배지) + 4종 카드 그리드(유니폼 클래식/핀스트라이프/크림 + 전광판)
-  → 카드 탭 → 즉시 적용(AsyncStorage user.scoreSkinId) + 화면 유지("사용 중" 표시)
-  → 뒤로 → Settings
+데이터 갱신시각(games.updatedAt, KST) · 꿀잼지수 적중률(trackRecord)
+(dev/preview 빌드) 야구공 테스트/초기화 디버그 · 앱 정보(버전)
+  → 뒤로 → LockerRoom
+```
+
+## SkinSelect (꿀잼지수 스킨 선택 + 구매)
+```
+현재적용 바(선택 스킨 + 우측 ⚾ 야구공 잔액 → 탭 시 BaseballCenter) + 카테고리 탭(전체/유니폼/야구장/스페셜)
++ 섹션 그리드(기본/컬러/화이트/줄무늬 유니폼 · 야구장 · 스페셜)
+  ? 보유 스킨 탭 → 즉시 적용(user.scoreSkinId)
+  ? 미보유 currency 스킨 탭 → 구매 모달(가격·잔액) → 구매 시 차감·보유·완료 모달(바로 적용)
+      ? 잔액 부족 → 부족 안내 모달
+  미보유 카드엔 ⚾가격 배지. → 뒤로 → LockerRoom
+```
+
+## BaseballCenter (야구공 센터 — 라커룸에서 진입)
+```
+현재 보유 야구공 · 오늘 출석 보상(하루 1회 +5, 7일 연속 +20, KST)
+연속 출석 현황 · 7일 출석 보드 · 최근 야구공 내역(→ 전체 내역 바텀시트, 최근 30일)
+  → 뒤로 → LockerRoom  (광고 보상은 추후 확장 슬롯)
 ```

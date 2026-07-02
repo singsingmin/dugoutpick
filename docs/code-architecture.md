@@ -57,9 +57,9 @@ DugoutPick/
 | 영역 | 선택 | 비고 |
 |---|---|---|
 | 언어 | **TypeScript** | phase별 `tsc --noEmit` 검증(ADR-012). data-schema를 `types.ts`로 명문화 |
-| 네비 | native-stack(Splash/Onboarding/GameDetail/SkinSelect) + bottom-tabs(Today/MyTeam/Settings) | `app/navigation/`. flow.md와 1:1 |
-| 상태(전역) | React Context 3종 — `TeamTheme`(응원팀 accent색), `ScoreSkin`(꿀잼지수 배지 스킨) | 라이브러리 없이 Context로 충분 |
-| 영속화 | 응원팀·스킨·피드백 = AsyncStorage / 데이터 = 로드+캐시 | ADR-011 |
+| 네비 | native-stack(Splash/Onboarding/GameDetail/SkinSelect/BaseballCenter/Settings) + bottom-tabs(Today/Standings/MyTeam/LockerRoom) | `app/navigation/`. flow.md와 1:1 |
+| 상태(전역) | React Context — `TeamTheme`(응원팀 accent색), `ScoreSkin`(선택 스킨 + 야구공 잔액·보유 스킨·출석·거래내역) | 라이브러리 없이 Context로 충분 |
+| 영속화 | 응원팀·스킨·피드백·야구공(잔액/보유/출석/거래) = AsyncStorage / 데이터 = 로드+캐시 | ADR-011/022 |
 | 데이터 로딩 | `REMOTE_BASE_URL`(Worker) fetch + AsyncStorage 캐시 → 번들 폴백 | 환경 분기 `data/config.ts` 1곳 |
 | 테마 | 8비트 도트: Galmuri11(expo-font), 토큰화한 `theme.ts`, 빈티지 라이트 팔레트 | ADR-009/013/015 |
 | 팀 색상 | teams.json `color` → `TeamTheme.accent` | 배지·테두리 액센트 동적 적용 |
@@ -71,21 +71,24 @@ app/
 ├─ theme.ts                # 8비트 디자인 토큰(색/폰트/보더/간격)
 ├─ types.ts                # data-schema의 TS 타입(단일 출처)
 ├─ navigation/             # RootNavigator(stack), Tabs(bottom-tabs), types
-├─ screens/                # Splash, Onboarding, Today, GameDetail, MyTeam, Standings, Settings, SkinSelect
-├─ components/             # GameCard, LiveCard, JerseyScoreBadge, ScoreboardScoreBadge,
-│                          #   ScoreSkinRenderer, GguljamScoreLabel, TrackRecordBadge,
+├─ screens/                # Splash, Onboarding, Today, GameDetail, MyTeam, Standings,
+│                          #   LockerRoom, Settings, SkinSelect, BaseballCenter
+├─ components/             # GameCard, LiveCard, JerseyScoreBadge, ScoreboardScoreBadge, ImageFrameScoreBadge,
+│                          #   ScoreSkinRenderer, GguljamScoreLabel, TrackRecordBadge, TxHistorySheet,
 │                          #   FeedbackWidget, MondayReport, LineupSheet, WeeklyScheduleSheet ...
-├─ context/               # TeamTheme.tsx, ScoreSkin.tsx  (※ UniformPreset.tsx는 죽은 코드 — ScoreSkin이 대체)
-├─ utils/                 # scoreSkinConfig.ts(스킨 정의·마이그레이션), uniformResolver.ts(유니폼 SVG 프리셋)
+├─ context/               # TeamTheme.tsx, ScoreSkin.tsx(스킨+야구공 재화·출석·거래)  (※ UniformPreset.tsx는 죽은 코드)
+├─ utils/                 # scoreSkinConfig.ts(스킨 정의·가격·마이그레이션), uniformResolver.ts(유니폼 SVG 프리셋),
+│                          #   assetFrameConfig.ts(imageFrame 에셋 레이아웃), attendance.ts(출석·거래·KST)
 ├─ data/                  # config.ts(REMOTE_BASE_URL), load.ts(fetch+캐시+번들폴백), team.ts(AsyncStorage)
 └─ assets/                # fonts/Galmuri11*.ttf, data/*.json(번들 폴백), 이미지(stadium-bg 등)
 ```
 
 ### 꿀잼지수 배지 스킨 (ScoreSkin)
-- `ScoreSkinRenderer`가 현재 선택된 스킨의 `kind`로 분기: `jersey`(유니폼 SVG 배지, `JerseyScoreBadge`) / `scoreboard`(레트로 전광판 View, `ScoreboardScoreBadge`).
-- 스킨 ID 네임스페이스: `jersey.classic`/`jersey.pinstripe`/`jersey.cream`/`scoreboard.vintage` (`scoreSkinConfig.ts`).
-- AsyncStorage 키 `user.scoreSkinId`. 구버전 키 `user.uniformPreset`(classic/pinstripe/cream)는 `normalizeScoreSkinId()`가 `jersey.*`로 마이그레이션.
-- 상세 결정·제약은 ADR-019.
+- `ScoreSkinRenderer`가 선택 스킨의 `kind`로 분기: `jersey`(유니폼 SVG, `JerseyScoreBadge`) / `asset`(고정 이미지+숫자 오버레이). asset은 `renderType`으로 다시 분기 — `scoreboard`(전광판, `ScoreboardScoreBadge`) / `imageFrame`(티켓·홈플레이트·메달 등, `ImageFrameScoreBadge` + `assetFrameConfig`).
+- 스킨 ID 예: `jersey.classic.team`·`jersey.stripe.red`·`scoreboard.vintage`·`ticket.retro`·`homeplate.retro`·`medal.special` (`scoreSkinConfig.ts` 단일 정의, `styleId×paletteId` / assetKey 확장형).
+- **구매/재화(ADR-022):** 스킨은 `unlockType`(free/currency)·`price`. 보유 판정 = free∥구매∥적용중. 야구공 잔액·보유목록·출석·거래내역 모두 `ScoreSkin` context + AsyncStorage(`user.baseballBalance`/`ownedSkinIds`/`baseballTx`/`att*`)에 로컬 저장.
+- AsyncStorage 키 `user.scoreSkinId`. 구버전 키 `user.uniformPreset`는 `normalizeScoreSkinId()`가 마이그레이션. 구매제 전환 시 적용 중이던 유료 스킨은 클래식으로 리셋.
+- 상세 결정·제약은 ADR-019(스킨 시스템)·ADR-022(로컬 재화 MVP).
 
 ### Phase AC 전략 (디바이스 없이 검증)
 - `npx tsc --noEmit` — 타입·문법 오류 0

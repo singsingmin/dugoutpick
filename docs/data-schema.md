@@ -173,3 +173,26 @@
 **롤링 집계:** `hitRate`·`bonusRate`·`sampleSize`는 `records` 배열의 끝 `window`(=50)개 기준. `ready`는 `sampleSize >= MIN_SAMPLE(=10)`일 때만 true.
 
 **알려진 한계:** FINAL 후 KBO 사후 스코어 정정(몰수·기록 정정)은 append-only dedup 특성상 반영되지 않는다(빈도 낮음, 수용된 한계).
+
+## 클라이언트 로컬 상태 (AsyncStorage) — 서버·로그인 없음 (ADR-011/022)
+파이프라인 JSON과 **별개**로, 앱이 기기에 저장하는 사용자 상태. `context/ScoreSkin.tsx`가 스킨·야구공 단일 소스.
+| 키 | 내용 |
+|---|---|
+| `user.scoreSkinId` | 적용 중 스킨 id (예: `jersey.classic.team`) |
+| `user.ownedSkinIds` | 구매한 스킨 id 배열(JSON). free·적용중은 미포함 — 보유는 `free∥구매∥적용중`으로 판정 |
+| `user.baseballBalance` | 야구공 잔액(정수) |
+| `user.initialBaseballGrant` | 첫 지급 완료 플래그(`'1'`) — 중복 지급 방지. 첫 실행 시 15 지급 |
+| `user.baseballTx` | 거래 내역(최근 100건, newest-first) |
+| `user.attClaimDate` / `attStreak` / `attCount` | 출석 마지막 수령일(KST `YYYY-MM-DD`) / 연속 / 누적 |
+| `user.uniformPreset` | (구버전) → `normalizeScoreSkinId()`가 마이그레이션 |
+| `dugout.feedback.{gameId}` | 경기 후 피드백(ADR-020) |
+
+```jsonc
+// BaseballTx (user.baseballTx 요소)
+{ "id": "...", "type": "earn",              // 'earn' | 'spend'
+  "amount": 5,                              // 항상 양수(부호는 type)
+  "reason": "attendance",                   // initial_grant | attendance | attendance_bonus | skin_purchase | debug_charge | debug_reset
+  "label": "출석 보상", "createdAt": "ISO", "relatedSkinId": "ticket.retro" }  // relatedSkinId 옵셔널
+```
+스킨 config(`scoreSkinConfig.ts`, JSON 아님): `unlockType` `'free'|'currency'`, `price`(1~99), `currencyType`(`'baseball'`). 가격: 컬러10·화이트15·줄무늬20·전광판/티켓/홈플레이트30·메달60, 기본 유니폼=free.
+⚠️ **전부 로컬** — 재설치/기기변경 시 소실. 계정 前 UX 검증 단계(ADR-022). 정식 수익화 전 서버 이관 필수.
