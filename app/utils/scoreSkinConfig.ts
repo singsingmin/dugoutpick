@@ -79,9 +79,9 @@ export const WHITE_POINT_COLORS: Partial<Record<JerseyPaletteId, string>> = {
 // 컬러 유니폼(classic 고정색)용 명시 트림/숫자색 — 팔레트 baseColor(=몸통)와 별개로 지정.
 // 밝은 몸통에서 숫자 가독성·색 성격을 팔레트별로 최적화(핑크=흰숫자, 하늘=빨강숫자, 노랑=차콜숫자).
 export const COLOR_UNIFORM_OVERRIDES: Partial<Record<JerseyPaletteId, UniformColorOverride>> = {
-  pink:   { trimColor: '#9C4F73', numberFill: '#FFFDF8', numberStroke: '#B56A8C' },
-  sky:    { trimColor: '#2F6F94', numberFill: '#E94B4B', numberStroke: '#9E2F2F' },
-  yellow: { trimColor: '#6A5A1E', numberFill: '#2B2B2B', numberStroke: '#FFF4B8' },
+  pink:   { trimColor: '#F9EBD8', numberFill: '#FFFDF8', numberStroke: '#B56A8C' },  // 연분홍 위 크림 밴드(흰밴드는 떠보임)
+  sky:    { trimColor: '#2F6F94', numberFill: '#E94B4B', numberStroke: '#9E2F2F' },  // 틸 밴드(숫자=레드와 경쟁 회피)
+  yellow: { trimColor: '#6A5A1E', numberFill: '#2B2B2B', numberStroke: '#FFF4B8' },  // 올리브 밴드(숫자=차콜과 구분)
 };
 
 // ── 스킨 목록 (isHidden=false만 노출, sortOrder 순) ───────────────────────────

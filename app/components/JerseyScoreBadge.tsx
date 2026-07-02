@@ -166,25 +166,22 @@ function LargeJersey({ score, cid, w, h, variant, resolved }: {
             stroke={resolved.stripeColor} strokeWidth={resolved.stripeWidth}
             opacity={resolved.stripeOpacity} />
         ))}
+        {/* V7 목 밴드(시보리) — 목 파임 곡선을 따라가는 채운 밴드. 클립 안이라 실루엣 밖 미침범. */}
+        <Path d="M 37,6 Q 50,14 63,6 L 63,10 Q 50,22 37,10 Z"
+          fill={resolved.trimColor} opacity={resolved.cuffOpacity} />
+        {/* V7 소매 커프 밴드 — 소매 끝단(10,28→22,38)과 평행한 채운 밴드. split이면 약하게. */}
+        <Path d="M 10,28 L 22,38 L 21,34 L 12,25 Z"
+          fill={resolved.cuffColor}
+          opacity={resolved.sleeveSplit ? resolved.cuffOpacity * 0.45 : resolved.cuffOpacity} />
+        <Path d="M 90,28 L 78,38 L 79,34 L 88,25 Z"
+          fill={resolved.cuffColor}
+          opacity={resolved.sleeveSplit ? resolved.cuffOpacity * 0.45 : resolved.cuffOpacity} />
       </G>
 
       {/* 외곽선 */}
       <Path d={JERSEY} fill="none"
         stroke={resolved.outerStrokeColor} strokeWidth={resolved.outerStrokeWidth}
         strokeLinejoin="round" />
-
-      {/* V6.6 목라인 collar trim — 목 파임 안쪽으로 inset(외곽선과 분리된 내부 밴드) */}
-      <Path d="M 36,10 Q 50,19 64,10" fill="none"
-        stroke={resolved.trimColor} strokeWidth={resolved.collarWidth}
-        strokeLinecap="round" opacity={resolved.cuffOpacity} />
-
-      {/* 소매끝 밴드 (트림색) — 소매 안쪽으로 inset, 외곽선과 평행 */}
-      <Path d="M 13,28 L 22,36" fill="none"
-        stroke={resolved.cuffColor} strokeWidth={resolved.cuffWidth}
-        strokeLinecap="round" opacity={resolved.cuffOpacity} />
-      <Path d="M 87,28 L 78,36" fill="none"
-        stroke={resolved.cuffColor} strokeWidth={resolved.cuffWidth}
-        strokeLinecap="round" opacity={resolved.cuffOpacity} />
 
       {/* 숫자 그림자 (offset text) */}
       {resolved.numberShadowOpacity > 0 && (
@@ -250,23 +247,20 @@ function CompactJersey({ score, cid, resolved }: {
             stroke={resolved.stripeColor} strokeWidth={resolved.stripeWidth}
             opacity={resolved.stripeOpacity} />
         ))}
+        {/* V7 목 밴드(시보리) — 채운 밴드, 목 파임 곡선을 따라감 */}
+        <Path d="M 19,3 Q 25,7 32,3 L 32,6 Q 25,12 19,6 Z"
+          fill={resolved.trimColor} opacity={resolved.cuffOpacity} />
+        {/* V7 소매 커프 밴드 — 소매 끝단과 평행. split이면 약하게 */}
+        <Path d="M 5,14 L 11,19 L 10.5,17 L 6,12.5 Z"
+          fill={resolved.cuffColor}
+          opacity={resolved.sleeveSplit ? resolved.cuffOpacity * 0.45 : resolved.cuffOpacity} />
+        <Path d="M 45,14 L 39,19 L 39.5,17 L 44,12.5 Z"
+          fill={resolved.cuffColor}
+          opacity={resolved.sleeveSplit ? resolved.cuffOpacity * 0.45 : resolved.cuffOpacity} />
       </G>
       <Path d={JERSEY_SM} fill="none"
         stroke={resolved.outerStrokeColor} strokeWidth={resolved.outerStrokeWidth}
         strokeLinejoin="round" />
-
-      {/* V6.6 목라인 collar trim — 안쪽 inset */}
-      <Path d="M 19,6 Q 25,11 31,6" fill="none"
-        stroke={resolved.trimColor} strokeWidth={resolved.collarWidth}
-        strokeLinecap="round" opacity={resolved.cuffOpacity} />
-
-      {/* 소매끝 밴드 (트림색) — 안쪽 inset */}
-      <Path d="M 7.5,14 L 11,18" fill="none"
-        stroke={resolved.cuffColor} strokeWidth={resolved.cuffWidth}
-        strokeLinecap="round" opacity={resolved.cuffOpacity} />
-      <Path d="M 42.5,14 L 39,18" fill="none"
-        stroke={resolved.cuffColor} strokeWidth={resolved.cuffWidth}
-        strokeLinecap="round" opacity={resolved.cuffOpacity} />
 
       {/* 숫자 그림자 */}
       {resolved.numberShadowOpacity > 0 && (
