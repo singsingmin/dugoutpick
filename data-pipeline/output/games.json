@@ -1,7 +1,7 @@
 {
   "date": "20260702",
   "dateText": "2026년 7월 2일",
-  "updatedAt": "2026-07-02T13:10:27.807Z",
+  "updatedAt": "2026-07-02T13:20:28.357Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 33,
@@ -65,14 +65,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
+        "inning": 8,
         "half": "T",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "박치국",
-        "batter": "박찬형",
+        "pitcher": "이병헌",
+        "batter": "손성빈",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
