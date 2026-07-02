@@ -5,6 +5,7 @@ export type RootStackParamList = {
   Tabs: undefined;
   GameDetail: { gameId: string };
   SkinSelect: undefined;
+  BaseballCenter: undefined;
 };
 
 export type TabParamList = {

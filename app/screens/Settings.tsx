@@ -56,6 +56,11 @@ export default function Settings() {
         </View>
 
         <View style={styles.section}>
+          <SectionLabel label="야구공" />
+          <PixelButton label="야구공 센터" onPress={() => navigation.navigate('BaseballCenter')} />
+        </View>
+
+        <View style={styles.section}>
           <SectionLabel label="데이터" />
           <Panel>
             <PixelText variant="body">갱신 시각</PixelText>

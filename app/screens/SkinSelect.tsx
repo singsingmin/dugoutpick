@@ -168,9 +168,14 @@ export default function SkinSelect() {
             <PixelText variant="caption" color={colors.textDim}>현재 적용</PixelText>
             <PixelText variant="body" color={colors.text}>{selectedConfig.label}</PixelText>
           </View>
-          <View style={styles.balancePill}>
+          <Pressable
+            style={styles.balancePill}
+            onPress={() => navigation.navigate('BaseballCenter')}
+            accessibilityRole="button"
+            accessibilityLabel="야구공 센터 열기"
+          >
             <BaseballAmount n={baseballBalance} size={18} />
-          </View>
+          </Pressable>
         </View>
 
         {/* 카테고리 탭 */}

@@ -4,6 +4,7 @@ import Splash from '../screens/Splash';
 import Onboarding from '../screens/Onboarding';
 import GameDetail from '../screens/GameDetail';
 import SkinSelect from '../screens/SkinSelect';
+import BaseballCenter from '../screens/BaseballCenter';
 import Tabs from './Tabs';
 import { colors, fonts } from '../theme';
 import { useTeamTheme } from '../context/TeamTheme';
@@ -28,6 +29,7 @@ export default function RootNavigator() {
       <Stack.Screen name="Tabs" component={Tabs} options={{ headerShown: false }} />
       <Stack.Screen name="GameDetail" component={GameDetail} options={{ title: '경기 상세' }} />
       <Stack.Screen name="SkinSelect" component={SkinSelect} options={{ headerShown: false }} />
+      <Stack.Screen name="BaseballCenter" component={BaseballCenter} options={{ headerShown: false }} />
     </Stack.Navigator>
   );
 }
