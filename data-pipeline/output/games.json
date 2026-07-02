@@ -1,7 +1,7 @@
 {
   "date": "20260702",
   "dateText": "2026년 7월 2일",
-  "updatedAt": "2026-07-02T10:20:25.889Z",
+  "updatedAt": "2026-07-02T10:30:34.580Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 29,
@@ -187,7 +187,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "네일",
           "era": 3.15,
@@ -218,15 +218,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 1,
-        "b1": true,
+        "inning": 4,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "베니지아노",
-        "batter": "김도영",
-        "heat": 16,
+        "pitcher": "네일",
+        "batter": "최지훈",
+        "heat": 26,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -340,7 +340,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "김백산",
           "era": null,
@@ -385,13 +385,13 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 1,
-        "b1": false,
-        "b2": true,
-        "b3": false,
+        "out": 2,
+        "b1": true,
+        "b2": false,
+        "b3": true,
         "pitcher": "김태경",
-        "batter": "류지혁",
-        "heat": 45,
+        "batter": "김지찬",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -548,14 +548,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
-        "out": 1,
+        "inning": 3,
+        "half": "T",
+        "out": 0,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "한차현",
-        "batter": "허인서",
+        "pitcher": "왕옌청",
+        "batter": "김현수",
         "heat": 2,
         "label": "점수차가 벌어진 경기"
       },
@@ -713,15 +713,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
+        "inning": 4,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "임찬규",
-        "batter": "히우라",
-        "heat": 43,
+        "pitcher": "배동현",
+        "batter": "문성주",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
