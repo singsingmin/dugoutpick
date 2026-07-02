@@ -39,6 +39,7 @@
 - [x] **워크플로 Node20 → v5** (2026-06-29) — `actions/checkout`·`actions/setup-node` v4 → v5 완료.
 - [ ] **PAT 만료 관리** — cron-job.org용 fine-grained PAT. 만료 시 cron 401로 멈춤(실패 알림으로 커버). 재발급 후 cron-job.org 헤더값 교체.
 - [ ] **Play Store 공개 전 Discord 웹훅 재검토** — 현재 APK 번들에 웹훅 URL 포함(2명 내부 테스터용). 공개 배포 전 서버 프록시 또는 웹훅 전용 채널 교체 필요.
+- [ ] **공개 전 디버그 툴 노출 제거** — 설정의 야구공 충전/초기화 버튼. `EXPO_PUBLIC_DEBUG_TOOLS` 플래그로 노출 중: eas.json `preview` env + `deploy-web.yml` export env. 공개(production app-bundle는 이미 미노출) 전 preview·web 플래그 제거. `__DEV__`만 남기면 됨.
 
 ## D. 🗓️ 비시즌 콘텐츠 (리서치 중)
 
