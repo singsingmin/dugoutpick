@@ -20,7 +20,7 @@ export default function TeamBadge({ code, size = 'md' }: Props) {
     <View
       style={[
         styles.badge,
-        { borderColor: color, backgroundColor: color },
+        { borderColor: colors.border, backgroundColor: color },
         sm ? styles.sm : styles.md,
       ]}
     >
@@ -33,7 +33,7 @@ export default function TeamBadge({ code, size = 'md' }: Props) {
 
 const styles = StyleSheet.create({
   badge: {
-    borderWidth: border.width,
+    borderWidth: 1,     // 다크 테두리(얇게 통일)
     borderRadius: border.radius,
     alignItems: 'center',
     justifyContent: 'center',

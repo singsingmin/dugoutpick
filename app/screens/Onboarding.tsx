@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
   grid: { flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between', gap: spacing.sm, paddingBottom: spacing.md },
   cell: {
     width: '48%',
-    borderWidth: border.width,
+    borderWidth: 1,     // 다크 테두리(얇게 통일)
     borderRadius: border.radius,
     backgroundColor: colors.surface,
     padding: spacing.sm,
