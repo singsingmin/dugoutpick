@@ -1,7 +1,7 @@
 {
   "date": "20260702",
   "dateText": "2026년 7월 2일",
-  "updatedAt": "2026-07-02T14:00:43.086Z",
+  "updatedAt": "2026-07-02T14:10:28.308Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 34,
@@ -25,9 +25,9 @@
         "score": 3,
         "starter": {
           "name": "나균안",
-          "era": 3.75,
+          "era": 3.95,
           "w": 4,
-          "l": 6
+          "l": 7
         }
       },
       "home": {
@@ -37,8 +37,8 @@
         "score": 8,
         "starter": {
           "name": "곽빈",
-          "era": 2.89,
-          "w": 6,
+          "era": 2.7,
+          "w": 7,
           "l": 3
         }
       },
@@ -70,9 +70,9 @@
         "verdict": "기대 이하"
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "곽빈",
+        "lose": "나균안",
+        "save": "김정우"
       },
       "lineup": null
     },
@@ -90,7 +90,7 @@
         "score": 7,
         "starter": {
           "name": "베니지아노",
-          "era": 6.27,
+          "era": 6.1,
           "w": 2,
           "l": 5
         }
@@ -102,7 +102,7 @@
         "score": 8,
         "starter": {
           "name": "네일",
-          "era": 3.15,
+          "era": 3.44,
           "w": 5,
           "l": 4
         }
@@ -135,8 +135,8 @@
         "verdict": "기대 이상"
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "전상현",
+        "lose": "이건욱",
         "save": null
       },
       "lineup": null
@@ -155,9 +155,9 @@
         "score": 6,
         "starter": {
           "name": "김백산",
-          "era": null,
-          "w": null,
-          "l": null
+          "era": 0,
+          "w": 1,
+          "l": 0
         }
       },
       "home": {
@@ -167,9 +167,9 @@
         "score": 1,
         "starter": {
           "name": "김태경",
-          "era": 5.28,
+          "era": 5.03,
           "w": 0,
-          "l": 0
+          "l": 1
         }
       },
       "honjam": {
@@ -200,8 +200,8 @@
         "verdict": "기대 이상"
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "김백산",
+        "lose": "김태경",
         "save": null
       },
       "lineup": null
@@ -220,20 +220,20 @@
         "score": 3,
         "starter": {
           "name": "오원석",
-          "era": 5.23,
+          "era": 6.11,
           "w": 4,
-          "l": 5
+          "l": 6
         }
       },
       "home": {
         "code": "HH",
         "name": "한화",
-        "rank": 5,
+        "rank": 6,
         "score": 14,
         "starter": {
           "name": "왕옌청",
           "era": 3.59,
-          "w": 6,
+          "w": 7,
           "l": 3
         }
       },
@@ -265,8 +265,8 @@
         "verdict": "기대 이하"
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "왕옌청",
+        "lose": "오원석",
         "save": null
       },
       "lineup": null
@@ -285,8 +285,8 @@
         "score": 7,
         "starter": {
           "name": "임찬규",
-          "era": 3.48,
-          "w": 7,
+          "era": 3.79,
+          "w": 8,
           "l": 2
         }
       },
@@ -297,9 +297,9 @@
         "score": 5,
         "starter": {
           "name": "배동현",
-          "era": 4.96,
+          "era": 5.37,
           "w": 4,
-          "l": 5
+          "l": 6
         }
       },
       "honjam": {
@@ -330,9 +330,9 @@
         "verdict": "기대 이상"
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "임찬규",
+        "lose": "배동현",
+        "save": "손주영"
       },
       "lineup": null
     }
