@@ -1,12 +1,12 @@
 {
   "date": "20260702",
   "dateText": "2026년 7월 2일",
-  "updatedAt": "2026-07-02T13:50:27.323Z",
+  "updatedAt": "2026-07-02T14:00:43.086Z",
   "trackRecord": {
     "window": 50,
-    "sampleSize": 33,
+    "sampleSize": 34,
     "hitRate": 18,
-    "bonusRate": 42,
+    "bonusRate": 41,
     "ready": true
   },
   "recommendedGameId": "20260702LTOB0",
@@ -15,7 +15,7 @@
       "gameId": "20260702LTOB0",
       "time": "18:30",
       "stadium": "잠실",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "KN-T",
       "away": {
@@ -64,117 +64,17 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 3,
-        "b1": true,
-        "b2": true,
-        "b3": false,
-        "pitcher": "김강현",
-        "batter": "안재석",
-        "heat": 14,
-        "label": "경기 흐름 체크 중"
+      "live": null,
+      "recap": {
+        "actual": 32,
+        "verdict": "기대 이하"
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "좌익수",
-            "name": "김민석"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "정수빈"
-          },
-          {
-            "order": 3,
-            "pos": "2루수",
-            "name": "박준순"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "양의지"
-          },
-          {
-            "order": 5,
-            "pos": "3루수",
-            "name": "안재석"
-          },
-          {
-            "order": 6,
-            "pos": "유격수",
-            "name": "박찬호"
-          },
-          {
-            "order": 7,
-            "pos": "우익수",
-            "name": "류승민"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "윤준호"
-          },
-          {
-            "order": 9,
-            "pos": "1루수",
-            "name": "강승호"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "황성빈"
-          },
-          {
-            "order": 2,
-            "pos": "2루수",
-            "name": "고승민"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "레이예스"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "한동희"
-          },
-          {
-            "order": 5,
-            "pos": "유격수",
-            "name": "전민재"
-          },
-          {
-            "order": 6,
-            "pos": "1루수",
-            "name": "나승엽"
-          },
-          {
-            "order": 7,
-            "pos": "우익수",
-            "name": "윤동희"
-          },
-          {
-            "order": 8,
-            "pos": "3루수",
-            "name": "박찬형"
-          },
-          {
-            "order": 9,
-            "pos": "포수",
-            "name": "손성빈"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260702SKHT0",
