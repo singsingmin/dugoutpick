@@ -1,7 +1,7 @@
 {
   "date": "20260703",
   "dateText": "2026년 7월 3일",
-  "updatedAt": "2026-07-03T11:00:39.126Z",
+  "updatedAt": "2026-07-03T11:10:27.394Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 34,
@@ -22,7 +22,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "화이트",
           "era": 3.24,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "웰스",
-        "batter": "문현빈",
-        "heat": 57,
+        "pitcher": "화이트",
+        "batter": "이주헌",
+        "heat": 56,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -187,7 +187,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "원태인",
           "era": 3.44,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 1,
+        "inning": 5,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "원태인",
-        "batter": "최지훈",
-        "heat": 28,
+        "pitcher": "해치",
+        "batter": "디아즈",
+        "heat": 19,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -397,12 +397,12 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
+        "out": 3,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "구창모",
-        "batter": "박재현",
+        "batter": "김선빈",
         "heat": 50,
         "label": "초반 팽팽한 흐름"
       },
@@ -560,16 +560,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
+        "inning": 7,
         "half": "T",
-        "out": 2,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "로건",
-        "batter": "나승엽",
-        "heat": 44,
-        "label": "경기 흐름 체크 중"
+        "batter": "전민재",
+        "heat": 49,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -694,7 +694,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 1,
+        "score": 3,
         "starter": {
           "name": "하영민",
           "era": 4.13,
@@ -725,16 +725,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
+        "inning": 6,
+        "half": "T",
         "out": 0,
         "b1": false,
-        "b2": true,
-        "b3": true,
-        "pitcher": "잭로그",
-        "batter": "권혁빈",
-        "heat": 42,
-        "label": "초반 팽팽한 흐름"
+        "b2": false,
+        "b3": false,
+        "pitcher": "하영민",
+        "batter": "박준순",
+        "heat": 57,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
