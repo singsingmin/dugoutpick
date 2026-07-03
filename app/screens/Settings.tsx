@@ -108,6 +108,7 @@ export default function Settings() {
                 <PixelButton label="야구공 +100" onPress={() => { void addBaseballs(100); }} style={styles.debugBtn} />
                 <PixelButton label="초기화" accentColor={colors.bad} onPress={() => { void resetProgress(); }} style={styles.debugBtn} />
               </View>
+              <PixelButton label="Auth 스파이크 (Phase 3)" onPress={() => navigation.navigate('SpikeAuth')} style={styles.notifyBtn} />
             </Panel>
           </View>
         )}

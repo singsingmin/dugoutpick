@@ -7,6 +7,7 @@ export type RootStackParamList = {
   SkinSelect: undefined;
   BaseballCenter: undefined;
   Settings: undefined;
+  SpikeAuth: undefined;   // Phase 3 Auth 스파이크(디버그 전용, 검증 후 삭제)
 };
 
 export type TabParamList = {

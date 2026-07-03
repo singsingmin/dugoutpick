@@ -4,6 +4,7 @@ module.exports = {
     slug: "dugoutpick",
     owner: "singsingmin",
     version: "1.0.0",
+    scheme: "dugoutpick",
     orientation: "portrait",
     icon: "./assets/icon.png",
     userInterfaceStyle: "light",
@@ -31,13 +32,16 @@ module.exports = {
     },
     plugins: [
       "expo-font",
-      "expo-notifications"
+      "expo-notifications",
+      "expo-web-browser"
     ],
     extra: {
       eas: {
         projectId: "2dca77a5-dcf4-4759-863d-91e1cf81dcc7"
       },
       discordWebhookUrl: process.env.DISCORD_WEBHOOK_URL || null,
+      supabaseUrl: process.env.SUPABASE_URL || null,
+      supabaseAnonKey: process.env.SUPABASE_ANON_KEY || null,
     }
   }
 };
