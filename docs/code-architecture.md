@@ -94,6 +94,9 @@ app/
 - AsyncStorage 키 `user.scoreSkinId`. 구버전 키 `user.uniformPreset`는 `normalizeScoreSkinId()`가 마이그레이션. 구매제 전환 시 적용 중이던 유료 스킨은 클래식으로 리셋.
 - 상세 결정·제약은 ADR-019(스킨 시스템)·ADR-022(로컬 재화 MVP).
 
+### Phase 3 계정/DB 아키텍처 (설계 완료 · 미착수)
+계정/DB 착수 시 **기존 context 인터페이스(ScoreSkin·CheerTeam)는 불변, 구현만 `AsyncStorage → services 레포(Supabase+캐시)`로 스왑** → 화면 무변경. 신규 `context/Auth.tsx`·`services/supabase.ts`·`services/{currency,skins,attendance,profile}.ts`·`hooks/useOnline.ts`(신규 의존성 `@react-native-community/netinfo`), Provider 트리 `Auth > ScoreSkin`. 백엔드 = Supabase 확정("운영 서버 0" 유지). 이관 대상은 4개(ScoreSkin·team·feedback·알림토글)뿐, 읽기 파이프라인(Worker)은 무영향. 전체: **[phase3-account-design.md §7·§8](phase3-account-design.md)** · 결정: [adr.md ADR-023](adr.md).
+
 ### Phase AC 전략 (디바이스 없이 검증)
 - `npx tsc --noEmit` — 타입·문법 오류 0
 - `npx expo export --platform web`(또는 ios) — JS 번들 성공 = import/해상도/구문 오류 0

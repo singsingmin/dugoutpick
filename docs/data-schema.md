@@ -196,3 +196,6 @@
 ```
 스킨 config(`scoreSkinConfig.ts`, JSON 아님): `unlockType` `'free'|'currency'`, `price`(1~99), `currencyType`(`'baseball'`). 가격: 컬러10·화이트15·줄무늬20·전광판/티켓/홈플레이트30·메달60, 기본 유니폼=free.
 ⚠️ **전부 로컬** — 재설치/기기변경 시 소실. 계정 前 UX 검증 단계(ADR-022). 정식 수익화 전 서버 이관 필수.
+
+## 서버 스키마 (Phase 3 계정/DB, 설계 완료 · 미착수)
+계정/DB 착수 시 위 로컬 상태의 **진실은 Postgres(Supabase)로 이동**하고 AsyncStorage는 오프라인 캐시로 격하된다. 서버 테이블 6종(`profiles`·`baseball_ledger`[append-only 원장]·`owned_skins`·`attendance_claims`·`skins`·`feedback`) + 트리거·RPC·RLS·컬럼 레벨 GRANT 전체 DDL은 **[phase3-account-design.md §3](phase3-account-design.md)**. 재화 이동은 서버 RPC(`claim_attendance`·`purchase_skin`) 전용, 잔액 컬럼은 definer 함수만 write(무결성 최소 경계, ADR-023).

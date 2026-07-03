@@ -2,6 +2,8 @@
 
 표기: `→` 전환, `?` 분기. 화면명은 code-architecture.md 라우트와 일치.
 
+> **Phase 3 계정 흐름(설계 완료·미착수):** 익명 시작 → 사용(온/오프라인) → "계정 보호/복구"(소셜 link/복구) → 재설치 복구까지의 F1~F6 흐름은 **[phase3-account-design.md §2](phase3-account-design.md)**. 아래는 현재(로컬·무계정) 흐름.
+
 ## 진입
 ```
 앱 실행 → Splash(오늘야구각 픽셀 로고)

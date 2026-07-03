@@ -2,7 +2,7 @@
 
 각 항목: **결정 / 맥락·의도 / 결과**. AI 에이전트가 우리 철학을 추론하기 위한 문서 — 결정을 뒤집기 전 맥락을 먼저 읽을 것.
 
-전제(모든 ADR의 상위 원칙): **속도 최우선 + 안정성. 서버 없음. 로그인 없음.** 타깃은 코어 야구팬.
+전제(모든 ADR의 상위 원칙): **속도 최우선 + 안정성. 서버 없음. 로그인 없음.** 타깃은 코어 야구팬. (계정/DB는 ADR-023에서 **opt-in 로그인 + 관리형 백엔드**로 한정 개정 — 강제 로그인·자체 운영 서버는 여전히 안 함. "우리가 유지하는 서버 0" 정신은 유지.)
 
 ---
 
@@ -63,6 +63,7 @@
 ### ADR-011 — 영속화 = AsyncStorage (로그인 대체)
 - **결정:** 응원팀 선택·데이터 캐시를 기기 로컬에 저장.
 - **의도:** 로그인/서버 없이 개인 설정 유지 + 오프라인 생존. 제약(서버·로그인 없음)의 직접 귀결.
+- **개정 예고(ADR-023, 미착수):** 계정/DB 착수 시 **계정 상태(야구공·스킨·출석·응원팀)의 진실은 서버(Supabase)로 이동**하고 AsyncStorage는 **오프라인 캐시 + 기기 설정(알림 토글·넛지 dismiss)**으로 역할이 격하된다. 원격 데이터 캐시(load.ts)는 그대로.
 
 ### ADR-012 — 앱 언어 = TypeScript
 - **맥락:** 구현을 독립 claude 세션(phase)이 자동 실행 → 세션별 **검증 가능성**이 품질을 좌우.
@@ -77,6 +78,7 @@
 - **맥락:** Expo 앱은 헤드리스 CI에서 "실행"이 어려움. 그러나 phase AC는 실행 가능 커맨드여야 함.
 - **결정:** `tsc --noEmit` + `expo export`(번들 성공)을 합격 기준으로. 실제 디바이스 동작은 사람이 Expo Go로 별도 확인.
 - **의도:** 자동화 가능한 최대치(타입·번들 무결성)로 phase를 게이트. 런타임 UI 검증은 범위 밖으로 명시해 phase가 무한정 막히지 않게.
+- **예외(ADR-023, 미착수):** OAuth 딥링크(소셜 로그인)는 **Expo Go에서 동작하지 않음** → 계정 기능 검증은 **dev build**(`expo start --dev-client`)로 한다.
 
 ### ADR-017 — 누적 적중률 트랙레코드 — frozen 정직성 게이트 + append-only 누적 + 집계 임베드
 - **맥락:** 꿀잼지수가 실제로 맞는지 사용자가 객관적으로 확인할 수 없다. `build.mjs`는 FINAL 경기마다 `recap`을 계산하지만 `games.json`은 오늘 경기만 담고 매 빌드 덮어써져 날짜를 넘는 누적이 없다.
@@ -107,6 +109,7 @@
 - **맥락:** 꿀잼지수 가중치가 검증 안 된 추측이라 실사용 피드백 없이는 튜닝 불가. 수기 수집은 마찰이 높아 실제로 안 됨(시뮬에서 확인). 그러나 "서버 없음"(ADR-002)은 지켜야 함.
 - **결정:** FINAL 경기에서만(`status==='FINAL' && honjam!=null`) 👍/👎 + 이유 태그(꿀잼지수 6요소 대응 slug)를 받아 AsyncStorage 저장 + **Discord 웹훅**으로 전송. 웹훅 URL은 `app.config.js`의 `extra.discordWebhookUrl`(`.env.local`→`DISCORD_WEBHOOK_URL`, `.gitignore`). 전송 실패는 무음 처리(앱 크래시·UX 방해 없음).
 - **의도:** Discord 웹훅은 우리가 유지하는 백엔드가 아니라 외부 SaaS 수신점이라 "서버 없음" 위배 아님. FINAL 게이팅으로 미완료 경기 노이즈 차단. 수집 표본은 가중치 튜닝 기준 표본 수 충족 시 활용(roadmap.md).
+- **보강 예고(ADR-023, 미착수):** 계정/DB 착수 시 피드백을 **서버 `feedback` 테이블(`UNIQUE(user_id, game_id)`)에도 저장**(Discord 웹훅은 유지). "이미 평가함" 상태가 계정을 따라다니고, 튜닝 표본이 유저 단위로 누적된다.
 
 ### ADR-021 — live.heat v1.1: raw(무상태)/display(앱) 2층 분리 (ADR-018 보강)
 - **맥락:** 초기 liveHeat는 선형 closeF + `85×closeF×(0.45+0.55×inning/9)` 코어라 ① 점수차 변화가 딱딱하고 ② 9회말 끝내기 보너스가 빠지는 순간 숫자가 급락("역전했는데 왜 떨어져?")했다. 또 "방금 동점/추격" 같은 momentum은 **직전 상태**가 있어야 계산 가능한데 Worker는 무상태(ADR-018)라 불가능.
@@ -132,3 +135,37 @@
 - **결정 ② 라커룸 IA:** 하단 탭 "설정" → **"라커룸"**(활동·꾸미기·보상 허브: 응원팀·스킨·야구공 센터). 실제 앱 설정(데이터·적중률·앱 정보)은 라커룸 **우상단 톱니 → `Settings` 스택 화면**으로 분리.
 - **한계/게이트:** 로컬이라 재설치·기기변경 시 잔액·보유 소실. **정식 수익화(현금 IAP·서버 재화) 전 계정 시스템(roadmap E Phase 3)으로 상태 이관 필수.** 디버그(충전/초기화)는 `EXPO_PUBLIC_DEBUG_TOOLS`로 dev·preview 빌드에서만 노출(production 미노출) — 공개 전 제거(roadmap C).
 - **의도:** "서버 없음"(ADR-002) 정신을 지키며(로컬·무현금) 수집 루프의 재미를 **저비용·되돌리기 쉽게** 검증. 반응이 좋아야 계정+서버로 승격. 광고 보상은 구조 슬롯만 열어둠(미구현).
+- **승계(ADR-023, 미착수):** 이 로컬 MVP의 상태(야구공·스킨·출석·거래내역)를 서버로 이관하는 설계가 **ADR-023**에서 확정됨. 착수 시 로컬 데이터는 마이그레이션하지 않고 리셋(내부 테스트 2명 수용), 이후 서버가 진실.
+
+### ADR-023 — 계정/DB Layer 1: 익명 UID 우선 인증 + 관리형 백엔드 + 재화 서버 스키마 (설계 확정 · 착수 게이트)
+> 전체 상세 설계(사용 흐름 F1~F6·전체 DDL·RPC/RLS·코드 모듈·화면)는 **[phase3-account-design.md](phase3-account-design.md)**. 이 ADR은 결정과 그 맥락만 기록한다.
+- **맥락:** 로컬 재화 MVP(ADR-022)는 재설치·기기변경 시 잔액·보유가 소실되고, 서버 푸시 알림·꿀잼 예측 리그(roadmap E Phase 4)·피드백 누적 공식 튜닝(ADR-020)·정식 수익화가 **전부 계정/DB라는 하나의 병목에 걸려** 있다. 서버리스→서버는 되돌리기 큰 전환이라, 구현 전에 **인증 모델·데이터 스키마·백엔드 방향을 ADR로 먼저 확정**하고 착수는 별도 게이트로 둔다. (이 ADR은 "이 방향으로 설계를 확정한다"이지 "지금 구현한다"가 아님.)
+- **상위 전제와의 관계(개정):** 파일 상단 "서버 없음·로그인 없음"을 **한정 개정**. ① 로그인은 **opt-in**(첫 진입 강제 없음), ② 백엔드는 **관리형**(Supabase/Firebase)이라 우리가 유지·과금하는 상시 서버는 0 — ADR-002(정적 JSON)·ADR-018(CF Worker)·ADR-020(Discord 웹훅)이 공유하는 "**외부 SaaS는 우리가 유지하는 서버가 아니다**" 계보를 그대로 잇는다. 강제 로그인과 자체 운영 백엔드는 여전히 채택하지 않는다.
+- **결정 ① 범위 = Layer 1(기반)만 확정:** 계정·UID·DB·상태 저장·서버 푸시 토대까지가 Layer 1. **예측 리그(Layer 2)와 분리 설계** — 기반은 예측 리그가 안 나와도 자체로 값어치(재설치 소실 해결·서버 푸시·피드백 누적)가 있고, 예측 리그는 "로컬 루프가 재밌나"라는 별도 신호에 걸린 도박이라 한 덩어리로 묶지 않는다. 이 ADR은 Layer 1만 확정, Layer 2는 게이트 조건만 명시.
+- **결정 ② 인증 = 익명 UID 우선 + 소셜 opt-in 연결:** 첫 실행 시 로그인 강제 없이 **익명 UID 자동 생성**, 야구공·스킨·출석을 그 UID에 저장 → 즉시 사용. 라커룸/설정의 **"계정 보호하기"**로 소셜 로그인을 **연결(link)**하면 재설치·기기변경 시 복구 가능. 초기 Android = **Google + Kakao**, Naver는 후순위. **iOS 출시 시 Apple 로그인 강제**(App Store 심사 4.8: 제3자 소셜 로그인 제공 시 Apple 로그인 필수). **복원 코드는 후행** 보조 수단(초기 미포함).
+- **결정 ③ 충돌 = 서버 우선 전면 교체(자동 병합 안 함):** 새 기기에서 익명 진행분이 있는 채로 **기존 데이터가 있는 소셜 계정**에 로그인하면(케이스 B) 서버 데이터가 진실 — 야구공·출석·보유 스킨·적용 스킨 모두 서버 기준으로 **교체**, 로컬 익명분은 병합하지 않고 버린다. **경고 모달은 케이스 B에서만**(연결 대상 계정에 기존 서버 상태가 있을 때) 하드 컨펌 + 손실량 수치 명시(`"이 기기 진행분(야구공 N·스킨 M개)이 [계정] 데이터로 교체됩니다"` [계속]/[취소]). **케이스 A(기존 데이터 없는 신규 계정 최초 보호)는 무경고 in-place 연결** — 정작 보호로 전환시킬 유저를 겁주지 않기 위함. 내부 테스트 중 예외 복구는 관리자 수동 조정.
+- **결정 ④ 백엔드 = Supabase 확정 (첫 구현 태스크 = 스파이크로 리스크 검증):** 이 인증 모델(익명→소셜 link 후 같은 uid 유지)은 Firebase·Supabase 둘 다 네이티브 지원이나, **Kakao가 저울을 기울인다** — Supabase는 **Kakao 네이티브 프로바이더**(`signInWithOAuth('kakao')` + 익명 `linkIdentity('kakao')` in-place)인 반면 Firebase는 **Kakao 커스텀 토큰 발급 서버(Cloud Function)를 직접 운영**해야 해 "운영 서버 0"이 깨지고 익명↔커스텀토큰 link가 지저분하다. Naver는 양쪽 다 커스텀이라 후순위 판단은 백엔드 무관. → **Supabase 확정.** 단 착수 시 **첫 태스크는 스파이크**(dev build에서 익명→`linkIdentity`→Kakao 왕복 + Supabase 익명 유저 자동삭제 정책 실측)로 리스크를 먼저 검증한 뒤 본구현. 인증 링킹은 반드시 `linkIdentity()` 리다이렉트 경로 — 네이티브 `signInWithIdToken()`은 익명 유저를 잃어버리므로 금지.
+- **결정 ⑤ 데이터 모델 = 서버 source of truth, 로컬은 오프라인 캐시:** 로컬 데이터는 **날려도 되는 자산**(내부 테스트 2명 리셋 수용) → 레거시 마이그레이션 로직 없음, 2-way merge 없음. 스키마(Postgres/Supabase 기준):
+  - `profiles(id PK→auth.users, balance[캐시], applied_skin_id, att_streak[캐시], att_count[캐시], att_last_date[KST], starter_granted, ...)`
+  - `baseball_ledger(id, user_id, type earn|spend, amount>0, reason, label, related_skin_id, created_at)` — **append-only, 잔액의 진실 원천**. `profiles.balance`는 트랜잭션 갱신 캐시(드리프트 시 `SUM(ledger)`로 대사).
+  - `owned_skins(user_id, skin_id, acquired_via purchase|event|reward|starter, acquired_at, PK(user_id,skin_id))` — 배열 대신 **조인 테이블**(획득 경로·시점 보존, Phase 4/6에서 필요).
+  - `attendance_claims(user_id, claim_date[KST], base, bonus, streak_at, PK(user_id,claim_date))` — **PK가 "하루 1회"를 DB 레벨에서 강제**.
+  - 이력은 **cap 없이 전체 보관**(로컬 100개 cap 폐지). 앱은 최근 N개만 페이징 조회. 근거: 예측 보상 이력·치팅 조사·감사가 전체 원장을 요구.
+- **결정 ⑥ 치팅/RLS = 재화 무결성의 "최소 경계"만 Layer 1:** ⚠️ 이것은 "Phase 6를 앞당김"이 **아니다**. Layer 1이 긋는 건 딱 하나 — **재화 이동(earn/spend)은 클라가 직접 insert 못 하고 서버 RPC(SECURITY DEFINER)로만 처리**한다는 최소 신뢰 경계. 원장 감사 대시보드·이상탐지·레이트리밋·서버 사이드 재화 정책 전체는 **여전히 Phase 6**에 남는다. 즉 Layer 1 = "클라가 잔액을 위조하지 못한다"는 경계, Phase 6 = "서버가 재화를 능동 감시·통제한다". 구체 메커니즘:
+  - 재화 뮤테이션 = `claim_attendance()`·`purchase_skin(skin_id)` RPC 2종(+내부 전용 `grant_baseballs`). 원장 기록·잔액 갱신을 서버가 원자적으로.
+  - **잔액 보호 = 컬럼 레벨 GRANT** — `profiles`에서 `authenticated` 역할은 `favorite_team`·`applied_skin_id` 컬럼만 UPDATE 허용, `balance`·`att_*`·`starter_granted`는 definer 함수만. (RLS "자기 행 update"만으론 클라가 `balance`를 직접 위조 가능 → 컬럼 권한으로 차단.)
+  - `ledger`·`owned_skins`·`attendance_claims`·`skins` = 클라 직접 write 불가(읽기는 자기 행 SELECT), `skins`는 클라 비노출.
+- **결정 ⑦ 비민감 쓰기·오프라인·화면·코드구조(설계 논의 확정):**
+  - **비민감 쓰기는 RPC 없이 RLS 직접:** `applied_skin_id`(free/owned를 `validate_applied_skin` 트리거로 검증)·`favorite_team` UPDATE, `feedback` INSERT(`UNIQUE(user_id,game_id)`, 재투표=upsert 최신 우선, Discord 웹훅 병행 유지).
+  - **오프라인:** 첫 실행 1회 온라인 필수(익명 sign-in+스타터 지급). 이후 **읽기=로컬 캐시 오프라인 지원**, 민감 쓰기(구매·출석·피드백)=온라인 필요(버튼 비활성+"오프라인" 배지+토스트). 적용 스킨 변경은 오프라인 낙관적 허용(로컬 즉시+백그라운드 sync, 충돌 시 last-write-wins).
+  - **화면:** 라커룸에 "계정 보호/복구" 진입 카드 상시 + 상태 뱃지. 별도 스택 화면에서 2분기(보호하기=`linkIdentity` / 복구하기=`signInWithOAuth`, already-linked 에러 시 경고 모달 후 sign-in fallback). 미보호 넛지 배너는 첫 구매/7일출석 직후 1회(닫으면 재노출 X). 읽기 화면은 무변경.
+  - **코드구조:** 기존 context 인터페이스(ScoreSkin·CheerTeam) **불변**, 구현만 `AsyncStorage → services 레포(Supabase+캐시)`로 스왑(화면 무변경). 신규 `context/Auth.tsx`·`services/supabase.ts`·`services/{currency,skins,attendance,profile}.ts`·`hooks/useOnline.ts`(신규 의존성 `@react-native-community/netinfo`). Provider 트리 `Auth > ScoreSkin`.
+  - **스킨 가격 검증 SSOT:** 서버 `skins` 테이블(`scoreSkinConfig.ts`에서 배포 시 upsert 동기화), `purchase_skin`은 클라 price 불신.
+  - **내부 테스트 재화 리셋/충전:** 클라 디버그 툴 대신 **Supabase 대시보드 수동 조정**(공개 전 클라 디버그 제거는 roadmap C와 일치).
+  - **고아 익명 계정 정리:** 복구/케이스B로 버려진 익명 계정 orphan 누적은 **Layer 1 범위 밖**(소규모라 수동/방치) — known housekeeping.
+- **스타터 어뷰징:** 재설치→새 익명 UID→스타터 15개 반복 획득은 기기 지문 없이는 막을 수 없어 **known limitation**으로 명시. 단 기존 소셜 계정 연결 시 서버 우선(결정 ③)이라 "익명으로 벌어서 연결로 세탁"은 차단.
+- **개인정보:** 익명 UID는 PII 없음 → **개인정보처리방침은 소셜 연결 시점부터 필수**(Google/Kakao 이메일·프로필 수집). 즉 **익명+서버 저장까지는 방침 없이 선출시 가능** → 소셜 연결 기능과 함께 방침 도입(출시 2단계 분리 가능). 초기 수집은 최소화.
+- **착수 게이트(go/no-go):** 실제 구현 착수는 **로컬 재화 루프의 재미 신호 확인 후**(ADR-022 검증 목적). 이 ADR 통과 = 방향·설계 확정이지 빌드 승인이 아님.
+- **호환성(지금 안 만듦):** 예측 리그는 얹히기만 하면 되게 설계 — `baseball_ledger.reason`에 `prediction_reward` 추가, Phase 4에서 `user_predictions`·`daily_honey_result` 테이블만 신설(기존 불변).
+- **기각안:** ① **가산 병합**(야구공 합산·streak max) — 재설치 세탁 어뷰징 벡터라 기각(→ 서버 우선). ② **보유 스킨 배열 컬럼** — 획득 경로·시점 유실로 기각(→ 조인 테이블). ③ **Firebase 우선** — Kakao 커스텀 토큰 서버가 "운영 서버 0"을 깨서 후순위(→ Supabase 우세). ④ **강제 로그인** — 진입 장벽으로 기각(→ 익명 우선 opt-in). ⑤ **자체 운영 백엔드** — 유지 비용·상시 서버로 전제 위배라 기각(→ 관리형).
+- **의도:** 큰 전환을 되돌리기 쉬운 순서(설계·게이트 먼저, 빌드는 신호 후)로 밟고, "우리가 유지하는 서버 0" 정신을 관리형으로 보존하며, 기반과 예측 리그 도박을 분리해 리스크를 격리한다.

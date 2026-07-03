@@ -101,7 +101,8 @@
 - [ ] 익명 UID(기기 종속) + 복원 코드, 선택적 Google/Apple 로그인
 - [ ] **로컬 MVP 상태(잔액·보유·출석·내역)를 서버로 이관·동기화**
 - ⚠️ 로그인 = 개인정보 수집 → 약관·개인정보처리방침 필요
-- ⚠️ **계정/DB 도입 여부·시점은 이 문서가 아니라 별도 ADR 또는 별도 논의에서 결정**한다(서버리스 구조를 서버 기반으로 바꾸는 큰 전환).
+- 📐 **설계 확정: [ADR-023](adr.md) · 전체 스펙 [phase3-account-design.md](phase3-account-design.md)** — 익명 UID 우선 opt-in 인증(Android=Google+Kakao·iOS 시 Apple 강제)·충돌=서버우선 전면교체·백엔드 **Supabase 확정**·재화 서버 스키마(profiles/baseball_ledger/owned_skins/attendance_claims/skins/feedback)·재화 무결성 최소 경계(RPC 전용+컬럼 GRANT). 로컬 데이터 마이그레이션 없음(리셋 수용). 첫 구현 태스크=스파이크.
+- ⚠️ **착수(구현) 여부·시점은 별도 게이트**(로컬 재화 루프 재미 신호 확인 후). ADR-023은 방향·설계 확정이지 빌드 승인이 아님(서버리스→서버는 되돌리기 큰 전환).
 
 ### Phase 3-Pre — 실제 꿀잼 경기 판정 파이프라인 (예측 리그 선행 과제)
 > 예측 리그 MVP의 심장. **계정/DB와 독립적으로 파이프라인 단독 선행 가능**(판정 결과 JSON만 먼저 산출).
