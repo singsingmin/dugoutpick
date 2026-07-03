@@ -1,7 +1,7 @@
 {
   "date": "20260703",
   "dateText": "2026년 7월 3일",
-  "updatedAt": "2026-07-03T11:40:31.098Z",
+  "updatedAt": "2026-07-03T11:50:29.943Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 34,
@@ -22,7 +22,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 1,
+        "score": 4,
         "starter": {
           "name": "화이트",
           "era": 3.24,
@@ -67,14 +67,14 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김진성",
-        "batter": "최인호",
-        "heat": 64,
-        "label": "후반 박빙 승부"
+        "pitcher": "박시원",
+        "batter": "허인서",
+        "heat": 26,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -187,7 +187,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "원태인",
           "era": 3.44,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
+        "inning": 6,
         "half": "B",
-        "out": 3,
+        "out": 0,
         "b1": false,
         "b2": false,
-        "b3": true,
+        "b3": false,
         "pitcher": "원태인",
-        "batter": "최정",
-        "heat": 31,
+        "batter": "김재환",
+        "heat": 23,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -352,7 +352,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 4,
+        "score": 8,
         "starter": {
           "name": "구창모",
           "era": 3.36,
@@ -396,15 +396,15 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 1,
-        "b1": true,
-        "b2": true,
+        "half": "B",
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "이형범",
-        "batter": "블레인",
-        "heat": 59,
-        "label": "후반 박빙 승부"
+        "pitcher": "김진호",
+        "batter": "한준수",
+        "heat": 13,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -561,14 +561,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
+        "half": "B",
         "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이상동",
-        "batter": "윤동희",
-        "heat": 26,
+        "pitcher": "이이무라",
+        "batter": "힐리어드",
+        "heat": 27,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -682,7 +682,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 3,
+        "score": 5,
         "starter": {
           "name": "잭로그",
           "era": 4.15,
@@ -727,13 +727,13 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "박정훈",
-        "batter": "정수빈",
-        "heat": 59,
+        "batter": "손아섭",
+        "heat": 62,
         "label": "후반 박빙 승부"
       },
       "recap": null,
