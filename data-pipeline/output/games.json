@@ -1,12 +1,12 @@
 {
   "date": "20260703",
   "dateText": "2026년 7월 3일",
-  "updatedAt": "2026-07-03T12:50:28.956Z",
+  "updatedAt": "2026-07-03T13:00:39.770Z",
   "trackRecord": {
     "window": 50,
-    "sampleSize": 38,
-    "hitRate": 16,
-    "bonusRate": 42,
+    "sampleSize": 39,
+    "hitRate": 15,
+    "bonusRate": 44,
     "ready": true
   },
   "recommendedGameId": "20260703NCHT0",
@@ -25,8 +25,8 @@
         "score": 8,
         "starter": {
           "name": "화이트",
-          "era": 3.24,
-          "w": 4,
+          "era": 2.84,
+          "w": 5,
           "l": 4
         }
       },
@@ -37,9 +37,9 @@
         "score": 1,
         "starter": {
           "name": "웰스",
-          "era": 2.88,
+          "era": 2.77,
           "w": 5,
-          "l": 2
+          "l": 3
         }
       },
       "honjam": {
@@ -70,8 +70,8 @@
         "verdict": "기대 이하"
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "화이트",
+        "lose": "웰스",
         "save": null
       },
       "lineup": null
@@ -80,7 +80,7 @@
       "gameId": "20260703SSSK0",
       "time": "18:30",
       "stadium": "문학",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPO-T",
       "away": {
@@ -90,8 +90,8 @@
         "score": 6,
         "starter": {
           "name": "원태인",
-          "era": 3.44,
-          "w": 3,
+          "era": 3.45,
+          "w": 4,
           "l": 5
         }
       },
@@ -102,9 +102,9 @@
         "score": 4,
         "starter": {
           "name": "해치",
-          "era": 6.19,
+          "era": 7.08,
           "w": 1,
-          "l": 1
+          "l": 2
         }
       },
       "honjam": {
@@ -129,117 +129,17 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 2,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "김재윤",
-        "batter": "정준재",
-        "heat": 65,
-        "label": "후반 박빙 승부"
+      "live": null,
+      "recap": {
+        "actual": 83,
+        "verdict": "기대 이상"
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "유격수",
-            "name": "박성한"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "에레디아"
-          },
-          {
-            "order": 3,
-            "pos": "지명타자",
-            "name": "최정"
-          },
-          {
-            "order": 4,
-            "pos": "좌익수",
-            "name": "김재환"
-          },
-          {
-            "order": 5,
-            "pos": "3루수",
-            "name": "고명준"
-          },
-          {
-            "order": 6,
-            "pos": "중견수",
-            "name": "최지훈"
-          },
-          {
-            "order": 7,
-            "pos": "1루수",
-            "name": "전의산"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "조형우"
-          },
-          {
-            "order": 9,
-            "pos": "2루수",
-            "name": "정준재"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "김지찬"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "김성윤"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "구자욱"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "최형우"
-          },
-          {
-            "order": 5,
-            "pos": "1루수",
-            "name": "디아즈"
-          },
-          {
-            "order": 6,
-            "pos": "2루수",
-            "name": "류지혁"
-          },
-          {
-            "order": 7,
-            "pos": "포수",
-            "name": "강민호"
-          },
-          {
-            "order": 8,
-            "pos": "3루수",
-            "name": "전병우"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "김상준"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": "원태인",
+        "lose": "해치",
+        "save": "김재윤"
+      },
+      "lineup": null
     },
     {
       "gameId": "20260703NCHT0",
@@ -255,8 +155,8 @@
         "score": 11,
         "starter": {
           "name": "구창모",
-          "era": 3.36,
-          "w": 7,
+          "era": 3.44,
+          "w": 8,
           "l": 2
         }
       },
@@ -267,9 +167,9 @@
         "score": 3,
         "starter": {
           "name": "황동하",
-          "era": 4.1,
+          "era": 4.37,
           "w": 6,
-          "l": 2
+          "l": 3
         }
       },
       "honjam": {
@@ -300,8 +200,8 @@
         "verdict": "기대 이하"
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "구창모",
+        "lose": "황동하",
         "save": null
       },
       "lineup": null
@@ -320,8 +220,8 @@
         "score": 4,
         "starter": {
           "name": "김진욱",
-          "era": 3.06,
-          "w": 4,
+          "era": 2.84,
+          "w": 5,
           "l": 3
         }
       },
@@ -332,9 +232,9 @@
         "score": 0,
         "starter": {
           "name": "로건",
-          "era": 3.27,
+          "era": 3,
           "w": 0,
-          "l": 0
+          "l": 1
         }
       },
       "honjam": {
@@ -365,8 +265,8 @@
         "verdict": "기대 이상"
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "김진욱",
+        "lose": "로건",
         "save": null
       },
       "lineup": null
@@ -385,7 +285,7 @@
         "score": 5,
         "starter": {
           "name": "잭로그",
-          "era": 4.15,
+          "era": 4.12,
           "w": 3,
           "l": 5
         }
@@ -397,7 +297,7 @@
         "score": 6,
         "starter": {
           "name": "하영민",
-          "era": 4.13,
+          "era": 4.16,
           "w": 3,
           "l": 5
         }
@@ -430,9 +330,9 @@
         "verdict": "기대 이상"
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "유토",
+        "lose": "김택연",
+        "save": "원종현"
       },
       "lineup": null
     }
