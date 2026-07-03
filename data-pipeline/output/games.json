@@ -1,7 +1,7 @@
 {
   "date": "20260703",
   "dateText": "2026년 7월 3일",
-  "updatedAt": "2026-07-03T09:40:27.881Z",
+  "updatedAt": "2026-07-03T09:50:28.143Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 34,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 1,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "웰스",
-        "batter": "강백호",
-        "heat": 31,
+        "pitcher": "화이트",
+        "batter": "오스틴",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "원태인",
-        "batter": "박성한",
-        "heat": 31,
+        "pitcher": "해치",
+        "batter": "류지혁",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "T",
-        "out": 2,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
-        "b3": true,
+        "b3": false,
         "pitcher": "황동하",
-        "batter": "이우성",
-        "heat": 31,
+        "batter": "박건우",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 1,
+        "inning": 2,
+        "half": "T",
+        "out": 2,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "김진욱",
-        "batter": "안현민",
-        "heat": 33,
+        "pitcher": "로건",
+        "batter": "전민재",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -694,7 +694,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "하영민",
           "era": 4.13,
@@ -725,14 +725,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 0,
-        "b1": true,
+        "inning": 2,
+        "half": "T",
+        "out": 1,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "잭로그",
-        "batter": "안치홍",
+        "pitcher": "하영민",
+        "batter": "박찬호",
         "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
