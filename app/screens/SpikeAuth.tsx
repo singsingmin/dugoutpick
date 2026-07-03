@@ -2,7 +2,7 @@
 // 익명 sign-in → linkIdentity(보호) 왕복 + signInWithOAuth(복구) 실측용. 디버그 플래그로만 진입, 프로덕션 미노출.
 // 검증 후 삭제 예정(throwaway). 인증 링킹은 linkIdentity 리다이렉트 경로만(ADR-023 결정 ④).
 import { useEffect, useState, useCallback } from 'react';
-import { View, ScrollView, StyleSheet } from 'react-native';
+import { View, ScrollView, StyleSheet, Linking } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import * as WebBrowser from 'expo-web-browser';
@@ -22,15 +22,22 @@ const redirectTo = makeRedirectUri();
 
 type Provider = 'google' | 'kakao';
 
-// OAuth redirect URL에서 토큰 파싱 → 세션 설정
+// OAuth redirect URL에서 세션 완성. PKCE(?code=) 우선, 구형 implicit(#access_token) 폴백.
 async function sessionFromUrl(url: string): Promise<Session | null> {
   const { params, errorCode } = QueryParams.getQueryParams(url);
   if (errorCode) throw new Error(errorCode);
-  const { access_token, refresh_token } = params;
-  if (!access_token) return null;
-  const { data, error } = await supabase.auth.setSession({ access_token, refresh_token });
-  if (error) throw error;
-  return data.session;
+  const { code, access_token, refresh_token } = params;
+  if (code) {
+    const { data, error } = await supabase.auth.exchangeCodeForSession(code);
+    if (error) throw error;
+    return data.session;
+  }
+  if (access_token) {
+    const { data, error } = await supabase.auth.setSession({ access_token, refresh_token });
+    if (error) throw error;
+    return data.session;
+  }
+  return null;
 }
 
 export default function SpikeAuth() {
@@ -49,6 +56,21 @@ export default function SpikeAuth() {
       append(`authState: ${event}`);
     });
     return () => sub.subscription.unsubscribe();
+  }, [append]);
+
+  // OAuth 리다이렉트 안전망: openAuthSessionAsync가 dismiss로 놓쳐도 딥링크(dugoutpick://#tokens)를 여기서 잡아 세션 설정.
+  useEffect(() => {
+    const handle = (url: string | null) => {
+      if (!url) return;
+      console.log('[SPIKE] incoming deep link:', url);
+      append(`deeplink 수신: ${url.slice(0, 40)}`);
+      sessionFromUrl(url)
+        .then((s) => { if (s) append('deep link 세션 설정 ✅'); })
+        .catch((e) => append(`deep link ❌ ${(e as Error).message}`));
+    };
+    Linking.getInitialURL().then(handle);
+    const sub = Linking.addEventListener('url', (e) => handle(e.url));
+    return () => sub.remove();
   }, [append]);
 
   const anon = useCallback(async () => {
@@ -71,13 +93,11 @@ export default function SpikeAuth() {
             : await supabase.auth.signInWithOAuth({ provider, options });
         if (error) throw error;
         if (!data?.url) throw new Error('provider url 없음');
-        const res = await WebBrowser.openAuthSessionAsync(data.url, redirectTo);
-        if (res.type !== 'success') {
-          append(`${mode} ${provider}: ${res.type}`);
-          return;
-        }
-        await sessionFromUrl(res.url);
-        append(`${mode} ${provider} ✅`);
+        console.log('[SPIKE] authorize url:', data.url);
+        console.log('[SPIKE] redirectTo:', redirectTo);
+        // 시스템 브라우저로 열기(KakaoTalk 앱 바운스에 안 죽음). 완료는 딥링크 리스너가 처리.
+        append(`${mode} ${provider}: 브라우저 여는 중…`);
+        await Linking.openURL(data.url);
       } catch (e) {
         append(`${mode} ${provider} ❌ ${(e as Error).message}`);
       }

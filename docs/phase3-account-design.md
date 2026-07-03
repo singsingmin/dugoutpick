@@ -208,6 +208,19 @@ Supabase client  +  로컬 캐시 미러(AsyncStorage)
 5. 계정 보호/복구 화면 + 라커룸 진입점·상태 뱃지 + 넛지.
 6. 개인정보처리방침(소셜 연결 기능과 함께) + 클라 디버그 제거.
 
+### Stage 0 스파이크 결과 (2026-07-03 · ✅ 통과)
+dev build(EAS development)로 실기기 검증 완료. **핵심 가설 증명: 익명 `signInAnonymously()` → `linkIdentity(google)` → 같은 uid 유지 + `is_anonymous=false` + provider=google** (JWT `sub` 동일 확인). = "익명 데이터 보존하며 소셜 연결" 작동. 본구현 GO.
+
+**실구현 필수 반영 교훈(스파이크에서 확정):**
+1. **OAuth 실행 = `Linking.openURL(data.url)` + 딥링크 리스너** — `WebBrowser.openAuthSessionAsync`는 **KakaoTalk 앱 바운스 시 CustomTab이 포그라운드를 잃어 조기 dismiss** → 리다이렉트 유실. `Linking.openURL` + `Linking.addEventListener('url')`로 완료를 잡아야 견고.
+2. **리다이렉트 핸들러는 `#access_token`(implicit)·`?code=`(PKCE) 둘 다 처리** — provider/설정별로 형태가 다름(스파이크에선 Google이 `#access_token`으로 옴). code면 `exchangeCodeForSession`, token이면 `setSession`.
+3. **Kakao KOE205(미해결·후속):** Supabase Kakao 프로바이더가 `account_email profile_image profile_nickname`을 항상 요청하고 `options.scopes`는 **replace가 아니라 append**. → Kakao 동의항목에 3개(특히 이메일) 설정하거나 Supabase 측 scope 조정 필요. **메커니즘 자체는 Google로 증명됨** — Kakao는 콘솔 설정 과제.
+4. **dev build 설치:** EAS `development` 아티팩트 tarball에 `debug/app-debug.apk`(dev client·`__DEV__`=true) + `release/app-release.apk` 둘 다 들어있음 → **debug apk를 설치**해야 디버그 툴/dev client 동작. `eas build:run`은 다중 apk라 대화형 선택 필요(비대화형이면 tarball 추출 후 `adb install debug/app-debug.apk`).
+5. **필수 설정:** Supabase **Manual Linking ON**, `app.config` `scheme:"dugoutpick"`, Supabase Redirect URLs에 `dugoutpick://**`, USB 개발은 `adb reverse tcp:8081 tcp:8081` + Metro.
+6. **검증 환경:** Expo Go 불가(ADR-014 예외) — dev build 필수 확정.
+
+> 스파이크 코드 = `app/screens/SpikeAuth.tsx`(디버그 게이트) + `app/services/supabase.ts`. throwaway(참고용). 본구현 시 위 교훈 반영해 정식 `context/Auth.tsx`로 재작성.
+
 ## 10. Known limitations (수용됨)
 - 재설치 → 새 익명 UID → 스타터 15 반복 획득(기기 지문 없이는 불가). 단 소셜 연결 시 서버 우선이라 "익명으로 벌어서 연결로 세탁"은 차단.
 - 복구/케이스B로 버려진 고아 익명 계정 누적 = Layer 1 범위 밖(수동/방치 housekeeping).
