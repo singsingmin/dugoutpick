@@ -1,7 +1,7 @@
 {
   "date": "20260703",
   "dateText": "2026년 7월 3일",
-  "updatedAt": "2026-07-03T11:10:27.394Z",
+  "updatedAt": "2026-07-03T11:20:27.421Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 34,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 0,
+        "inning": 7,
+        "half": "T",
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "화이트",
-        "batter": "이주헌",
-        "heat": 56,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "김영우",
+        "batter": "심우준",
+        "heat": 59,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "out": 2,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "해치",
-        "batter": "디아즈",
+        "pitcher": "박시후",
+        "batter": "박승규",
         "heat": 19,
         "label": "경기 흐름 체크 중"
       },
@@ -395,16 +395,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 3,
-        "b1": false,
-        "b2": false,
+        "inning": 6,
+        "half": "T",
+        "out": 2,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "구창모",
-        "batter": "김선빈",
-        "heat": 50,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "한재승",
+        "batter": "천재환",
+        "heat": 53,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -561,14 +561,14 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 0,
-        "b1": false,
+        "half": "B",
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "로건",
-        "batter": "전민재",
-        "heat": 49,
+        "pitcher": "김진욱",
+        "batter": "허경민",
+        "heat": 51,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -727,12 +727,12 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 3,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "하영민",
-        "batter": "박준순",
+        "batter": "박찬호",
         "heat": 57,
         "label": "경기 흐름 체크 중"
       },
