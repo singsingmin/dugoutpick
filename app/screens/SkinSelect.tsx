@@ -5,6 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { useTeamTheme } from '../context/TeamTheme';
 import { useScoreSkin } from '../context/ScoreSkin';
+import { useOnline } from '../hooks/useOnline';
 import {
   SCORE_SKIN_LIST,
   getScoreSkinById,
@@ -112,6 +113,7 @@ export default function SkinSelect() {
   const navigation = useNavigation();
   const { accent } = useTeamTheme();
   const { skinId, setSkin, baseballBalance, isOwned, buySkin } = useScoreSkin();
+  const online = useOnline();
   const [tab, setTab] = useState<TabKey>('all');
   const [toast, setToast] = useState<string | null>(null);
   const [modal, setModal] = useState<ModalState>(null);
@@ -134,8 +136,9 @@ export default function SkinSelect() {
   };
 
   const handleCardPress = (s: ScoreSkin) => {
-    if (isOwned(s.id)) { void applySkin(s); return; }
+    if (isOwned(s.id)) { void applySkin(s); return; }  // 적용은 오프라인 허용(낙관적)
     if (s.unlockType === 'currency') {
+      if (!online) { showToast('구매는 인터넷 연결 후 가능해요'); return; }  // 구매=민감 쓰기, 온라인 필요
       const price = s.price ?? 0;
       setModal({ kind: baseballBalance >= price ? 'confirm' : 'insufficient', skin: s });
     }

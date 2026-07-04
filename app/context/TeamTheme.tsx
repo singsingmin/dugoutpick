@@ -3,6 +3,8 @@
 import { createContext, useContext, useState, useEffect, useCallback, type ReactNode } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { loadTeams } from '../data/load';
+import { hydrateCheerTeam } from '../data/team';
+import { useAuth } from './Auth';
 import { colors } from '../theme';
 
 const CHEER_TEAM_KEY = 'dugout.cheerTeam';
@@ -19,7 +21,8 @@ export function useTeamTheme() {
 }
 
 export function TeamThemeProvider({ children }: { children: ReactNode }) {
-  const [accent, setAccent] = useState(colors.accent);
+  const { userId } = useAuth();
+  const [accent, setAccent] = useState<string>(colors.accent);
 
   const refresh = useCallback(async () => {
     try {
@@ -33,7 +36,15 @@ export function TeamThemeProvider({ children }: { children: ReactNode }) {
     }
   }, []);
 
-  useEffect(() => { refresh(); }, [refresh]);
+  // 세션 확보 시 서버 favorite_team → 로컬 캐시 하이드레이션 후 테마 반영(재설치 복구 대응).
+  useEffect(() => {
+    let active = true;
+    (async () => {
+      if (userId) await hydrateCheerTeam();
+      if (active) await refresh();
+    })();
+    return () => { active = false; };
+  }, [userId, refresh]);
 
   return (
     <TeamThemeContext.Provider value={{ accent, refresh }}>

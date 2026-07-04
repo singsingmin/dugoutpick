@@ -10,6 +10,7 @@ import {
 } from '../services/feedback';
 import { colors, spacing, border } from '../theme';
 import { useTeamTheme } from '../context/TeamTheme';
+import { useOnline } from '../hooks/useOnline';
 
 interface FeedbackWidgetProps {
   gameId: string;
@@ -22,6 +23,7 @@ type Step = 'idle' | 'thumbs_select' | 'tag_select' | 'submitting' | 'done';
 
 export default function FeedbackWidget({ gameId, predictedScore, matchLabel, factors }: FeedbackWidgetProps) {
   const { accent } = useTeamTheme();
+  const online = useOnline();
   const [step, setStep] = useState<Step>('idle');
   const [thumbs, setThumbs] = useState<'up' | 'down' | null>(null);
 
@@ -38,6 +40,7 @@ export default function FeedbackWidget({ gameId, predictedScore, matchLabel, fac
 
   async function handleTagSelect(tag: FeedbackTag) {
     if (step !== 'tag_select' || thumbs === null) return;
+    if (!online) { setStep('thumbs_select'); return; }  // 도중 오프라인 → 진입 게이트로 복귀
     setStep('submitting');
     const entry = {
       gameId,
@@ -62,7 +65,15 @@ export default function FeedbackWidget({ gameId, predictedScore, matchLabel, fac
     <View style={styles.section}>
       <SectionLabel icon="chart" label="경기 어땠어?" />
       <Panel>
-        {step === 'thumbs_select' && (
+        {step === 'thumbs_select' && !online && (
+          <View style={styles.center}>
+            <PixelText variant="caption" color={colors.textDim} style={styles.question}>
+              오프라인 상태예요{'\n'}연결 후 경기 평가를 남길 수 있어요
+            </PixelText>
+          </View>
+        )}
+
+        {step === 'thumbs_select' && online && (
           <View style={styles.col}>
             <PixelText variant="caption" color={colors.textDim} style={styles.question}>
               이 경기, 실제로 어땠나요?

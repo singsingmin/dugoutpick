@@ -5,6 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { useTeamTheme } from '../context/TeamTheme';
 import { useScoreSkin } from '../context/ScoreSkin';
+import { useOnline } from '../hooks/useOnline';
 import { ATTENDANCE_REWARD, ATTENDANCE_BONUS, ATTENDANCE_CYCLE, isKstToday, kstDateLabel } from '../utils/attendance';
 import PixelText from '../components/PixelText';
 import Panel from '../components/Panel';
@@ -22,6 +23,7 @@ export default function BaseballCenter() {
     baseballBalance, canClaimAttendance, attendanceStreak, cyclePosition,
     transactions, claimAttendance,
   } = useScoreSkin();
+  const online = useOnline();
   const [toast, setToast] = useState<string | null>(null);
   const [historyOpen, setHistoryOpen] = useState(false);
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -40,6 +42,7 @@ export default function BaseballCenter() {
   };
 
   const onClaim = async () => {
+    if (!online) { showToast('출석 보상은 인터넷 연결 후 받을 수 있어요'); return; }
     const r = await claimAttendance();
     if (r.claimed) {
       showToast(r.bonus > 0 ? `출석 완료! 야구공 ${r.earned}개 획득 (보너스 +${r.bonus})` : `출석 완료! 야구공 ${r.earned}개 획득`);
@@ -72,7 +75,10 @@ export default function BaseballCenter() {
               {canClaimAttendance ? (
                 <>
                   <PixelText variant="body" color={colors.text}>매일 출석하고 야구공 {ATTENDANCE_REWARD}개를 받아보세요</PixelText>
-                  <PixelButton label={`야구공 ${ATTENDANCE_REWARD}개 받기`} onPress={onClaim} style={styles.claimBtn} />
+                  <PixelButton label={`야구공 ${ATTENDANCE_REWARD}개 받기`} onPress={onClaim} disabled={!online} style={styles.claimBtn} />
+                  {!online && (
+                    <PixelText variant="caption" color={colors.textDim} style={styles.subInfo}>오프라인 상태예요 · 연결 후 받을 수 있어요</PixelText>
+                  )}
                 </>
               ) : (
                 <>

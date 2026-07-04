@@ -1,5 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Constants from 'expo-constants';
+import { supabase } from './supabase';
 
 export interface FeedbackTag {
   slug: string;
@@ -33,12 +34,33 @@ export const TAGS_UP: FeedbackTag[] = [
 
 const FEEDBACK_KEY = (gameId: string) => `dugout.feedback.${gameId}`;
 
+// 서버(feedback 테이블) INSERT + 로컬 마커(오프라인 hasFeedback·중복 제출 방지).
+// 민감 쓰기라 제출은 온라인에서만(위젯이 useOnline으로 게이팅). 서버 오류는 삼킴 — Discord 병행 싱크.
 export async function saveFeedback(entry: FeedbackEntry): Promise<void> {
-  const key = FEEDBACK_KEY(entry.gameId);
-  const raw = await AsyncStorage.getItem(key);
-  const existing: FeedbackEntry[] = raw ? JSON.parse(raw) : [];
-  existing.push(entry);
-  await AsyncStorage.setItem(key, JSON.stringify(existing));
+  try {
+    const { data } = await supabase.auth.getSession();
+    const uid = data.session?.user?.id;
+    if (uid) {
+      const { error } = await supabase.from('feedback').insert({
+        user_id: uid,
+        game_id: entry.gameId,
+        thumbs: entry.thumbs,
+        reason_tag: entry.reasonTag,
+        reason_label: entry.reasonLabel,
+        predicted_score: entry.predictedScore,
+        factors: entry.factors ?? null,
+      });
+      if (error && error.code !== '23505') console.warn('[feedback] 서버 저장 실패:', error.message);
+    }
+  } catch (e) {
+    console.warn('[feedback] 서버 저장 예외:', e);
+  }
+  // 로컬 마커(제출 완료 표시 — 오프라인에서도 hasFeedback 동작)
+  try {
+    await AsyncStorage.setItem(FEEDBACK_KEY(entry.gameId), JSON.stringify([entry]));
+  } catch {
+    /* 로컬 저장 실패 무시 */
+  }
 }
 
 export async function sendToDiscord(entry: FeedbackEntry, matchLabel: string): Promise<void> {
