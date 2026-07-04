@@ -2,6 +2,7 @@
 import { Modal, View, Pressable, ScrollView, StyleSheet } from 'react-native';
 import PixelText from './PixelText';
 import { type BaseballTx, kstDateLabel } from '../utils/attendance';
+import { txDisplayLabel } from '../utils/scoreSkinConfig';
 import { colors, spacing, border } from '../theme';
 
 const DAY_MS = 86400 * 1000;
@@ -36,7 +37,7 @@ export default function TxHistorySheet({ visible, onClose, transactions, days = 
               {list.map((tx) => (
                 <View key={tx.id} style={styles.row}>
                   <PixelText variant="caption" color={colors.textDim} style={styles.date}>{kstDateLabel(tx.createdAt)}</PixelText>
-                  <PixelText variant="caption" color={colors.text} style={styles.label} numberOfLines={1}>{tx.label}</PixelText>
+                  <PixelText variant="caption" color={colors.text} style={styles.label} numberOfLines={1}>{txDisplayLabel(tx.reason, tx.relatedSkinId, tx.label)}</PixelText>
                   <PixelText variant="caption" color={tx.type === 'earn' ? colors.good : colors.bad}>
                     {tx.type === 'earn' ? '+' : '-'}{tx.amount}
                   </PixelText>

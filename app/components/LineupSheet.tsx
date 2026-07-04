@@ -33,7 +33,7 @@ export default function LineupSheet({ visible, onClose, game }: Props) {
             </View>
           ) : (
             <PixelText variant="body" color={colors.textDim} style={styles.pending}>
-              경기 1시간 전 라인업 확정 후 업데이트됩니다
+              선발 타순이 확정되면 업데이트돼요
             </PixelText>
           )}
         </Pressable>

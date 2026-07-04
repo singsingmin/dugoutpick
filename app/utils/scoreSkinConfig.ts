@@ -271,6 +271,15 @@ export function getScoreSkinById(id: string | null | undefined): ScoreSkin {
   return (id && BY_ID.get(id)) || BY_ID.get(DEFAULT_ID)!;
 }
 
+// 거래내역 표시 라벨 — 스킨 구매는 서버가 넣은 코드값(jersey.classic.red 구매) 대신
+// 한글 스킨명(레드 유니폼 구매)으로. 그 외 사유는 서버 label 그대로.
+export function txDisplayLabel(reason: string, relatedSkinId: string | null | undefined, fallback: string): string {
+  if (reason === 'skin_purchase' && relatedSkinId && BY_ID.has(relatedSkinId)) {
+    return `${getScoreSkinById(relatedSkinId).label} 구매`;
+  }
+  return fallback;
+}
+
 // 보유 판정 — free이거나 구매목록에 있거나 현재 적용 중(grandfather).
 export function isSkinOwned(skin: ScoreSkin, ownedIds: readonly string[], selectedId: string | null): boolean {
   return skin.unlockType === 'free' || ownedIds.includes(skin.id) || selectedId === skin.id;

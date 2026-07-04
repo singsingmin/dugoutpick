@@ -6,6 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 import { useTeamTheme } from '../context/TeamTheme';
 import { useScoreSkin } from '../context/ScoreSkin';
 import { useOnline } from '../hooks/useOnline';
+import { txDisplayLabel } from '../utils/scoreSkinConfig';
 import { ATTENDANCE_REWARD, ATTENDANCE_BONUS, ATTENDANCE_CYCLE, isKstToday, kstDateLabel } from '../utils/attendance';
 import PixelText from '../components/PixelText';
 import Panel from '../components/Panel';
@@ -156,7 +157,7 @@ export default function BaseballCenter() {
                 recent.map((tx) => (
                   <View key={tx.id} style={styles.txRow}>
                     <PixelText variant="caption" color={colors.textDim} style={styles.txDate}>{kstDateLabel(tx.createdAt)}</PixelText>
-                    <PixelText variant="caption" color={colors.text} style={styles.txLabel} numberOfLines={1}>{tx.label}</PixelText>
+                    <PixelText variant="caption" color={colors.text} style={styles.txLabel} numberOfLines={1}>{txDisplayLabel(tx.reason, tx.relatedSkinId, tx.label)}</PixelText>
                     <PixelText variant="caption" color={tx.type === 'earn' ? colors.good : colors.bad}>
                       {tx.type === 'earn' ? '+' : '-'}{tx.amount}
                     </PixelText>
