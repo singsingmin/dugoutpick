@@ -6,7 +6,6 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/types';
-import { useScoreSkin } from '../context/ScoreSkin';
 import { useAuth } from '../context/Auth';
 import { loadGames } from '../data/load';
 import { getNotifyEnabled, setNotifyEnabled, requestPermission, rescheduleMyTeamGameStart, disableAndCancel } from '../utils/notifications';
@@ -21,12 +20,9 @@ import { colors, spacing } from '../theme';
 
 type Nav = NativeStackNavigationProp<RootStackParamList>;
 const APP_VERSION = '1.0.0';
-// 디버그 도구 노출: 로컬 dev(__DEV__) + preview 테스트 빌드(env 플래그). production(출시)에선 미노출.
-const DEBUG_TOOLS = __DEV__ || process.env.EXPO_PUBLIC_DEBUG_TOOLS === '1';
 
 export default function Settings() {
   const navigation = useNavigation<Nav>();
-  const { baseballBalance, addBaseballs, resetProgress } = useScoreSkin();
   const { isProtected, email, signOut } = useAuth();
   const [updatedAt, setUpdatedAt] = useState<string | null>(null);
   const [trackRecord, setTrackRecord] = useState<TrackRecord | null>(null);
@@ -128,20 +124,6 @@ export default function Settings() {
           <TrackRecordBadge track={trackRecord} variant="settings" />
         </View>
 
-        {/* 개발/테스트용 — dev + preview 빌드에서만 노출(production 출시 미노출) */}
-        {DEBUG_TOOLS && (
-          <View style={styles.section}>
-            <SectionLabel label="야구공 (테스트)" />
-            <Panel>
-              <PixelText variant="body">현재 잔액: {baseballBalance}</PixelText>
-              <View style={styles.debugRow}>
-                <PixelButton label="야구공 +100" onPress={() => { void addBaseballs(100); }} style={styles.debugBtn} />
-                <PixelButton label="초기화" accentColor={colors.bad} onPress={() => { void resetProgress(); }} style={styles.debugBtn} />
-              </View>
-            </Panel>
-          </View>
-        )}
-
         <View style={styles.section}>
           <SectionLabel label="앱 정보" />
           <Panel>
@@ -165,6 +147,4 @@ const styles = StyleSheet.create({
   section: { marginBottom: spacing.lg },
   value: { marginTop: spacing.xs },
   notifyBtn: { marginTop: spacing.sm },
-  debugRow: { flexDirection: 'row', gap: spacing.sm, marginTop: spacing.sm },
-  debugBtn: { flex: 1 },
 });
