@@ -14,7 +14,18 @@ import PixelButton from '../components/PixelButton';
 import { colors, spacing } from '../theme';
 
 WebBrowser.maybeCompleteAuthSession();
-const redirectTo = makeRedirectUri();
+
+// OAuth 리다이렉트 복귀 주소.
+// 웹: makeRedirectUri(=Linking.createURL)는 origin만 반환(서브패스 /dugoutpick/ 누락) →
+// Supabase 허용목록(.../dugoutpick/**)과 불일치 → Site URL(기본 localhost) 폴백 유발.
+// → window.location.origin+pathname으로 배포 서브패스까지 포함해 직접 구성.
+// 네이티브: 커스텀 스킴(dugoutpick://) — 스파이크에서 검증됨.
+function getRedirectTo(): string {
+  if (Platform.OS === 'web' && typeof window !== 'undefined') {
+    return window.location.origin + window.location.pathname;
+  }
+  return makeRedirectUri();
+}
 
 type AuthStatus = 'loading' | 'ready' | 'needs_online';
 
@@ -122,7 +133,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setAuthError(null);
     setAuthBusy(true);
     try {
-      const options = { redirectTo, skipBrowserRedirect: true } as const;
+      const options = { redirectTo: getRedirectTo(), skipBrowserRedirect: true } as const;
       const { data, error } =
         mode === 'link'
           ? await supabase.auth.linkIdentity({ provider: 'google', options })
