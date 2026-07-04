@@ -7,6 +7,7 @@ import { useNavigation } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/types';
 import { useAuth } from '../context/Auth';
+import { useScoreSkin } from '../context/ScoreSkin';
 import { loadGames } from '../data/load';
 import { getNotifyEnabled, setNotifyEnabled, requestPermission, rescheduleMyTeamGameStart, disableAndCancel } from '../utils/notifications';
 import PixelText from '../components/PixelText';
@@ -22,14 +23,18 @@ type Nav = NativeStackNavigationProp<RootStackParamList>;
 const APP_VERSION = '1.0.0';
 // 배포 빌드 커밋(github.sha). 로컬은 미주입 → 'local'. 캐시/최신 여부 즉시 확인용.
 const BUILD_ID = (process.env.EXPO_PUBLIC_BUILD_ID ?? 'local').slice(0, 7);
+// 디버그 도구 노출: 로컬 dev(__DEV__) + preview 테스트 빌드(env). production(출시) 미노출.
+const DEBUG_TOOLS = __DEV__ || process.env.EXPO_PUBLIC_DEBUG_TOOLS === '1';
 
 export default function Settings() {
   const navigation = useNavigation<Nav>();
   const { isProtected, email, signOut } = useAuth();
+  const { addBaseballs, resetProgress } = useScoreSkin();
   const [updatedAt, setUpdatedAt] = useState<string | null>(null);
   const [trackRecord, setTrackRecord] = useState<TrackRecord | null>(null);
   const [notify, setNotify] = useState(false);
   const [permDenied, setPermDenied] = useState(false);
+  const [debugMsg, setDebugMsg] = useState<string | null>(null);
 
   useEffect(() => {
     let active = true;
@@ -54,6 +59,9 @@ export default function Settings() {
     await setNotifyEnabled(true);
     await rescheduleMyTeamGameStart();
   };
+
+  const onDebugReset = async () => { setDebugMsg('초기화 중…'); await resetProgress(); setDebugMsg('초기화 완료 (야구공 15)'); };
+  const onDebugGrant = async () => { setDebugMsg('지급 중…'); await addBaseballs(50); setDebugMsg('야구공 +50 지급됨'); };
 
   return (
     <View style={styles.root}>
@@ -126,6 +134,23 @@ export default function Settings() {
           <TrackRecordBadge track={trackRecord} variant="settings" />
         </View>
 
+        {/* 개발/테스트용 — dev + preview 빌드에서만(production 미노출). 서버 RPC=debug_enabled 게이팅. */}
+        {DEBUG_TOOLS && (
+          <View style={styles.section}>
+            <SectionLabel label="테스트 도구" />
+            <Panel>
+              <PixelText variant="caption" color={colors.textDim}>서버 계정 초기화/지급 (debug 빌드 전용)</PixelText>
+              <View style={styles.debugRow}>
+                <PixelButton label="초기화 (야구공 15)" accentColor={colors.bad} onPress={() => { void onDebugReset(); }} style={styles.debugBtn} />
+                <PixelButton label="야구공 +50" onPress={() => { void onDebugGrant(); }} style={styles.debugBtn} />
+              </View>
+              {debugMsg && (
+                <PixelText variant="caption" color={colors.textDim} style={styles.value}>{debugMsg}</PixelText>
+              )}
+            </Panel>
+          </View>
+        )}
+
         <View style={styles.section}>
           <SectionLabel label="앱 정보" />
           <Panel>
@@ -149,4 +174,6 @@ const styles = StyleSheet.create({
   section: { marginBottom: spacing.lg },
   value: { marginTop: spacing.xs },
   notifyBtn: { marginTop: spacing.sm },
+  debugRow: { flexDirection: 'row', gap: spacing.sm, marginTop: spacing.sm },
+  debugBtn: { flex: 1 },
 });

@@ -147,13 +147,15 @@ export function ScoreSkinProvider({ children }: { children: ReactNode }) {
     }
   }, [refresh, state.attStreak]);
 
-  // 서버 재화라 클라 지급/초기화 없음 — 디버그는 Supabase 대시보드에서(ADR-023). 인터페이스만 유지.
-  const addBaseballs = useCallback(async (_n: number) => {
-    console.warn('[account] 서버 재화 — 디버그 충전은 Supabase 대시보드에서.');
-  }, []);
+  // 디버그 전용(서버 RPC, app_config.debug_enabled 게이팅). 재화는 클라 직접 불가 → definer RPC 경유.
+  const addBaseballs = useCallback(async (n: number) => {
+    try { await account.rpcDebugGrant(n); await refresh(); }
+    catch (e) { console.warn('[debug] grant 실패:', e); }
+  }, [refresh]);
   const resetProgress = useCallback(async () => {
-    console.warn('[account] 서버 재화 — 초기화는 Supabase 대시보드에서.');
-  }, []);
+    try { await account.rpcDebugReset(); await refresh(); }
+    catch (e) { console.warn('[debug] reset 실패:', e); }
+  }, [refresh]);
 
   const canClaimAttendance = state.attLastDate !== kstDateStr();
 

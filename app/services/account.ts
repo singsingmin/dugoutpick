@@ -92,3 +92,13 @@ export async function updateAppliedSkin(userId: string, skinId: string): Promise
   const { error } = await supabase.from('profiles').update({ applied_skin_id: skinId }).eq('id', userId);
   if (error) throw error;
 }
+
+// ─── 디버그 전용 RPC (debug 빌드·app_config.debug_enabled 게이팅, 0002 마이그레이션) ──
+export async function rpcDebugReset(): Promise<void> {
+  const { error } = await supabase.rpc('debug_reset');
+  if (error) throw error;
+}
+export async function rpcDebugGrant(amount: number): Promise<void> {
+  const { error } = await supabase.rpc('debug_grant', { p_amount: amount });
+  if (error) throw error;
+}

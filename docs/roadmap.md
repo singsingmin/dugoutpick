@@ -110,6 +110,7 @@
 - ✅ **Stage 3-2(team·feedback·오프라인) 완료 (2026-07-04)** — `data/team.ts`→`profiles.favorite_team`+캐시(오프라인 낙관적, hydrate로 복구), `services/feedback.ts`→`feedback` 테이블 INSERT+Discord 병행, `hooks/useOnline.ts` 신규(netinfo). 민감 쓰기(구매·출석·피드백) 오프라인 게이팅(버튼 비활성/토스트). 읽기 화면 7곳 무변경. **⚠️ netinfo=네이티브 의존성→dev build 재빌드 필요.** 다음=Stage 4(계정 보호/복구·라커룸 진입점).
 - ✅ **Stage 4 코어(계정 보호/복구) 구현 (2026-07-04)** — 스파이크 OAuth를 정식 이관: `context/Auth.tsx`에 `protect`(linkIdentity)·`recover`(signInWithOAuth)·`signOut` + 딥링크 완성(네이티브)/웹 분기. `screens/AccountProtect.tsx`(신규·손실 경고 모달), 라커룸 진입점+보호됨/미보호 뱃지, Settings 계정 섹션. `supabase.ts` 웹 `detectSessionInUrl` 분기. SpikeAuth 삭제. **Google만·웹+네이티브·iOS 후행·넛지 다음.** ⚠️ OAuth 왕복은 라이브 검증 대기(Supabase Redirect URL 등록 필요), app/ 변경→dev build 재빌드 필요. 넛지 배너는 후속.
 - 🐛 **웹 오프라인 게이팅 오판 수정 (2026-07-04)** — netinfo 웹 도달성 probe(`HEAD /`=200)가 GitHub Pages 프로젝트 서브패스에서 실패→`isInternetReachable=false` 오판→출석/구매/피드백 차단. `useOnline`이 웹에선 `navigator.onLine`만 신뢰하도록 수정.
+- 🛠️ **디버그 테스트 도구 (2026-07-04)** — 서버 재화라 클라 직접 초기화 불가 → `debug_reset`(신규유저 15로 리셋)·`debug_grant`(+N) definer RPC(`0002_debug_tools.sql`) + `app_config.debug_enabled` 플래그 게이팅. Settings 디버그 섹션(EXPO_PUBLIC_DEBUG_TOOLS)에서 호출. **🚨 출시 전 필수: `update app_config set debug_enabled=false` + 디버그 버튼 미노출(현재 deploy-web은 DEBUG_TOOLS=1로 공개 URL에 노출됨).**
 
 ### Phase 3-Pre — 실제 꿀잼 경기 판정 파이프라인 (예측 리그 선행 과제)
 > 예측 리그 MVP의 심장. **계정/DB와 독립적으로 파이프라인 단독 선행 가능**(판정 결과 JSON만 먼저 산출).
