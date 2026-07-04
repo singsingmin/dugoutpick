@@ -49,7 +49,7 @@
 - [x] **워크플로 Node20 → v5** (2026-06-29) — `actions/checkout`·`actions/setup-node` v4 → v5 완료.
 - [x] **에셋 WebP 전환** (2026-07) — 인앱 이미지 4종 PNG→WebP(7.4MB→~2MB, 배경=손실 q82/배지=무손실). 재사용 도구 `scripts/asset-to-webp.mjs`·`chroma-key.mjs`. 아이콘/스플래시는 Expo 요구로 PNG 유지.
 - [ ] **PAT 만료 관리** — cron-job.org용 fine-grained PAT. 만료 시 cron 401로 멈춤(실패 알림으로 커버). 재발급 후 cron-job.org 헤더값 교체.
-- [ ] **Play Store 공개 전 Discord 웹훅 재검토** — 현재 APK 번들에 웹훅 URL 포함(2명 내부 테스터용). 공개 배포 전 서버 프록시 또는 웹훅 전용 채널 교체 필요.
+- [x] **Discord 웹훅 제거** (2026-07-04) — 피드백이 feedback 테이블에 쌓이므로 클라 웹훅(번들에 URL 박히는 부채) 제거. `sendToDiscord`·`discordWebhookUrl`·워크플로 env 삭제. 리뷰는 Supabase 대시보드/쿼리. 실시간 알림 필요 시 서버측(Supabase DB webhook)으로.
 - [ ] **공개 전 디버그 툴 노출 제거** — 설정의 야구공 충전/초기화 버튼. `EXPO_PUBLIC_DEBUG_TOOLS` 플래그로 노출 중: eas.json `preview` env + `deploy-web.yml` export env. 공개(production app-bundle는 이미 미노출) 전 preview·web 플래그 제거. `__DEV__`만 남기면 됨.
 
 ## D. 🗓️ 비시즌 콘텐츠 (리서치 중)

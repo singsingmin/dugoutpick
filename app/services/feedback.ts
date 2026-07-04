@@ -1,5 +1,4 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import Constants from 'expo-constants';
 import { supabase } from './supabase';
 
 export interface FeedbackTag {
@@ -35,7 +34,7 @@ export const TAGS_UP: FeedbackTag[] = [
 const FEEDBACK_KEY = (gameId: string) => `dugout.feedback.${gameId}`;
 
 // 서버(feedback 테이블) INSERT + 로컬 마커(오프라인 hasFeedback·중복 제출 방지).
-// 민감 쓰기라 제출은 온라인에서만(위젯이 useOnline으로 게이팅). 서버 오류는 삼킴 — Discord 병행 싱크.
+// 민감 쓰기라 제출은 온라인에서만(위젯이 useOnline으로 게이팅). 리뷰는 Supabase 대시보드/쿼리.
 export async function saveFeedback(entry: FeedbackEntry): Promise<void> {
   try {
     const { data } = await supabase.auth.getSession();
@@ -60,37 +59,6 @@ export async function saveFeedback(entry: FeedbackEntry): Promise<void> {
     await AsyncStorage.setItem(FEEDBACK_KEY(entry.gameId), JSON.stringify([entry]));
   } catch {
     /* 로컬 저장 실패 무시 */
-  }
-}
-
-export async function sendToDiscord(entry: FeedbackEntry, matchLabel: string): Promise<void> {
-  try {
-    const webhookUrl: string | null = Constants.expoConfig?.extra?.discordWebhookUrl ?? null;
-    if (!webhookUrl) return;
-
-    const thumbsEmoji = entry.thumbs === 'up' ? '👍' : '👎';
-    const thumbsLabel = entry.thumbs === 'up' ? '꿀잼' : '노잼';
-    const date = entry.ts.slice(0, 10);
-
-    const factorsLine = entry.factors
-      ? `factors: ${Object.entries(entry.factors).map(([k, v]) => `${k}=${v.toFixed(2)}`).join(' ')}`
-      : null;
-
-    const content = [
-      `[피드백] ${date} ${matchLabel}`,
-      `예측: ${entry.predictedScore}점 | 평가: ${thumbsEmoji} ${thumbsLabel}`,
-      `이유: ${entry.reasonLabel ?? '(없음)'}`,
-      factorsLine,
-      `gameId: ${entry.gameId} | ts: ${entry.ts}`,
-    ].filter(Boolean).join('\n');
-
-    await fetch(webhookUrl, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ content }),
-    });
-  } catch (e) {
-    console.error('[feedback] Discord 전송 실패:', e);
   }
 }
 

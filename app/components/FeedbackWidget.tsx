@@ -5,7 +5,7 @@ import Panel from './Panel';
 import SectionLabel from './SectionLabel';
 import {
   TAGS_UP, TAGS_DOWN,
-  saveFeedback, sendToDiscord, hasFeedback,
+  saveFeedback, hasFeedback,
   type FeedbackTag,
 } from '../services/feedback';
 import { colors, spacing, border } from '../theme';
@@ -52,7 +52,6 @@ export default function FeedbackWidget({ gameId, predictedScore, matchLabel, fac
       factors,
     };
     await saveFeedback(entry);
-    void sendToDiscord(entry, matchLabel); // fire-and-forget; sendToDiscord swallows errors internally
     setStep('done');
   }
 

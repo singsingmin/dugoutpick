@@ -39,7 +39,6 @@ module.exports = {
       eas: {
         projectId: "2dca77a5-dcf4-4759-863d-91e1cf81dcc7"
       },
-      discordWebhookUrl: process.env.DISCORD_WEBHOOK_URL || null,
       supabaseUrl: process.env.SUPABASE_URL || null,
       supabaseAnonKey: process.env.SUPABASE_ANON_KEY || null,
       // 빌드 식별(설정 앱정보 표시). 웹=CI가 EXPO_PUBLIC_BUILD_ID(github.sha) 주입,
