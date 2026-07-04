@@ -1,7 +1,7 @@
 {
   "date": "20260704",
   "dateText": "2026년 7월 4일",
-  "updatedAt": "2026-07-04T10:20:27.809Z",
+  "updatedAt": "2026-07-04T10:40:28.029Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 39,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
+        "inning": 5,
         "half": "B",
         "out": 1,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박준영",
-        "batter": "홍창기",
-        "heat": 18,
+        "pitcher": "장유호",
+        "batter": "문보경",
+        "heat": 20,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -187,7 +187,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 2,
+        "score": 8,
         "starter": {
           "name": "최원태",
           "era": 4.27,
@@ -232,14 +232,14 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": true,
-        "b3": false,
-        "pitcher": "이건욱",
-        "batter": "박승규",
-        "heat": 17,
-        "label": "경기 흐름 체크 중"
+        "b3": true,
+        "pitcher": "김민",
+        "batter": "김지찬",
+        "heat": 43,
+        "label": "점수 나는 난타전"
       },
       "recap": null,
       "decision": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
+        "inning": 5,
         "half": "T",
-        "out": 1,
-        "b1": true,
+        "out": 2,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "시라카와",
-        "batter": "김한별",
-        "heat": 35,
+        "pitcher": "성영탁",
+        "batter": "이우성",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -560,16 +560,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
+        "inning": 6,
+        "half": "T",
         "out": 0,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "비슬리",
-        "batter": "장진혁",
-        "heat": 50,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "고영표",
+        "batter": "고승민",
+        "heat": 53,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
+        "inning": 6,
         "half": "T",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "김선기",
-        "batter": "안재석",
-        "heat": 10,
+        "batter": "강승호",
+        "heat": 11,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
