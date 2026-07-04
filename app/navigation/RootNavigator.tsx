@@ -6,7 +6,6 @@ import GameDetail from '../screens/GameDetail';
 import SkinSelect from '../screens/SkinSelect';
 import BaseballCenter from '../screens/BaseballCenter';
 import Settings from '../screens/Settings';
-import AccountProtect from '../screens/AccountProtect';
 import Tabs from './Tabs';
 import { colors, fonts } from '../theme';
 import { useTeamTheme } from '../context/TeamTheme';
@@ -33,7 +32,6 @@ export default function RootNavigator() {
       <Stack.Screen name="SkinSelect" component={SkinSelect} options={{ headerShown: false }} />
       <Stack.Screen name="BaseballCenter" component={BaseballCenter} options={{ headerShown: false }} />
       <Stack.Screen name="Settings" component={Settings} options={{ headerShown: false }} />
-      <Stack.Screen name="AccountProtect" component={AccountProtect} options={{ headerShown: false }} />
     </Stack.Navigator>
   );
 }

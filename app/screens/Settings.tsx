@@ -1,6 +1,6 @@
 // 설정 화면 — 라커룸 우상단 톱니로 진입. 데이터 갱신 / 적중률 / (디버그) / 앱 정보.
 import { useEffect, useState } from 'react';
-import { View, ScrollView, Image, StyleSheet } from 'react-native';
+import { View, ScrollView, Image, Modal, StyleSheet } from 'react-native';
 import type { TrackRecord } from '../types';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
@@ -17,7 +17,7 @@ import ScreenHeader from '../components/ScreenHeader';
 import SectionLabel from '../components/SectionLabel';
 import TrackRecordBadge from '../components/TrackRecordBadge';
 import { formatUpdatedAt } from '../utils';
-import { colors, spacing } from '../theme';
+import { colors, spacing, border } from '../theme';
 
 type Nav = NativeStackNavigationProp<RootStackParamList>;
 const APP_VERSION = '1.0.0';
@@ -28,8 +28,11 @@ const DEBUG_TOOLS = __DEV__ || process.env.EXPO_PUBLIC_DEBUG_TOOLS === '1';
 
 export default function Settings() {
   const navigation = useNavigation<Nav>();
-  const { isProtected, email, signOut } = useAuth();
-  const { addBaseballs, resetProgress } = useScoreSkin();
+  const {
+    isProtected, email, authBusy, authError, linkConflict,
+    connectGoogle, recoverGoogle, signOut, clearLinkConflict,
+  } = useAuth();
+  const { baseballBalance, addBaseballs, resetProgress } = useScoreSkin();
   const [updatedAt, setUpdatedAt] = useState<string | null>(null);
   const [trackRecord, setTrackRecord] = useState<TrackRecord | null>(null);
   const [notify, setNotify] = useState(false);
@@ -102,19 +105,24 @@ export default function Settings() {
                 ? `${email ? `${email} · ` : ''}기기를 바꿔도 데이터가 유지돼요`
                 : '연결하면 기기를 바꿔도 야구공·스킨이 그대로 유지돼요'}
             </PixelText>
-            <PixelButton
-              label={isProtected ? '계정 관리' : '구글 계정 연결하기'}
-              accentColor={isProtected ? undefined : colors.good}
-              onPress={() => navigation.navigate('AccountProtect')}
-              style={styles.notifyBtn}
-            />
-            {isProtected && (
+            {isProtected ? (
               <PixelButton
                 label="로그아웃"
                 accentColor={colors.bad}
                 onPress={() => { void signOut(); }}
                 style={styles.notifyBtn}
               />
+            ) : (
+              <PixelButton
+                label={authBusy ? '진행 중…' : '구글 계정으로 연결하기'}
+                accentColor={colors.good}
+                onPress={() => { void connectGoogle(); }}
+                disabled={authBusy}
+                style={styles.notifyBtn}
+              />
+            )}
+            {authError && (
+              <PixelText variant="caption" color={colors.bad} style={styles.value}>{authError}</PixelText>
             )}
           </Panel>
         </View>
@@ -161,6 +169,24 @@ export default function Settings() {
         </View>
       </ScrollView>
       </SafeAreaView>
+
+      {/* 충돌 = 이미 쓰던 구글 → 그 계정 불러오기(복구) 제안 */}
+      <Modal visible={linkConflict} transparent animationType="fade" onRequestClose={clearLinkConflict}>
+        <View style={styles.modalOverlay}>
+          <View style={styles.modalCard}>
+            <PixelText variant="title" color={colors.text}>이미 만든 계정이 있어요</PixelText>
+            <PixelText variant="body" color={colors.textDim} style={styles.modalMsg}>
+              이 구글 계정으로 만든 기록이 이미 있어요. 그 계정을 불러올까요?{'\n'}
+              지금 이 기기의 진행상황
+              {baseballBalance > 0 ? ` (야구공 ${baseballBalance}개 등)` : ''}은 불러온 계정으로 대체돼요.
+            </PixelText>
+            <View style={styles.modalRow}>
+              <PixelButton label="취소" accentColor={colors.surfaceAlt} onPress={clearLinkConflict} style={styles.modalBtn} />
+              <PixelButton label="불러오기" onPress={() => { clearLinkConflict(); void recoverGoogle(); }} style={styles.modalBtn} />
+            </View>
+          </View>
+        </View>
+      </Modal>
     </View>
   );
 }
@@ -176,4 +202,9 @@ const styles = StyleSheet.create({
   notifyBtn: { marginTop: spacing.sm },
   debugRow: { flexDirection: 'row', gap: spacing.sm, marginTop: spacing.sm },
   debugBtn: { flex: 1 },
+  modalOverlay: { flex: 1, backgroundColor: 'rgba(0,0,0,0.5)', alignItems: 'center', justifyContent: 'center', padding: spacing.xl },
+  modalCard: { backgroundColor: colors.bg, borderColor: colors.border, borderWidth: border.width, borderRadius: border.radius, padding: spacing.lg, width: '100%', maxWidth: 340 },
+  modalMsg: { marginTop: spacing.md, lineHeight: 20 },
+  modalRow: { flexDirection: 'row', gap: spacing.sm, marginTop: spacing.lg },
+  modalBtn: { flex: 1 },
 });

@@ -7,7 +7,6 @@ export type RootStackParamList = {
   SkinSelect: undefined;
   BaseballCenter: undefined;
   Settings: undefined;
-  AccountProtect: undefined;   // Phase 3 Stage 4 계정 보호/복구
 };
 
 export type TabParamList = {
