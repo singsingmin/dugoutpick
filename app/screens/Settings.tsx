@@ -202,7 +202,7 @@ export default function Settings() {
               {baseballBalance > 0 ? ` (야구공 ${baseballBalance}개 등)` : ''}은 불러온 계정으로 대체돼요.
             </PixelText>
             <View style={styles.modalRow}>
-              <PixelButton label="취소" accentColor={colors.surfaceAlt} onPress={clearLinkConflict} style={styles.modalBtn} />
+              <PixelButton label="취소" accentColor={colors.textDim} onPress={clearLinkConflict} style={styles.modalBtn} />
               <PixelButton label="불러오기" onPress={() => { clearLinkConflict(); void recoverGoogle(); }} style={styles.modalBtn} />
             </View>
             <PixelText variant="caption" color={colors.textDim} style={styles.modalHint}>
