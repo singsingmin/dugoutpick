@@ -1,7 +1,7 @@
 {
   "date": "20260704",
   "dateText": "2026년 7월 4일",
-  "updatedAt": "2026-07-04T09:59:56.948Z",
+  "updatedAt": "2026-07-04T10:00:43.184Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 39,
@@ -397,12 +397,12 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
-        "b2": true,
-        "b3": false,
+        "b2": false,
+        "b3": true,
         "pitcher": "라일리",
-        "batter": "박상준",
+        "batter": "김도영",
         "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
@@ -561,14 +561,14 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "고영표",
-        "batter": "나승엽",
-        "heat": 43,
+        "pitcher": "비슬리",
+        "batter": "힐리어드",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -727,12 +727,12 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "박준현",
-        "batter": "윤준호",
+        "batter": "강승호",
         "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
