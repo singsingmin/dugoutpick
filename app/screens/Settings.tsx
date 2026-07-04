@@ -1,6 +1,6 @@
 // 설정 화면 — 라커룸 우상단 톱니로 진입. 데이터 갱신 / 적중률 / (디버그) / 앱 정보.
 import { useEffect, useState } from 'react';
-import { View, ScrollView, Image, Modal, StyleSheet } from 'react-native';
+import { View, ScrollView, Image, Modal, Switch, Platform, Linking, StyleSheet } from 'react-native';
 import type { TrackRecord } from '../types';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
@@ -25,6 +25,7 @@ const APP_VERSION = '1.0.0';
 const BUILD_ID = (process.env.EXPO_PUBLIC_BUILD_ID ?? 'local').slice(0, 7);
 // 디버그 도구 노출: 로컬 dev(__DEV__) + preview 테스트 빌드(env). production(출시) 미노출.
 const DEBUG_TOOLS = __DEV__ || process.env.EXPO_PUBLIC_DEBUG_TOOLS === '1';
+const IS_WEB = Platform.OS === 'web';   // 웹은 로컬 알림 미지원
 
 export default function Settings() {
   const navigation = useNavigation<Nav>();
@@ -76,20 +77,37 @@ export default function Settings() {
         <View style={styles.section}>
           <SectionLabel label="알림" />
           <Panel>
-            <PixelText variant="body">내 팀 경기 시작 알림</PixelText>
-            <PixelText variant="caption" color={colors.textDim} style={styles.value}>
-              경기 시작 30분 전, 응원팀 경기가 있는 날에만 울려요
-            </PixelText>
-            <PixelButton
-              label={notify ? '알림 켜짐 (탭해서 끄기)' : '알림 켜기'}
-              accentColor={notify ? colors.good : undefined}
-              onPress={() => { void toggleNotify(); }}
-              style={styles.notifyBtn}
-            />
-            {permDenied && (
-              <PixelText variant="caption" color={colors.bad} style={styles.value}>
-                알림 권한이 거부됐어요. 기기 설정에서 허용해 주세요.
+            <View style={styles.notifyRow}>
+              <View style={styles.notifyText}>
+                <PixelText variant="body">내 팀 경기 시작 알림</PixelText>
+                <PixelText variant="caption" color={colors.textDim} style={styles.value}>
+                  경기 시작 30분 전, 응원팀 경기가 있는 날에만 울려요
+                </PixelText>
+              </View>
+              <Switch
+                value={notify}
+                onValueChange={() => { void toggleNotify(); }}
+                disabled={IS_WEB}
+                trackColor={{ true: colors.good, false: colors.border }}
+                thumbColor={colors.bg}
+              />
+            </View>
+            {IS_WEB && (
+              <PixelText variant="caption" color={colors.textDim} style={styles.value}>
+                웹에서는 알림을 지원하지 않아요. 앱에서 켜주세요.
               </PixelText>
+            )}
+            {permDenied && (
+              <>
+                <PixelText variant="caption" color={colors.bad} style={styles.value}>
+                  알림 권한이 꺼져 있어요. 설정에서 켤 수 있어요.
+                </PixelText>
+                <PixelButton
+                  label="설정 열기"
+                  onPress={() => { void Linking.openSettings(); }}
+                  style={styles.notifyBtn}
+                />
+              </>
             )}
           </Panel>
         </View>
@@ -202,6 +220,8 @@ const styles = StyleSheet.create({
   content: { padding: spacing.md },
   section: { marginBottom: spacing.lg },
   value: { marginTop: spacing.xs },
+  notifyRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.md },
+  notifyText: { flex: 1 },
   notifyBtn: { marginTop: spacing.sm },
   debugRow: { flexDirection: 'row', gap: spacing.sm, marginTop: spacing.sm },
   debugBtn: { flex: 1 },
