@@ -7,6 +7,7 @@ import { useNavigation } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/types';
 import { useScoreSkin } from '../context/ScoreSkin';
+import { useAuth } from '../context/Auth';
 import { loadGames } from '../data/load';
 import { getNotifyEnabled, setNotifyEnabled, requestPermission, rescheduleMyTeamGameStart, disableAndCancel } from '../utils/notifications';
 import PixelText from '../components/PixelText';
@@ -26,6 +27,7 @@ const DEBUG_TOOLS = __DEV__ || process.env.EXPO_PUBLIC_DEBUG_TOOLS === '1';
 export default function Settings() {
   const navigation = useNavigation<Nav>();
   const { baseballBalance, addBaseballs, resetProgress } = useScoreSkin();
+  const { isProtected, email, signOut } = useAuth();
   const [updatedAt, setUpdatedAt] = useState<string | null>(null);
   const [trackRecord, setTrackRecord] = useState<TrackRecord | null>(null);
   const [notify, setNotify] = useState(false);
@@ -84,6 +86,34 @@ export default function Settings() {
         </View>
 
         <View style={styles.section}>
+          <SectionLabel label="계정" />
+          <Panel>
+            <PixelText variant="body">
+              {isProtected ? '계정 보호됨 ✓' : '미보호 (익명)'}
+            </PixelText>
+            <PixelText variant="caption" color={colors.textDim} style={styles.value}>
+              {isProtected
+                ? `Google 연결됨${email ? ` · ${email}` : ''} · 재설치·기기변경 복구 가능`
+                : '앱을 지우면 야구공·스킨·출석이 사라져요. Google로 보호하세요.'}
+            </PixelText>
+            <PixelButton
+              label={isProtected ? '계정 관리' : '계정 보호하기'}
+              accentColor={isProtected ? undefined : colors.good}
+              onPress={() => navigation.navigate('AccountProtect')}
+              style={styles.notifyBtn}
+            />
+            {isProtected && (
+              <PixelButton
+                label="로그아웃"
+                accentColor={colors.bad}
+                onPress={() => { void signOut(); }}
+                style={styles.notifyBtn}
+              />
+            )}
+          </Panel>
+        </View>
+
+        <View style={styles.section}>
           <SectionLabel label="데이터" />
           <Panel>
             <PixelText variant="body">갱신 시각</PixelText>
@@ -108,7 +138,6 @@ export default function Settings() {
                 <PixelButton label="야구공 +100" onPress={() => { void addBaseballs(100); }} style={styles.debugBtn} />
                 <PixelButton label="초기화" accentColor={colors.bad} onPress={() => { void resetProgress(); }} style={styles.debugBtn} />
               </View>
-              <PixelButton label="Auth 스파이크 (Phase 3)" onPress={() => navigation.navigate('SpikeAuth')} style={styles.notifyBtn} />
             </Panel>
           </View>
         )}

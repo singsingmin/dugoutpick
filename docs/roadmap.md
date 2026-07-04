@@ -108,6 +108,8 @@
 - ✅ **Stage 2(Auth) 완료 (2026-07-04)** — `services/supabase.ts`(클라 싱글턴·AsyncStorage 세션) + `context/Auth.tsx`(첫 실행 익명 sign-in·세션 관리·온라인 게이트). AuthProvider가 provider 트리 최상단. 첫 실행 1회만 온라인 필요, 이후 세션 로컬 생존.
 - ✅ **Stage 3-1(재화 코어) 완료 (2026-07-04)** — 야구공·스킨·출석을 로컬→서버(Supabase)+캐시 미러로 스왑. `services/account.ts`(캐시+fetch+RPC) + `ScoreSkin.tsx` 구현 교체(인터페이스 불변→화면 무변경). 잔액 이동=RPC만, 디버그 충전/초기화=대시보드 이관.
 - ✅ **Stage 3-2(team·feedback·오프라인) 완료 (2026-07-04)** — `data/team.ts`→`profiles.favorite_team`+캐시(오프라인 낙관적, hydrate로 복구), `services/feedback.ts`→`feedback` 테이블 INSERT+Discord 병행, `hooks/useOnline.ts` 신규(netinfo). 민감 쓰기(구매·출석·피드백) 오프라인 게이팅(버튼 비활성/토스트). 읽기 화면 7곳 무변경. **⚠️ netinfo=네이티브 의존성→dev build 재빌드 필요.** 다음=Stage 4(계정 보호/복구·라커룸 진입점).
+- ✅ **Stage 4 코어(계정 보호/복구) 구현 (2026-07-04)** — 스파이크 OAuth를 정식 이관: `context/Auth.tsx`에 `protect`(linkIdentity)·`recover`(signInWithOAuth)·`signOut` + 딥링크 완성(네이티브)/웹 분기. `screens/AccountProtect.tsx`(신규·손실 경고 모달), 라커룸 진입점+보호됨/미보호 뱃지, Settings 계정 섹션. `supabase.ts` 웹 `detectSessionInUrl` 분기. SpikeAuth 삭제. **Google만·웹+네이티브·iOS 후행·넛지 다음.** ⚠️ OAuth 왕복은 라이브 검증 대기(Supabase Redirect URL 등록 필요), app/ 변경→dev build 재빌드 필요. 넛지 배너는 후속.
+- 🐛 **웹 오프라인 게이팅 오판 수정 (2026-07-04)** — netinfo 웹 도달성 probe(`HEAD /`=200)가 GitHub Pages 프로젝트 서브패스에서 실패→`isInternetReachable=false` 오판→출석/구매/피드백 차단. `useOnline`이 웹에선 `navigator.onLine`만 신뢰하도록 수정.
 
 ### Phase 3-Pre — 실제 꿀잼 경기 판정 파이프라인 (예측 리그 선행 과제)
 > 예측 리그 MVP의 심장. **계정/DB와 독립적으로 파이프라인 단독 선행 가능**(판정 결과 JSON만 먼저 산출).

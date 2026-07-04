@@ -2,6 +2,7 @@
 // 세션 저장 = AsyncStorage(재시작 생존·재설치 소실). detectSessionInUrl=false(네이티브).
 // URL/키는 app.config.js extra(← .env.local)에서 주입. anon(publishable) 키는 공개 안전, RLS가 보호.
 import 'react-native-url-polyfill/auto';
+import { Platform } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Constants from 'expo-constants';
 import { createClient } from '@supabase/supabase-js';
@@ -25,7 +26,9 @@ export const supabase = createClient(
       storage: AsyncStorage,
       autoRefreshToken: true,
       persistSession: true,
-      detectSessionInUrl: false,
+      // 웹 OAuth는 리다이렉트 복귀 URL(#access_token·?code)에서 세션 자동 완성 필요.
+      // 네이티브는 딥링크를 Auth.tsx가 직접 처리하므로 false.
+      detectSessionInUrl: Platform.OS === 'web',
     },
   },
 );
