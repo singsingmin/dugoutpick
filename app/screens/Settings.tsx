@@ -92,18 +92,18 @@ export default function Settings() {
         </View>
 
         <View style={styles.section}>
-          <SectionLabel label="계정" />
+          <SectionLabel label="소셜 계정" />
           <Panel>
             <PixelText variant="body">
-              {isProtected ? '계정 보호됨 ✓' : '미보호 (익명)'}
+              {isProtected ? '구글 계정 연결됨 ✓' : '구글 계정 연결하기'}
             </PixelText>
             <PixelText variant="caption" color={colors.textDim} style={styles.value}>
               {isProtected
-                ? `Google 연결됨${email ? ` · ${email}` : ''} · 재설치·기기변경 복구 가능`
-                : '앱을 지우면 야구공·스킨·출석이 사라져요. Google로 보호하세요.'}
+                ? `${email ? `${email} · ` : ''}기기를 바꿔도 데이터가 유지돼요`
+                : '연결하면 기기를 바꿔도 야구공·스킨이 그대로 유지돼요'}
             </PixelText>
             <PixelButton
-              label={isProtected ? '계정 관리' : '계정 보호하기'}
+              label={isProtected ? '계정 관리' : '구글 계정 연결하기'}
               accentColor={isProtected ? undefined : colors.good}
               onPress={() => navigation.navigate('AccountProtect')}
               style={styles.notifyBtn}

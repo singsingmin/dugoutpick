@@ -1,7 +1,6 @@
-// 계정 보호/복구 화면 (Phase 3 Stage 4) — phase3-account-design.md §2 F4~F6.
-// 보호(linkIdentity): 익명 uid 유지·데이터 보존. 복구(signInWithOAuth): 서버 우선 전면 교체(손실 경고).
-// OAuth 완료는 비동기(딥링크/detectSessionInUrl) → isProtected 전환으로 반영.
-import { useState } from 'react';
+// 계정(구글) 연결 화면 (Phase 3 Stage 4) — phase3-account-design.md §2 F4~F6.
+// 단일 진입 "구글 계정 연결하기". 앱이 연결/복구를 자동 분기(내부: linkIdentity vs signInWithOAuth):
+// 새 구글이면 연결, 이미 쓰던 구글이면 충돌 감지 → "불러오기"(복구) 제안 모달. OAuth 완료는 비동기.
 import { View, ScrollView, Image, Modal, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
@@ -17,13 +16,15 @@ import { colors, spacing, border } from '../theme';
 
 export default function AccountProtect() {
   const navigation = useNavigation();
-  const { isProtected, email, authBusy, authError, protect, recover, clearAuthError } = useAuth();
+  const {
+    isProtected, email, authBusy, authError, linkConflict,
+    connectGoogle, recoverGoogle, clearLinkConflict,
+  } = useAuth();
   const { baseballBalance } = useScoreSkin();
-  const [confirmRecover, setConfirmRecover] = useState(false);
 
   const onRecover = async () => {
-    setConfirmRecover(false);
-    await recover();
+    clearLinkConflict();
+    await recoverGoogle();
   };
 
   return (
@@ -31,91 +32,64 @@ export default function AccountProtect() {
       <Image source={require('../assets/stadium-bg.webp')} style={styles.bgImage} resizeMode="cover" />
       <View style={styles.bgOverlay} />
       <SafeAreaView style={styles.safe} edges={['top']}>
-        <ScreenHeader title="계정 보호" leftIcon="back" onLeftPress={() => navigation.goBack()} />
+        <ScreenHeader title="구글 계정 연결" leftIcon="back" onLeftPress={() => navigation.goBack()} />
         <ScrollView contentContainerStyle={styles.content}>
           {isProtected ? (
-            // ── 보호됨 상태 ──────────────────────────────
+            // ── 연결됨 ──────────────────────────────
             <View style={styles.section}>
-              <SectionLabel icon="star" label="계정 보호됨" />
+              <SectionLabel icon="star" label="소셜 계정" />
               <Panel>
                 <View style={styles.statusRow}>
                   <AppIcon name="star" size={22} />
-                  <PixelText variant="title" color={colors.good}>보호 완료 ✓</PixelText>
+                  <PixelText variant="title" color={colors.good}>구글 계정 연결됨 ✓</PixelText>
                 </View>
                 {email && (
-                  <PixelText variant="caption" color={colors.textDim} style={styles.gap}>
-                    연결된 계정: {email}
-                  </PixelText>
+                  <PixelText variant="caption" color={colors.textDim} style={styles.gap}>{email}</PixelText>
                 )}
                 <PixelText variant="body" color={colors.text} style={styles.gap}>
-                  이제 앱을 지우거나 기기를 바꿔도 Google 로그인으로 야구공·스킨·출석을 되살릴 수 있어요.
+                  이제 앱을 지우거나 기기를 바꿔도 구글 로그인으로 야구공·스킨·출석을 그대로 이어갈 수 있어요.
                 </PixelText>
               </Panel>
             </View>
           ) : (
-            // ── 미보호(익명) 상태 ────────────────────────
-            <>
-              <View style={styles.section}>
-                <SectionLabel icon="star" label="계정 보호하기" />
-                <Panel>
-                  <PixelText variant="body" color={colors.text}>
-                    지금은 이 기기에만 저장돼 있어요. 앱을 지우면 야구공·스킨·출석이 모두 사라져요.
-                  </PixelText>
-                  <PixelText variant="caption" color={colors.textDim} style={styles.gap}>
-                    Google 계정으로 연결하면 데이터를 그대로 지키고, 나중에 재설치·기기변경 시 복구할 수 있어요.
-                  </PixelText>
-                  <PixelButton
-                    label={authBusy ? '진행 중…' : 'Google로 보호하기'}
-                    onPress={() => { void protect(); }}
-                    disabled={authBusy}
-                    style={styles.actionBtn}
-                  />
-                </Panel>
-              </View>
-
-              <View style={styles.section}>
-                <SectionLabel label="이미 계정이 있어요" />
-                <Panel>
-                  <PixelText variant="caption" color={colors.textDim}>
-                    예전에 보호한 적이 있다면 복구하세요. 지금 이 기기의 진행상황은 기존 계정 데이터로 대체돼요.
-                  </PixelText>
-                  <PixelButton
-                    label="Google로 복구하기"
-                    accentColor={colors.surfaceAlt}
-                    onPress={() => { clearAuthError(); setConfirmRecover(true); }}
-                    disabled={authBusy}
-                    style={styles.actionBtn}
-                  />
-                </Panel>
-              </View>
-            </>
-          )}
-
-          {authError && (
+            // ── 미연결(익명) ────────────────────────
             <View style={styles.section}>
+              <SectionLabel icon="star" label="소셜 계정" />
               <Panel>
-                <PixelText variant="caption" color={colors.bad}>
-                  인증 오류: {authError}
+                <PixelText variant="body" color={colors.text}>
+                  지금은 이 기기에만 저장돼 있어요. 앱을 지우면 야구공·스킨·출석이 모두 사라져요.
                 </PixelText>
+                <PixelText variant="caption" color={colors.textDim} style={styles.gap}>
+                  구글 계정을 연결하면 데이터를 안전하게 보관하고, 기기를 바꿔도 그대로 이어갈 수 있어요.
+                </PixelText>
+                <PixelButton
+                  label={authBusy ? '진행 중…' : '구글 계정으로 연결하기'}
+                  onPress={() => { void connectGoogle(); }}
+                  disabled={authBusy}
+                  style={styles.actionBtn}
+                />
+                {authError && (
+                  <PixelText variant="caption" color={colors.bad} style={styles.gap}>{authError}</PixelText>
+                )}
               </Panel>
             </View>
           )}
         </ScrollView>
       </SafeAreaView>
 
-      {/* 복구 손실 경고 모달(케이스 B) */}
-      <Modal visible={confirmRecover} transparent animationType="fade" onRequestClose={() => setConfirmRecover(false)}>
+      {/* 충돌 = 이미 쓰던 구글 → 그 계정 불러오기(복구) 제안 */}
+      <Modal visible={linkConflict} transparent animationType="fade" onRequestClose={clearLinkConflict}>
         <View style={styles.modalOverlay}>
           <View style={styles.modalCard}>
-            <PixelText variant="title" color={colors.text}>복구할까요?</PixelText>
+            <PixelText variant="title" color={colors.text}>이미 만든 계정이 있어요</PixelText>
             <PixelText variant="body" color={colors.textDim} style={styles.modalMsg}>
-              복구하면 지금 이 기기의 진행상황
-              {baseballBalance > 0 ? ` (야구공 ${baseballBalance}개 등)` : ''}이 사라지고,
-              기존 Google 계정의 데이터로 대체돼요.
+              이 구글 계정으로 만든 기록이 이미 있어요. 그 계정을 불러올까요?{'\n'}
+              지금 이 기기의 진행상황
+              {baseballBalance > 0 ? ` (야구공 ${baseballBalance}개 등)` : ''}은 불러온 계정으로 대체돼요.
             </PixelText>
             <View style={styles.modalRow}>
-              <PixelButton label="취소" accentColor={colors.surfaceAlt} onPress={() => setConfirmRecover(false)} style={styles.modalBtn} />
-              <PixelButton label="계속" accentColor={colors.bad} onPress={() => { void onRecover(); }} style={styles.modalBtn} />
+              <PixelButton label="취소" accentColor={colors.surfaceAlt} onPress={clearLinkConflict} style={styles.modalBtn} />
+              <PixelButton label="불러오기" onPress={() => { void onRecover(); }} style={styles.modalBtn} />
             </View>
           </View>
         </View>
