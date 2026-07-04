@@ -101,9 +101,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     void bootstrap();
-    const { data: sub } = supabase.auth.onAuthStateChange((_event, s) => {
+    const { data: sub } = supabase.auth.onAuthStateChange((event, s) => {
       setSession(s);
       if (s) setStatus('ready');
+      // 로그아웃 → 세션 없는 상태 방지: 즉시 새 익명 세션 확립(linkIdentity 등은 세션 필수).
+      else if (event === 'SIGNED_OUT') void bootstrap();
     });
     return () => sub.subscription.unsubscribe();
   }, [bootstrap]);
