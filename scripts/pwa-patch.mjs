@@ -101,6 +101,10 @@ let html = readFileSync(join(distDir, 'index.html'), 'utf8');
 
 // Skip if already patched
 if (!html.includes('apple-mobile-web-app-capable')) {
+  // 한국어 앱을 lang="en"으로 선언 → 크롬 모바일 자동번역이 한국어를 오검지해 텍스트를
+  // 엉터리로 "번역"(+DOM 재작성으로 React 이벤트 파손). lang="ko" + translate="no"로 차단.
+  html = html.replace('<html lang="en">', '<html lang="ko" translate="no">');
+
   // Fix favicon path (Expo generates root-relative but we're under /dugoutpick/)
   html = html.replace('href="/favicon.ico"', 'href="/dugoutpick/favicon.ico"');
 
@@ -114,7 +118,8 @@ if (!html.includes('apple-mobile-web-app-capable')) {
     'width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover'
   );
 
-  const pwaHead = `  <meta name="apple-mobile-web-app-capable" content="yes" />
+  const pwaHead = `  <meta name="google" content="notranslate" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="오늘야구각" />
   <meta name="theme-color" content="#34663F" />
