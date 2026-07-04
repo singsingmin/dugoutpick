@@ -1,7 +1,7 @@
 {
   "date": "20260704",
   "dateText": "2026년 7월 4일",
-  "updatedAt": "2026-07-04T11:00:41.404Z",
+  "updatedAt": "2026-07-04T11:10:31.549Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 39,
@@ -22,7 +22,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 5,
-        "score": 0,
+        "score": 3,
         "starter": {
           "name": "에르난데스",
           "era": 4.54,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 2,
-        "b1": true,
-        "b2": false,
-        "b3": true,
-        "pitcher": "우강훈",
-        "batter": "허인서",
-        "heat": 21,
+        "half": "B",
+        "out": 1,
+        "b1": false,
+        "b2": true,
+        "b3": false,
+        "pitcher": "박상원",
+        "batter": "구본혁",
+        "heat": 56,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -187,7 +187,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 10,
+        "score": 13,
         "starter": {
           "name": "최원태",
           "era": 4.27,
@@ -231,15 +231,15 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
+        "half": "B",
         "out": 0,
-        "b1": true,
-        "b2": true,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "서진용",
-        "batter": "강민호",
-        "heat": 19,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "최원태",
+        "batter": "박성한",
+        "heat": 3,
+        "label": "점수차가 벌어진 경기"
       },
       "recap": null,
       "decision": null,
@@ -364,7 +364,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "시라카와",
           "era": 4.18,
@@ -395,16 +395,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 0,
+        "inning": 7,
+        "half": "T",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "라일리",
-        "batter": "김도영",
-        "heat": 46,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "전상현",
+        "batter": "고준휘",
+        "heat": 59,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -560,16 +560,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
+        "inning": 7,
         "half": "B",
         "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "비슬리",
-        "batter": "김상수",
-        "heat": 56,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "이이무라",
+        "batter": "한승택",
+        "heat": 62,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -694,7 +694,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "박준현",
           "era": 2.98,
@@ -727,14 +727,14 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 1,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": true,
         "b3": true,
         "pitcher": "박치국",
-        "batter": "히우라",
-        "heat": 4,
-        "label": "점수차가 벌어진 경기"
+        "batter": "김동헌",
+        "heat": 12,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
