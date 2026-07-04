@@ -6,6 +6,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { TEAMS, byName, byCode } from './teams.mjs';
 import { resolveFrozen, toRecord, mergeHistory, aggregate, WINDOW, MIN_SAMPLE } from './recap.mjs';
+import { judgeDailyHoney, mergeDailyHoney } from './dailyHoney.mjs';
 import { rawLiveHeat, liveLabel } from './liveHeatCore.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -724,7 +725,8 @@ async function main() {
         : actual >= pred + 10 ? '기대 이상'
         : actual <= pred - 10 ? '기대 이하'
         : '예측 적중';
-      recap = { actual, verdict };
+      // diff·total·extra·walkoff = Phase 3-Pre 판정(dailyHoney) 미세 tiebreak·이유 태그용.
+      recap = { actual, verdict, diff, total, extra, walkoff };
     }
     return {
       gameId: g.G_ID,
@@ -765,9 +767,21 @@ async function main() {
   }
   console.log(`[build] recap-history: +${incoming.length} new, total ${merged.length}, hitRate ${trackRecord.hitRate}% (n=${trackRecord.sampleSize}, ready=${trackRecord.ready})`);
 
+  // Phase 3-Pre: 그날 "실제 꿀잼 1위 경기" 판정 누적(예측 리그 정답). 모든 경기 종료 시 확정, append-only freeze.
+  let dhHistory = [];
+  try {
+    const dh = JSON.parse(fs.readFileSync(path.join(OUT_DIR, 'dailyHoney-history.json'), 'utf8'));
+    dhHistory = Array.isArray(dh.results) ? dh.results : [];
+  } catch { /* 첫 실행 → 빈 history */ }
+  const dhResult = judgeDailyHoney(games, date, updatedAt);
+  const dhMerged = mergeDailyHoney(dhHistory, dhResult);
+  console.log(`[build] dailyHoney: ${dhResult ? `확정 → top=${dhResult.actualTopGameId ?? JSON.stringify(dhResult.tiedGameIds)} (recapScore ${dhResult.recapScore})` : '미확정/노게임'}, total ${dhMerged.length}`);
+
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.writeFileSync(path.join(OUT_DIR, 'recap-history.json'),
     JSON.stringify({ updatedAt, ...trackRecord, records: merged }, null, 2));
+  fs.writeFileSync(path.join(OUT_DIR, 'dailyHoney-history.json'),
+    JSON.stringify({ updatedAt, results: dhMerged }, null, 2));
   fs.writeFileSync(path.join(OUT_DIR, 'games.json'), JSON.stringify({ date, dateText: dt, updatedAt, trackRecord, recommendedGameId, games }, null, 2));
   fs.writeFileSync(path.join(OUT_DIR, 'standings.json'), JSON.stringify({ updatedAt, standings }, null, 2));
   fs.writeFileSync(path.join(OUT_DIR, 'teams.json'), JSON.stringify({ teams: TEAMS }, null, 2));
