@@ -7,6 +7,7 @@ import type { RootStackParamList } from '../navigation/types';
 import PixelButton from '../components/PixelButton';
 import ScreenHeader from '../components/ScreenHeader';
 import SectionLabel from '../components/SectionLabel';
+import ProtectNudge from '../components/ProtectNudge';
 import { colors, spacing } from '../theme';
 
 type Nav = NativeStackNavigationProp<RootStackParamList>;
@@ -25,6 +26,8 @@ export default function LockerRoom() {
           onRightPress={() => navigation.navigate('Settings')}
         />
         <ScrollView contentContainerStyle={styles.content}>
+          <ProtectNudge />
+
           <View style={styles.section}>
             <SectionLabel label="응원팀" />
             <PixelButton label="응원팀 변경" onPress={() => navigation.navigate('Onboarding')} />
