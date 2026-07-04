@@ -42,6 +42,9 @@ module.exports = {
       discordWebhookUrl: process.env.DISCORD_WEBHOOK_URL || null,
       supabaseUrl: process.env.SUPABASE_URL || null,
       supabaseAnonKey: process.env.SUPABASE_ANON_KEY || null,
+      // 빌드 식별(설정 앱정보 표시). 웹=CI가 EXPO_PUBLIC_BUILD_ID(github.sha) 주입,
+      // EAS=빌드 서버가 EAS_BUILD_GIT_COMMIT_HASH 제공. 로컬은 'local'.
+      buildId: process.env.EXPO_PUBLIC_BUILD_ID || process.env.EAS_BUILD_GIT_COMMIT_HASH || 'local',
     }
   }
 };

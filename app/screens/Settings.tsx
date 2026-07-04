@@ -1,6 +1,7 @@
 // 설정 화면 — 라커룸 우상단 톱니로 진입. 데이터 갱신 / 적중률 / (디버그) / 앱 정보.
 import { useEffect, useState } from 'react';
 import { View, ScrollView, Image, Modal, Switch, Platform, Linking, StyleSheet } from 'react-native';
+import Constants from 'expo-constants';
 import type { TrackRecord } from '../types';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
@@ -21,8 +22,8 @@ import { colors, spacing, border } from '../theme';
 
 type Nav = NativeStackNavigationProp<RootStackParamList>;
 const APP_VERSION = '1.0.0';
-// 배포 빌드 커밋(github.sha). 로컬은 미주입 → 'local'. 캐시/최신 여부 즉시 확인용.
-const BUILD_ID = (process.env.EXPO_PUBLIC_BUILD_ID ?? 'local').slice(0, 7);
+// 빌드 커밋(app.config extra.buildId: 웹=github.sha, EAS=커밋해시). 캐시/최신 여부 확인용.
+const BUILD_ID = ((Constants.expoConfig?.extra?.buildId as string | undefined) ?? 'local').slice(0, 7);
 // 디버그 도구 노출: 로컬 dev(__DEV__) + preview 테스트 빌드(env). production(출시) 미노출.
 const DEBUG_TOOLS = __DEV__ || process.env.EXPO_PUBLIC_DEBUG_TOOLS === '1';
 const IS_WEB = Platform.OS === 'web';   // 웹은 로컬 알림 미지원
