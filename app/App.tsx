@@ -5,6 +5,7 @@ import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import RootNavigator from './navigation/RootNavigator';
+import { AuthProvider } from './context/Auth';
 import { TeamThemeProvider } from './context/TeamTheme';
 import { ScoreSkinProvider } from './context/ScoreSkin';
 import { rescheduleMyTeamGameStart } from './utils/notifications';
@@ -29,14 +30,16 @@ export default function App() {
 
   return (
     <SafeAreaProvider>
-      <TeamThemeProvider>
-        <ScoreSkinProvider>
-          <NavigationContainer>
-            <RootNavigator />
-          </NavigationContainer>
-          <StatusBar style="dark" />
-        </ScoreSkinProvider>
-      </TeamThemeProvider>
+      <AuthProvider>
+        <TeamThemeProvider>
+          <ScoreSkinProvider>
+            <NavigationContainer>
+              <RootNavigator />
+            </NavigationContainer>
+            <StatusBar style="dark" />
+          </ScoreSkinProvider>
+        </TeamThemeProvider>
+      </AuthProvider>
     </SafeAreaProvider>
   );
 }
