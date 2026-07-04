@@ -1,7 +1,7 @@
 {
   "date": "20260704",
   "dateText": "2026년 7월 4일",
-  "updatedAt": "2026-07-04T10:00:43.184Z",
+  "updatedAt": "2026-07-04T10:10:29.771Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 39,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
+        "inning": 4,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박준영",
-        "batter": "문보경",
-        "heat": 16,
+        "pitcher": "장현식",
+        "batter": "노시환",
+        "heat": 17,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "타케다",
-        "batter": "디아즈",
-        "heat": 15,
+        "pitcher": "최원태",
+        "batter": "전의산",
+        "heat": 16,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -364,7 +364,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "시라카와",
           "era": 4.18,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
+        "inning": 4,
+        "half": "T",
         "out": 1,
         "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "라일리",
-        "batter": "김도영",
-        "heat": 40,
+        "b3": false,
+        "pitcher": "시라카와",
+        "batter": "김휘집",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "비슬리",
-        "batter": "힐리어드",
-        "heat": 45,
+        "pitcher": "고영표",
+        "batter": "윤동희",
+        "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -682,7 +682,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 6,
-        "score": 2,
+        "score": 5,
         "starter": {
           "name": "최승용",
           "era": 5.69,
@@ -727,14 +727,14 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박준현",
-        "batter": "강승호",
-        "heat": 35,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "김선기",
+        "batter": "양의지",
+        "heat": 9,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
