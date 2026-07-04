@@ -184,6 +184,9 @@ export default function Settings() {
               <PixelButton label="취소" accentColor={colors.surfaceAlt} onPress={clearLinkConflict} style={styles.modalBtn} />
               <PixelButton label="불러오기" onPress={() => { clearLinkConflict(); void recoverGoogle(); }} style={styles.modalBtn} />
             </View>
+            <PixelText variant="caption" color={colors.textDim} style={styles.modalHint}>
+              다른 구글 계정을 쓰려면 취소하고 다시 연결하세요.
+            </PixelText>
           </View>
         </View>
       </Modal>
@@ -207,4 +210,5 @@ const styles = StyleSheet.create({
   modalMsg: { marginTop: spacing.md, lineHeight: 20 },
   modalRow: { flexDirection: 'row', gap: spacing.sm, marginTop: spacing.lg },
   modalBtn: { flex: 1 },
+  modalHint: { marginTop: spacing.sm, textAlign: 'center' },
 });

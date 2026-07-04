@@ -177,7 +177,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setLinkConflict(false);
     setAuthBusy(true);
     try {
-      const options = { redirectTo: getRedirectTo(), skipBrowserRedirect: true } as const;
+      // prompt=select_account: 구글 계정 선택창 항상 표시 → 첫 연결·재시도 시 다른 계정 선택 가능
+      // (미지정 시 브라우저에 로그인된 계정으로 자동 진행 → "다른 구글로" 불가).
+      const options = {
+        redirectTo: getRedirectTo(),
+        skipBrowserRedirect: true,
+        queryParams: { prompt: 'select_account' },
+      };
       const { data, error } =
         mode === 'link'
           ? await supabase.auth.linkIdentity({ provider: 'google', options })
