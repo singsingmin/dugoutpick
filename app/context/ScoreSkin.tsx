@@ -106,7 +106,17 @@ export function ScoreSkinProvider({ children }: { children: ReactNode }) {
   const buySkin = useCallback(async (id: ScoreSkinId): Promise<boolean> => {
     try {
       const res = await account.rpcPurchaseSkin(id);
-      if (res.success) { await refresh(); return true; }
+      if (res.success) {
+        // 낙관적 즉시 반영(잔액·보유) — RPC가 새 잔액 반환 → 화면 지연 없이 갱신.
+        setState((s) => {
+          const ownedSkinIds = s.ownedSkinIds.includes(id) ? s.ownedSkinIds : [...s.ownedSkinIds, id];
+          const next = { ...s, ownedSkinIds, balance: res.balance ?? s.balance };
+          void account.saveCache(next);
+          return next;
+        });
+        void refresh();   // 배경 정합(원장·거래내역)
+        return true;
+      }
       return false;   // 잔액 부족 등
     } catch {
       return false;   // 오프라인/서버 오류
@@ -116,7 +126,21 @@ export function ScoreSkinProvider({ children }: { children: ReactNode }) {
   const claimAttendance = useCallback(async (): Promise<ClaimResult> => {
     try {
       const res = await account.rpcClaimAttendance();
-      await refresh();
+      if (res.claimed) {
+        // 낙관적 즉시 반영(잔액·streak·오늘 출석 완료) → 화면 지연 없이 갱신.
+        setState((s) => {
+          const next = {
+            ...s,
+            balance: s.balance + res.earned,
+            attStreak: res.streak,
+            attCount: s.attCount + 1,
+            attLastDate: kstDateStr(),
+          };
+          void account.saveCache(next);
+          return next;
+        });
+      }
+      void refresh();   // 배경 정합(거래내역)
       return res;
     } catch {
       return { claimed: false, earned: 0, base: 0, bonus: 0, streak: state.attStreak };
