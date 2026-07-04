@@ -20,6 +20,8 @@ import { colors, spacing } from '../theme';
 
 type Nav = NativeStackNavigationProp<RootStackParamList>;
 const APP_VERSION = '1.0.0';
+// 배포 빌드 커밋(github.sha). 로컬은 미주입 → 'local'. 캐시/최신 여부 즉시 확인용.
+const BUILD_ID = (process.env.EXPO_PUBLIC_BUILD_ID ?? 'local').slice(0, 7);
 
 export default function Settings() {
   const navigation = useNavigation<Nav>();
@@ -128,7 +130,7 @@ export default function Settings() {
           <SectionLabel label="앱 정보" />
           <Panel>
             <PixelText variant="body">오늘야구각</PixelText>
-            <PixelText variant="caption" color={colors.textDim} style={styles.value}>버전 {APP_VERSION}</PixelText>
+            <PixelText variant="caption" color={colors.textDim} style={styles.value}>버전 {APP_VERSION} · 빌드 {BUILD_ID}</PixelText>
             <PixelText variant="caption" color={colors.textDim}>KBO 경기 꿀잼지수 · 데이터 출처: KBO</PixelText>
           </Panel>
         </View>

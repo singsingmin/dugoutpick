@@ -39,6 +39,7 @@ jobs:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}           # 미주입 시 웹 화이트스크린(createClient throw)
           SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }} # anon 키는 공개 안전(RLS 보호), 번들에 박힘
           EXPO_PUBLIC_DEBUG_TOOLS: '1'   # 테스트용 디버그 버튼 노출(공개 전 제거)
+          EXPO_PUBLIC_BUILD_ID: ${{ github.sha }}   # 설정 화면에 빌드 표시 → 캐시/최신 여부 즉시 확인
         run: npx expo export --platform web
 
       - name: Patch PWA
