@@ -177,12 +177,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setLinkConflict(false);
     setAuthBusy(true);
     try {
-      // prompt=select_account: 구글 계정 선택창 항상 표시 → 첫 연결·재시도 시 다른 계정 선택 가능
-      // (미지정 시 브라우저에 로그인된 계정으로 자동 진행 → "다른 구글로" 불가).
+      // 연결(link)만 계정 선택창 강제(prompt=select_account) → 어떤 구글로 연결할지 선택 가능.
+      // 복구(signin)는 직전 연결 시 고른 계정을 그대로 재사용 → 선택창 재노출 방지(2번 선택 제거).
       const options = {
         redirectTo: getRedirectTo(),
         skipBrowserRedirect: true,
-        queryParams: { prompt: 'select_account' },
+        ...(mode === 'link' ? { queryParams: { prompt: 'select_account' } } : {}),
       };
       const { data, error } =
         mode === 'link'
