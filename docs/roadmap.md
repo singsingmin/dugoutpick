@@ -112,13 +112,14 @@
 - 🐛 **웹 오프라인 게이팅 오판 수정 (2026-07-04)** — netinfo 웹 도달성 probe(`HEAD /`=200)가 GitHub Pages 프로젝트 서브패스에서 실패→`isInternetReachable=false` 오판→출석/구매/피드백 차단. `useOnline`이 웹에선 `navigator.onLine`만 신뢰하도록 수정.
 - 🛠️ **디버그 테스트 도구 (2026-07-04)** — 서버 재화라 클라 직접 초기화 불가 → `debug_reset`(신규유저 15로 리셋)·`debug_grant`(+N) definer RPC(`0002_debug_tools.sql`) + `app_config.debug_enabled` 플래그 게이팅. Settings 디버그 섹션(EXPO_PUBLIC_DEBUG_TOOLS)에서 호출. **🚨 출시 전 필수: `update app_config set debug_enabled=false` + 디버그 버튼 미노출(현재 deploy-web은 DEBUG_TOOLS=1로 공개 URL에 노출됨).**
 
-### Phase 3-Pre — 실제 꿀잼 경기 판정 파이프라인 (예측 리그 선행 과제)
-> 예측 리그 MVP의 심장. **계정/DB와 독립적으로 파이프라인 단독 선행 가능**(판정 결과 JSON만 먼저 산출).
-- [ ] 경기 종료 후 그날 경기 중 **실제 꿀잼 1위 경기(`actualTopGameId`)** 산출 로직
-- [ ] tie-breaker 정의: A. recapScore 높은 경기 → B. live.heat peak 높은 경기 → C. 9회 이후 접전/역전/끝내기 이벤트 → D. 그래도 동점이면 공동 적중 허용
-- [ ] 판정 결과 산출물 `DailyHoneyResult { date, actualTopGameId, recapScore, liveHeatPeak?, decidingReasonTags[], calculatedAt }`
-- [ ] 기존 `recap-history.json`(예측 vs 실제 적중률 누적)과 연결 — 현재는 "그날 실제 1위 + tie-breaker"를 뽑는 로직이 없음(신규)
-- ⚠️ 판정은 **항상 서버/파이프라인이 실제 경기 데이터 기준**으로 처리. 클라·야구공이 결과에 개입 불가.
+### Phase 3-Pre — 실제 꿀잼 경기 판정 파이프라인 (예측 리그 선행 과제) ✅ 구현 (2026-07-05)
+> 예측 리그 MVP의 심장. **계정/DB와 독립적**. 구현 = `data-pipeline/dailyHoney.mjs`(순수 로직·테스트 10개) + build.mjs 통합 → `dailyHoney-history.json` 산출.
+- [x] 경기 종료 후 그날 **실제 꿀잼 1위 경기(`actualTopGameId`)** 산출 — recapScore(recap.actual) 최고. 모든 경기 종료 시 확정(그전 잠정), append-only freeze.
+- [x] tie-breaker: A. recapScore → (**B. live.heat peak = MVP 미채택**, recapScore가 이미 종합 반영) → C. 끝내기>연장>접전>난타 미세 tiebreak → D. 완전 동률이면 `tiedGameIds` 공동 적중.
+- [x] 산출물 `DailyHoneyResult { date, actualTopGameId, tiedGameIds?, recapScore, decidingReasonTags[], calculatedAt }` → `dailyHoney-history.json`(날짜별 append).
+- [x] recap에 diff/total/extra/walkoff 추가(판정·이유 태그용). cf-worker는 recap 미계산 → 동기화 불필요.
+- ⚠️ 판정은 **서버/파이프라인이 실제 경기 데이터 기준**. 클라·야구공 개입 불가. 설계 [prediction-league-design.md](prediction-league-design.md).
+- [ ] (후속) 앱에 "어제 실제 명경기 + 이유" 노출 · Phase 4에서 예측과 대조 채점.
 
 ### Phase 4 — 꿀잼 예측 리그 MVP (계정/DB + 판정 파이프라인 이후)
 > 📐 **설계 확정: [prediction-league-design.md](prediction-league-design.md)** (2026-07-05) — MVP/후속/금지·데이터구조·랭킹/보상 정책·엣지케이스·프라이버시 박제. 구현 미착수(2026 데이터 수집·폴리싱, 출시 2027 초 목표). 괴리율 실검증·페르소나 시뮬은 데이터 쌓인 뒤. 아래는 요약.
