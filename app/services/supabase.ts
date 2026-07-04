@@ -9,16 +9,23 @@ import { createClient } from '@supabase/supabase-js';
 const url = (Constants.expoConfig?.extra?.supabaseUrl as string | undefined) ?? '';
 const anonKey = (Constants.expoConfig?.extra?.supabaseAnonKey as string | undefined) ?? '';
 
-if (!url || !anonKey) {
-  // 개발 편의용 경고(스파이크 단계). 미설정 시 app/.env.local 확인.
-  console.warn('[supabase] URL/anon key 미설정 — app/.env.local 확인');
+// URL/키 미설정 시 createClient가 'supabaseUrl is required'로 import 시점에 throw →
+// 앱 전체 화이트스크린(특히 CI 배포에 env 미주입 시). placeholder로 크래시만 막고,
+// 실제 호출은 실패 → Auth가 '온라인 필요' 화면으로 우아하게 처리(진단은 아래 error 로그).
+const configured = !!url && !!anonKey;
+if (!configured) {
+  console.error('[supabase] URL/anon key 미설정 — 로컬은 app/.env.local, 배포는 CI env(SUPABASE_URL·SUPABASE_ANON_KEY) 주입 필요');
 }
 
-export const supabase = createClient(url, anonKey, {
-  auth: {
-    storage: AsyncStorage,
-    autoRefreshToken: true,
-    persistSession: true,
-    detectSessionInUrl: false,
+export const supabase = createClient(
+  url || 'https://unconfigured.supabase.co',
+  anonKey || 'unconfigured',
+  {
+    auth: {
+      storage: AsyncStorage,
+      autoRefreshToken: true,
+      persistSession: true,
+      detectSessionInUrl: false,
+    },
   },
-});
+);
