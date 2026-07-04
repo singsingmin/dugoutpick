@@ -17,6 +17,9 @@ import AppIcon from '../components/AppIcon';
 import TxHistorySheet from '../components/TxHistorySheet';
 import { border, colors, spacing } from '../theme';
 
+// 디버그 빌드에선 RPC 원문 에러를 토스트에 노출(진단용). production은 친화 메시지.
+const SHOW_RAW_ERR = __DEV__ || process.env.EXPO_PUBLIC_DEBUG_TOOLS === '1';
+
 export default function BaseballCenter() {
   const navigation = useNavigation();
   const { accent } = useTeamTheme();
@@ -44,11 +47,15 @@ export default function BaseballCenter() {
 
   const onClaim = async () => {
     if (!online) { showToast('출석 보상은 인터넷 연결 후 받을 수 있어요'); return; }
-    const r = await claimAttendance();
-    if (r.claimed) {
-      showToast(r.bonus > 0 ? `출석 완료! 야구공 ${r.earned}개 획득 (보너스 +${r.bonus})` : `출석 완료! 야구공 ${r.earned}개 획득`);
-    } else if (r.error) {
-      showToast('출석 처리 중 오류가 났어요. 다시 시도해 주세요.');   // 인증/세션/네트워크(무반응 오인 방지)
+    try {
+      const r = await claimAttendance();
+      if (r.claimed) {
+        showToast(r.bonus > 0 ? `출석 완료! 야구공 ${r.earned}개 획득 (보너스 +${r.bonus})` : `출석 완료! 야구공 ${r.earned}개 획득`);
+      }
+      // r.claimed=false & no throw = 이미 오늘 받음 → 토스트 없음
+    } catch (e) {
+      // 인증/세션/네트워크 오류 — "무반응" 오인 방지(디버그 빌드는 원문).
+      showToast(SHOW_RAW_ERR ? `출석 오류: ${(e as Error).message}` : '출석 처리 중 오류가 났어요. 다시 시도해 주세요.');
     }
   };
 

@@ -10,7 +10,7 @@ import * as account from '../services/account';
 import type { AccountState, ClaimResult } from '../services/account';
 
 export type { ClaimResult };
-export type BuyOutcome = 'ok' | 'insufficient' | 'error';   // 'error'=인증/세션/네트워크(≠잔액부족)
+export type BuyOutcome = 'ok' | 'insufficient';   // 인증/세션/네트워크 오류는 throw → 호출부가 처리
 
 const DEFAULT_SKIN_ID = 'jersey.classic.team';
 
@@ -38,7 +38,7 @@ const noopCtx: ScoreSkinCtx = {
   baseballBalance: 0,
   ownedSkinIds: [],
   isOwned: () => false,
-  buySkin: async () => 'error',
+  buySkin: async () => 'insufficient',
   addBaseballs: async () => {},
   resetProgress: async () => {},
   transactions: [],
@@ -104,51 +104,43 @@ export function ScoreSkinProvider({ children }: { children: ReactNode }) {
     [state.ownedSkinIds, state.appliedSkinId],
   );
 
+  // RPC 오류(인증/세션/네트워크)는 throw → 호출부가 실제 메시지로 안내("부족"으로 오인 방지).
   const buySkin = useCallback(async (id: ScoreSkinId): Promise<BuyOutcome> => {
-    try {
-      const res = await account.rpcPurchaseSkin(id);
-      if (res.success) {
-        // 낙관적 즉시 반영(잔액·보유) — RPC가 새 잔액 반환 → 화면 지연 없이 갱신.
-        setState((s) => {
-          const ownedSkinIds = s.ownedSkinIds.includes(id) ? s.ownedSkinIds : [...s.ownedSkinIds, id];
-          const next = { ...s, ownedSkinIds, balance: res.balance ?? s.balance };
-          void account.saveCache(next);
-          return next;
-        });
-        void refresh();   // 배경 정합(원장·거래내역)
-        return 'ok';
-      }
-      return 'insufficient';   // 서버가 잔액 부족 판정
-    } catch (e) {
-      console.warn('[buySkin] RPC 오류:', e);
-      return 'error';   // 인증/세션/네트워크 오류 — "부족"과 구분(오해 방지)
+    const res = await account.rpcPurchaseSkin(id);
+    if (res.success) {
+      // 낙관적 즉시 반영(잔액·보유) — RPC가 새 잔액 반환 → 화면 지연 없이 갱신.
+      setState((s) => {
+        const ownedSkinIds = s.ownedSkinIds.includes(id) ? s.ownedSkinIds : [...s.ownedSkinIds, id];
+        const next = { ...s, ownedSkinIds, balance: res.balance ?? s.balance };
+        void account.saveCache(next);
+        return next;
+      });
+      void refresh();   // 배경 정합(원장·거래내역)
+      return 'ok';
     }
+    return 'insufficient';   // 서버가 잔액 부족 판정
   }, [refresh]);
 
+  // RPC 오류는 throw → 호출부가 실제 메시지로 안내("무반응"으로 오인 방지).
   const claimAttendance = useCallback(async (): Promise<ClaimResult> => {
-    try {
-      const res = await account.rpcClaimAttendance();
-      if (res.claimed) {
-        // 낙관적 즉시 반영(잔액·streak·오늘 출석 완료) → 화면 지연 없이 갱신.
-        setState((s) => {
-          const next = {
-            ...s,
-            balance: s.balance + res.earned,
-            attStreak: res.streak,
-            attCount: s.attCount + 1,
-            attLastDate: kstDateStr(),
-          };
-          void account.saveCache(next);
-          return next;
-        });
-      }
-      void refresh();   // 배경 정합(거래내역)
-      return res;
-    } catch (e) {
-      console.warn('[claimAttendance] RPC 오류:', e);
-      return { claimed: false, earned: 0, base: 0, bonus: 0, streak: state.attStreak, error: true };
+    const res = await account.rpcClaimAttendance();
+    if (res.claimed) {
+      // 낙관적 즉시 반영(잔액·streak·오늘 출석 완료) → 화면 지연 없이 갱신.
+      setState((s) => {
+        const next = {
+          ...s,
+          balance: s.balance + res.earned,
+          attStreak: res.streak,
+          attCount: s.attCount + 1,
+          attLastDate: kstDateStr(),
+        };
+        void account.saveCache(next);
+        return next;
+      });
     }
-  }, [refresh, state.attStreak]);
+    void refresh();   // 배경 정합(거래내역)
+    return res;
+  }, [refresh]);
 
   // 디버그 전용(서버 RPC, app_config.debug_enabled 게이팅). 재화는 클라 직접 불가 → definer RPC 경유.
   const addBaseballs = useCallback(async (n: number) => {

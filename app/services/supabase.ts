@@ -26,8 +26,10 @@ export const supabase = createClient(
       storage: AsyncStorage,
       autoRefreshToken: true,
       persistSession: true,
-      // 웹 OAuth는 리다이렉트 복귀 URL(#access_token·?code)에서 세션 자동 완성 필요.
-      // 네이티브는 딥링크를 Auth.tsx가 직접 처리하므로 false.
+      // PKCE: 모바일 권장 OAuth 플로우. 리다이렉트가 ?code= 반환 → exchangeCodeForSession으로
+      // 견고한 세션 확립(implicit #access_token+setSession보다 안정 — linkIdentity 후 RPC 인증 실패 방지).
+      flowType: 'pkce',
+      // 웹 OAuth는 리다이렉트 복귀 URL에서 세션 자동 완성 필요. 네이티브는 Auth.tsx가 딥링크 직접 처리.
       detectSessionInUrl: Platform.OS === 'web',
     },
   },

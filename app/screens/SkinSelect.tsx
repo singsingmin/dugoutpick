@@ -27,6 +27,8 @@ import AppIcon from '../components/AppIcon';
 import { border, colors, spacing } from '../theme';
 
 const PREVIEW_SCORE = 75;
+// 디버그 빌드에선 RPC 원문 에러를 토스트에 노출(진단용). production은 친화 메시지.
+const SHOW_RAW_ERR = __DEV__ || process.env.EXPO_PUBLIC_DEBUG_TOOLS === '1';
 
 const SCREEN_W = Dimensions.get('window').width;
 const GRID_GAP = spacing.xs;
@@ -148,11 +150,14 @@ export default function SkinSelect() {
   const confirmBuy = async () => {
     if (modal?.kind !== 'confirm') return;
     const s = modal.skin;
-    const outcome = await buySkin(s.id);
-    if (outcome === 'ok') { setModal({ kind: 'done', skin: s }); return; }
-    if (outcome === 'insufficient') { setModal({ kind: 'insufficient', skin: s }); return; }
-    setModal(null);   // 인증/세션/네트워크 오류 — "부족"으로 오인시키지 않고 실제 오류 안내
-    showToast('구매 처리 중 오류가 났어요. 다시 시도해 주세요.');
+    try {
+      const outcome = await buySkin(s.id);
+      setModal(outcome === 'ok' ? { kind: 'done', skin: s } : { kind: 'insufficient', skin: s });
+    } catch (e) {
+      // 인증/세션/네트워크 오류 — "부족"으로 오인시키지 않고 실제 오류 안내(디버그 빌드는 원문).
+      setModal(null);
+      showToast(SHOW_RAW_ERR ? `구매 오류: ${(e as Error).message}` : '구매 처리 중 오류가 났어요. 다시 시도해 주세요.');
+    }
   };
 
   const applyFromModal = async () => {
