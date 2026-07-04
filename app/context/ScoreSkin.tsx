@@ -1,25 +1,17 @@
+// 스킨·야구공 재화·출석 전역 상태 (Phase 3 Stage 3: 서버+캐시).
+// 인터페이스는 로컬 MVP(ADR-022)와 동일 — 구현만 AsyncStorage → Supabase(RPC)+캐시로 스왑.
+// 화면(SkinSelect·BaseballCenter·라커룸)은 무변경. 데이터 레이어 = services/account.ts.
 import { createContext, useContext, useState, useEffect, useCallback, type ReactNode } from 'react';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { type ScoreSkinId, normalizeScoreSkinId, getScoreSkinById, isSkinOwned } from '../utils/scoreSkinConfig';
 import type { UniformPresetId } from '../utils/uniformResolver';
-import {
-  type BaseballTx, kstDateStr, prevDateStr, newTxId, cyclePosition,
-  ATTENDANCE_REWARD, ATTENDANCE_BONUS, ATTENDANCE_CYCLE, TX_CAP,
-} from '../utils/attendance';
+import { type BaseballTx, kstDateStr, cyclePosition } from '../utils/attendance';
+import { useAuth } from './Auth';
+import * as account from '../services/account';
+import type { AccountState, ClaimResult } from '../services/account';
 
-const SKIN_KEY = 'user.scoreSkinId';
-const LEGACY_KEY = 'user.uniformPreset';
-const OWNED_KEY = 'user.ownedSkinIds';
-const BALANCE_KEY = 'user.baseballBalance';
-const GRANT_KEY = 'user.initialBaseballGrant';
-const TX_KEY = 'user.baseballTx';
-const ATT_DATE_KEY = 'user.attClaimDate';
-const ATT_STREAK_KEY = 'user.attStreak';
-const ATT_COUNT_KEY = 'user.attCount';
+export type { ClaimResult };
+
 const DEFAULT_SKIN_ID = 'jersey.classic.team';
-const INITIAL_GRANT = 15;   // 첫 지급·초기화 공통. 싼 스킨 1개 체험용(수집 루프 유지)
-
-export interface ClaimResult { claimed: boolean; earned: number; base: number; bonus: number; streak: number; }
 
 interface ScoreSkinCtx {
   skinId: ScoreSkinId;
@@ -30,7 +22,6 @@ interface ScoreSkinCtx {
   buySkin: (id: ScoreSkinId) => Promise<boolean>;
   addBaseballs: (n: number) => Promise<void>;
   resetProgress: () => Promise<void>;
-  // 야구공 센터(출석/내역)
   transactions: BaseballTx[];
   attendanceStreak: number;
   totalAttendanceCount: number;
@@ -74,157 +65,92 @@ export function useUniformPreset() {
   return { preset, setPreset };
 }
 
-function initialGrantTx(): BaseballTx {
-  return { id: newTxId(), type: 'earn', amount: INITIAL_GRANT, reason: 'initial_grant', label: '첫 지급', createdAt: new Date().toISOString() };
-}
-
 export function ScoreSkinProvider({ children }: { children: ReactNode }) {
-  const [skinId, setSkinState] = useState<ScoreSkinId>(DEFAULT_SKIN_ID);
-  const [balance, setBalance] = useState(0);
-  const [owned, setOwned] = useState<string[]>([]);
-  const [transactions, setTransactions] = useState<BaseballTx[]>([]);
-  const [attDate, setAttDate] = useState<string | null>(null);
-  const [attStreak, setAttStreak] = useState(0);
-  const [attCount, setAttCount] = useState(0);
+  const { userId } = useAuth();
+  const [state, setState] = useState<AccountState>(account.EMPTY_ACCOUNT);
 
+  // 초기 로드: 캐시 즉시(오프라인/속도) → 서버 fetch로 갱신
   useEffect(() => {
+    if (!userId) return;
+    let active = true;
     (async () => {
+      const cached = await account.loadCache();
+      if (cached && active) setState(cached);
       try {
-        let ownedIds: string[] = [];
-        try { ownedIds = JSON.parse((await AsyncStorage.getItem(OWNED_KEY)) ?? '[]'); } catch {}
-        setOwned(Array.isArray(ownedIds) ? ownedIds : []);
-
-        // 거래 내역
-        let txs: BaseballTx[] = [];
-        try { txs = JSON.parse((await AsyncStorage.getItem(TX_KEY)) ?? '[]'); } catch {}
-        if (!Array.isArray(txs)) txs = [];
-
-        // 잔액 — 최초 1회 500 지급 + initial_grant 내역
-        const grant = await AsyncStorage.getItem(GRANT_KEY);
-        let bal: number;
-        if (!grant) {
-          bal = INITIAL_GRANT;
-          txs = [initialGrantTx()];
-          await AsyncStorage.multiSet([[BALANCE_KEY, String(bal)], [GRANT_KEY, '1'], [TX_KEY, JSON.stringify(txs)]]);
-        } else {
-          bal = Number((await AsyncStorage.getItem(BALANCE_KEY)) ?? '0') || 0;
-          if (txs.length === 0) {  // 구버전 유저: 내역 비어있으면 초기지급 1건 시드
-            txs = [initialGrantTx()];
-            await AsyncStorage.setItem(TX_KEY, JSON.stringify(txs));
-          }
-        }
-        setBalance(bal);
-        setTransactions(txs);
-
-        // 출석 상태
-        setAttDate((await AsyncStorage.getItem(ATT_DATE_KEY)) || null);
-        setAttStreak(Number((await AsyncStorage.getItem(ATT_STREAK_KEY)) ?? '0') || 0);
-        setAttCount(Number((await AsyncStorage.getItem(ATT_COUNT_KEY)) ?? '0') || 0);
-
-        // 적용 스킨 (+ 레거시 마이그레이션 + 구매제 전환 리셋)
-        const v = await AsyncStorage.getItem(SKIN_KEY);
-        let sid: ScoreSkinId;
-        if (v) {
-          sid = normalizeScoreSkinId(v);
-        } else {
-          sid = normalizeScoreSkinId(await AsyncStorage.getItem(LEGACY_KEY));
-          await AsyncStorage.setItem(SKIN_KEY, sid);
-        }
-        const skin = getScoreSkinById(sid);
-        if (skin.unlockType !== 'free' && !(Array.isArray(ownedIds) && ownedIds.includes(sid))) {
-          sid = DEFAULT_SKIN_ID;
-          await AsyncStorage.setItem(SKIN_KEY, sid);
-        }
-        setSkinState(sid);
+        const fresh = await account.fetchAccount();
+        if (fresh && active) { setState(fresh); await account.saveCache(fresh); }
       } catch {}
     })();
+    return () => { active = false; };
+  }, [userId]);
+
+  const refresh = useCallback(async () => {
+    const fresh = await account.fetchAccount();
+    if (fresh) { setState(fresh); await account.saveCache(fresh); }
   }, []);
 
   const setSkin = useCallback(async (id: ScoreSkinId) => {
-    setSkinState(id);
-    try { await AsyncStorage.setItem(SKIN_KEY, id); } catch {}
-  }, []);
+    setState((s) => { const next = { ...s, appliedSkinId: id }; void account.saveCache(next); return next; });  // 낙관적
+    try {
+      if (userId) await account.updateAppliedSkin(userId, id);
+    } catch {
+      await refresh();  // 서버 거부(미보유 등) → 롤백
+    }
+  }, [userId, refresh]);
 
   const isOwned = useCallback(
-    (id: ScoreSkinId) => isSkinOwned(getScoreSkinById(id), owned, skinId),
-    [owned, skinId],
+    (id: ScoreSkinId) => isSkinOwned(getScoreSkinById(id), state.ownedSkinIds, state.appliedSkinId),
+    [state.ownedSkinIds, state.appliedSkinId],
   );
 
-  const persistTx = useCallback(async (next: BaseballTx[]) => {
-    try { await AsyncStorage.setItem(TX_KEY, JSON.stringify(next)); } catch {}
-  }, []);
-
   const buySkin = useCallback(async (id: ScoreSkinId): Promise<boolean> => {
-    const skin = getScoreSkinById(id);
-    if (isSkinOwned(skin, owned, skinId)) return true;
-    const price = skin.price ?? 0;
-    if (balance < price) return false;
-    const nextBal = balance - price;
-    const nextOwned = owned.includes(id) ? owned : [...owned, id];
-    const tx: BaseballTx = {
-      id: newTxId(), type: 'spend', amount: price, reason: 'skin_purchase',
-      label: `${skin.label} 구매`, createdAt: new Date().toISOString(), relatedSkinId: id,
-    };
-    const nextTx = [tx, ...transactions].slice(0, TX_CAP);
-    setBalance(nextBal); setOwned(nextOwned); setTransactions(nextTx);
     try {
-      await AsyncStorage.multiSet([[BALANCE_KEY, String(nextBal)], [OWNED_KEY, JSON.stringify(nextOwned)], [TX_KEY, JSON.stringify(nextTx)]]);
-    } catch {}
-    return true;
-  }, [balance, owned, skinId, transactions]);
-
-  const addBaseballs = useCallback(async (n: number) => {
-    const next = balance + n;
-    const tx: BaseballTx = { id: newTxId(), type: 'earn', amount: n, reason: 'debug_charge', label: '테스트 충전', createdAt: new Date().toISOString() };
-    const nextTx = [tx, ...transactions].slice(0, TX_CAP);
-    setBalance(next); setTransactions(nextTx);
-    try { await AsyncStorage.multiSet([[BALANCE_KEY, String(next)], [TX_KEY, JSON.stringify(nextTx)]]); } catch {}
-  }, [balance, transactions]);
-
-  const resetProgress = useCallback(async () => {
-    const txs = [initialGrantTx()];
-    setBalance(INITIAL_GRANT); setOwned([]); setSkinState(DEFAULT_SKIN_ID);
-    setTransactions(txs); setAttDate(null); setAttStreak(0); setAttCount(0);
-    try {
-      await AsyncStorage.multiSet([
-        [BALANCE_KEY, String(INITIAL_GRANT)], [OWNED_KEY, '[]'], [SKIN_KEY, DEFAULT_SKIN_ID], [GRANT_KEY, '1'],
-        [TX_KEY, JSON.stringify(txs)], [ATT_STREAK_KEY, '0'], [ATT_COUNT_KEY, '0'],
-      ]);
-      await AsyncStorage.removeItem(ATT_DATE_KEY);
-    } catch {}
-  }, []);
+      const res = await account.rpcPurchaseSkin(id);
+      if (res.success) { await refresh(); return true; }
+      return false;   // 잔액 부족 등
+    } catch {
+      return false;   // 오프라인/서버 오류
+    }
+  }, [refresh]);
 
   const claimAttendance = useCallback(async (): Promise<ClaimResult> => {
-    const today = kstDateStr();
-    if (attDate === today) return { claimed: false, earned: 0, base: 0, bonus: 0, streak: attStreak };
-    const nextStreak = attDate === prevDateStr(today) ? attStreak + 1 : 1;   // 연속이면 +1, 놓치면 1부터
-    const bonus = nextStreak % ATTENDANCE_CYCLE === 0 ? ATTENDANCE_BONUS : 0;
-    const base = ATTENDANCE_REWARD;
-    const earned = base + bonus;
-    const now = new Date().toISOString();
-    const added: BaseballTx[] = [{ id: newTxId(), type: 'earn', amount: base, reason: 'attendance', label: '출석 보상', createdAt: now }];
-    if (bonus > 0) added.unshift({ id: newTxId(), type: 'earn', amount: bonus, reason: 'attendance_bonus', label: '7일 연속 보너스', createdAt: now });
-    const nextBal = balance + earned;
-    const nextTx = [...added, ...transactions].slice(0, TX_CAP);
-    const nextCount = attCount + 1;
-    setBalance(nextBal); setTransactions(nextTx); setAttDate(today); setAttStreak(nextStreak); setAttCount(nextCount);
     try {
-      await AsyncStorage.multiSet([
-        [BALANCE_KEY, String(nextBal)], [TX_KEY, JSON.stringify(nextTx)],
-        [ATT_DATE_KEY, today], [ATT_STREAK_KEY, String(nextStreak)], [ATT_COUNT_KEY, String(nextCount)],
-      ]);
-    } catch {}
-    return { claimed: true, earned, base, bonus, streak: nextStreak };
-  }, [attDate, attStreak, attCount, balance, transactions]);
+      const res = await account.rpcClaimAttendance();
+      await refresh();
+      return res;
+    } catch {
+      return { claimed: false, earned: 0, base: 0, bonus: 0, streak: state.attStreak };
+    }
+  }, [refresh, state.attStreak]);
 
-  const canClaimAttendance = attDate !== kstDateStr();
+  // 서버 재화라 클라 지급/초기화 없음 — 디버그는 Supabase 대시보드에서(ADR-023). 인터페이스만 유지.
+  const addBaseballs = useCallback(async (_n: number) => {
+    console.warn('[account] 서버 재화 — 디버그 충전은 Supabase 대시보드에서.');
+  }, []);
+  const resetProgress = useCallback(async () => {
+    console.warn('[account] 서버 재화 — 초기화는 Supabase 대시보드에서.');
+  }, []);
+
+  const canClaimAttendance = state.attLastDate !== kstDateStr();
 
   return (
     <ScoreSkinContext.Provider
       value={{
-        skinId, setSkin, baseballBalance: balance, ownedSkinIds: owned, isOwned, buySkin, addBaseballs, resetProgress,
-        transactions, attendanceStreak: attStreak, totalAttendanceCount: attCount, lastAttendanceClaimDate: attDate,
-        canClaimAttendance, cyclePosition: cyclePosition(attStreak), claimAttendance,
+        skinId: normalizeScoreSkinId(state.appliedSkinId),
+        setSkin,
+        baseballBalance: state.balance,
+        ownedSkinIds: state.ownedSkinIds,
+        isOwned,
+        buySkin,
+        addBaseballs,
+        resetProgress,
+        transactions: state.transactions,
+        attendanceStreak: state.attStreak,
+        totalAttendanceCount: state.attCount,
+        lastAttendanceClaimDate: state.attLastDate,
+        canClaimAttendance,
+        cyclePosition: cyclePosition(state.attStreak),
+        claimAttendance,
       }}
     >
       {children}
