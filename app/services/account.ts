@@ -16,7 +16,7 @@ export interface AccountState {
   transactions: BaseballTx[];    // 최근 100건(newest-first)
 }
 
-export interface ClaimResult { claimed: boolean; earned: number; base: number; bonus: number; streak: number; }
+export interface ClaimResult { claimed: boolean; earned: number; base: number; bonus: number; streak: number; error?: boolean; }
 export interface PurchaseResult { success: boolean; balance?: number; reason?: string; }
 
 const DEFAULT_SKIN = 'jersey.classic.team';

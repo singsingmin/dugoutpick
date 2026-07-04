@@ -47,6 +47,8 @@ export default function BaseballCenter() {
     const r = await claimAttendance();
     if (r.claimed) {
       showToast(r.bonus > 0 ? `출석 완료! 야구공 ${r.earned}개 획득 (보너스 +${r.bonus})` : `출석 완료! 야구공 ${r.earned}개 획득`);
+    } else if (r.error) {
+      showToast('출석 처리 중 오류가 났어요. 다시 시도해 주세요.');   // 인증/세션/네트워크(무반응 오인 방지)
     }
   };
 

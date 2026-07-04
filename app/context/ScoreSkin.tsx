@@ -10,6 +10,7 @@ import * as account from '../services/account';
 import type { AccountState, ClaimResult } from '../services/account';
 
 export type { ClaimResult };
+export type BuyOutcome = 'ok' | 'insufficient' | 'error';   // 'error'=인증/세션/네트워크(≠잔액부족)
 
 const DEFAULT_SKIN_ID = 'jersey.classic.team';
 
@@ -19,7 +20,7 @@ interface ScoreSkinCtx {
   baseballBalance: number;
   ownedSkinIds: string[];
   isOwned: (id: ScoreSkinId) => boolean;
-  buySkin: (id: ScoreSkinId) => Promise<boolean>;
+  buySkin: (id: ScoreSkinId) => Promise<BuyOutcome>;
   addBaseballs: (n: number) => Promise<void>;
   resetProgress: () => Promise<void>;
   transactions: BaseballTx[];
@@ -37,7 +38,7 @@ const noopCtx: ScoreSkinCtx = {
   baseballBalance: 0,
   ownedSkinIds: [],
   isOwned: () => false,
-  buySkin: async () => false,
+  buySkin: async () => 'error',
   addBaseballs: async () => {},
   resetProgress: async () => {},
   transactions: [],
@@ -103,7 +104,7 @@ export function ScoreSkinProvider({ children }: { children: ReactNode }) {
     [state.ownedSkinIds, state.appliedSkinId],
   );
 
-  const buySkin = useCallback(async (id: ScoreSkinId): Promise<boolean> => {
+  const buySkin = useCallback(async (id: ScoreSkinId): Promise<BuyOutcome> => {
     try {
       const res = await account.rpcPurchaseSkin(id);
       if (res.success) {
@@ -115,11 +116,12 @@ export function ScoreSkinProvider({ children }: { children: ReactNode }) {
           return next;
         });
         void refresh();   // 배경 정합(원장·거래내역)
-        return true;
+        return 'ok';
       }
-      return false;   // 잔액 부족 등
-    } catch {
-      return false;   // 오프라인/서버 오류
+      return 'insufficient';   // 서버가 잔액 부족 판정
+    } catch (e) {
+      console.warn('[buySkin] RPC 오류:', e);
+      return 'error';   // 인증/세션/네트워크 오류 — "부족"과 구분(오해 방지)
     }
   }, [refresh]);
 
@@ -142,8 +144,9 @@ export function ScoreSkinProvider({ children }: { children: ReactNode }) {
       }
       void refresh();   // 배경 정합(거래내역)
       return res;
-    } catch {
-      return { claimed: false, earned: 0, base: 0, bonus: 0, streak: state.attStreak };
+    } catch (e) {
+      console.warn('[claimAttendance] RPC 오류:', e);
+      return { claimed: false, earned: 0, base: 0, bonus: 0, streak: state.attStreak, error: true };
     }
   }, [refresh, state.attStreak]);
 

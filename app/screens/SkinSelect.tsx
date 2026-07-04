@@ -148,8 +148,11 @@ export default function SkinSelect() {
   const confirmBuy = async () => {
     if (modal?.kind !== 'confirm') return;
     const s = modal.skin;
-    const ok = await buySkin(s.id);
-    setModal(ok ? { kind: 'done', skin: s } : { kind: 'insufficient', skin: s });
+    const outcome = await buySkin(s.id);
+    if (outcome === 'ok') { setModal({ kind: 'done', skin: s }); return; }
+    if (outcome === 'insufficient') { setModal({ kind: 'insufficient', skin: s }); return; }
+    setModal(null);   // 인증/세션/네트워크 오류 — "부족"으로 오인시키지 않고 실제 오류 안내
+    showToast('구매 처리 중 오류가 났어요. 다시 시도해 주세요.');
   };
 
   const applyFromModal = async () => {

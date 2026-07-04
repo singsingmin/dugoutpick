@@ -130,11 +130,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     void bootstrap();
-    const { data: sub } = supabase.auth.onAuthStateChange((event, s) => {
+    const { data: sub } = supabase.auth.onAuthStateChange((_event, s) => {
       setSession(s);
       if (s) setStatus('ready');
-      // 로그아웃 → 세션 없는 상태 방지: 즉시 새 익명 세션 확립(linkIdentity 등은 세션 필수).
-      else if (event === 'SIGNED_OUT') void bootstrap();
+      // ⚠️ SIGNED_OUT에서 자동 재익명 금지: linkIdentity 중 세션이 잠깐 끊기면 새 익명계정이
+      //    생겨 연동 세션과 레이스 → 연동 후 잔액 리셋·RPC 실패. 재익명은 명시적 signOut()에서만.
     });
     return () => sub.subscription.unsubscribe();
   }, [bootstrap]);
@@ -206,7 +206,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     await supabase.auth.signOut();
     setAuthError(null);
     setLinkConflict(false);
-  }, []);
+    await bootstrap();   // 로그아웃 후 새 익명 세션 확립(명시적 로그아웃에서만).
+  }, [bootstrap]);
   const clearAuthError = useCallback(() => setAuthError(null), []);
   const clearLinkConflict = useCallback(() => setLinkConflict(false), []);
 
