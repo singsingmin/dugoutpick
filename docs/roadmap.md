@@ -103,7 +103,8 @@
 - ⚠️ 로그인 = 개인정보 수집 → 약관·개인정보처리방침 필요
 - 📐 **설계 확정: [ADR-023](adr.md) · 전체 스펙 [phase3-account-design.md](phase3-account-design.md)** — 익명 UID 우선 opt-in 인증(Android=Google+Kakao·iOS 시 Apple 강제)·충돌=서버우선 전면교체·백엔드 **Supabase 확정**·재화 서버 스키마(profiles/baseball_ledger/owned_skins/attendance_claims/skins/feedback)·재화 무결성 최소 경계(RPC 전용+컬럼 GRANT). 로컬 데이터 마이그레이션 없음(리셋 수용). 첫 구현 태스크=스파이크.
 - ✅ **Stage 0 스파이크 검증 완료 (2026-07-03)** — dev build 실기기에서 **익명→`linkIdentity`(Google)→uid 보존 + is_anonymous=false** 확인. dev build OAuth 왕복 리스크 해소. 실전 교훈(Linking.openURL+딥링크·PKCE·Kakao KOE205 등)은 [phase3-account-design.md §9](phase3-account-design.md). Kakao 동의항목은 후속.
-- ⚠️ **착수(구현) 여부·시점은 별도 게이트**(로컬 재화 루프 재미 신호 확인 후). ADR-023은 방향·설계 확정이지 빌드 승인이 아님(서버리스→서버는 되돌리기 큰 전환).
+- ✅ **착수 결정: Go (2026-07-04)** — **출시 전 기반 다지기**로 구현 확정. 기존 게이트("로컬 재화 루프 재미 신호 후")는 폐기(로컬 출시 후 유저 마이그레이션 지옥 회피 = pre-launch가 정석). 접근=보안크리티컬 수동+기계적 plan-and-build 하이브리드.
+- ✅ **Stage 1(DB) 완료 (2026-07-04)** — Supabase 스키마 6종+트리거+RPC(claim_attendance·purchase_skin)+RLS+컬럼 GRANT+skins 시드 실행·검증(잔액 위조 차단 + RPC 작동 확인). SQL은 `supabase/migrations/0001_phase3_stage1.sql`에 박제. 다음=Stage 2(Auth context·첫실행 게이트).
 
 ### Phase 3-Pre — 실제 꿀잼 경기 판정 파이프라인 (예측 리그 선행 과제)
 > 예측 리그 MVP의 심장. **계정/DB와 독립적으로 파이프라인 단독 선행 가능**(판정 결과 JSON만 먼저 산출).
