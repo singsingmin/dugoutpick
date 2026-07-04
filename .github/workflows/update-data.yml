@@ -34,6 +34,14 @@ jobs:
       - name: Build data
         run: node data-pipeline/build.mjs
 
+      # 서버 푸시: 경기 시작 임박(20~40분 전) 시 해당 팀 팬에게 발송. 실패해도 데이터 파이프라인 안 깨게 격리.
+      - name: Send push notifications
+        continue-on-error: true
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: node data-pipeline/push-notify.mjs
+
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"

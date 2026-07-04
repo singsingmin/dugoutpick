@@ -8,7 +8,7 @@ import RootNavigator from './navigation/RootNavigator';
 import { AuthProvider } from './context/Auth';
 import { TeamThemeProvider } from './context/TeamTheme';
 import { ScoreSkinProvider } from './context/ScoreSkin';
-import { rescheduleMyTeamGameStart } from './utils/notifications';
+import { syncPushOnLaunch } from './services/push';
 
 // 폰트 로딩 완료 전까지 네이티브 스플래시 유지
 SplashScreen.preventAutoHideAsync();
@@ -23,8 +23,8 @@ export default function App() {
     if (loaded) SplashScreen.hideAsync();
   }, [loaded]);
 
-  // 앱 시작 시 내 팀 경기 시작 알림 재예약(최신 일정 반영, 설정 꺼져있으면 no-op).
-  useEffect(() => { void rescheduleMyTeamGameStart(); }, []);
+  // 앱 시작 시 옛 로컬 예약 정리 + 서버 푸시 토큰 갱신(알림 켜져있을 때). 설정 꺼져있으면 정리만.
+  useEffect(() => { void syncPushOnLaunch(); }, []);
 
   if (!loaded) return null;
 

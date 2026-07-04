@@ -10,7 +10,8 @@ import type { RootStackParamList } from '../navigation/types';
 import { useAuth } from '../context/Auth';
 import { useScoreSkin } from '../context/ScoreSkin';
 import { loadGames } from '../data/load';
-import { getNotifyEnabled, setNotifyEnabled, requestPermission, rescheduleMyTeamGameStart, disableAndCancel } from '../utils/notifications';
+import { getNotifyEnabled, setNotifyEnabled, requestPermission, disableAndCancel } from '../utils/notifications';
+import { registerPushToken, disablePush } from '../services/push';
 import PixelText from '../components/PixelText';
 import Panel from '../components/Panel';
 import PixelButton from '../components/PixelButton';
@@ -55,14 +56,15 @@ export default function Settings() {
   const toggleNotify = async () => {
     if (notify) {                         // 끄기
       setNotify(false); setPermDenied(false);
-      await disableAndCancel();
+      await disableAndCancel();           // 로컬 pref off + 예약 취소
+      await disablePush();                // 서버 토큰 비활성
       return;
     }
     const ok = await requestPermission();  // 켜기 — 권한 먼저
     if (!ok) { setPermDenied(true); return; }
     setNotify(true); setPermDenied(false);
     await setNotifyEnabled(true);
-    await rescheduleMyTeamGameStart();
+    await registerPushToken();            // 서버 푸시 토큰 등록(로컬 스케줄 대체)
   };
 
   const onDebugReset = async () => { setDebugMsg('초기화 중…'); await resetProgress(); setDebugMsg('초기화 완료 (야구공 15)'); };
