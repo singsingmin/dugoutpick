@@ -8,6 +8,11 @@ $root = "C:\dev\DugoutPick\app"
 $env:JAVA_HOME = "C:\Program Files\Android\Android Studio\jbr"
 $env:ANDROID_HOME = "C:\tmp\androidsdk"
 $env:GRADLE_USER_HOME = "C:\tmp\gradle-home"
+# ⚠️ TEMP를 영문 경로로 — prefab/CMake가 한글 사용자홈 TEMP(C:\Users\한글\...\Temp)에
+#    스테이징하다 [CXX1429]로 깨짐. 영문 TEMP로 우회.
+New-Item -ItemType Directory -Force -Path "C:\tmp\build-temp" | Out-Null
+$env:TMP = "C:\tmp\build-temp"
+$env:TEMP = "C:\tmp\build-temp"
 $env:EXPO_PUBLIC_DEBUG_TOOLS = "1"
 $env:EXPO_PUBLIC_BUILD_ID = (git -C $root rev-parse HEAD)
 
@@ -20,5 +25,7 @@ Get-Content "$root\.env.local" | ForEach-Object {
 
 Write-Host "buildId=$($env:EXPO_PUBLIC_BUILD_ID)  supabase=$([bool]$env:SUPABASE_URL)"
 Set-Location "$root\android"
-& .\gradlew.bat assembleRelease --console=plain
+# 기존 데몬 정지(옛 한글 tmpdir 유지한 데몬 재사용 방지) + --no-daemon(새 JVM이 위 영문 TEMP 상속).
+& .\gradlew.bat --stop
+& .\gradlew.bat assembleRelease --no-daemon --console=plain
 Write-Host "DONE exit=$LASTEXITCODE"
