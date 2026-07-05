@@ -1,7 +1,7 @@
 {
   "date": "20260705",
   "dateText": "2026년 7월 5일",
-  "updatedAt": "2026-07-05T12:50:34.534Z",
+  "updatedAt": "2026-07-05T13:00:50.346Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 47,
@@ -25,8 +25,8 @@
         "score": 8,
         "starter": {
           "name": "최민석",
-          "era": 2.39,
-          "w": 8,
+          "era": 2.33,
+          "w": 9,
           "l": 2
         }
       },
@@ -39,7 +39,7 @@
           "name": "김윤하",
           "era": 6.75,
           "w": 0,
-          "l": 0
+          "l": 1
         }
       },
       "honjam": {
@@ -74,8 +74,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "최민석",
+        "lose": "김윤하",
         "save": null
       },
       "lineup": null
@@ -152,8 +152,8 @@
         "score": 13,
         "starter": {
           "name": "양창섭",
-          "era": 4.37,
-          "w": 6,
+          "era": 4.26,
+          "w": 7,
           "l": 0
         }
       },
@@ -164,9 +164,9 @@
         "score": 3,
         "starter": {
           "name": "김건우",
-          "era": 6.19,
+          "era": 6.67,
           "w": 6,
-          "l": 6
+          "l": 7
         }
       },
       "honjam": {
@@ -201,8 +201,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "양창섭",
+        "lose": "김건우",
         "save": null
       },
       "lineup": null
@@ -279,7 +279,7 @@
         "score": 2,
         "starter": {
           "name": "박세웅",
-          "era": 4.75,
+          "era": 4.58,
           "w": 2,
           "l": 6
         }
@@ -291,7 +291,7 @@
         "score": 4,
         "starter": {
           "name": "사우어",
-          "era": 4.48,
+          "era": 4.39,
           "w": 6,
           "l": 4
         }
@@ -328,9 +328,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "스기모토",
+        "lose": "정현수",
+        "save": "박영현"
       },
       "lineup": null
     }
