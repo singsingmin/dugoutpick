@@ -63,15 +63,7 @@ async function sendExpo(messages) {
   if (due.length === 0) { console.log('[push] 발송 대상 경기 없음'); return; }
 
   for (const g of due) {
-    // 중복 방지: push_log 삽입(게임+날짜 유니크). 이미 있으면 409 → 스킵.
-    const logRes = await fetch(rest('push_log'), {
-      method: 'POST', headers: { ...H, Prefer: 'return=minimal' },
-      body: JSON.stringify({ game_id: g.gameId, send_date: sendDate }),
-    });
-    if (logRes.status === 409) { console.log(`[push] 이미 발송됨: ${g.gameId}`); continue; }
-    if (!logRes.ok) { console.warn(`[push] push_log 실패(${g.gameId}):`, logRes.status); continue; }
-
-    // 팀별 개인화("오늘 [내 팀] 경기").
+    // 팀별 개인화("오늘 [내 팀] 경기") 메시지 수집을 먼저.
     const messages = [];
     for (const side of ['away', 'home']) {
       const me = g[side], opp = g[side === 'away' ? 'home' : 'away'];
@@ -86,7 +78,18 @@ async function sendExpo(messages) {
         });
       }
     }
+    // 보낼 토큰이 없으면 push_log를 남기지 않는다 → 윈도우 내 다음 실행에서 토큰이 등록되면 재시도 가능.
+    // (기존 버그: 토큰 0개여도 push_log가 먼저 박혀 "발송됨"으로 오표기 → 그날 재시도 영구 차단.)
     if (messages.length === 0) { console.log(`[push] 대상 토큰 없음: ${g.gameId}`); continue; }
+
+    // 중복 방지: 실제 발송 직전에 push_log 삽입(게임+날짜 유니크). 이미 있으면 409 → 스킵.
+    const logRes = await fetch(rest('push_log'), {
+      method: 'POST', headers: { ...H, Prefer: 'return=minimal' },
+      body: JSON.stringify({ game_id: g.gameId, send_date: sendDate }),
+    });
+    if (logRes.status === 409) { console.log(`[push] 이미 발송됨: ${g.gameId}`); continue; }
+    if (!logRes.ok) { console.warn(`[push] push_log 실패(${g.gameId}):`, logRes.status); continue; }
+
     await sendExpo(messages);
     console.log(`[push] 발송: ${g.gameId} → ${messages.length}건`);
   }
