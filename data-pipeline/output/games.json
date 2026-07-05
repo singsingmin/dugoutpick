@@ -1,7 +1,7 @@
 {
   "date": "20260705",
   "dateText": "2026년 7월 5일",
-  "updatedAt": "2026-07-05T07:50:38.609Z",
+  "updatedAt": "2026-07-05T07:52:00.704Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 44,
@@ -68,11 +68,11 @@
         "inning": 9,
         "half": "T",
         "out": 2,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "정다훈",
-        "batter": "박찬호",
+        "batter": "류승민",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
