@@ -164,8 +164,15 @@ export default {
       try {
         staticData = await fetch(`${GITHUB_RAW}/games.json?t=${Date.now()}`).then(r => r.json());
       } catch {
-        const fb = await fetch(`${GITHUB_RAW}/games.json?t=${Date.now()}`);
-        return new Response(await fb.text(), { headers: { ...CORS, 'X-Live-Cache': 'FALLBACK_STATIC' } });
+        // JSON 파싱 실패 → 원문 텍스트라도 그대로 전달 시도. 그 fetch마저 실패하면 503(500 대신 명시적 응답).
+        try {
+          const fb = await fetch(`${GITHUB_RAW}/games.json?t=${Date.now()}`);
+          return new Response(await fb.text(), { headers: { ...CORS, 'X-Live-Cache': 'FALLBACK_STATIC' } });
+        } catch {
+          return new Response(JSON.stringify({ games: [], error: 'static_unavailable' }), {
+            status: 503, headers: { ...CORS, 'X-Live-Cache': 'FALLBACK_STATIC' },
+          });
+        }
       }
       // 라이브는 캐시 경유(신선 15/60초, stale 5분). 완전 실패면 오버레이 없이 정적만.
       let kboGames: any[] = [];
@@ -179,7 +186,7 @@ export default {
         const kboById: Record<string, any> = {};
         for (const g of kboGames) if (g.G_ID) kboById[g.G_ID] = g;
 
-        const games = (staticData.games ?? []).map((game: any) => {
+        const games = (staticData?.games ?? []).map((game: any) => {
           const g = kboById[game.gameId];
           if (!g) return game;
 
@@ -226,6 +233,6 @@ export default {
 
     // standings/report/recent 등 → GitHub raw 패스스루
     const proxy = await fetch(`${GITHUB_RAW}/${path}?t=${Date.now()}`);
-    return new Response(await proxy.text(), { headers: CORS });
+    return new Response(await proxy.text(), { status: proxy.status, headers: CORS });
   },
 };
