@@ -1,7 +1,7 @@
 {
   "date": "20260705",
   "dateText": "2026년 7월 5일",
-  "updatedAt": "2026-07-05T07:00:47.677Z",
+  "updatedAt": "2026-07-05T07:10:34.443Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 44,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
+        "inning": 7,
         "half": "B",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "최민석",
-        "batter": "최주환",
-        "heat": 34,
+        "pitcher": "박치국",
+        "batter": "임병욱",
+        "heat": 38,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
