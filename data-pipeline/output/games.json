@@ -1,7 +1,7 @@
 {
   "date": "20260705",
   "dateText": "2026년 7월 5일",
-  "updatedAt": "2026-07-05T06:10:36.523Z",
+  "updatedAt": "2026-07-05T06:20:33.098Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 44,
@@ -22,7 +22,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "최민석",
           "era": 2.39,
@@ -66,15 +66,15 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "김윤하",
-        "batter": "정수빈",
-        "heat": 35,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "최민석",
+        "batter": "최주환",
+        "heat": 28,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
