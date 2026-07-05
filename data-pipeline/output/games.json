@@ -1,7 +1,7 @@
 {
   "date": "20260705",
   "dateText": "2026년 7월 5일",
-  "updatedAt": "2026-07-05T10:20:36.533Z",
+  "updatedAt": "2026-07-05T10:30:44.063Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 45,
@@ -193,14 +193,14 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김건우",
-        "batter": "디아즈",
-        "heat": 15,
+        "pitcher": "양창섭",
+        "batter": "조형우",
+        "heat": 16,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -384,7 +384,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 3,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "사우어",
           "era": 4.48,
@@ -415,14 +415,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 1,
-        "b1": false,
+        "inning": 4,
+        "half": "T",
+        "out": 0,
+        "b1": true,
         "b2": true,
         "b3": false,
-        "pitcher": "박세웅",
-        "batter": "권동진",
+        "pitcher": "사우어",
+        "batter": "손성빈",
         "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
