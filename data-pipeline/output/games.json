@@ -1,7 +1,7 @@
 {
   "date": "20260705",
   "dateText": "2026년 7월 5일",
-  "updatedAt": "2026-07-05T08:20:33.798Z",
+  "updatedAt": "2026-07-05T08:30:41.903Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 45,
@@ -139,8 +139,8 @@
         "home": [
           {
             "order": 1,
-            "pos": "좌익수",
-            "name": "문성주"
+            "pos": "우익수",
+            "name": "홍창기"
           },
           {
             "order": 2,
@@ -159,7 +159,7 @@
           },
           {
             "order": 5,
-            "pos": "우익수",
+            "pos": "좌익수",
             "name": "송찬의"
           },
           {
@@ -175,19 +175,19 @@
           {
             "order": 8,
             "pos": "유격수",
-            "name": "구본혁"
+            "name": "이영빈"
           },
           {
             "order": 9,
             "pos": "2루수",
-            "name": "신민재"
+            "name": "구본혁"
           }
         ],
         "away": [
           {
             "order": 1,
             "pos": "좌익수",
-            "name": "오재원"
+            "name": "최인호"
           },
           {
             "order": 2,
@@ -211,26 +211,26 @@
           },
           {
             "order": 6,
+            "pos": "포수",
+            "name": "허인서"
+          },
+          {
+            "order": 7,
             "pos": "1루수",
             "name": "김태연"
           },
           {
-            "order": 7,
-            "pos": "2루수",
-            "name": "이도훈"
-          },
-          {
             "order": 8,
-            "pos": "포수",
-            "name": "최재훈"
+            "pos": "2루수",
+            "name": "이도윤"
           },
           {
             "order": 9,
             "pos": "유격수",
-            "name": "심우준"
+            "name": "박정현"
           }
         ],
-        "confirmed": true
+        "confirmed": false
       }
     },
     {

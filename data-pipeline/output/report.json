@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-05T08:20:33.798Z",
+  "updatedAt": "2026-07-05T08:30:41.903Z",
   "lastWeek": {
     "range": [
       "20260622",
@@ -39,7 +39,7 @@
         "l": 2,
         "d": 0,
         "rank": 5,
-        "note": "KIA 격파 포함 4승2패 위닝, 해냈다"
+        "note": "2연승으로 상승세 — 이번주 일정 해볼 만해"
       },
       "HH": {
         "w": 4,
@@ -93,20 +93,20 @@
         "dateEnd": "20260702"
       },
       {
-        "away": "LT",
-        "home": "OB",
-        "pred": 70,
-        "reason": "게임차 4의 순위 다툼",
-        "dateStart": "20260630",
-        "dateEnd": "20260702"
-      },
-      {
         "away": "NC",
         "home": "HT",
         "pred": 69,
         "reason": "게임차 5의 순위 다툼",
         "dateStart": "20260703",
         "dateEnd": "20260705"
+      },
+      {
+        "away": "LT",
+        "home": "OB",
+        "pred": 67,
+        "reason": "게임차 4.5의 순위 다툼",
+        "dateStart": "20260630",
+        "dateEnd": "20260702"
       }
     ],
     "team": {
