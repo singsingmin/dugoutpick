@@ -1,12 +1,12 @@
 {
   "date": "20260705",
   "dateText": "2026년 7월 5일",
-  "updatedAt": "2026-07-05T08:00:51.010Z",
+  "updatedAt": "2026-07-05T08:10:34.941Z",
   "trackRecord": {
     "window": 50,
-    "sampleSize": 44,
-    "hitRate": 14,
-    "bonusRate": 50,
+    "sampleSize": 45,
+    "hitRate": 16,
+    "bonusRate": 49,
     "ready": true
   },
   "recommendedGameId": "20260705NCHT0",
@@ -15,14 +15,14 @@
       "gameId": "20260705OBWO0",
       "time": "14:00",
       "stadium": "고척",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "S-T",
       "away": {
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 8,
+        "score": 7,
         "starter": {
           "name": "최민석",
           "era": 2.39,
@@ -64,117 +64,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 2,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "이병헌",
-        "batter": "김동헌",
-        "heat": 5,
-        "label": "점수차가 벌어진 경기"
+      "live": null,
+      "recap": {
+        "actual": 15,
+        "verdict": "예측 적중",
+        "diff": 6,
+        "total": 8,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "2루수",
-            "name": "서건창"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "추재현"
-          },
-          {
-            "order": 3,
-            "pos": "1루수",
-            "name": "데이비슨"
-          },
-          {
-            "order": 4,
-            "pos": "좌익수",
-            "name": "히우라"
-          },
-          {
-            "order": 5,
-            "pos": "지명타자",
-            "name": "최주환"
-          },
-          {
-            "order": 6,
-            "pos": "우익수",
-            "name": "임병욱"
-          },
-          {
-            "order": 7,
-            "pos": "포수",
-            "name": "김동헌"
-          },
-          {
-            "order": 8,
-            "pos": "유격수",
-            "name": "권혁빈"
-          },
-          {
-            "order": 9,
-            "pos": "3루수",
-            "name": "김웅빈"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "좌익수",
-            "name": "김민석"
-          },
-          {
-            "order": 2,
-            "pos": "지명타자",
-            "name": "손아섭"
-          },
-          {
-            "order": 3,
-            "pos": "2루수",
-            "name": "박준순"
-          },
-          {
-            "order": 4,
-            "pos": "포수",
-            "name": "양의지"
-          },
-          {
-            "order": 5,
-            "pos": "3루수",
-            "name": "안재석"
-          },
-          {
-            "order": 6,
-            "pos": "유격수",
-            "name": "박찬호"
-          },
-          {
-            "order": 7,
-            "pos": "우익수",
-            "name": "류승민"
-          },
-          {
-            "order": 8,
-            "pos": "1루수",
-            "name": "강승호"
-          },
-          {
-            "order": 9,
-            "pos": "중견수",
-            "name": "정수빈"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260705HHLG0",
@@ -235,8 +139,8 @@
         "home": [
           {
             "order": 1,
-            "pos": "우익수",
-            "name": "홍창기"
+            "pos": "좌익수",
+            "name": "문성주"
           },
           {
             "order": 2,
@@ -255,7 +159,7 @@
           },
           {
             "order": 5,
-            "pos": "좌익수",
+            "pos": "우익수",
             "name": "송찬의"
           },
           {
@@ -271,19 +175,19 @@
           {
             "order": 8,
             "pos": "유격수",
-            "name": "이영빈"
+            "name": "구본혁"
           },
           {
             "order": 9,
             "pos": "2루수",
-            "name": "구본혁"
+            "name": "신민재"
           }
         ],
         "away": [
           {
             "order": 1,
             "pos": "좌익수",
-            "name": "최인호"
+            "name": "오재원"
           },
           {
             "order": 2,
@@ -307,26 +211,26 @@
           },
           {
             "order": 6,
-            "pos": "포수",
-            "name": "허인서"
-          },
-          {
-            "order": 7,
             "pos": "1루수",
             "name": "김태연"
           },
           {
-            "order": 8,
+            "order": 7,
             "pos": "2루수",
-            "name": "이도윤"
+            "name": "이도훈"
+          },
+          {
+            "order": 8,
+            "pos": "포수",
+            "name": "최재훈"
           },
           {
             "order": 9,
             "pos": "유격수",
-            "name": "박정현"
+            "name": "심우준"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
@@ -541,18 +445,18 @@
         "home": [
           {
             "order": 1,
-            "pos": "중견수",
-            "name": "김호령"
+            "pos": "좌익수",
+            "name": "박재현"
           },
           {
             "order": 2,
-            "pos": "1루수",
-            "name": "박상준"
+            "pos": "3루수",
+            "name": "김도영"
           },
           {
             "order": 3,
-            "pos": "3루수",
-            "name": "김도영"
+            "pos": "지명타자",
+            "name": "카스트로"
           },
           {
             "order": 4,
@@ -561,28 +465,28 @@
           },
           {
             "order": 5,
-            "pos": "지명타자",
-            "name": "카스트로"
-          },
-          {
-            "order": 6,
             "pos": "포수",
             "name": "한준수"
           },
           {
+            "order": 6,
+            "pos": "1루수",
+            "name": "박상준"
+          },
+          {
             "order": 7,
-            "pos": "2루수",
-            "name": "김선빈"
+            "pos": "중견수",
+            "name": "김호령"
           },
           {
             "order": 8,
-            "pos": "좌익수",
-            "name": "박재현"
+            "pos": "2루수",
+            "name": "김규성"
           },
           {
             "order": 9,
             "pos": "유격수",
-            "name": "김규성"
+            "name": "정현창"
           }
         ],
         "away": [
@@ -593,38 +497,38 @@
           },
           {
             "order": 2,
-            "pos": "우익수",
+            "pos": "좌익수",
             "name": "권희동"
           },
           {
             "order": 3,
+            "pos": "우익수",
+            "name": "박건우"
+          },
+          {
+            "order": 4,
             "pos": "1루수",
             "name": "블레인"
           },
           {
-            "order": 4,
-            "pos": "좌익수",
-            "name": "이우성"
-          },
-          {
             "order": 5,
-            "pos": "지명타자",
-            "name": "박건우"
-          },
-          {
-            "order": 6,
             "pos": "3루수",
             "name": "김휘집"
           },
           {
-            "order": 7,
+            "order": 6,
             "pos": "포수",
             "name": "김형준"
           },
           {
-            "order": 8,
+            "order": 7,
             "pos": "중견수",
             "name": "천재환"
+          },
+          {
+            "order": 8,
+            "pos": "지명타자",
+            "name": "고준휘"
           },
           {
             "order": 9,
@@ -632,7 +536,7 @@
             "name": "김한별"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
