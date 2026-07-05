@@ -1,7 +1,7 @@
 {
   "date": "20260705",
   "dateText": "2026년 7월 5일",
-  "updatedAt": "2026-07-05T11:10:39.482Z",
+  "updatedAt": "2026-07-05T11:20:35.581Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 45,
@@ -194,12 +194,12 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "out": 2,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "전영준",
-        "batter": "김현준",
+        "pitcher": "백승건",
+        "batter": "강민호",
         "heat": 3,
         "label": "점수차가 벌어진 경기"
       },
@@ -415,16 +415,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
+        "inning": 7,
         "half": "T",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "사우어",
-        "batter": "손성빈",
-        "heat": 57,
-        "label": "경기 흐름 체크 중"
+        "b3": false,
+        "pitcher": "전용주",
+        "batter": "황성빈",
+        "heat": 62,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
