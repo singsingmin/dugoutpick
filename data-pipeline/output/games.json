@@ -1,7 +1,7 @@
 {
   "date": "20260705",
   "dateText": "2026년 7월 5일",
-  "updatedAt": "2026-07-05T08:40:35.618Z",
+  "updatedAt": "2026-07-05T09:10:37.692Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 45,
@@ -390,8 +390,8 @@
       "gameId": "20260705NCHT0",
       "time": "18:00",
       "stadium": "광주",
-      "status": "SCHEDULED",
-      "cancelReason": null,
+      "status": "CANCELED",
+      "cancelReason": "그라운드사정",
       "broadcast": "SS-T",
       "away": {
         "code": "NC",
@@ -436,108 +436,13 @@
           "doom": 0,
           "park": 0.68,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
       "live": null,
       "recap": null,
       "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "좌익수",
-            "name": "박재현"
-          },
-          {
-            "order": 2,
-            "pos": "3루수",
-            "name": "김도영"
-          },
-          {
-            "order": 3,
-            "pos": "지명타자",
-            "name": "카스트로"
-          },
-          {
-            "order": 4,
-            "pos": "우익수",
-            "name": "나성범"
-          },
-          {
-            "order": 5,
-            "pos": "포수",
-            "name": "한준수"
-          },
-          {
-            "order": 6,
-            "pos": "1루수",
-            "name": "박상준"
-          },
-          {
-            "order": 7,
-            "pos": "중견수",
-            "name": "김호령"
-          },
-          {
-            "order": 8,
-            "pos": "2루수",
-            "name": "김규성"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "정현창"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "유격수",
-            "name": "김주원"
-          },
-          {
-            "order": 2,
-            "pos": "좌익수",
-            "name": "권희동"
-          },
-          {
-            "order": 3,
-            "pos": "우익수",
-            "name": "박건우"
-          },
-          {
-            "order": 4,
-            "pos": "1루수",
-            "name": "블레인"
-          },
-          {
-            "order": 5,
-            "pos": "3루수",
-            "name": "김휘집"
-          },
-          {
-            "order": 6,
-            "pos": "포수",
-            "name": "김형준"
-          },
-          {
-            "order": 7,
-            "pos": "중견수",
-            "name": "천재환"
-          },
-          {
-            "order": 8,
-            "pos": "지명타자",
-            "name": "고준휘"
-          },
-          {
-            "order": 9,
-            "pos": "2루수",
-            "name": "김한별"
-          }
-        ],
-        "confirmed": true
-      }
+      "lineup": null
     },
     {
       "gameId": "20260705LTKT0",
