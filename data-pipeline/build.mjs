@@ -3,7 +3,7 @@
 // 실행: node data-pipeline/build.mjs [YYYYMMDD]  (날짜 생략 시 KST 오늘)
 import fs from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import { TEAMS, byName, byCode } from './teams.mjs';
 import { resolveFrozen, toRecord, mergeHistory, aggregate, WINDOW, MIN_SAMPLE } from './recap.mjs';
 import { judgeDailyHoney, mergeDailyHoney } from './dailyHoney.mjs';
@@ -244,7 +244,7 @@ const streakSigned = (s) => {
   return (+m[1]) * (m[2] === '승' ? 1 : -1);
 };
 
-function computeHonjam(aw, hm, sa, sh, aPit, hPit, aERA, hERA, h2hRec, stadium, phase = 0) {
+export function computeHonjam(aw, hm, sa, sh, aPit, hPit, aERA, hERA, h2hRec, stadium, phase = 0) {
   const a = { rank: sa.rank, wr: sa.winRate, gb: sa.gamesBehind, l10: last10Wins(sa.last10), streak: streakSigned(sa.streak) };
   const h = { rank: sh.rank, wr: sh.winRate, gb: sh.gamesBehind, l10: last10Wins(sh.last10), streak: streakSigned(sh.streak) };
   // form은 '방향 무관 기세'(연승·연패 대칭, ADR-007): 최근10이 .500에서 멀수록 + 연속이 길수록.
@@ -792,4 +792,7 @@ async function main() {
   console.log(`[build] 추천경기: ${recommendedGameId}`);
 }
 
-main().catch(e => { console.error('[build] FAILED:', e.message); process.exit(1); });
+// 직접 실행(node build.mjs)일 때만 파이프라인 구동. import 시(테스트 등)엔 함수만 노출.
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main().catch(e => { console.error('[build] FAILED:', e.message); process.exit(1); });
+}
