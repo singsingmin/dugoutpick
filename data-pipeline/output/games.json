@@ -1,7 +1,7 @@
 {
   "date": "20260705",
   "dateText": "2026년 7월 5일",
-  "updatedAt": "2026-07-05T09:40:34.452Z",
+  "updatedAt": "2026-07-05T09:50:37.841Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 45,
@@ -84,8 +84,8 @@
       "gameId": "20260705HHLG0",
       "time": "18:00",
       "stadium": "잠실",
-      "status": "SCHEDULED",
-      "cancelReason": null,
+      "status": "CANCELED",
+      "cancelReason": "그라운드사정",
       "broadcast": "MS-T",
       "away": {
         "code": "HH",
@@ -130,108 +130,13 @@
           "doom": 0,
           "park": 0.09,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
       "live": null,
       "recap": null,
       "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "좌익수",
-            "name": "문성주"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "박해민"
-          },
-          {
-            "order": 3,
-            "pos": "지명타자",
-            "name": "오스틴"
-          },
-          {
-            "order": 4,
-            "pos": "3루수",
-            "name": "문보경"
-          },
-          {
-            "order": 5,
-            "pos": "우익수",
-            "name": "송찬의"
-          },
-          {
-            "order": 6,
-            "pos": "1루수",
-            "name": "문정빈"
-          },
-          {
-            "order": 7,
-            "pos": "포수",
-            "name": "박동원"
-          },
-          {
-            "order": 8,
-            "pos": "유격수",
-            "name": "구본혁"
-          },
-          {
-            "order": 9,
-            "pos": "2루수",
-            "name": "신민재"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "좌익수",
-            "name": "오재원"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "페라자"
-          },
-          {
-            "order": 3,
-            "pos": "중견수",
-            "name": "문현빈"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "강백호"
-          },
-          {
-            "order": 5,
-            "pos": "3루수",
-            "name": "노시환"
-          },
-          {
-            "order": 6,
-            "pos": "1루수",
-            "name": "김태연"
-          },
-          {
-            "order": 7,
-            "pos": "2루수",
-            "name": "이도윤"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "최재훈"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "심우준"
-          }
-        ],
-        "confirmed": true
-      }
+      "lineup": null
     },
     {
       "gameId": "20260705SSSK0",
@@ -288,14 +193,14 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김건우",
-        "batter": "김지찬",
-        "heat": 31,
+        "pitcher": "양창섭",
+        "batter": "박성한",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -510,15 +415,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 1,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "박세웅",
-        "batter": "김현수",
-        "heat": 33,
+        "pitcher": "사우어",
+        "batter": "박찬형",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
