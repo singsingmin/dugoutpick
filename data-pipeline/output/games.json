@@ -1,7 +1,7 @@
 {
   "date": "20260705",
   "dateText": "2026년 7월 5일",
-  "updatedAt": "2026-07-05T10:00:54.593Z",
+  "updatedAt": "2026-07-05T10:03:44.700Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 45,
@@ -194,12 +194,12 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "김건우",
-        "batter": "강민호",
+        "batter": "심재훈",
         "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
@@ -417,12 +417,12 @@
       "live": {
         "inning": 2,
         "half": "B",
-        "out": 1,
+        "out": 3,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "박세웅",
-        "batter": "김민혁",
+        "batter": "김상수",
         "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
