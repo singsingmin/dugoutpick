@@ -1,12 +1,12 @@
 {
   "date": "20260705",
   "dateText": "2026년 7월 5일",
-  "updatedAt": "2026-07-05T12:40:38.424Z",
+  "updatedAt": "2026-07-05T12:50:34.534Z",
   "trackRecord": {
     "window": 50,
-    "sampleSize": 46,
-    "hitRate": 15,
-    "bonusRate": 50,
+    "sampleSize": 47,
+    "hitRate": 17,
+    "bonusRate": 49,
     "ready": true
   },
   "recommendedGameId": "20260705NCHT0",
@@ -142,7 +142,7 @@
       "gameId": "20260705SSSK0",
       "time": "18:00",
       "stadium": "문학",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPO-T",
       "away": {
@@ -191,117 +191,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 0,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "임기영",
-        "batter": "전의산",
-        "heat": 5,
-        "label": "점수차가 벌어진 경기"
+      "live": null,
+      "recap": {
+        "actual": 12,
+        "verdict": "예측 적중",
+        "diff": 10,
+        "total": 16,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "유격수",
-            "name": "박성한"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "에레디아"
-          },
-          {
-            "order": 3,
-            "pos": "지명타자",
-            "name": "최정"
-          },
-          {
-            "order": 4,
-            "pos": "좌익수",
-            "name": "김재환"
-          },
-          {
-            "order": 5,
-            "pos": "3루수",
-            "name": "고명준"
-          },
-          {
-            "order": 6,
-            "pos": "1루수",
-            "name": "전의산"
-          },
-          {
-            "order": 7,
-            "pos": "중견수",
-            "name": "최지훈"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "조형우"
-          },
-          {
-            "order": 9,
-            "pos": "2루수",
-            "name": "정준재"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "지명타자",
-            "name": "김지찬"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "김성윤"
-          },
-          {
-            "order": 3,
-            "pos": "중견수",
-            "name": "김현준"
-          },
-          {
-            "order": 4,
-            "pos": "좌익수",
-            "name": "박승규"
-          },
-          {
-            "order": 5,
-            "pos": "1루수",
-            "name": "디아즈"
-          },
-          {
-            "order": 6,
-            "pos": "2루수",
-            "name": "류지혁"
-          },
-          {
-            "order": 7,
-            "pos": "포수",
-            "name": "강민호"
-          },
-          {
-            "order": 8,
-            "pos": "유격수",
-            "name": "심재훈"
-          },
-          {
-            "order": 9,
-            "pos": "3루수",
-            "name": "전병우"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260705NCHT0",
