@@ -1,7 +1,7 @@
 {
   "date": "20260705",
   "dateText": "2026년 7월 5일",
-  "updatedAt": "2026-07-05T07:10:34.443Z",
+  "updatedAt": "2026-07-05T07:20:32.069Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 44,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
+        "inning": 8,
+        "half": "T",
         "out": 0,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "박치국",
-        "batter": "임병욱",
-        "heat": 38,
+        "pitcher": "원종현",
+        "batter": "류승민",
+        "heat": 40,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
