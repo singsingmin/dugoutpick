@@ -1,7 +1,7 @@
 {
   "date": "20260705",
   "dateText": "2026년 7월 5일",
-  "updatedAt": "2026-07-05T11:50:38.407Z",
+  "updatedAt": "2026-07-05T12:00:52.281Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 45,
@@ -194,12 +194,12 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 0,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "백승건",
-        "batter": "김지찬",
+        "out": 2,
+        "b1": true,
+        "b2": true,
+        "b3": true,
+        "pitcher": "박시후",
+        "batter": "류지혁",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
@@ -415,15 +415,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
+        "inning": 9,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "현도훈",
-        "batter": "안현민",
-        "heat": 56,
+        "pitcher": "박영현",
+        "batter": "박찬형",
+        "heat": 58,
         "label": "후반 박빙 승부"
       },
       "recap": null,
