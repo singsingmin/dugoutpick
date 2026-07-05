@@ -1,7 +1,7 @@
 {
   "date": "20260705",
   "dateText": "2026년 7월 5일",
-  "updatedAt": "2026-07-05T05:10:34.988Z",
+  "updatedAt": "2026-07-05T05:20:36.981Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 44,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 2,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "최민석",
-        "batter": "데이비슨",
-        "heat": 33,
+        "inning": 2,
+        "half": "T",
+        "out": 0,
+        "b1": true,
+        "b2": true,
+        "b3": true,
+        "pitcher": "김윤하",
+        "batter": "강승호",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
