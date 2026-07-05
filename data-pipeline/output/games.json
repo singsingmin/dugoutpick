@@ -1,7 +1,7 @@
 {
   "date": "20260705",
   "dateText": "2026년 7월 5일",
-  "updatedAt": "2026-07-05T12:20:36.918Z",
+  "updatedAt": "2026-07-05T12:30:43.848Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 46,
@@ -192,14 +192,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
+        "inning": 9,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "최지광",
-        "batter": "최정",
+        "pitcher": "조병현",
+        "batter": "김현준",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
