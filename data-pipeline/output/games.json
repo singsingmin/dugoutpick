@@ -1,7 +1,7 @@
 {
   "date": "20260705",
   "dateText": "2026년 7월 5일",
-  "updatedAt": "2026-07-05T07:40:34.202Z",
+  "updatedAt": "2026-07-05T07:50:38.609Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 44,
@@ -65,14 +65,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
+        "inning": 9,
+        "half": "T",
         "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김정우",
-        "batter": "데이비슨",
+        "pitcher": "정다훈",
+        "batter": "박찬호",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
