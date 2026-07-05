@@ -70,30 +70,34 @@ export function ScoreSkinProvider({ children }: { children: ReactNode }) {
   const { userId } = useAuth();
   const [state, setState] = useState<AccountState>(account.EMPTY_ACCOUNT);
 
-  // 초기 로드: 캐시 즉시(오프라인/속도) → 서버 fetch로 갱신
+  // 초기 로드: 캐시 즉시(오프라인/속도) → 서버 fetch로 갱신. userId 변경(계정 전환) 시
+  // 새 유저 캐시로 즉시 스왑 — 이전 유저 데이터가 화면에 잔류하지 않도록 EMPTY로 우선 리셋.
   useEffect(() => {
     if (!userId) return;
     let active = true;
+    setState(account.EMPTY_ACCOUNT);
     (async () => {
-      const cached = await account.loadCache();
+      const cached = await account.loadCache(userId);
       if (cached && active) setState(cached);
       try {
         const fresh = await account.fetchAccount();
-        if (fresh && active) { setState(fresh); await account.saveCache(fresh); }
+        if (fresh && active) { setState(fresh); await account.saveCache(userId, fresh); }
       } catch {}
     })();
     return () => { active = false; };
   }, [userId]);
 
   const refresh = useCallback(async () => {
+    if (!userId) return;
     const fresh = await account.fetchAccount();
-    if (fresh) { setState(fresh); await account.saveCache(fresh); }
-  }, []);
+    if (fresh) { setState(fresh); await account.saveCache(userId, fresh); }
+  }, [userId]);
 
   const setSkin = useCallback(async (id: ScoreSkinId) => {
-    setState((s) => { const next = { ...s, appliedSkinId: id }; void account.saveCache(next); return next; });  // 낙관적
+    if (!userId) return;
+    setState((s) => { const next = { ...s, appliedSkinId: id }; void account.saveCache(userId, next); return next; });  // 낙관적
     try {
-      if (userId) await account.updateAppliedSkin(userId, id);
+      await account.updateAppliedSkin(userId, id);
     } catch {
       await refresh();  // 서버 거부(미보유 등) → 롤백
     }
@@ -112,14 +116,14 @@ export function ScoreSkinProvider({ children }: { children: ReactNode }) {
       setState((s) => {
         const ownedSkinIds = s.ownedSkinIds.includes(id) ? s.ownedSkinIds : [...s.ownedSkinIds, id];
         const next = { ...s, ownedSkinIds, balance: res.balance ?? s.balance };
-        void account.saveCache(next);
+        if (userId) void account.saveCache(userId, next);
         return next;
       });
       void refresh();   // 배경 정합(원장·거래내역)
       return 'ok';
     }
     return 'insufficient';   // 서버가 잔액 부족 판정
-  }, [refresh]);
+  }, [refresh, userId]);
 
   // RPC 오류는 throw → 호출부가 실제 메시지로 안내("무반응"으로 오인 방지).
   const claimAttendance = useCallback(async (): Promise<ClaimResult> => {
@@ -134,13 +138,13 @@ export function ScoreSkinProvider({ children }: { children: ReactNode }) {
           attCount: s.attCount + 1,
           attLastDate: kstDateStr(),
         };
-        void account.saveCache(next);
+        if (userId) void account.saveCache(userId, next);
         return next;
       });
     }
     void refresh();   // 배경 정합(거래내역)
     return res;
-  }, [refresh]);
+  }, [refresh, userId]);
 
   // 디버그 전용(서버 RPC, app_config.debug_enabled 게이팅). 재화는 클라 직접 불가 → definer RPC 경유.
   const addBaseballs = useCallback(async (n: number) => {

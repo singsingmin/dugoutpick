@@ -20,7 +20,9 @@ export interface ClaimResult { claimed: boolean; earned: number; base: number; b
 export interface PurchaseResult { success: boolean; balance?: number; reason?: string; }
 
 const DEFAULT_SKIN = 'jersey.classic.team';
-const CACHE_KEY = 'account.cache.v1';
+// 유저별 캐시 키. 계정 전환(로그아웃→다른 계정 복구) 시 이전 유저 캐시가 섞여 보이는 것 방지
+// (버그 감사 발견: 전역 키였으면 오프라인 상태에서 A유저 데이터가 B유저 화면에 잔류).
+const cacheKey = (userId: string) => `account.cache.v1.${userId}`;
 
 export const EMPTY_ACCOUNT: AccountState = {
   balance: 0, appliedSkinId: DEFAULT_SKIN, ownedSkinIds: [],
@@ -28,14 +30,14 @@ export const EMPTY_ACCOUNT: AccountState = {
 };
 
 // ─── 로컬 캐시 (오프라인/즉시 표시) ───────────────────────────────
-export async function loadCache(): Promise<AccountState | null> {
+export async function loadCache(userId: string): Promise<AccountState | null> {
   try {
-    const raw = await AsyncStorage.getItem(CACHE_KEY);
+    const raw = await AsyncStorage.getItem(cacheKey(userId));
     return raw ? (JSON.parse(raw) as AccountState) : null;
   } catch { return null; }
 }
-export async function saveCache(s: AccountState): Promise<void> {
-  try { await AsyncStorage.setItem(CACHE_KEY, JSON.stringify(s)); } catch {}
+export async function saveCache(userId: string, s: AccountState): Promise<void> {
+  try { await AsyncStorage.setItem(cacheKey(userId), JSON.stringify(s)); } catch {}
 }
 
 interface LedgerRow {
