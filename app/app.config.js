@@ -18,6 +18,7 @@ module.exports = {
     },
     android: {
       package: "com.singsingmin.dugoutpick",
+      googleServicesFile: "./google-services.json",
       adaptiveIcon: {
         backgroundColor: "#34663F",
         foregroundImage: "./assets/adaptive-icon.png"
