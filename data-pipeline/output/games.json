@@ -1,7 +1,7 @@
 {
   "date": "20260705",
   "dateText": "2026년 7월 5일",
-  "updatedAt": "2026-07-05T06:30:41.519Z",
+  "updatedAt": "2026-07-05T06:40:34.384Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 44,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
+        "inning": 6,
         "half": "T",
-        "out": 1,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "박정훈",
-        "batter": "안재석",
-        "heat": 29,
+        "batter": "류승민",
+        "heat": 33,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
