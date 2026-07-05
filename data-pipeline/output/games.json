@@ -1,7 +1,7 @@
 {
   "date": "20260705",
   "dateText": "2026년 7월 5일",
-  "updatedAt": "2026-07-05T10:03:44.700Z",
+  "updatedAt": "2026-07-05T10:10:38.107Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 45,
@@ -149,7 +149,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "양창섭",
           "era": 4.37,
@@ -195,12 +195,12 @@
         "inning": 2,
         "half": "T",
         "out": 2,
-        "b1": false,
-        "b2": false,
-        "b3": false,
+        "b1": true,
+        "b2": true,
+        "b3": true,
         "pitcher": "김건우",
-        "batter": "심재훈",
-        "heat": 35,
+        "batter": "김현준",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -415,15 +415,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
-        "out": 3,
-        "b1": false,
+        "inning": 3,
+        "half": "T",
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "박세웅",
-        "batter": "김상수",
-        "heat": 38,
+        "pitcher": "사우어",
+        "batter": "나승엽",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
