@@ -1,7 +1,7 @@
 {
   "date": "20260705",
   "dateText": "2026년 7월 5일",
-  "updatedAt": "2026-07-05T09:10:37.692Z",
+  "updatedAt": "2026-07-05T09:40:34.452Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 45,
@@ -237,14 +237,14 @@
       "gameId": "20260705SSSK0",
       "time": "18:00",
       "stadium": "문학",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SPO-T",
       "away": {
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "양창섭",
           "era": 4.37,
@@ -256,7 +256,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "김건우",
           "era": 6.19,
@@ -283,9 +283,21 @@
           "doom": 0,
           "park": 0.55,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 0,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "김건우",
+        "batter": "김지찬",
+        "heat": 31,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
@@ -448,14 +460,14 @@
       "gameId": "20260705LTKT0",
       "time": "18:00",
       "stadium": "수원",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "KN-T,SPO-2T",
       "away": {
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "박세웅",
           "era": 4.75,
@@ -467,7 +479,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 3,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "사우어",
           "era": 4.48,
@@ -494,9 +506,21 @@
           "doom": 0,
           "park": 0.45,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "B",
+        "out": 1,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "박세웅",
+        "batter": "김현수",
+        "heat": 33,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
