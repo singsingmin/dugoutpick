@@ -9,20 +9,24 @@ import { getNotifyEnabled, hasPermission, cancelLocalSchedules } from '../utils/
 
 const projectId = (Constants.expoConfig?.extra as { eas?: { projectId?: string } } | undefined)?.eas?.projectId;
 
-// Expo 푸시 토큰 발급 → 서버 등록(enabled=true). 웹/권한없음/미설정/오류는 false.
-export async function registerPushToken(): Promise<boolean> {
-  if (Platform.OS === 'web' || !projectId) return false;
+// Expo 푸시 토큰 발급 → 서버 등록(enabled=true). 실패 사유를 함께 반환해 UI가 표면화할 수 있게 함
+// (예전엔 boolean만 반환하고 호출부가 버려서, 등록 실패해도 "알림 ON"으로 보이던 조용한 실패 존재).
+export async function registerPushToken(): Promise<{ ok: boolean; error?: string }> {
+  if (Platform.OS === 'web') return { ok: false, error: '웹은 푸시 미지원' };
+  if (!projectId) return { ok: false, error: 'projectId 미설정' };
   try {
     const { data: token } = await Notifications.getExpoPushTokenAsync({ projectId });
-    if (!token) return false;
+    if (!token) return { ok: false, error: '토큰 발급 실패(빈 값)' };
     const { error } = await supabase.rpc('upsert_push_token', {
       p_token: token, p_platform: Platform.OS, p_enabled: true,
     });
-    if (error) { console.warn('[push] 토큰 등록 실패:', error.message); return false; }
-    return true;
+    if (error) { console.warn('[push] 토큰 등록 실패:', error.message); return { ok: false, error: `서버 등록 실패: ${error.message}` }; }
+    return { ok: true };
   } catch (e) {
-    console.warn('[push] 토큰 발급/등록 예외:', e);
-    return false;
+    // 안드로이드에서 FCM 자격증명 미설정 시 여기서 throw되는 경우가 많음.
+    const msg = e instanceof Error ? e.message : String(e);
+    console.warn('[push] 토큰 발급/등록 예외:', msg);
+    return { ok: false, error: `토큰 발급 예외: ${msg}` };
   }
 }
 

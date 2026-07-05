@@ -40,6 +40,7 @@ export default function Settings() {
   const [trackRecord, setTrackRecord] = useState<TrackRecord | null>(null);
   const [notify, setNotify] = useState(false);
   const [permDenied, setPermDenied] = useState(false);
+  const [pushError, setPushError] = useState<string | null>(null);
   const [debugMsg, setDebugMsg] = useState<string | null>(null);
 
   useEffect(() => {
@@ -55,16 +56,17 @@ export default function Settings() {
 
   const toggleNotify = async () => {
     if (notify) {                         // 끄기
-      setNotify(false); setPermDenied(false);
+      setNotify(false); setPermDenied(false); setPushError(null);
       await disableAndCancel();           // 로컬 pref off + 예약 취소
       await disablePush();                // 서버 토큰 비활성
       return;
     }
     const ok = await requestPermission();  // 켜기 — 권한 먼저
     if (!ok) { setPermDenied(true); return; }
-    setNotify(true); setPermDenied(false);
+    setNotify(true); setPermDenied(false); setPushError(null);
     await setNotifyEnabled(true);
-    await registerPushToken();            // 서버 푸시 토큰 등록(로컬 스케줄 대체)
+    const res = await registerPushToken(); // 서버 푸시 토큰 등록(로컬 스케줄 대체)
+    if (!res.ok) setPushError(res.error ?? '토큰 등록 실패');  // 조용한 실패 방지 — 원인 표면화
   };
 
   const onDebugReset = async () => { setDebugMsg('초기화 중…'); await resetProgress(); setDebugMsg('초기화 완료 (야구공 15)'); };
@@ -111,6 +113,11 @@ export default function Settings() {
                   style={styles.notifyBtn}
                 />
               </>
+            )}
+            {pushError && (
+              <PixelText variant="caption" color={colors.bad} style={styles.value}>
+                푸시 등록 실패: {pushError}
+              </PixelText>
             )}
           </Panel>
         </View>
