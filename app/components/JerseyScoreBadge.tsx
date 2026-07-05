@@ -14,6 +14,11 @@ import {
 } from '../utils/uniformResolver';
 import { useUniformPreset } from '../context/ScoreSkin';
 
+// SVG 표준 dominant-baseline — react-native-svg 타입 정의엔 없지만 웹 렌더러엔 그대로 전달돼
+// 텍스트 수직 중앙정렬(네이티브는 무시, y좌표 수동 튜닝으로 커버 = 기존 동작).
+// ⚠️ alignmentBaseline로 바꾸면 네이티브가 실제로 적용해 배치가 달라질 수 있어 캐스팅으로 타입만 우회.
+const DOMINANT_MIDDLE = { dominantBaseline: 'middle' } as Record<string, unknown>;
+
 export type UniformPreset = UniformPresetId;
 
 interface Props {
@@ -190,7 +195,7 @@ function LargeJersey({ score, cid, w, h, variant, resolved }: {
           fontSize={fontSize} fontWeight="900"
           fill={resolved.numberShadowColor}
           opacity={resolved.numberShadowOpacity}
-          textAnchor="middle" dominantBaseline="middle"
+          textAnchor="middle" {...DOMINANT_MIDDLE}
         >{score}</SvgText>
       )}
       {/* 숫자 외곽선 */}
@@ -200,14 +205,14 @@ function LargeJersey({ score, cid, w, h, variant, resolved }: {
         fill="none"
         stroke={resolved.numberStroke} strokeWidth={resolved.numberStrokeWidth}
         strokeLinejoin="round"
-        textAnchor="middle" dominantBaseline="middle"
+        textAnchor="middle" {...DOMINANT_MIDDLE}
       >{score}</SvgText>
       {/* 숫자 fill */}
       <SvgText
         x={50} y={y}
         fontSize={fontSize} fontWeight="900"
         fill={resolved.numberFill}
-        textAnchor="middle" dominantBaseline="middle"
+        textAnchor="middle" {...DOMINANT_MIDDLE}
       >{score}</SvgText>
     </Svg>
   );
@@ -269,7 +274,7 @@ function CompactJersey({ score, cid, resolved }: {
           fontSize={fontSize} fontWeight="900"
           fill={resolved.numberShadowColor}
           opacity={resolved.numberShadowOpacity}
-          textAnchor="middle" dominantBaseline="middle"
+          textAnchor="middle" {...DOMINANT_MIDDLE}
         >{score}</SvgText>
       )}
       {/* 숫자 외곽선 */}
@@ -279,14 +284,14 @@ function CompactJersey({ score, cid, resolved }: {
         fill="none"
         stroke={resolved.numberStroke} strokeWidth={resolved.numberStrokeWidth * 0.7}
         strokeLinejoin="round"
-        textAnchor="middle" dominantBaseline="middle"
+        textAnchor="middle" {...DOMINANT_MIDDLE}
       >{score}</SvgText>
       {/* 숫자 fill */}
       <SvgText
         x={25} y={y}
         fontSize={fontSize} fontWeight="900"
         fill={resolved.numberFill}
-        textAnchor="middle" dominantBaseline="middle"
+        textAnchor="middle" {...DOMINANT_MIDDLE}
       >{score}</SvgText>
     </Svg>
   );
