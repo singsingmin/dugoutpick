@@ -1,7 +1,7 @@
 {
   "date": "20260705",
   "dateText": "2026년 7월 5일",
-  "updatedAt": "2026-07-04T22:51:35.454Z",
+  "updatedAt": "2026-07-05T05:00:49.244Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 44,
@@ -91,27 +91,27 @@
           {
             "order": 5,
             "pos": "지명타자",
-            "name": "안치홍"
+            "name": "최주환"
           },
           {
             "order": 6,
             "pos": "우익수",
-            "name": "박찬혁"
+            "name": "임병욱"
           },
           {
             "order": 7,
-            "pos": "3루수",
-            "name": "여동욱"
-          },
-          {
-            "order": 8,
             "pos": "포수",
             "name": "김동헌"
           },
           {
-            "order": 9,
+            "order": 8,
             "pos": "유격수",
             "name": "권혁빈"
+          },
+          {
+            "order": 9,
+            "pos": "3루수",
+            "name": "김웅빈"
           }
         ],
         "away": [
@@ -122,7 +122,7 @@
           },
           {
             "order": 2,
-            "pos": "우익수",
+            "pos": "지명타자",
             "name": "손아섭"
           },
           {
@@ -132,7 +132,7 @@
           },
           {
             "order": 4,
-            "pos": "지명타자",
+            "pos": "포수",
             "name": "양의지"
           },
           {
@@ -147,21 +147,21 @@
           },
           {
             "order": 7,
-            "pos": "중견수",
-            "name": "정수빈"
+            "pos": "우익수",
+            "name": "류승민"
           },
           {
             "order": 8,
-            "pos": "포수",
-            "name": "윤준호"
+            "pos": "1루수",
+            "name": "강승호"
           },
           {
             "order": 9,
-            "pos": "1루수",
-            "name": "강승호"
+            "pos": "중견수",
+            "name": "정수빈"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
