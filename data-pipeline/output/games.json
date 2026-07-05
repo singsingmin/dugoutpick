@@ -1,7 +1,7 @@
 {
   "date": "20260705",
   "dateText": "2026년 7월 5일",
-  "updatedAt": "2026-07-05T06:50:37.156Z",
+  "updatedAt": "2026-07-05T07:00:47.677Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 44,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
+        "half": "B",
         "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박지성",
-        "batter": "정수빈",
-        "heat": 33,
+        "pitcher": "최민석",
+        "batter": "최주환",
+        "heat": 34,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
