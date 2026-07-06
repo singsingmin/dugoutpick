@@ -9,9 +9,11 @@ function check(name, actual, expected) {
   pass++;
 }
 
-// 게임 헬퍼. FINAL이면 recap 드라마 지표 포함.
+// 게임 헬퍼. FINAL이면 recap 드라마 지표 포함. away/home은 스냅샷 필드 검증용 고정값.
+const AWAY = { code: 'LT', name: '롯데', score: 3 };
+const HOME = { code: 'KT', name: 'KT', score: 5 };
 function g(gameId, status, recap) {
-  return { gameId, status, recap: recap ? { verdict: '예측 적중', ...recap } : null };
+  return { gameId, status, recap: recap ? { verdict: '예측 적중', ...recap } : null, away: AWAY, home: HOME };
 }
 const DATE = '20260705';
 const AT = '2026-07-05T13:00:00Z';
@@ -23,7 +25,7 @@ check('단독 1위',
     g('B', 'FINAL', { actual: 88, diff: 1, total: 9, extra: 0, walkoff: 1 }),
     g('C', 'FINAL', { actual: 55, diff: 5, total: 10, extra: 0, walkoff: 0 }),
   ], DATE, AT),
-  { date: DATE, actualTopGameId: 'B', recapScore: 88, decidingReasonTags: ['끝내기', '1점차 접전'], calculatedAt: AT });
+  { date: DATE, actualTopGameId: 'B', recapScore: 88, decidingReasonTags: ['끝내기', '1점차 접전'], away: AWAY, home: HOME, calculatedAt: AT });
 
 // 2) 미확정(LIVE 경기 있음) → null
 check('미확정 null',
@@ -44,7 +46,7 @@ check('취소 제외 확정',
     g('A', 'FINAL', { actual: 60, diff: 2, total: 7, extra: 0, walkoff: 0 }),
     g('B', 'CANCELED', null),
   ], DATE, AT),
-  { date: DATE, actualTopGameId: 'A', recapScore: 60, decidingReasonTags: ['2점차 접전'], calculatedAt: AT });
+  { date: DATE, actualTopGameId: 'A', recapScore: 60, decidingReasonTags: ['2점차 접전'], away: AWAY, home: HOME, calculatedAt: AT });
 
 // 5) recapScore 동률 → 미세 tiebreak(끝내기 우선)
 check('동률 tiebreak 끝내기',
@@ -60,7 +62,7 @@ check('완전 동률 공동1위',
     g('A', 'FINAL', { actual: 75, diff: 3, total: 9, extra: 0, walkoff: 0 }),
     g('B', 'FINAL', { actual: 75, diff: 3, total: 9, extra: 0, walkoff: 0 }),
   ], DATE, AT),
-  { date: DATE, actualTopGameId: null, tiedGameIds: ['A', 'B'], recapScore: 75, decidingReasonTags: ['recapScore 75'], calculatedAt: AT });
+  { date: DATE, actualTopGameId: null, tiedGameIds: ['A', 'B'], recapScore: 75, decidingReasonTags: ['recapScore 75'], away: AWAY, home: HOME, calculatedAt: AT });
 
 // 7) mergeDailyHoney: append + freeze + null no-op
 const base = [{ date: '20260704', actualTopGameId: 'X', recapScore: 90 }];

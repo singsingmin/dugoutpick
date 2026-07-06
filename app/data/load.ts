@@ -2,12 +2,13 @@
 // 원격 실패 시 캐시 → 번들 순으로 폴백 (오프라인 생존, ADR-002).
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { REMOTE_BASE_URL } from './config';
-import type { GamesData, StandingsData, TeamsData, RecentData, ReportData } from '../types';
+import type { GamesData, StandingsData, TeamsData, RecentData, ReportData, DailyHoneyData } from '../types';
 import gamesJson from '../assets/data/games.json';
 import standingsJson from '../assets/data/standings.json';
 import teamsJson from '../assets/data/teams.json';
 import recentJson from '../assets/data/recent.json';
 import reportJson from '../assets/data/report.json';
+import dailyHoneyJson from '../assets/data/dailyHoney-history.json';
 
 // JSON import는 넓은 타입으로 추론되므로 unknown 경유로 단언.
 const bundledGames = gamesJson as unknown as GamesData;
@@ -15,6 +16,7 @@ const bundledStandings = standingsJson as unknown as StandingsData;
 const bundledTeams = teamsJson as unknown as TeamsData;
 const bundledRecent = recentJson as unknown as RecentData;
 const bundledReport = reportJson as unknown as ReportData;
+const bundledDailyHoney = dailyHoneyJson as unknown as DailyHoneyData;
 
 async function loadJson<T>(fileName: string, cacheKey: string, fallback: T): Promise<T> {
   if (!REMOTE_BASE_URL) return fallback;
@@ -53,6 +55,10 @@ export function loadRecent(): Promise<RecentData> {
 
 export function loadReport(): Promise<ReportData> {
   return loadJson<ReportData>('report.json', 'cache.report', bundledReport);
+}
+
+export function loadDailyHoney(): Promise<DailyHoneyData> {
+  return loadJson<DailyHoneyData>('dailyHoney-history.json', 'cache.dailyHoney', bundledDailyHoney);
 }
 
 // teams는 온보딩이 fetch 전에 필요하므로 항상 번들(동기) 사용.

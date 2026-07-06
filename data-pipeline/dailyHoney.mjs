@@ -71,6 +71,9 @@ export function judgeDailyHoney(games, date, calculatedAt) {
     ...(tiedGameIds ? { tiedGameIds } : {}),
     recapScore: maxScore,
     decidingReasonTags: reasonTags(topGame),
+    // 앱의 '어제의 명경기' 카드용 경량 스냅샷(별도 히스토리 없이 매치업 표시).
+    away: { code: topGame.away.code, name: topGame.away.name, score: topGame.away.score },
+    home: { code: topGame.home.code, name: topGame.home.name, score: topGame.home.score },
     calculatedAt,
   };
 }

@@ -139,6 +139,23 @@ export interface RecentData {
   recent: Record<string, RecentGame[]>; // 팀코드 → 최근 경기(오래된→최신)
 }
 
+// Phase 3-Pre 판정: 그날 실제 꿀잼 1위 경기(예측 리그 정답 데이터, '어제의 명경기' 카드용)
+export interface DailyHoneyTeamSnapshot { code: string; name: string; score: number | null }
+export interface DailyHoneyResult {
+  date: string;
+  actualTopGameId: string | null;
+  tiedGameIds?: string[];
+  recapScore: number;
+  decidingReasonTags: string[];
+  away: DailyHoneyTeamSnapshot;
+  home: DailyHoneyTeamSnapshot;
+  calculatedAt: string;
+}
+export interface DailyHoneyData {
+  updatedAt: string;
+  results: DailyHoneyResult[];
+}
+
 // 월요 리포트
 export interface ReportUpcomingGame { away: string; home: string; pred: number; reason: string; dateStart: string; dateEnd: string; }
 export interface TeamWeekRecord { w: number; l: number; d: number; rank: number; note?: string; }

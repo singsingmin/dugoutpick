@@ -5,14 +5,16 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/types';
-import type { GamesData, Game } from '../types';
-import { loadGames } from '../data/load';
+import type { GamesData, Game, DailyHoneyResult } from '../types';
+import { loadGames, loadDailyHoney } from '../data/load';
 import { getCheerTeam } from '../data/team';
 import GameCard from '../components/GameCard';
 import LiveCard from '../components/LiveCard';
 import { getActiveWalkoff, inferWalkoffOnFinal } from '../utils/liveHeat';
 import ScreenHeader from '../components/ScreenHeader';
 import SectionLabel from '../components/SectionLabel';
+import Panel from '../components/Panel';
+import TeamName from '../components/TeamName';
 import type { AppIconName } from '../components/AppIcon';
 import PixelText from '../components/PixelText';
 import MondayReport from '../components/MondayReport';
@@ -29,6 +31,7 @@ export default function Today() {
   const [failed, setFailed] = useState(false);
   const [weeklyVisible, setWeeklyVisible] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
+  const [dailyHoney, setDailyHoney] = useState<DailyHoneyResult | null>(null);
 
   const activeRef = useRef(true);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -59,6 +62,15 @@ export default function Today() {
         }
       })
       .catch(() => { if (activeRef.current) setFailed(true); });
+  }, []);
+
+  // '어제의 명경기' — 하루 한 번이면 충분해 폴링 없이 마운트 시 1회만 로드.
+  useEffect(() => {
+    let active = true;
+    loadDailyHoney()
+      .then((d) => { if (active) setDailyHoney(d.results[d.results.length - 1] ?? null); })
+      .catch(() => {});
+    return () => { active = false; };
   }, []);
 
   // foreground 복귀(탭 focus)마다 재fetch + 폴링 재개.
@@ -119,9 +131,16 @@ export default function Today() {
         ) : !data ? (
           <View style={styles.center}><ActivityIndicator color={colors.accent} /></View>
         ) : data.games.length === 0 ? (
-          <Centered text="오늘은 경기가 없다" />
+          <View style={styles.center}>
+            <PixelText variant="title" color={colors.text}>오늘은 경기가 없다</PixelText>
+            {dailyHoney && (
+              <View style={styles.emptyHoney}>
+                <YesterdayHoneyCard honey={dailyHoney} />
+              </View>
+            )}
+          </View>
         ) : (
-          <Body data={data} open={open} cheerTeam={cheerTeam} onCalendar={() => setWeeklyVisible(true)} refreshing={refreshing} onRefresh={onManualRefresh} />
+          <Body data={data} open={open} cheerTeam={cheerTeam} onCalendar={() => setWeeklyVisible(true)} refreshing={refreshing} onRefresh={onManualRefresh} dailyHoney={dailyHoney} />
         )}
       </SafeAreaView>
     </View>
@@ -129,7 +148,7 @@ export default function Today() {
 }
 
 function Body({
-  data, open, cheerTeam, onCalendar, refreshing, onRefresh,
+  data, open, cheerTeam, onCalendar, refreshing, onRefresh, dailyHoney,
 }: {
   data: GamesData;
   open: (id: string) => void;
@@ -137,6 +156,7 @@ function Body({
   onCalendar: () => void;
   refreshing: boolean;
   onRefresh: () => void;
+  dailyHoney: DailyHoneyResult | null;
 }) {
   // LIVE + 끝내기 역전 highlight(FINAL 후 2분) 를 '지금 볼 각'에 표시.
   const liveGames = data.games
@@ -200,6 +220,10 @@ function Body({
       && g.gameId !== listMyDone?.gameId
   );
 
+  // '어제의 명경기' — 오늘 아직 아무 경기도 시작/종료 안 한 조용한 시간대(대개 이른 아침)에만.
+  // 오늘 콘텐츠(라이브·결산)가 하나라도 생기면 자동으로 사라짐.
+  const showYesterdayHoney = !!dailyHoney && !allDone && liveGames.length === 0 && finished.length === 0;
+
   return (
     <ScrollView
       style={styles.scroll}
@@ -231,6 +255,11 @@ function Body({
           ) : (
             <GameCard game={heroGame} variant="hero" onPress={() => open(heroGame!.gameId)} />
           )}
+        </View>
+      )}
+      {showYesterdayHoney && dailyHoney && (
+        <View style={styles.heroContent}>
+          <YesterdayHoneyCard honey={dailyHoney} />
         </View>
       )}
       {/* ── 리스트 섹션 ── */}
@@ -301,6 +330,25 @@ function Centered({ text }: { text: string }) {
   );
 }
 
+// '어제의 명경기' 티저 카드 — 오늘 콘텐츠가 아직 없는 조용한 시간대 채우기용. 상세화면 연결 없음(과거 경기라 오늘 데이터엔 없음).
+function YesterdayHoneyCard({ honey }: { honey: DailyHoneyResult }) {
+  return (
+    <View style={styles.section}>
+      <SectionLabel icon="fire" label="어제의 명경기" />
+      <Panel style={styles.honeyCard}>
+        <View style={styles.honeyRow}>
+          <TeamName code={honey.away.code} variant="body" />
+          <PixelText variant="caption" color={colors.textDim}>VS</PixelText>
+          <TeamName code={honey.home.code} variant="body" />
+        </View>
+        <PixelText variant="caption" color={colors.accent} style={styles.honeyReason}>
+          {honey.decidingReasonTags.join(' · ')}
+        </PixelText>
+      </Panel>
+    </View>
+  );
+}
+
 const styles = StyleSheet.create({
   // 야구장 고정 배경 구조
   root: { flex: 1, backgroundColor: colors.bg },
@@ -333,4 +381,10 @@ const styles = StyleSheet.create({
   section: { marginBottom: spacing.lg },
   liveHint: { marginBottom: spacing.sm },
   subLabel: { marginBottom: spacing.xs },
+
+  // '어제의 명경기' 카드
+  emptyHoney: { marginTop: spacing.lg, width: '100%', paddingHorizontal: spacing.md },
+  honeyCard: { gap: spacing.xs },
+  honeyRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around' },
+  honeyReason: { textAlign: 'center' },
 });
