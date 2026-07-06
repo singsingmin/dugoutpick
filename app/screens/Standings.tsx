@@ -149,7 +149,7 @@ export default function Standings() {
           </View>
           <View style={styles.legend}>
             <View style={styles.legendRow}>
-              <PixelText variant="caption" color={colors.textDim}>최근 10경기 ← 오래·최신 →</PixelText>
+              <PixelText variant="caption" color={colors.textDim}>최근 10경기 ← 오래된·최신 →</PixelText>
               <LegendItem color={colors.good} label="승" />
               <LegendItem color={colors.bad} label="패" />
               <LegendItem color={colors.textDim} label="무" />

@@ -79,7 +79,7 @@ export default function MyTeam() {
             {game ? (
               <GameCard game={game} variant="list" showRecap={false} onPress={() => navigation.navigate('GameDetail', { gameId: game.gameId })} />
             ) : (
-              <Panel><PixelText variant="body" color={colors.textDim}>오늘 내 팀 경기가 없다</PixelText></Panel>
+              <Panel><PixelText variant="body" color={colors.textDim}>오늘 내 팀 경기가 없어요</PixelText></Panel>
             )}
           </View>
 
