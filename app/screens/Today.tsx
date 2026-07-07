@@ -19,6 +19,7 @@ import type { AppIconName } from '../components/AppIcon';
 import PixelText from '../components/PixelText';
 import MondayReport from '../components/MondayReport';
 import WeeklyScheduleSheet from '../components/WeeklyScheduleSheet';
+import PredictionCard from '../components/PredictionCard';
 import { isKstMonday, kstDatetime } from '../utils';
 import { colors, spacing } from '../theme';
 
@@ -241,6 +242,7 @@ function Body({
         rightIcon="calendar"
         onRightPress={onCalendar}
       />
+      <PredictionCard dateYmd={data.date} games={data.games} locked={allDone || liveGames.length > 0} />
       {/* ── 히어로 섹션 ── */}
       {!allDone && heroGame && (
         <View style={styles.heroContent}>

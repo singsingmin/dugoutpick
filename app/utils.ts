@@ -21,6 +21,11 @@ export function shortDate(ymd: string): string {
   return `${+ymd.slice(4, 6)}/${+ymd.slice(6, 8)}`;
 }
 
+// YYYYMMDD → "YYYY-MM-DD" (predictions 테이블의 date 컬럼 조회용)
+export function ymdToIso(ymd: string): string {
+  return `${ymd.slice(0, 4)}-${ymd.slice(4, 6)}-${ymd.slice(6, 8)}`;
+}
+
 const DOW = ['일', '월', '화', '수', '목', '금', '토'];
 // YYYYMMDD → "M/D(요일)"
 export function shortDateDow(ymd: string): string {
