@@ -197,28 +197,18 @@ function Body({
     .filter((g) => !liveIds.has(g.gameId) && (allDone || g.gameId !== recommended?.gameId))
     .sort((a, b) => (b.honjam?.score ?? -1) - (a.honjam?.score ?? -1));
 
-  // ── 히어로: LIVE 있으면 최우선(진행중이 제일 급함), 없으면 추천 경기(SCHEDULED)
-  let heroGame: Game | null = null;
-  let heroIcon: AppIconName = 'star';
-  let heroLabel = '오늘의 추천';
-  let heroIsLive = false;
-
-  if (!allDone && liveGames.length > 0) {
-    heroGame = liveGames[0];
-    heroIcon = 'live';
-    heroLabel = '지금 볼 각';
-    heroIsLive = true;
-  } else if (!allDone && recommended) {
-    heroGame = recommended;
-  }
+  // ── 히어로: 추천 경기(SCHEDULED)만. LIVE는 히어로로 승격하지 않고 '지금 볼 각' 리스트에 균일 표시.
+  const heroIcon: AppIconName = 'star';
+  const heroLabel = '오늘의 추천';
+  const heroGame: Game | null = !allDone && recommended ? recommended : null;
 
   // ── 리스트: 명경기는 항상 결산 섹션에 표시
   const listBestRecap = bestRecap ?? null;
   const listMyDone = heroGame?.gameId === myDone?.gameId ? null : myDone;
   // allDone 시 추천 섹션 숨김 (rest에 이미 포함)
   const listRecommended = allDone ? null : (heroGame?.gameId === recommended?.gameId ? null : recommended);
-  // 히어로로 승격된 LIVE 경기는 아래 '지금 볼 각' 리스트에서 제외(중복 방지)
-  const listLiveGames = liveGames.filter((g) => g.gameId !== heroGame?.gameId);
+  // LIVE는 히어로로 승격하지 않으므로 전부 '지금 볼 각' 리스트에 표시
+  const listLiveGames = liveGames;
   // 버그픽스: bestRecap·myDone 중복 제거
   const listRest = rest.filter(
     (g) => g.gameId !== heroGame?.gameId
@@ -252,16 +242,7 @@ function Body({
               <PixelText variant="caption" color={colors.textDim}>갱신 {kstDatetime(data.updatedAt)}</PixelText>
             </View>
           </View>
-          {heroIsLive && (
-            <PixelText variant="caption" color={colors.textDim} style={styles.liveHint}>
-              ⚠ 라이브 점수는 30초 간격 갱신 — 실제보다 몇 초 늦을 수 있다
-            </PixelText>
-          )}
-          {heroIsLive ? (
-            <LiveCard game={heroGame} onPress={() => open(heroGame!.gameId)} />
-          ) : (
-            <GameCard game={heroGame} variant="hero" onPress={() => open(heroGame!.gameId)} />
-          )}
+          <GameCard game={heroGame} variant="hero" onPress={() => open(heroGame!.gameId)} />
         </View>
       )}
       {showYesterdayHoney && dailyHoney && (
@@ -273,23 +254,18 @@ function Body({
       <View style={styles.listSection}>
         {listLiveGames.length > 0 && (
           <View style={styles.section}>
-            {/* 히어로가 이미 '지금 볼 각' 라벨을 달고 있으면(라이브 다건) 같은 그룹이라 라벨 자체를 또 안 띄움 */}
-            {!heroIsLive && (
-              <View style={styles.heroLabelRow}>
-                <SectionLabel icon="live" label="지금 볼 각" />
-                {/* 갱신 시각은 히어로에 이미 있으면 중복 표시 방지 — 없을 때만 여기 표시 */}
-                {!heroGame && (
-                  <View style={styles.heroMeta}>
-                    <PixelText variant="caption" color={colors.textDim}>갱신 {kstDatetime(data.updatedAt)}</PixelText>
-                  </View>
-                )}
-              </View>
-            )}
-            {!heroIsLive && (
-              <PixelText variant="caption" color={colors.textDim} style={styles.liveHint}>
-                ⚠ 라이브 점수는 30초 간격 갱신 — 실제보다 몇 초 늦을 수 있다
-              </PixelText>
-            )}
+            <View style={styles.heroLabelRow}>
+              <SectionLabel icon="live" label="지금 볼 각" />
+              {/* 갱신 시각은 추천 히어로에 이미 있으면 중복 방지 — 히어로 없을 때만 여기 표시 */}
+              {!heroGame && (
+                <View style={styles.heroMeta}>
+                  <PixelText variant="caption" color={colors.textDim}>갱신 {kstDatetime(data.updatedAt)}</PixelText>
+                </View>
+              )}
+            </View>
+            <PixelText variant="caption" color={colors.textDim} style={styles.liveHint}>
+              ⚠ 라이브 점수는 30초 간격 갱신 — 실제보다 몇 초 늦을 수 있다
+            </PixelText>
             {listLiveGames.map((g) => (
               <LiveCard key={g.gameId} game={g} onPress={() => open(g.gameId)} />
             ))}
