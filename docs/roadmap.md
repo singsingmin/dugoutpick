@@ -2,7 +2,7 @@
 
 > MVP(6 phase) 완료 + 라이브 데이터 파이프라인 안정화 + Android APK 산출 완료 이후의 백로그.
 > 운영 방식: 야구 찐팬 1명 + 야구 초보팬 1명과 함께 사용하며 피드백 기반 개선.
-> 최종 정리: 2026-07-03 (E 섹션에 "꿀잼 예측 리그" 트랙 편입 — Phase 3-Pre 판정 파이프라인 + Phase 4 예측 리그 MVP + Phase 5 랭킹/팬덤/시즌 패스, 광고·IAP는 Phase 6으로 재배치).
+> 최종 정리: 2026-07-07 (Phase 4 예측 리그 Stage 1-6 구현 완료 반영 + 추천코드 시스템 추가 + F섹션 "출시 준비" 신설).
 
 ## A. ✨ 기능 다듬기 (사용 경험)
 - [x] **아이콘 커스텀 SVG 교체** (2026-06-29) — 커스텀 SVG로 교체 완료.
@@ -121,21 +121,27 @@
 - ⚠️ 판정은 **서버/파이프라인이 실제 경기 데이터 기준**. 클라·야구공 개입 불가. 설계 [prediction-league-design.md](prediction-league-design.md).
 - [ ] (후속) 앱에 "어제 실제 명경기 + 이유" 노출 · Phase 4에서 예측과 대조 채점.
 
-### Phase 4 — 꿀잼 예측 리그 MVP (계정/DB + 판정 파이프라인 이후)
-> 📐 **설계 확정: [prediction-league-design.md](prediction-league-design.md)** (2026-07-05) — MVP/후속/금지·데이터구조·랭킹/보상 정책·엣지케이스·프라이버시 박제. 구현 미착수(2026 데이터 수집·폴리싱, 출시 2027 초 목표). 괴리율 실검증·페르소나 시뮬은 데이터 쌓인 뒤. 아래는 요약.
-> 야구공 재화의 서버 이후 킬러 기능. **"베팅"이 아니라 "예측 참여"**. 하루 1회 무료 참여로 시작.
+### Phase 4 — 꿀잼 예측 리그 MVP ✅ Stage 1-6 구현 완료 (2026-07-07, DB 마이그레이션 미적용)
+> 📐 설계: [prediction-league-design.md](prediction-league-design.md) · [stage6-cosmetics-design.md](stage6-cosmetics-design.md)(칭호·배경, 3차 리비전 전 항목 결정 완료).
+> **착수 결정 번복(2026-07-07):** 원래 "2026 데이터 수집 후 2027 초 출시"로 미뤄뒀었으나, "찐팬+초보팬 2명으로만 테스트하고 출시 전 테스트 데이터를 전부 삭제할 것이므로 표본 부족 걱정 없이 보상을 처음부터 지급해도 무방하다"는 논리로 즉시 착수로 전환. 이 논리는 향후 비슷한 "데이터 쌓고 시작" 게이트 논의의 참고 선례로 남겨둠.
 > **용어 규칙:** ❌ 베팅·배당·판돈 → ✅ **예측 참여 · 적중 보상 · 참가 야구공 · 보상 등급 · 랭킹 포인트**.
-- **선행 조건(모두 충족돼야 착수):** 계정/UID · 관리형 DB · 서버 판정(Phase 3-Pre) · 예측 중복 방지 · 경기 시작 후 예측 잠금 · 보상 지급 기록.
-- [ ] **하루 1회 무료 예측** — 경기 시작 전까지 "오늘 가장 재밌을 것 같은 경기" 1개 선택(베팅형 아님)
-- [ ] 경기 시작 후 예측 잠금(`lockedAt`) + 유저·날짜당 중복 참여 방지
-- [ ] 서버가 `actualTopGameId`와 대조해 적중/미적중 판정(`status: pending|hit|miss|void`)
-- [ ] 적중 시 야구공·랭킹 포인트·연속 적중 지급 / 미적중도 기록은 DB 저장
-- [ ] 개인 기록 화면(참여·적중·적중률·연속 적중)
-- **핵심 데이터모델:**
-  - `UserPrediction { id, userId, date, selectedGameId, selectedAt, lockedAt?, status, predictedHoneyScore, finalRecapScore?, actualTopGameId?, rewardBaseballs, rankingPoints }`
-  - `UserPredictionStats { userId, totalPredictions, totalHits, hitRate, currentStreak, bestStreak, weeklyPoints, seasonPoints }`
+- [x] **Stage 1(DB 스키마)** — `supabase/migrations/0006_prediction_league.sql`: predictions/prediction_stats/prediction_windows/owned_titles/owned_backgrounds + RLS + submit_prediction·set_nickname(클라 RPC) + settle_prediction·upsert_prediction_window(service_role 전용) + 월간 랭킹 RPC 2종.
+- [x] **Stage 2(정산 파이프라인)** — `data-pipeline/predictions-sync.mjs`: 매 빌드 예측 마감시각 upsert + dailyHoney 확정 시 hit/miss/void 정산. 순수 로직 테스트 14개. `update-data.yml`에 스텝 통합.
+- [x] **Stage 3-4(제출/결과 UI)** — `app/components/PredictionCard.tsx` + `app/services/predictions.ts`: Today 탭 최상단 카드, 미제출→pending→hit/miss/void 4상태 + 첫 참여 닉네임 플로우 + 정산 후 "오늘의 실제 명경기+이유" 노출.
+- [x] **Stage 5(랭킹 화면)** — `app/screens/PredictionLeague.tsx`: 내 기록 + 월간 포인트/적중률 랭킹, 리더보드는 `is_me` 서버 계산 boolean으로 user_id 비노출.
+- [x] **Stage 6(칭호·라커룸 배경 꾸미기)** — `0007_prediction_cosmetics.sql` + `0008_prediction_cosmetics_v2.sql`: 랭킹 동점자=RANK() 기반 공동수상, 탈퇴 시 명예기록=`award_history`(+`award_history_public` 뷰로 익명 보존), event/admin 지급=전용 RPC 4종+감사로그(`cosmetic_admin_events`), 닉네임=월1회 제한·중복허용·2~10자. 클라: `TitleList`/`BackgroundShop`/`HallOfFame` 화면, 라커룸 배경 실제 렌더링. 라커룸 배경 아트 12종 완료(기본 6종 + 구매형 6종, `0009_locker_backgrounds_pack2.sql`).
+- **Stage 7(마감 30분 전 리마인드 푸시)은 사용자 요청으로 스코프 제외.**
+- **남은 것: Supabase 대시보드에 `0006`~`0010` 순서대로 SQL 실행** (사용자의 유일한 필수 수동 개입 지점 — 서비스 role/대시보드 접근이 세션에 없음). 실행 후 실기기 검증(동점자 공동수상, 닉네임 월1회 제한, admin RPC, 탈퇴 익명화 등)은 [stage6-cosmetics-design.md §10-2](stage6-cosmetics-design.md) 시나리오 참고.
 - **무결성 원칙(재확인):** 야구공으로 랭킹 포인트 직접 구매 불가 / 예측 결과 변경 불가 / 공식 꿀잼지수 계산 개입 불가.
-- ❌ MVP 제외: 야구공 베팅 · 배당률 · 현금성 보상 · 유저 간 거래 · 랜덤박스 · 유료 시즌 패스 · 친구 랭킹 · 크라우드 꿀잼지수 노출.
+- ❌ 제외: 야구공 베팅 · 배당률 · 현금성 보상 · 유저 간 거래 · 랜덤박스 · 유료 시즌 패스 · 친구 랭킹 · 크라우드 꿀잼지수 노출.
+
+### Phase 4-부속 — 추천코드 시스템 ✅ 구현 완료 (2026-07-07, DB 마이그레이션 미적용)
+> Phase 3 DB 도입 사유 목록에 있던 항목을 실제 설계·구현까지 진행 — "출시 전 충분한 테스트·개선 시간 확보" 목적.
+- [x] 코드 **발급**(내 코드를 남에게 줄 자격) = 소셜 연동(보호된 계정)만. `is_anonymous: true→false` 전환 트리거가 자동 발급.
+- [x] 코드 **입력**(피추천인) = **피추천인도 소셜 연동 필수**(최초엔 "익명도 가능"으로 설계했다가 사용자가 명시적으로 뒤집음), 평생 1회, 즉시 +10 야구공.
+- [x] 추천인 보상: 피추천인 첫 예측 참여 시 +10, 하루 2명/월 10명 캡(초과는 기록만).
+- [x] 금지: 자기추천, 동일 소셜계정 재사용(Supabase가 자체 차단). 동일 기기 반복 추천은 기술적 완전 차단 불가 — `admin_cancel_referral_reward`로 사후 취소.
+- 구현: `supabase/migrations/0010_referral_codes.sql`, `app/services/referrals.ts`, `app/screens/Settings.tsx`("추천코드" 섹션). Phase 4와 동일하게 SQL 미적용이 유일한 블로커.
 
 ### Phase 5 — 랭킹 / 팬덤 대항전 / 시즌 패스 (예측 리그 후속 확장)
 - [ ] **개인 주간 랭킹** — 적중 수·적중률·랭킹 포인트 조합(총참여량만으론 유리하지 않게 보정). 상위권 배지/야구공 보상. 예: 이번 주 꿀잼 예측왕 · 적중률 랭킹 · 연속 적중 랭킹 · 내 응원팀 내 랭킹.
@@ -152,6 +158,14 @@
 - 로컬 MVP로 **"스킨/재화 루프가 재미있나"를 먼저 검증** 중. 반응이 좋아야 계정+서버(큰 투자)로 진행.
 - 순서: 로컬 MVP 반응 확인 → **Phase 3(계정·DB, 상태 이관)** → Phase 3-Pre(판정 파이프라인, 단독 선행 가능) → Phase 4(예측 리그 MVP) → Phase 5(랭킹·팬덤·시즌 패스) → Phase 6(광고·결제). 정식 재화/결제·예측 리그는 계정 없이 진행 금지.
 - **예측 리그는 지금 구현하지 않음** — 문서/기획 편입만. 착수는 Phase 3 계정/DB 도입 결정(별도 ADR/논의) 이후.
+
+## F. 🚀 출시 준비 (Android)
+
+- [ ] **Supabase 마이그레이션 0006~0010 순서대로 실행** — Phase 4/추천코드 기능이 실제로 동작하려면 필요한 유일한 서버측 수동 작업(대시보드 SQL 에디터). 순서: `0006_prediction_league.sql` → `0007_prediction_cosmetics.sql` → `0008_prediction_cosmetics_v2.sql` → `0009_locker_backgrounds_pack2.sql` → `0010_referral_codes.sql`.
+- [x] **출시 전 테스트 데이터 초기화 스크립트 작성** (2026-07-07) — `supabase/prelaunch-reset-test-data.sql`. 예측 기록·랭킹 통계·추천코드 사용기록·칭호/배경 보유·명예기록·야구공 원장을 초기화(잔액은 최초 지급액 15로 리셋). 계정 자체·스킨 보유·출석 이력은 건드리지 않음(테스터 재작업 방지). **실행 시점: 비공개 테스트 종료 후 ~ 프로덕션 공개 직전, 실유저가 아직 없을 때.** 실행은 사용자가 대시보드에서 직접.
+- [ ] **공개 전 디버그 툴 제거** — [C섹션](#c-🔧-기술-부채-마감-있음) 항목과 동일 건, 출시 체크리스트로 재확인. `EXPO_PUBLIC_DEBUG_TOOLS` preview/web 플래그 제거 + `app_config.debug_enabled=false`.
+- [ ] **Google Play 비공개 테스트 — 테스터 확보** — 랜덤 배정 아님, 개발자가 직접 모집(이메일 리스트 또는 Google 그룹 또는 옵트인 링크). 신규 개발자 계정 기준 최소 인원(기억상 20명) × 최소 기간(14일) 유지 필요 추정 — **정확한 최신 수치는 Play Console 가입 시점에 직접 확인**(정책 변동 가능). 현재 2명(찐팬+초보팬) 테스트 규모보다 크게 늘려야 함.
+- [ ] **EAS production 빌드(AAB) + Play Console 제출** — `eas submit`은 아직 서비스 계정 미설정 상태(`app/eas.json`의 `submit.production`이 빈 블록). 최초 제출은 수동 업로드 또는 서비스 계정 설정 후 진행.
 
 ---
 참고 문서: [prd.md](prd.md) · [adr.md](adr.md) · [flow.md](flow.md) · [data-schema.md](data-schema.md)
