@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-07T13:10:45.429Z",
+  "updatedAt": "2026-07-07T13:20:39.712Z",
   "lastWeek": {
     "range": [
       "20260629",
@@ -289,7 +289,9 @@
         {
           "date": "20260708",
           "away": "NC",
-          "home": "HH"
+          "home": "HH",
+          "awayStarter": "토다",
+          "homeStarter": "왕옌청"
         },
         {
           "date": "20260709",
@@ -308,7 +310,9 @@
         {
           "date": "20260708",
           "away": "NC",
-          "home": "HH"
+          "home": "HH",
+          "awayStarter": "토다",
+          "homeStarter": "왕옌청"
         },
         {
           "date": "20260709",
