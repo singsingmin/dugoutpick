@@ -165,7 +165,11 @@ revoke execute on function public.set_nickname(text) from anon;
 
 -- ─────────────────────────────────────────────────────────────
 -- 6. 리더보드 RPC — is_me 방식(raw user_id 절대 반환 안 함), group by를 user_id 기준으로 수정
+--    반환 타입이 0006과 다름(is_me 추가) → create or replace 불가, drop 선행 필수.
 -- ─────────────────────────────────────────────────────────────
+drop function if exists public.get_monthly_leaderboard(text, int);
+drop function if exists public.get_monthly_hitrate_leaderboard(text, int, int);
+
 create or replace function public.get_monthly_leaderboard(p_month text default null, p_limit int default 50)
 returns table(nickname text, monthly_points int, hits int, participations int, is_me boolean)
 language sql security definer set search_path = public as $$
