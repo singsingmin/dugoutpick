@@ -273,19 +273,23 @@ function Body({
       <View style={styles.listSection}>
         {listLiveGames.length > 0 && (
           <View style={styles.section}>
-            <View style={styles.heroLabelRow}>
-              {/* 히어로가 이미 '지금 볼 각'을 달고 있으면(라이브 다건) 라벨 중복 방지용으로 구분 */}
-              <SectionLabel icon="live" label={heroIsLive ? '그 외 라이브 경기' : '지금 볼 각'} />
-              {/* 갱신 시각은 히어로에 이미 있으면 중복 표시 방지 — 없을 때만 여기 표시 */}
-              {!heroGame && (
-                <View style={styles.heroMeta}>
-                  <PixelText variant="caption" color={colors.textDim}>갱신 {kstDatetime(data.updatedAt)}</PixelText>
-                </View>
-              )}
-            </View>
-            <PixelText variant="caption" color={colors.textDim} style={styles.liveHint}>
-              ⚠ 라이브 점수는 30초 간격 갱신 — 실제보다 몇 초 늦을 수 있다
-            </PixelText>
+            {/* 히어로가 이미 '지금 볼 각' 라벨을 달고 있으면(라이브 다건) 같은 그룹이라 라벨 자체를 또 안 띄움 */}
+            {!heroIsLive && (
+              <View style={styles.heroLabelRow}>
+                <SectionLabel icon="live" label="지금 볼 각" />
+                {/* 갱신 시각은 히어로에 이미 있으면 중복 표시 방지 — 없을 때만 여기 표시 */}
+                {!heroGame && (
+                  <View style={styles.heroMeta}>
+                    <PixelText variant="caption" color={colors.textDim}>갱신 {kstDatetime(data.updatedAt)}</PixelText>
+                  </View>
+                )}
+              </View>
+            )}
+            {!heroIsLive && (
+              <PixelText variant="caption" color={colors.textDim} style={styles.liveHint}>
+                ⚠ 라이브 점수는 30초 간격 갱신 — 실제보다 몇 초 늦을 수 있다
+              </PixelText>
+            )}
             {listLiveGames.map((g) => (
               <LiveCard key={g.gameId} game={g} onPress={() => open(g.gameId)} />
             ))}
