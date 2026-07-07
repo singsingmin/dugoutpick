@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-07T12:10:43.405Z",
+  "updatedAt": "2026-07-07T12:20:40.117Z",
   "lastWeek": {
     "range": [
       "20260629",
@@ -39,7 +39,7 @@
         "l": 2,
         "d": 0,
         "rank": 5,
-        "note": "2연승 — 좀 더 달린다 — 이번주 잡아야 순위 움직인다"
+        "note": "4승2패로 위닝 마감, 상승 기류 — 이번주 잡아야 순위 움직인다"
       },
       "HH": {
         "w": 2,
@@ -67,7 +67,7 @@
         "l": 5,
         "d": 1,
         "rank": 9,
-        "note": "9연패째… 이러다 큰일 난다"
+        "note": "지난주 한 경기도 못 잡았다, 단체로 멘탈 가출"
       },
       "WO": {
         "w": 2,
@@ -110,48 +110,6 @@
       }
     ],
     "team": {
-      "WO": [
-        {
-          "date": "20260707",
-          "away": "WO",
-          "home": "KT",
-          "awayStarter": "안우진",
-          "homeStarter": "소형준"
-        },
-        {
-          "date": "20260708",
-          "away": "WO",
-          "home": "KT",
-          "awayStarter": "배동현",
-          "homeStarter": "로건"
-        },
-        {
-          "date": "20260709",
-          "away": "WO",
-          "home": "KT"
-        }
-      ],
-      "KT": [
-        {
-          "date": "20260707",
-          "away": "WO",
-          "home": "KT",
-          "awayStarter": "안우진",
-          "homeStarter": "소형준"
-        },
-        {
-          "date": "20260708",
-          "away": "WO",
-          "home": "KT",
-          "awayStarter": "배동현",
-          "homeStarter": "로건"
-        },
-        {
-          "date": "20260709",
-          "away": "WO",
-          "home": "KT"
-        }
-      ],
       "SK": [
         {
           "date": "20260707",
@@ -192,6 +150,48 @@
           "date": "20260709",
           "away": "SK",
           "home": "OB"
+        }
+      ],
+      "WO": [
+        {
+          "date": "20260707",
+          "away": "WO",
+          "home": "KT",
+          "awayStarter": "안우진",
+          "homeStarter": "소형준"
+        },
+        {
+          "date": "20260708",
+          "away": "WO",
+          "home": "KT",
+          "awayStarter": "배동현",
+          "homeStarter": "로건"
+        },
+        {
+          "date": "20260709",
+          "away": "WO",
+          "home": "KT"
+        }
+      ],
+      "KT": [
+        {
+          "date": "20260707",
+          "away": "WO",
+          "home": "KT",
+          "awayStarter": "안우진",
+          "homeStarter": "소형준"
+        },
+        {
+          "date": "20260708",
+          "away": "WO",
+          "home": "KT",
+          "awayStarter": "배동현",
+          "homeStarter": "로건"
+        },
+        {
+          "date": "20260709",
+          "away": "WO",
+          "home": "KT"
         }
       ],
       "LG": [
