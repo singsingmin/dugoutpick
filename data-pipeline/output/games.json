@@ -1,7 +1,7 @@
 {
   "date": "20260707",
   "dateText": "2026년 7월 7일",
-  "updatedAt": "2026-07-07T12:30:48.557Z",
+  "updatedAt": "2026-07-07T12:40:41.168Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -103,7 +103,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 7,
+        "score": 9,
         "starter": {
           "name": "후라도",
           "era": 3.12,
@@ -134,16 +134,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
+        "inning": 9,
+        "half": "T",
         "out": 2,
         "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "이정용",
-        "batter": "디아즈",
-        "heat": 14,
-        "label": "경기 흐름 체크 중"
+        "b3": false,
+        "pitcher": "이승현",
+        "batter": "오스틴",
+        "heat": 4,
+        "label": "점수차가 벌어진 경기"
       },
       "recap": null,
       "decision": null,
@@ -406,7 +406,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 1,
+        "score": 4,
         "starter": {
           "name": "박준영",
           "era": 4.42,
@@ -439,14 +439,14 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 1,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
-        "b3": true,
-        "pitcher": "전사민",
-        "batter": "문현빈",
-        "heat": 4,
-        "label": "점수차가 벌어진 경기"
+        "b3": false,
+        "pitcher": "김준원",
+        "batter": "한지윤",
+        "heat": 14,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,

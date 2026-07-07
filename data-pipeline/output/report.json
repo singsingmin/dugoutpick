@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-07T12:30:48.557Z",
+  "updatedAt": "2026-07-07T12:40:41.168Z",
   "lastWeek": {
     "range": [
       "20260629",
@@ -32,7 +32,7 @@
         "l": 2,
         "d": 1,
         "rank": 4,
-        "note": "2연패째 — 분위기 잡아야 해 — 그래도 이번주 롯데 만나니까 해볼 만해"
+        "note": "3연패째 — 분위기 잡아야 해 — 그래도 이번주 롯데 만나니까 해볼 만해"
       },
       "OB": {
         "w": 4,
@@ -103,8 +103,8 @@
       {
         "away": "HT",
         "home": "LT",
-        "pred": 40,
-        "reason": "게임차 7.5의 순위 다툼 · 양 팀 에이스 투수전(ERA 3.2·3.2)",
+        "pred": 55,
+        "reason": "게임차 6.5의 순위 다툼",
         "dateStart": "20260707",
         "dateEnd": "20260709"
       }
@@ -150,6 +150,48 @@
           "date": "20260709",
           "away": "SK",
           "home": "OB"
+        }
+      ],
+      "HT": [
+        {
+          "date": "20260707",
+          "away": "HT",
+          "home": "LT",
+          "awayStarter": "김태형",
+          "homeStarter": "로드리게스"
+        },
+        {
+          "date": "20260708",
+          "away": "HT",
+          "home": "LT",
+          "awayStarter": "네일",
+          "homeStarter": "나균안"
+        },
+        {
+          "date": "20260709",
+          "away": "HT",
+          "home": "LT"
+        }
+      ],
+      "LT": [
+        {
+          "date": "20260707",
+          "away": "HT",
+          "home": "LT",
+          "awayStarter": "김태형",
+          "homeStarter": "로드리게스"
+        },
+        {
+          "date": "20260708",
+          "away": "HT",
+          "home": "LT",
+          "awayStarter": "네일",
+          "homeStarter": "나균안"
+        },
+        {
+          "date": "20260709",
+          "away": "HT",
+          "home": "LT"
         }
       ],
       "WO": [
@@ -230,48 +272,6 @@
           "date": "20260709",
           "away": "LG",
           "home": "SS"
-        }
-      ],
-      "HT": [
-        {
-          "date": "20260707",
-          "away": "HT",
-          "home": "LT",
-          "awayStarter": "김태형",
-          "homeStarter": "로드리게스"
-        },
-        {
-          "date": "20260708",
-          "away": "HT",
-          "home": "LT",
-          "awayStarter": "네일",
-          "homeStarter": "나균안"
-        },
-        {
-          "date": "20260709",
-          "away": "HT",
-          "home": "LT"
-        }
-      ],
-      "LT": [
-        {
-          "date": "20260707",
-          "away": "HT",
-          "home": "LT",
-          "awayStarter": "김태형",
-          "homeStarter": "로드리게스"
-        },
-        {
-          "date": "20260708",
-          "away": "HT",
-          "home": "LT",
-          "awayStarter": "네일",
-          "homeStarter": "나균안"
-        },
-        {
-          "date": "20260709",
-          "away": "HT",
-          "home": "LT"
         }
       ],
       "NC": [
