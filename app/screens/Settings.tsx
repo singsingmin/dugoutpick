@@ -1,7 +1,8 @@
 // 설정 화면 — 라커룸 우상단 톱니로 진입. 데이터 갱신 / 적중률 / (디버그) / 앱 정보.
 import { useEffect, useState } from 'react';
-import { View, ScrollView, Image, Modal, Switch, TextInput, Platform, Linking, StyleSheet } from 'react-native';
+import { View, ScrollView, Image, Modal, Switch, TextInput, Pressable, Platform, Linking, StyleSheet } from 'react-native';
 import Constants from 'expo-constants';
+import * as Clipboard from 'expo-clipboard';
 import type { TrackRecord } from '../types';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
@@ -16,6 +17,7 @@ import { fetchMyReferralCode, fetchHasRedeemed, rpcRedeemReferralCode } from '..
 import PixelText from '../components/PixelText';
 import Panel from '../components/Panel';
 import PixelButton from '../components/PixelButton';
+import AppIcon from '../components/AppIcon';
 import ScreenHeader from '../components/ScreenHeader';
 import SectionLabel from '../components/SectionLabel';
 import TrackRecordBadge from '../components/TrackRecordBadge';
@@ -44,6 +46,7 @@ export default function Settings() {
   const [pushError, setPushError] = useState<string | null>(null);
   const [debugMsg, setDebugMsg] = useState<string | null>(null);
   const [referralCode, setReferralCode] = useState<string | null>(null);
+  const [copied, setCopied] = useState(false);
   const [hasRedeemed, setHasRedeemed] = useState<boolean | null>(null);
   const [redeemInput, setRedeemInput] = useState('');
   const [redeemBusy, setRedeemBusy] = useState(false);
@@ -66,6 +69,17 @@ export default function Settings() {
     if (userId) fetchHasRedeemed().then((v) => { if (active) setHasRedeemed(v); }).catch(() => {});
     return () => { active = false; };
   }, [isProtected, userId]);
+
+  const copyReferralCode = async () => {
+    if (!referralCode) return;
+    try {
+      await Clipboard.setStringAsync(referralCode);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    } catch {
+      // 클립보드 실패는 조용히 무시(웹 권한 등) — 코드는 화면에 보이므로 수동 복사 가능
+    }
+  };
 
   const submitRedeem = async () => {
     const code = redeemInput.trim();
@@ -201,11 +215,17 @@ export default function Settings() {
             {isProtected && (
               <>
                 <PixelText variant="body">내 추천코드</PixelText>
-                <PixelText variant="title" color={colors.accent} style={styles.value}>
-                  {referralCode ?? '발급 중...'}
-                </PixelText>
+                {referralCode ? (
+                  <Pressable style={styles.codePill} onPress={() => { void copyReferralCode(); }}>
+                    <PixelText variant="title" color={colors.accent} style={styles.codeText}>{referralCode}</PixelText>
+                    <AppIcon name="clipboard" size={20} />
+                  </Pressable>
+                ) : (
+                  <PixelText variant="title" color={colors.textDim} style={styles.value}>발급 중...</PixelText>
+                )}
+                {copied && <PixelText variant="caption" color={colors.good}>복사됐어요</PixelText>}
                 <PixelText variant="caption" color={colors.textDim}>
-                  친구에게 알려주면, 친구가 첫 예측에 참여했을 때 나도 야구공 10개를 받아요
+                  코드를 눌러 복사한 뒤 친구에게 알려주면, 친구가 첫 예측에 참여했을 때 나도 야구공 10개를 받아요
                 </PixelText>
               </>
             )}
@@ -318,6 +338,12 @@ const styles = StyleSheet.create({
   content: { padding: spacing.md },
   section: { marginBottom: spacing.lg },
   value: { marginTop: spacing.xs },
+  codePill: {
+    marginTop: spacing.xs, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between',
+    borderWidth: 1, borderColor: colors.border, borderRadius: border.radius,
+    backgroundColor: colors.surfaceAlt, paddingHorizontal: spacing.md, paddingVertical: spacing.sm,
+  },
+  codeText: { letterSpacing: 3 },
   notifyRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.md },
   notifyText: { flex: 1 },
   notifyBtn: { marginTop: spacing.sm },
