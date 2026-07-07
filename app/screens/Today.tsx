@@ -274,7 +274,8 @@ function Body({
         {listLiveGames.length > 0 && (
           <View style={styles.section}>
             <View style={styles.heroLabelRow}>
-              <SectionLabel icon="live" label="지금 볼 각" />
+              {/* 히어로가 이미 '지금 볼 각'을 달고 있으면(라이브 다건) 라벨 중복 방지용으로 구분 */}
+              <SectionLabel icon="live" label={heroIsLive ? '그 외 라이브 경기' : '지금 볼 각'} />
               {/* 갱신 시각은 히어로에 이미 있으면 중복 표시 방지 — 없을 때만 여기 표시 */}
               {!heroGame && (
                 <View style={styles.heroMeta}>
