@@ -1,6 +1,7 @@
 // 꿀잼지수 스킨 데이터모델 — styleId × paletteId × colorMode(유니폼) / assetKey × renderType(에셋).
 // 사용자는 완성형 스킨 하나를 선택(UX 동일). 내부만 확장형 구조(고정색/스킨팩/프리미엄 대비).
 import type { UniformPresetId, UniformColorOverride } from './uniformResolver';
+import { findBackground } from './lockerBackgroundConfig';
 
 export type ScoreSkinKind = 'jersey' | 'asset';
 export type ScoreSkinCategory = 'uniform' | 'stadium' | 'special';
@@ -276,6 +277,11 @@ export function getScoreSkinById(id: string | null | undefined): ScoreSkin {
 export function txDisplayLabel(reason: string, relatedSkinId: string | null | undefined, fallback: string): string {
   if (reason === 'skin_purchase' && relatedSkinId && BY_ID.has(relatedSkinId)) {
     return `${getScoreSkinById(relatedSkinId).label} 구매`;
+  }
+  // 배경 구매 원장 라벨은 "lockerbg.xxx 구매"(영문 id) — 한글명으로 치환. id는 라벨 첫 토큰에서 추출.
+  if (reason === 'background_purchase') {
+    const bg = findBackground(fallback.split(' ')[0]);
+    if (bg) return `${bg.label} 구매`;
   }
   return fallback;
 }
