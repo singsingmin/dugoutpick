@@ -1,5 +1,6 @@
 // 라커룸 배경 데이터모델 — Stage 6(docs/stage6-cosmetics-design.md §3-3). 서버 backgrounds 테이블과 수동 동기화.
-// 이미지 에셋 6종 실장 완료(2026-07-07, 941×1672 — stadium-bg.webp와 동일 규격).
+// 이미지 에셋 12종 실장 완료(2026-07-07, 941×1672 — stadium-bg.webp와 동일 규격).
+// 신규 구매형 6종 추가 시 서버 backgrounds 테이블도 함께 시드해야 함(supabase/migrations/0009_locker_backgrounds_pack2.sql).
 export type BackgroundUnlockType = 'currency' | 'monthly_rank' | 'season_rank';
 
 export interface LockerBackground {
@@ -32,6 +33,36 @@ export const LOCKER_BACKGROUNDS: LockerBackground[] = [
     id: 'lockerbg.lineup_boardroom', label: '라인업 보드룸', description: '작전판이 있는 회의실',
     unlockType: 'currency', price: 50, sortOrder: 40,
     backgroundImage: require('../assets/lockerbg-lineup-boardroom.webp'),
+  },
+  {
+    id: 'lockerbg.rainy_dugout', label: '비 오는 더그아웃', description: '우천 취소된 조용한 더그아웃',
+    unlockType: 'currency', price: 45, sortOrder: 50,
+    backgroundImage: require('../assets/lockerbg-rainy-dugout.webp'),
+  },
+  {
+    id: 'lockerbg.sunset_bullpen', label: '석양 불펜', description: '노을 지는 불펜',
+    unlockType: 'currency', price: 50, sortOrder: 60,
+    backgroundImage: require('../assets/lockerbg-sunset-bullpen.webp'),
+  },
+  {
+    id: 'lockerbg.retro_scoreboard', label: '레트로 전광판 룸', description: '전구식 옛날 전광판',
+    unlockType: 'currency', price: 55, sortOrder: 70,
+    backgroundImage: require('../assets/lockerbg-retro-scoreboard.webp'),
+  },
+  {
+    id: 'lockerbg.baseball_cafe', label: '야구 카페 라커', description: '아기자기한 야구 카페',
+    unlockType: 'currency', price: 45, sortOrder: 80,
+    backgroundImage: require('../assets/lockerbg-baseball-cafe.webp'),
+  },
+  {
+    id: 'lockerbg.training_room', label: '트레이닝 룸', description: '웨이트·컨디셔닝 훈련실',
+    unlockType: 'currency', price: 50, sortOrder: 90,
+    backgroundImage: require('../assets/lockerbg-training-room.webp'),
+  },
+  {
+    id: 'lockerbg.stove_league_office', label: '스토브리그 오피스', description: '겨울 스토브리그 사무실',
+    unlockType: 'currency', price: 60, sortOrder: 95,
+    backgroundImage: require('../assets/lockerbg-stove-league-office.webp'),
   },
   {
     id: 'lockerbg.monthly_champion', label: '월간 챔피언 룸', description: '이번 달 포인트 1위 전용',
