@@ -66,3 +66,23 @@ export async function rpcSetNickname(nickname: string): Promise<NicknameResult> 
   if (error) throw error;
   return data as NicknameResult;
 }
+
+export interface LeaderboardRow { nickname: string; hits: number; participations: number }
+export interface PointsLeaderboardRow extends LeaderboardRow { monthlyPoints: number }
+export interface HitRateLeaderboardRow extends LeaderboardRow { hitRate: number }
+
+// 월간 포인트 랭킹(메인). p_month 없으면 이번 달(서버 KST 기준).
+export async function fetchMonthlyLeaderboard(limit = 50): Promise<PointsLeaderboardRow[]> {
+  const { data, error } = await supabase.rpc('get_monthly_leaderboard', { p_limit: limit });
+  if (error) throw error;
+  return ((data ?? []) as { nickname: string; monthly_points: number; hits: number; participations: number }[])
+    .map((r) => ({ nickname: r.nickname, monthlyPoints: r.monthly_points, hits: r.hits, participations: r.participations }));
+}
+
+// 월간 적중률 랭킹(보조, 최소 참여 조건은 서버 기본값 적용).
+export async function fetchMonthlyHitrateLeaderboard(limit = 50): Promise<HitRateLeaderboardRow[]> {
+  const { data, error } = await supabase.rpc('get_monthly_hitrate_leaderboard', { p_limit: limit });
+  if (error) throw error;
+  return ((data ?? []) as { nickname: string; hit_rate: number; hits: number; participations: number }[])
+    .map((r) => ({ nickname: r.nickname, hitRate: r.hit_rate, hits: r.hits, participations: r.participations }));
+}

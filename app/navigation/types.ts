@@ -6,6 +6,7 @@ export type RootStackParamList = {
   GameDetail: { gameId: string };
   SkinSelect: undefined;
   BaseballCenter: undefined;
+  PredictionLeague: undefined;
   Settings: undefined;
 };
 

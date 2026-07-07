@@ -42,6 +42,11 @@ export default function LockerRoom() {
             <SectionLabel label="야구공" />
             <PixelButton label="야구공 센터" onPress={() => navigation.navigate('BaseballCenter')} />
           </View>
+
+          <View style={styles.section}>
+            <SectionLabel label="예측 리그" />
+            <PixelButton label="내 기록 · 랭킹 보기" onPress={() => navigation.navigate('PredictionLeague')} />
+          </View>
         </ScrollView>
       </SafeAreaView>
     </View>
