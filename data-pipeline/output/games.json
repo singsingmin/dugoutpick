@@ -1,7 +1,7 @@
 {
   "date": "20260707",
   "dateText": "2026년 7월 7일",
-  "updatedAt": "2026-07-07T11:20:41.665Z",
+  "updatedAt": "2026-07-07T11:21:44.262Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 47,
@@ -233,8 +233,8 @@
         "inning": 5,
         "half": "B",
         "out": 2,
-        "b1": true,
-        "b2": false,
+        "b1": false,
+        "b2": true,
         "b3": false,
         "pitcher": "톨허스트",
         "batter": "강민호",
@@ -397,8 +397,8 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 1,
-        "b1": true,
+        "out": 3,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "로드리게스",
