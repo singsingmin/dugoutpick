@@ -1,7 +1,7 @@
 -- ============================================================================
 -- 추천코드 v1 (Discord 논의 2026-07-07 확정 정책)
 -- 정책 요약:
---   - 코드 발급 = 보호된 계정(소셜 연동)만. 코드 입력(피추천인) = 익명 포함 누구나, 평생 1회.
+--   - 코드 발급 = 보호된 계정(소셜 연동)만. 코드 입력(피추천인) = 피추천인도 소셜 연동 필수, 평생 1회.
 --   - 피추천인 보상 = 코드 입력 즉시 +10. 추천인 보상 = 피추천인 첫 예측 참여 시 +10.
 --   - 추천인 보상 캡: 하루 2명 / 월 10명. 초과분은 기록만 남기고 지급 안 함(capped).
 --   - 자기 추천 금지. 동일 소셜계정 재사용은 Supabase 자체가 차단.
@@ -62,15 +62,23 @@ revoke all on public.referral_redemptions from anon, authenticated;
 create policy "referral_redemptions_select_own" on public.referral_redemptions
   for select to authenticated using (referrer_user_id = auth.uid() or referee_user_id = auth.uid());
 
--- 코드 입력(피추천인 전용, RPC만). 즉시 +10 야구공.
+-- 코드 입력(피추천인 전용, RPC만). 피추천인도 소셜 연동(보호된 계정)이어야 입력 가능.
+-- 즉시 +10 야구공.
 create or replace function public.redeem_referral_code(p_code text)
 returns json language plpgsql security definer set search_path = public as $$
 declare
   uid uuid := auth.uid();
   referrer uuid;
   normalized text := upper(trim(coalesce(p_code, '')));
+  is_anon boolean;
 begin
   if uid is null then raise exception 'not authenticated'; end if;
+
+  select is_anonymous into is_anon from auth.users where id = uid;
+  if coalesce(is_anon, true) then
+    return json_build_object('success', false, 'reason', 'not_protected');
+  end if;
+
   if length(normalized) = 0 then
     return json_build_object('success', false, 'reason', 'invalid_code');
   end if;

@@ -82,6 +82,7 @@ export default function Settings() {
         setRedeemMsg(
           res.reason === 'self_referral' ? '내 코드는 입력할 수 없어요'
             : res.reason === 'already_redeemed' ? '이미 추천코드를 입력했어요'
+            : res.reason === 'not_protected' ? '구글 계정 연동 후 입력할 수 있어요'
             : '존재하지 않는 코드예요'
         );
       }
@@ -207,9 +208,9 @@ export default function Settings() {
                 </PixelText>
               </>
             )}
-            {hasRedeemed === false && (
-              <View style={isProtected ? styles.redeemBlock : undefined}>
-                <PixelText variant="body" style={isProtected ? undefined : styles.value}>추천코드 입력</PixelText>
+            {hasRedeemed === false && isProtected && (
+              <View style={styles.redeemBlock}>
+                <PixelText variant="body">추천코드 입력</PixelText>
                 <TextInput
                   style={styles.redeemInput}
                   value={redeemInput}
@@ -229,6 +230,11 @@ export default function Settings() {
                   <PixelText variant="caption" color={colors.textDim} style={styles.value}>{redeemMsg}</PixelText>
                 )}
               </View>
+            )}
+            {hasRedeemed === false && !isProtected && (
+              <PixelText variant="body" color={colors.textDim} style={styles.value}>
+                구글 계정 연동 후 친구의 추천코드를 입력할 수 있어요
+              </PixelText>
             )}
             {hasRedeemed === true && (
               <PixelText variant="body" color={colors.textDim}>추천코드를 이미 입력했어요</PixelText>
