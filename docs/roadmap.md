@@ -155,7 +155,8 @@
 
 ## F. 🚀 출시 준비 (Android)
 
-- [ ] **Supabase 마이그레이션 0006~0010 순서대로 실행** — Phase 4/추천코드 기능이 실제로 동작하려면 필요한 유일한 서버측 수동 작업(대시보드 SQL 에디터). 순서: `0006_prediction_league.sql` → `0007_prediction_cosmetics.sql` → `0008_prediction_cosmetics_v2.sql` → `0009_locker_backgrounds_pack2.sql` → `0010_referral_codes.sql`.
+- [ ] **Supabase 마이그레이션 0006~0011 순서대로 실행** — Phase 4/추천코드 기능이 실제로 동작하려면 필요한 유일한 서버측 수동 작업(대시보드 SQL 에디터). 순서: `0006_prediction_league.sql` → `0007_prediction_cosmetics.sql` → `0008_prediction_cosmetics_v2.sql`(⚠️ leaderboard 함수 drop 선행 포함) → `0009_locker_backgrounds_pack2.sql` → `0010_referral_codes.sql` → `0011_audit_fixes.sql`(감사 P2 수정 묶음).
+- [x] **예측 리그 통합 감사** (2026-07-07) — `docs/audit-prediction-league-2026-07.md`. P0 없음. P1 2건(정산 소급 catch-up·월간정산 복구경로) + P2 6건 + 문서 3건 수정 완료. 운영 절차는 `docs/ops-runbook.md`, 추천코드 정책은 `docs/referral-code-policy.md`.
 - [x] **출시 전 테스트 데이터 초기화 스크립트 작성** (2026-07-07) — `supabase/prelaunch-reset-test-data.sql`. 예측 기록·랭킹 통계·추천코드 사용기록·칭호/배경 보유·명예기록·야구공 원장을 초기화(잔액은 최초 지급액 15로 리셋). 계정 자체·스킨 보유·출석 이력은 건드리지 않음(테스터 재작업 방지). **실행 시점: 비공개 테스트 종료 후 ~ 프로덕션 공개 직전, 실유저가 아직 없을 때.** 실행은 사용자가 대시보드에서 직접.
 - [ ] **공개 전 디버그 툴 제거** — [C섹션](#c-🔧-기술-부채-마감-있음) 항목과 동일 건, 출시 체크리스트로 재확인. `EXPO_PUBLIC_DEBUG_TOOLS` preview/web 플래그 제거 + `app_config.debug_enabled=false`.
 - [ ] **Google Play 비공개 테스트 — 테스터 확보** — 랜덤 배정 아님, 개발자가 직접 모집(이메일 리스트 또는 Google 그룹 또는 옵트인 링크). 신규 개발자 계정 기준 최소 인원(기억상 20명) × 최소 기간(14일) 유지 필요 추정 — **정확한 최신 수치는 Play Console 가입 시점에 직접 확인**(정책 변동 가능). 현재 2명(찐팬+초보팬) 테스트 규모보다 크게 늘려야 함.
