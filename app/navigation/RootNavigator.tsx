@@ -10,6 +10,8 @@ import TitleList from '../screens/TitleList';
 import BackgroundShop from '../screens/BackgroundShop';
 import HallOfFame from '../screens/HallOfFame';
 import Settings from '../screens/Settings';
+import AccountDetail from '../screens/AccountDetail';
+import NotificationSettings from '../screens/NotificationSettings';
 import Tabs from './Tabs';
 import { colors, fonts } from '../theme';
 import { useTeamTheme } from '../context/TeamTheme';
@@ -40,6 +42,8 @@ export default function RootNavigator() {
       <Stack.Screen name="BackgroundShop" component={BackgroundShop} options={{ headerShown: false }} />
       <Stack.Screen name="HallOfFame" component={HallOfFame} options={{ headerShown: false }} />
       <Stack.Screen name="Settings" component={Settings} options={{ headerShown: false }} />
+      <Stack.Screen name="AccountDetail" component={AccountDetail} options={{ headerShown: false }} />
+      <Stack.Screen name="NotificationSettings" component={NotificationSettings} options={{ headerShown: false }} />
     </Stack.Navigator>
   );
 }

@@ -11,6 +11,8 @@ export type RootStackParamList = {
   BackgroundShop: undefined;
   HallOfFame: undefined;
   Settings: undefined;
+  AccountDetail: undefined;
+  NotificationSettings: undefined;
 };
 
 export type TabParamList = {
