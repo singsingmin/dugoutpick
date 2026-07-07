@@ -5,6 +5,7 @@ const SUPA_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const START = process.env.SEASON_START;   // YYYY-MM-DD
 const END = process.env.SEASON_END;       // YYYY-MM-DD
 const LABEL = process.env.SEASON_LABEL;   // 예: "2026"
+const DRY_RUN = process.env.SEASON_DRY_RUN === '1';  // 1이면 수상자 카운트만 계산, 지급 안 함(P2-5)
 
 async function main() {
   if (!SUPA_URL || !SUPA_KEY) { console.log('[season-rewards] SUPABASE env 없음 — 스킵'); return; }
@@ -13,10 +14,11 @@ async function main() {
   const res = await fetch(`${SUPA_URL}/rest/v1/rpc/grant_season_rewards`, {
     method: 'POST',
     headers: { apikey: SUPA_KEY, Authorization: `Bearer ${SUPA_KEY}`, 'Content-Type': 'application/json' },
-    body: JSON.stringify({ p_start: START, p_end: END, p_label: LABEL }),
+    body: JSON.stringify({ p_start: START, p_end: END, p_label: LABEL, p_dry_run: DRY_RUN }),
   });
   if (!res.ok) { console.warn('[season-rewards] 실패:', res.status, await res.text()); return; }
-  console.log(`[season-rewards] ${LABEL}(${START}~${END}) 정산 완료:`, JSON.stringify(await res.json()));
+  const tag = DRY_RUN ? '[DRY-RUN 미지급]' : '정산 완료';
+  console.log(`[season-rewards] ${LABEL}(${START}~${END}) ${tag}:`, JSON.stringify(await res.json()));
 }
 
 main().catch((e) => { console.error('[season-rewards] 예외:', e); process.exit(1); });

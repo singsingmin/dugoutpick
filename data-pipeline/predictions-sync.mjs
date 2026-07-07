@@ -48,6 +48,40 @@ export function rewardFor(status) {
   return { reward: 0, points: 0 };                          // void: 참여 취급 안 함
 }
 
+// "YYYYMMDD" → "YYYY-MM-DD"(predictions.date 컬럼 형식). 이미 iso면 그대로.
+export function ymdToIso(ymd) {
+  if (/^\d{4}-\d{2}-\d{2}$/.test(ymd)) return ymd;
+  return `${ymd.slice(0, 4)}-${ymd.slice(4, 6)}-${ymd.slice(6, 8)}`;
+}
+
+// 정산 계획(순수) — 과거 pending까지 소급 정산해 "영구 pending" 버그(P1-1)를 막는다.
+//   ① 그날 dailyHoney 확정 있음 → judgeSelection(hit/miss/void). 취소 감지는 그날 게임상태가 있을 때만
+//      (=오늘자). 과거 실패건은 상태맵이 비어 있어 취소 경기를 miss로 볼 수 있으나, 정산실패+취소선택
+//      동시 발생은 극히 드문 이중결함이라 감수(보상 오지급 방향 아님).
+//   ② dailyHoney 확정 없음 + 그날이 오늘 이전(과거) → void. "전 경기 취소/노게임 = 확정된 명경기 없음"을
+//      소급 무효 처리(2026-07-07 결정: void, 스트릭 유지). settle_prediction의 void가 스트릭 보존.
+//   ③ 오늘자 미확정 → 보류(정산 안 함). 미래 날짜 → 무시.
+// 반환: [{ user_id, date(iso), status, reward, points }]
+export function planSettlements(pendingRows, dhByDate, todayIso, todayGameStatus) {
+  const out = [];
+  for (const row of pendingRows || []) {
+    const d = row.date;                                    // "YYYY-MM-DD"
+    const result = dhByDate[d];
+    let status;
+    if (result) {
+      const statusMap = d === todayIso ? (todayGameStatus || {}) : {};
+      status = judgeSelection(row.selected_game_id, result, statusMap);
+    } else if (d < todayIso) {                             // iso 문자열 사전순 = 날짜순
+      status = 'void';
+    } else {
+      continue;                                            // 오늘자 미확정 또는 미래 → 보류
+    }
+    const { reward, points } = rewardFor(status);
+    out.push({ user_id: row.user_id, date: d, status, reward, points });
+  }
+  return out;
+}
+
 async function upsertWindow(date, games) {
   const lockAt = earliestLockAt(date, games);
   if (!lockAt) { console.log('[predictions] 오늘 경기 없음 — 예측창 upsert 스킵'); return; }
@@ -59,24 +93,29 @@ async function upsertWindow(date, games) {
   else console.log(`[predictions] 예측창 upsert: ${isoDate} lock_at=${lockAt.toISOString()}`);
 }
 
-async function settleToday(date, dhResult, games) {
-  const isoDate = `${date.slice(0, 4)}-${date.slice(4, 6)}-${date.slice(6, 8)}`;
-  const pr = await fetch(rest(`predictions?date=eq.${isoDate}&status=eq.pending&select=user_id,selected_game_id`), { headers: H });
+// 과거 pending 전체를 dailyHoney-history와 대조해 소급 정산(P1-1). todayGames로 오늘자 취소만 감지.
+async function settlePending(todayYmd, dhResults, todayGames) {
+  const todayIso = ymdToIso(todayYmd);
+  const pr = await fetch(rest('predictions?status=eq.pending&select=user_id,date,selected_game_id'), { headers: H });
   if (!pr.ok) { console.warn('[predictions] pending 조회 실패:', pr.status); return; }
   const pending = await pr.json();
-  if (!pending || pending.length === 0) { console.log(`[predictions] ${isoDate} 정산 대상 없음`); return; }
+  if (!pending || pending.length === 0) { console.log('[predictions] 정산 대상 없음'); return; }
 
-  const gameStatusById = Object.fromEntries((games || []).map((g) => [g.gameId, g.status]));
-  for (const row of pending) {
-    const status = judgeSelection(row.selected_game_id, dhResult, gameStatusById);
-    const { reward, points } = rewardFor(status);
+  const dhByDate = Object.fromEntries((dhResults || []).map((r) => [ymdToIso(r.date), r]));
+  const todayGameStatus = Object.fromEntries((todayGames || []).map((g) => [g.gameId, g.status]));
+  const plan = planSettlements(pending, dhByDate, todayIso, todayGameStatus);
+  if (plan.length === 0) { console.log(`[predictions] 정산 보류(pending ${pending.length}건, 확정된 날짜 없음)`); return; }
+
+  let ok = 0;
+  for (const s of plan) {
     const res = await fetch(rpc('settle_prediction'), {
       method: 'POST', headers: H,
-      body: JSON.stringify({ p_user_id: row.user_id, p_date: isoDate, p_status: status, p_reward: reward, p_points: points }),
+      body: JSON.stringify({ p_user_id: s.user_id, p_date: s.date, p_status: s.status, p_reward: s.reward, p_points: s.points }),
     });
-    if (!res.ok) console.warn(`[predictions] 정산 실패(user=${row.user_id}):`, res.status, await res.text());
+    if (!res.ok) console.warn(`[predictions] 정산 실패(user=${s.user_id} date=${s.date}):`, res.status, await res.text());
+    else ok++;
   }
-  console.log(`[predictions] ${isoDate} 정산 완료: ${pending.length}건`);
+  console.log(`[predictions] 정산 완료: ${ok}/${plan.length}건(pending ${pending.length}건 중)`);
 }
 
 async function main() {
@@ -88,16 +127,12 @@ async function main() {
 
   await upsertWindow(gamesData.date, gamesData.games);
 
+  // dailyHoney-history 전체를 넘겨 과거 pending까지 소급 정산(파일 없어도 과거 void 정산은 진행).
   const dhPath = path.join(__dirname, 'output', 'dailyHoney-history.json');
-  if (!fs.existsSync(dhPath)) { console.log('[predictions] dailyHoney-history.json 없음 — 정산 스킵'); return; }
-  const dh = JSON.parse(fs.readFileSync(dhPath, 'utf8'));
-  const last = (dh.results || [])[dh.results.length - 1];
-  // 오늘자가 "방금" 확정된 경우만 정산(그 외엔 today의 games.json으로 취소여부 확인 불가 — 알려진 한계).
-  if (!last || last.date !== gamesData.date) {
-    console.log('[predictions] 오늘자 dailyHoney 미확정 — 정산 스킵');
-    return;
-  }
-  await settleToday(gamesData.date, last, gamesData.games);
+  const dhResults = fs.existsSync(dhPath)
+    ? (JSON.parse(fs.readFileSync(dhPath, 'utf8')).results || [])
+    : [];
+  await settlePending(gamesData.date, dhResults, gamesData.games);
 }
 
 // 스크립트로 직접 실행될 때만 동작 — 테스트가 순수 함수만 import할 때 네트워크 부작용 방지.

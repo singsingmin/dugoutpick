@@ -1,12 +1,17 @@
 name: Prediction League Rewards
 
 # 월간: 매달 1일 03:00 KST(=UTC 18:00 매일 실행 후 스크립트가 1일인지 자체 게이팅).
+#   1일 실행이 누락되면 season_start 없이 month(YYYYMM) 입력해 수동 재정산(P1-2 복구 경로).
 # 시즌: 종료일이 매년 달라 자동화 안 함 — workflow_dispatch로 수동 실행(season_start 입력 시).
+#   season_dry_run=true면 수상자 카운트만 계산(파라미터 확인용, 지급 없음 — P2-5).
 on:
   schedule:
     - cron: '0 18 * * *'
   workflow_dispatch:
     inputs:
+      month:
+        description: '월간 재정산 대상 YYYYMM (1일 실행 누락 시 복구용, 비우면 지난달 자동)'
+        required: false
       season_start:
         description: '시즌 시작일 YYYY-MM-DD (입력하면 시즌 정산으로 실행, 비우면 월간 정산)'
         required: false
@@ -16,6 +21,10 @@ on:
       season_label:
         description: '시즌 라벨 (예: 2026)'
         required: false
+      season_dry_run:
+        description: '시즌 dry-run (true면 수상자 카운트만, 지급 안 함)'
+        required: false
+        default: 'false'
 
 jobs:
   monthly:
@@ -30,6 +39,7 @@ jobs:
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          MONTH: ${{ github.event.inputs.month }}
         run: node data-pipeline/monthly-rewards.mjs
 
   season:
@@ -47,4 +57,5 @@ jobs:
           SEASON_START: ${{ github.event.inputs.season_start }}
           SEASON_END: ${{ github.event.inputs.season_end }}
           SEASON_LABEL: ${{ github.event.inputs.season_label }}
+          SEASON_DRY_RUN: ${{ github.event.inputs.season_dry_run == 'true' && '1' || '0' }}
         run: node data-pipeline/season-rewards.mjs
