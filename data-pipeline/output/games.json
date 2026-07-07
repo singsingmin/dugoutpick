@@ -1,7 +1,7 @@
 {
   "date": "20260707",
   "dateText": "2026년 7월 7일",
-  "updatedAt": "2026-07-07T12:50:43.759Z",
+  "updatedAt": "2026-07-07T13:00:55.232Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -342,14 +342,14 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "원종혁",
-        "batter": "김형준",
-        "heat": 28,
+        "pitcher": "임지민",
+        "batter": "오재원",
+        "heat": 30,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
