@@ -63,7 +63,7 @@ export default function Settings() {
   useEffect(() => {
     let active = true;
     if (isProtected) fetchMyReferralCode().then((c) => { if (active) setReferralCode(c); }).catch(() => {});
-    if (userId) fetchHasRedeemed(userId).then((v) => { if (active) setHasRedeemed(v); }).catch(() => {});
+    if (userId) fetchHasRedeemed().then((v) => { if (active) setHasRedeemed(v); }).catch(() => {});
     return () => { active = false; };
   }, [isProtected, userId]);
 
@@ -83,6 +83,7 @@ export default function Settings() {
           res.reason === 'self_referral' ? '내 코드는 입력할 수 없어요'
             : res.reason === 'already_redeemed' ? '이미 추천코드를 입력했어요'
             : res.reason === 'not_protected' ? '구글 계정 연동 후 입력할 수 있어요'
+            : res.reason === 'too_many_attempts' ? '오늘 시도가 너무 많아요. 내일 다시 시도해 주세요'
             : '존재하지 않는 코드예요'
         );
       }

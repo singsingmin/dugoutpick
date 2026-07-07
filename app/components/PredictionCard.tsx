@@ -107,6 +107,9 @@ export default function PredictionCard({ dateYmd, games, locked }: Props) {
   if (!loaded || !userId || games.length === 0) return null;
 
   const selected = prediction ? games.find((g) => g.gameId === prediction.selectedGameId) : null;
+  // 예측 선택지는 아직 시작 안 한 경기만 — 이미 취소(우천 등) 발표된 경기를 골라 무위험 void로
+  // 연속 적중을 보존하는 어뷰징 방지(서버는 경기 상태를 몰라 클라에서 거른다).
+  const selectableGames = games.filter((g) => g.status === 'SCHEDULED');
 
   return (
     <View style={styles.section}>
@@ -179,13 +182,17 @@ export default function PredictionCard({ dateYmd, games, locked }: Props) {
             <View style={styles.handle} />
             <PixelText variant="title" style={styles.sheetTitle}>오늘 제일 재밌을 경기는?</PixelText>
             <ScrollView>
-              {games.map((g) => (
-                <Pressable key={g.gameId} style={styles.gameOption} disabled={submitting} onPress={() => selectGame(g.gameId)}>
-                  <TeamName code={g.away.code} variant="body" />
-                  <PixelText variant="caption" color={colors.textDim}>vs</PixelText>
-                  <TeamName code={g.home.code} variant="body" />
-                </Pressable>
-              ))}
+              {selectableGames.length === 0 ? (
+                <PixelText variant="body" color={colors.textDim} style={styles.sheetEmpty}>지금 예측할 수 있는 경기가 없어요</PixelText>
+              ) : (
+                selectableGames.map((g) => (
+                  <Pressable key={g.gameId} style={styles.gameOption} disabled={submitting} onPress={() => selectGame(g.gameId)}>
+                    <TeamName code={g.away.code} variant="body" />
+                    <PixelText variant="caption" color={colors.textDim}>vs</PixelText>
+                    <TeamName code={g.home.code} variant="body" />
+                  </Pressable>
+                ))
+              )}
             </ScrollView>
           </View>
         </View>
@@ -237,6 +244,7 @@ const styles = StyleSheet.create({
   },
   handle: { width: 40, height: 4, borderRadius: 2, backgroundColor: colors.border, alignSelf: 'center', marginBottom: spacing.sm },
   sheetTitle: { textAlign: 'center', marginBottom: spacing.sm },
+  sheetEmpty: { textAlign: 'center', paddingVertical: spacing.lg },
   gameOption: {
     flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: spacing.sm,
     paddingVertical: spacing.sm, borderBottomWidth: 1, borderBottomColor: colors.surfaceAlt,

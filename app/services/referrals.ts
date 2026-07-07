@@ -8,14 +8,11 @@ export async function fetchMyReferralCode(): Promise<string | null> {
   return data?.referral_code ?? null;
 }
 
-export async function fetchHasRedeemed(userId: string): Promise<boolean> {
-  const { data, error } = await supabase
-    .from('referral_redemptions')
-    .select('id')
-    .eq('referee_user_id', userId)
-    .maybeSingle();
+// 정의 함수(has_redeemed_referral)로 조회 — referral_redemptions 직접 select는 잠겨 있음(referrer UUID 비노출, 0011).
+export async function fetchHasRedeemed(): Promise<boolean> {
+  const { data, error } = await supabase.rpc('has_redeemed_referral');
   if (error) throw error;
-  return !!data;
+  return data === true;
 }
 
 export interface RedeemResult { success: boolean; reason?: string; reward?: number }
