@@ -65,10 +65,15 @@ export default function Today() {
   }, []);
 
   // '어제의 명경기' — 하루 한 번이면 충분해 폴링 없이 마운트 시 1회만 로드.
+  // away/home 필드 추가 이전 과거 기록(append-only freeze라 소급 안 됨)은 건너뜀.
   useEffect(() => {
     let active = true;
     loadDailyHoney()
-      .then((d) => { if (active) setDailyHoney(d.results[d.results.length - 1] ?? null); })
+      .then((d) => {
+        if (!active) return;
+        const last = [...d.results].reverse().find((r) => r.away && r.home) ?? null;
+        setDailyHoney(last);
+      })
       .catch(() => {});
     return () => { active = false; };
   }, []);
@@ -332,6 +337,7 @@ function Centered({ text }: { text: string }) {
 
 // '어제의 명경기' 티저 카드 — 오늘 콘텐츠가 아직 없는 조용한 시간대 채우기용. 상세화면 연결 없음(과거 경기라 오늘 데이터엔 없음).
 function YesterdayHoneyCard({ honey }: { honey: DailyHoneyResult }) {
+  if (!honey.away || !honey.home) return null; // 필드 추가 이전 과거 기록 방어
   return (
     <View style={styles.section}>
       <SectionLabel icon="fire" label="어제의 명경기" />

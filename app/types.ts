@@ -147,8 +147,8 @@ export interface DailyHoneyResult {
   tiedGameIds?: string[];
   recapScore: number;
   decidingReasonTags: string[];
-  away: DailyHoneyTeamSnapshot;
-  home: DailyHoneyTeamSnapshot;
+  away?: DailyHoneyTeamSnapshot;  // 필드 추가 이전 과거 기록엔 없음(append-only freeze라 소급 안 됨)
+  home?: DailyHoneyTeamSnapshot;
   calculatedAt: string;
 }
 export interface DailyHoneyData {
