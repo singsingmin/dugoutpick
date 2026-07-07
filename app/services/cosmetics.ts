@@ -23,14 +23,15 @@ export async function fetchOwnedBackgrounds(): Promise<OwnedBackground[]> {
   return (data ?? []).map((r) => ({ backgroundId: r.background_id, acquiredVia: r.acquired_via, acquiredAt: r.acquired_at }));
 }
 
-// equipped_title/equipped_background는 null로 보내면 해제.
-export async function equipTitle(userId: string, titleId: string | null): Promise<void> {
-  const { error } = await supabase.from('prediction_stats').update({ equipped_title: titleId }).eq('user_id', userId);
+// equip_title/equip_background RPC 경유(0012) — prediction_stats 행을 서버가 먼저 보장하므로
+// 리그 미참여(행 없음) 유저도 장착이 확실히 저장됨. null이면 해제(기본으로).
+export async function equipTitle(titleId: string | null): Promise<void> {
+  const { error } = await supabase.rpc('equip_title', { p_title_id: titleId });
   if (error) throw error;
 }
 
-export async function equipBackground(userId: string, backgroundId: string | null): Promise<void> {
-  const { error } = await supabase.from('prediction_stats').update({ equipped_background: backgroundId }).eq('user_id', userId);
+export async function equipBackground(backgroundId: string | null): Promise<void> {
+  const { error } = await supabase.rpc('equip_background', { p_background_id: backgroundId });
   if (error) throw error;
 }
 

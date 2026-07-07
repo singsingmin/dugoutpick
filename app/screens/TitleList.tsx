@@ -37,7 +37,7 @@ export default function TitleList() {
     const next = equipped === titleId ? null : titleId;
     setBusyId(titleId);
     try {
-      await equipTitle(userId, next);
+      await equipTitle(next);
       setEquipped(next);
     } catch {
       // 실패 — 조용히 무시(장착은 민감 쓰기 아님, 다음 진입 때 실제 상태로 갱신)
