@@ -1,6 +1,6 @@
 // 설정 화면 — 라커룸 우상단 톱니로 진입. 데이터 갱신 / 적중률 / (디버그) / 앱 정보.
 import { useEffect, useState } from 'react';
-import { View, ScrollView, Image, Modal, Switch, Platform, Linking, StyleSheet } from 'react-native';
+import { View, ScrollView, Image, Modal, Switch, TextInput, Platform, Linking, StyleSheet } from 'react-native';
 import Constants from 'expo-constants';
 import type { TrackRecord } from '../types';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -12,6 +12,7 @@ import { useScoreSkin } from '../context/ScoreSkin';
 import { loadGames } from '../data/load';
 import { getNotifyEnabled, setNotifyEnabled, requestPermission, disableAndCancel } from '../utils/notifications';
 import { registerPushToken, disablePush } from '../services/push';
+import { fetchMyReferralCode, fetchHasRedeemed, rpcRedeemReferralCode } from '../services/referrals';
 import PixelText from '../components/PixelText';
 import Panel from '../components/Panel';
 import PixelButton from '../components/PixelButton';
@@ -32,16 +33,21 @@ const IS_WEB = Platform.OS === 'web';   // 웹은 로컬 알림 미지원
 export default function Settings() {
   const navigation = useNavigation<Nav>();
   const {
-    isProtected, email, authBusy, authError, linkConflict,
+    userId, isProtected, email, authBusy, authError, linkConflict,
     connectGoogle, recoverGoogle, signOut, clearLinkConflict,
   } = useAuth();
-  const { baseballBalance, addBaseballs, resetProgress } = useScoreSkin();
+  const { baseballBalance, addBaseballs, resetProgress, refreshAccount } = useScoreSkin();
   const [updatedAt, setUpdatedAt] = useState<string | null>(null);
   const [trackRecord, setTrackRecord] = useState<TrackRecord | null>(null);
   const [notify, setNotify] = useState(false);
   const [permDenied, setPermDenied] = useState(false);
   const [pushError, setPushError] = useState<string | null>(null);
   const [debugMsg, setDebugMsg] = useState<string | null>(null);
+  const [referralCode, setReferralCode] = useState<string | null>(null);
+  const [hasRedeemed, setHasRedeemed] = useState<boolean | null>(null);
+  const [redeemInput, setRedeemInput] = useState('');
+  const [redeemBusy, setRedeemBusy] = useState(false);
+  const [redeemMsg, setRedeemMsg] = useState<string | null>(null);
 
   useEffect(() => {
     let active = true;
@@ -53,6 +59,38 @@ export default function Settings() {
     getNotifyEnabled().then((v) => { if (active) setNotify(v); });
     return () => { active = false; };
   }, []);
+
+  useEffect(() => {
+    let active = true;
+    if (isProtected) fetchMyReferralCode().then((c) => { if (active) setReferralCode(c); }).catch(() => {});
+    if (userId) fetchHasRedeemed(userId).then((v) => { if (active) setHasRedeemed(v); }).catch(() => {});
+    return () => { active = false; };
+  }, [isProtected, userId]);
+
+  const submitRedeem = async () => {
+    const code = redeemInput.trim();
+    if (!code) return;
+    setRedeemBusy(true);
+    setRedeemMsg(null);
+    try {
+      const res = await rpcRedeemReferralCode(code);
+      if (res.success) {
+        setHasRedeemed(true);
+        setRedeemMsg(`추천코드 적용! 야구공 +${res.reward} 받았어요`);
+        await refreshAccount();
+      } else {
+        setRedeemMsg(
+          res.reason === 'self_referral' ? '내 코드는 입력할 수 없어요'
+            : res.reason === 'already_redeemed' ? '이미 추천코드를 입력했어요'
+            : '존재하지 않는 코드예요'
+        );
+      }
+    } catch {
+      setRedeemMsg('오류가 발생했어요. 다시 시도해 주세요.');
+    } finally {
+      setRedeemBusy(false);
+    }
+  };
 
   const toggleNotify = async () => {
     if (notify) {                         // 끄기
@@ -156,6 +194,49 @@ export default function Settings() {
         </View>
 
         <View style={styles.section}>
+          <SectionLabel label="추천코드" />
+          <Panel>
+            {isProtected && (
+              <>
+                <PixelText variant="body">내 추천코드</PixelText>
+                <PixelText variant="title" color={colors.accent} style={styles.value}>
+                  {referralCode ?? '발급 중...'}
+                </PixelText>
+                <PixelText variant="caption" color={colors.textDim}>
+                  친구에게 알려주면, 친구가 첫 예측에 참여했을 때 나도 야구공 10개를 받아요
+                </PixelText>
+              </>
+            )}
+            {hasRedeemed === false && (
+              <View style={isProtected ? styles.redeemBlock : undefined}>
+                <PixelText variant="body" style={isProtected ? undefined : styles.value}>추천코드 입력</PixelText>
+                <TextInput
+                  style={styles.redeemInput}
+                  value={redeemInput}
+                  onChangeText={(t) => setRedeemInput(t.toUpperCase())}
+                  placeholder="친구의 추천코드"
+                  placeholderTextColor={colors.textDim}
+                  autoCapitalize="characters"
+                  maxLength={6}
+                />
+                <PixelButton
+                  label={redeemBusy ? '처리 중…' : '입력하기'}
+                  onPress={() => { void submitRedeem(); }}
+                  disabled={redeemBusy || redeemInput.trim().length === 0}
+                  style={styles.notifyBtn}
+                />
+                {redeemMsg && (
+                  <PixelText variant="caption" color={colors.textDim} style={styles.value}>{redeemMsg}</PixelText>
+                )}
+              </View>
+            )}
+            {hasRedeemed === true && (
+              <PixelText variant="body" color={colors.textDim}>추천코드를 이미 입력했어요</PixelText>
+            )}
+          </Panel>
+        </View>
+
+        <View style={styles.section}>
           <SectionLabel label="데이터" />
           <Panel>
             <PixelText variant="body">갱신 시각</PixelText>
@@ -233,6 +314,11 @@ const styles = StyleSheet.create({
   notifyRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.md },
   notifyText: { flex: 1 },
   notifyBtn: { marginTop: spacing.sm },
+  redeemBlock: { marginTop: spacing.md, paddingTop: spacing.md, borderTopWidth: 1, borderTopColor: colors.surfaceAlt },
+  redeemInput: {
+    marginTop: spacing.xs, borderWidth: 1, borderColor: colors.border, borderRadius: border.radius,
+    paddingHorizontal: spacing.sm, paddingVertical: spacing.xs, color: colors.text,
+  },
   debugRow: { flexDirection: 'row', gap: spacing.sm, marginTop: spacing.sm },
   debugBtn: { flex: 1 },
   modalOverlay: { flex: 1, backgroundColor: 'rgba(0,0,0,0.5)', alignItems: 'center', justifyContent: 'center', padding: spacing.xl },
