@@ -20,6 +20,8 @@ import AppIcon from '../components/AppIcon';
 import { border, colors, spacing } from '../theme';
 
 const DEFAULT_BG = require('../assets/stadium-bg.webp');
+// 디버그 빌드에선 RPC 원문 에러를 토스트에 노출(진단용). production은 친화 메시지.
+const SHOW_RAW_ERR = __DEV__ || process.env.EXPO_PUBLIC_DEBUG_TOOLS === '1';
 
 const SCREEN_W = Dimensions.get('window').width;
 const GRID_GAP = spacing.sm;
@@ -96,8 +98,8 @@ export default function BackgroundShop() {
       await equipBackground(id);
       setEquipped(id);
       showToast(`${label} 적용됨`);
-    } catch {
-      showToast('적용 중 오류가 났어요. 다시 시도해 주세요.');
+    } catch (e) {
+      showToast(SHOW_RAW_ERR ? `적용 오류: ${(e as Error).message}` : '적용 중 오류가 났어요. 다시 시도해 주세요.');
     } finally {
       setBusy(false);
     }
@@ -125,9 +127,9 @@ export default function BackgroundShop() {
       } else {
         setModal({ kind: 'insufficient', bg });
       }
-    } catch {
+    } catch (e) {
       setModal(null);
-      showToast('구매 처리 중 오류가 났어요. 다시 시도해 주세요.');
+      showToast(SHOW_RAW_ERR ? `구매 오류: ${(e as Error).message}` : '구매 처리 중 오류가 났어요. 다시 시도해 주세요.');
     } finally {
       setBusy(false);
     }
