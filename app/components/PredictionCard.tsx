@@ -216,7 +216,7 @@ export default function PredictionCard({ dateYmd, games, locked }: Props) {
 }
 
 const styles = StyleSheet.create({
-  section: { paddingHorizontal: spacing.md, marginBottom: spacing.lg },
+  section: { paddingHorizontal: spacing.md, paddingTop: spacing.sm, marginBottom: spacing.lg },
   card: { gap: spacing.xs },
   row: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
   changeLink: { marginTop: spacing.xs },

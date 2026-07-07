@@ -15,6 +15,9 @@ import SectionLabel from '../components/SectionLabel';
 import { useTeamTheme } from '../context/TeamTheme';
 import { border, colors, spacing } from '../theme';
 
+// supabase/migrations/0006_prediction_league.sql get_monthly_hitrate_leaderboard의 p_min_participation 기본값과 동일하게 유지.
+const MIN_HITRATE_PARTICIPATION = 5;
+
 function Row({ rank, nickname, mine, right, sub }: { rank: number; nickname: string; mine: boolean; right: string; sub?: string }) {
   return (
     <View style={[styles.row, mine && styles.rowMine]}>
@@ -103,7 +106,7 @@ export default function PredictionLeague() {
           {/* 이번달 적중률 랭킹 */}
           <View style={styles.section}>
             <SectionLabel icon="star" label="이번달 적중률 랭킹" />
-            <PixelText variant="caption" color={colors.textDim} style={styles.hint}>최소 참여 횟수를 채운 사람만 집계돼요</PixelText>
+            <PixelText variant="caption" color={colors.textDim} style={styles.hint}>이번달 {MIN_HITRATE_PARTICIPATION}회 이상 참여한 사람만 집계돼요</PixelText>
             <Panel>
               {hitrate.length === 0 ? (
                 <PixelText variant="body" color={colors.textDim}>아직 조건을 채운 사람이 없어요</PixelText>
