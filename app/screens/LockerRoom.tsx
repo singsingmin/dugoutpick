@@ -57,7 +57,10 @@ export default function LockerRoom() {
 
           <View style={styles.section}>
             <SectionLabel label="꾸미기" />
-            <PixelButton label="꿀잼지수 스킨" onPress={() => navigation.navigate('SkinSelect')} />
+            <View style={styles.buttonRow}>
+              <PixelButton style={styles.buttonHalf} label="꿀잼지수 스킨" onPress={() => navigation.navigate('SkinSelect')} />
+              <PixelButton style={styles.buttonHalf} label="라커룸 배경" onPress={() => navigation.navigate('BackgroundShop')} />
+            </View>
           </View>
 
           <View style={styles.section}>
@@ -68,11 +71,6 @@ export default function LockerRoom() {
           <View style={styles.section}>
             <SectionLabel label="예측 리그" />
             <PixelButton label="내 기록 · 랭킹 보기" onPress={() => navigation.navigate('PredictionLeague')} />
-          </View>
-
-          <View style={styles.section}>
-            <SectionLabel label="라커룸 배경" />
-            <PixelButton label="배경 꾸미기" onPress={() => navigation.navigate('BackgroundShop')} />
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -87,4 +85,6 @@ const styles = StyleSheet.create({
   safe: { flex: 1, backgroundColor: 'transparent' },
   content: { padding: spacing.md },
   section: { marginBottom: spacing.lg },
+  buttonRow: { flexDirection: 'row', gap: spacing.sm },
+  buttonHalf: { flex: 1 },
 });
