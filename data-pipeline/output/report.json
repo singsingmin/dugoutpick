@@ -1,24 +1,24 @@
 {
-  "updatedAt": "2026-07-07T12:40:41.168Z",
+  "updatedAt": "2026-07-07T12:50:43.759Z",
   "lastWeek": {
     "range": [
       "20260629",
       "20260705"
     ],
     "team": {
-      "LG": {
-        "w": 3,
-        "l": 2,
-        "d": 0,
-        "rank": 1,
-        "note": "3승2패, 독주 중 — 따라잡힐 기미 없다 — 이번주 일정이 고비다"
-      },
       "SS": {
         "w": 5,
         "l": 1,
         "d": 0,
+        "rank": 1,
+        "note": "5연승 폭주 기관차 🚂 누가 좀 말려봐"
+      },
+      "LG": {
+        "w": 3,
+        "l": 2,
+        "d": 0,
         "rank": 2,
-        "note": "4연승, 지금이 전성기"
+        "note": "3승2패, 다음주 선두 직접 잡으러 간다"
       },
       "KT": {
         "w": 2,
@@ -87,8 +87,8 @@
       {
         "away": "LG",
         "home": "SS",
-        "pred": 93,
-        "reason": "게임차 1, 막상막하 승부",
+        "pred": 95,
+        "reason": "게임차 없는 동률 초접전",
         "dateStart": "20260707",
         "dateEnd": "20260709"
       },
@@ -150,6 +150,48 @@
           "date": "20260709",
           "away": "SK",
           "home": "OB"
+        }
+      ],
+      "LG": [
+        {
+          "date": "20260707",
+          "away": "LG",
+          "home": "SS",
+          "awayStarter": "톨허스트",
+          "homeStarter": "후라도"
+        },
+        {
+          "date": "20260708",
+          "away": "LG",
+          "home": "SS",
+          "awayStarter": "임찬규",
+          "homeStarter": "오러클린"
+        },
+        {
+          "date": "20260709",
+          "away": "LG",
+          "home": "SS"
+        }
+      ],
+      "SS": [
+        {
+          "date": "20260707",
+          "away": "LG",
+          "home": "SS",
+          "awayStarter": "톨허스트",
+          "homeStarter": "후라도"
+        },
+        {
+          "date": "20260708",
+          "away": "LG",
+          "home": "SS",
+          "awayStarter": "임찬규",
+          "homeStarter": "오러클린"
+        },
+        {
+          "date": "20260709",
+          "away": "LG",
+          "home": "SS"
         }
       ],
       "HT": [
@@ -234,44 +276,6 @@
           "date": "20260709",
           "away": "WO",
           "home": "KT"
-        }
-      ],
-      "LG": [
-        {
-          "date": "20260707",
-          "away": "LG",
-          "home": "SS",
-          "awayStarter": "톨허스트",
-          "homeStarter": "후라도"
-        },
-        {
-          "date": "20260708",
-          "away": "LG",
-          "home": "SS"
-        },
-        {
-          "date": "20260709",
-          "away": "LG",
-          "home": "SS"
-        }
-      ],
-      "SS": [
-        {
-          "date": "20260707",
-          "away": "LG",
-          "home": "SS",
-          "awayStarter": "톨허스트",
-          "homeStarter": "후라도"
-        },
-        {
-          "date": "20260708",
-          "away": "LG",
-          "home": "SS"
-        },
-        {
-          "date": "20260709",
-          "away": "LG",
-          "home": "SS"
         }
       ],
       "NC": [

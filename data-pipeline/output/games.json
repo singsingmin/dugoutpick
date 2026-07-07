@@ -1,7 +1,7 @@
 {
   "date": "20260707",
   "dateText": "2026년 7월 7일",
-  "updatedAt": "2026-07-07T12:40:41.168Z",
+  "updatedAt": "2026-07-07T12:50:43.759Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -84,13 +84,13 @@
       "gameId": "20260707LGSS0",
       "time": "18:30",
       "stadium": "대구",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "KN-T",
       "away": {
         "code": "LG",
         "name": "LG",
-        "rank": 1,
+        "rank": 2,
         "score": 2,
         "starter": {
           "name": "톨허스트",
@@ -102,7 +102,7 @@
       "home": {
         "code": "SS",
         "name": "삼성",
-        "rank": 2,
+        "rank": 1,
         "score": 9,
         "starter": {
           "name": "후라도",
@@ -133,117 +133,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 2,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "이승현",
-        "batter": "오스틴",
-        "heat": 4,
-        "label": "점수차가 벌어진 경기"
+      "live": null,
+      "recap": {
+        "actual": 9,
+        "verdict": "기대 이하",
+        "diff": 7,
+        "total": 11,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "김지찬"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "김현준"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "구자욱"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "최형우"
-          },
-          {
-            "order": 5,
-            "pos": "1루수",
-            "name": "디아즈"
-          },
-          {
-            "order": 6,
-            "pos": "2루수",
-            "name": "류지혁"
-          },
-          {
-            "order": 7,
-            "pos": "포수",
-            "name": "강민호"
-          },
-          {
-            "order": 8,
-            "pos": "3루수",
-            "name": "김영웅"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "심재훈"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "우익수",
-            "name": "홍창기"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "박해민"
-          },
-          {
-            "order": 3,
-            "pos": "1루수",
-            "name": "오스틴"
-          },
-          {
-            "order": 4,
-            "pos": "3루수",
-            "name": "문보경"
-          },
-          {
-            "order": 5,
-            "pos": "지명타자",
-            "name": "문정빈"
-          },
-          {
-            "order": 6,
-            "pos": "좌익수",
-            "name": "문성주"
-          },
-          {
-            "order": 7,
-            "pos": "유격수",
-            "name": "오지환"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "박동원"
-          },
-          {
-            "order": 9,
-            "pos": "2루수",
-            "name": "신민재"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260707HTLT0",
@@ -406,7 +310,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "박준영",
           "era": 4.42,
@@ -437,15 +341,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
-        "b1": true,
+        "inning": 9,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김준원",
-        "batter": "한지윤",
-        "heat": 14,
+        "pitcher": "원종혁",
+        "batter": "김형준",
+        "heat": 28,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
