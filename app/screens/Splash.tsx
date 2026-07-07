@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
-import { ImageBackground, Pressable, StatusBar, StyleSheet } from 'react-native';
+import { useEffect } from 'react';
+import { ImageBackground, StatusBar, StyleSheet, View } from 'react-native';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/types';
 import { getCheerTeam } from '../data/team';
@@ -9,41 +9,30 @@ type Props = NativeStackScreenProps<RootStackParamList, 'Splash'>;
 let _introShownThisSession = false;
 
 export default function Splash({ navigation }: Props) {
-  const [canNavigate, setCanNavigate] = useState(false);
-  const teamRef = useRef<string | null>(null);
-
+  // 자동 진입 — 첫 실행 시 인트로를 0.7초 보여준 뒤 탭 없이 오늘경기(응원팀 없으면 온보딩)로 이동.
+  // 세션 내 재진입(_introShownThisSession)은 지연 없이 즉시 이동.
   useEffect(() => {
+    let cancelled = false;
+    let timer: ReturnType<typeof setTimeout> | null = null;
     getCheerTeam().then((c) => {
-      teamRef.current = c;
-      if (_introShownThisSession) {
-        navigation.replace(c ? 'Tabs' : 'Onboarding');
-      } else {
-        setCanNavigate(true);
-      }
+      if (cancelled) return;
+      const dest = c ? 'Tabs' : 'Onboarding';
+      const delay = _introShownThisSession ? 0 : 700;
+      _introShownThisSession = true;
+      timer = setTimeout(() => { if (!cancelled) navigation.replace(dest); }, delay);
     });
+    return () => { cancelled = true; if (timer) clearTimeout(timer); };
   }, [navigation]);
 
-  const handleTap = () => {
-    _introShownThisSession = true;
-    navigation.replace(teamRef.current ? 'Tabs' : 'Onboarding');
-  };
-
   return (
-    <Pressable
-      testID="splash-container"
-      nativeID="splash-container"
-      style={styles.container}
-      onPress={canNavigate ? handleTap : undefined}
-      accessibilityRole="button"
-      accessibilityLabel="홈으로 이동"
-    >
+    <View testID="splash-container" nativeID="splash-container" style={styles.container}>
       <StatusBar hidden />
       <ImageBackground
         source={require('../assets/splash-intro.webp')}
         style={styles.image}
         resizeMode="cover"
       />
-    </Pressable>
+    </View>
   );
 }
 
