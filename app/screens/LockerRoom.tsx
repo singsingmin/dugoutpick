@@ -30,13 +30,12 @@ export default function LockerRoom() {
     }, [])
   );
 
-  // 실제 배경 이미지 에셋은 아직 없음(설계문서 §11 체크리스트) — 준비되면 backgroundImage 소스로 교체.
   const equipped = findBackground(equippedBackgroundId);
 
   return (
     <View style={styles.root}>
       {equipped ? (
-        <View style={[styles.bgImage, { backgroundColor: equipped.previewColor }]} />
+        <Image source={equipped.backgroundImage} style={styles.bgImage} resizeMode="cover" />
       ) : (
         <Image source={require('../assets/stadium-bg.webp')} style={styles.bgImage} resizeMode="cover" />
       )}

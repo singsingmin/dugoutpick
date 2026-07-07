@@ -1,5 +1,4 @@
 // 라커룸 배경 구매/보유/장착 (Phase 4 Stage 6). 설계: docs/stage6-cosmetics-design.md §6-2.
-// 실제 이미지 에셋은 아직 없어 카드 미리보기는 단색(previewColor) — lockerBackgroundConfig.ts 참고.
 import { useCallback, useState } from 'react';
 import { View, Image, ScrollView, Pressable, Modal, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -107,7 +106,7 @@ export default function BackgroundShop() {
               if (honor && !own) return null; // 명예 배경은 보유 시에만 노출
               return (
                 <Panel key={bg.id} style={[styles.card, isEquipped && { borderColor: accent }]}>
-                  <View style={[styles.swatch, { backgroundColor: bg.previewColor }]} />
+                  <Image source={bg.backgroundImage} style={styles.swatch} resizeMode="cover" />
                   <View style={styles.cardText}>
                     <PixelText variant="body" color={colors.text}>{bg.label}</PixelText>
                     <PixelText variant="caption" color={colors.textDim}>{bg.description}</PixelText>
