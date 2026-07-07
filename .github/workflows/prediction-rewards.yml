@@ -1,0 +1,50 @@
+name: Prediction League Rewards
+
+# 월간: 매달 1일 03:00 KST(=UTC 18:00 매일 실행 후 스크립트가 1일인지 자체 게이팅).
+# 시즌: 종료일이 매년 달라 자동화 안 함 — workflow_dispatch로 수동 실행(season_start 입력 시).
+on:
+  schedule:
+    - cron: '0 18 * * *'
+  workflow_dispatch:
+    inputs:
+      season_start:
+        description: '시즌 시작일 YYYY-MM-DD (입력하면 시즌 정산으로 실행, 비우면 월간 정산)'
+        required: false
+      season_end:
+        description: '시즌 종료일 YYYY-MM-DD'
+        required: false
+      season_label:
+        description: '시즌 라벨 (예: 2026)'
+        required: false
+
+jobs:
+  monthly:
+    if: github.event_name == 'schedule' || github.event.inputs.season_start == ''
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '20'
+      - name: Grant monthly rewards
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: node data-pipeline/monthly-rewards.mjs
+
+  season:
+    if: github.event_name == 'workflow_dispatch' && github.event.inputs.season_start != ''
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '20'
+      - name: Grant season rewards
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          SEASON_START: ${{ github.event.inputs.season_start }}
+          SEASON_END: ${{ github.event.inputs.season_end }}
+          SEASON_LABEL: ${{ github.event.inputs.season_label }}
+        run: node data-pipeline/season-rewards.mjs
