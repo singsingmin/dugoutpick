@@ -17,7 +17,7 @@ import { fetchMyReferralCode, fetchHasRedeemed, rpcRedeemReferralCode } from '..
 import PixelText from '../components/PixelText';
 import Panel from '../components/Panel';
 import PixelButton from '../components/PixelButton';
-import AppIcon from '../components/AppIcon';
+import CopyIcon from '../components/CopyIcon';
 import ScreenHeader from '../components/ScreenHeader';
 import SectionLabel from '../components/SectionLabel';
 import TrackRecordBadge from '../components/TrackRecordBadge';
@@ -218,15 +218,14 @@ export default function Settings() {
                 {referralCode ? (
                   <Pressable style={styles.codePill} onPress={() => { void copyReferralCode(); }}>
                     <PixelText variant="title" color={colors.accent} style={styles.codeText}>{referralCode}</PixelText>
-                    <AppIcon name="clipboard" size={20} />
+                    <CopyIcon size={26} color={colors.accent} bg={colors.surfaceAlt} />
                   </Pressable>
                 ) : (
                   <PixelText variant="title" color={colors.textDim} style={styles.value}>발급 중...</PixelText>
                 )}
                 {copied && <PixelText variant="caption" color={colors.good}>복사됐어요</PixelText>}
-                <PixelText variant="caption" color={colors.textDim}>
-                  코드를 눌러 복사한 뒤 친구에게 알려주면, 친구가 첫 예측에 참여했을 때 나도 야구공 10개를 받아요
-                </PixelText>
+                <PixelText variant="caption" color={colors.textDim} style={styles.value}>코드를 복사해 친구에게 공유해보세요</PixelText>
+                <PixelText variant="caption" color={colors.textDim}>친구가 첫 예측에 참여하면 나도 야구공 10개를 받아요</PixelText>
               </>
             )}
             {hasRedeemed === false && isProtected && (
