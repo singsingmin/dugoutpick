@@ -1,7 +1,7 @@
 {
   "date": "20260707",
   "dateText": "2026년 7월 7일",
-  "updatedAt": "2026-07-07T08:50:43.044Z",
+  "updatedAt": "2026-07-07T09:30:45.272Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 47,
@@ -627,14 +627,14 @@
       "gameId": "20260707NCHH0",
       "time": "18:30",
       "stadium": "대전",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "MS-T",
       "away": {
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "테일러",
           "era": 4.48,
@@ -646,7 +646,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "박준영",
           "era": 4.42,
@@ -673,9 +673,21 @@
           "doom": 0,
           "park": 0.36,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 0,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "박준영",
+        "batter": "김주원",
+        "heat": 31,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
