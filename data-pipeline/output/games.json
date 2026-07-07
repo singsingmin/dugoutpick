@@ -1,11 +1,11 @@
 {
   "date": "20260707",
   "dateText": "2026년 7월 7일",
-  "updatedAt": "2026-07-07T13:00:55.232Z",
+  "updatedAt": "2026-07-07T13:10:45.429Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
-    "hitRate": 16,
+    "hitRate": 18,
     "bonusRate": 50,
     "ready": true
   },
@@ -291,7 +291,7 @@
       "gameId": "20260707NCHH0",
       "time": "18:30",
       "stadium": "대전",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "MS-T",
       "away": {
@@ -310,7 +310,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "박준영",
           "era": 4.42,
@@ -340,117 +340,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 0,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "임지민",
-        "batter": "오재원",
-        "heat": 30,
-        "label": "경기 흐름 체크 중"
+      "live": null,
+      "recap": {
+        "actual": 75,
+        "verdict": "예측 적중",
+        "diff": 3,
+        "total": 15,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "좌익수",
-            "name": "최인호"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "페라자"
-          },
-          {
-            "order": 3,
-            "pos": "중견수",
-            "name": "문현빈"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "강백호"
-          },
-          {
-            "order": 5,
-            "pos": "3루수",
-            "name": "노시환"
-          },
-          {
-            "order": 6,
-            "pos": "포수",
-            "name": "허인서"
-          },
-          {
-            "order": 7,
-            "pos": "1루수",
-            "name": "김태연"
-          },
-          {
-            "order": 8,
-            "pos": "2루수",
-            "name": "이도윤"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "심우준"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "유격수",
-            "name": "김주원"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "최정원"
-          },
-          {
-            "order": 3,
-            "pos": "2루수",
-            "name": "박민우"
-          },
-          {
-            "order": 4,
-            "pos": "1루수",
-            "name": "블레인"
-          },
-          {
-            "order": 5,
-            "pos": "지명타자",
-            "name": "박건우"
-          },
-          {
-            "order": 6,
-            "pos": "3루수",
-            "name": "김휘집"
-          },
-          {
-            "order": 7,
-            "pos": "우익수",
-            "name": "천재환"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "안중열"
-          },
-          {
-            "order": 9,
-            "pos": "좌익수",
-            "name": "고준휘"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     }
   ]
 }

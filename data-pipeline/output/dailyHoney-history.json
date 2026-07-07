@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-07T13:00:55.232Z",
+  "updatedAt": "2026-07-07T13:10:45.429Z",
   "results": [
     {
       "date": "20260705",
@@ -9,6 +9,25 @@
         "2점차 접전"
       ],
       "calculatedAt": "2026-07-05T12:50:34.534Z"
+    },
+    {
+      "date": "20260707",
+      "actualTopGameId": "20260707SKOB0",
+      "recapScore": 79,
+      "decidingReasonTags": [
+        "2점차 접전"
+      ],
+      "away": {
+        "code": "SK",
+        "name": "SSG",
+        "score": 4
+      },
+      "home": {
+        "code": "OB",
+        "name": "두산",
+        "score": 2
+      },
+      "calculatedAt": "2026-07-07T13:10:45.429Z"
     }
   ]
 }
