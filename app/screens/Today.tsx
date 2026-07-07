@@ -232,6 +232,12 @@ function Body({
         rightIcon="calendar"
         onRightPress={onCalendar}
       />
+      {/* 어제의 명경기 — 표시 기준은 그대로, 위치만 맨 위(오늘의 예측 위)로 */}
+      {showYesterdayHoney && dailyHoney && (
+        <View style={styles.heroContent}>
+          <YesterdayHoneyCard honey={dailyHoney} />
+        </View>
+      )}
       <PredictionCard dateYmd={data.date} games={data.games} locked={allDone || liveGames.length > 0} />
       {/* ── 히어로 섹션 ── */}
       {!allDone && heroGame && (
@@ -243,11 +249,6 @@ function Body({
             </View>
           </View>
           <GameCard game={heroGame} variant="hero" onPress={() => open(heroGame!.gameId)} />
-        </View>
-      )}
-      {showYesterdayHoney && dailyHoney && (
-        <View style={styles.heroContent}>
-          <YesterdayHoneyCard honey={dailyHoney} />
         </View>
       )}
       {/* ── 리스트 섹션 ── */}
