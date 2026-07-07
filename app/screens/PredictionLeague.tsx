@@ -72,7 +72,10 @@ export default function PredictionLeague() {
               {!loaded ? (
                 <PixelText variant="caption" color={colors.textDim}>불러오는 중...</PixelText>
               ) : !myNickname ? (
-                <PixelText variant="body" color={colors.textDim}>아직 리그에 참여 안 했어요 — 오늘경기 탭 "오늘의 예측"에서 시작해보세요</PixelText>
+                <View style={styles.emptyBlock}>
+                  <PixelText variant="body" color={colors.textDim}>아직 리그에 참여 안 했어요</PixelText>
+                  <PixelText variant="body" color={colors.textDim}>오늘경기 탭 '오늘의 예측'에서 시작해보세요</PixelText>
+                </View>
               ) : (
                 <>
                   <View style={styles.nameRow}>
@@ -107,12 +110,12 @@ export default function PredictionLeague() {
             </Panel>
           </View>
 
-          {/* 이번달 포인트 랭킹 */}
+          {/* 이번 달 포인트 랭킹 */}
           <View style={styles.section}>
-            <SectionLabel icon="chart" label="이번달 포인트 랭킹" />
+            <SectionLabel icon="chart" label="이번 달 포인트 랭킹" />
             <Panel>
               {points.length === 0 ? (
-                <PixelText variant="body" color={colors.textDim}>이번달 참여 기록이 없어요</PixelText>
+                <PixelText variant="body" color={colors.textDim}>이번 달 참여 기록이 없어요</PixelText>
               ) : (
                 points.map((r, i) => (
                   <Row key={`${r.nickname}-${i}`} rank={i + 1} nickname={r.nickname} isMe={r.isMe}
@@ -122,13 +125,12 @@ export default function PredictionLeague() {
             </Panel>
           </View>
 
-          {/* 이번달 적중률 랭킹 */}
+          {/* 이번 달 적중률 랭킹 */}
           <View style={styles.section}>
-            <SectionLabel icon="star" label="이번달 적중률 랭킹" />
-            <PixelText variant="caption" color={colors.textDim} style={styles.hint}>이번달 {MIN_HITRATE_PARTICIPATION}회 이상 참여한 사람만 집계돼요</PixelText>
+            <SectionLabel icon="star" label="이번 달 적중률 랭킹" />
             <Panel>
               {hitrate.length === 0 ? (
-                <PixelText variant="body" color={colors.textDim}>아직 조건을 채운 사람이 없어요</PixelText>
+                <PixelText variant="body" color={colors.textDim}>이번 달 {MIN_HITRATE_PARTICIPATION}회 이상 참여한 사람만 집계돼요</PixelText>
               ) : (
                 hitrate.map((r, i) => (
                   <Row key={`${r.nickname}-${i}`} rank={i + 1} nickname={r.nickname} isMe={r.isMe}
@@ -154,7 +156,7 @@ const styles = StyleSheet.create({
   safe: { flex: 1, backgroundColor: 'transparent' },
   content: { padding: spacing.md },
   section: { marginBottom: spacing.lg },
-  hint: { marginBottom: spacing.xs },
+  emptyBlock: { gap: 2 },
 
   nameRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
   titleChip: { backgroundColor: colors.accent, borderRadius: 999, paddingHorizontal: spacing.sm, paddingVertical: 2 },
