@@ -1,7 +1,7 @@
 # Stage 6 — 예측 리그 칭호 · 라커룸 배경 설계 (Prediction League Cosmetics)
 
 > **성격:** 구현 전 확정 설계 문서. "간단히 MVP로 만들고 나중에 개선"이 아니라, 정책·DB·API·권한·UI·운영·정산·엣지케이스·테스트 기준을 먼저 전부 정하고 **구현만 단계별로 진행**한다.
-> **상태:** 정책 결정 1차 완료(2026-07-07) → 감사에서 발견한 5개 공백에 대한 결정 2차 완료(2026-07-07, 이 리비전에서 반영). **DB 스키마는 1차 결정분(`0007_prediction_cosmetics.sql`)까지만 구현됨 — 이번 리비전의 신규 결정(동점자 처리·award_history·admin 도구·닉네임 정책)은 아직 SQL 미작성.** UI 전체 미구현.
+> **상태:** 정책 결정 1차 완료(2026-07-07) → 2차 결정(2026-07-07, 동점자/탈퇴기록/admin도구/닉네임/배경적용) → **3차 결정(2026-07-07, 감별왕 타이브레이크·is_me 방식 랭킹 표시·명예의 전당 화면 스코프 확정)으로 모든 결정 완료.** **DB 스키마는 1차 결정분(`0007_prediction_cosmetics.sql`)까지만 구현됨 — 2·3차 결정(동점자 처리·award_history·admin 도구·닉네임 정책·명예의 전당)은 설계만 완료, SQL/화면 구현은 아직.** 다음 단계 = 구현 착수(§11).
 > **관련 문서:** [prediction-league-design.md](prediction-league-design.md)(예측 리그 본체) · [phase3-account-design.md](phase3-account-design.md)(재화/스킨 기반) · [roadmap.md](roadmap.md) E Phase 3-Pre/4.
 > **범위 제외(이번 Stage 6에서 다루지 않음):** 프로필 프레임, 예측 카드 꾸미기, 공유 카드, 친구 프로필 방문.
 
@@ -104,19 +104,32 @@ prediction_stats(
 
 ```sql
 create table public.award_history (
-  id               uuid primary key default gen_random_uuid(),
-  period_type      text not null check (period_type in ('monthly','season')),
-  period_label     text not null,        -- "202608" 또는 시즌 라벨 "2026"
-  category         text not null,        -- champion|top10|detective|legend
-  user_id          uuid references auth.users(id) on delete set null,  -- 안전망(§9 참고, 실제 null화는 트리거가 명시적으로 함)
-  nickname_snapshot text not null,       -- 수상 당시 닉네임(현재 닉네임이 바뀌어도 불변)
-  is_user_deleted  boolean not null default false,
-  granted_at       timestamptz not null default now()
+  id                     uuid primary key default gen_random_uuid(),
+  period_type            text not null check (period_type in ('monthly','season')),
+  period_label           text not null,        -- "202608" 또는 시즌 라벨 "2026"
+  award_type             text not null check (award_type in ('champion','top10','detective','legend')),
+  rank                   int not null,         -- champion/detective/legend=1 고정, top10=1~10(동점 시 10 초과 가능)
+  granted_title_id       text,                 -- 이 수상으로 지급된 칭호(있으면)
+  granted_background_id  text,                 -- 이 수상으로 지급된 배경(챔피언만 해당, 그 외 null)
+  user_id                uuid references auth.users(id) on delete set null,  -- 안전망(§9, 실제 null화는 트리거가 명시적으로 함)
+  display_name_snapshot  text not null,        -- 수상 당시 닉네임(현재 닉네임이 바뀌어도 불변)
+  is_user_deleted        boolean not null default false,
+  awarded_at             timestamptz not null default now()
 );
 alter table public.award_history enable row level security;
+revoke all on public.award_history from anon, authenticated;  -- 원본 테이블은 비노출(user_id 포함이라)
+
+-- 명예의 전당 전용 뷰 — user_id를 아예 컬럼에서 뺀다(RLS는 행 단위라 컬럼을 못 가려서 뷰로 분리).
+create view public.award_history_public as
+  select period_type, period_label, award_type, rank,
+         granted_title_id, granted_background_id,
+         case when is_user_deleted then '탈퇴한 사용자' else display_name_snapshot end as display_name,
+         is_user_deleted, awarded_at
+  from public.award_history;
+grant select on public.award_history_public to anon, authenticated;
 ```
 
-**권한:** 전체 공개 read 허용(명예의 전당 화면용, §6-2b) — 단, **select 컬럼은 `period_label`, `category`, `nickname_snapshot`, `is_user_deleted`, `granted_at`만 노출**. `user_id`는 select 정책에서도 제외하거나(뷰로 감싸서) 애초에 클라가 볼 필요 없는 내부용으로만 취급(§5 참고).
+**권한:** 원본 `award_history` 테이블은 `user_id`를 담고 있어 anon/authenticated에서 완전히 차단한다. 명예의 전당 화면은 **`award_history_public` 뷰**만 조회한다 — 이 뷰는 애초에 `user_id` 컬럼이 없고, "탈퇴한 사용자" 치환도 뷰 안에서 이미 끝나 있어 클라가 `is_user_deleted`를 보고 분기할 필요조차 없다. RLS는 행(row) 단위 필터라 컬럼을 가릴 수 없으므로, "클라가 안 select하기로 약속"이 아니라 **뷰로 컬럼 자체를 원천 차단**하는 쪽을 택함(더 견고함).
 
 **탈퇴 처리 — 명시적 BEFORE DELETE 트리거로 처리(FK의 암묵적 `on delete set null` 타이밍에 의존하지 않음):**
 
@@ -137,7 +150,7 @@ create trigger on_auth_user_deleted
 
 `award_history.user_id`에 `on delete set null` FK를 걸어두는 것은 **안전망**(위 트리거가 실패해도 참조 무결성은 깨지지 않도록)이고, 실제 `is_user_deleted=true` 플래그는 위 트리거가 명시적으로 세팅한다.
 
-**⚠️ 확인 필요:** `award_history` 조회 화면(명예의 전당)이 이번 문서 처음에 언급되진 않았으나, "탈퇴한 사용자로 표시"가 의미를 가지려면 이 기록을 **보여주는 화면이 있어야** 한다. §6-2b에서 신규 화면으로 제안 — 스코프에 포함할지 확인 요청.
+**확정:** `award_history` 조회 화면(명예의 전당)은 Stage 6 스코프에 포함 확정(§6-2b).
 
 ### 3-5. `cosmetic_admin_events` — 관리자 지급/회수 감사 로그 (신규, 미구현)
 
@@ -274,9 +287,30 @@ revoke execute on function public.admin_revoke_background(uuid,text,text,text) f
 
 **호출 방법(관리자 UI 없음):** Supabase 대시보드 SQL 에디터에서 `select admin_grant_title('<uuid>', 'title.xxx', '<사유>', '<내이름>');` 직접 실행. service_role 컨텍스트가 아니라 대시보드 SQL 에디터는 기본적으로 `postgres`(슈퍼유저) 세션으로 실행되므로 REVOKE 대상(anon/authenticated)에 안 걸림 — 정상 호출 가능.
 
-### 4-3. 리더보드 RPC 변경 (닉네임 중복 허용의 파급 — §8-5 참고)
+### 4-3. 리더보드 RPC 변경 — `is_me` 방식 확정(raw user_id 절대 반환 안 함)
 
-`get_monthly_leaderboard`/`get_monthly_hitrate_leaderboard`는 현재 `nickname`으로 그룹핑·표시하는데, **닉네임이 이제 유일하지 않으므로 반환 행에 `user_id`를 추가**해야 클라이언트가 "내 순위 행"을 정확히 식별할 수 있다(§8-5의 프라이버시 판단 참고).
+닉네임이 이제 유일하지 않으므로 "내 행 강조"를 서버가 계산해서 내려준다. `user_id`는 RPC 반환값에 **전혀 포함하지 않는다**(§8-5).
+
+```sql
+create or replace function public.get_monthly_leaderboard(p_month text default null, p_limit int default 50)
+returns table(nickname text, monthly_points int, hits int, participations int, is_me boolean)
+language sql security definer set search_path = public as $$
+  select s.nickname,
+         sum(p.ranking_points)::int as monthly_points,
+         count(*) filter (where p.status = 'hit')::int as hits,
+         count(*) filter (where p.status <> 'void')::int as participations,
+         (p.user_id = auth.uid()) as is_me
+  from public.predictions p
+  join public.prediction_stats s on s.user_id = p.user_id
+  where to_char(p.date, 'YYYYMM') = coalesce(p_month, to_char((now() at time zone 'Asia/Seoul')::date, 'YYYYMM'))
+    and s.nickname is not null
+  group by s.nickname, p.user_id
+  order by monthly_points desc
+  limit greatest(1, least(p_limit, 200));
+$$;
+```
+
+`get_monthly_hitrate_leaderboard`도 동일하게 `is_me` 컬럼 추가. 클라는 `is_me=true`인 행만 강조 스타일 적용 — user_id를 아예 몰라도 된다.
 
 ---
 
@@ -288,7 +322,9 @@ revoke execute on function public.admin_revoke_background(uuid,text,text,text) f
 | `backgrounds` | 전체 차단(클라 비노출) | 전체 차단 |
 | `prediction_stats.equipped_title/equipped_background` | 자기 행만 | 컬럼 GRANT로 authenticated 직접 update |
 | **`prediction_stats.nickname`** | 자기 행만 | **컬럼 GRANT 없음 — `set_nickname` RPC 전용**(★변경) |
-| `award_history` | **전체 공개**(명예의 전당용, `user_id` 컬럼은 뷰/select 컬럼 제한으로 숨김) | 전체 차단 — 트리거·`grant_monthly_rewards`/`grant_season_rewards`만 |
+| `award_history`(원본) | 전체 차단(anon/authenticated 모두 — `user_id` 포함이라) | 전체 차단 — 트리거·`grant_monthly_rewards`/`grant_season_rewards`만 |
+| `award_history_public`(뷰) | **전체 공개**(명예의 전당용, `user_id` 컬럼 자체가 없음) | 뷰는 read-only |
+| `get_monthly_leaderboard`/`get_monthly_hitrate_leaderboard` | authenticated 실행(anon 회수) — 반환값에 `user_id` 없음, `is_me` boolean만 | — |
 | `cosmetic_admin_events` | 전체 차단(anon/authenticated 모두) | 전체 차단(admin RPC 내부에서만 insert) |
 | `admin_grant_*`/`admin_revoke_*` | — | anon·authenticated 실행 불가. **대시보드 SQL 에디터(postgres 세션)로만 호출** |
 | `set_nickname` | authenticated 실행 | anon 회수 |
@@ -305,18 +341,23 @@ revoke execute on function public.admin_revoke_background(uuid,text,text,text) f
 - **PredictionLeague/랭킹 화면엔 배경 미적용** — 리스트 위주 화면이라 가독성 우선.
 - **공개 랭킹엔 닉네임 + 칭호만** 표시(장착 배경은 랭킹에 안 보임 — `prediction-league-design.md` §9의 "장착 배경/프레임 공개 가능" 문구를 이번 결정으로 **축소**함, 문서 상호 참조 업데이트 필요).
 
-### 6-2. 화면별 요구사항 (변경 없음 + 신규 6-2b 추가)
+### 6-2. 화면별 요구사항
 
 | 화면 | 요구사항 |
 |---|---|
-| `PredictionLeague.tsx` | "내 기록"에 장착 칭호 표시 + 칭호 목록 진입점. 리더보드 각 행은 **닉네임 + 칭호만**(유저 식별은 내부적으로 user_id 사용, 화면엔 노출 안 함) |
+| `PredictionLeague.tsx` | "내 기록"에 장착 칭호 표시 + 칭호 목록 진입점 + **"명예의 전당" 버튼 추가**. 리더보드 각 행은 **닉네임 + 칭호만**(`is_me`로 내 행만 강조, user_id 자체를 모름) |
 | 신규: 칭호 목록 화면 | 보유 칭호 전체(고정 업적 + 월간/시즌 이력) + 장착/해제. 최신순 정렬 + 접기 |
 | 신규: 라커룸 배경 구매/보유 화면 | 구매형 4종 + 명예 2종(보유 시만 노출) |
 | `LockerRoom.tsx` | 배경 섹션 추가 + **화면 전체 배경 렌더링 로직**(§6-1) |
 
-### 6-2b. 신규: 명예의 전당 화면 (⚠️ 스코프 확인 요청)
+### 6-2b. 신규: 명예의 전당(HallOfFame) 화면 — Stage 6 스코프 포함 확정
 
-`award_history`가 존재하고 "탈퇴한 사용자로 표시"라는 요구사항이 있으려면, 이 기록을 **누군가 보는 화면**이 있어야 의미가 있다. 이번 Stage 6에 포함할지, 아니면 `award_history`는 지금은 데이터만 쌓아두고 화면은 후속(Phase 5 팬덤/시즌패스 확장)으로 미룰지 확인 필요. **비용 관점 추천: 이번엔 데이터만 쌓고, 화면은 과거 수상자가 몇 명 쌓인 뒤(예: 월간 정산 2~3회 후) 만들어도 늦지 않음.**
+- **진입 위치:** `PredictionLeague.tsx`의 "명예의 전당" 버튼.
+- **탭:** 월간 / 시즌 2개 탭.
+- **데이터 소스:** `award_history_public` 뷰만 조회(원본 테이블 접근 없음).
+- **표시 항목:** `period_label`(예: "2026.08" / "2026 시즌"), `award_type`(예측왕/TOP10/감별왕/꿀잼레전드로 한글 매핑), `rank`, `display_name`(뷰가 이미 탈퇴자 치환 완료), `granted_title_id`/`granted_background_id`(칭호/배경 표시명으로 매핑해 노출), `awarded_at`.
+- **제외(구조적으로 불가능):** user_id, 이메일, 로그인 제공자, 야구공 잔액, 거래내역 — 뷰에 컬럼 자체가 없음.
+- **제외(스코프):** 친구 프로필 방문, 상세 프로필, 댓글, 공유 기능.
 
 ---
 
@@ -377,17 +418,36 @@ with ranked as (
   where to_char(p.date, 'YYYYMM') = month and s.nickname is not null
   group by p.user_id, s.best_streak
 )
--- 챔피언(rnk=1) — 동점이면 전원 챔피언
-select user_id, nickname_snapshot... from ranked where rnk = 1;
+-- 챔피언(rnk=1) — 동점이면 전원 챔피언. grant_title/grant_background + award_history insert를 이 결과로 반복.
+select user_id, nickname from ranked where rnk = 1;
 -- TOP10(rnk<=10) — RANK()라 경계 동점자는 자동으로 10명 초과 포함됨(결정사항 그대로)
-select user_id from ranked where rnk <= 10;
+select user_id, nickname, rnk from ranked where rnk <= 10;
 ```
 
 `RANK()`(not `ROW_NUMBER()`)를 쓰면 동점자는 같은 순위를 받고, 그다음 순위가 동점자 수만큼 건너뛴다 — "TOP10 경계에서 타이브레이크까지 같으면 공동 수상" 요구사항을 정확히 만족한다(예: 9~11위가 완전 동점이면 셋 다 `rnk=9`가 되어 `rnk<=10` 조건에 다 포함됨).
 
-**⚠️ 확인 필요 — 적중률 랭킹(감별왕)의 타이브레이크는 미지정.** 포인트 랭킹과 동일한 원칙을 적용한다면: ① 적중률 desc → ② 적중 수 desc(같은 비율이면 표본이 큰 쪽 우선) → ③ 최고 연속 desc → ④ 공동 수상. **이 순서로 확정해도 되는지 확인 요청** (별도 지시 없으면 이 순서로 진행).
+**적중률 랭킹(감별왕) 타이브레이크 확정:** ① 적중률 desc → ② 적중 수 desc → ③ 최고 연속 desc → ④ 공동 수상. 포인트 랭킹과 동일한 `RANK()` 패턴, `order by` 절만 교체:
 
-**공동 수상 시 지급:** 동점자 전원에게 title_id·background 동일하게 지급(`perform grant_title(...) from (select user_id from ranked where rnk<=N) x` 패턴, 이미 predictions-sync 계열에서 쓰던 1-대-다 PERFORM 패턴 재사용).
+```sql
+with ranked as (
+  select p.user_id,
+    (count(*) filter (where p.status='hit'))::numeric / nullif(count(*) filter (where p.status<>'void'),0) as hit_rate,
+    count(*) filter (where p.status='hit') as hits,
+    s.best_streak,
+    rank() over (order by
+      (count(*) filter (where p.status='hit'))::numeric / nullif(count(*) filter (where p.status<>'void'),0) desc,
+      count(*) filter (where p.status='hit') desc,
+      s.best_streak desc
+    ) as rnk
+  from public.predictions p join public.prediction_stats s on s.user_id=p.user_id
+  where to_char(p.date,'YYYYMM')=month and s.nickname is not null
+  group by p.user_id, s.best_streak
+  having count(*) filter (where p.status<>'void') >= 5   -- 월간 최소참여. 시즌은 30
+)
+select user_id from ranked where rnk = 1;  -- 동점이면 전원 감별왕
+```
+
+**공동 수상 시 지급:** 동점자 전원에게 title_id·background 동일하게 지급(`perform grant_title(...) from (select user_id from ranked where rnk<=N) x` 패턴) + `award_history`에도 동점자 수만큼 각각 행 insert(같은 `rank` 값으로).
 
 ### 8-3. 시즌 보상 — 동점자 규칙 동일 적용(§8-2 참고), 그 외 변경 없음
 
@@ -408,13 +468,13 @@ select user_id from ranked where rnk <= 10;
 | 길이 | 2~10자 |
 | 부적절 닉네임 | 운영자가 `admin` 경로로 직접 변경/숨김(전용 RPC 없음 — 대시보드에서 `update prediction_stats set nickname=... where user_id=...` 직접 실행으로 충분, 사유 로그는 남기지 않음. 필요시 후속으로 `cosmetic_admin_events`에 닉네임 변경도 포함할지 검토) |
 
-### 8-5. 닉네임 중복 허용의 파급 효과 (신규 결정, 확인 요청)
+### 8-5. 닉네임 중복 허용의 파급 효과 — `is_me` 방식으로 확정
 
-닉네임이 유일하지 않으므로:
-- 리더보드 RPC가 **user_id도 함께 반환**해야 클라가 "내 행" 하이라이트·React 리스트 key를 정확히 처리할 수 있다.
-- `prediction-league-design.md` §9는 "공개 금지(절대): ... 내부 user_id"라고 명시했는데, 리더보드 응답에 user_id를 담는 건 이 원칙과 **표면적으로 충돌**한다.
-- **해석/제안:** user_id를 리더보드 API 응답에는 포함하되, **클라이언트 UI에는 절대 표시하지 않고**(내 행 비교·key 용도로만 내부 사용) 오직 화면에 보이는 텍스트는 닉네임/칭호/기록뿐이도록 구현한다. RLS로 다른 유저의 `owned_titles`/`predictions` 등 실 데이터는 이미 차단돼 있어 user_id 자체가 노출돼도 추가로 악용할 경로가 없다(로그인 제공자·잔액·거래내역 등 진짜 민감정보는 여전히 비공개).
-- **확인 요청:** 이 해석(=API 응답엔 포함, 화면엔 비표시)으로 진행해도 되는지, 아니면 user_id 대신 별도의 "표시용 참가자 번호"(예: 리더보드 계산 시점에 매기는 순번, 실제 UUID와 무관)를 만들어 더 엄격히 분리할지.
+닉네임이 유일하지 않아 그룹핑/식별에 파급이 있었다. 확정된 해법:
+- 리더보드 RPC는 **raw user_id를 절대 반환하지 않는다.** 대신 서버가 `p.user_id = auth.uid()`를 비교한 **`is_me` boolean만** 내려준다(§4-3). `prediction-league-design.md` §9의 "user_id 공개 금지" 원칙과 충돌 없이 그대로 지켜진다.
+- 리더보드 RPC 내부의 **집계 group by는 `user_id` 기준**으로 해야 한다(닉네임 기준 group by는 동명이인을 한 행으로 합쳐버리는 버그가 됨 — §4-3 SQL에 반영 완료).
+- React 리스트 key는 서버가 `is_me`와 함께 내려주는 **행 순번(정렬 후 인덱스)**을 쓰면 충분(user_id도, 별도 참가자 번호도 불필요).
+- **후속(스코프 밖):** "추후 공개 프로필이 필요하면 auth user_id가 아니라 별도 `public_profile_id`를 도입한다" — 지금은 프로필 상세/친구 방문 기능 자체가 없어 불필요, Phase 5 확장 시 재검토.
 
 ---
 
@@ -429,7 +489,9 @@ select user_id from ranked where rnk <= 10;
 | event/admin 칭호 실수 지급 | `admin_revoke_title`/`admin_revoke_background`로 회수(장착 중이었다면 자동 해제) + 감사 로그 |
 | 이번달 참여자 20명/50명 미만 | TOP10만 스킵, 챔피언·감별왕은 지급(변경 없음) |
 | 닉네임 이번달 이미 변경함 | `set_nickname`이 `rate_limited` 반환, 클라는 "이번 달엔 닉네임을 이미 바꿨어요" 안내 |
-| 닉네임 중복 | 허용 — 리더보드 정확한 식별은 §8-5 참고 |
+| 닉네임 중복 | 허용 — 리더보드 정확한 식별은 §8-5(`is_me`) 참고 |
+| 감별왕 동점 | §8-2 하단 감별왕 타이브레이크(적중률→적중수→최고연속), 끝까지 같으면 공동 수상 |
+| 명예의 전당에서 동일 인물의 여러 수상 이력 | 시기 종속 title_id(§3-6)라 매달/매시즌 별도 행으로 자연스럽게 누적 — 별도 처리 불필요 |
 
 ---
 
@@ -451,19 +513,27 @@ select user_id from ranked where rnk <= 10;
 - [ ] `admin_revoke_title`로 장착 중인 칭호 회수 → `equipped_title`도 함께 null 처리되는지
 - [ ] 유저 탈퇴(auth.users delete) → 그 유저의 `award_history` 행이 `user_id=null, is_user_deleted=true`로 남는지(삭제되지 않고 보존되는지)
 - [ ] `reason` 없이 admin RPC 호출 → 예외 발생 확인
+- [ ] 리더보드 조회 시 내 계정 행에 `is_me=true`가 정확히 붙는지, 다른 유저 행엔 `false`인지
+- [ ] `award_history_public` 뷰로 명예의 전당 조회 → `user_id` 컬럼이 응답에 아예 없는지(뷰 정의 확인)
+- [ ] 감별왕 적중률 동점(두 유저가 정확히 같은 적중률·적중수·연속) → 월간 정산 시 둘 다 `title.monthly_detective.<월>` 지급되는지
 
 ---
 
-## 11. 구현 체크리스트 (단계별)
+## 11. 구현 체크리스트 (단계별 — 모든 결정 완료, 순서대로 착수)
 
-1. **§8-2·§8-5 확인 요청 2건 회신 대기**(적중률 타이브레이크 순서, user_id 노출 해석) — 이것만 정해지면 SQL 착수 가능
-2. **§6-2b 명예의 전당 화면 스코프 확인**(이번 Stage 6 포함 여부)
-3. 신규 마이그레이션(`0008_prediction_cosmetics_v2.sql`): `award_history`, `cosmetic_admin_events` 테이블 + 트리거 + admin RPC 4종 + `set_nickname` 재작성 + `prediction_stats.nickname` unique 제거·길이 2~10·`nickname_changed_month` 추가 + 컬럼 GRANT에서 nickname 제외 + `grant_monthly_rewards`/`grant_season_rewards` RANK() 기반 재작성
-4. 클라 정적 카탈로그: `lockerBackgroundConfig.ts`, `titleConfig.ts`
-5. 화면 구현: 칭호 목록/장착, 배경 구매/장착, `LockerRoom` 배경 렌더링, `PredictionLeague` 장착 칭호 노출·리더보드 user_id 내부처리
-6. (스코프 확정 시) 명예의 전당 화면
-7. 실제 이미지 에셋 제작(6종)
-8. §10-2 수동 테스트 시나리오 전부 실행
+1. 신규 마이그레이션(`0008_prediction_cosmetics_v2.sql`):
+   - `award_history` + `award_history_public` 뷰 + `BEFORE DELETE ON auth.users` 익명화 트리거
+   - `cosmetic_admin_events` + admin RPC 4종(`admin_grant_title`/`admin_grant_background`/`admin_revoke_title`/`admin_revoke_background`)
+   - `set_nickname` 재작성(월 1회 제한, 2~10자, `nickname_changed_month`)
+   - `prediction_stats.nickname` unique 제거, 컬럼 GRANT에서 nickname 제외
+   - `grant_monthly_rewards`/`grant_season_rewards`를 `RANK()` 기반으로 재작성(챔피언/TOP10/감별왕 전부 동점 처리) + 지급마다 `award_history` insert
+   - `get_monthly_leaderboard`/`get_monthly_hitrate_leaderboard`에 `is_me` 컬럼 추가, group by를 user_id 기준으로 수정
+2. `data-pipeline/test/monthly-rewards.test.mjs` 등 순수 로직 테스트는 변경 없음 — SQL 로직은 §10-2 수동 시나리오로 검증
+3. 클라 정적 카탈로그: `lockerBackgroundConfig.ts`, `titleConfig.ts`
+4. 화면 구현: 칭호 목록/장착, 배경 구매/장착, `LockerRoom` 배경 렌더링(§6-1), `PredictionLeague` 장착 칭호 노출 + 명예의 전당 진입 버튼
+5. 명예의 전당(HallOfFame) 화면(§6-2b) — 월간/시즌 탭
+6. 실제 이미지 에셋 제작(라커룸 배경 6종)
+7. §10-2 수동 테스트 시나리오 전부 실행(Supabase에 0006~0008 적용 후)
 
 ---
 
