@@ -1,4 +1,4 @@
-// 설정 메인 — 라커룸 우상단 톱니로 진입. 프로필 헤더 + 추천코드 + 그룹형 행 목록(드릴다운).
+// 설정 메인 — 라커룸 우상단 톱니로 진입. 내 추천코드 + 그룹형 행 목록(드릴다운).
 // 무거운 내용(소셜 연동·추천코드 입력=내 계정, 알림 토글=알림 설정)은 상세 화면으로 분리.
 import { useEffect, useState } from 'react';
 import { View, ScrollView, Image, Pressable, StyleSheet } from 'react-native';
@@ -11,16 +11,12 @@ import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/types';
 import { useAuth } from '../context/Auth';
 import { useScoreSkin } from '../context/ScoreSkin';
-import { useTeamTheme } from '../context/TeamTheme';
 import { loadGames } from '../data/load';
 import { fetchMyReferralCode } from '../services/referrals';
-import { fetchPredictionStats } from '../services/predictions';
-import { titleDisplay } from '../utils/titleConfig';
 import PixelText from '../components/PixelText';
 import Panel from '../components/Panel';
 import PixelButton from '../components/PixelButton';
 import CopyIcon from '../components/CopyIcon';
-import AppIcon from '../components/AppIcon';
 import ScreenHeader from '../components/ScreenHeader';
 import SectionLabel from '../components/SectionLabel';
 import SettingsRow from '../components/SettingsRow';
@@ -35,23 +31,15 @@ const DEBUG_TOOLS = __DEV__ || process.env.EXPO_PUBLIC_DEBUG_TOOLS === '1';
 export default function Settings() {
   const navigation = useNavigation<Nav>();
   const { isProtected } = useAuth();
-  const { accent } = useTeamTheme();
   const { addBaseballs, resetProgress } = useScoreSkin();
   const [trackRecord, setTrackRecord] = useState<TrackRecord | null>(null);
   const [referralCode, setReferralCode] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
-  const [nickname, setNickname] = useState<string | null>(null);
-  const [equippedTitle, setEquippedTitle] = useState<string | null>(null);
   const [debugMsg, setDebugMsg] = useState<string | null>(null);
 
   useEffect(() => {
     let active = true;
     loadGames().then((d) => { if (active) setTrackRecord(d.trackRecord ?? null); }).catch(() => {});
-    fetchPredictionStats().then((s) => {
-      if (!active) return;
-      setNickname(s?.nickname ?? null);
-      setEquippedTitle(s?.equippedTitle ?? null);
-    }).catch(() => {});
     return () => { active = false; };
   }, []);
 
@@ -73,8 +61,6 @@ export default function Settings() {
   const onDebugReset = async () => { setDebugMsg('초기화 중…'); await resetProgress(); setDebugMsg('초기화 완료 (야구공 15)'); };
   const onDebugGrant = async () => { setDebugMsg('지급 중…'); await addBaseballs(50); setDebugMsg('야구공 +50 지급됨'); };
 
-  const titleLabel = equippedTitle ? titleDisplay(equippedTitle).label : null;
-
   return (
     <View style={styles.root}>
       <Image source={require('../assets/stadium-bg.webp')} style={styles.bgImage} resizeMode="cover" />
@@ -82,19 +68,6 @@ export default function Settings() {
       <SafeAreaView style={styles.safe} edges={['top']}>
         <ScreenHeader title="설정" leftIcon="back" onLeftPress={() => navigation.goBack()} />
         <ScrollView contentContainerStyle={styles.content}>
-          {/* 프로필 헤더 */}
-          <View style={styles.profile}>
-            <View style={[styles.avatar, { backgroundColor: accent }]}>
-              <AppIcon name="baseball" size={44} />
-            </View>
-            <PixelText variant="title" color={colors.text}>{nickname ?? '야구팬'}</PixelText>
-            {titleLabel && (
-              <View style={styles.titleChip}>
-                <PixelText variant="caption" color={colors.onGreen}>{titleLabel}</PixelText>
-              </View>
-            )}
-          </View>
-
           {/* 내 추천코드 */}
           {isProtected && (
             <Panel style={styles.referralCard}>
@@ -116,24 +89,15 @@ export default function Settings() {
           {/* 계정 */}
           <View style={styles.section}>
             <SectionLabel label="계정" />
-            <Panel>
+            <Panel style={styles.rowGroup}>
               <SettingsRow label="내 계정" onPress={() => navigation.navigate('AccountDetail')} last />
-            </Panel>
-          </View>
-
-          {/* 활동 */}
-          <View style={styles.section}>
-            <SectionLabel label="활동" />
-            <Panel>
-              <SettingsRow icon="baseball" label="야구공 내역" onPress={() => navigation.navigate('BaseballCenter')} />
-              <SettingsRow icon="star" label="예측 리그" onPress={() => navigation.navigate('PredictionLeague')} last />
             </Panel>
           </View>
 
           {/* 환경설정 */}
           <View style={styles.section}>
             <SectionLabel label="환경설정" />
-            <Panel>
+            <Panel style={styles.rowGroup}>
               <SettingsRow label="알림 설정" onPress={() => navigation.navigate('NotificationSettings')} last />
             </Panel>
           </View>
@@ -183,14 +147,7 @@ const styles = StyleSheet.create({
   safe: { flex: 1, backgroundColor: 'transparent' },
   content: { padding: spacing.md },
 
-  profile: { alignItems: 'center', gap: spacing.xs, paddingVertical: spacing.md },
-  avatar: {
-    width: 88, height: 88, borderRadius: 44, alignItems: 'center', justifyContent: 'center',
-    borderWidth: border.width, borderColor: colors.border, marginBottom: spacing.xs,
-  },
-  titleChip: { backgroundColor: colors.accent, borderRadius: 999, paddingHorizontal: spacing.sm, paddingVertical: 2 },
-
-  referralCard: { marginBottom: spacing.lg },
+  referralCard: { marginTop: spacing.sm, marginBottom: spacing.lg },
   codePill: {
     marginTop: spacing.xs, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between',
     borderWidth: 1, borderColor: colors.border, borderRadius: border.radius,
@@ -199,6 +156,7 @@ const styles = StyleSheet.create({
   codeText: { letterSpacing: 3 },
 
   section: { marginBottom: spacing.lg },
+  rowGroup: { paddingVertical: 0 },   // 행이 자체 세로 패딩을 가져 박스를 내용에 맞게 밀착
   value: { marginTop: spacing.xs },
   debugRow: { flexDirection: 'row', gap: spacing.sm, marginTop: spacing.sm },
   debugBtn: { flex: 1 },
