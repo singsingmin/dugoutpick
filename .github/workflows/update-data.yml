@@ -42,6 +42,14 @@ jobs:
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: node data-pipeline/push-notify.mjs
 
+      # 예측 리그: 오늘 예측 마감시각 upsert + dailyHoney 확정 시 pending 예측 정산. 실패해도 격리.
+      - name: Sync prediction league
+        continue-on-error: true
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: node data-pipeline/predictions-sync.mjs
+
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
