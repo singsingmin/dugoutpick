@@ -39,7 +39,8 @@ export default function LockerRoom() {
       ) : (
         <Image source={require('../assets/stadium-bg.webp')} style={styles.bgImage} resizeMode="cover" />
       )}
-      <View style={styles.bgOverlay} />
+      {/* 크림 오버레이(흐림)는 기본 배경일 때만 — 커스텀 배경은 아트를 선명하게 보여줌 */}
+      {!equipped && <View style={styles.bgOverlay} />}
       <SafeAreaView style={styles.safe} edges={['top']}>
         <ScreenHeader
           title="라커룸"
