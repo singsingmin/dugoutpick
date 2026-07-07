@@ -3,9 +3,10 @@
 //           → hit/miss/void(정산 후 결과). 판정은 서버(settle_prediction)만, 여기선 표시만.
 import { useCallback, useEffect, useState } from 'react';
 import { View, Pressable, Modal, ScrollView, TextInput, StyleSheet } from 'react-native';
-import type { Game } from '../types';
+import type { Game, DailyHoneyResult } from '../types';
 import { useAuth } from '../context/Auth';
 import { useOnline } from '../hooks/useOnline';
+import { loadDailyHoney } from '../data/load';
 import {
   fetchTodayPrediction, fetchPredictionStats, rpcSubmitPrediction, rpcSetNickname,
   type TodayPrediction, type PredictionStats,
@@ -35,15 +36,24 @@ export default function PredictionCard({ dateYmd, games, locked }: Props) {
   const [nicknameError, setNicknameError] = useState<string | null>(null);
   const [pendingGameId, setPendingGameId] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
+  const [todayHoney, setTodayHoney] = useState<DailyHoneyResult | null>(null);
 
   const dateIso = ymdToIso(dateYmd);
 
   const load = useCallback(() => {
     if (!userId) { setLoaded(true); return; }
     Promise.all([fetchTodayPrediction(dateIso), fetchPredictionStats()])
-      .then(([p, s]) => { setPrediction(p); setStats(s); setLoaded(true); })
+      .then(([p, s]) => {
+        setPrediction(p); setStats(s); setLoaded(true);
+        // 정산 완료 상태일 때만 "오늘의 실제 명경기" 표시용으로 판정 결과를 가져옴.
+        if (p && p.status !== 'pending') {
+          loadDailyHoney()
+            .then((d) => setTodayHoney(d.results.find((r) => r.date === dateYmd && r.away && r.home) ?? null))
+            .catch(() => {});
+        }
+      })
       .catch(() => setLoaded(true));
-  }, [userId, dateIso]);
+  }, [userId, dateIso, dateYmd]);
 
   useEffect(() => { load(); }, [load]);
 
@@ -130,17 +140,32 @@ export default function PredictionCard({ dateYmd, games, locked }: Props) {
               </Pressable>
             )}
           </View>
-        ) : prediction.status === 'void' ? (
-          <PixelText variant="body" color={colors.textDim}>선택한 경기가 취소돼 무효 처리됐어요</PixelText>
-        ) : prediction.status === 'hit' ? (
-          <View>
-            <PixelText variant="body" color={colors.good}>적중! 야구공 +{prediction.rewardBaseballs}</PixelText>
-            {stats && stats.currentStreak > 1 && (
-              <PixelText variant="caption" color={colors.textDim}>{stats.currentStreak}연속 적중중</PixelText>
+        ) : (
+          <View style={styles.resultBlock}>
+            {todayHoney?.away && todayHoney?.home && (
+              <View style={styles.honeyReveal}>
+                <PixelText variant="caption" color={colors.textDim}>오늘의 실제 명경기</PixelText>
+                <View style={styles.row}>
+                  <TeamName code={todayHoney.away.code} variant="body" />
+                  <PixelText variant="caption" color={colors.textDim}>vs</PixelText>
+                  <TeamName code={todayHoney.home.code} variant="body" />
+                </View>
+                <PixelText variant="caption" color={colors.accent}>{todayHoney.decidingReasonTags.join(' · ')}</PixelText>
+              </View>
+            )}
+            {prediction.status === 'void' ? (
+              <PixelText variant="body" color={colors.textDim}>선택한 경기가 취소돼 무효 처리됐어요</PixelText>
+            ) : prediction.status === 'hit' ? (
+              <View>
+                <PixelText variant="body" color={colors.good}>적중! 야구공 +{prediction.rewardBaseballs}</PixelText>
+                {stats && stats.currentStreak > 1 && (
+                  <PixelText variant="caption" color={colors.textDim}>{stats.currentStreak}연속 적중중</PixelText>
+                )}
+              </View>
+            ) : (
+              <PixelText variant="body" color={colors.textDim}>아쉽네요, 다음 기회에</PixelText>
             )}
           </View>
-        ) : (
-          <PixelText variant="body" color={colors.textDim}>아쉽네요, 다음 기회에</PixelText>
         )}
       </Panel>
 
@@ -195,6 +220,8 @@ const styles = StyleSheet.create({
   card: { gap: spacing.xs },
   row: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
   changeLink: { marginTop: spacing.xs },
+  resultBlock: { gap: spacing.sm },
+  honeyReveal: { gap: 2, paddingBottom: spacing.xs, borderBottomWidth: 1, borderBottomColor: colors.surfaceAlt },
 
   sheetContainer: { flex: 1, justifyContent: 'flex-end' },
   backdrop: { ...StyleSheet.absoluteFillObject, backgroundColor: 'rgba(0,0,0,0.5)' },
