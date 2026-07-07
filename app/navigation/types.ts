@@ -7,6 +7,9 @@ export type RootStackParamList = {
   SkinSelect: undefined;
   BaseballCenter: undefined;
   PredictionLeague: undefined;
+  TitleList: undefined;
+  BackgroundShop: undefined;
+  HallOfFame: undefined;
   Settings: undefined;
 };
 

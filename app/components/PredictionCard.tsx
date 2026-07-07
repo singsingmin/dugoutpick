@@ -89,11 +89,13 @@ export default function PredictionCard({ dateYmd, games, locked }: Props) {
     const res = await rpcSetNickname(trimmed).catch(() => null);
     if (!res) { setNicknameError('오류가 발생했어요'); return; }
     if (!res.success) {
-      setNicknameError(res.reason === 'taken' ? '이미 사용중인 닉네임이에요' : '닉네임은 2~16자로 입력해주세요');
+      setNicknameError(
+        res.reason === 'rate_limited' ? '이번 달엔 닉네임을 이미 바꿨어요' : '닉네임은 2~10자로 입력해주세요'
+      );
       return;
     }
     setStats((s) => (s ? { ...s, nickname: res.nickname ?? trimmed }
-      : { nickname: res.nickname ?? trimmed, totalPredictions: 0, totalHits: 0, currentStreak: 0, bestStreak: 0 }));
+      : { nickname: res.nickname ?? trimmed, totalPredictions: 0, totalHits: 0, currentStreak: 0, bestStreak: 0, equippedTitle: null, equippedBackground: null }));
     setNicknameVisible(false);
     if (pendingGameId) {
       const gameId = pendingGameId;
@@ -195,14 +197,14 @@ export default function PredictionCard({ dateYmd, games, locked }: Props) {
           <Pressable style={styles.backdrop} onPress={() => setNicknameVisible(false)} />
           <View style={styles.nicknameBox}>
             <PixelText variant="title" style={styles.sheetTitle}>예측 리그 닉네임</PixelText>
-            <PixelText variant="caption" color={colors.textDim} style={styles.nicknameHint}>랭킹에 공개되는 이름이에요 (2~16자)</PixelText>
+            <PixelText variant="caption" color={colors.textDim} style={styles.nicknameHint}>랭킹에 공개되는 이름이에요 (2~10자, 이후 월 1회 변경 가능)</PixelText>
             <TextInput
               style={styles.input}
               value={nicknameInput}
               onChangeText={setNicknameInput}
               placeholder="닉네임 입력"
               placeholderTextColor={colors.textDim}
-              maxLength={16}
+              maxLength={10}
             />
             {nicknameError && <PixelText variant="caption" color={colors.bad}>{nicknameError}</PixelText>}
             <Pressable style={styles.confirmButton} onPress={submitNickname}>

@@ -6,6 +6,9 @@ import GameDetail from '../screens/GameDetail';
 import SkinSelect from '../screens/SkinSelect';
 import BaseballCenter from '../screens/BaseballCenter';
 import PredictionLeague from '../screens/PredictionLeague';
+import TitleList from '../screens/TitleList';
+import BackgroundShop from '../screens/BackgroundShop';
+import HallOfFame from '../screens/HallOfFame';
 import Settings from '../screens/Settings';
 import Tabs from './Tabs';
 import { colors, fonts } from '../theme';
@@ -33,6 +36,9 @@ export default function RootNavigator() {
       <Stack.Screen name="SkinSelect" component={SkinSelect} options={{ headerShown: false }} />
       <Stack.Screen name="BaseballCenter" component={BaseballCenter} options={{ headerShown: false }} />
       <Stack.Screen name="PredictionLeague" component={PredictionLeague} options={{ headerShown: false }} />
+      <Stack.Screen name="TitleList" component={TitleList} options={{ headerShown: false }} />
+      <Stack.Screen name="BackgroundShop" component={BackgroundShop} options={{ headerShown: false }} />
+      <Stack.Screen name="HallOfFame" component={HallOfFame} options={{ headerShown: false }} />
       <Stack.Screen name="Settings" component={Settings} options={{ headerShown: false }} />
     </Stack.Navigator>
   );

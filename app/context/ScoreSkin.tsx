@@ -30,6 +30,7 @@ interface ScoreSkinCtx {
   canClaimAttendance: boolean;
   cyclePosition: number;            // 현재 7일 주기 내 위치(0~7)
   claimAttendance: () => Promise<ClaimResult>;
+  refreshAccount: () => Promise<void>;  // 이 컨텍스트 밖(예: 배경 구매)에서 잔액 변경 후 강제 재동기화용
 }
 
 const noopCtx: ScoreSkinCtx = {
@@ -48,6 +49,7 @@ const noopCtx: ScoreSkinCtx = {
   canClaimAttendance: false,
   cyclePosition: 0,
   claimAttendance: async () => ({ claimed: false, earned: 0, base: 0, bonus: 0, streak: 0 }),
+  refreshAccount: async () => {},
 };
 
 const ScoreSkinContext = createContext<ScoreSkinCtx>(noopCtx);
@@ -176,6 +178,7 @@ export function ScoreSkinProvider({ children }: { children: ReactNode }) {
         canClaimAttendance,
         cyclePosition: cyclePosition(state.attStreak),
         claimAttendance,
+        refreshAccount: refresh,
       }}
     >
       {children}
