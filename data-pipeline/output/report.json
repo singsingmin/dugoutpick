@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-07T08:40:42.809Z",
+  "updatedAt": "2026-07-07T08:50:43.044Z",
   "lastWeek": {
     "range": [
       "20260629",
@@ -110,44 +110,6 @@
       }
     ],
     "team": {
-      "NC": [
-        {
-          "date": "20260707",
-          "away": "NC",
-          "home": "HH",
-          "awayStarter": "테일러",
-          "homeStarter": "박준영"
-        },
-        {
-          "date": "20260708",
-          "away": "NC",
-          "home": "HH"
-        },
-        {
-          "date": "20260709",
-          "away": "NC",
-          "home": "HH"
-        }
-      ],
-      "HH": [
-        {
-          "date": "20260707",
-          "away": "NC",
-          "home": "HH",
-          "awayStarter": "테일러",
-          "homeStarter": "박준영"
-        },
-        {
-          "date": "20260708",
-          "away": "NC",
-          "home": "HH"
-        },
-        {
-          "date": "20260709",
-          "away": "NC",
-          "home": "HH"
-        }
-      ],
       "SK": [
         {
           "date": "20260707",
@@ -298,6 +260,44 @@
           "date": "20260709",
           "away": "WO",
           "home": "KT"
+        }
+      ],
+      "NC": [
+        {
+          "date": "20260707",
+          "away": "NC",
+          "home": "HH",
+          "awayStarter": "테일러",
+          "homeStarter": "박준영"
+        },
+        {
+          "date": "20260708",
+          "away": "NC",
+          "home": "HH"
+        },
+        {
+          "date": "20260709",
+          "away": "NC",
+          "home": "HH"
+        }
+      ],
+      "HH": [
+        {
+          "date": "20260707",
+          "away": "NC",
+          "home": "HH",
+          "awayStarter": "테일러",
+          "homeStarter": "박준영"
+        },
+        {
+          "date": "20260708",
+          "away": "NC",
+          "home": "HH"
+        },
+        {
+          "date": "20260709",
+          "away": "NC",
+          "home": "HH"
         }
       ]
     }
