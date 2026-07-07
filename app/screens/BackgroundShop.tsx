@@ -63,6 +63,19 @@ export default function BackgroundShop() {
     }
   };
 
+  const equipDefault = async () => {
+    if (!userId || busy || equipped === null) return;
+    setBusy(true);
+    try {
+      await equipBackground(userId, null);
+      setEquipped(null);
+    } catch {
+      // 조용히 무시
+    } finally {
+      setBusy(false);
+    }
+  };
+
   const confirmBuy = async () => {
     if (modal?.kind !== 'confirm') return;
     const bg = modal.bg;
@@ -99,33 +112,47 @@ export default function BackgroundShop() {
           {!loaded ? (
             <PixelText variant="caption" color={colors.textDim}>불러오는 중...</PixelText>
           ) : (
-            LOCKER_BACKGROUNDS.slice().sort((a, b) => a.sortOrder - b.sortOrder).map((bg) => {
-              const own = isOwned(bg.id);
-              const isEquipped = equipped === bg.id;
-              const honor = bg.unlockType !== 'currency';
-              if (honor && !own) return null; // 명예 배경은 보유 시에만 노출
-              return (
-                <Panel key={bg.id} style={[styles.card, isEquipped && { borderColor: accent }]}>
-                  <Image source={bg.backgroundImage} style={styles.swatch} resizeMode="cover" />
-                  <View style={styles.cardText}>
-                    <PixelText variant="body" color={colors.text}>{bg.label}</PixelText>
-                    <PixelText variant="caption" color={colors.textDim}>{bg.description}</PixelText>
-                  </View>
-                  <Pressable style={styles.actionBtn} disabled={busy} onPress={() => handlePress(bg)}>
-                    {own ? (
-                      <PixelText variant="caption" color={isEquipped ? colors.accent : colors.text}>
-                        {isEquipped ? '장착중' : '장착'}
-                      </PixelText>
-                    ) : (
-                      <View style={styles.priceRow}>
-                        <AppIcon name="baseball" size={14} />
-                        <PixelText variant="caption" color={colors.text}>{bg.price}</PixelText>
-                      </View>
-                    )}
-                  </Pressable>
-                </Panel>
-              );
-            })
+            <>
+              <Panel style={[styles.card, equipped === null && { borderColor: accent }]}>
+                <Image source={require('../assets/stadium-bg.webp')} style={styles.swatch} resizeMode="cover" />
+                <View style={styles.cardText}>
+                  <PixelText variant="body" color={colors.text}>기본</PixelText>
+                  <PixelText variant="caption" color={colors.textDim}>야구장 배경(기본값)</PixelText>
+                </View>
+                <Pressable style={styles.actionBtn} disabled={busy} onPress={equipDefault}>
+                  <PixelText variant="caption" color={equipped === null ? colors.accent : colors.text}>
+                    {equipped === null ? '장착중' : '장착'}
+                  </PixelText>
+                </Pressable>
+              </Panel>
+              {LOCKER_BACKGROUNDS.slice().sort((a, b) => a.sortOrder - b.sortOrder).map((bg) => {
+                const own = isOwned(bg.id);
+                const isEquipped = equipped === bg.id;
+                const honor = bg.unlockType !== 'currency';
+                if (honor && !own) return null; // 명예 배경은 보유 시에만 노출
+                return (
+                  <Panel key={bg.id} style={[styles.card, isEquipped && { borderColor: accent }]}>
+                    <Image source={bg.backgroundImage} style={styles.swatch} resizeMode="cover" />
+                    <View style={styles.cardText}>
+                      <PixelText variant="body" color={colors.text}>{bg.label}</PixelText>
+                      <PixelText variant="caption" color={colors.textDim}>{bg.description}</PixelText>
+                    </View>
+                    <Pressable style={styles.actionBtn} disabled={busy} onPress={() => handlePress(bg)}>
+                      {own ? (
+                        <PixelText variant="caption" color={isEquipped ? colors.accent : colors.text}>
+                          {isEquipped ? '장착중' : '장착'}
+                        </PixelText>
+                      ) : (
+                        <View style={styles.priceRow}>
+                          <AppIcon name="baseball" size={14} />
+                          <PixelText variant="caption" color={colors.text}>{bg.price}</PixelText>
+                        </View>
+                      )}
+                    </Pressable>
+                  </Panel>
+                );
+              })}
+            </>
           )}
         </ScrollView>
       </SafeAreaView>
