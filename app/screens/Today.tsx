@@ -328,7 +328,7 @@ function Centered({ text }: { text: string }) {
 function YesterdayHoneyCard({ honey }: { honey: DailyHoneyResult }) {
   if (!honey.away || !honey.home) return null; // 필드 추가 이전 과거 기록 방어
   return (
-    <View style={styles.section}>
+    <View style={styles.honeySection}>
       <SectionLabel icon="fire" label="어제의 명경기" />
       <Panel style={styles.honeyCard}>
         <View style={styles.honeyRow}>
@@ -378,9 +378,10 @@ const styles = StyleSheet.create({
   liveHint: { marginBottom: spacing.sm },
   subLabel: { marginBottom: spacing.xs },
 
-  // '어제의 명경기' 카드
+  // '어제의 명경기' 카드 — 오늘의 예측과 동일하게 왼쪽 정렬, 아래 간격은 좁게(heroContent+예측카드 패딩이 이미 있음)
   emptyHoney: { marginTop: spacing.lg, width: '100%', paddingHorizontal: spacing.md },
+  honeySection: {},
   honeyCard: { gap: spacing.xs },
-  honeyRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around' },
-  honeyReason: { textAlign: 'center' },
+  honeyRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-start', gap: spacing.sm },
+  honeyReason: {},
 });
