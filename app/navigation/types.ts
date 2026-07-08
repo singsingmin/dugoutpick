@@ -7,6 +7,7 @@ export type RootStackParamList = {
   SkinSelect: undefined;
   BaseballCenter: undefined;
   PredictionLeague: undefined;
+  FullLeaderboard: { board: 'points' | 'hitrate' };
   TitleList: undefined;
   BackgroundShop: undefined;
   HallOfFame: undefined;

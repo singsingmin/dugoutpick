@@ -15,26 +15,22 @@ import PixelText from '../components/PixelText';
 import Panel from '../components/Panel';
 import ScreenHeader from '../components/ScreenHeader';
 import SectionLabel from '../components/SectionLabel';
+import LeaderboardTable, { type LbRow } from '../components/LeaderboardTable';
 import { useTeamTheme } from '../context/TeamTheme';
-import { border, colors, spacing } from '../theme';
+import { colors, spacing } from '../theme';
 
 type Nav = NativeStackNavigationProp<RootStackParamList>;
 
 // supabase/migrations/0006_prediction_league.sql get_monthly_hitrate_leaderboard의 p_min_participation 기본값과 동일하게 유지.
 const MIN_HITRATE_PARTICIPATION = 5;
 
-// user_id를 몰라도 서버가 계산해서 내려주는 is_me만으로 내 행을 강조(docs/stage6-cosmetics-design.md §4-3).
-function Row({ rank, nickname, isMe, right, sub }: { rank: number; nickname: string; isMe: boolean; right: string; sub?: string }) {
-  return (
-    <View style={[styles.row, isMe && styles.rowMine]}>
-      <PixelText variant="caption" color={colors.textDim} style={styles.rankCol}>{rank}</PixelText>
-      <View style={styles.nameCol}>
-        <PixelText variant="body" color={isMe ? colors.accent : colors.text} numberOfLines={1}>{nickname}</PixelText>
-        {sub && <PixelText variant="caption" color={colors.textDim}>{sub}</PixelText>}
-      </View>
-      <PixelText variant="body" color={colors.text}>{right}</PixelText>
-    </View>
-  );
+// 메인엔 상위 N명만 표시하고, 내가 그 밖이면 '내 순위'를 표 하단에 고정(방향 B). 전체는 별도 화면(FullLeaderboard).
+const TOP_N = 5;
+
+// 상위 N 밖에 있는 내 행만 반환(고정용). is_me 강조는 LeaderboardTable가 처리.
+function myPinned(rows: LbRow[]): LbRow | null {
+  const me = rows.find((r) => r.isMe);
+  return me && me.rank > TOP_N ? me : null;
 }
 
 export default function PredictionLeague() {
@@ -57,6 +53,15 @@ export default function PredictionLeague() {
 
   const myNickname = stats?.nickname ?? null;
   const equippedTitle = stats?.equippedTitle ? titleDisplay(stats.equippedTitle).label : null;
+
+  const pointsRows: LbRow[] = points.map((r, i) => ({
+    rank: i + 1, nickname: r.nickname, isMe: r.isMe,
+    right: `${r.monthlyPoints}점`, sub: `적중 ${r.hits}/${r.participations}`,
+  }));
+  const hitrateRows: LbRow[] = hitrate.map((r, i) => ({
+    rank: i + 1, nickname: r.nickname, isMe: r.isMe,
+    right: `${r.hitRate}%`, sub: `${r.hits}/${r.participations}`,
+  }));
 
   return (
     <View style={styles.root}>
@@ -110,34 +115,38 @@ export default function PredictionLeague() {
             </Panel>
           </View>
 
-          {/* 이번 달 포인트 랭킹 */}
+          {/* 이번 달 포인트 랭킹 — 상위 N + 내 순위 고정, 전체는 별도 화면 */}
           <View style={styles.section}>
             <SectionLabel icon="chart" label="이번 달 포인트 랭킹" />
-            <Panel>
-              {points.length === 0 ? (
-                <PixelText variant="body" color={colors.textDim}>이번 달 참여 기록이 없어요</PixelText>
-              ) : (
-                points.map((r, i) => (
-                  <Row key={`${r.nickname}-${i}`} rank={i + 1} nickname={r.nickname} isMe={r.isMe}
-                    right={`${r.monthlyPoints}점`} sub={`적중 ${r.hits}/${r.participations}`} />
-                ))
-              )}
-            </Panel>
+            {pointsRows.length === 0 ? (
+              <Panel><PixelText variant="body" color={colors.textDim}>이번 달 참여 기록이 없어요</PixelText></Panel>
+            ) : (
+              <>
+                <LeaderboardTable rows={pointsRows.slice(0, TOP_N)} accent={accent} myRowPinned={myPinned(pointsRows)} />
+                {pointsRows.length > TOP_N && (
+                  <Pressable style={styles.moreLink} onPress={() => navigation.navigate('FullLeaderboard', { board: 'points' })}>
+                    <PixelText variant="caption" color={accent}>전체 랭킹 보기 ›</PixelText>
+                  </Pressable>
+                )}
+              </>
+            )}
           </View>
 
           {/* 이번 달 적중률 랭킹 */}
           <View style={styles.section}>
             <SectionLabel icon="star" label="이번 달 적중률 랭킹" />
-            <Panel>
-              {hitrate.length === 0 ? (
-                <PixelText variant="body" color={colors.textDim}>이번 달 {MIN_HITRATE_PARTICIPATION}회 이상 참여한 사람만 집계돼요</PixelText>
-              ) : (
-                hitrate.map((r, i) => (
-                  <Row key={`${r.nickname}-${i}`} rank={i + 1} nickname={r.nickname} isMe={r.isMe}
-                    right={`${r.hitRate}%`} sub={`${r.hits}/${r.participations}`} />
-                ))
-              )}
-            </Panel>
+            {hitrateRows.length === 0 ? (
+              <Panel><PixelText variant="body" color={colors.textDim}>이번 달 {MIN_HITRATE_PARTICIPATION}회 이상 참여한 사람만 집계돼요</PixelText></Panel>
+            ) : (
+              <>
+                <LeaderboardTable rows={hitrateRows.slice(0, TOP_N)} accent={accent} myRowPinned={myPinned(hitrateRows)} />
+                {hitrateRows.length > TOP_N && (
+                  <Pressable style={styles.moreLink} onPress={() => navigation.navigate('FullLeaderboard', { board: 'hitrate' })}>
+                    <PixelText variant="caption" color={accent}>전체 랭킹 보기 ›</PixelText>
+                  </Pressable>
+                )}
+              </>
+            )}
           </View>
 
           <Pressable style={styles.hallLink} onPress={() => navigation.navigate('HallOfFame')}>
@@ -166,11 +175,5 @@ const styles = StyleSheet.create({
   statRow: { flexDirection: 'row', justifyContent: 'space-between', marginTop: spacing.sm },
   statCell: { alignItems: 'center', gap: 2 },
 
-  row: {
-    flexDirection: 'row', alignItems: 'center', gap: spacing.sm,
-    paddingVertical: spacing.xs, borderBottomWidth: 1, borderBottomColor: colors.surfaceAlt,
-  },
-  rowMine: { backgroundColor: colors.surfaceAlt, borderRadius: border.radius },
-  rankCol: { width: 24, textAlign: 'center' },
-  nameCol: { flex: 1 },
+  moreLink: { alignItems: 'flex-end', paddingTop: spacing.xs },
 });

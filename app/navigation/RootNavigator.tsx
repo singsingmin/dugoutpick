@@ -6,6 +6,7 @@ import GameDetail from '../screens/GameDetail';
 import SkinSelect from '../screens/SkinSelect';
 import BaseballCenter from '../screens/BaseballCenter';
 import PredictionLeague from '../screens/PredictionLeague';
+import FullLeaderboard from '../screens/FullLeaderboard';
 import TitleList from '../screens/TitleList';
 import BackgroundShop from '../screens/BackgroundShop';
 import HallOfFame from '../screens/HallOfFame';
@@ -38,6 +39,7 @@ export default function RootNavigator() {
       <Stack.Screen name="SkinSelect" component={SkinSelect} options={{ headerShown: false }} />
       <Stack.Screen name="BaseballCenter" component={BaseballCenter} options={{ headerShown: false }} />
       <Stack.Screen name="PredictionLeague" component={PredictionLeague} options={{ headerShown: false }} />
+      <Stack.Screen name="FullLeaderboard" component={FullLeaderboard} options={{ headerShown: false }} />
       <Stack.Screen name="TitleList" component={TitleList} options={{ headerShown: false }} />
       <Stack.Screen name="BackgroundShop" component={BackgroundShop} options={{ headerShown: false }} />
       <Stack.Screen name="HallOfFame" component={HallOfFame} options={{ headerShown: false }} />
