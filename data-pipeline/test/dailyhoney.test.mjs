@@ -62,7 +62,7 @@ check('완전 동률 공동1위',
     g('A', 'FINAL', { actual: 75, diff: 3, total: 9, extra: 0, walkoff: 0 }),
     g('B', 'FINAL', { actual: 75, diff: 3, total: 9, extra: 0, walkoff: 0 }),
   ], DATE, AT),
-  { date: DATE, actualTopGameId: null, tiedGameIds: ['A', 'B'], recapScore: 75, decidingReasonTags: ['recapScore 75'], away: AWAY, home: HOME, calculatedAt: AT });
+  { date: DATE, actualTopGameId: null, tiedGameIds: ['A', 'B'], recapScore: 75, decidingReasonTags: ['실제 꿀잼 75'], away: AWAY, home: HOME, calculatedAt: AT });
 
 // 7) mergeDailyHoney: append + freeze + null no-op
 const base = [{ date: '20260704', actualTopGameId: 'X', recapScore: 90 }];

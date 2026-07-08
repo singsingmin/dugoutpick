@@ -337,7 +337,8 @@ function YesterdayHoneyCard({ honey }: { honey: DailyHoneyResult }) {
           <TeamName code={honey.home.code} variant="body" />
         </View>
         <PixelText variant="caption" color={colors.accent} style={styles.honeyReason}>
-          {honey.decidingReasonTags.join(' · ')}
+          {/* 과거 파이프라인이 남긴 영어 폴백 태그(recapScore N)를 '실제 꿀잼 N'으로 표시 */}
+          {honey.decidingReasonTags.map((t) => t.replace(/^recapScore\s+/, '실제 꿀잼 ')).join(' · ')}
         </PixelText>
       </Panel>
     </View>

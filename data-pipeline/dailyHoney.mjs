@@ -33,7 +33,8 @@ export function reasonTags(g) {
   if (d <= 1) tags.push('1점차 접전');
   else if (d <= 2) tags.push('2점차 접전');
   if ((r.total ?? 0) >= 14) tags.push('난타전');
-  if (tags.length === 0) tags.push(`recapScore ${r.actual ?? '-'}`);
+  // 특별 태그가 없으면 경기 후 실제 꿀잼 점수(recap.actual)를 폴백으로.
+  if (tags.length === 0) tags.push(`실제 꿀잼 ${r.actual ?? '-'}`);
   return tags;
 }
 
