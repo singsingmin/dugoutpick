@@ -1,7 +1,7 @@
 {
   "date": "20260708",
   "dateText": "2026년 7월 8일",
-  "updatedAt": "2026-07-08T09:50:41.557Z",
+  "updatedAt": "2026-07-08T10:00:54.735Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 0,
+        "score": 3,
         "starter": {
           "name": "곽빈",
           "era": 2.7,
@@ -67,13 +67,13 @@
       "live": {
         "inning": 2,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "전영준",
-        "batter": "양의지",
-        "heat": 35,
+        "pitcher": "박시후",
+        "batter": "김민석",
+        "heat": 29,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "오러클린",
-        "batter": "송찬의",
-        "heat": 27,
+        "pitcher": "임찬규",
+        "batter": "류지혁",
+        "heat": 29,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "B",
-        "out": 2,
+        "out": 0,
         "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "네일",
-        "batter": "박찬형",
-        "heat": 31,
+        "batter": "한태양",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 0,
+        "inning": 2,
+        "half": "T",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "배동현",
-        "batter": "최원준",
-        "heat": 31,
+        "pitcher": "로건",
+        "batter": "여동욱",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
