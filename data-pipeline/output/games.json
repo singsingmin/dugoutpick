@@ -1,7 +1,7 @@
 {
   "date": "20260708",
   "dateText": "2026년 7월 8일",
-  "updatedAt": "2026-07-08T09:43:34.802Z",
+  "updatedAt": "2026-07-08T09:50:41.557Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "전영준",
           "era": 6.75,
@@ -66,13 +66,13 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "곽빈",
-        "batter": "김재환",
+        "pitcher": "전영준",
+        "batter": "양의지",
         "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
@@ -199,7 +199,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 1,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "오러클린",
           "era": 4.52,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 1,
+        "inning": 2,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "임찬규",
-        "batter": "김성윤",
-        "heat": 33,
+        "pitcher": "오러클린",
+        "batter": "송찬의",
+        "heat": 27,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -364,7 +364,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "나균안",
           "era": 3.95,
@@ -397,13 +397,13 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "네일",
-        "batter": "황성빈",
-        "heat": 33,
+        "batter": "박찬형",
+        "heat": 31,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -517,7 +517,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "배동현",
           "era": 5.37,
@@ -561,13 +561,13 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
-        "out": 1,
-        "b1": true,
-        "b2": true,
-        "b3": true,
-        "pitcher": "로건",
-        "batter": "박찬혁",
+        "half": "B",
+        "out": 0,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "배동현",
+        "batter": "최원준",
         "heat": 31,
         "label": "초반 팽팽한 흐름"
       },
