@@ -1,7 +1,7 @@
 {
   "date": "20260708",
   "dateText": "2026년 7월 8일",
-  "updatedAt": "2026-07-08T11:10:45.562Z",
+  "updatedAt": "2026-07-08T11:20:41.108Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "곽빈",
           "era": 2.7,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
+        "half": "B",
         "out": 1,
-        "b1": false,
+        "b1": true,
         "b2": false,
-        "b3": false,
-        "pitcher": "곽빈",
-        "batter": "정준재",
-        "heat": 21,
+        "b3": true,
+        "pitcher": "서진용",
+        "batter": "양의지",
+        "heat": 12,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
+        "half": "B",
         "out": 2,
         "b1": true,
         "b2": true,
         "b3": false,
-        "pitcher": "백정현",
-        "batter": "오지환",
-        "heat": 29,
+        "pitcher": "임찬규",
+        "batter": "김성윤",
+        "heat": 31,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -395,14 +395,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
+        "inning": 6,
         "half": "T",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "나균안",
-        "batter": "김규성",
+        "batter": "박재현",
         "heat": 3,
         "label": "점수차가 벌어진 경기"
       },
@@ -529,7 +529,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 3,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "로건",
           "era": 3,
@@ -560,14 +560,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 1,
+        "inning": 5,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "배동현",
-        "batter": "최원준",
+        "pitcher": "손동현",
+        "batter": "히우라",
         "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
