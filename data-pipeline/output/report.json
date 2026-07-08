@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-08T13:20:45.293Z",
+  "updatedAt": "2026-07-08T15:57:46.703Z",
   "lastWeek": {
     "range": [
       "20260629",
@@ -303,13 +303,6 @@
           "homeStarter": "박준영"
         },
         {
-          "date": "20260708",
-          "away": "NC",
-          "home": "HH",
-          "awayStarter": "토다",
-          "homeStarter": "왕옌청"
-        },
-        {
           "date": "20260709",
           "away": "NC",
           "home": "HH",
@@ -324,13 +317,6 @@
           "home": "HH",
           "awayStarter": "테일러",
           "homeStarter": "박준영"
-        },
-        {
-          "date": "20260708",
-          "away": "NC",
-          "home": "HH",
-          "awayStarter": "토다",
-          "homeStarter": "왕옌청"
         },
         {
           "date": "20260709",
