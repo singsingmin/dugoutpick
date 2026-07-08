@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-08T13:10:48.457Z",
+  "updatedAt": "2026-07-08T13:20:45.293Z",
   "lastWeek": {
     "range": [
       "20260629",
@@ -312,7 +312,9 @@
         {
           "date": "20260709",
           "away": "NC",
-          "home": "HH"
+          "home": "HH",
+          "awayStarter": "구창모",
+          "homeStarter": "화이트"
         }
       ],
       "HH": [
@@ -333,7 +335,9 @@
         {
           "date": "20260709",
           "away": "NC",
-          "home": "HH"
+          "home": "HH",
+          "awayStarter": "구창모",
+          "homeStarter": "화이트"
         }
       ]
     }
