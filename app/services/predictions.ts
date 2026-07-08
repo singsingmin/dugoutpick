@@ -13,6 +13,7 @@ export interface TodayPrediction {
 
 export interface PredictionStats {
   nickname: string | null;
+  nicknameChangedMonth: string | null;   // 'YYYYMM'(KST). 최초 설정은 null, 실제 변경 시에만 기록 → 월 1회 제한 판정용.
   totalPredictions: number;
   totalHits: number;
   currentStreak: number;
@@ -42,12 +43,13 @@ export async function fetchTodayPrediction(dateIso: string): Promise<TodayPredic
 export async function fetchPredictionStats(): Promise<PredictionStats | null> {
   const { data, error } = await supabase
     .from('prediction_stats')
-    .select('nickname, total_predictions, total_hits, current_streak, best_streak, equipped_title, equipped_background')
+    .select('nickname, nickname_changed_month, total_predictions, total_hits, current_streak, best_streak, equipped_title, equipped_background')
     .maybeSingle();
   if (error) throw error;
   if (!data) return null;
   return {
     nickname: data.nickname,
+    nicknameChangedMonth: data.nickname_changed_month ?? null,
     totalPredictions: data.total_predictions,
     totalHits: data.total_hits,
     currentStreak: data.current_streak,
