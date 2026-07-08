@@ -13,7 +13,7 @@ import {
   fetchOwnedBackgrounds, equipBackground, rpcPurchaseBackground, type OwnedBackground,
 } from '../services/cosmetics';
 import { fetchPredictionStats } from '../services/predictions';
-import { LOCKER_BACKGROUNDS, type LockerBackground } from '../utils/lockerBackgroundConfig';
+import { LOCKER_BACKGROUNDS, backgroundInstanceLabel, findBackground, type LockerBackground } from '../utils/lockerBackgroundConfig';
 import PixelText from '../components/PixelText';
 import ScreenHeader from '../components/ScreenHeader';
 import AppIcon from '../components/AppIcon';
@@ -33,9 +33,22 @@ const CREAM = 'rgba(250,245,235,0.92)';
 const CREAM_SELECTED = 'rgba(255,252,244,0.97)';
 const CREAM_BORDER = 'rgba(150,120,80,0.32)';
 
-// 표시 셀: 기본(default) + 배경들. id=null이 기본.
-type Cell = { id: string | null; label: string; image: number; price?: number; owned: boolean; honor: boolean };
-type ModalState = { kind: 'confirm' | 'done' | 'insufficient'; bg: LockerBackground } | null;
+// 표시 셀: 기본(default) + 구매형 카탈로그 + 보유 명예 인스턴스(period_label별).
+type Cell = {
+  key: string;
+  isDefault: boolean;
+  ownedId: number | null;      // 장착 대상 인스턴스 id (기본=null, 미보유 구매형=null)
+  backgroundId: string | null; // 이미지/구매 식별
+  label: string;
+  image: number;
+  price?: number;
+  owned: boolean;
+  honor: boolean;
+};
+type ModalState =
+  | { kind: 'confirm' | 'insufficient'; bg: LockerBackground }
+  | { kind: 'done'; bg: LockerBackground; ownedId: number | null }
+  | null;
 
 function BaseballAmount({ n, size = 16, color = colors.text }: { n: number; size?: number; color?: string }) {
   return (
@@ -53,7 +66,7 @@ export default function BackgroundShop() {
   const { baseballBalance, refreshAccount } = useScoreSkin();
   const online = useOnline();
   const [owned, setOwned] = useState<OwnedBackground[]>([]);
-  const [equipped, setEquipped] = useState<string | null>(null);
+  const [equipped, setEquipped] = useState<number | null>(null);   // 장착된 소유 인스턴스 id
   const [loaded, setLoaded] = useState(false);
   const [modal, setModal] = useState<ModalState>(null);
   const [busy, setBusy] = useState(false);
@@ -64,12 +77,13 @@ export default function BackgroundShop() {
 
   const load = useCallback(() => {
     Promise.all([fetchOwnedBackgrounds(), fetchPredictionStats()])
-      .then(([bgs, s]) => { setOwned(bgs); setEquipped(s?.equippedBackground ?? null); setLoaded(true); })
+      .then(([bgs, s]) => { setOwned(bgs); setEquipped(s?.equippedOwnedBackgroundId ?? null); setLoaded(true); })
       .catch(() => setLoaded(true));
   }, []);
   useFocusEffect(useCallback(() => { load(); }, [load]));
 
-  const isOwned = (id: string) => owned.some((o) => o.backgroundId === id);
+  const catalogById = (id: string) => LOCKER_BACKGROUNDS.find((b) => b.id === id);
+  const purchaseInstance = (id: string) => owned.find((o) => o.backgroundId === id && o.periodType == null);
 
   const showToast = (msg: string) => {
     setToast(msg);
@@ -77,26 +91,49 @@ export default function BackgroundShop() {
     toastTimer.current = setTimeout(() => setToast(null), 1500);
   };
 
-  // 표시 목록: 기본 카드 + 정렬된 배경(명예 배경은 보유 시에만).
+  // 표시 목록: 기본 + 구매형 카탈로그(보유/미보유) + 보유 명예 인스턴스(period_label별).
+  const currencyCells: Cell[] = LOCKER_BACKGROUNDS
+    .filter((bg) => bg.unlockType === 'currency')
+    .slice().sort((a, b) => a.sortOrder - b.sortOrder)
+    .map((bg): Cell => {
+      const inst = purchaseInstance(bg.id);
+      return {
+        key: bg.id, isDefault: false, ownedId: inst?.ownedBackgroundId ?? null,
+        backgroundId: bg.id, label: bg.label, image: bg.backgroundImage,
+        price: bg.price, owned: !!inst, honor: false,
+      };
+    });
+  const honorCells: Cell[] = owned
+    .filter((o) => catalogById(o.backgroundId) && catalogById(o.backgroundId)!.unlockType !== 'currency')
+    .slice().sort((a, b) => (b.periodLabel ?? '').localeCompare(a.periodLabel ?? ''))
+    .map((o): Cell => ({
+      key: `${o.backgroundId}#${o.ownedBackgroundId}`, isDefault: false,
+      ownedId: o.ownedBackgroundId, backgroundId: o.backgroundId,
+      label: backgroundInstanceLabel(o.backgroundId, o.periodType, o.periodLabel),
+      image: catalogById(o.backgroundId)!.backgroundImage, owned: true, honor: true,
+    }));
   const cells: Cell[] = [
-    { id: null, label: '기본', image: DEFAULT_BG, owned: true, honor: false },
-    ...LOCKER_BACKGROUNDS.slice().sort((a, b) => a.sortOrder - b.sortOrder)
-      .map((bg): Cell => ({
-        id: bg.id, label: bg.label, image: bg.backgroundImage, price: bg.price,
-        owned: isOwned(bg.id), honor: bg.unlockType !== 'currency',
-      }))
-      .filter((c) => !(c.honor && !c.owned)),
+    { key: 'default', isDefault: true, ownedId: null, backgroundId: null, label: '기본', image: DEFAULT_BG, owned: true, honor: false },
+    ...currencyCells,
+    ...honorCells,
   ];
 
-  const currentLabel = equipped === null ? '기본' : (cells.find((c) => c.id === equipped)?.label ?? '기본');
-  const currentImage = equipped === null ? DEFAULT_BG : (cells.find((c) => c.id === equipped)?.image ?? DEFAULT_BG);
+  const isSelected = (c: Cell) => (c.isDefault ? equipped == null : (c.ownedId != null && c.ownedId === equipped));
 
-  const applyBackground = async (id: string | null, label: string) => {
+  const equippedInst = equipped == null ? null : (owned.find((o) => o.ownedBackgroundId === equipped) ?? null);
+  const currentLabel = equippedInst
+    ? backgroundInstanceLabel(equippedInst.backgroundId, equippedInst.periodType, equippedInst.periodLabel)
+    : '기본';
+  const currentImage = equippedInst
+    ? (findBackground(equippedInst.backgroundId)?.backgroundImage ?? DEFAULT_BG)
+    : DEFAULT_BG;
+
+  const applyBackground = async (ownedId: number | null, label: string) => {
     if (!userId || busy) return;
     setBusy(true);
     try {
-      await equipBackground(id);
-      setEquipped(id);
+      await equipBackground(ownedId);
+      setEquipped(ownedId);
       showToast(`${label} 적용됨`);
     } catch (e) {
       showToast(SHOW_RAW_ERR ? `적용 오류: ${(e as Error).message}` : '적용 중 오류가 났어요. 다시 시도해 주세요.');
@@ -106,9 +143,9 @@ export default function BackgroundShop() {
   };
 
   const handlePress = (c: Cell) => {
-    if (c.owned) { void applyBackground(c.id, c.label); return; }   // 기본·보유 → 즉시 적용
-    // 미보유 구매형만 여기 도달(명예 미보유는 목록에서 제외됨)
-    const bg = LOCKER_BACKGROUNDS.find((b) => b.id === c.id);
+    if (c.owned) { void applyBackground(c.ownedId, c.label); return; }   // 기본·보유 → 즉시 적용
+    // 미보유 구매형만 여기 도달(명예 미보유는 목록에 없음)
+    const bg = c.backgroundId ? catalogById(c.backgroundId) : undefined;
     if (!bg) return;
     if (!online) { showToast('구매는 인터넷 연결 후 가능해요'); return; }
     setModal({ kind: (bg.price ?? 0) <= baseballBalance ? 'confirm' : 'insufficient', bg });
@@ -122,8 +159,14 @@ export default function BackgroundShop() {
       const res = await rpcPurchaseBackground(bg.id);
       await refreshAccount();
       if (res.success) {
-        setOwned((o) => [...o, { backgroundId: bg.id, acquiredVia: 'purchase', acquiredAt: new Date().toISOString() }]);
-        setModal({ kind: 'done', bg });
+        const newId = res.ownedBackgroundId ?? null;
+        if (newId != null) {
+          setOwned((o) => [...o, {
+            ownedBackgroundId: newId, backgroundId: bg.id, acquiredVia: 'purchase',
+            acquiredAt: new Date().toISOString(), periodType: null, periodLabel: null, displayName: null,
+          }]);
+        }
+        setModal({ kind: 'done', bg, ownedId: newId });
       } else {
         setModal({ kind: 'insufficient', bg });
       }
@@ -137,9 +180,10 @@ export default function BackgroundShop() {
 
   const applyFromModal = async () => {
     if (modal?.kind !== 'done') return;
-    const bg = modal.bg;
+    const { bg, ownedId } = modal;
     setModal(null);
-    await applyBackground(bg.id, bg.label);
+    if (ownedId != null) await applyBackground(ownedId, bg.label);
+    else load();   // 인스턴스 id를 못 받았으면 목록만 새로고침
   };
 
   return (
@@ -167,11 +211,11 @@ export default function BackgroundShop() {
           ) : (
             <View style={styles.grid}>
               {cells.map((c) => {
-                const selected = equipped === c.id;
+                const selected = isSelected(c);
                 const showPrice = !c.owned;
                 return (
                   <Pressable
-                    key={c.id ?? 'default'}
+                    key={c.key}
                     onPress={() => handlePress(c)}
                     disabled={busy}
                     style={[

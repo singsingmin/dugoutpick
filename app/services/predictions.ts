@@ -19,7 +19,7 @@ export interface PredictionStats {
   currentStreak: number;
   bestStreak: number;
   equippedTitle: string | null;
-  equippedBackground: string | null;
+  equippedOwnedBackgroundId: number | null;   // 0014: 배경 장착은 소유 인스턴스 id 기준
 }
 
 // dateIso: "YYYY-MM-DD"(KST). 오늘 예측이 없으면 null(첫 참여 또는 아직 미제출).
@@ -43,7 +43,7 @@ export async function fetchTodayPrediction(dateIso: string): Promise<TodayPredic
 export async function fetchPredictionStats(): Promise<PredictionStats | null> {
   const { data, error } = await supabase
     .from('prediction_stats')
-    .select('nickname, nickname_changed_month, total_predictions, total_hits, current_streak, best_streak, equipped_title, equipped_background')
+    .select('nickname, nickname_changed_month, total_predictions, total_hits, current_streak, best_streak, equipped_title, equipped_owned_background_id')
     .maybeSingle();
   if (error) throw error;
   if (!data) return null;
@@ -55,7 +55,7 @@ export async function fetchPredictionStats(): Promise<PredictionStats | null> {
     currentStreak: data.current_streak,
     bestStreak: data.best_streak,
     equippedTitle: data.equipped_title,
-    equippedBackground: data.equipped_background,
+    equippedOwnedBackgroundId: data.equipped_owned_background_id ?? null,
   };
 }
 

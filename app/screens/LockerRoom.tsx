@@ -7,7 +7,9 @@ import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/types';
 import { fetchPredictionStats } from '../services/predictions';
-import { findBackground } from '../utils/lockerBackgroundConfig';
+import { fetchOwnedBackgrounds, type OwnedBackground } from '../services/cosmetics';
+import { findBackground, backgroundInstanceLabel } from '../utils/lockerBackgroundConfig';
+import PixelText from '../components/PixelText';
 import PixelButton from '../components/PixelButton';
 import ScreenHeader from '../components/ScreenHeader';
 import SectionLabel from '../components/SectionLabel';
@@ -18,29 +20,36 @@ type Nav = NativeStackNavigationProp<RootStackParamList>;
 
 export default function LockerRoom() {
   const navigation = useNavigation<Nav>();
-  const [equippedBackgroundId, setEquippedBackgroundId] = useState<string | null>(null);
+  const [equipped, setEquipped] = useState<OwnedBackground | null>(null);
 
   useFocusEffect(
     useCallback(() => {
       let active = true;
-      fetchPredictionStats()
-        .then((s) => { if (active) setEquippedBackgroundId(s?.equippedBackground ?? null); })
+      Promise.all([fetchPredictionStats(), fetchOwnedBackgrounds()])
+        .then(([s, owned]) => {
+          if (!active) return;
+          const id = s?.equippedOwnedBackgroundId ?? null;
+          setEquipped(id == null ? null : (owned.find((o) => o.ownedBackgroundId === id) ?? null));
+        })
         .catch(() => {});
       return () => { active = false; };
     }, [])
   );
 
-  const equipped = findBackground(equippedBackgroundId);
+  const bg = equipped ? findBackground(equipped.backgroundId) : undefined;
+  const equippedLabel = equipped && bg
+    ? backgroundInstanceLabel(equipped.backgroundId, equipped.periodType, equipped.periodLabel)
+    : null;
 
   return (
     <View style={styles.root}>
-      {equipped ? (
-        <Image source={equipped.backgroundImage} style={styles.bgImage} resizeMode="cover" />
+      {bg ? (
+        <Image source={bg.backgroundImage} style={styles.bgImage} resizeMode="cover" />
       ) : (
         <Image source={require('../assets/stadium-bg.webp')} style={styles.bgImage} resizeMode="cover" />
       )}
       {/* 크림 오버레이(흐림)는 기본 배경일 때만 — 커스텀 배경은 아트를 선명하게 보여줌 */}
-      {!equipped && <View style={styles.bgOverlay} />}
+      {!bg && <View style={styles.bgOverlay} />}
       <SafeAreaView style={styles.safe} edges={['top']}>
         <ScreenHeader
           title="라커룸"
@@ -50,6 +59,12 @@ export default function LockerRoom() {
         />
         <ScrollView contentContainerStyle={styles.content}>
           <ProtectNudge />
+
+          {equippedLabel && (
+            <View style={styles.equippedPill}>
+              <PixelText variant="caption" color="#fff">적용 중 · {equippedLabel}</PixelText>
+            </View>
+          )}
 
           <View style={styles.section}>
             <SectionLabel label="응원팀" />
@@ -85,6 +100,10 @@ const styles = StyleSheet.create({
   bgOverlay: { position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(243,233,206,0.35)' },
   safe: { flex: 1, backgroundColor: 'transparent' },
   content: { padding: spacing.md },
+  equippedPill: {
+    alignSelf: 'flex-start', backgroundColor: 'rgba(30,24,12,0.72)',
+    borderRadius: 999, paddingHorizontal: spacing.md, paddingVertical: 4, marginBottom: spacing.md,
+  },
   section: { marginBottom: spacing.lg },
   buttonRow: { flexDirection: 'row', gap: spacing.sm },
   buttonHalf: { flex: 1 },

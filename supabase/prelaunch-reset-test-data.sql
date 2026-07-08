@@ -19,10 +19,10 @@ begin;
 truncate table public.award_history;
 truncate table public.cosmetic_admin_events;
 truncate table public.owned_titles;
-truncate table public.owned_backgrounds;
 truncate table public.referral_redemptions;
 truncate table public.predictions;
-truncate table public.prediction_stats;
+-- prediction_stats.equipped_owned_background_id → owned_backgrounds(id) FK 때문에 두 테이블을 함께 truncate(0014).
+truncate table public.owned_backgrounds, public.prediction_stats;
 truncate table public.baseball_ledger;
 
 -- 잔액을 최초 지급액(15)로 리셋 + 원장에 지급 기록 재기재(잔액=원장 합 불변식 유지)

@@ -7,7 +7,7 @@ import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { useTeamTheme } from '../context/TeamTheme';
 import { fetchAwardHistory, type AwardHistoryRow } from '../services/cosmetics';
 import { awardTypeLabel, formatPeriod, titleDisplay } from '../utils/titleConfig';
-import { findBackground } from '../utils/lockerBackgroundConfig';
+import { backgroundInstanceLabel } from '../utils/lockerBackgroundConfig';
 import PixelText from '../components/PixelText';
 import Panel from '../components/Panel';
 import ScreenHeader from '../components/ScreenHeader';
@@ -80,7 +80,7 @@ export default function HallOfFame() {
                 <Panel>
                   {g.rows.map((r, i) => {
                     const reward = r.grantedTitleId ? titleDisplay(r.grantedTitleId).label
-                      : r.grantedBackgroundId ? (findBackground(r.grantedBackgroundId)?.label ?? r.grantedBackgroundId)
+                      : r.grantedBackgroundId ? backgroundInstanceLabel(r.grantedBackgroundId, r.periodType, r.periodLabel)
                       : null;
                     return (
                       <View key={`${r.awardType}-${r.rank}-${i}`} style={styles.row}>

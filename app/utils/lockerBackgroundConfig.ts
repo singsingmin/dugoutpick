@@ -1,6 +1,8 @@
 // 라커룸 배경 데이터모델 — Stage 6(docs/stage6-cosmetics-design.md §3-3). 서버 backgrounds 테이블과 수동 동기화.
 // 이미지 에셋 12종 실장 완료(2026-07-07, 941×1672 — stadium-bg.webp와 동일 규격).
 // 신규 구매형 6종 추가 시 서버 backgrounds 테이블도 함께 시드해야 함(supabase/migrations/0009_locker_backgrounds_pack2.sql).
+import { formatPeriod } from './titleConfig';
+
 export type BackgroundUnlockType = 'currency' | 'monthly_rank' | 'season_rank';
 
 export interface LockerBackground {
@@ -78,4 +80,18 @@ export const LOCKER_BACKGROUNDS: LockerBackground[] = [
 
 export function findBackground(id: string | null | undefined): LockerBackground | undefined {
   return id ? LOCKER_BACKGROUNDS.find((b) => b.id === id) : undefined;
+}
+
+// 명예형 배경 인스턴스 라벨 — 이미지는 공용, 년월은 UI가 합성(0014).
+//  예) ('lockerbg.monthly_champion','monthly','202607') → "2026.07 월간 챔피언 룸"
+export function backgroundInstanceLabel(
+  backgroundId: string,
+  periodType?: string | null,
+  periodLabel?: string | null,
+): string {
+  const base = findBackground(backgroundId)?.label ?? backgroundId;
+  if ((periodType === 'monthly' || periodType === 'season') && periodLabel) {
+    return `${formatPeriod(periodType, periodLabel)} ${base}`;
+  }
+  return base;
 }

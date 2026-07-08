@@ -3,7 +3,16 @@
 import { supabase } from './supabase';
 
 export interface OwnedTitle { titleId: string; acquiredVia: string; acquiredAt: string }
-export interface OwnedBackground { backgroundId: string; acquiredVia: string; acquiredAt: string }
+// 0014: 명예형은 (배경 + period)별 인스턴스 → ownedBackgroundId로 개별 식별/장착.
+export interface OwnedBackground {
+  ownedBackgroundId: number;
+  backgroundId: string;
+  acquiredVia: string;
+  acquiredAt: string;
+  periodType: string | null;   // null=구매형, 'monthly'|'season'=명예형
+  periodLabel: string | null;  // 'YYYYMM' | 'YYYY'
+  displayName: string | null;
+}
 
 export async function fetchOwnedTitles(): Promise<OwnedTitle[]> {
   const { data, error } = await supabase
@@ -17,10 +26,18 @@ export async function fetchOwnedTitles(): Promise<OwnedTitle[]> {
 export async function fetchOwnedBackgrounds(): Promise<OwnedBackground[]> {
   const { data, error } = await supabase
     .from('owned_backgrounds')
-    .select('background_id, acquired_via, acquired_at')
+    .select('id, background_id, acquired_via, acquired_at, period_type, period_label, display_name')
     .order('acquired_at', { ascending: false });
   if (error) throw error;
-  return (data ?? []).map((r) => ({ backgroundId: r.background_id, acquiredVia: r.acquired_via, acquiredAt: r.acquired_at }));
+  return (data ?? []).map((r) => ({
+    ownedBackgroundId: r.id,
+    backgroundId: r.background_id,
+    acquiredVia: r.acquired_via,
+    acquiredAt: r.acquired_at,
+    periodType: r.period_type ?? null,
+    periodLabel: r.period_label ?? null,
+    displayName: r.display_name ?? null,
+  }));
 }
 
 // equip_title/equip_background RPC 경유(0012) — prediction_stats 행을 서버가 먼저 보장하므로
@@ -30,12 +47,13 @@ export async function equipTitle(titleId: string | null): Promise<void> {
   if (error) throw error;
 }
 
-export async function equipBackground(backgroundId: string | null): Promise<void> {
-  const { error } = await supabase.rpc('equip_background', { p_background_id: backgroundId });
+// 0014: 장착은 소유 인스턴스 id 기준(null이면 해제 → 기본).
+export async function equipBackground(ownedBackgroundId: number | null): Promise<void> {
+  const { error } = await supabase.rpc('equip_background', { p_owned_background_id: ownedBackgroundId });
   if (error) throw error;
 }
 
-export interface PurchaseBackgroundResult { success: boolean; reason?: string; balance?: number }
+export interface PurchaseBackgroundResult { success: boolean; reason?: string; balance?: number; ownedBackgroundId?: number }
 export async function rpcPurchaseBackground(backgroundId: string): Promise<PurchaseBackgroundResult> {
   const { data, error } = await supabase.rpc('purchase_background', { p_background_id: backgroundId });
   if (error) throw error;

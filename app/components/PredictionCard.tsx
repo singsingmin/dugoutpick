@@ -95,7 +95,7 @@ export default function PredictionCard({ dateYmd, games, locked }: Props) {
       return;
     }
     setStats((s) => (s ? { ...s, nickname: res.nickname ?? trimmed }
-      : { nickname: res.nickname ?? trimmed, nicknameChangedMonth: null, totalPredictions: 0, totalHits: 0, currentStreak: 0, bestStreak: 0, equippedTitle: null, equippedBackground: null }));
+      : { nickname: res.nickname ?? trimmed, nicknameChangedMonth: null, totalPredictions: 0, totalHits: 0, currentStreak: 0, bestStreak: 0, equippedTitle: null, equippedOwnedBackgroundId: null }));
     setNicknameVisible(false);
     if (pendingGameId) {
       const gameId = pendingGameId;
