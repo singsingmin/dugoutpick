@@ -1,4 +1,4 @@
-const CACHE = 'dugoutpick-1783467142894';
+const CACHE = 'dugoutpick-1783486500264';
 const PRECACHE = [
   '/dugoutpick/manifest.json',
   '/dugoutpick/icon.png',
@@ -27,7 +27,7 @@ self.addEventListener('fetch', e => {
   // ⚠️ Supabase(.supabase.co)를 캐시하면 재화 잔액 GET이 옛 값에 고정돼 화면이 안 갱신됨
   //    (구매 POST는 SW가 캐시 안 해 DB는 차감되지만 조회는 stale) → 반드시 네트워크 우선.
   const isHtml = url.pathname.endsWith('/') || url.pathname.endsWith('.html');
-  const isDynamic = url.hostname === 'raw.githubusercontent.com' || url.hostname.endsWith('.supabase.co');
+  const isDynamic = url.hostname === 'raw.githubusercontent.com' || url.hostname.endsWith('.supabase.co') || url.hostname.endsWith('.workers.dev');
   if (isDynamic || isHtml) {
     e.respondWith(fetch(e.request).catch(() => caches.match(e.request)));
     return;
@@ -42,7 +42,7 @@ self.addEventListener('fetch', e => {
           caches.open(CACHE).then(c => c.put(e.request, clone));
         }
         return res;
-      });
+      }).catch(() => caches.match(e.request));   // fetch 실패(CORS/네트워크) 시 캐시 폴백 — 미처리 throw 방지
     })
   );
 });
