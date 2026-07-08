@@ -1,7 +1,7 @@
 {
   "date": "20260708",
   "dateText": "2026년 7월 8일",
-  "updatedAt": "2026-07-08T12:30:53.707Z",
+  "updatedAt": "2026-07-08T12:40:39.881Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -84,7 +84,7 @@
       "gameId": "20260708LGSS0",
       "time": "18:30",
       "stadium": "대구",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "KN-T",
       "away": {
@@ -133,117 +133,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 1,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "이승현",
-        "batter": "문보경",
-        "heat": 4,
-        "label": "점수차가 벌어진 경기"
+      "live": null,
+      "recap": {
+        "actual": 17,
+        "verdict": "기대 이하",
+        "diff": 6,
+        "total": 10,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "김지찬"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "김성윤"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "구자욱"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "최형우"
-          },
-          {
-            "order": 5,
-            "pos": "1루수",
-            "name": "디아즈"
-          },
-          {
-            "order": 6,
-            "pos": "2루수",
-            "name": "류지혁"
-          },
-          {
-            "order": 7,
-            "pos": "3루수",
-            "name": "김영웅"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "강민호"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "심재훈"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "우익수",
-            "name": "홍창기"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "박해민"
-          },
-          {
-            "order": 3,
-            "pos": "1루수",
-            "name": "오스틴"
-          },
-          {
-            "order": 4,
-            "pos": "3루수",
-            "name": "문보경"
-          },
-          {
-            "order": 5,
-            "pos": "좌익수",
-            "name": "송찬의"
-          },
-          {
-            "order": 6,
-            "pos": "포수",
-            "name": "박동원"
-          },
-          {
-            "order": 7,
-            "pos": "유격수",
-            "name": "오지환"
-          },
-          {
-            "order": 8,
-            "pos": "지명타자",
-            "name": "이재원"
-          },
-          {
-            "order": 9,
-            "pos": "2루수",
-            "name": "구본혁"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260708HTLT0",
@@ -256,7 +160,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "네일",
           "era": 3.44,
@@ -301,12 +205,12 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 3,
+        "b1": true,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "김강현",
-        "batter": "정현창",
+        "batter": "박민",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
@@ -465,14 +369,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 1,
-        "b1": true,
+        "half": "B",
+        "out": 2,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "스기모토",
-        "batter": "오선진",
-        "heat": 26,
+        "pitcher": "김성민",
+        "batter": "힐리어드",
+        "heat": 27,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
