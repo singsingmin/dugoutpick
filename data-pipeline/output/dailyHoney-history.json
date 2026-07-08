@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-08T12:50:42.222Z",
+  "updatedAt": "2026-07-08T13:01:01.472Z",
   "results": [
     {
       "date": "20260705",
@@ -28,6 +28,29 @@
         "score": 2
       },
       "calculatedAt": "2026-07-07T13:10:45.429Z"
+    },
+    {
+      "date": "20260708",
+      "actualTopGameId": null,
+      "tiedGameIds": [
+        "20260708SKOB0",
+        "20260708WOKT0"
+      ],
+      "recapScore": 50,
+      "decidingReasonTags": [
+        "recapScore 50"
+      ],
+      "away": {
+        "code": "SK",
+        "name": "SSG",
+        "score": 3
+      },
+      "home": {
+        "code": "OB",
+        "name": "두산",
+        "score": 7
+      },
+      "calculatedAt": "2026-07-08T13:01:01.472Z"
     }
   ]
 }
