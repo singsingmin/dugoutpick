@@ -38,6 +38,11 @@ export default function Today() {
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const dataRef = useRef<GamesData | null>(null);   // 현재 표시본(폴백 되돌림 방지 비교용)
 
+  useEffect(() => {   // 진단(임시)
+    const s = typeof performance !== 'undefined' && performance.now ? Math.round(performance.now()) : -1;
+    console.log('[today] mount · sincePageLoad≈', s, 'ms');
+  }, []);
+
   // 데이터 로드 + 상태별 폴링 재예약. 전 경기 종료(+highlight 없음)·경기 없는 날엔 폴링 중단.
   const load = useCallback((): Promise<void> => {
     return loadGames()

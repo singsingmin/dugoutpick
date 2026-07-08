@@ -20,6 +20,11 @@ export default function Onboarding({ navigation }: Props) {
   const [selected, setSelected] = useState<string | null>(null);
   const { refresh } = useTeamTheme();
 
+  useEffect(() => {   // 진단(임시)
+    const s = typeof performance !== 'undefined' && performance.now ? Math.round(performance.now()) : -1;
+    console.log('[onboarding] mount · sincePageLoad≈', s, 'ms');
+  }, []);
+
   useEffect(() => {
     getCheerTeam().then((code) => {
       if (code) setSelected(code);

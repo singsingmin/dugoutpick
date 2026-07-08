@@ -13,7 +13,8 @@ export default function Splash({ navigation }: Props) {
   // 세션 내 재진입(_introShownThisSession)은 지연 없이 즉시 이동.
   useEffect(() => {
     const t0 = Date.now();
-    console.log('[splash] effect start', new Date(t0).toISOString());   // 진단(임시)
+    const sinceLoad = typeof performance !== 'undefined' && performance.now ? Math.round(performance.now()) : -1;
+    console.log('[splash] effect start · sincePageLoad≈', sinceLoad, 'ms', new Date(t0).toISOString());   // 진단(임시)
     let cancelled = false;
     let timer: ReturnType<typeof setTimeout> | null = null;
     getCheerTeam().then((c) => {
