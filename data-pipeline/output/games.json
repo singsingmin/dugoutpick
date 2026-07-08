@@ -1,7 +1,7 @@
 {
   "date": "20260708",
   "dateText": "2026년 7월 8일",
-  "updatedAt": "2026-07-08T12:10:44.204Z",
+  "updatedAt": "2026-07-08T12:20:45.182Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -15,7 +15,7 @@
       "gameId": "20260708SKOB0",
       "time": "18:30",
       "stadium": "잠실",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SS-T",
       "away": {
@@ -64,117 +64,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 3,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "이영하",
-        "batter": "전의산",
-        "heat": 28,
-        "label": "경기 흐름 체크 중"
+      "live": null,
+      "recap": {
+        "actual": 50,
+        "verdict": "기대 이상",
+        "diff": 4,
+        "total": 10,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "좌익수",
-            "name": "김민석"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "손아섭"
-          },
-          {
-            "order": 3,
-            "pos": "2루수",
-            "name": "박준순"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "양의지"
-          },
-          {
-            "order": 5,
-            "pos": "3루수",
-            "name": "안재석"
-          },
-          {
-            "order": 6,
-            "pos": "유격수",
-            "name": "박찬호"
-          },
-          {
-            "order": 7,
-            "pos": "중견수",
-            "name": "정수빈"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "윤준호"
-          },
-          {
-            "order": 9,
-            "pos": "1루수",
-            "name": "강승호"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "2루수",
-            "name": "정준재"
-          },
-          {
-            "order": 2,
-            "pos": "유격수",
-            "name": "박성한"
-          },
-          {
-            "order": 3,
-            "pos": "지명타자",
-            "name": "최정"
-          },
-          {
-            "order": 4,
-            "pos": "좌익수",
-            "name": "김재환"
-          },
-          {
-            "order": 5,
-            "pos": "1루수",
-            "name": "전의산"
-          },
-          {
-            "order": 6,
-            "pos": "중견수",
-            "name": "최지훈"
-          },
-          {
-            "order": 7,
-            "pos": "3루수",
-            "name": "고명준"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "이지영"
-          },
-          {
-            "order": 9,
-            "pos": "우익수",
-            "name": "김성욱"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260708LGSS0",
@@ -187,7 +91,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 2,
-        "score": 7,
+        "score": 8,
         "starter": {
           "name": "임찬규",
           "era": 3.79,
@@ -230,16 +134,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
+        "inning": 8,
         "half": "B",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "리오스",
-        "batter": "심재훈",
-        "heat": 13,
-        "label": "경기 흐름 체크 중"
+        "batter": "김성윤",
+        "heat": 4,
+        "label": "점수차가 벌어진 경기"
       },
       "recap": null,
       "decision": null,
@@ -396,13 +300,13 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이민석",
-        "batter": "박상준",
+        "pitcher": "이태양",
+        "batter": "김세민",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
@@ -529,7 +433,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 3,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "로건",
           "era": 3,
@@ -561,15 +465,15 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 0,
+        "half": "B",
+        "out": 1,
         "b1": false,
         "b2": false,
-        "b3": false,
-        "pitcher": "이상동",
-        "batter": "데이비슨",
-        "heat": 50,
-        "label": "후반 박빙 승부"
+        "b3": true,
+        "pitcher": "박진형",
+        "batter": "김민혁",
+        "heat": 41,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
