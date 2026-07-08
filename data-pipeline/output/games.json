@@ -1,7 +1,7 @@
 {
   "date": "20260708",
   "dateText": "2026년 7월 8일",
-  "updatedAt": "2026-07-08T11:40:42.826Z",
+  "updatedAt": "2026-07-08T11:42:20.075Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,14 +65,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 2,
+        "inning": 8,
+        "half": "T",
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "이준기",
-        "batter": "강승호",
+        "pitcher": "박치국",
+        "batter": "최지훈",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
@@ -399,10 +399,10 @@
         "half": "B",
         "out": 2,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "한재승",
-        "batter": "한태양",
+        "batter": "손호영",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
@@ -563,11 +563,11 @@
         "inning": 6,
         "half": "T",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "우규민",
-        "batter": "김건희",
+        "batter": "김웅빈",
         "heat": 46,
         "label": "경기 흐름 체크 중"
       },
