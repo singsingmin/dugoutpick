@@ -1,7 +1,7 @@
 {
   "date": "20260708",
   "dateText": "2026년 7월 8일",
-  "updatedAt": "2026-07-08T11:42:20.075Z",
+  "updatedAt": "2026-07-08T11:50:42.344Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 1,
+        "score": 3,
         "starter": {
           "name": "전영준",
           "era": 6.75,
@@ -66,15 +66,15 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박치국",
-        "batter": "최지훈",
-        "heat": 4,
-        "label": "점수차가 벌어진 경기"
+        "pitcher": "한두솔",
+        "batter": "류승민",
+        "heat": 27,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -187,7 +187,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 2,
-        "score": 6,
+        "score": 7,
         "starter": {
           "name": "임찬규",
           "era": 3.79,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 1,
-        "b1": true,
-        "b2": true,
+        "half": "B",
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "이재희",
-        "batter": "오스틴",
-        "heat": 21,
+        "pitcher": "리오스",
+        "batter": "구자욱",
+        "heat": 12,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -395,14 +395,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 2,
         "b1": true,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "한재승",
-        "batter": "손호영",
+        "pitcher": "이이무라",
+        "batter": "김호령",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
@@ -562,12 +562,12 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "우규민",
-        "batter": "김웅빈",
+        "pitcher": "이상동",
+        "batter": "안치홍",
         "heat": 46,
         "label": "경기 흐름 체크 중"
       },
