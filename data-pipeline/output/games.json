@@ -1,7 +1,7 @@
 {
   "date": "20260708",
   "dateText": "2026년 7월 8일",
-  "updatedAt": "2026-07-08T10:40:38.296Z",
+  "updatedAt": "2026-07-08T10:50:44.459Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "곽빈",
           "era": 2.7,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 1,
-        "b1": true,
+        "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "이건욱",
-        "batter": "강승호",
-        "heat": 37,
-        "label": "초반 팽팽한 흐름"
+        "b3": false,
+        "pitcher": "곽빈",
+        "batter": "고명준",
+        "heat": 29,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -187,7 +187,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 2,
-        "score": 3,
+        "score": 5,
         "starter": {
           "name": "임찬규",
           "era": 3.79,
@@ -231,15 +231,15 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 2,
-        "b1": true,
+        "half": "B",
+        "out": 0,
+        "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "오러클린",
-        "batter": "홍창기",
-        "heat": 43,
-        "label": "초반 팽팽한 흐름"
+        "b3": false,
+        "pitcher": "임찬규",
+        "batter": "최형우",
+        "heat": 28,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -400,9 +400,9 @@
         "out": 1,
         "b1": false,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "네일",
-        "batter": "황성빈",
+        "batter": "고승민",
         "heat": 28,
         "label": "경기 흐름 체크 중"
       },
@@ -529,7 +529,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 3,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "로건",
           "era": 3,
@@ -564,11 +564,11 @@
         "half": "B",
         "out": 1,
         "b1": false,
-        "b2": false,
-        "b3": false,
+        "b2": true,
+        "b3": true,
         "pitcher": "배동현",
-        "batter": "힐리어드",
-        "heat": 40,
+        "batter": "배정대",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
