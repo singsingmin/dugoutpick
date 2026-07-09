@@ -21,6 +21,7 @@ import JerseyScoreBadge from '../components/JerseyScoreBadge';
 import ScoreboardScoreBadge, { type ScoreboardVariant } from '../components/ScoreboardScoreBadge';
 import ImageFrameScoreBadge from '../components/ImageFrameScoreBadge';
 import { getImageFrameConfig } from '../utils/assetFrameConfig';
+import { saleStatus, saleBadgeText, upcomingToast } from '../utils/saleWindow';
 import PixelText from '../components/PixelText';
 import ScreenHeader from '../components/ScreenHeader';
 import AppIcon from '../components/AppIcon';
@@ -51,11 +52,13 @@ const TABS: { key: TabKey; label: string }[] = [
 ];
 
 type Section = { key: string; title: string; items: ScoreSkin[] };
-function buildSections(tab: TabKey): Section[] {
+function buildSections(tab: TabKey, isOwned: (id: string) => boolean, now: number): Section[] {
   const sections: Section[] = [];
   const byKey = new Map<string, Section>();
   for (const s of SCORE_SKIN_LIST) {
     if (!(tab === 'all' || s.category === tab)) continue;
+    // 한정 스킨은 판매 종료+미보유면 숨김(보유 시엔 계속 노출·장착 가능).
+    if (saleStatus(s.availableFrom, s.availableUntil, now) === 'ended' && !isOwned(s.id)) continue;
     const key = getSkinSectionKey(s);
     let sec = byKey.get(key);
     if (!sec) {
@@ -124,7 +127,8 @@ export default function SkinSelect() {
   useEffect(() => () => { if (toastTimer.current) clearTimeout(toastTimer.current); }, []);
 
   const selectedConfig = getScoreSkinById(skinId);
-  const sections = buildSections(tab);
+  const now = Date.now();
+  const sections = buildSections(tab, isOwned, now);
 
   const showToast = (msg: string) => {
     setToast(msg);
@@ -139,6 +143,10 @@ export default function SkinSelect() {
 
   const handleCardPress = (s: ScoreSkin) => {
     if (isOwned(s.id)) { void applySkin(s); return; }  // 적용은 오프라인 허용(낙관적)
+    if (saleStatus(s.availableFrom, s.availableUntil) === 'upcoming') {
+      showToast(s.availableFrom ? upcomingToast(s.availableFrom) : '아직 판매 전이에요');
+      return;
+    }
     if (s.unlockType === 'currency') {
       if (!online) { showToast('구매는 인터넷 연결 후 가능해요'); return; }  // 구매=민감 쓰기, 온라인 필요
       const price = s.price ?? 0;
@@ -226,6 +234,8 @@ export default function SkinSelect() {
                     const selected = s.id === skinId;
                     const owned = isOwned(s.id);
                     const showPrice = !owned && s.unlockType === 'currency';
+                    const status = saleStatus(s.availableFrom, s.availableUntil, now);
+                    const saleBadge = owned ? null : saleBadgeText(status, s.availableFrom, s.availableUntil);
                     return (
                       <Pressable
                         key={s.id}
@@ -255,6 +265,11 @@ export default function SkinSelect() {
                         {showPrice && (
                           <View style={styles.priceBadge}>
                             <BaseballAmount n={s.price ?? 0} size={9} color="#fff" />
+                          </View>
+                        )}
+                        {saleBadge && (
+                          <View style={[styles.saleBadge, status === 'upcoming' ? styles.saleBadgeUpcoming : styles.saleBadgeLive]}>
+                            <PixelText variant="caption" color="#fff" style={styles.saleBadgeText}>{saleBadge}</PixelText>
                           </View>
                         )}
                       </Pressable>
@@ -426,6 +441,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: 5,
     paddingVertical: 1,
   },
+  saleBadge: {
+    position: 'absolute', top: 4, left: 4,
+    borderRadius: 999, paddingHorizontal: 5, paddingVertical: 1,
+    borderWidth: 1, borderColor: 'rgba(0,0,0,0.25)',
+  },
+  saleBadgeLive: { backgroundColor: '#C0392B' },      // 판매 중 — 레드
+  saleBadgeUpcoming: { backgroundColor: '#5A6B7A' },  // 오픈 예정 — 회청
+  saleBadgeText: { fontSize: 8, lineHeight: 11 },
 
   empty: { alignItems: 'center', paddingVertical: spacing.xl },
 

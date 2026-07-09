@@ -14,6 +14,7 @@ import {
 } from '../services/cosmetics';
 import { fetchPredictionStats } from '../services/predictions';
 import { LOCKER_BACKGROUNDS, backgroundInstanceLabel, findBackground, type LockerBackground } from '../utils/lockerBackgroundConfig';
+import { saleStatus, saleBadgeText, upcomingToast, type SaleStatus } from '../utils/saleWindow';
 import PixelText from '../components/PixelText';
 import ScreenHeader from '../components/ScreenHeader';
 import AppIcon from '../components/AppIcon';
@@ -44,6 +45,9 @@ type Cell = {
   price?: number;
   owned: boolean;
   honor: boolean;
+  status: SaleStatus;          // 한정 판매 상태(permanent/upcoming/live/ended)
+  badge: string | null;        // 한정 뱃지 텍스트("7/15 오픈"·"~8/2")
+  from?: string;               // availableFrom(오픈 예정 안내용)
 };
 type ModalState =
   | { kind: 'confirm' | 'insufficient'; bg: LockerBackground }
@@ -92,17 +96,22 @@ export default function BackgroundShop() {
   };
 
   // 표시 목록: 기본 + 구매형 카탈로그(보유/미보유) + 보유 명예 인스턴스(period_label별).
+  // 한정 배경은 판매기간 밖+미보유면 숨김(보유 시엔 계속 노출·장착 가능).
+  const now = Date.now();
   const currencyCells: Cell[] = LOCKER_BACKGROUNDS
     .filter((bg) => bg.unlockType === 'currency')
     .slice().sort((a, b) => a.sortOrder - b.sortOrder)
     .map((bg): Cell => {
       const inst = purchaseInstance(bg.id);
+      const status = saleStatus(bg.availableFrom, bg.availableUntil, now);
       return {
         key: bg.id, isDefault: false, ownedId: inst?.ownedBackgroundId ?? null,
         backgroundId: bg.id, label: bg.label, image: bg.backgroundImage,
         price: bg.price, owned: !!inst, honor: false,
+        status, badge: saleBadgeText(status, bg.availableFrom, bg.availableUntil), from: bg.availableFrom,
       };
-    });
+    })
+    .filter((c) => c.owned || c.status !== 'ended');
   const honorCells: Cell[] = owned
     .filter((o) => catalogById(o.backgroundId) && catalogById(o.backgroundId)!.unlockType !== 'currency')
     .slice().sort((a, b) => (b.periodLabel ?? '').localeCompare(a.periodLabel ?? ''))
@@ -111,9 +120,10 @@ export default function BackgroundShop() {
       ownedId: o.ownedBackgroundId, backgroundId: o.backgroundId,
       label: backgroundInstanceLabel(o.backgroundId, o.periodType, o.periodLabel),
       image: catalogById(o.backgroundId)!.backgroundImage, owned: true, honor: true,
+      status: 'permanent', badge: null,
     }));
   const cells: Cell[] = [
-    { key: 'default', isDefault: true, ownedId: null, backgroundId: null, label: '기본', image: DEFAULT_BG, owned: true, honor: false },
+    { key: 'default', isDefault: true, ownedId: null, backgroundId: null, label: '기본', image: DEFAULT_BG, owned: true, honor: false, status: 'permanent', badge: null },
     ...currencyCells,
     ...honorCells,
   ];
@@ -145,6 +155,7 @@ export default function BackgroundShop() {
   const handlePress = (c: Cell) => {
     if (c.owned) { void applyBackground(c.ownedId, c.label); return; }   // 기본·보유 → 즉시 적용
     // 미보유 구매형만 여기 도달(명예 미보유는 목록에 없음)
+    if (c.status === 'upcoming') { showToast(c.from ? upcomingToast(c.from) : '아직 판매 전이에요'); return; }
     const bg = c.backgroundId ? catalogById(c.backgroundId) : undefined;
     if (!bg) return;
     if (!online) { showToast('교환은 인터넷 연결 후 가능해요'); return; }
@@ -239,6 +250,11 @@ export default function BackgroundShop() {
                       {showPrice && (
                         <View style={styles.priceBadge}>
                           <BaseballAmount n={c.price ?? 0} size={9} color="#fff" />
+                        </View>
+                      )}
+                      {c.badge && (
+                        <View style={[styles.saleBadge, c.status === 'upcoming' ? styles.saleBadgeUpcoming : styles.saleBadgeLive]}>
+                          <PixelText variant="caption" color="#fff" style={styles.saleBadgeText}>{c.badge}</PixelText>
                         </View>
                       )}
                     </View>
@@ -360,6 +376,14 @@ const styles = StyleSheet.create({
     position: 'absolute', top: 4, right: 4, backgroundColor: '#4A3826',
     borderWidth: 1, borderColor: colors.border, borderRadius: 999, paddingHorizontal: 5, paddingVertical: 1,
   },
+  saleBadge: {
+    position: 'absolute', top: 4, left: 4,
+    borderRadius: 999, paddingHorizontal: 6, paddingVertical: 1,
+    borderWidth: 1, borderColor: 'rgba(0,0,0,0.25)',
+  },
+  saleBadgeLive: { backgroundColor: '#C0392B' },      // 판매 중 — 레드(마감 임박 환기)
+  saleBadgeUpcoming: { backgroundColor: '#5A6B7A' },  // 오픈 예정 — 회청(비활성 톤)
+  saleBadgeText: { fontSize: 9, lineHeight: 12 },
   cellLabel: { maxWidth: '100%' },
 
   modalBackdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.5)', alignItems: 'center', justifyContent: 'center', padding: spacing.lg },

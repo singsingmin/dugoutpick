@@ -28,6 +28,9 @@ interface BaseSkin {
   isDefault?: boolean;
   isHidden?: boolean;
   sortOrder: number;
+  // 한정 판매 윈도우(표시용, 강제 SoT는 서버 skins.available_from/until). ISO '+09:00'.
+  availableFrom?: string;
+  availableUntil?: string;
 }
 
 export interface JerseySkin extends BaseSkin {
@@ -187,6 +190,21 @@ export const SCORE_SKINS: ScoreSkin[] = [
     label: '챔피언십 링', description: '스페셜 챔피언십 링',
     assetKey: 'champRing', renderType: 'imageFrame',
     unlockType: 'currency', price: 90, currencyType: 'baseball', sortOrder: 620,
+  },
+  // ── 2026 하반기 한정 스킨 2종 (판매 윈도우 = 서버 강제, 여기 날짜는 표시용) ──
+  {
+    id: 'skin.stove_winter_2026', kind: 'asset', category: 'special',
+    label: '스토브리그 윈터', description: 'FA·이적시장 겨울 한정',
+    assetKey: 'stoveWinter', renderType: 'imageFrame',
+    unlockType: 'currency', price: 120, currencyType: 'baseball', sortOrder: 700,
+    availableFrom: '2026-11-16T00:00:00+09:00', availableUntil: '2026-12-21T00:00:00+09:00',
+  },
+  {
+    id: 'skin.gold_glove_2026', kind: 'asset', category: 'special',
+    label: '황금장갑', description: '연말 시상식 프리미엄 한정',
+    assetKey: 'goldGlove', renderType: 'imageFrame',
+    unlockType: 'currency', price: 240, currencyType: 'baseball', sortOrder: 710,
+    availableFrom: '2026-12-10T00:00:00+09:00', availableUntil: '2027-01-01T00:00:00+09:00',
   },
   // ── 고정색 컬러 유니폼(컬러팩) — classic × 고정 팔레트. 응원팀 무관 동일색. ──
   ...( ['red', 'pink', 'orange', 'yellow', 'green', 'sky', 'blue', 'black'] as JerseyPaletteId[]
