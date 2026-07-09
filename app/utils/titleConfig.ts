@@ -24,6 +24,10 @@ const FIXED_TITLES: Record<string, TitleDisplay> = {
   'title.streak5':          { label: '5연속 적중러', description: '5연속 적중 달성', grade: 'rare' },
   'title.honey_detective':  { label: '꿀잼 탐정', description: '누적 적중 10회 달성', grade: 'rare' },
   'title.veteran30':        { label: '야구각 감별사', description: '누적 유효 참여 30회 달성', grade: 'rare' },
+  // 경기성향형(P3, result_tags 기반) — 특정 성격의 경기를 골라 적중.
+  'title.walkoff_witness':  { label: '끝내기 목격자', description: '끝내기 경기를 3번 적중', grade: 'epic' },
+  'title.thriller_master':  { label: '한 끗 승부사', description: '1점차 접전을 5번 적중', grade: 'rare' },
+  'title.slugfest_lover':   { label: '난타전 애호가', description: '난타전을 3번 적중', grade: 'rare' },
 };
 
 const AWARD_LABEL: Record<string, string> = {

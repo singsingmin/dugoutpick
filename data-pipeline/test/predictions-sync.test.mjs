@@ -1,7 +1,7 @@
 // 예측 리그 정산 순수 로직 골든 테스트.
 // 실행: node data-pipeline/test/predictions-sync.test.mjs
 import assert from 'node:assert';
-import { kstStart, earliestLockAt, judgeSelection, rewardFor, ymdToIso, planSettlements } from '../predictions-sync.mjs';
+import { kstStart, earliestLockAt, judgeSelection, rewardFor, ymdToIso, planSettlements, computeResultTags } from '../predictions-sync.mjs';
 
 let pass = 0;
 function check(name, actual, expected) {
@@ -47,15 +47,15 @@ const todayIso = '2026-07-06';
 
 check('planSettlements 확정된 과거 날짜 → judge(hit)',
   planSettlements([{ user_id: 'u1', date: '2026-07-05', selected_game_id: 'B' }], dhByDate, todayIso, {}),
-  [{ user_id: 'u1', date: '2026-07-05', status: 'hit', reward: 10, points: 11 }]);
+  [{ user_id: 'u1', date: '2026-07-05', status: 'hit', reward: 10, points: 11, selected_game_id: 'B' }]);
 
 check('planSettlements 확정된 과거 날짜 → judge(miss)',
   planSettlements([{ user_id: 'u1', date: '2026-07-05', selected_game_id: 'A' }], dhByDate, todayIso, {}),
-  [{ user_id: 'u1', date: '2026-07-05', status: 'miss', reward: 0, points: 1 }]);
+  [{ user_id: 'u1', date: '2026-07-05', status: 'miss', reward: 0, points: 1, selected_game_id: 'A' }]);
 
 check('planSettlements 확정 없는 과거 날짜(전경기 취소) → void',
   planSettlements([{ user_id: 'u1', date: '2026-07-04', selected_game_id: 'X' }], dhByDate, todayIso, {}),
-  [{ user_id: 'u1', date: '2026-07-04', status: 'void', reward: 0, points: 0 }]);
+  [{ user_id: 'u1', date: '2026-07-04', status: 'void', reward: 0, points: 0, selected_game_id: 'X' }]);
 
 check('planSettlements 오늘자 미확정 → 보류(빈 배열)',
   planSettlements([{ user_id: 'u1', date: '2026-07-06', selected_game_id: 'X' }], dhByDate, todayIso, {}),
@@ -68,6 +68,22 @@ check('planSettlements 미래 날짜 → 무시(빈 배열)',
 check('planSettlements 오늘자 확정 + 취소경기 선택 → void(상태맵 반영)',
   planSettlements([{ user_id: 'u1', date: '2026-07-06', selected_game_id: 'B' }],
     { '2026-07-06': { actualTopGameId: 'B', tiedGameIds: undefined } }, todayIso, { B: 'CANCELED' }),
-  [{ user_id: 'u1', date: '2026-07-06', status: 'void', reward: 0, points: 0 }]);
+  [{ user_id: 'u1', date: '2026-07-06', status: 'void', reward: 0, points: 0, selected_game_id: 'B' }]);
+
+// computeResultTags (P3)
+const dhTop = { actualTopGameId: 'B', tiedGameIds: undefined };
+check('computeResultTags 끝내기+1점차+daily_top',
+  computeResultTags('B', { walkoff: 1, extra: 0, diff: 1, total: 7, actual: 82 }, dhTop),
+  ['walkoff', 'close_1', 'classic_game', 'daily_top']);
+check('computeResultTags 연장+2점차, top 아님',
+  computeResultTags('A', { walkoff: 0, extra: 1, diff: 2, total: 9, actual: 55 }, dhTop),
+  ['extra', 'close_2']);
+check('computeResultTags 난타전(공동1위 포함)',
+  computeResultTags('A', { walkoff: 0, extra: 0, diff: 5, total: 15, actual: 40 }, { actualTopGameId: null, tiedGameIds: ['A', 'B'] }),
+  ['slugfest', 'daily_top']);
+check('computeResultTags recap 없음(과거 소급) → 태그 없음',
+  computeResultTags('A', undefined, dhTop), []);
+check('computeResultTags 과거 actual만(classic만)',
+  computeResultTags('C', { actual: 75 }, dhTop), ['classic_game']);
 
 console.log(`\n✓ predictions-sync 테스트 ${pass}개 통과`);

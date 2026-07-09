@@ -60,8 +60,9 @@ export async function fetchPredictionStats(): Promise<PredictionStats | null> {
 }
 
 export interface SubmitResult { success: boolean; reason?: string; gameId?: string; }
-export async function rpcSubmitPrediction(gameId: string): Promise<SubmitResult> {
-  const { data, error } = await supabase.rpc('submit_prediction', { p_game_id: gameId });
+// snapshot: 제출 시점 경기 맥락(honey_score_at_pick·teams·start_time). 칭호=장식이라 클라 제공값 신뢰(P3).
+export async function rpcSubmitPrediction(gameId: string, snapshot?: Record<string, unknown>): Promise<SubmitResult> {
+  const { data, error } = await supabase.rpc('submit_prediction', { p_game_id: gameId, p_snapshot: snapshot ?? {} });
   if (error) throw error;
   return data as SubmitResult;
 }

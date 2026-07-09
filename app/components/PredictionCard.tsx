@@ -60,7 +60,12 @@ export default function PredictionCard({ dateYmd, games, locked }: Props) {
   const submit = useCallback(async (gameId: string) => {
     setSubmitting(true);
     try {
-      const res = await rpcSubmitPrediction(gameId);
+      // 제출 시점 경기 맥락 스냅샷(P3) — 이후 조건이 바뀌어도 픽 당시 맥락 보존.
+      const g = games.find((x) => x.gameId === gameId);
+      const snapshot = g
+        ? { honey_score_at_pick: g.honjam?.score ?? null, home_team: g.home.code, away_team: g.away.code, game_start_time: g.time }
+        : {};
+      const res = await rpcSubmitPrediction(gameId, snapshot);
       if (res.success) {
         setPrediction({ selectedGameId: gameId, status: 'pending', rewardBaseballs: 0, rankingPoints: 0 });
         setPickerVisible(false);
@@ -71,7 +76,7 @@ export default function PredictionCard({ dateYmd, games, locked }: Props) {
     } finally {
       setSubmitting(false);
     }
-  }, []);
+  }, [games]);
 
   const selectGame = useCallback(async (gameId: string) => {
     if (!stats?.nickname) {

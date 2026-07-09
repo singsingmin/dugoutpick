@@ -39,6 +39,25 @@ export function judgeSelection(selectedGameId, dhResult, gameStatusById) {
   return 'miss';
 }
 
+// 정산 시점 실제 경기 성격 태그(경기성향형 칭호용, P3). recap이 없으면(과거 소급 등) 가능한 태그만.
+//   games.json recap = { actual, verdict, diff, total, extra, walkoff } / 과거는 recap-history의 actual만.
+export function computeResultTags(selectedGameId, recap, dhResult) {
+  const tags = [];
+  const r = recap || {};
+  if (r.walkoff) tags.push('walkoff');
+  if (r.extra) tags.push('extra');
+  if (typeof r.diff === 'number') {
+    if (r.diff <= 1) tags.push('close_1');
+    else if (r.diff === 2) tags.push('close_2');
+  }
+  if ((r.total ?? 0) >= 14) tags.push('slugfest');
+  if ((r.actual ?? 0) >= 70) tags.push('classic_game');
+  const isTop = !!dhResult && (selectedGameId === dhResult.actualTopGameId
+    || (Array.isArray(dhResult.tiedGameIds) && dhResult.tiedGameIds.includes(selectedGameId)));
+  if (isTop) tags.push('daily_top');
+  return tags;
+}
+
 // 보상/포인트(v1 예시 — 정확 수치는 docs/prediction-league-design.md §7·10에서 "구현 단계 확정" 대상).
 // 연속 적중 보너스는 settle_prediction이 스트릭을 아는 시점(DB 트랜잭션 내부)에 넣는 게 맞아서
 // 여기선 기본(참여+적중) 금액만 계산 — 스트릭 가중은 후속 튜닝 과제로 남김.
@@ -77,7 +96,7 @@ export function planSettlements(pendingRows, dhByDate, todayIso, todayGameStatus
       continue;                                            // 오늘자 미확정 또는 미래 → 보류
     }
     const { reward, points } = rewardFor(status);
-    out.push({ user_id: row.user_id, date: d, status, reward, points });
+    out.push({ user_id: row.user_id, date: d, status, reward, points, selected_game_id: row.selected_game_id });
   }
   return out;
 }
@@ -94,7 +113,8 @@ async function upsertWindow(date, games) {
 }
 
 // 과거 pending 전체를 dailyHoney-history와 대조해 소급 정산(P1-1). todayGames로 오늘자 취소만 감지.
-async function settlePending(todayYmd, dhResults, todayGames) {
+// recapByGame: gameId→recap 조회맵(오늘 full recap + 과거 actual) — result_tags 계산용.
+async function settlePending(todayYmd, dhResults, todayGames, recapByGame) {
   const todayIso = ymdToIso(todayYmd);
   const pr = await fetch(rest('predictions?status=eq.pending&select=user_id,date,selected_game_id'), { headers: H });
   if (!pr.ok) { console.warn('[predictions] pending 조회 실패:', pr.status); return; }
@@ -108,9 +128,10 @@ async function settlePending(todayYmd, dhResults, todayGames) {
 
   let ok = 0;
   for (const s of plan) {
+    const resultTags = computeResultTags(s.selected_game_id, (recapByGame || {})[s.selected_game_id], dhByDate[s.date]);
     const res = await fetch(rpc('settle_prediction'), {
       method: 'POST', headers: H,
-      body: JSON.stringify({ p_user_id: s.user_id, p_date: s.date, p_status: s.status, p_reward: s.reward, p_points: s.points }),
+      body: JSON.stringify({ p_user_id: s.user_id, p_date: s.date, p_status: s.status, p_reward: s.reward, p_points: s.points, p_result_tags: resultTags }),
     });
     if (!res.ok) console.warn(`[predictions] 정산 실패(user=${s.user_id} date=${s.date}):`, res.status, await res.text());
     else ok++;
@@ -132,7 +153,19 @@ async function main() {
   const dhResults = fs.existsSync(dhPath)
     ? (JSON.parse(fs.readFileSync(dhPath, 'utf8')).results || [])
     : [];
-  await settlePending(gamesData.date, dhResults, gamesData.games);
+
+  // gameId→recap 조회맵: 오늘 games(full recap: diff/total/extra/walkoff/actual) + recap-history(과거 actual).
+  const recapByGame = {};
+  for (const g of gamesData.games || []) if (g.recap) recapByGame[g.gameId] = g.recap;
+  const rhPath = path.join(__dirname, 'output', 'recap-history.json');
+  if (fs.existsSync(rhPath)) {
+    const rh = JSON.parse(fs.readFileSync(rhPath, 'utf8'));
+    for (const rec of (rh.records || [])) {
+      if (!recapByGame[rec.gameId]) recapByGame[rec.gameId] = { actual: rec.actual };
+    }
+  }
+
+  await settlePending(gamesData.date, dhResults, gamesData.games, recapByGame);
 }
 
 // 스크립트로 직접 실행될 때만 동작 — 테스트가 순수 함수만 import할 때 네트워크 부작용 방지.
