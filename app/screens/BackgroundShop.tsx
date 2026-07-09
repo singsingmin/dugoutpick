@@ -147,7 +147,7 @@ export default function BackgroundShop() {
     // 미보유 구매형만 여기 도달(명예 미보유는 목록에 없음)
     const bg = c.backgroundId ? catalogById(c.backgroundId) : undefined;
     if (!bg) return;
-    if (!online) { showToast('구매는 인터넷 연결 후 가능해요'); return; }
+    if (!online) { showToast('교환은 인터넷 연결 후 가능해요'); return; }
     setModal({ kind: (bg.price ?? 0) <= baseballBalance ? 'confirm' : 'insufficient', bg });
   };
 
@@ -167,12 +167,15 @@ export default function BackgroundShop() {
           }]);
         }
         setModal({ kind: 'done', bg, ownedId: newId });
+      } else if (res.reason === 'not_available') {
+        setModal(null);
+        showToast('지금은 교환할 수 없는 기간이에요');
       } else {
         setModal({ kind: 'insufficient', bg });
       }
     } catch (e) {
       setModal(null);
-      showToast(SHOW_RAW_ERR ? `구매 오류: ${(e as Error).message}` : '구매 처리 중 오류가 났어요. 다시 시도해 주세요.');
+      showToast(SHOW_RAW_ERR ? `교환 오류: ${(e as Error).message}` : '교환 처리 중 오류가 났어요. 다시 시도해 주세요.');
     } finally {
       setBusy(false);
     }
@@ -261,7 +264,7 @@ export default function BackgroundShop() {
                   <>
                     <View style={styles.modalLine}>
                       <BaseballAmount n={modal.bg.price ?? 0} size={18} />
-                      <PixelText variant="body" color={colors.text}>야구공으로 구매할까요?</PixelText>
+                      <PixelText variant="body" color={colors.text}>야구공으로 교환할까요?</PixelText>
                     </View>
                     <View style={styles.modalLine}>
                       <PixelText variant="caption" color={colors.textDim}>현재 보유</PixelText>
@@ -269,7 +272,7 @@ export default function BackgroundShop() {
                     </View>
                     <View style={styles.modalBtnRow}>
                       <Pressable style={[styles.modalBtn, { backgroundColor: accent }]} onPress={confirmBuy} disabled={busy}>
-                        <PixelText variant="body" color="#fff">구매하기</PixelText>
+                        <PixelText variant="body" color="#fff">교환하기</PixelText>
                       </Pressable>
                       <Pressable style={[styles.modalBtn, styles.modalBtnGhost]} onPress={() => setModal(null)}>
                         <PixelText variant="body" color={colors.text}>취소</PixelText>
@@ -280,7 +283,7 @@ export default function BackgroundShop() {
 
                 {modal.kind === 'done' && (
                   <>
-                    <PixelText variant="body" color={colors.good} style={styles.modalMsg}>구매 완료! 바로 적용할까요?</PixelText>
+                    <PixelText variant="body" color={colors.good} style={styles.modalMsg}>교환 완료! 바로 적용할까요?</PixelText>
                     <View style={styles.modalBtnRow}>
                       <Pressable style={[styles.modalBtn, { backgroundColor: accent }]} onPress={applyFromModal}>
                         <PixelText variant="body" color="#fff">적용하기</PixelText>
