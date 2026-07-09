@@ -1,7 +1,7 @@
 {
   "date": "20260709",
   "dateText": "2026년 7월 9일",
-  "updatedAt": "2026-07-09T08:40:47.124Z",
+  "updatedAt": "2026-07-09T09:30:50.183Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -15,14 +15,14 @@
       "gameId": "20260709SKOB0",
       "time": "18:30",
       "stadium": "잠실",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SS-T",
       "away": {
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "해치",
           "era": 7.08,
@@ -34,7 +34,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "잭로그",
           "era": 4.12,
@@ -61,9 +61,21 @@
           "doom": 0,
           "park": 0.09,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 0,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "잭로그",
+        "batter": "정준재",
+        "heat": 31,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
@@ -168,14 +180,14 @@
       "gameId": "20260709LGSS0",
       "time": "18:30",
       "stadium": "대구",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "KN-T",
       "away": {
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "웰스",
           "era": 2.77,
@@ -187,7 +199,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "원태인",
           "era": 3.45,
@@ -214,9 +226,21 @@
           "doom": 0,
           "park": 1,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 0,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "원태인",
+        "batter": "홍창기",
+        "heat": 31,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
