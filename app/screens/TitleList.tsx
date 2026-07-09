@@ -7,7 +7,7 @@ import { useAuth } from '../context/Auth';
 import { useTeamTheme } from '../context/TeamTheme';
 import { fetchOwnedTitles, equipTitle, type OwnedTitle } from '../services/cosmetics';
 import { fetchPredictionStats } from '../services/predictions';
-import { titleDisplay } from '../utils/titleConfig';
+import { titleDisplay, GRADE_META } from '../utils/titleConfig';
 import PixelText from '../components/PixelText';
 import Panel from '../components/Panel';
 import ScreenHeader from '../components/ScreenHeader';
@@ -60,11 +60,17 @@ export default function TitleList() {
           ) : (
             titles.map((t) => {
               const display = titleDisplay(t.titleId);
+              const grade = GRADE_META[display.grade];
               const isEquipped = equipped === t.titleId;
               return (
                 <Panel key={t.titleId} style={[styles.row, isEquipped && { borderColor: accent }]}>
                   <View style={styles.rowText}>
-                    <PixelText variant="body" color={colors.text}>{display.label}</PixelText>
+                    <View style={styles.titleRow}>
+                      <PixelText variant="body" color={colors.text}>{display.label}</PixelText>
+                      <View style={[styles.gradeChip, { backgroundColor: grade.color }]}>
+                        <PixelText variant="caption" color="#fff">{grade.label}</PixelText>
+                      </View>
+                    </View>
                     {display.description && (
                       <PixelText variant="caption" color={colors.textDim}>{display.description}</PixelText>
                     )}
@@ -96,6 +102,8 @@ const styles = StyleSheet.create({
   content: { padding: spacing.md, gap: spacing.sm },
   row: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
   rowText: { flex: 1, gap: 2 },
+  titleRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.xs, flexWrap: 'wrap' },
+  gradeChip: { borderRadius: 999, paddingHorizontal: spacing.sm, paddingVertical: 1 },
   equipBtn: {
     borderRadius: border.radius, borderWidth: 1, borderColor: colors.border,
     paddingHorizontal: spacing.sm, paddingVertical: spacing.xs, backgroundColor: colors.surfaceAlt,

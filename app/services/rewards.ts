@@ -1,6 +1,7 @@
 // 통합 보상 인박스(reward_events) 데이터 레이어 — P1(docs/roadmap.md §G).
 // 서버가 정산 등에서 발행한 미확인 보상 알림을 앱 진입 시 fetch → 토스트/모달 → seen 처리.
 import { supabase } from './supabase';
+import { titleDisplay } from '../utils/titleConfig';
 
 export interface RewardEvent {
   id: number;
@@ -37,6 +38,10 @@ export function rewardEventMessage(e: RewardEvent): { title: string; detail: str
   switch (e.eventType) {
     case 'monthly_milestone':
       return { title: typeof p.label === 'string' ? p.label : '월간 달성 보상', detail: `야구공 +${reward}` };
+    case 'title_earned': {
+      const id = typeof p.title_id === 'string' ? p.title_id : '';
+      return { title: '새 칭호 획득', detail: id ? titleDisplay(id).label : '' };
+    }
     default:
       return { title: '보상 도착', detail: reward ? `야구공 +${reward}` : '' };
   }
