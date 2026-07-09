@@ -63,8 +63,8 @@ export function computeResultTags(selectedGameId, recap, dhResult) {
 // 여기선 기본(참여+적중) 금액만 계산 — 스트릭 가중은 후속 튜닝 과제로 남김.
 export function rewardFor(status) {
   if (status === 'hit') return { reward: 10, points: 11 };  // 적중 10 + 참여 1
-  if (status === 'miss') return { reward: 0, points: 1 };   // 참여만
-  return { reward: 0, points: 0 };                          // void: 참여 취급 안 함
+  if (status === 'miss') return { reward: 3, points: 1 };   // 참여 보상 3(적중 어려워 매일 참여 유인) + 포인트 1
+  return { reward: 0, points: 0 };                          // void: 참여 취급 안 함(보상·연속 유지)
 }
 
 // "YYYYMMDD" → "YYYY-MM-DD"(predictions.date 컬럼 형식). 이미 iso면 그대로.

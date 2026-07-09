@@ -34,7 +34,7 @@ check('judgeSelection 공동1위 아닌 선택 → miss', judgeSelection('C', dh
 
 // rewardFor
 check('rewardFor hit', rewardFor('hit'), { reward: 10, points: 11 });
-check('rewardFor miss', rewardFor('miss'), { reward: 0, points: 1 });
+check('rewardFor miss', rewardFor('miss'), { reward: 3, points: 1 });
 check('rewardFor void', rewardFor('void'), { reward: 0, points: 0 });
 
 // ymdToIso
@@ -51,7 +51,7 @@ check('planSettlements 확정된 과거 날짜 → judge(hit)',
 
 check('planSettlements 확정된 과거 날짜 → judge(miss)',
   planSettlements([{ user_id: 'u1', date: '2026-07-05', selected_game_id: 'A' }], dhByDate, todayIso, {}),
-  [{ user_id: 'u1', date: '2026-07-05', status: 'miss', reward: 0, points: 1, selected_game_id: 'A' }]);
+  [{ user_id: 'u1', date: '2026-07-05', status: 'miss', reward: 3, points: 1, selected_game_id: 'A' }]);
 
 check('planSettlements 확정 없는 과거 날짜(전경기 취소) → void',
   planSettlements([{ user_id: 'u1', date: '2026-07-04', selected_game_id: 'X' }], dhByDate, todayIso, {}),

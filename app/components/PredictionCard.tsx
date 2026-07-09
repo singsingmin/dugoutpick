@@ -173,7 +173,9 @@ export default function PredictionCard({ dateYmd, games, locked }: Props) {
                 )}
               </View>
             ) : (
-              <PixelText variant="body" color={colors.textDim}>아쉽네요, 다음 기회에</PixelText>
+              <PixelText variant="body" color={colors.textDim}>
+                아쉽네요, 다음 기회에{prediction.rewardBaseballs > 0 ? ` · 참여 야구공 +${prediction.rewardBaseballs}` : ''}
+              </PixelText>
             )}
           </View>
         )}
