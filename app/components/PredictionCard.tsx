@@ -16,7 +16,7 @@ import Panel from './Panel';
 import TeamName from './TeamName';
 import SectionLabel from './SectionLabel';
 import { ymdToIso } from '../utils';
-import { colors, spacing, border } from '../theme';
+import { colors, spacing, border, fonts, fontSize } from '../theme';
 
 interface Props {
   dateYmd: string;   // "YYYYMMDD" — Today.tsx의 data.date
@@ -265,6 +265,7 @@ const styles = StyleSheet.create({
   input: {
     borderWidth: 1, borderColor: colors.border, borderRadius: border.radius,
     paddingHorizontal: spacing.sm, paddingVertical: spacing.xs, color: colors.text,
+    fontFamily: fonts.pixel, fontSize: fontSize.body,   // 앱 픽셀 폰트로 통일
   },
   confirmButton: {
     backgroundColor: colors.accent, borderRadius: border.radius,

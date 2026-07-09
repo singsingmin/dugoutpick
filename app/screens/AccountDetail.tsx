@@ -12,7 +12,7 @@ import Panel from '../components/Panel';
 import PixelButton from '../components/PixelButton';
 import ScreenHeader from '../components/ScreenHeader';
 import SectionLabel from '../components/SectionLabel';
-import { border, colors, spacing } from '../theme';
+import { border, colors, fonts, fontSize, spacing } from '../theme';
 
 // set_nickname의 월 판정(to_char(now() at 'Asia/Seoul','YYYYMM'))과 동일한 KST 월 문자열.
 function kstMonth(): string {
@@ -260,6 +260,7 @@ const styles = StyleSheet.create({
   redeemInput: {
     marginTop: spacing.xs, borderWidth: 1, borderColor: colors.border, borderRadius: border.radius,
     paddingHorizontal: spacing.sm, paddingVertical: spacing.xs, color: colors.text,
+    fontFamily: fonts.pixel, fontSize: fontSize.body,   // 앱 픽셀 폰트로 통일
   },
   modalOverlay: { flex: 1, backgroundColor: 'rgba(0,0,0,0.5)', alignItems: 'center', justifyContent: 'center', padding: spacing.xl },
   modalCard: {
