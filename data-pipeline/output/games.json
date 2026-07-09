@@ -1,7 +1,7 @@
 {
   "date": "20260709",
   "dateText": "2026년 7월 9일",
-  "updatedAt": "2026-07-09T10:10:43.840Z",
+  "updatedAt": "2026-07-09T10:25:45.341Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 2,
+        "score": 4,
         "starter": {
           "name": "잭로그",
           "era": 4.12,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
-        "out": 0,
-        "b1": false,
+        "inning": 3,
+        "half": "T",
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "해치",
-        "batter": "박찬호",
-        "heat": 29,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "잭로그",
+        "batter": "채현우",
+        "heat": 15,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -187,7 +187,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 1,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "웰스",
           "era": 2.77,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
+        "half": "B",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "원태인",
-        "batter": "홍창기",
-        "heat": 38,
+        "pitcher": "웰스",
+        "batter": "양우현",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
+        "inning": 4,
         "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "양현종",
-        "batter": "손성빈",
-        "heat": 33,
+        "batter": "한동희",
+        "heat": 37,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "T",
-        "out": 2,
+        "inning": 3,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "배제성",
-        "batter": "김동헌",
-        "heat": 35,
+        "pitcher": "하영민",
+        "batter": "한승택",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -726,14 +726,14 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "화이트",
-        "batter": "고준휘",
-        "heat": 31,
+        "pitcher": "구창모",
+        "batter": "문현빈",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
