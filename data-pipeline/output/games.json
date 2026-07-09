@@ -1,11 +1,11 @@
 {
   "date": "20260709",
   "dateText": "2026년 7월 9일",
-  "updatedAt": "2026-07-09T12:10:46.947Z",
+  "updatedAt": "2026-07-09T12:54:34.711Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
-    "hitRate": 18,
+    "hitRate": 20,
     "bonusRate": 50,
     "ready": true
   },
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "T",
-        "out": 2,
+        "inning": 8,
+        "half": "B",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이용찬",
-        "batter": "조형우",
-        "heat": 3,
+        "pitcher": "한두솔",
+        "batter": "강승호",
+        "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
       "recap": null,
@@ -180,14 +180,14 @@
       "gameId": "20260709LGSS0",
       "time": "18:30",
       "stadium": "대구",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "KN-T",
       "away": {
         "code": "LG",
         "name": "LG",
-        "rank": 1,
-        "score": 3,
+        "rank": 2,
+        "score": 5,
         "starter": {
           "name": "웰스",
           "era": 2.77,
@@ -198,8 +198,8 @@
       "home": {
         "code": "SS",
         "name": "삼성",
-        "rank": 2,
-        "score": 5,
+        "rank": 1,
+        "score": 6,
         "starter": {
           "name": "원태인",
           "era": 3.45,
@@ -229,117 +229,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 8,
-        "half": "T",
-        "out": 2,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "김태훈",
-        "batter": "오지환",
-        "heat": 55,
-        "label": "후반 박빙 승부"
+      "live": null,
+      "recap": {
+        "actual": 92,
+        "verdict": "예측 적중",
+        "diff": 1,
+        "total": 11,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "김지찬"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "박승규"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "구자욱"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "최형우"
-          },
-          {
-            "order": 5,
-            "pos": "1루수",
-            "name": "디아즈"
-          },
-          {
-            "order": 6,
-            "pos": "포수",
-            "name": "강민호"
-          },
-          {
-            "order": 7,
-            "pos": "3루수",
-            "name": "김영웅"
-          },
-          {
-            "order": 8,
-            "pos": "유격수",
-            "name": "심재훈"
-          },
-          {
-            "order": 9,
-            "pos": "2루수",
-            "name": "양우현"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "우익수",
-            "name": "홍창기"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "박해민"
-          },
-          {
-            "order": 3,
-            "pos": "지명타자",
-            "name": "오스틴"
-          },
-          {
-            "order": 4,
-            "pos": "좌익수",
-            "name": "송찬의"
-          },
-          {
-            "order": 5,
-            "pos": "포수",
-            "name": "박동원"
-          },
-          {
-            "order": 6,
-            "pos": "1루수",
-            "name": "천성호"
-          },
-          {
-            "order": 7,
-            "pos": "3루수",
-            "name": "문보경"
-          },
-          {
-            "order": 8,
-            "pos": "유격수",
-            "name": "오지환"
-          },
-          {
-            "order": 9,
-            "pos": "2루수",
-            "name": "신민재"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260709HTLT0",
@@ -414,14 +318,14 @@
       "gameId": "20260709WOKT0",
       "time": "18:30",
       "stadium": "수원",
-      "status": "LIVE",
-      "cancelReason": null,
+      "status": "CANCELED",
+      "cancelReason": "우천취소",
       "broadcast": "SPO-2T",
       "away": {
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 0,
+        "score": null,
         "starter": {
           "name": "하영민",
           "era": 4.16,
@@ -433,7 +337,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 3,
-        "score": 3,
+        "score": null,
         "starter": {
           "name": "배제성",
           "era": 4.5,
@@ -463,117 +367,10 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 0,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "하영민",
-        "batter": "허경민",
-        "heat": 28,
-        "label": "경기 흐름 체크 중"
-      },
+      "live": null,
       "recap": null,
       "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "지명타자",
-            "name": "최원준"
-          },
-          {
-            "order": 2,
-            "pos": "1루수",
-            "name": "김현수"
-          },
-          {
-            "order": 3,
-            "pos": "우익수",
-            "name": "안현민"
-          },
-          {
-            "order": 4,
-            "pos": "좌익수",
-            "name": "힐리어드"
-          },
-          {
-            "order": 5,
-            "pos": "3루수",
-            "name": "허경민"
-          },
-          {
-            "order": 6,
-            "pos": "2루수",
-            "name": "김상수"
-          },
-          {
-            "order": 7,
-            "pos": "중견수",
-            "name": "배정대"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "한승택"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "권동진"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "2루수",
-            "name": "서건창"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "추재현"
-          },
-          {
-            "order": 3,
-            "pos": "지명타자",
-            "name": "데이비슨"
-          },
-          {
-            "order": 4,
-            "pos": "좌익수",
-            "name": "히우라"
-          },
-          {
-            "order": 5,
-            "pos": "우익수",
-            "name": "박찬혁"
-          },
-          {
-            "order": 6,
-            "pos": "1루수",
-            "name": "최주환"
-          },
-          {
-            "order": 7,
-            "pos": "포수",
-            "name": "김동헌"
-          },
-          {
-            "order": 8,
-            "pos": "유격수",
-            "name": "권혁빈"
-          },
-          {
-            "order": 9,
-            "pos": "3루수",
-            "name": "여동욱"
-          }
-        ],
-        "confirmed": true
-      }
+      "lineup": null
     },
     {
       "gameId": "20260709NCHH0",
@@ -586,7 +383,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 2,
+        "score": 4,
         "starter": {
           "name": "구창모",
           "era": 3.44,
@@ -629,16 +426,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 8,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "구창모",
-        "batter": "허인서",
-        "heat": 46,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "이상규",
+        "batter": "박건우",
+        "heat": 70,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
