@@ -74,7 +74,8 @@ export async function rpcSetNickname(nickname: string): Promise<NicknameResult> 
 }
 
 // user_id는 서버가 절대 반환하지 않음(docs/stage6-cosmetics-design.md §4-3) — is_me만 내려받아 내 행 강조.
-export interface LeaderboardRow { nickname: string; hits: number; participations: number; isMe: boolean }
+// rank는 서버 RANK()(동점=공동 순위, 보상 정산과 동일 타이브레이커) — 앱은 index가 아니라 이 값을 표시(0015).
+export interface LeaderboardRow { rank: number; nickname: string; hits: number; participations: number; bestStreak: number; isMe: boolean }
 export interface PointsLeaderboardRow extends LeaderboardRow { monthlyPoints: number }
 export interface HitRateLeaderboardRow extends LeaderboardRow { hitRate: number }
 
@@ -82,14 +83,14 @@ export interface HitRateLeaderboardRow extends LeaderboardRow { hitRate: number 
 export async function fetchMonthlyLeaderboard(limit = 50): Promise<PointsLeaderboardRow[]> {
   const { data, error } = await supabase.rpc('get_monthly_leaderboard', { p_limit: limit });
   if (error) throw error;
-  return ((data ?? []) as { nickname: string; monthly_points: number; hits: number; participations: number; is_me: boolean }[])
-    .map((r) => ({ nickname: r.nickname, monthlyPoints: r.monthly_points, hits: r.hits, participations: r.participations, isMe: r.is_me }));
+  return ((data ?? []) as { rank: number; nickname: string; monthly_points: number; hits: number; participations: number; best_streak: number; is_me: boolean }[])
+    .map((r) => ({ rank: r.rank, nickname: r.nickname, monthlyPoints: r.monthly_points, hits: r.hits, participations: r.participations, bestStreak: r.best_streak, isMe: r.is_me }));
 }
 
 // 월간 적중률 랭킹(보조, 최소 참여 조건은 서버 기본값 적용).
 export async function fetchMonthlyHitrateLeaderboard(limit = 50): Promise<HitRateLeaderboardRow[]> {
   const { data, error } = await supabase.rpc('get_monthly_hitrate_leaderboard', { p_limit: limit });
   if (error) throw error;
-  return ((data ?? []) as { nickname: string; hit_rate: number; hits: number; participations: number; is_me: boolean }[])
-    .map((r) => ({ nickname: r.nickname, hitRate: r.hit_rate, hits: r.hits, participations: r.participations, isMe: r.is_me }));
+  return ((data ?? []) as { rank: number; nickname: string; hit_rate: number; hits: number; participations: number; best_streak: number; is_me: boolean }[])
+    .map((r) => ({ rank: r.rank, nickname: r.nickname, hitRate: r.hit_rate, hits: r.hits, participations: r.participations, bestStreak: r.best_streak, isMe: r.is_me }));
 }

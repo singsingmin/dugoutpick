@@ -54,13 +54,13 @@ export default function PredictionLeague() {
   const myNickname = stats?.nickname ?? null;
   const equippedTitle = stats?.equippedTitle ? titleDisplay(stats.equippedTitle).label : null;
 
-  const pointsRows: LbRow[] = points.map((r, i) => ({
-    rank: i + 1, nickname: r.nickname, isMe: r.isMe,
-    right: `${r.monthlyPoints}점`, sub: `적중 ${r.hits}/${r.participations}`,
+  const pointsRows: LbRow[] = points.map((r) => ({
+    rank: r.rank, nickname: r.nickname, isMe: r.isMe,
+    right: `${r.monthlyPoints}점`, sub: `적중 ${r.hits}/${r.participations} · 최고 ${r.bestStreak}연속`,
   }));
-  const hitrateRows: LbRow[] = hitrate.map((r, i) => ({
-    rank: i + 1, nickname: r.nickname, isMe: r.isMe,
-    right: `${r.hitRate}%`, sub: `${r.hits}/${r.participations}`,
+  const hitrateRows: LbRow[] = hitrate.map((r) => ({
+    rank: r.rank, nickname: r.nickname, isMe: r.isMe,
+    right: `${r.hitRate}%`, sub: `적중 ${r.hits}/${r.participations} · 최고 ${r.bestStreak}연속`,
   }));
 
   return (
@@ -128,6 +128,9 @@ export default function PredictionLeague() {
                     <PixelText variant="caption" color={accent}>전체 랭킹 보기 ›</PixelText>
                   </Pressable>
                 )}
+                <PixelText variant="caption" color={colors.textDim} style={styles.tiebreakNote}>
+                  동점 시 적중 수 → 적중률 → 최고 연속 순, 모두 같으면 공동 순위
+                </PixelText>
               </>
             )}
           </View>
@@ -145,6 +148,9 @@ export default function PredictionLeague() {
                     <PixelText variant="caption" color={accent}>전체 랭킹 보기 ›</PixelText>
                   </Pressable>
                 )}
+                <PixelText variant="caption" color={colors.textDim} style={styles.tiebreakNote}>
+                  적중률 동점 시 적중 수 → 최고 연속 순, 모두 같으면 공동 순위
+                </PixelText>
               </>
             )}
           </View>
@@ -176,4 +182,5 @@ const styles = StyleSheet.create({
   statCell: { alignItems: 'center', gap: 2 },
 
   moreLink: { alignItems: 'flex-end', paddingTop: spacing.xs },
+  tiebreakNote: { marginTop: spacing.xs },
 });

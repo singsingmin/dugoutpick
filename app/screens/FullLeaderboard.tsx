@@ -30,13 +30,13 @@ export default function FullLeaderboard() {
     useCallback(() => {
       let active = true;
       const p = board === 'points'
-        ? fetchMonthlyLeaderboard(100).then((list) => list.map((r, i): LbRow => ({
-            rank: i + 1, nickname: r.nickname, isMe: r.isMe,
-            right: `${r.monthlyPoints}점`, sub: `적중 ${r.hits}/${r.participations}`,
+        ? fetchMonthlyLeaderboard(100).then((list) => list.map((r): LbRow => ({
+            rank: r.rank, nickname: r.nickname, isMe: r.isMe,
+            right: `${r.monthlyPoints}점`, sub: `적중 ${r.hits}/${r.participations} · 최고 ${r.bestStreak}연속`,
           })))
-        : fetchMonthlyHitrateLeaderboard(100).then((list) => list.map((r, i): LbRow => ({
-            rank: i + 1, nickname: r.nickname, isMe: r.isMe,
-            right: `${r.hitRate}%`, sub: `${r.hits}/${r.participations}`,
+        : fetchMonthlyHitrateLeaderboard(100).then((list) => list.map((r): LbRow => ({
+            rank: r.rank, nickname: r.nickname, isMe: r.isMe,
+            right: `${r.hitRate}%`, sub: `적중 ${r.hits}/${r.participations} · 최고 ${r.bestStreak}연속`,
           })));
       p.then((rs) => { if (!active) return; setRows(rs); setLoaded(true); })
         .catch(() => { if (active) setLoaded(true); });
@@ -62,7 +62,14 @@ export default function FullLeaderboard() {
                 : '이번 달 참여 기록이 없어요'}
             </PixelText>
           ) : (
-            <LeaderboardTable rows={rows} accent={accent} />
+            <>
+              <LeaderboardTable rows={rows} accent={accent} />
+              <PixelText variant="caption" color={colors.textDim} style={styles.tiebreakNote}>
+                {board === 'points'
+                  ? '동점 시 적중 수 → 적중률 → 최고 연속 순, 모두 같으면 공동 순위'
+                  : '적중률 동점 시 적중 수 → 최고 연속 순, 모두 같으면 공동 순위'}
+              </PixelText>
+            </>
           )}
         </ScrollView>
       </SafeAreaView>
@@ -76,4 +83,5 @@ const styles = StyleSheet.create({
   bgOverlay: { position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(243,233,206,0.35)' },
   safe: { flex: 1, backgroundColor: 'transparent' },
   content: { padding: spacing.md },
+  tiebreakNote: { marginTop: spacing.sm },
 });
