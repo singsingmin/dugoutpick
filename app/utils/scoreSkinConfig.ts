@@ -31,6 +31,10 @@ interface BaseSkin {
   // 한정 판매 윈도우(표시용, 강제 SoT는 서버 skins.available_from/until). ISO '+09:00'.
   availableFrom?: string;
   availableUntil?: string;
+  // 연도 롤오버 메타(동일 컨셉의 연도별 버전 구분 — docs/limited-cosmetics-plan.md).
+  baseKey?: string;   // 같은 컨셉 시리즈 키(예: 'gold_glove')
+  year?: number;      // 연도 버전
+  fullName?: string;  // 상세/보유 표시용 긴 이름. label=카드/그리드용 짧은 이름.
 }
 
 export interface JerseySkin extends BaseSkin {
@@ -191,17 +195,19 @@ export const SCORE_SKINS: ScoreSkin[] = [
     assetKey: 'champRing', renderType: 'imageFrame',
     unlockType: 'currency', price: 90, currencyType: 'baseball', sortOrder: 620,
   },
-  // ── 2026 하반기 한정 스킨 2종 (판매 윈도우 = 서버 강제, 여기 날짜는 표시용) ──
+  // ── 2026 하반기 한정 스킨 2종 (판매 윈도우=서버 강제, 날짜는 표시용 / 연도 롤오버 메타 포함) ──
   {
     id: 'skin.stove_winter_2026', kind: 'asset', category: 'special',
-    label: '스토브리그 윈터', description: 'FA·이적시장 겨울 한정',
+    label: "'26 스토브리그 윈터", fullName: '2026 스토브리그 윈터', baseKey: 'stove_winter', year: 2026,
+    description: 'FA·이적시장 겨울 한정',
     assetKey: 'stoveWinter', renderType: 'imageFrame',
     unlockType: 'currency', price: 120, currencyType: 'baseball', sortOrder: 700,
     availableFrom: '2026-11-16T00:00:00+09:00', availableUntil: '2026-12-10T00:00:00+09:00',
   },
   {
     id: 'skin.gold_glove_2026', kind: 'asset', category: 'special',
-    label: '황금장갑', description: '연말 시상식 프리미엄 한정',
+    label: "'26 황금장갑", fullName: '2026 황금장갑', baseKey: 'gold_glove', year: 2026,
+    description: '연말 시상식 프리미엄 한정',
     assetKey: 'goldGlove', renderType: 'imageFrame',
     unlockType: 'currency', price: 240, currencyType: 'baseball', sortOrder: 710,
     availableFrom: '2026-12-10T00:00:00+09:00', availableUntil: '2027-01-01T00:00:00+09:00',

@@ -16,6 +16,10 @@ export interface LockerBackground {
   // 한정 판매 윈도우(표시용, 강제 SoT는 서버 backgrounds.available_from/until). ISO '+09:00'.
   availableFrom?: string;
   availableUntil?: string;
+  // 연도 롤오버 메타(동일 컨셉의 연도별 버전 구분 — docs/limited-cosmetics-plan.md).
+  baseKey?: string;   // 같은 컨셉 시리즈 키(예: 'stars_night')
+  year?: number;      // 연도 버전
+  fullName?: string;  // 상세/보유 표시용 긴 이름(예: '2026 별들의 밤'). label=카드/그리드용 짧은 이름.
 }
 
 export const LOCKER_BACKGROUNDS: LockerBackground[] = [
@@ -69,42 +73,48 @@ export const LOCKER_BACKGROUNDS: LockerBackground[] = [
     unlockType: 'currency', price: 60, sortOrder: 95,
     backgroundImage: require('../assets/lockerbg-stove-league-office.webp'),
   },
-  // ── 2026 하반기 한정 배경 6종 (판매 윈도우 = 서버 강제, 여기 날짜는 표시용) ──
+  // ── 2026 하반기 한정 배경 6종 (판매 윈도우=서버 강제, 날짜는 표시용 / 연도 롤오버 메타 포함) ──
   {
-    id: 'lockerbg.stars_night_2026', label: '별들의 밤', description: '올스타 브레이크 · 별빛 야간 무대',
+    id: 'lockerbg.stars_night_2026', label: "'26 별들의 밤", fullName: '2026 별들의 밤',
+    baseKey: 'stars_night', year: 2026, description: '올스타 브레이크 · 별빛 야간 무대',
     unlockType: 'currency', price: 120, sortOrder: 200,
     availableFrom: '2026-07-15T00:00:00+09:00', availableUntil: '2026-08-01T00:00:00+09:00',
-    backgroundImage: require('../assets/lockerbg-stars-night.webp'),
+    backgroundImage: require('../assets/lockerbg-stars-night-2026.webp'),
   },
   {
-    id: 'lockerbg.midsummer_night_2026', label: '한여름 나이터', description: '열대야 야간경기 · 네온 조명',
+    id: 'lockerbg.midsummer_night_2026', label: "'26 한여름 나이터", fullName: '2026 한여름 나이터',
+    baseKey: 'midsummer_night', year: 2026, description: '열대야 야간경기 · 네온 조명',
     unlockType: 'currency', price: 120, sortOrder: 210,
     availableFrom: '2026-08-01T00:00:00+09:00', availableUntil: '2026-09-01T00:00:00+09:00',
-    backgroundImage: require('../assets/lockerbg-midsummer-night.webp'),
+    backgroundImage: require('../assets/lockerbg-midsummer-night-2026.webp'),
   },
   {
-    id: 'lockerbg.chuseok_2026', label: '한가위 구장', description: '보름달 뜬 명절 구장',
+    id: 'lockerbg.chuseok_2026', label: "'26 한가위 구장", fullName: '2026 한가위 구장',
+    baseKey: 'chuseok', year: 2026, description: '보름달 뜬 명절 구장',
     unlockType: 'currency', price: 120, sortOrder: 220,
     availableFrom: '2026-09-18T00:00:00+09:00', availableUntil: '2026-10-07T00:00:00+09:00',
-    backgroundImage: require('../assets/lockerbg-chuseok.webp'),
+    backgroundImage: require('../assets/lockerbg-chuseok-2026.webp'),
   },
   {
-    id: 'lockerbg.autumn_baseball_2026', label: '가을야구', description: '단풍 · 포스트시즌 기대감',
+    id: 'lockerbg.autumn_baseball_2026', label: "'26 가을야구", fullName: '2026 가을야구',
+    baseKey: 'autumn_baseball', year: 2026, description: '단풍 · 포스트시즌 기대감',
     unlockType: 'currency', price: 150, sortOrder: 230,
     availableFrom: '2026-10-01T00:00:00+09:00', availableUntil: '2026-10-25T00:00:00+09:00',
-    backgroundImage: require('../assets/lockerbg-autumn-baseball.webp'),
+    backgroundImage: require('../assets/lockerbg-autumn-baseball-2026.webp'),
   },
   {
-    id: 'lockerbg.championship_2026', label: '챔피언 시리즈', description: '우승 무대 · 트로피 조명',
+    id: 'lockerbg.championship_2026', label: "'26 챔피언 시리즈", fullName: '2026 챔피언 시리즈',
+    baseKey: 'championship', year: 2026, description: '우승 무대 · 트로피 조명',
     unlockType: 'currency', price: 200, sortOrder: 240,
     availableFrom: '2026-10-25T00:00:00+09:00', availableUntil: '2026-11-16T00:00:00+09:00',
-    backgroundImage: require('../assets/lockerbg-championship.webp'),
+    backgroundImage: require('../assets/lockerbg-championship-2026.webp'),
   },
   {
-    id: 'lockerbg.holiday_2026', label: '홀리데이 연말 구장', description: '크리스마스 조명 · 연말 구장',
+    id: 'lockerbg.holiday_2026', label: "'26 홀리데이 연말 구장", fullName: '2026 홀리데이 연말 구장',
+    baseKey: 'holiday', year: 2026, description: '크리스마스 조명 · 연말 구장',
     unlockType: 'currency', price: 150, sortOrder: 250,
     availableFrom: '2026-12-01T00:00:00+09:00', availableUntil: '2027-01-01T00:00:00+09:00',
-    backgroundImage: require('../assets/lockerbg-holiday.webp'),
+    backgroundImage: require('../assets/lockerbg-holiday-2026.webp'),
   },
   {
     id: 'lockerbg.monthly_champion', label: '월간 챔피언 룸', description: '이번 달 포인트 1위 전용',

@@ -240,7 +240,7 @@ export default function SkinSelect() {
                 <PixelText variant="caption" color={accent}>
                   {featuredStatus === 'live' ? '이번 한정 스킨' : '다음 한정 예고'}
                 </PixelText>
-                <PixelText variant="body" color={colors.text} numberOfLines={1}>{featured.label}</PixelText>
+                <PixelText variant="body" color={colors.text} numberOfLines={1}>{featured.fullName ?? featured.label}</PixelText>
                 <View style={styles.featuredMeta}>
                   <PixelText variant="caption" color={colors.textDim}>
                     {featuredStatus === 'live'

@@ -50,18 +50,18 @@
 ## 상품 추가 절차 (아트 준비 후)
 
 1. **아트 제작**: 8비트 레트로 톤, 배경 941×1672(stadium-bg 규격). 마젠타→크로마키→webp 파이프라인(scripts) 활용.
-2. **에셋 배치 + config**: `app/assets/…webp` + `app/utils/lockerBackgroundConfig.ts`(배경) 또는 스킨 config 1줄.
-3. **서버 시드**: `backgrounds` 테이블에 `(id, price, unlock_type='currency')` insert.
+2. **에셋 배치 + config**: `app/assets/…-YYYY.webp`(**파일명에 연도 필수** — 아래 롤오버 정책) + `app/utils/lockerBackgroundConfig.ts`(배경) 또는 `scoreSkinConfig.ts`+`assetFrameConfig.ts`(스킨). config엔 `baseKey·year·fullName`도 채움.
+3. **서버 시드**: `backgrounds`/`skins` 테이블에 연도 접미사 id로 insert(시드 마이그레이션).
 4. **윈도우 오픈**(코드 배포 불필요):
    ```sql
    update public.backgrounds
      set available_from  = '2026-07-15 00:00+09',
-         available_until = '2026-08-02 23:59+09'
-     where id = 'lockerbg.allstar_2026';
+         available_until = '2026-08-01 00:00+09'
+     where id = 'lockerbg.stars_night_2026';
    ```
-   - 상시 상품은 두 값 null.
-   - `available_from`만/`available_until`만 설정도 가능.
-5. **마감**: 기간 지나면 `purchase_background`가 자동으로 `not_available` 반환(클라 토스트).
+   - 상시 상품은 두 값 null. `available_from`만/`available_until`만 설정도 가능.
+   - `available_until`은 마지막 판매일 **다음날 00:00**(exclusive 경계).
+5. **마감**: 기간 지나면 `purchase_background`/`purchase_skin`이 자동으로 `not_available` 반환(클라 토스트).
 
 ## 클라 상점 노출 정책 (2026-07-09 확정·구현)
 
@@ -76,7 +76,22 @@
 - 문구는 전 화면 "구매"→"**교환**" 통일(야구공=현금 아님).
 - ⚠️ **날짜 이중 보관**: 표시용 날짜가 클라 config(lockerBackgroundConfig·scoreSkinConfig)에 있고, 강제용은 서버(0022). **기간 조정 시 양쪽 다 바꿔야 함**(그리고 APK 재빌드+0022 재실행). 완전 SoT 단일화하려면 서버 availability를 클라가 조회(RPC/뷰)하도록 개선 — 현재는 표시/강제 분리 감수.
 
+## 연도별 한정 상품 롤오버 정책 (Yearly Rollover Policy)
+
+> 2026-07-09 확정·적용. 매년 같은 컨셉을 반복하되 **이미지는 연도별 새 버전**으로 운영. 2026·2027 상품이 서버 id·클라 config·에셋 파일명·유저 라벨에서 모두 구분되고, 과거 연도 보유 상품이 다음 해에도 계속 렌더되도록 보장.
+
+**핵심 규칙**
+1. **상품 id = 연도 접미사 필수** — `lockerbg.stars_night_2026` / `_2027`, `skin.gold_glove_2026` / `_2027`. 서버 backgrounds/skins는 id로 구분 → 연도별 행 공존. **기존 연도 id는 절대 변경 금지.**
+2. **에셋 파일명 = 연도 접미사 필수** — `lockerbg-stars-night-2026.webp`, `skin-gold-glove-2026.webp`. 연도 없는 파일명 금지(새 연도 이미지가 덮어씀). 스킨은 `skin-<key>-YYYY.webp` 규칙.
+3. **유저 노출 라벨에 연도 포함** — `label`(카드/그리드 짧은 표시)=`'26 별들의 밤`, `fullName`(상세/보유·featured 카드)=`2026 별들의 밤`. config `displayName`은 `label`이 대신함.
+4. **config 시리즈 메타** — 각 한정 항목에 `baseKey`(컨셉 키, 예 `stars_night`)·`year`·`fullName`. id=소유권 식별, baseKey=시리즈 구분, year=버전.
+5. **과거 연도 에셋·config 삭제 금지** — 한 번 출시된 한정 에셋/config는 지우지 않음(보유자 렌더 보장). 판매 종료 ≠ 장착 불가: 미보유자는 종료 후 교환 불가, **보유자는 계속 장착 가능**. → 매년 한정 아트가 APK에 누적(연 ~1.5~2MB)되는 건 감수.
+6. **복각(재판매)** — 기존 연도 상품은 6~12개월 뒤 **같은 id의 `available_from/until`을 다시 여는 방식**으로 복각 가능(SQL만). 같은 id 유지 → 기존 보유자는 중복 구매 불가(멱등). 복각 노출은 `fullName`(예 `2026 별들의 밤`)으로 연도 명확히.
+7. **새 연도 상품 추가는 SQL만으론 불가** — 이미지가 새로 필요하므로 **아트 → webp(연도 파일명) → config(back/skin+frame) → 시드 마이그레이션 → 판매 윈도우 → 앱 배포(APK)** 전 과정 필요. (SQL-only는 *이미 시드된* 상품의 기간 조정·복각뿐.)
+
+**2027 라인업 추가 시 체크**: ①`_2027` id ②`-2027.webp` 파일명 ③label `'27 …`·fullName `2027 …` ④baseKey는 2026과 동일 ⑤시드 마이그레이션 신규 ⑥APK 재빌드.
+
 ## 향후 과제
 
-- 한정 상품 **재판매 정책**(다음 해 같은 시즌에 재오픈 vs 영구 한정) 결정.
-- 표시 날짜 서버 단일 SoT화(위 ⚠️).
+- 표시 날짜 서버 단일 SoT화(위 ⚠️ — 현재 클라 config+서버 이중 보관).
+- (선택) 복각 상품에 "복각" 뱃지 표시.

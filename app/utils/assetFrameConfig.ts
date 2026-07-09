@@ -182,7 +182,7 @@ export const IMAGE_FRAME_ASSETS: Record<string, ImageFrameConfig> = {
 
   // ── 2026 하반기 한정 스킨 2종 (마젠타 크로마키 crop 실측 aspect) ──
   stoveWinter: {
-    source: require('../assets/stove-frame.webp'),
+    source: require('../assets/skin-stove-winter-2026.webp'),
     aspect: 1173 / 919,        // ≈1.276 (가로형 프레임)
     numberCenterX: 0.50,
     numberCenterY: 0.54,       // WINTER 배너 아래 ~ 하단 배너 위 큰 크림 패널 중심
@@ -197,7 +197,7 @@ export const IMAGE_FRAME_ASSETS: Record<string, ImageFrameConfig> = {
     widths: { compact: 64, hero: 128, detail: 156, preview: 168 },
   },
   goldGlove: {
-    source: require('../assets/goldglove-frame.webp'),
+    source: require('../assets/skin-gold-glove-2026.webp'),
     aspect: 1110 / 981,        // ≈1.131
     numberCenterX: 0.50,
     numberCenterY: 0.60,       // 글러브·배너가 위를 차지 → 크림 실드 중심(살짝 아래)
