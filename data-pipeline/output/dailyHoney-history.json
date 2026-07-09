@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-09T13:21:10.952Z",
+  "updatedAt": "2026-07-09T13:30:37.963Z",
   "results": [
     {
       "date": "20260705",
@@ -51,6 +51,27 @@
         "score": 7
       },
       "calculatedAt": "2026-07-08T13:01:01.472Z"
+    },
+    {
+      "date": "20260709",
+      "actualTopGameId": "20260709LGSS0",
+      "recapScore": 92,
+      "decidingReasonTags": [
+        "1점차 접전"
+      ],
+      "displayMode": "highlight",
+      "displayTitle": "어제의 명경기",
+      "away": {
+        "code": "LG",
+        "name": "LG",
+        "score": 5
+      },
+      "home": {
+        "code": "SS",
+        "name": "삼성",
+        "score": 6
+      },
+      "calculatedAt": "2026-07-09T13:30:37.963Z"
     }
   ]
 }

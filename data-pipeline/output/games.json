@@ -1,7 +1,7 @@
 {
   "date": "20260709",
   "dateText": "2026년 7월 9일",
-  "updatedAt": "2026-07-09T13:21:10.952Z",
+  "updatedAt": "2026-07-09T13:30:37.963Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -25,9 +25,9 @@
         "score": 0,
         "starter": {
           "name": "해치",
-          "era": 7.08,
+          "era": 7.33,
           "w": 1,
-          "l": 2
+          "l": 3
         }
       },
       "home": {
@@ -37,8 +37,8 @@
         "score": 7,
         "starter": {
           "name": "잭로그",
-          "era": 4.12,
-          "w": 3,
+          "era": 3.9,
+          "w": 4,
           "l": 5
         }
       },
@@ -74,8 +74,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "잭로그",
+        "lose": "해치",
         "save": null
       },
       "lineup": null
@@ -94,7 +94,7 @@
         "score": 5,
         "starter": {
           "name": "웰스",
-          "era": 2.77,
+          "era": 2.82,
           "w": 5,
           "l": 3
         }
@@ -106,7 +106,7 @@
         "score": 6,
         "starter": {
           "name": "원태인",
-          "era": 3.45,
+          "era": 3.58,
           "w": 4,
           "l": 5
         }
@@ -143,9 +143,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "이승민",
+        "lose": "리오스",
+        "save": "김재윤"
       },
       "lineup": null
     },
@@ -163,8 +163,8 @@
         "score": 5,
         "starter": {
           "name": "양현종",
-          "era": 4.05,
-          "w": 5,
+          "era": 3.91,
+          "w": 6,
           "l": 5
         }
       },
@@ -175,9 +175,9 @@
         "score": 2,
         "starter": {
           "name": "김진욱",
-          "era": 2.84,
+          "era": 2.95,
           "w": 5,
-          "l": 3
+          "l": 4
         }
       },
       "honjam": {
@@ -212,8 +212,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "양현종",
+        "lose": "김진욱",
         "save": null
       },
       "lineup": null
@@ -280,7 +280,7 @@
       "gameId": "20260709NCHH0",
       "time": "18:30",
       "stadium": "대전",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "MS-T",
       "away": {
@@ -290,7 +290,7 @@
         "score": 4,
         "starter": {
           "name": "구창모",
-          "era": 3.44,
+          "era": 3.35,
           "w": 8,
           "l": 2
         }
@@ -302,7 +302,7 @@
         "score": 6,
         "starter": {
           "name": "화이트",
-          "era": 2.84,
+          "era": 2.61,
           "w": 5,
           "l": 4
         }
@@ -329,117 +329,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 3,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "이민우",
-        "batter": "김주원",
-        "heat": 63,
-        "label": "후반 박빙 승부"
+      "live": null,
+      "recap": {
+        "actual": 83,
+        "verdict": "예측 적중",
+        "diff": 2,
+        "total": 10,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "좌익수",
-            "name": "오재원"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "페라자"
-          },
-          {
-            "order": 3,
-            "pos": "중견수",
-            "name": "문현빈"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "강백호"
-          },
-          {
-            "order": 5,
-            "pos": "3루수",
-            "name": "노시환"
-          },
-          {
-            "order": 6,
-            "pos": "포수",
-            "name": "허인서"
-          },
-          {
-            "order": 7,
-            "pos": "1루수",
-            "name": "김태연"
-          },
-          {
-            "order": 8,
-            "pos": "2루수",
-            "name": "이도윤"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "심우준"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "유격수",
-            "name": "김주원"
-          },
-          {
-            "order": 2,
-            "pos": "좌익수",
-            "name": "권희동"
-          },
-          {
-            "order": 3,
-            "pos": "2루수",
-            "name": "박민우"
-          },
-          {
-            "order": 4,
-            "pos": "1루수",
-            "name": "블레인"
-          },
-          {
-            "order": 5,
-            "pos": "우익수",
-            "name": "박건우"
-          },
-          {
-            "order": 6,
-            "pos": "3루수",
-            "name": "김휘집"
-          },
-          {
-            "order": 7,
-            "pos": "포수",
-            "name": "김형준"
-          },
-          {
-            "order": 8,
-            "pos": "중견수",
-            "name": "천재환"
-          },
-          {
-            "order": 9,
-            "pos": "지명타자",
-            "name": "고준휘"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": "이상규",
+        "lose": "토다",
+        "save": "이민우"
+      },
+      "lineup": null
     }
   ]
 }

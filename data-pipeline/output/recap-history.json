@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-09T13:21:10.952Z",
+  "updatedAt": "2026-07-09T13:30:37.963Z",
   "window": 50,
   "sampleSize": 50,
   "hitRate": 22,
@@ -417,6 +417,13 @@
       "gameId": "20260709SKOB0",
       "pred": 8,
       "actual": 7,
+      "verdict": "예측 적중"
+    },
+    {
+      "date": "20260709",
+      "gameId": "20260709NCHH0",
+      "pred": 89,
+      "actual": 83,
       "verdict": "예측 적중"
     }
   ]
