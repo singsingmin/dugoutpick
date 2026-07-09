@@ -6,10 +6,11 @@ on:
   schedule:
     - cron: '0 22 * * *'       # 07:00 KST  (아침 갱신)
     - cron: '0 2 * * *'        # 11:00 KST  (경기 전, 선발 등록)
-    # 경기 시간대(14:00~23:50 KST = UTC 05~14시) 백업 갱신 — 주력은 외부 cron(cron-job.org)이 5분 간격으로
+    # 경기 시간대~자정 직후(14:00 KST ~ 00:30 KST = UTC 05~15시) 백업 갱신 — 주력은 외부 cron(cron-job.org)이 5분 간격으로
     # workflow_dispatch 호출. GitHub schedule은 best-effort라 신뢰 못 하므로, 외부 cron 장애/PAT 만료 시
     # '완전히 깜깜해지는 것'만 막는 30분 폴백으로 둠.
-    - cron: '*/30 5-14 * * *'
+    # 15시 UTC = 00:00/00:30 KST → 날짜 롤오버 직후 '오늘 경기 전 정보'(선발·라인업·꿀잼예측) 생성.
+    - cron: '*/30 5-15 * * *'
   workflow_dispatch:            # 수동 실행 버튼
 
 permissions:
