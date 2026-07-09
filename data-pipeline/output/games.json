@@ -1,7 +1,7 @@
 {
   "date": "20260709",
   "dateText": "2026년 7월 9일",
-  "updatedAt": "2026-07-09T10:25:45.341Z",
+  "updatedAt": "2026-07-09T10:30:50.728Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
-        "out": 1,
-        "b1": true,
+        "half": "B",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "잭로그",
-        "batter": "채현우",
-        "heat": 15,
+        "pitcher": "해치",
+        "batter": "정수빈",
+        "heat": 16,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "웰스",
-        "batter": "양우현",
+        "batter": "박승규",
         "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
@@ -397,12 +397,12 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "양현종",
-        "batter": "한동희",
+        "batter": "한태양",
         "heat": 37,
         "label": "초반 팽팽한 흐름"
       },
@@ -529,7 +529,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 3,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "배제성",
           "era": 4.5,
@@ -562,13 +562,13 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "하영민",
-        "batter": "한승택",
-        "heat": 43,
+        "batter": "김현수",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -727,12 +727,12 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "구창모",
-        "batter": "문현빈",
+        "batter": "노시환",
         "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
