@@ -147,6 +147,9 @@ export interface DailyHoneyResult {
   tiedGameIds?: string[];
   recapScore: number;
   decidingReasonTags: string[];
+  // 화면 표시 분기(0009 이후 신규 — append-only freeze라 과거 기록엔 없음, 앱에서 방어적으로 유도).
+  displayMode?: 'highlight' | 'summary';
+  displayTitle?: string;
   away?: DailyHoneyTeamSnapshot;  // 필드 추가 이전 과거 기록엔 없음(append-only freeze라 소급 안 됨)
   home?: DailyHoneyTeamSnapshot;
   calculatedAt: string;

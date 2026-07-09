@@ -327,19 +327,33 @@ function Centered({ text }: { text: string }) {
 // '어제의 명경기' 티저 카드 — 오늘 콘텐츠가 아직 없는 조용한 시간대 채우기용. 상세화면 연결 없음(과거 경기라 오늘 데이터엔 없음).
 function YesterdayHoneyCard({ honey }: { honey: DailyHoneyResult }) {
   if (!honey.away || !honey.home) return null; // 필드 추가 이전 과거 기록 방어
+  // displayMode/displayTitle는 신규 필드 — 과거 동결 기록엔 없어 방어적으로 유도.
+  // (특별 태그가 있거나 실제 꿀잼 >= 60이면 '명경기', 아니면 '요약')
+  const hasSpecialTag = honey.decidingReasonTags.some((t) => !/^(recapScore|실제 꿀잼)\b/.test(t));
+  const mode = honey.displayMode ?? ((hasSpecialTag || honey.recapScore >= 60) ? 'highlight' : 'summary');
+  const title = honey.displayTitle ?? (mode === 'highlight' ? '어제의 명경기' : '어제 경기 요약');
+  const hasScore = typeof honey.away.score === 'number' && typeof honey.home.score === 'number';
   return (
     <View style={styles.honeySection}>
-      <SectionLabel icon="fire" label="어제의 명경기" />
+      <SectionLabel icon="fire" label={title} />
       <Panel style={styles.honeyCard}>
         <View style={styles.honeyRow}>
           <TeamName code={honey.away.code} variant="body" />
-          <PixelText variant="caption" color={colors.textDim}>VS</PixelText>
+          {hasScore
+            ? <PixelText variant="body" color={colors.text}>{honey.away.score} : {honey.home.score}</PixelText>
+            : <PixelText variant="caption" color={colors.textDim}>VS</PixelText>}
           <TeamName code={honey.home.code} variant="body" />
         </View>
-        <PixelText variant="caption" color={colors.accent} style={styles.honeyReason}>
-          {/* 과거 파이프라인이 남긴 영어 폴백 태그(recapScore N)를 '실제 꿀잼 N'으로 표시 */}
-          {honey.decidingReasonTags.map((t) => t.replace(/^recapScore\s+/, '실제 꿀잼 ')).join(' · ')}
-        </PixelText>
+        {mode === 'highlight' ? (
+          <PixelText variant="caption" color={colors.accent} style={styles.honeyReason}>
+            {/* 과거 파이프라인이 남긴 영어 폴백 태그(recapScore N)를 '실제 꿀잼 N'으로 표시 */}
+            {honey.decidingReasonTags.map((t) => t.replace(/^recapScore\s+/, '실제 꿀잼 ')).join(' · ')}
+          </PixelText>
+        ) : (
+          <PixelText variant="caption" color={colors.textDim} style={styles.honeyReason}>
+            어제 가장 볼 만했던 경기였어요
+          </PixelText>
+        )}
       </Panel>
     </View>
   );

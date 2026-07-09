@@ -25,7 +25,7 @@ check('단독 1위',
     g('B', 'FINAL', { actual: 88, diff: 1, total: 9, extra: 0, walkoff: 1 }),
     g('C', 'FINAL', { actual: 55, diff: 5, total: 10, extra: 0, walkoff: 0 }),
   ], DATE, AT),
-  { date: DATE, actualTopGameId: 'B', recapScore: 88, decidingReasonTags: ['끝내기', '1점차 접전'], away: AWAY, home: HOME, calculatedAt: AT });
+  { date: DATE, actualTopGameId: 'B', recapScore: 88, decidingReasonTags: ['끝내기', '1점차 접전'], displayMode: 'highlight', displayTitle: '어제의 명경기', away: AWAY, home: HOME, calculatedAt: AT });
 
 // 2) 미확정(LIVE 경기 있음) → null
 check('미확정 null',
@@ -46,7 +46,7 @@ check('취소 제외 확정',
     g('A', 'FINAL', { actual: 60, diff: 2, total: 7, extra: 0, walkoff: 0 }),
     g('B', 'CANCELED', null),
   ], DATE, AT),
-  { date: DATE, actualTopGameId: 'A', recapScore: 60, decidingReasonTags: ['2점차 접전'], away: AWAY, home: HOME, calculatedAt: AT });
+  { date: DATE, actualTopGameId: 'A', recapScore: 60, decidingReasonTags: ['2점차 접전'], displayMode: 'highlight', displayTitle: '어제의 명경기', away: AWAY, home: HOME, calculatedAt: AT });
 
 // 5) recapScore 동률 → 미세 tiebreak(끝내기 우선)
 check('동률 tiebreak 끝내기',
@@ -62,7 +62,14 @@ check('완전 동률 공동1위',
     g('A', 'FINAL', { actual: 75, diff: 3, total: 9, extra: 0, walkoff: 0 }),
     g('B', 'FINAL', { actual: 75, diff: 3, total: 9, extra: 0, walkoff: 0 }),
   ], DATE, AT),
-  { date: DATE, actualTopGameId: null, tiedGameIds: ['A', 'B'], recapScore: 75, decidingReasonTags: ['실제 꿀잼 75'], away: AWAY, home: HOME, calculatedAt: AT });
+  { date: DATE, actualTopGameId: null, tiedGameIds: ['A', 'B'], recapScore: 75, decidingReasonTags: ['실제 꿀잼 75'], displayMode: 'highlight', displayTitle: '어제의 명경기', away: AWAY, home: HOME, calculatedAt: AT });
+
+// 6b) 특별 태그 없고 recapScore < 60 → 표시 요약 모드로 톤다운
+check('요약 모드(잔잔한 날)',
+  judgeDailyHoney([
+    g('A', 'FINAL', { actual: 50, diff: 3, total: 8, extra: 0, walkoff: 0 }),
+  ], DATE, AT),
+  { date: DATE, actualTopGameId: 'A', recapScore: 50, decidingReasonTags: ['실제 꿀잼 50'], displayMode: 'summary', displayTitle: '어제 경기 요약', away: AWAY, home: HOME, calculatedAt: AT });
 
 // 7) mergeDailyHoney: append + freeze + null no-op
 const base = [{ date: '20260704', actualTopGameId: 'X', recapScore: 90 }];

@@ -38,6 +38,12 @@ export function reasonTags(g) {
   return tags;
 }
 
+// 화면 표시 분기용 — 끝내기·연장·2점차이내·난타 중 하나라도 있으면 '특별한' 경기.
+export function hasSpecialTag(g) {
+  const r = g?.recap || {};
+  return !!r.walkoff || !!r.extra || (r.diff ?? 99) <= 2 || (r.total ?? 0) >= 14;
+}
+
 // 그날 게임 배열 → DailyHoneyResult | null(미확정/노게임).
 export function judgeDailyHoney(games, date, calculatedAt) {
   const playable = (games || []).filter((g) => g.status !== 'CANCELED');
@@ -66,13 +72,19 @@ export function judgeDailyHoney(games, date, calculatedAt) {
     ? finals.find((g) => g.gameId === actualTopGameId)
     : finals.find((g) => g.gameId === tiedGameIds[0]);
 
+  // 화면 표시 분기: 특별 태그가 있거나 실제 꿀잼 >= 60이면 '명경기', 아니면 '요약'으로 톤다운.
+  // (예측 리그 정답 판정 자체는 위에서 그대로 산출 — 표시만 분기)
+  const displayMode = (hasSpecialTag(topGame) || maxScore >= 60) ? 'highlight' : 'summary';
+
   return {
     date,
     actualTopGameId,
     ...(tiedGameIds ? { tiedGameIds } : {}),
     recapScore: maxScore,
     decidingReasonTags: reasonTags(topGame),
-    // 앱의 '어제의 명경기' 카드용 경량 스냅샷(별도 히스토리 없이 매치업 표시).
+    displayMode,
+    displayTitle: displayMode === 'highlight' ? '어제의 명경기' : '어제 경기 요약',
+    // 앱의 '어제의 명경기' 카드용 경량 스냅샷(별도 히스토리 없이 매치업·스코어 표시).
     away: { code: topGame.away.code, name: topGame.away.name, score: topGame.away.score },
     home: { code: topGame.home.code, name: topGame.home.name, score: topGame.home.score },
     calculatedAt,
