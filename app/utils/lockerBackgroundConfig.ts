@@ -73,7 +73,7 @@ export const LOCKER_BACKGROUNDS: LockerBackground[] = [
   {
     id: 'lockerbg.stars_night_2026', label: '별들의 밤', description: '올스타 브레이크 · 별빛 야간 무대',
     unlockType: 'currency', price: 120, sortOrder: 200,
-    availableFrom: '2026-07-15T00:00:00+09:00', availableUntil: '2026-08-03T00:00:00+09:00',
+    availableFrom: '2026-07-15T00:00:00+09:00', availableUntil: '2026-08-01T00:00:00+09:00',
     backgroundImage: require('../assets/lockerbg-stars-night.webp'),
   },
   {
@@ -85,13 +85,13 @@ export const LOCKER_BACKGROUNDS: LockerBackground[] = [
   {
     id: 'lockerbg.chuseok_2026', label: '한가위 구장', description: '보름달 뜬 명절 구장',
     unlockType: 'currency', price: 120, sortOrder: 220,
-    availableFrom: '2026-09-18T00:00:00+09:00', availableUntil: '2026-10-05T00:00:00+09:00',
+    availableFrom: '2026-09-18T00:00:00+09:00', availableUntil: '2026-10-07T00:00:00+09:00',
     backgroundImage: require('../assets/lockerbg-chuseok.webp'),
   },
   {
     id: 'lockerbg.autumn_baseball_2026', label: '가을야구', description: '단풍 · 포스트시즌 기대감',
     unlockType: 'currency', price: 150, sortOrder: 230,
-    availableFrom: '2026-10-01T00:00:00+09:00', availableUntil: '2026-11-11T00:00:00+09:00',
+    availableFrom: '2026-10-01T00:00:00+09:00', availableUntil: '2026-10-25T00:00:00+09:00',
     backgroundImage: require('../assets/lockerbg-autumn-baseball.webp'),
   },
   {

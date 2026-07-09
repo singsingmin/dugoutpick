@@ -21,7 +21,7 @@ import JerseyScoreBadge from '../components/JerseyScoreBadge';
 import ScoreboardScoreBadge, { type ScoreboardVariant } from '../components/ScoreboardScoreBadge';
 import ImageFrameScoreBadge from '../components/ImageFrameScoreBadge';
 import { getImageFrameConfig } from '../utils/assetFrameConfig';
-import { saleStatus, saleBadgeText, upcomingToast } from '../utils/saleWindow';
+import { saleStatus, isLimited, pickFeaturedLimited, openMD, lastSaleMD, upcomingNotice } from '../utils/saleWindow';
 import PixelText from '../components/PixelText';
 import ScreenHeader from '../components/ScreenHeader';
 import AppIcon from '../components/AppIcon';
@@ -52,13 +52,13 @@ const TABS: { key: TabKey; label: string }[] = [
 ];
 
 type Section = { key: string; title: string; items: ScoreSkin[] };
-function buildSections(tab: TabKey, isOwned: (id: string) => boolean, now: number): Section[] {
+function buildSections(tab: TabKey, isOwned: (id: string) => boolean): Section[] {
   const sections: Section[] = [];
   const byKey = new Map<string, Section>();
   for (const s of SCORE_SKIN_LIST) {
     if (!(tab === 'all' || s.category === tab)) continue;
-    // 한정 스킨은 판매 종료+미보유면 숨김(보유 시엔 계속 노출·장착 가능).
-    if (saleStatus(s.availableFrom, s.availableUntil, now) === 'ended' && !isOwned(s.id)) continue;
+    // 한정 스킨 미보유는 그리드에서 제외(아래 "지금 볼 만한 한정 1개" 카드로만 노출). 보유 시엔 그리드 유지.
+    if (isLimited(s) && !isOwned(s.id)) continue;
     const key = getSkinSectionKey(s);
     let sec = byKey.get(key);
     if (!sec) {
@@ -128,7 +128,14 @@ export default function SkinSelect() {
 
   const selectedConfig = getScoreSkinById(skinId);
   const now = Date.now();
-  const sections = buildSections(tab, isOwned, now);
+  const sections = buildSections(tab, isOwned);
+
+  // 지금 볼 만한 한정 스킨 1개(미보유 중, 판매중 우선→14일 내 예고).
+  const featured = pickFeaturedLimited(
+    SCORE_SKIN_LIST.filter((s) => s.kind === 'asset' && isLimited(s) && s.unlockType === 'currency' && !isOwned(s.id)),
+    now,
+  );
+  const featuredStatus = featured ? saleStatus(featured.availableFrom, featured.availableUntil, now) : null;
 
   const showToast = (msg: string) => {
     setToast(msg);
@@ -141,17 +148,15 @@ export default function SkinSelect() {
     showToast(`${s.label} 적용됨`);
   };
 
+  // 미보유 currency 스킨 → 교환 모달(그리드=상시만, 카드=한정 판매중).
+  const openSkinPurchase = (s: ScoreSkin) => {
+    if (!online) { showToast('교환은 인터넷 연결 후 가능해요'); return; }  // 교환=민감 쓰기, 온라인 필요
+    setModal({ kind: baseballBalance >= (s.price ?? 0) ? 'confirm' : 'insufficient', skin: s });
+  };
+
   const handleCardPress = (s: ScoreSkin) => {
     if (isOwned(s.id)) { void applySkin(s); return; }  // 적용은 오프라인 허용(낙관적)
-    if (saleStatus(s.availableFrom, s.availableUntil) === 'upcoming') {
-      showToast(s.availableFrom ? upcomingToast(s.availableFrom) : '아직 판매 전이에요');
-      return;
-    }
-    if (s.unlockType === 'currency') {
-      if (!online) { showToast('구매는 인터넷 연결 후 가능해요'); return; }  // 구매=민감 쓰기, 온라인 필요
-      const price = s.price ?? 0;
-      setModal({ kind: baseballBalance >= price ? 'confirm' : 'insufficient', skin: s });
-    }
+    if (s.unlockType === 'currency') openSkinPurchase(s);   // 그리드 미보유는 상시 상품만(한정은 카드)
     // event/premium: MVP에선 해당 스킨 없음 — 무동작
   };
 
@@ -164,7 +169,7 @@ export default function SkinSelect() {
     } catch (e) {
       // 인증/세션/네트워크 오류 — "부족"으로 오인시키지 않고 실제 오류 안내(디버그 빌드는 원문).
       setModal(null);
-      showToast(SHOW_RAW_ERR ? `구매 오류: ${(e as Error).message}` : '구매 처리 중 오류가 났어요. 다시 시도해 주세요.');
+      showToast(SHOW_RAW_ERR ? `교환 오류: ${(e as Error).message}` : '교환 처리 중 오류가 났어요. 다시 시도해 주세요.');
     }
   };
 
@@ -219,7 +224,44 @@ export default function SkinSelect() {
         </View>
 
         <ScrollView contentContainerStyle={styles.content}>
-          {sections.length === 0 ? (
+          {featured && featuredStatus && (
+            <Pressable
+              style={styles.featuredCard}
+              onPress={
+                featuredStatus === 'upcoming' && featured.availableFrom
+                  ? () => showToast(upcomingNotice(featured.availableFrom!))
+                  : undefined
+              }
+            >
+              <View style={styles.featuredThumb}>
+                <SkinThumb skin={featured} teamColor={accent} targetW={56} maxH={46} />
+              </View>
+              <View style={styles.featuredInfo}>
+                <PixelText variant="caption" color={accent}>
+                  {featuredStatus === 'live' ? '이번 한정 스킨' : '다음 한정 예고'}
+                </PixelText>
+                <PixelText variant="body" color={colors.text} numberOfLines={1}>{featured.label}</PixelText>
+                <View style={styles.featuredMeta}>
+                  <PixelText variant="caption" color={colors.textDim}>
+                    {featuredStatus === 'live'
+                      ? `${lastSaleMD(featured.availableUntil!)}까지 · `
+                      : `${openMD(featured.availableFrom!)} 오픈 · `}
+                  </PixelText>
+                  <BaseballAmount n={featured.price ?? 0} size={13} color={colors.textDim} />
+                </View>
+              </View>
+              {featuredStatus === 'live' ? (
+                <Pressable style={[styles.featuredBtn, { backgroundColor: accent }]} onPress={() => openSkinPurchase(featured)}>
+                  <PixelText variant="caption" color="#fff">교환하기</PixelText>
+                </Pressable>
+              ) : (
+                <View style={styles.featuredSoon}>
+                  <PixelText variant="caption" color="#fff">오픈 예정</PixelText>
+                </View>
+              )}
+            </Pressable>
+          )}
+          {sections.length === 0 && !featured ? (
             <View style={styles.empty}>
               <PixelText variant="body" color={colors.textDim}>준비 중인 스킨이에요</PixelText>
             </View>
@@ -234,14 +276,12 @@ export default function SkinSelect() {
                     const selected = s.id === skinId;
                     const owned = isOwned(s.id);
                     const showPrice = !owned && s.unlockType === 'currency';
-                    const status = saleStatus(s.availableFrom, s.availableUntil, now);
-                    const saleBadge = owned ? null : saleBadgeText(status, s.availableFrom, s.availableUntil);
                     return (
                       <Pressable
                         key={s.id}
                         onPress={() => handleCardPress(s)}
                         accessibilityRole="button"
-                        accessibilityLabel={showPrice ? `${s.label} 구매 ${s.price} 야구공` : s.label}
+                        accessibilityLabel={showPrice ? `${s.label} 교환 ${s.price} 야구공` : s.label}
                         accessibilityState={{ selected }}
                         style={[
                           styles.cell,
@@ -265,11 +305,6 @@ export default function SkinSelect() {
                         {showPrice && (
                           <View style={styles.priceBadge}>
                             <BaseballAmount n={s.price ?? 0} size={9} color="#fff" />
-                          </View>
-                        )}
-                        {saleBadge && (
-                          <View style={[styles.saleBadge, status === 'upcoming' ? styles.saleBadgeUpcoming : styles.saleBadgeLive]}>
-                            <PixelText variant="caption" color="#fff" style={styles.saleBadgeText}>{saleBadge}</PixelText>
                           </View>
                         )}
                       </Pressable>
@@ -297,7 +332,7 @@ export default function SkinSelect() {
                   <>
                     <View style={styles.modalLine}>
                       <BaseballAmount n={modal.skin.price ?? 0} size={18} />
-                      <PixelText variant="body" color={colors.text}>야구공으로 구매할까요?</PixelText>
+                      <PixelText variant="body" color={colors.text}>야구공으로 교환할까요?</PixelText>
                     </View>
                     <View style={styles.modalLine}>
                       <PixelText variant="caption" color={colors.textDim}>현재 보유</PixelText>
@@ -305,7 +340,7 @@ export default function SkinSelect() {
                     </View>
                     <View style={styles.modalBtnRow}>
                       <Pressable style={[styles.modalBtn, { backgroundColor: accent, borderColor: colors.border }]} onPress={confirmBuy}>
-                        <PixelText variant="body" color="#fff">구매하기</PixelText>
+                        <PixelText variant="body" color="#fff">교환하기</PixelText>
                       </Pressable>
                       <Pressable style={[styles.modalBtn, styles.modalBtnGhost]} onPress={() => setModal(null)}>
                         <PixelText variant="body" color={colors.text}>취소</PixelText>
@@ -316,7 +351,7 @@ export default function SkinSelect() {
 
                 {modal.kind === 'done' && (
                   <>
-                    <PixelText variant="body" color={colors.good} style={styles.modalMsg}>구매 완료! 바로 적용할까요?</PixelText>
+                    <PixelText variant="body" color={colors.good} style={styles.modalMsg}>교환 완료! 바로 적용할까요?</PixelText>
                     <View style={styles.modalBtnRow}>
                       <Pressable style={[styles.modalBtn, { backgroundColor: accent, borderColor: colors.border }]} onPress={applyFromModal}>
                         <PixelText variant="body" color="#fff">적용하기</PixelText>
@@ -441,14 +476,23 @@ const styles = StyleSheet.create({
     paddingHorizontal: 5,
     paddingVertical: 1,
   },
-  saleBadge: {
-    position: 'absolute', top: 4, left: 4,
-    borderRadius: 999, paddingHorizontal: 5, paddingVertical: 1,
-    borderWidth: 1, borderColor: 'rgba(0,0,0,0.25)',
+  // "지금 볼 만한 한정 1개" 카드
+  featuredCard: {
+    flexDirection: 'row', alignItems: 'center', gap: spacing.md,
+    backgroundColor: CREAM, borderRadius: border.radius, borderWidth: 1, borderColor: CREAM_BORDER,
+    padding: spacing.sm, marginBottom: spacing.md,
   },
-  saleBadgeLive: { backgroundColor: '#C0392B' },      // 판매 중 — 레드
-  saleBadgeUpcoming: { backgroundColor: '#5A6B7A' },  // 오픈 예정 — 회청
-  saleBadgeText: { fontSize: 8, lineHeight: 11 },
+  featuredThumb: { width: 56, alignItems: 'center', justifyContent: 'center' },
+  featuredInfo: { flex: 1, gap: 2 },
+  featuredMeta: { flexDirection: 'row', alignItems: 'center' },
+  featuredBtn: {
+    borderRadius: border.radius, borderWidth: 1, borderColor: colors.border,
+    paddingVertical: spacing.sm, paddingHorizontal: spacing.md, alignItems: 'center',
+  },
+  featuredSoon: {
+    backgroundColor: '#5A6B7A', borderRadius: 999,
+    paddingVertical: 4, paddingHorizontal: spacing.sm,
+  },
 
   empty: { alignItems: 'center', paddingVertical: spacing.xl },
 

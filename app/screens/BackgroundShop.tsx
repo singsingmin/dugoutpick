@@ -14,7 +14,7 @@ import {
 } from '../services/cosmetics';
 import { fetchPredictionStats } from '../services/predictions';
 import { LOCKER_BACKGROUNDS, backgroundInstanceLabel, findBackground, type LockerBackground } from '../utils/lockerBackgroundConfig';
-import { saleStatus, saleBadgeText, upcomingToast, type SaleStatus } from '../utils/saleWindow';
+import { saleStatus, isLimited, pickFeaturedLimited, openMD, lastSaleMD, upcomingNotice } from '../utils/saleWindow';
 import PixelText from '../components/PixelText';
 import ScreenHeader from '../components/ScreenHeader';
 import AppIcon from '../components/AppIcon';
@@ -45,9 +45,6 @@ type Cell = {
   price?: number;
   owned: boolean;
   honor: boolean;
-  status: SaleStatus;          // 한정 판매 상태(permanent/upcoming/live/ended)
-  badge: string | null;        // 한정 뱃지 텍스트("7/15 오픈"·"~8/2")
-  from?: string;               // availableFrom(오픈 예정 안내용)
 };
 type ModalState =
   | { kind: 'confirm' | 'insufficient'; bg: LockerBackground }
@@ -95,23 +92,28 @@ export default function BackgroundShop() {
     toastTimer.current = setTimeout(() => setToast(null), 1500);
   };
 
-  // 표시 목록: 기본 + 구매형 카탈로그(보유/미보유) + 보유 명예 인스턴스(period_label별).
-  // 한정 배경은 판매기간 밖+미보유면 숨김(보유 시엔 계속 노출·장착 가능).
+  // 그리드: 기본 + 상시 구매형 + 보유 한정 + 보유 명예 인스턴스.
+  //   한정(윈도우 있는) 미보유 상품은 그리드에서 빼고, 아래 "지금 볼 만한 한정 1개" 카드로만 노출.
   const now = Date.now();
   const currencyCells: Cell[] = LOCKER_BACKGROUNDS
     .filter((bg) => bg.unlockType === 'currency')
+    .filter((bg) => !!purchaseInstance(bg.id) || !isLimited(bg))   // 상시 or 보유 한정만 그리드
     .slice().sort((a, b) => a.sortOrder - b.sortOrder)
     .map((bg): Cell => {
       const inst = purchaseInstance(bg.id);
-      const status = saleStatus(bg.availableFrom, bg.availableUntil, now);
       return {
         key: bg.id, isDefault: false, ownedId: inst?.ownedBackgroundId ?? null,
         backgroundId: bg.id, label: bg.label, image: bg.backgroundImage,
         price: bg.price, owned: !!inst, honor: false,
-        status, badge: saleBadgeText(status, bg.availableFrom, bg.availableUntil), from: bg.availableFrom,
       };
-    })
-    .filter((c) => c.owned || c.status !== 'ended');
+    });
+
+  // 지금 볼 만한 한정 배경 1개(미보유 중, 판매중 우선→14일 내 예고).
+  const featured = pickFeaturedLimited(
+    LOCKER_BACKGROUNDS.filter((bg) => bg.unlockType === 'currency' && isLimited(bg) && !purchaseInstance(bg.id)),
+    now,
+  );
+  const featuredStatus = featured ? saleStatus(featured.availableFrom, featured.availableUntil, now) : null;
   const honorCells: Cell[] = owned
     .filter((o) => catalogById(o.backgroundId) && catalogById(o.backgroundId)!.unlockType !== 'currency')
     .slice().sort((a, b) => (b.periodLabel ?? '').localeCompare(a.periodLabel ?? ''))
@@ -120,10 +122,9 @@ export default function BackgroundShop() {
       ownedId: o.ownedBackgroundId, backgroundId: o.backgroundId,
       label: backgroundInstanceLabel(o.backgroundId, o.periodType, o.periodLabel),
       image: catalogById(o.backgroundId)!.backgroundImage, owned: true, honor: true,
-      status: 'permanent', badge: null,
     }));
   const cells: Cell[] = [
-    { key: 'default', isDefault: true, ownedId: null, backgroundId: null, label: '기본', image: DEFAULT_BG, owned: true, honor: false, status: 'permanent', badge: null },
+    { key: 'default', isDefault: true, ownedId: null, backgroundId: null, label: '기본', image: DEFAULT_BG, owned: true, honor: false },
     ...currencyCells,
     ...honorCells,
   ];
@@ -152,14 +153,16 @@ export default function BackgroundShop() {
     }
   };
 
-  const handlePress = (c: Cell) => {
-    if (c.owned) { void applyBackground(c.ownedId, c.label); return; }   // 기본·보유 → 즉시 적용
-    // 미보유 구매형만 여기 도달(명예 미보유는 목록에 없음)
-    if (c.status === 'upcoming') { showToast(c.from ? upcomingToast(c.from) : '아직 판매 전이에요'); return; }
-    const bg = c.backgroundId ? catalogById(c.backgroundId) : undefined;
-    if (!bg) return;
+  // 미보유 구매형 → 교환 모달(그리드=상시만, 카드=한정 판매중).
+  const openPurchase = (bg: LockerBackground) => {
     if (!online) { showToast('교환은 인터넷 연결 후 가능해요'); return; }
     setModal({ kind: (bg.price ?? 0) <= baseballBalance ? 'confirm' : 'insufficient', bg });
+  };
+
+  const handlePress = (c: Cell) => {
+    if (c.owned) { void applyBackground(c.ownedId, c.label); return; }   // 기본·보유 → 즉시 적용
+    const bg = c.backgroundId ? catalogById(c.backgroundId) : undefined;
+    if (bg) openPurchase(bg);   // 그리드 미보유는 상시 상품만(한정은 카드)
   };
 
   const confirmBuy = async () => {
@@ -220,6 +223,42 @@ export default function BackgroundShop() {
         </View>
 
         <ScrollView contentContainerStyle={styles.content}>
+          {featured && featuredStatus && (
+            <Pressable
+              style={styles.featuredCard}
+              disabled={busy}
+              onPress={
+                featuredStatus === 'upcoming' && featured.availableFrom
+                  ? () => showToast(upcomingNotice(featured.availableFrom!))
+                  : undefined
+              }
+            >
+              <Image source={featured.backgroundImage} style={styles.featuredThumb} resizeMode="cover" />
+              <View style={styles.featuredInfo}>
+                <PixelText variant="caption" color={accent}>
+                  {featuredStatus === 'live' ? '이번 한정 배경' : '다음 한정 예고'}
+                </PixelText>
+                <PixelText variant="body" color={colors.text} numberOfLines={1}>{featured.label}</PixelText>
+                <View style={styles.featuredMeta}>
+                  <PixelText variant="caption" color={colors.textDim}>
+                    {featuredStatus === 'live'
+                      ? `${lastSaleMD(featured.availableUntil!)}까지 · `
+                      : `${openMD(featured.availableFrom!)} 오픈 · `}
+                  </PixelText>
+                  <BaseballAmount n={featured.price ?? 0} size={13} color={colors.textDim} />
+                </View>
+              </View>
+              {featuredStatus === 'live' ? (
+                <Pressable style={[styles.featuredBtn, { backgroundColor: accent }]} onPress={() => openPurchase(featured)} disabled={busy}>
+                  <PixelText variant="caption" color="#fff">교환하기</PixelText>
+                </Pressable>
+              ) : (
+                <View style={styles.featuredSoon}>
+                  <PixelText variant="caption" color="#fff">오픈 예정</PixelText>
+                </View>
+              )}
+            </Pressable>
+          )}
           {!loaded ? (
             <PixelText variant="caption" color={colors.textDim}>불러오는 중...</PixelText>
           ) : (
@@ -250,11 +289,6 @@ export default function BackgroundShop() {
                       {showPrice && (
                         <View style={styles.priceBadge}>
                           <BaseballAmount n={c.price ?? 0} size={9} color="#fff" />
-                        </View>
-                      )}
-                      {c.badge && (
-                        <View style={[styles.saleBadge, c.status === 'upcoming' ? styles.saleBadgeUpcoming : styles.saleBadgeLive]}>
-                          <PixelText variant="caption" color="#fff" style={styles.saleBadgeText}>{c.badge}</PixelText>
                         </View>
                       )}
                     </View>
@@ -376,15 +410,25 @@ const styles = StyleSheet.create({
     position: 'absolute', top: 4, right: 4, backgroundColor: '#4A3826',
     borderWidth: 1, borderColor: colors.border, borderRadius: 999, paddingHorizontal: 5, paddingVertical: 1,
   },
-  saleBadge: {
-    position: 'absolute', top: 4, left: 4,
-    borderRadius: 999, paddingHorizontal: 6, paddingVertical: 1,
-    borderWidth: 1, borderColor: 'rgba(0,0,0,0.25)',
-  },
-  saleBadgeLive: { backgroundColor: '#C0392B' },      // 판매 중 — 레드(마감 임박 환기)
-  saleBadgeUpcoming: { backgroundColor: '#5A6B7A' },  // 오픈 예정 — 회청(비활성 톤)
-  saleBadgeText: { fontSize: 9, lineHeight: 12 },
   cellLabel: { maxWidth: '100%' },
+
+  // "지금 볼 만한 한정 1개" 카드
+  featuredCard: {
+    flexDirection: 'row', alignItems: 'center', gap: spacing.md,
+    backgroundColor: CREAM, borderRadius: border.radius, borderWidth: 1, borderColor: CREAM_BORDER,
+    padding: spacing.sm, marginBottom: spacing.md,
+  },
+  featuredThumb: { width: 72, height: 50, borderRadius: 6, borderWidth: 1, borderColor: CREAM_BORDER },
+  featuredInfo: { flex: 1, gap: 2 },
+  featuredMeta: { flexDirection: 'row', alignItems: 'center' },
+  featuredBtn: {
+    borderRadius: border.radius, borderWidth: 1, borderColor: colors.border,
+    paddingVertical: spacing.sm, paddingHorizontal: spacing.md, alignItems: 'center',
+  },
+  featuredSoon: {
+    backgroundColor: '#5A6B7A', borderRadius: 999,
+    paddingVertical: 4, paddingHorizontal: spacing.sm,
+  },
 
   modalBackdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.5)', alignItems: 'center', justifyContent: 'center', padding: spacing.lg },
   modalCard: {

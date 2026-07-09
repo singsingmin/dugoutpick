@@ -12,10 +12,10 @@
 -- 1. 한정 배경 6종 (unlock_type='currency' + 판매 윈도우)
 -- ─────────────────────────────────────────────────────────────
 insert into public.backgrounds (id, price, unlock_type, available_from, available_until) values
-  ('lockerbg.stars_night_2026',      120, 'currency', '2026-07-15 00:00+09', '2026-08-03 00:00+09'),
+  ('lockerbg.stars_night_2026',      120, 'currency', '2026-07-15 00:00+09', '2026-08-01 00:00+09'),
   ('lockerbg.midsummer_night_2026',  120, 'currency', '2026-08-01 00:00+09', '2026-09-01 00:00+09'),
-  ('lockerbg.chuseok_2026',          120, 'currency', '2026-09-18 00:00+09', '2026-10-05 00:00+09'),
-  ('lockerbg.autumn_baseball_2026',  150, 'currency', '2026-10-01 00:00+09', '2026-11-11 00:00+09'),
+  ('lockerbg.chuseok_2026',          120, 'currency', '2026-09-18 00:00+09', '2026-10-07 00:00+09'),
+  ('lockerbg.autumn_baseball_2026',  150, 'currency', '2026-10-01 00:00+09', '2026-10-25 00:00+09'),
   ('lockerbg.championship_2026',     200, 'currency', '2026-10-25 00:00+09', '2026-11-16 00:00+09'),
   ('lockerbg.holiday_2026',          150, 'currency', '2026-12-01 00:00+09', '2027-01-01 00:00+09')
 on conflict (id) do update set
@@ -28,7 +28,7 @@ on conflict (id) do update set
 --    구매 게이트(purchase_skin, 0021)는 is_purchasable·is_active·release_type·윈도우로 판정.
 -- ─────────────────────────────────────────────────────────────
 insert into public.skins (id, price, unlock_type, is_purchasable, is_active, release_type, available_from, available_until) values
-  ('skin.stove_winter_2026', 120, 'currency', true, true, 'event', '2026-11-16 00:00+09', '2026-12-21 00:00+09'),
+  ('skin.stove_winter_2026', 120, 'currency', true, true, 'event', '2026-11-16 00:00+09', '2026-12-10 00:00+09'),
   ('skin.gold_glove_2026',   240, 'currency', true, true, 'event', '2026-12-10 00:00+09', '2027-01-01 00:00+09')
 on conflict (id) do update set
   price = excluded.price, unlock_type = excluded.unlock_type,

@@ -197,7 +197,7 @@ export const SCORE_SKINS: ScoreSkin[] = [
     label: '스토브리그 윈터', description: 'FA·이적시장 겨울 한정',
     assetKey: 'stoveWinter', renderType: 'imageFrame',
     unlockType: 'currency', price: 120, currencyType: 'baseball', sortOrder: 700,
-    availableFrom: '2026-11-16T00:00:00+09:00', availableUntil: '2026-12-21T00:00:00+09:00',
+    availableFrom: '2026-11-16T00:00:00+09:00', availableUntil: '2026-12-10T00:00:00+09:00',
   },
   {
     id: 'skin.gold_glove_2026', kind: 'asset', category: 'special',
