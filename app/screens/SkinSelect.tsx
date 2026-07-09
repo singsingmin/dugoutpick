@@ -21,7 +21,7 @@ import JerseyScoreBadge from '../components/JerseyScoreBadge';
 import ScoreboardScoreBadge, { type ScoreboardVariant } from '../components/ScoreboardScoreBadge';
 import ImageFrameScoreBadge from '../components/ImageFrameScoreBadge';
 import { getImageFrameConfig } from '../utils/assetFrameConfig';
-import { saleStatus, isLimited, pickFeaturedLimited, openMD, lastSaleMD, upcomingNotice } from '../utils/saleWindow';
+import { isLimited, liveLimited, upcomingPreview, openMD, lastSaleMD, upcomingNotice } from '../utils/saleWindow';
 import PixelText from '../components/PixelText';
 import ScreenHeader from '../components/ScreenHeader';
 import AppIcon from '../components/AppIcon';
@@ -130,12 +130,12 @@ export default function SkinSelect() {
   const now = Date.now();
   const sections = buildSections(tab, isOwned);
 
-  // 지금 볼 만한 한정 스킨 1개(미보유 중, 판매중 우선→14일 내 예고).
-  const featured = pickFeaturedLimited(
-    SCORE_SKIN_LIST.filter((s) => s.kind === 'asset' && isLimited(s) && s.unlockType === 'currency' && !isOwned(s.id)),
-    now,
+  // 한정 스킨(미보유): 판매중 전부 + 예고 1개를 카드로 노출(그리드엔 상시·보유만).
+  const limitedSkins = SCORE_SKIN_LIST.filter(
+    (s) => s.kind === 'asset' && isLimited(s) && s.unlockType === 'currency' && !isOwned(s.id),
   );
-  const featuredStatus = featured ? saleStatus(featured.availableFrom, featured.availableUntil, now) : null;
+  const liveSkins = liveLimited(limitedSkins, now);
+  const previewSkin = upcomingPreview(limitedSkins, now);
 
   const showToast = (msg: string) => {
     setToast(msg);
@@ -224,44 +224,48 @@ export default function SkinSelect() {
         </View>
 
         <ScrollView contentContainerStyle={styles.content}>
-          {featured && featuredStatus && (
-            <Pressable
-              style={styles.featuredCard}
-              onPress={
-                featuredStatus === 'upcoming' && featured.availableFrom
-                  ? () => showToast(upcomingNotice(featured.availableFrom!))
-                  : undefined
-              }
-            >
+          {/* 판매중 한정 스킨 — 겹치면 전부(마감 임박 순), 각 카드에 교환하기 */}
+          {liveSkins.map((s) => (
+            <View key={s.id} style={styles.featuredCard}>
               <View style={styles.featuredThumb}>
-                <SkinThumb skin={featured} teamColor={accent} targetW={56} maxH={46} />
+                <SkinThumb skin={s} teamColor={accent} targetW={56} maxH={46} />
               </View>
               <View style={styles.featuredInfo}>
-                <PixelText variant="caption" color={accent}>
-                  {featuredStatus === 'live' ? '이번 한정 스킨' : '다음 한정 예고'}
-                </PixelText>
-                <PixelText variant="body" color={colors.text} numberOfLines={1}>{featured.fullName ?? featured.label}</PixelText>
+                <PixelText variant="caption" color={accent}>이번 한정 스킨</PixelText>
+                <PixelText variant="body" color={colors.text} numberOfLines={1}>{s.fullName ?? s.label}</PixelText>
                 <View style={styles.featuredMeta}>
-                  <PixelText variant="caption" color={colors.textDim}>
-                    {featuredStatus === 'live'
-                      ? `${lastSaleMD(featured.availableUntil!)}까지 · `
-                      : `${openMD(featured.availableFrom!)} 오픈 · `}
-                  </PixelText>
-                  <BaseballAmount n={featured.price ?? 0} size={13} color={colors.textDim} />
+                  <PixelText variant="caption" color={colors.textDim}>{lastSaleMD(s.availableUntil!)}까지 · </PixelText>
+                  <BaseballAmount n={s.price ?? 0} size={13} color={colors.textDim} />
                 </View>
               </View>
-              {featuredStatus === 'live' ? (
-                <Pressable style={[styles.featuredBtn, { backgroundColor: accent }]} onPress={() => openSkinPurchase(featured)}>
-                  <PixelText variant="caption" color="#fff">교환하기</PixelText>
-                </Pressable>
-              ) : (
-                <View style={styles.featuredSoon}>
-                  <PixelText variant="caption" color="#fff">오픈 예정</PixelText>
+              <Pressable style={[styles.featuredBtn, { backgroundColor: accent }]} onPress={() => openSkinPurchase(s)}>
+                <PixelText variant="caption" color="#fff">교환하기</PixelText>
+              </Pressable>
+            </View>
+          ))}
+          {/* 다음 한정 예고 — 항상 1개(가장 가까운 다음 오픈) */}
+          {previewSkin && (
+            <Pressable
+              style={styles.featuredCard}
+              onPress={previewSkin.availableFrom ? () => showToast(upcomingNotice(previewSkin.availableFrom!)) : undefined}
+            >
+              <View style={styles.featuredThumb}>
+                <SkinThumb skin={previewSkin} teamColor={accent} targetW={56} maxH={46} />
+              </View>
+              <View style={styles.featuredInfo}>
+                <PixelText variant="caption" color={accent}>다음 한정 예고</PixelText>
+                <PixelText variant="body" color={colors.text} numberOfLines={1}>{previewSkin.fullName ?? previewSkin.label}</PixelText>
+                <View style={styles.featuredMeta}>
+                  <PixelText variant="caption" color={colors.textDim}>{openMD(previewSkin.availableFrom!)} 오픈 · </PixelText>
+                  <BaseballAmount n={previewSkin.price ?? 0} size={13} color={colors.textDim} />
                 </View>
-              )}
+              </View>
+              <View style={styles.featuredSoon}>
+                <PixelText variant="caption" color="#fff">오픈 예정</PixelText>
+              </View>
             </Pressable>
           )}
-          {sections.length === 0 && !featured ? (
+          {sections.length === 0 && liveSkins.length === 0 && !previewSkin ? (
             <View style={styles.empty}>
               <PixelText variant="body" color={colors.textDim}>준비 중인 스킨이에요</PixelText>
             </View>

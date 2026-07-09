@@ -26,13 +26,19 @@ export function saleStatus(from?: string | null, until?: string | null, now: num
   return 'live';
 }
 
-// 상점에 노출할 "지금 볼 만한 한정 상품" 1개 선택(미보유 후보 중).
-// 우선순위: 판매 중(가장 빨리 마감되는 것) → 14일 이내 오픈 예정(가장 가까운 것) → 없으면 null.
-export function pickFeaturedLimited<T extends LimitedItem>(candidates: T[], now: number = Date.now()): T | null {
-  const live = candidates
+// 노출 정책(2026-07-09 확정): 판매중은 겹쳐도 전부 노출 + 예고는 항상 1개(가장 가까운 다음 오픈).
+//   → 상점 featured 영역 = [판매중 카드들(전부, 마감 임박 순)] + [예고 카드 1개].
+
+// 현재 판매 중인 한정 상품 전부(미보유), 마감 임박 순.
+export function liveLimited<T extends LimitedItem>(candidates: T[], now: number = Date.now()): T[] {
+  return candidates
     .filter((c) => saleStatus(c.availableFrom, c.availableUntil, now) === 'live')
+    .slice()
     .sort((a, b) => Date.parse(a.availableUntil ?? '') - Date.parse(b.availableUntil ?? ''));
-  if (live.length) return live[0];
+}
+
+// 다음 오픈 예정 1개(미보유, 14일 이내, 가장 가까운 것). 예고는 항상 최대 1개(오픈일이 다르면 자연히 안 겹침).
+export function upcomingPreview<T extends LimitedItem>(candidates: T[], now: number = Date.now()): T | null {
   const upcoming = candidates
     .filter((c) =>
       saleStatus(c.availableFrom, c.availableUntil, now) === 'upcoming' &&
@@ -40,7 +46,7 @@ export function pickFeaturedLimited<T extends LimitedItem>(candidates: T[], now:
       Date.parse(c.availableFrom) - now <= UPCOMING_WINDOW_DAYS * DAY,
     )
     .sort((a, b) => Date.parse(a.availableFrom ?? '') - Date.parse(b.availableFrom ?? ''));
-  return upcoming.length ? upcoming[0] : null;
+  return upcoming[0] ?? null;
 }
 
 // KST 기준 "M/D" (기기 표준시와 무관하게 +9h 고정).

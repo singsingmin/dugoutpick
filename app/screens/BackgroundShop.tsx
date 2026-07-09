@@ -14,7 +14,7 @@ import {
 } from '../services/cosmetics';
 import { fetchPredictionStats } from '../services/predictions';
 import { LOCKER_BACKGROUNDS, backgroundInstanceLabel, findBackground, type LockerBackground } from '../utils/lockerBackgroundConfig';
-import { saleStatus, isLimited, pickFeaturedLimited, openMD, lastSaleMD, upcomingNotice } from '../utils/saleWindow';
+import { isLimited, liveLimited, upcomingPreview, openMD, lastSaleMD, upcomingNotice } from '../utils/saleWindow';
 import PixelText from '../components/PixelText';
 import ScreenHeader from '../components/ScreenHeader';
 import AppIcon from '../components/AppIcon';
@@ -108,12 +108,12 @@ export default function BackgroundShop() {
       };
     });
 
-  // 지금 볼 만한 한정 배경 1개(미보유 중, 판매중 우선→14일 내 예고).
-  const featured = pickFeaturedLimited(
-    LOCKER_BACKGROUNDS.filter((bg) => bg.unlockType === 'currency' && isLimited(bg) && !purchaseInstance(bg.id)),
-    now,
+  // 한정 배경(미보유): 판매중 전부 + 예고 1개를 카드로 노출(그리드엔 상시·보유만).
+  const limitedCandidates = LOCKER_BACKGROUNDS.filter(
+    (bg) => bg.unlockType === 'currency' && isLimited(bg) && !purchaseInstance(bg.id),
   );
-  const featuredStatus = featured ? saleStatus(featured.availableFrom, featured.availableUntil, now) : null;
+  const liveBgs = liveLimited(limitedCandidates, now);
+  const previewBg = upcomingPreview(limitedCandidates, now);
   const honorCells: Cell[] = owned
     .filter((o) => catalogById(o.backgroundId) && catalogById(o.backgroundId)!.unlockType !== 'currency')
     .slice().sort((a, b) => (b.periodLabel ?? '').localeCompare(a.periodLabel ?? ''))
@@ -223,40 +223,42 @@ export default function BackgroundShop() {
         </View>
 
         <ScrollView contentContainerStyle={styles.content}>
-          {featured && featuredStatus && (
+          {/* 판매중 한정 배경 — 겹치면 전부(마감 임박 순), 각 카드에 교환하기 */}
+          {liveBgs.map((bg) => (
+            <View key={bg.id} style={styles.featuredCard}>
+              <Image source={bg.backgroundImage} style={styles.featuredThumb} resizeMode="cover" />
+              <View style={styles.featuredInfo}>
+                <PixelText variant="caption" color={accent}>이번 한정 배경</PixelText>
+                <PixelText variant="body" color={colors.text} numberOfLines={1}>{bg.fullName ?? bg.label}</PixelText>
+                <View style={styles.featuredMeta}>
+                  <PixelText variant="caption" color={colors.textDim}>{lastSaleMD(bg.availableUntil!)}까지 · </PixelText>
+                  <BaseballAmount n={bg.price ?? 0} size={13} color={colors.textDim} />
+                </View>
+              </View>
+              <Pressable style={[styles.featuredBtn, { backgroundColor: accent }]} onPress={() => openPurchase(bg)} disabled={busy}>
+                <PixelText variant="caption" color="#fff">교환하기</PixelText>
+              </Pressable>
+            </View>
+          ))}
+          {/* 다음 한정 예고 — 항상 1개(가장 가까운 다음 오픈) */}
+          {previewBg && (
             <Pressable
               style={styles.featuredCard}
               disabled={busy}
-              onPress={
-                featuredStatus === 'upcoming' && featured.availableFrom
-                  ? () => showToast(upcomingNotice(featured.availableFrom!))
-                  : undefined
-              }
+              onPress={previewBg.availableFrom ? () => showToast(upcomingNotice(previewBg.availableFrom!)) : undefined}
             >
-              <Image source={featured.backgroundImage} style={styles.featuredThumb} resizeMode="cover" />
+              <Image source={previewBg.backgroundImage} style={styles.featuredThumb} resizeMode="cover" />
               <View style={styles.featuredInfo}>
-                <PixelText variant="caption" color={accent}>
-                  {featuredStatus === 'live' ? '이번 한정 배경' : '다음 한정 예고'}
-                </PixelText>
-                <PixelText variant="body" color={colors.text} numberOfLines={1}>{featured.fullName ?? featured.label}</PixelText>
+                <PixelText variant="caption" color={accent}>다음 한정 예고</PixelText>
+                <PixelText variant="body" color={colors.text} numberOfLines={1}>{previewBg.fullName ?? previewBg.label}</PixelText>
                 <View style={styles.featuredMeta}>
-                  <PixelText variant="caption" color={colors.textDim}>
-                    {featuredStatus === 'live'
-                      ? `${lastSaleMD(featured.availableUntil!)}까지 · `
-                      : `${openMD(featured.availableFrom!)} 오픈 · `}
-                  </PixelText>
-                  <BaseballAmount n={featured.price ?? 0} size={13} color={colors.textDim} />
+                  <PixelText variant="caption" color={colors.textDim}>{openMD(previewBg.availableFrom!)} 오픈 · </PixelText>
+                  <BaseballAmount n={previewBg.price ?? 0} size={13} color={colors.textDim} />
                 </View>
               </View>
-              {featuredStatus === 'live' ? (
-                <Pressable style={[styles.featuredBtn, { backgroundColor: accent }]} onPress={() => openPurchase(featured)} disabled={busy}>
-                  <PixelText variant="caption" color="#fff">교환하기</PixelText>
-                </Pressable>
-              ) : (
-                <View style={styles.featuredSoon}>
-                  <PixelText variant="caption" color="#fff">오픈 예정</PixelText>
-                </View>
-              )}
+              <View style={styles.featuredSoon}>
+                <PixelText variant="caption" color="#fff">오픈 예정</PixelText>
+              </View>
             </Pressable>
           )}
           {!loaded ? (
