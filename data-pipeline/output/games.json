@@ -1,7 +1,7 @@
 {
   "date": "20260709",
   "dateText": "2026년 7월 9일",
-  "updatedAt": "2026-07-09T11:10:45.567Z",
+  "updatedAt": "2026-07-09T11:30:47.608Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "원태인",
-        "batter": "문보경",
-        "heat": 57,
+        "pitcher": "리오스",
+        "batter": "전병우",
+        "heat": 59,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
+        "inning": 8,
         "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김진욱",
-        "batter": "변우혁",
-        "heat": 49,
+        "pitcher": "이이무라",
+        "batter": "박재현",
+        "heat": 53,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
+        "inning": 4,
         "half": "B",
-        "out": 3,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "구창모",
-        "batter": "노시환",
-        "heat": 33,
+        "batter": "허인서",
+        "heat": 37,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
