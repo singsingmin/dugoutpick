@@ -1,7 +1,7 @@
 {
   "date": "20260709",
   "dateText": "2026년 7월 9일",
-  "updatedAt": "2026-07-09T09:30:50.183Z",
+  "updatedAt": "2026-07-09T09:50:46.335Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "잭로그",
-        "batter": "정준재",
-        "heat": 31,
+        "batter": "최지훈",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -199,7 +199,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "원태인",
           "era": 3.45,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "원태인",
-        "batter": "홍창기",
-        "heat": 31,
+        "batter": "천성호",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -345,14 +345,14 @@
       "gameId": "20260709HTLT0",
       "time": "18:30",
       "stadium": "사직",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SPO-T",
       "away": {
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": null,
+        "score": 1,
         "starter": {
           "name": "양현종",
           "era": 4.05,
@@ -364,7 +364,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "김진욱",
           "era": 2.84,
@@ -391,9 +391,21 @@
           "doom": 0,
           "park": 0.77,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 2,
+        "half": "T",
+        "out": 1,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "김진욱",
+        "batter": "김선빈",
+        "heat": 33,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
@@ -498,14 +510,14 @@
       "gameId": "20260709WOKT0",
       "time": "18:30",
       "stadium": "수원",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SPO-2T",
       "away": {
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "하영민",
           "era": 4.16,
@@ -517,7 +529,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 3,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "배제성",
           "era": 4.5,
@@ -544,9 +556,21 @@
           "doom": 0,
           "park": 0.45,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 1,
+        "b1": true,
+        "b2": false,
+        "b3": false,
+        "pitcher": "배제성",
+        "batter": "데이비슨",
+        "heat": 31,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
@@ -651,14 +675,14 @@
       "gameId": "20260709NCHH0",
       "time": "18:30",
       "stadium": "대전",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "MS-T",
       "away": {
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "구창모",
           "era": 3.44,
@@ -670,7 +694,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "화이트",
           "era": 2.84,
@@ -697,9 +721,21 @@
           "doom": 0,
           "park": 0.36,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 2,
+        "half": "T",
+        "out": 1,
+        "b1": false,
+        "b2": true,
+        "b3": true,
+        "pitcher": "화이트",
+        "batter": "김형준",
+        "heat": 35,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
