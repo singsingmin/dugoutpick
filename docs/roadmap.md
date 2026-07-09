@@ -168,22 +168,23 @@
 >
 > **불변 원칙**: 야구공=꾸미기 전용 재화(스킨·라커룸 배경·이벤트 배경 80~200). 칭호·예측권·힌트·랭킹 포인트·보상 배율은 야구공으로 구매 불가. 랭킹 보상은 명예(칭호·명예 배경·명예의 전당)만, 야구공 미지급.
 
-- [ ] **P1 — 통합 보상 인박스 + 월간 밀스톤** (기반, 1순위)
+- [x] **P1 — 통합 보상 인박스 + 월간 밀스톤** (2026-07-09 구현, 마이그레이션 `0016`)
   - `reward_events` 통합 인박스 테이블(type: monthly_milestone·prediction_hit·referral·title_earned·background_earned·monthly_rank·season_rank·event·admin, + seen 플래그). 초기 토스트/모달, 이후 '보상함' 화면으로 확장.
   - `monthly_milestone_claims`(unique `(user_id, period_month, milestone_key)`로 멱등).
   - `settle_prediction`에서 **prediction.date 기준 period_month로 monthlyStats 1회 집계** → 밀스톤 평가(P2 룰 평가와 공유).
   - 월간 밀스톤(정산 시점 즉시 지급): 유효예측 5회 **+10** / 유효예측 10회 **+20** / 적중 5회 **+20** (월 최대 +50). `baseball_ledger` reason=`monthly_milestone_reward` + `reward_events` 발행.
   - 클라: 앱 진입 시 미확인 이벤트 fetch → 토스트/모달 → seen 처리. 중복 정산 시 보상 중복 지급 없음.
-- [ ] **P2 — 데이터주도 업적 룰 엔진 + 칭호 등급**
+- [x] **P2 — 데이터주도 업적 룰 엔진 + 칭호 등급** (2026-07-09 구현, 마이그레이션 `0017`)
   - `title_achievement_rules`(condition_type enum: first_prediction·first_hit·valid_predictions_count·hits_count·current_streak·special_tag_hit_count …) 도입. `settle_prediction` 하드코딩 if 제거·이관.
   - 획득조건 SoT=`title_achievement_rules`, 표시(색·뱃지·rarity·정렬)·동적 월간/시즌 칭호 SoT=`titleConfig`. 등급 일반/희귀/영웅/전설(표시·수집가치용, 결과·랭킹 영향 0). title_earned는 P1 인박스 재사용.
-- [ ] **P3 — predictions 스냅샷/result_tags + 경기성향형 칭호**
+- [x] **P3 — predictions 스냅샷/result_tags + 경기성향형 칭호** (2026-07-09 구현, 마이그레이션 `0018`)
   - `predictions.selected_game_snapshot`(제출 시점, 클라 제공 — 칭호=장식이라 신뢰 허용: honey_score_at_pick·honey_tier_at_pick·teams·start_time·storyline_tags).
   - `predictions.result_tags`(정산 시점 파이프라인 계산: walkoff·extra·close_1·close_2·slugfest·classic_game·daily_top). prediction_result(pending/hit/miss/void)와 분리.
   - special_tag_hit_count 조건 칭호(P2 엔진 위에 얹음).
-- [ ] **P4 — 칭호 카탈로그 20개 확장 + 장기 sink 운영**
-  - 영구 업적 칭호 ~20개(기본/참여형/적중형/연속형/경기성향형) 룰 데이터 추가.
-  - 야구공 장기 소비처: 매월 구매형 배경 1종 또는 스킨 1~2종 공급(운영 목표, 필수 배포 게이트 아님 — 시즌/이벤트 묶음으로 대체 가능).
+- [x] **P4 — 칭호 카탈로그 20개 확장** (2026-07-09 구현, 마이그레이션 `0019`)
+  - 영구 업적 칭호 20종(기본/참여형/적중형/연속형/경기성향형) 룰 데이터. 엔진은 P2 것 그대로(함수 변경 없음).
+- [ ] **P4-운영 — 야구공 장기 sink 공급** (상시 운영, 코드 미완)
+  - 매월 구매형 배경 1종 또는 스킨 1~2종 공급(운영 목표, 필수 배포 게이트 아님 — 시즌/이벤트 묶음으로 대체 가능). **아트 에셋 필요** — 코드보다 콘텐츠 제작 과제.
 
 ---
 참고 문서: [prd.md](prd.md) · [adr.md](adr.md) · [flow.md](flow.md) · [data-schema.md](data-schema.md)
