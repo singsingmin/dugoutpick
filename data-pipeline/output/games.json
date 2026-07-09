@@ -1,7 +1,7 @@
 {
   "date": "20260709",
   "dateText": "2026년 7월 9일",
-  "updatedAt": "2026-07-09T10:55:48.079Z",
+  "updatedAt": "2026-07-09T11:01:02.374Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 2,
+        "inning": 5,
+        "half": "T",
+        "out": 1,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "웰스",
-        "batter": "김현준",
-        "heat": 48,
+        "pitcher": "원태인",
+        "batter": "송찬의",
+        "heat": 51,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -397,12 +397,12 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "김진욱",
-        "batter": "나성범",
+        "batter": "한준수",
         "heat": 44,
         "label": "경기 흐름 체크 중"
       },
