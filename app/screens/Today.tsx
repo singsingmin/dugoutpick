@@ -20,6 +20,9 @@ import PixelText from '../components/PixelText';
 import MondayReport from '../components/MondayReport';
 import WeeklyScheduleSheet from '../components/WeeklyScheduleSheet';
 import PredictionCard from '../components/PredictionCard';
+import RewardInboxModal from '../components/RewardInboxModal';
+import { fetchUnseenRewardEvents, markRewardEventsSeen, type RewardEvent } from '../services/rewards';
+import { useScoreSkin } from '../context/ScoreSkin';
 import { isKstMonday, kstDatetime } from '../utils';
 import { colors, spacing } from '../theme';
 
@@ -33,6 +36,8 @@ export default function Today() {
   const [weeklyVisible, setWeeklyVisible] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
   const [dailyHoney, setDailyHoney] = useState<DailyHoneyResult | null>(null);
+  const { refreshAccount } = useScoreSkin();
+  const [rewardEvents, setRewardEvents] = useState<RewardEvent[]>([]);
 
   const activeRef = useRef(true);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -114,6 +119,21 @@ export default function Today() {
     setRefreshing(false);
   }, [load]);
 
+  // 미확인 보상 알림(월간 밀스톤 등) — 앱/탭 진입 시 조회해 모달 표시(P1).
+  useFocusEffect(
+    useCallback(() => {
+      let active = true;
+      fetchUnseenRewardEvents().then((evs) => { if (active) setRewardEvents(evs); }).catch(() => {});
+      return () => { active = false; };
+    }, [])
+  );
+
+  const closeRewards = useCallback(async () => {
+    const ids = rewardEvents.map((e) => e.id);
+    setRewardEvents([]);
+    try { await markRewardEventsSeen(ids); await refreshAccount(); } catch { /* 다음 진입 때 재시도 */ }
+  }, [rewardEvents, refreshAccount]);
+
   const open = (gameId: string) => navigation.navigate('GameDetail', { gameId });
 
   if (isKstMonday()) {
@@ -125,6 +145,7 @@ export default function Today() {
           <ScreenHeader title="월요 리포트" leftIcon="clipboard" />
           <MondayReport />
         </SafeAreaView>
+        <RewardInboxModal events={rewardEvents} onClose={closeRewards} />
       </View>
     );
   }
@@ -154,6 +175,7 @@ export default function Today() {
           <Body data={data} open={open} cheerTeam={cheerTeam} onCalendar={() => setWeeklyVisible(true)} refreshing={refreshing} onRefresh={onManualRefresh} dailyHoney={dailyHoney} />
         )}
       </SafeAreaView>
+      <RewardInboxModal events={rewardEvents} onClose={closeRewards} />
     </View>
   );
 }
