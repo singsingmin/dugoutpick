@@ -163,8 +163,9 @@ export default function Today() {
         ) : !data ? (
           <View style={styles.center}><ActivityIndicator color={colors.accent} /></View>
         ) : data.games.length === 0 ? (
-          <View style={styles.center}>
-            <PixelText variant="title" color={colors.text}>오늘은 경기가 없다</PixelText>
+          <View style={styles.emptyTop}>
+            <ScreenHeader title="오늘 경기" leftIcon="baseball" rightIcon="calendar" onRightPress={() => setWeeklyVisible(true)} />
+            <PixelText variant="title" color={colors.text} style={styles.emptyTitle}>오늘은 경기가 없다</PixelText>
             {dailyHoney && (
               <View style={styles.emptyHoney}>
                 <YesterdayHoneyCard honey={dailyHoney} />
@@ -391,6 +392,8 @@ const styles = StyleSheet.create({
   scroll: { flex: 1 },
   scrollContent: { flexGrow: 1 },
   center: { flex: 1, alignItems: 'center', justifyContent: 'center' },
+  emptyTop: { flex: 1 },   // 경기 없는 날 — 헤더 + 콘텐츠를 상단부터
+  emptyTitle: { marginTop: spacing.xl, alignSelf: 'center' },
 
   // 히어로 섹션
   heroContent: {
