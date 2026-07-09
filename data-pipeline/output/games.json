@@ -1,7 +1,7 @@
 {
   "date": "20260709",
   "dateText": "2026년 7월 9일",
-  "updatedAt": "2026-07-09T13:13:34.189Z",
+  "updatedAt": "2026-07-09T13:21:10.952Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -330,15 +330,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
-        "b1": true,
+        "inning": 9,
+        "half": "T",
+        "out": 3,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "전사민",
-        "batter": "문현빈",
-        "heat": 60,
+        "pitcher": "이민우",
+        "batter": "김주원",
+        "heat": 63,
         "label": "후반 박빙 승부"
       },
       "recap": null,
