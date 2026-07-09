@@ -28,6 +28,17 @@ const FIXED_TITLES: Record<string, TitleDisplay> = {
   'title.walkoff_witness':  { label: '끝내기 목격자', description: '끝내기 경기를 3번 적중', grade: 'epic' },
   'title.thriller_master':  { label: '한 끗 승부사', description: '1점차 접전을 5번 적중', grade: 'rare' },
   'title.slugfest_lover':   { label: '난타전 애호가', description: '난타전을 3번 적중', grade: 'rare' },
+  // P4 카탈로그 확장 — 참여형/적중형/연속형/경기성향형.
+  'title.regular10':        { label: '단골 예측러', description: '유효 예측 10회 달성', grade: 'common' },
+  'title.veteran50':        { label: '예측 베테랑', description: '유효 예측 50회 달성', grade: 'rare' },
+  'title.predict100':       { label: '예측 마스터', description: '유효 예측 100회 달성', grade: 'epic' },
+  'title.hits25':           { label: '적중의 달인', description: '누적 적중 25회 달성', grade: 'rare' },
+  'title.hits50':           { label: '적중 스나이퍼', description: '누적 적중 50회 달성', grade: 'epic' },
+  'title.hits100':          { label: '적중 레전드', description: '누적 적중 100회 달성', grade: 'epic' },
+  'title.streak7':          { label: '7연속 적중러', description: '7연속 적중 달성', grade: 'rare' },
+  'title.streak10':         { label: '10연속 적중신', description: '10연속 적중 달성', grade: 'epic' },
+  'title.extra_lover':      { label: '연장 승부사', description: '연장 경기를 3번 적중', grade: 'rare' },
+  'title.classic_collector':{ label: '명경기 수집가', description: '고득점 명경기를 5번 적중', grade: 'rare' },
 };
 
 const AWARD_LABEL: Record<string, string> = {
