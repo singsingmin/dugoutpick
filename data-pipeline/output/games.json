@@ -1,7 +1,7 @@
 {
   "date": "20260709",
   "dateText": "2026년 7월 9일",
-  "updatedAt": "2026-07-09T11:30:47.608Z",
+  "updatedAt": "2026-07-09T11:45:38.058Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 6,
+        "score": 7,
         "starter": {
           "name": "잭로그",
           "era": 4.12,
@@ -66,13 +66,13 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "half": "B",
+        "out": 1,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "잭로그",
-        "batter": "조형우",
+        "pitcher": "최민준",
+        "batter": "양의지",
         "heat": 3,
         "label": "점수차가 벌어진 경기"
       },
@@ -199,7 +199,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 3,
+        "score": 5,
         "starter": {
           "name": "원태인",
           "era": 3.45,
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "리오스",
-        "batter": "전병우",
-        "heat": 59,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "이승현",
+        "batter": "박해민",
+        "heat": 50,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -352,7 +352,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 3,
+        "score": 5,
         "starter": {
           "name": "양현종",
           "era": 4.05,
@@ -396,15 +396,15 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 0,
+        "half": "B",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이이무라",
-        "batter": "박재현",
-        "heat": 53,
-        "label": "후반 박빙 승부"
+        "pitcher": "곽도규",
+        "batter": "레이예스",
+        "heat": 27,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
+        "inning": 5,
         "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "구창모",
-        "batter": "허인서",
-        "heat": 37,
+        "batter": "심우준",
+        "heat": 42,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
