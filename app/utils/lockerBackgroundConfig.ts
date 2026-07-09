@@ -99,7 +99,7 @@ export const LOCKER_BACKGROUNDS: LockerBackground[] = [
     id: 'lockerbg.autumn_baseball_2026', label: "'26 가을야구", fullName: '2026 가을야구',
     baseKey: 'autumn_baseball', year: 2026, description: '단풍 · 포스트시즌 기대감',
     unlockType: 'currency', price: 150, sortOrder: 230,
-    availableFrom: '2026-10-01T00:00:00+09:00', availableUntil: '2026-10-25T00:00:00+09:00',
+    availableFrom: '2026-10-02T00:00:00+09:00', availableUntil: '2026-10-25T00:00:00+09:00',
     backgroundImage: require('../assets/lockerbg-autumn-baseball-2026.webp'),
   },
   {

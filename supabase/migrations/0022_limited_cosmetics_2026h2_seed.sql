@@ -15,7 +15,7 @@ insert into public.backgrounds (id, price, unlock_type, available_from, availabl
   ('lockerbg.stars_night_2026',      120, 'currency', '2026-07-15 00:00+09', '2026-08-01 00:00+09'),
   ('lockerbg.midsummer_night_2026',  120, 'currency', '2026-08-01 00:00+09', '2026-09-01 00:00+09'),
   ('lockerbg.chuseok_2026',          120, 'currency', '2026-09-18 00:00+09', '2026-10-07 00:00+09'),
-  ('lockerbg.autumn_baseball_2026',  150, 'currency', '2026-10-01 00:00+09', '2026-10-25 00:00+09'),
+  ('lockerbg.autumn_baseball_2026',  150, 'currency', '2026-10-02 00:00+09', '2026-10-25 00:00+09'),
   ('lockerbg.championship_2026',     200, 'currency', '2026-10-25 00:00+09', '2026-11-16 00:00+09'),
   ('lockerbg.holiday_2026',          150, 'currency', '2026-12-01 00:00+09', '2027-01-01 00:00+09')
 on conflict (id) do update set
