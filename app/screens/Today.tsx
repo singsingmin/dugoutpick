@@ -24,6 +24,7 @@ import RewardInboxModal from '../components/RewardInboxModal';
 import { fetchUnseenRewardEvents, markRewardEventsSeen, type RewardEvent } from '../services/rewards';
 import { useScoreSkin } from '../context/ScoreSkin';
 import { isKstMonday, kstDatetime } from '../utils';
+import { kstDateStr, prevDateStr } from '../utils/attendance';
 import { colors, spacing } from '../theme';
 
 type Nav = NativeStackNavigationProp<RootStackParamList>;
@@ -77,13 +78,16 @@ export default function Today() {
 
   // '어제의 명경기' — 하루 한 번이면 충분해 폴링 없이 마운트 시 1회만 로드.
   // away/home 필드 추가 이전 과거 기록(append-only freeze라 소급 안 됨)은 건너뜀.
+  // 기록의 date가 실제 '어제(KST)'일 때만 채택 — 경기 공백기(예: 상·하반기 사이)에
+  // 마지막 경기가 며칠 전이면 '어제의 명경기'로 표시되면 안 됨(YYYYMMDD 비교).
   useEffect(() => {
     let active = true;
+    const yesterday = prevDateStr(kstDateStr()).replace(/-/g, '');
     loadDailyHoney()
       .then((d) => {
         if (!active) return;
         const last = [...d.results].reverse().find((r) => r.away && r.home) ?? null;
-        setDailyHoney(last);
+        setDailyHoney(last && last.date === yesterday ? last : null);
       })
       .catch(() => {});
     return () => { active = false; };
