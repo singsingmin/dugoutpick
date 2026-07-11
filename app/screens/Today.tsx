@@ -21,6 +21,7 @@ import MondayReport from '../components/MondayReport';
 import WeeklyScheduleSheet from '../components/WeeklyScheduleSheet';
 import PredictionCard from '../components/PredictionCard';
 import SeriesStatusCard from '../components/SeriesStatusCard';
+import PostseasonBracketSheet from '../components/PostseasonBracketSheet';
 import RewardInboxModal from '../components/RewardInboxModal';
 import { fetchUnseenRewardEvents, markRewardEventsSeen, type RewardEvent } from '../services/rewards';
 import { useScoreSkin } from '../context/ScoreSkin';
@@ -197,6 +198,7 @@ function Body({
   onRefresh: () => void;
   dailyHoney: DailyHoneyResult | null;
 }) {
+  const [bracketVisible, setBracketVisible] = useState(false);
   // LIVE + 끝내기 역전 highlight(FINAL 후 2분) 를 '지금 볼 각'에 표시.
   const liveGames = data.games
     .filter((g) => g.status === 'LIVE' || !!getActiveWalkoff(g.gameId))
@@ -257,6 +259,7 @@ function Body({
   const psToday = data.postseason?.active ? data.postseason.today : null;
 
   return (
+    <>
     <ScrollView
       style={styles.scroll}
       contentContainerStyle={styles.scrollContent}
@@ -269,9 +272,9 @@ function Body({
         onRightPress={onCalendar}
       />
       {psToday ? (
-        /* 포스트시즌: 시리즈 현황 카드가 추천·예측을 대체 */
+        /* 포스트시즌: 시리즈 현황 카드가 추천·예측을 대체. 탭 → 브래킷 바텀시트 */
         <View style={styles.heroContent}>
-          <SeriesStatusCard ctx={psToday} />
+          <SeriesStatusCard ctx={psToday} onPressBracket={() => setBracketVisible(true)} />
         </View>
       ) : (
         <>
@@ -353,6 +356,15 @@ function Body({
         )}
       </View>
     </ScrollView>
+    {data.postseason && (
+      <PostseasonBracketSheet
+        visible={bracketVisible}
+        onClose={() => setBracketVisible(false)}
+        bracket={data.postseason.bracket}
+        myCode={cheerTeam}
+      />
+    )}
+    </>
   );
 }
 
