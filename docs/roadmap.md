@@ -15,7 +15,7 @@
 - [x] **서버 푸시 알림 V1** (2026-07-04 구현, 2026-07-07 실기기 라이브 검증 완료) — "한 번 켜두면 매일 자동"(앱 안 열어도 경기 있는 날마다). 로컬 스케줄링(앱 열어야 예약) 폐기 → 서버 푸시로 대체. 구조: 앱 `services/push.ts`가 Expo 토큰 등록(`push_tokens`, RPC `upsert_push_token`/`set_push_enabled`, 0004) → `data-pipeline/push-notify.mjs`가 update-data 워크플로에서 경기 20~40분 전 감지, 팀 팬 토큰 조회, Expo Push 발송(`push_log` 중복방지). **결정: 접전 실시간 알림은 안 함**(알림 피로 방지). FCM 연결(`google-services.json`, 2026-07-07) 후 실기기에서 경기 시작 33분 전(20~40분 윈도 내) 정상 수신 확인(문구도 템플릿과 일치 확인됨).
 - [x] **heat: 역전 직후 가산** (2026-07) — display 층(`liveHeat.ts`)에서 부호 있는 점수차로 역전(leadChange)·동점 감지 → 이벤트 보너스(역전 10~22×점수차, 동점 +6) + ~2분 decay. 역전 라벨이 최상위 라벨보다 우선(force), 끝내기 역전은 종료 후 2분 유지. (ADR-021 ③b)
 - [ ] **LLM 기반 텍스트 다양화** — 한 줄 예측·관전 포인트·월요 리포트 한줄평을 Claude Haiku/Sonnet으로 생성. 규칙 기반 템플릿의 반복 느낌 해소, 팀별 밈·말투 반영(`data-pipeline/team-context.json` 활용). 구현 조건: GitHub Actions secret에 `ANTHROPIC_API_KEY` 추가 필요. 파이프라인에서 gameId+date 키로 캐시해 2분 빌드마다 LLM 호출하지 않도록 설계. 비용 Haiku 기준 시즌 전체 ~$2.
-- [ ] **포스트시즌 화면** — 10~11월 포스트시즌 기간 자동 감지 후 시리즈 컨텍스트 표시. KBO API `srId=3`(와카·준PO·PO) / `srId=7`(KS)로 전환, `GAME_SC_NM`(라운드명 예: "KS2")·`VS_GAME_CN`(시리즈 내 차전) 필드 활용. 오늘경기 탭 상단에 시리즈 현황 카드(A팀 n승 - B팀 m승) 추가. 꿀잼지수는 포스트시즌 전체 고득점 보정 별도 검토.
+- [ ] **포스트시즌 화면** — 설계 확정(2026-07-11), 구현 미착수. 상세 스펙 → **[postseason-plan.md](postseason-plan.md)** (6버킷: ①꿀잼지수 별도공식 base70 ②시리즈 현황 카드 ③예측 비활성 ④내 팀 4분기 ⑤브래킷 바텀시트 ⑥postseasonContext). 10~11월 기간 자동 감지 후 시리즈 컨텍스트 표시, `srId=3`(와카·준PO·PO)/`srId=7`(KS) 전환. **착수 선행: KBO API 스파이크로 `GAME_SC_NM`·`VS_GAME_CN`·시리즈스코어 검증**(추정 금지, ADR-003).
 
 ## B. 📊 데이터·정확도
 - [ ] **꿀잼지수 공식 실경기 검증·튜닝** — recap(예측 vs 실제 적중률) 데이터 누적 → 가중치 보정.
