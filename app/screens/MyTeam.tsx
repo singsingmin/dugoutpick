@@ -5,17 +5,19 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useFocusEffect, useNavigation } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/types';
-import type { Game, Standing, RecentGame } from '../types';
+import type { Game, Standing, RecentGame, PostseasonState } from '../types';
 import { loadGames, loadStandings, loadRecent, loadTeams } from '../data/load';
 import { getCheerTeam } from '../data/team';
 import PixelText from '../components/PixelText';
 import Panel from '../components/Panel';
 import TeamBadge from '../components/TeamBadge';
 import GameCard from '../components/GameCard';
+import SeriesStatusCard from '../components/SeriesStatusCard';
 import ScreenHeader from '../components/ScreenHeader';
 import SectionLabel from '../components/SectionLabel';
 import AppIcon from '../components/AppIcon';
 import { RankLadder, WLDBar, HomeAwayBars, H2HList, FormDots } from '../components/charts';
+import { myTeamPostseasonStatus, myTeamStatusCopy } from '../utils/postseason';
 import { colors, spacing } from '../theme';
 
 type Nav = NativeStackNavigationProp<RootStackParamList>;
@@ -28,6 +30,7 @@ export default function MyTeam() {
   const [standing, setStanding] = useState<Standing | null>(null);
   const [recent, setRecent] = useState<RecentGame[]>([]);
   const [cutStanding, setCutStanding] = useState<Standing | null>(null);
+  const [ps, setPs] = useState<PostseasonState | null>(null);
   const [loaded, setLoaded] = useState(false);
 
   useFocusEffect(
@@ -42,6 +45,7 @@ export default function MyTeam() {
         setStanding(s.standings.find((x) => x.code === c) ?? null);
         setCutStanding(s.standings.find((x) => x.rank === 5) ?? null);
         setRecent(c ? r.recent[c] ?? [] : []);
+        setPs(g.postseason?.active ? g.postseason : null);
         setLoaded(true);
       })();
       return () => { active = false; };
@@ -73,15 +77,41 @@ export default function MyTeam() {
             <PixelText variant="title" color={accent}>{team?.fullName ?? code}</PixelText>
           </View>
 
-          {/* 오늘 경기 */}
-          <View style={styles.section}>
-            <SectionLabel icon="baseball" label="오늘 경기" />
-            {game ? (
-              <GameCard game={game} variant="list" showRecap={false} onPress={() => navigation.navigate('GameDetail', { gameId: game.gameId })} />
-            ) : (
-              <Panel><PixelText variant="body" color={colors.textDim}>오늘 내 팀 경기가 없어요</PixelText></Panel>
-            )}
-          </View>
+          {/* 포스트시즌엔 '가을야구 모드'로 오늘 경기 섹션을 대체 */}
+          {ps ? (
+            <View style={styles.section}>
+              <SectionLabel icon="autumn" label="가을야구" />
+              {(() => {
+                const status = myTeamPostseasonStatus(ps.bracket, code);
+                const copy = myTeamStatusCopy(status, team?.fullName ?? code!);
+                const myGameToday = ps.today && (ps.today.high === code || ps.today.low === code);
+                return (
+                  <>
+                    <Panel accentColor={team?.color}>
+                      <View style={styles.psHead}>
+                        <AppIcon name={copy.icon} size={22} />
+                        <PixelText variant="title" color={accent}>{copy.title}</PixelText>
+                      </View>
+                      <PixelText variant="caption" color={colors.textDim} style={styles.statLine}>{copy.sub}</PixelText>
+                    </Panel>
+                    {/* 진행 중이고 오늘 내 팀 시리즈 경기가 있으면 현황 카드도 노출 */}
+                    {status.state === '진행중' && myGameToday && ps.today && (
+                      <View style={styles.psCardGap}><SeriesStatusCard ctx={ps.today} /></View>
+                    )}
+                  </>
+                );
+              })()}
+            </View>
+          ) : (
+            <View style={styles.section}>
+              <SectionLabel icon="baseball" label="오늘 경기" />
+              {game ? (
+                <GameCard game={game} variant="list" showRecap={false} onPress={() => navigation.navigate('GameDetail', { gameId: game.gameId })} />
+              ) : (
+                <Panel><PixelText variant="body" color={colors.textDim}>오늘 내 팀 경기가 없어요</PixelText></Panel>
+              )}
+            </View>
+          )}
 
           {/* 현재 순위 + 승무패 */}
           <View style={styles.section}>
@@ -171,4 +201,6 @@ const styles = StyleSheet.create({
   rankHead: { flexDirection: 'row', alignItems: 'baseline', gap: spacing.sm, marginBottom: spacing.sm, flexWrap: 'wrap' },
   chartGap: { marginTop: spacing.sm },
   statLine: { marginTop: spacing.sm },
+  psHead: { flexDirection: 'row', alignItems: 'center', gap: spacing.xs },
+  psCardGap: { marginTop: spacing.sm },
 });

@@ -94,6 +94,43 @@ export interface TrackRecord {
   recentRecapPreview?: { pred: number; verdict: string }[]; // ready===false일 때만 파이프라인이 채움
 }
 
+// 포스트시즌(가을야구) 시리즈 컨텍스트. 파이프라인이 PO 기간에만 채움(그 외 undefined/null).
+// 설계: docs/postseason-plan.md. 산출 로직: data-pipeline/postseason.mjs.
+export type PostseasonRound = 'WC' | '준PO' | 'PO' | 'KS';
+// 오늘 경기의 시리즈 컨텍스트(시리즈 현황 카드용).
+export interface PostseasonSeriesContext {
+  round: PostseasonRound;
+  roundName: string;                    // "한국시리즈"
+  gameNo: number;                       // 차전
+  seriesFormat: number;                 // 최대 경기수(WC 2 / 준PO·PO 5 / KS 7)
+  high: string;                         // 상위 시드 팀코드
+  low: string;                          // 하위 시드 팀코드
+  seriesScore: Record<string, number>;  // 팀코드 → 승수(오늘 경기 '전'까지)
+  matchpoint: Record<string, boolean>;  // 오늘 이기면 진출/우승
+  elimination: Record<string, boolean>; // 오늘 지면 탈락
+  isFinalGame: boolean;                 // 최종차전
+  wcAdvantage: boolean;                 // WC 4위 1승 어드밴티지
+  contextLine: string;                  // 카드 맥락 한 줄(파이프라인 precompute)
+}
+
+// 브래킷(스텝래더) 한 라운드 상태.
+export interface BracketRound {
+  round: PostseasonRound;
+  roundName: string;
+  high: string | null;                  // 상위 시드(확정), 미정이면 null
+  low: string | null;                   // 하위 진출자(이전 라운드 승자), 미정이면 null
+  score: Record<string, number>;        // 팀코드 → 승수
+  status: 'upcoming' | 'active' | 'done';
+  winner: string | null;
+}
+
+// PO 기간 전체 상태. active면 그 기간, today는 오늘 경기 시리즈(없으면 null), bracket은 전체 대진.
+export interface PostseasonState {
+  active: boolean;
+  today: PostseasonSeriesContext | null;
+  bracket: BracketRound[];
+}
+
 export interface GamesData {
   date: string;                       // YYYYMMDD
   dateText: string;                   // "2026년 5월 31일"
@@ -101,6 +138,7 @@ export interface GamesData {
   recommendedGameId: string | null;   // 최고 꿀잼지수 경기
   games: Game[];
   trackRecord?: TrackRecord;          // 없으면 '집계 중' 처리
+  postseason?: PostseasonState | null; // PO 기간에만 존재(append-only, 과거/정규시즌엔 없음)
 }
 
 export interface Standing {

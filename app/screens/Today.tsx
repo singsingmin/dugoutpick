@@ -20,6 +20,7 @@ import PixelText from '../components/PixelText';
 import MondayReport from '../components/MondayReport';
 import WeeklyScheduleSheet from '../components/WeeklyScheduleSheet';
 import PredictionCard from '../components/PredictionCard';
+import SeriesStatusCard from '../components/SeriesStatusCard';
 import RewardInboxModal from '../components/RewardInboxModal';
 import { fetchUnseenRewardEvents, markRewardEventsSeen, type RewardEvent } from '../services/rewards';
 import { useScoreSkin } from '../context/ScoreSkin';
@@ -252,6 +253,9 @@ function Body({
   // 오늘 콘텐츠(라이브·결산)가 하나라도 생기면 자동으로 사라짐.
   const showYesterdayHoney = !!dailyHoney && !allDone && liveGames.length === 0 && finished.length === 0;
 
+  // 포스트시즌 모드: 오늘 경기가 시리즈 경기면 현황 카드로 히어로(추천)·예측카드를 대체.
+  const psToday = data.postseason?.active ? data.postseason.today : null;
+
   return (
     <ScrollView
       style={styles.scroll}
@@ -264,24 +268,33 @@ function Body({
         rightIcon="calendar"
         onRightPress={onCalendar}
       />
-      {/* 어제의 명경기 — 표시 기준은 그대로, 위치만 맨 위(오늘의 예측 위)로 */}
-      {showYesterdayHoney && dailyHoney && (
+      {psToday ? (
+        /* 포스트시즌: 시리즈 현황 카드가 추천·예측을 대체 */
         <View style={styles.heroContent}>
-          <YesterdayHoneyCard honey={dailyHoney} />
+          <SeriesStatusCard ctx={psToday} />
         </View>
-      )}
-      <PredictionCard dateYmd={data.date} games={data.games} locked={allDone || liveGames.length > 0} />
-      {/* ── 히어로 섹션 ── */}
-      {!allDone && heroGame && (
-        <View style={styles.heroContent}>
-          <View style={styles.heroLabelRow}>
-            <SectionLabel icon={heroIcon} label={heroLabel} />
-            <View style={styles.heroMeta}>
-              <PixelText variant="caption" color={colors.textDim}>갱신 {kstDatetime(data.updatedAt)}</PixelText>
+      ) : (
+        <>
+          {/* 어제의 명경기 — 표시 기준은 그대로, 위치만 맨 위(오늘의 예측 위)로 */}
+          {showYesterdayHoney && dailyHoney && (
+            <View style={styles.heroContent}>
+              <YesterdayHoneyCard honey={dailyHoney} />
             </View>
-          </View>
-          <GameCard game={heroGame} variant="hero" onPress={() => open(heroGame!.gameId)} />
-        </View>
+          )}
+          <PredictionCard dateYmd={data.date} games={data.games} locked={allDone || liveGames.length > 0} />
+          {/* ── 히어로 섹션 ── */}
+          {!allDone && heroGame && (
+            <View style={styles.heroContent}>
+              <View style={styles.heroLabelRow}>
+                <SectionLabel icon={heroIcon} label={heroLabel} />
+                <View style={styles.heroMeta}>
+                  <PixelText variant="caption" color={colors.textDim}>갱신 {kstDatetime(data.updatedAt)}</PixelText>
+                </View>
+              </View>
+              <GameCard game={heroGame} variant="hero" onPress={() => open(heroGame!.gameId)} />
+            </View>
+          )}
+        </>
       )}
       {/* ── 리스트 섹션 ── */}
       <View style={styles.listSection}>
