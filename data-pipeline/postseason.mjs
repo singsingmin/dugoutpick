@@ -115,6 +115,59 @@ export function buildPostseasonContext({ round, gameNo, awayCode, homeCode, seri
   };
 }
 
+// ── 브래킷(스텝래더) 상태 + 내 팀 상태 ─────────────────────
+// 설계: docs/postseason-plan.md §4·§5. 5단계(내 팀 컨텍스트)·6단계(브래킷) 공용 토대.
+
+// 한 라운드 상태 계산. high=상위시드(항상 확정), low=하위 진출자(이전 라운드 승자, 미확정이면 null).
+function roundState(round, high, low, games) {
+  const score = accumulateSeriesScore(games);
+  let winner = null;
+  let status;
+  if (!high || !low) {
+    status = 'upcoming'; // 참가자 미확정(이전 라운드 진행 중)
+  } else {
+    if ((score[high] || 0) >= winsNeeded(round, true)) winner = high;
+    else if ((score[low] || 0) >= winsNeeded(round, false)) winner = low;
+    status = winner ? 'done' : (games.length ? 'active' : 'upcoming');
+  }
+  return { round, roundName: ROUND_LABEL[round], high, low, score, status, winner };
+}
+
+// 스텝래더 브래킷 빌드.
+//  seeds: 정규시즌 최종 1~5위 팀코드 배열 [s1,s2,s3,s4,s5]
+//  roundGames: { WC:[], '준PO':[], PO:[], KS:[] } — 라운드별 정규화 경기(없으면 빈 배열)
+// 반환: [WC, 준PO, PO, KS] 각 roundState. 하위 진출자는 이전 라운드 승자로 연결.
+export function buildBracket(seeds, roundGames = {}) {
+  const [s1, s2, s3, s4, s5] = seeds;
+  const wc = roundState('WC', s4, s5, roundGames.WC || []);
+  const jpo = roundState('준PO', s3, wc.winner, roundGames['준PO'] || []);
+  const po = roundState('PO', s2, jpo.winner, roundGames.PO || []);
+  const ks = roundState('KS', s1, po.winner, roundGames.KS || []);
+  return [wc, jpo, po, ks];
+}
+
+// 내 팀 포스트시즌 상태(4분기 + 우승).
+//  return { state: '진출실패'|'대기'|'진행중'|'탈락'|'우승', round?, roundName? }
+export function myTeamStatus(bracket, myCode, seeds) {
+  if (!myCode || !seeds.includes(myCode)) return { state: '진출실패' };
+  let advancedWinner = false;
+  for (const r of bracket) {
+    if (r.high !== myCode && r.low !== myCode) continue;
+    if (r.status === 'active') return { state: '진행중', round: r.round, roundName: r.roundName };
+    if (r.status === 'upcoming') return { state: '대기', round: r.round, roundName: r.roundName };
+    if (r.status === 'done') {
+      if (r.winner === myCode) {
+        if (r.round === 'KS') return { state: '우승', round: 'KS', roundName: r.roundName };
+        advancedWinner = true;
+        continue; // 다음 라운드 슬롯에서 다시 잡힘(대기/진행중)
+      }
+      return { state: '탈락', round: r.round, roundName: r.roundName };
+    }
+  }
+  // 마지막 done 라운드를 이겼는데 다음 라운드 참가 슬롯이 아직 없음 → 대기
+  return { state: advancedWinner ? '대기' : '대기' };
+}
+
 // ── 포스트시즌 꿀잼지수(정규시즌 공식과 분리) ──────────────
 // 설계: docs/postseason-plan.md §1. base 70 순수 가산, 로지스틱 없음, clamp[68,100].
 // 정규시즌은 '여러 경기 중 변별'이지만 PO는 하루 1경기 → "오늘 이 경기가 얼마나 큰 판이냐" 기대치.

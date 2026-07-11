@@ -5,7 +5,7 @@ import assert from 'node:assert';
 import {
   parseRound, winsNeeded, normalizeGame, gameWinnerCode,
   accumulateSeriesScore, buildPostseasonContext, seriesContextLine,
-  computePostseasonHonjam, ROUND_SRID,
+  computePostseasonHonjam, buildBracket, myTeamStatus, ROUND_SRID,
 } from '../postseason.mjs';
 
 let pass = 0;
@@ -152,5 +152,45 @@ check('준PO 2-0은 매치포인트 stakes=12', H({ ctx: jpoGapCtx, awayERA: 4.2
 // 최저 바닥: 모든 가산 최소여도 clamp 하한 이상
 const minCtx = buildPostseasonContext({ round: 'WC', gameNo: 1, awayCode: 'NC', homeCode: 'SS', seriesScore: {}, rankOf: rankWC });
 check('score 하한 >= 68', H({ ctx: minCtx, awayERA: null, homeERA: null }).score >= 68, true);
+
+// ── 11. buildBracket + myTeamStatus: 2025 대진 재현 ──
+// 2025 최종: LG(1) 우승 · 한화 HH(2) 준우승 · SSG SK(3) 준PO탈락 · 삼성 SS(4) PO탈락 · NC(5) WC탈락
+const seeds2025 = ['LG', 'HH', 'SK', 'SS', 'NC'];
+const win = (round, gameNo, w, l) => ({ round, gameNo, awayCode: w, homeCode: l, awayScore: 5, homeScore: 3, finished: true });
+const games2025 = {
+  WC: [win('WC', 1, 'NC', 'SS'), win('WC', 2, 'SS', 'NC')],            // 1-1, 4위 SS 어드밴티지로 진출
+  '준PO': [win('준PO', 1, 'SS', 'SK'), win('준PO', 2, 'SS', 'SK'), win('준PO', 3, 'SS', 'SK')], // SS 3-0
+  PO: [win('PO', 1, 'HH', 'SS'), win('PO', 2, 'HH', 'SS'), win('PO', 3, 'HH', 'SS')],           // HH 3-0
+  KS: [win('KS', 1, 'LG', 'HH'), win('KS', 2, 'LG', 'HH'), win('KS', 3, 'HH', 'LG'), win('KS', 4, 'LG', 'HH'), win('KS', 5, 'LG', 'HH')], // LG 4-1
+};
+const bracket = buildBracket(seeds2025, games2025);
+check('브래킷 WC 승자 SS', bracket[0].winner, 'SS');
+check('브래킷 준PO 참가 low=WC승자 SS', bracket[1].low, 'SS');
+check('브래킷 준PO 승자 SS', bracket[1].winner, 'SS');
+check('브래킷 PO 참가 high=2위 HH', bracket[2].high, 'HH');
+check('브래킷 PO 승자 HH', bracket[2].winner, 'HH');
+check('브래킷 KS 참가 = LG vs HH', `${bracket[3].high}-${bracket[3].low}`, 'LG-HH');
+check('브래킷 KS 승자 LG', bracket[3].winner, 'LG');
+check('브래킷 KS status done', bracket[3].status, 'done');
+
+check('내 팀 LG = 우승', myTeamStatus(bracket, 'LG', seeds2025).state, '우승');
+check('내 팀 HH = 탈락(KS패)', myTeamStatus(bracket, 'HH', seeds2025).state, '탈락');
+check('내 팀 SS = 탈락(PO패)', myTeamStatus(bracket, 'SS', seeds2025).state, '탈락');
+check('내 팀 SK = 탈락(준PO패)', myTeamStatus(bracket, 'SK', seeds2025).state, '탈락');
+check('내 팀 NC = 탈락(WC패)', myTeamStatus(bracket, 'NC', seeds2025).state, '탈락');
+check('내 팀 KT(6위) = 진출실패', myTeamStatus(bracket, 'KT', seeds2025).state, '진출실패');
+check('응원팀 없음 = 진출실패', myTeamStatus(bracket, null, seeds2025).state, '진출실패');
+
+// ── 12. myTeamStatus 중간 상태(WC만 끝, 준PO 미시작) ──
+const midBracket = buildBracket(seeds2025, { WC: games2025.WC });
+check('중간: 준PO high SK upcoming → SK 대기', myTeamStatus(midBracket, 'SK', seeds2025).state, '대기');
+check('중간: WC 승자 SS 다음라운드 대기', myTeamStatus(midBracket, 'SS', seeds2025).state, '대기');
+check('중간: 1위 LG는 KS 대기', myTeamStatus(midBracket, 'LG', seeds2025).state, '대기');
+check('중간: NC는 이미 탈락', myTeamStatus(midBracket, 'NC', seeds2025).state, '탈락');
+
+// ── 13. myTeamStatus 진행중(준PO 경기 있으나 승자 미확정) ──
+const activeBracket = buildBracket(seeds2025, { WC: games2025.WC, '준PO': [win('준PO', 1, 'SS', 'SK')] });
+check('진행중: 준PO 1-0 → SS 진행중', myTeamStatus(activeBracket, 'SS', seeds2025).state, '진행중');
+check('진행중: SK도 진행중', myTeamStatus(activeBracket, 'SK', seeds2025).state, '진행중');
 
 console.log(`\n✅ postseason.test.mjs — ${pass} checks passed`);
