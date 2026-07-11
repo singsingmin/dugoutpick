@@ -8,6 +8,9 @@ import { TEAMS, byName, byCode } from './teams.mjs';
 import { resolveFrozen, toRecord, mergeHistory, aggregate, WINDOW, MIN_SAMPLE } from './recap.mjs';
 import { judgeDailyHoney, mergeDailyHoney } from './dailyHoney.mjs';
 import { rawLiveHeat, liveLabel } from './liveHeatCore.mjs';
+import {
+  POSTSEASON_SRIDS, normalizeGame, buildPostseasonState, computePostseasonHonjam, groupByRound, gameWinnerCode,
+} from './postseason.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const OUT_DIR = path.join(__dirname, 'output');
@@ -21,14 +24,32 @@ function kstToday() {
 }
 
 // ---------------- Fetchers ----------------
-async function fetchGames(date) {
+async function fetchGames(date, srId = 0) {
   const res = await fetch('https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList', {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8', 'Referer': 'https://www.koreabaseball.com/', 'User-Agent': UA },
-    body: `leId=1&srId=0&date=${date}`,
+    body: `leId=1&srId=${srId}&date=${date}`,
   });
   if (!res.ok) throw new Error(`GetKboGameList HTTP ${res.status}`);
   return (await res.json()).game || [];
+}
+
+// 포스트시즌 누적 히스토리(정규화 PO 게임) I/O. 시즌 바뀌면 리셋.
+function loadPoHistory(season) {
+  try {
+    const j = JSON.parse(fs.readFileSync(path.join(OUT_DIR, 'postseason-history.json'), 'utf8'));
+    if (j.season === season && Array.isArray(j.games)) return j;
+  } catch { /* 없음/시즌변경 → 신규 */ }
+  return { season, games: [] };
+}
+// dedup by gameId, 새 값(종료된 것) 우선.
+function mergePoHistory(hist, incoming) {
+  const byId = new Map(hist.games.map((g) => [g.gameId, g]));
+  for (const g of incoming) {
+    const prev = byId.get(g.gameId);
+    if (!prev || (g.finished && !prev.finished)) byId.set(g.gameId, g);
+  }
+  return { season: hist.season, games: [...byId.values()] };
 }
 
 async function fetchStandings() {
@@ -594,12 +615,55 @@ async function main() {
   const phase = seasonPhase(date);
   console.log(`[build] date=${date} phase=${phase.toFixed(2)}`);
 
-  const [rawGames, { standings, h2h }, pmap, scheduleBase] = await Promise.all([
+  let [rawGames, { standings, h2h }, pmap, scheduleBase] = await Promise.all([
     fetchGames(date),
     fetchStandings(),
     fetchPitcherStats(),
     fetchSchedule2mo(date).catch(() => []), // 스케줄 실패해도 빌드 계속
   ]);
+
+  // ── 포스트시즌(가을야구) 감지·상태 — 전 과정 try/catch로 격리(실패해도 정규 빌드 무영향) ──
+  // 정규(srId=0)가 오늘 경기를 안 주면 PO srId(WC=4·준PO=3·PO=5·KS=7)를 탐색.
+  let postseason = null;
+  try {
+    let poRaw = [], poSrId = null;
+    if (rawGames.length === 0) {
+      for (const srId of POSTSEASON_SRIDS) {
+        const r = await fetchGames(date, srId).catch(() => []);
+        if (r.length) { poRaw = r; poSrId = srId; break; }
+      }
+    }
+    const season = date.slice(0, 4);
+    let poHistory = loadPoHistory(season);
+    // backfill: srId는 라운드 전용이라 특정 srId를 과거 날짜로 조회하면 그 라운드 경기만 나옴.
+    // 콜드스타트(히스토리 없음)면 전 라운드 35일치, 아니면 현재 라운드 12일치만(시리즈 스코어 정확화).
+    const toMerge = [...poRaw];
+    const cold = poHistory.games.length === 0;
+    const backSrIds = cold ? POSTSEASON_SRIDS : (poSrId != null ? [poSrId] : []);
+    const backDays = cold ? 35 : 12;
+    const dayMs = 86400000, base = Date.parse(`${date.slice(0, 4)}-${date.slice(4, 6)}-${date.slice(6, 8)}`);
+    const prevDates = Array.from({ length: backDays }, (_, i) => new Date(base - (i + 1) * dayMs).toISOString().slice(0, 10).replace(/-/g, ''));
+    for (const srId of backSrIds) {
+      const back = await Promise.all(prevDates.map((d) => fetchGames(d, srId).catch(() => [])));
+      for (const arr of back) toMerge.push(...arr);
+    }
+    poHistory = mergePoHistory(poHistory, toMerge.map(normalizeGame).filter(Boolean));
+    if (poHistory.games.length) {
+      const seeds = standings.slice(0, 5).map((s) => s.code).filter(Boolean);
+      const nameOf = (c) => byCode[c]?.name ?? c;
+      const state = buildPostseasonState(poHistory.games, seeds, date, nameOf);
+      if (state && state.active) {
+        postseason = state;
+        if (rawGames.length === 0 && poRaw.length) rawGames = poRaw; // PO 경기를 게임 목록에 편입
+      }
+      fs.mkdirSync(OUT_DIR, { recursive: true });
+      fs.writeFileSync(path.join(OUT_DIR, 'postseason-history.json'), JSON.stringify(poHistory, null, 2));
+    }
+    if (postseason) console.log(`[build] postseason: ${postseason.today ? `${postseason.today.roundName} ${postseason.today.gameNo}차전` : '진행 중(오늘 경기 없음)'}, bracket=${postseason.bracket.map((r) => `${r.round}:${r.status}`).join(',')}`);
+  } catch (e) {
+    console.warn('[build] postseason skip:', e.message);
+    postseason = null;
+  }
   // 월별 스케줄 HTML 파싱이 오늘 경기를 누락하는 경우 보완: rawGames 병합
   const rawEntries = rawGames
     .filter(g => g.G_ID && g.G_ID.length >= 12)
@@ -745,6 +809,20 @@ async function main() {
     };
   });
 
+  // 포스트시즌: 오늘 경기 honjam을 포스트시즌 공식으로 교체(SCHEDULED만 — 시작 후엔 freeze 유지).
+  if (postseason && postseason.today) {
+    const t = postseason.today;
+    const poByRound = groupByRound(loadPoHistory(date.slice(0, 4)).games);
+    const prior = (poByRound[t.round] || []).filter((g) => g.gameNo === t.gameNo - 1 && g.finished);
+    const prevGame = prior.length ? { diff: Math.abs(prior[0].awayScore - prior[0].homeScore) } : null;
+    for (const gm of games) {
+      if (gm.honjam?.frozen) continue; // 시작 후 freeze된 PO 값은 유지(경기 전 값 고정)
+      if (gm.away.code !== t.high && gm.away.code !== t.low) continue; // 그 시리즈 두 팀만
+      const hj = computePostseasonHonjam({ ctx: t, awayERA: gm.away.starter?.era ?? null, homeERA: gm.home.starter?.era ?? null, prevGame });
+      gm.honjam = { score: hj.score, reason: hj.reason, points: [t.contextLine].filter(Boolean), factors: hj.factors, frozen: false };
+    }
+  }
+
   // 추천 경기 = 최고 꿀잼지수
   const ranked = games.filter(g => g.honjam).sort((a, b) => b.honjam.score - a.honjam.score);
   const recommendedGameId = ranked[0]?.gameId ?? null;
@@ -782,7 +860,7 @@ async function main() {
     JSON.stringify({ updatedAt, ...trackRecord, records: merged }, null, 2));
   fs.writeFileSync(path.join(OUT_DIR, 'dailyHoney-history.json'),
     JSON.stringify({ updatedAt, results: dhMerged }, null, 2));
-  fs.writeFileSync(path.join(OUT_DIR, 'games.json'), JSON.stringify({ date, dateText: dt, updatedAt, trackRecord, recommendedGameId, games }, null, 2));
+  fs.writeFileSync(path.join(OUT_DIR, 'games.json'), JSON.stringify({ date, dateText: dt, updatedAt, trackRecord, recommendedGameId, games, postseason }, null, 2));
   fs.writeFileSync(path.join(OUT_DIR, 'standings.json'), JSON.stringify({ updatedAt, standings }, null, 2));
   fs.writeFileSync(path.join(OUT_DIR, 'teams.json'), JSON.stringify({ teams: TEAMS }, null, 2));
   fs.writeFileSync(path.join(OUT_DIR, 'recent.json'), JSON.stringify({ updatedAt, recent }, null, 2));

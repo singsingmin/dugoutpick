@@ -5,7 +5,7 @@ import assert from 'node:assert';
 import {
   parseRound, winsNeeded, normalizeGame, gameWinnerCode,
   accumulateSeriesScore, buildPostseasonContext, seriesContextLine,
-  computePostseasonHonjam, buildBracket, myTeamStatus, ROUND_SRID,
+  computePostseasonHonjam, buildBracket, myTeamStatus, buildPostseasonState, ROUND_SRID,
 } from '../postseason.mjs';
 
 let pass = 0;
@@ -192,5 +192,26 @@ check('중간: NC는 이미 탈락', myTeamStatus(midBracket, 'NC', seeds2025).s
 const activeBracket = buildBracket(seeds2025, { WC: games2025.WC, '준PO': [win('준PO', 1, 'SS', 'SK')] });
 check('진행중: 준PO 1-0 → SS 진행중', myTeamStatus(activeBracket, 'SS', seeds2025).state, '진행중');
 check('진행중: SK도 진행중', myTeamStatus(activeBracket, 'SK', seeds2025).state, '진행중');
+
+// ── 14. buildPostseasonState: 누적 history → 전체 상태 ──
+const nm2025 = (c) => ({ LG: 'LG', HH: '한화', SK: 'SSG', SS: '삼성', NC: 'NC' }[c] ?? c);
+// KS는 실제 정규화(날짜 포함), 앞 라운드는 합성(브래킷용, 날짜 무관)
+const fullHistory = [...games2025.WC, ...games2025['준PO'], ...games2025.PO, ...ksNorm];
+const stateKS5 = buildPostseasonState(fullHistory, seeds2025, '20251031', nm2025);
+check('state today round KS', stateKS5.today.round, 'KS');
+check('state today gameNo 5', stateKS5.today.gameNo, 5);
+check('state today 시리즈스코어 LG3', stateKS5.today.seriesScore.LG, 3);
+check('state today contextLine', stateKS5.today.contextLine, 'LG 이기면 우승');
+check('state bracket 4라운드', stateKS5.bracket.length, 4);
+check('state bracket KS 승자 LG', stateKS5.bracket[3].winner, 'LG');
+check('state active(오늘 경기 있음)', stateKS5.active, true);
+
+// off-day(진행 중): KS 2차전까지만 누적, 오늘(10/28)은 경기 없음 → today=null이지만 active
+const partialHistory = [...games2025.WC, ...games2025['준PO'], ...games2025.PO, ...ksNorm.slice(0, 2)];
+const stateOff = buildPostseasonState(partialHistory, seeds2025, '20251028', nm2025);
+check('off-day today=null', stateOff.today, null);
+check('off-day KS 미완 → active', stateOff.active, true);
+check('off-day 브래킷 KS 진행중', stateOff.bracket[3].status, 'active');
+check('시드 부족 → null', buildPostseasonState(fullHistory, ['LG', 'HH'], '20251031', nm2025), null);
 
 console.log(`\n✅ postseason.test.mjs — ${pass} checks passed`);

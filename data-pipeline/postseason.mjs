@@ -267,6 +267,45 @@ async function defaultFetch(srId, date) {
   return (await res.json()).game || [];
 }
 
+// 누적 정규화 게임 배열 → 라운드별 그룹(차전 정렬).
+export function groupByRound(games) {
+  const by = { WC: [], '준PO': [], PO: [], KS: [] };
+  for (const g of games) if (by[g.round]) by[g.round].push(g);
+  for (const k of Object.keys(by)) by[k].sort((a, b) => a.gameNo - b.gameNo);
+  return by;
+}
+
+// 전체 포스트시즌 상태 빌드(파이프라인 통합용).
+//  history: 이번 시즌 누적 정규화 PO 게임(append-only, dedup)
+//  seeds: 정규시즌 최종 1~5위 팀코드 [s1..s5]
+//  todayDate: YYYYMMDD (오늘 PO 경기 컨텍스트용)
+//  nameOf: (code)=>표시명 (contextLine용)
+// 반환: { active, today, bracket } | null(시드 부족 등)
+export function buildPostseasonState(history, seeds, todayDate, nameOf = (c) => c) {
+  if (!seeds || seeds.length < 5) return null;
+  const byRound = groupByRound(history);
+  const bracket = buildBracket(seeds, byRound);
+  const rankOf = (c) => { const i = seeds.indexOf(c); return i >= 0 ? i + 1 : 99; };
+
+  // 오늘 경기(PO는 하루 1경기 전제) 컨텍스트
+  let today = null;
+  const todayGame = history.find((g) => g.date === todayDate);
+  if (todayGame) {
+    const prior = byRound[todayGame.round].filter((g) => g.gameNo < todayGame.gameNo && g.finished);
+    const ctx = buildPostseasonContext({
+      round: todayGame.round, gameNo: todayGame.gameNo,
+      awayCode: todayGame.awayCode, homeCode: todayGame.homeCode,
+      seriesScore: accumulateSeriesScore(prior), rankOf,
+    });
+    today = { ...ctx, contextLine: seriesContextLine(ctx, nameOf) };
+  }
+
+  // active: 오늘 PO 경기가 있거나, 브래킷(KS)이 아직 안 끝났으면 진행 중.
+  const ksDone = bracket[bracket.length - 1].status === 'done';
+  const active = !!today || (history.length > 0 && !ksDone);
+  return { active, today, bracket };
+}
+
 // 시리즈 현황 카드 맥락 한 줄(표시용). nameOf: (code)=>표시명.
 export function seriesContextLine(ctx, nameOf = (c) => c) {
   const { high, low, gameNo, matchpoint, elimination, isFinalGame, wcAdvantage, seriesScore } = ctx;
