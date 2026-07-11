@@ -1,0 +1,120 @@
+// 포스트시즌 컨텍스트 로직 테스트 — 2025 시즌 실데이터(API 스파이크) 골든.
+// 실행: node data-pipeline/test/postseason.test.mjs
+// 픽스처는 GetKboGameList 원본 game 객체에서 로직이 읽는 필드만 발췌(2026-07-11 스파이크).
+import assert from 'node:assert';
+import {
+  parseRound, winsNeeded, normalizeGame, gameWinnerCode,
+  accumulateSeriesScore, buildPostseasonContext, seriesContextLine,
+  ROUND_SRID,
+} from '../postseason.mjs';
+
+let pass = 0;
+function check(name, actual, expected) {
+  assert.strictEqual(actual, expected, `${name}: expected ${expected}, got ${actual}`);
+  pass++;
+}
+function checkDeep(name, actual, expected) {
+  assert.deepStrictEqual(actual, expected, `${name}: mismatch\n  expected ${JSON.stringify(expected)}\n  got      ${JSON.stringify(actual)}`);
+  pass++;
+}
+
+// ── 2025 한국시리즈 원본(발췌): LG(1위) vs 한화(2위), 최종 LG 4-1 ──
+const KS = [
+  { G_ID: '20251026HHLG0', GAME_SC_NM: 'KS1', VS_GAME_CN: 1, AWAY_NM: '한화', HOME_NM: 'LG', T_SCORE_CN: '2', B_SCORE_CN: '8', GAME_STATE_SC: '3', GAME_RESULT_CK: 1, CANCEL_SC_NM: '정상경기' },
+  { G_ID: '20251027HHLG0', GAME_SC_NM: 'KS2', VS_GAME_CN: 2, AWAY_NM: '한화', HOME_NM: 'LG', T_SCORE_CN: '5', B_SCORE_CN: '13', GAME_STATE_SC: '3', GAME_RESULT_CK: 1, CANCEL_SC_NM: '정상경기' },
+  { G_ID: '20251029LGHH0', GAME_SC_NM: 'KS3', VS_GAME_CN: 3, AWAY_NM: 'LG', HOME_NM: '한화', T_SCORE_CN: '3', B_SCORE_CN: '7', GAME_STATE_SC: '3', GAME_RESULT_CK: 1, CANCEL_SC_NM: '정상경기' },
+  { G_ID: '20251030LGHH0', GAME_SC_NM: 'KS4', VS_GAME_CN: 4, AWAY_NM: 'LG', HOME_NM: '한화', T_SCORE_CN: '7', B_SCORE_CN: '4', GAME_STATE_SC: '3', GAME_RESULT_CK: 1, CANCEL_SC_NM: '정상경기' },
+  { G_ID: '20251031LGHH0', GAME_SC_NM: 'KS5', VS_GAME_CN: 5, AWAY_NM: 'LG', HOME_NM: '한화', T_SCORE_CN: '4', B_SCORE_CN: '1', GAME_STATE_SC: '3', GAME_RESULT_CK: 1, CANCEL_SC_NM: '정상경기' },
+];
+// 2025 와일드카드: 삼성(4위) vs NC(5위), 최종 삼성 진출
+const WC = [
+  { G_ID: '20251006NCSS0', GAME_SC_NM: 'WC1', VS_GAME_CN: 1, AWAY_NM: 'NC', HOME_NM: '삼성', T_SCORE_CN: '4', B_SCORE_CN: '1', GAME_STATE_SC: '3', GAME_RESULT_CK: 1, CANCEL_SC_NM: '정상경기' },
+  { G_ID: '20251007NCSS0', GAME_SC_NM: 'WC2', VS_GAME_CN: 2, AWAY_NM: 'NC', HOME_NM: '삼성', T_SCORE_CN: '0', B_SCORE_CN: '3', GAME_STATE_SC: '3', GAME_RESULT_CK: 1, CANCEL_SC_NM: '정상경기' },
+];
+const rankKS = (c) => ({ LG: 1, HH: 2 }[c]);
+const rankWC = (c) => ({ SS: 4, NC: 5 }[c]);
+
+// ── 1. parseRound: 준PO를 PO보다 먼저 매칭 ──
+checkDeep('parseRound WC2', parseRound('WC2'), { round: 'WC', gameNo: 2 });
+checkDeep('parseRound 준PO3(=준PO)', parseRound('준PO3'), { round: '준PO', gameNo: 3 });
+checkDeep('parseRound PO1', parseRound('PO1'), { round: 'PO', gameNo: 1 });
+checkDeep('parseRound KS5', parseRound('KS5'), { round: 'KS', gameNo: 5 });
+check('parseRound 정규경기=null', parseRound('정규경기'), null);
+check('parseRound null', parseRound(null), null);
+
+// ── 2. srId 매핑(스파이크 실측) ──
+check('srId WC', ROUND_SRID.WC, 4);
+check('srId 준PO', ROUND_SRID['준PO'], 3);
+check('srId PO', ROUND_SRID.PO, 5);
+check('srId KS', ROUND_SRID.KS, 7);
+
+// ── 3. winsNeeded: WC 어드밴티지 ──
+check('winsNeeded WC 상위(4위)', winsNeeded('WC', true), 1);
+check('winsNeeded WC 하위(5위)', winsNeeded('WC', false), 2);
+check('winsNeeded KS', winsNeeded('KS', true), 4);
+check('winsNeeded 준PO', winsNeeded('준PO', true), 3);
+
+// ── 4. normalizeGame + gameWinnerCode ──
+const ks1 = normalizeGame(KS[0]);
+check('normalize round', ks1.round, 'KS');
+check('normalize gameNo', ks1.gameNo, 1);
+check('normalize awayCode', ks1.awayCode, 'HH');
+check('normalize homeCode', ks1.homeCode, 'LG');
+check('normalize awayScore', ks1.awayScore, 2);
+check('normalize homeScore', ks1.homeScore, 8);
+check('normalize finished', ks1.finished, true);
+check('winner KS1 = LG(홈)', gameWinnerCode(ks1), 'LG');
+check('winner KS3 = HH(홈)', gameWinnerCode(normalizeGame(KS[2])), 'HH');
+check('winner KS4 = LG(원정)', gameWinnerCode(normalizeGame(KS[3])), 'LG');
+check('normalize 정규경기=null', normalizeGame({ G_ID: '20251001NCLG0', GAME_SC_NM: '정규경기' }), null);
+
+// ── 5. 시리즈 스코어 누적(홈/원정 뒤바뀌어도 코드 기준) — 2025 KS 재현 ──
+const ksNorm = KS.map(normalizeGame);
+checkDeep('KS 전체 누적 = LG 4 - HH 1', accumulateSeriesScore(ksNorm), { LG: 4, HH: 1 });
+checkDeep('KS 1~4차전 누적 = LG 3 - HH 1', accumulateSeriesScore(ksNorm.slice(0, 4)), { LG: 3, HH: 1 });
+const wcNorm = WC.map(normalizeGame);
+checkDeep('WC 전체 누적 = NC 1 - SS 1', accumulateSeriesScore(wcNorm), { NC: 1, SS: 1 });
+
+// ── 6. 컨텍스트: KS 5차전(직전까지 LG 3-1) → LG 매치포인트, HH 벼랑끝 ──
+const ctxKS5 = buildPostseasonContext({
+  round: 'KS', gameNo: 5, awayCode: 'LG', homeCode: 'HH',
+  seriesScore: accumulateSeriesScore(ksNorm.slice(0, 4)), rankOf: rankKS,
+});
+check('KS5 상위시드 = LG', ctxKS5.high, 'LG');
+check('KS5 하위시드 = HH', ctxKS5.low, 'HH');
+check('KS5 LG 매치포인트', ctxKS5.matchpoint.LG, true);
+check('KS5 HH 매치포인트 아님', ctxKS5.matchpoint.HH, false);
+check('KS5 HH 탈락위기', ctxKS5.elimination.HH, true);
+check('KS5 최종전 아님', ctxKS5.isFinalGame, false);
+check('KS5 맥락 문구', seriesContextLine(ctxKS5, (c) => ({ LG: 'LG', HH: '한화' }[c])), 'LG 이기면 우승');
+
+// ── 7. 컨텍스트: KS 가상 7차전 3-3 → 최종전 ──
+const ctxKS7 = buildPostseasonContext({
+  round: 'KS', gameNo: 7, awayCode: 'LG', homeCode: 'HH',
+  seriesScore: { LG: 3, HH: 3 }, rankOf: rankKS,
+});
+check('KS7 3-3 최종전', ctxKS7.isFinalGame, true);
+check('KS7 맥락 = 운명의 최종전', seriesContextLine(ctxKS7), '운명의 최종전');
+
+// ── 8. 컨텍스트: WC 1차전(0-0) → 어드밴티지 안내 + 5위 벼랑끝 ──
+const ctxWC1 = buildPostseasonContext({
+  round: 'WC', gameNo: 1, awayCode: 'NC', homeCode: 'SS',
+  seriesScore: {}, rankOf: rankWC,
+});
+check('WC1 상위시드 = SS(4위)', ctxWC1.high, 'SS');
+check('WC1 하위시드 = NC(5위)', ctxWC1.low, 'NC');
+check('WC1 SS 매치포인트(1승 어드밴티지)', ctxWC1.matchpoint.SS, true);
+check('WC1 NC 탈락위기', ctxWC1.elimination.NC, true);
+check('WC1 wcAdvantage 플래그', ctxWC1.wcAdvantage, true);
+check('WC1 맥락 문구', seriesContextLine(ctxWC1, (c) => ({ SS: '삼성', NC: 'NC' }[c])), '4위 삼성 1승 어드밴티지 · 5위 NC는 2연승 필요');
+
+// ── 9. 컨텍스트: WC 2차전(직전 NC 1승) → 양쪽 매치포인트=최종전 ──
+const ctxWC2 = buildPostseasonContext({
+  round: 'WC', gameNo: 2, awayCode: 'NC', homeCode: 'SS',
+  seriesScore: accumulateSeriesScore([wcNorm[0]]), rankOf: rankWC,
+});
+check('WC2 SS 매치포인트', ctxWC2.matchpoint.SS, true);
+check('WC2 NC 매치포인트(2승째)', ctxWC2.matchpoint.NC, true);
+check('WC2 최종전', ctxWC2.isFinalGame, true);
+
+console.log(`\n✅ postseason.test.mjs — ${pass} checks passed`);
