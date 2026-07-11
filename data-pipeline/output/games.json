@@ -1,7 +1,7 @@
 {
   "date": "20260711",
   "dateText": "2026년 7월 11일",
-  "updatedAt": "2026-07-10T15:43:28.804Z",
+  "updatedAt": "2026-07-11T04:49:41.937Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -10,5 +10,6 @@
     "ready": true
   },
   "recommendedGameId": null,
-  "games": []
+  "games": [],
+  "postseason": null
 }
