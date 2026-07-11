@@ -5,7 +5,7 @@ import assert from 'node:assert';
 import {
   parseRound, winsNeeded, normalizeGame, gameWinnerCode,
   accumulateSeriesScore, buildPostseasonContext, seriesContextLine,
-  ROUND_SRID,
+  computePostseasonHonjam, ROUND_SRID,
 } from '../postseason.mjs';
 
 let pass = 0;
@@ -116,5 +116,41 @@ const ctxWC2 = buildPostseasonContext({
 check('WC2 SS 매치포인트', ctxWC2.matchpoint.SS, true);
 check('WC2 NC 매치포인트(2승째)', ctxWC2.matchpoint.NC, true);
 check('WC2 최종전', ctxWC2.isFinalGame, true);
+
+// ── 10. computePostseasonHonjam: 요소별 가산 + clamp ──
+const H = (o) => computePostseasonHonjam(o);
+// KS 최종전(3-3) + 양 에이스(2.0) + 직전 끝내기 → 상한 근처
+const ks7ctx = buildPostseasonContext({ round: 'KS', gameNo: 7, awayCode: 'LG', homeCode: 'HH', seriesScore: { LG: 3, HH: 3 }, rankOf: rankKS });
+const ks7hj = H({ ctx: ks7ctx, awayERA: 2.0, homeERA: 2.0, prevGame: { walkoff: true } });
+check('KS7 최종전 stakes=18', ks7hj.factors.stakes, 18);
+check('KS7 round=KS +7', ks7hj.factors.round, 7);
+check('KS7 pitcher(양2.0)=6', ks7hj.factors.pitcher, 6);
+check('KS7 momentum(끝내기)=4', ks7hj.factors.momentum, 4);
+check('KS7 score clamp 100', ks7hj.score, 100); // 70+7+18+6+4=105 → 100
+check('KS7 reason 최종전', ks7hj.reason, '운명의 최종전');
+
+// WC 1차전(0-0), 평범 선발, 직전 없음 → 승부처는 elimination(5위)=12
+const wc1ctx = buildPostseasonContext({ round: 'WC', gameNo: 1, awayCode: 'NC', homeCode: 'SS', seriesScore: {}, rankOf: rankWC });
+const wc1hj = H({ ctx: wc1ctx, awayERA: 4.5, homeERA: 4.5 });
+check('WC1 stakes(엘리미)=12', wc1hj.factors.stakes, 12);
+check('WC1 round=WC +0', wc1hj.factors.round, 0);
+check('WC1 momentum 없음=0', wc1hj.factors.momentum, 0);
+// 70 + 0 + 12 + pitcher(6*(0.166+0.166)/2≈1) → ~83
+check('WC1 score 범위', wc1hj.score >= 82 && wc1hj.score <= 84, true);
+
+// 라운드 중반 팽팽(준PO 1-1, 2차전 아닌 3차전 가정) → 승부처 else 분기(gap0=+8)
+const jpoCtx = buildPostseasonContext({ round: '준PO', gameNo: 3, awayCode: 'LG', homeCode: 'HH', seriesScore: { LG: 1, HH: 1 }, rankOf: rankKS });
+const jpoHj = H({ ctx: jpoCtx, awayERA: 4.2, homeERA: 4.2 });
+check('준PO 1-1 승부처 else=+8', jpoHj.factors.stakes, 8);
+check('준PO round +2', jpoHj.factors.round, 2);
+
+// 스코어 격차 클 때(2-0) else 분기 감점: gap2 → +2
+const jpoGapCtx = buildPostseasonContext({ round: '준PO', gameNo: 3, awayCode: 'LG', homeCode: 'HH', seriesScore: { LG: 2, HH: 0 }, rankOf: rankKS });
+// 2-0이면 LG 매치포인트(3승 필요, 2+1=3) → 실제로는 stakes=12. 팽팽 else는 gap 작을 때만.
+check('준PO 2-0은 매치포인트 stakes=12', H({ ctx: jpoGapCtx, awayERA: 4.2, homeERA: 4.2 }).factors.stakes, 12);
+
+// 최저 바닥: 모든 가산 최소여도 clamp 하한 이상
+const minCtx = buildPostseasonContext({ round: 'WC', gameNo: 1, awayCode: 'NC', homeCode: 'SS', seriesScore: {}, rankOf: rankWC });
+check('score 하한 >= 68', H({ ctx: minCtx, awayERA: null, homeERA: null }).score >= 68, true);
 
 console.log(`\n✅ postseason.test.mjs — ${pass} checks passed`);

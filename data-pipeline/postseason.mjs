@@ -115,6 +115,67 @@ export function buildPostseasonContext({ round, gameNo, awayCode, homeCode, seri
   };
 }
 
+// ── 포스트시즌 꿀잼지수(정규시즌 공식과 분리) ──────────────
+// 설계: docs/postseason-plan.md §1. base 70 순수 가산, 로지스틱 없음, clamp[68,100].
+// 정규시즌은 '여러 경기 중 변별'이지만 PO는 하루 1경기 → "오늘 이 경기가 얼마나 큰 판이냐" 기대치.
+const clamp01 = (x) => Math.max(0, Math.min(1, x));
+const aceness = (era) => (era == null ? 0 : clamp01((5.0 - era) / 3.0)); // 5.0→0, 2.0→1
+
+// 라운드 가산: 뒤 라운드일수록 무게.
+const ROUND_BONUS = { WC: 0, '준PO': 2, PO: 4, KS: 7 };
+
+// computePostseasonHonjam({ ctx, awayERA, homeERA, prevGame })
+//  ctx: buildPostseasonContext 결과
+//  awayERA, homeERA: 오늘 양 선발 ERA(없으면 null → 선발 가산 0)
+//  prevGame: 시리즈 내 직전 경기 흐름 { diff(점수차), extra(연장), walkoff(끝내기), comeback(역전) } (선택)
+export function computePostseasonHonjam({ ctx, awayERA = null, homeERA = null, prevGame = null }) {
+  const { high, low, matchpoint, elimination, isFinalGame, seriesScore, round } = ctx;
+
+  // 라운드
+  const roundPts = ROUND_BONUS[round] ?? 0;
+
+  // 승부처(시리즈상황 ∪ 탈락위기) — 가장 큰 지렛대
+  let stakesPts;
+  const anyMatchpoint = matchpoint[high] || matchpoint[low];       // 이기면 클린치
+  const anyElimination = elimination[high] || elimination[low];    // 지면 탈락
+  if (isFinalGame) stakesPts = 18;                                  // 최종차전(양쪽 매치포인트)
+  else if (anyMatchpoint || anyElimination) stakesPts = 12;        // 엘리미네이션·클린치
+  else {
+    // 그 외: 시리즈 팽팽할수록 ↑ (스코어 격차 작을수록). 0-0/1-1=+8, 격차1=+5, 격차2=+2, 그 이상 0.
+    const gap = Math.abs((seriesScore[high] || 0) - (seriesScore[low] || 0));
+    stakesPts = Math.max(0, 8 - gap * 3);
+  }
+
+  // 선발: 양 에이스일수록 ↑ (0~+6)
+  const pitcherPts = 6 * (aceness(awayERA) + aceness(homeERA)) / 2;
+
+  // 직전경기 흐름(시리즈 내 직전 경기): 명승부였으면 다음 경기 기대 ↑ (0~+4). 최댓값 하나만.
+  let momentumPts = 0;
+  if (prevGame) {
+    if (prevGame.walkoff) momentumPts = 4;               // 끝내기
+    else if (prevGame.comeback) momentumPts = 3;         // 역전
+    else if (prevGame.extra) momentumPts = 3;            // 연장
+    else if (prevGame.diff === 1) momentumPts = 2;       // 1점차
+  }
+
+  const raw = 70 + roundPts + stakesPts + pitcherPts + momentumPts;
+  const score = Math.max(68, Math.min(100, Math.round(raw)));
+
+  // 리드 문구(가장 큰 서사)
+  let reason;
+  if (isFinalGame) reason = '운명의 최종전';
+  else if (anyMatchpoint) reason = round === 'KS' ? '우승까지 한 걸음, 매치포인트' : '시리즈 매치포인트';
+  else if (anyElimination) reason = '지면 탈락, 벼랑 끝 승부';
+  else if (pitcherPts >= 4) reason = '양 팀 에이스 총력전';
+  else reason = `${ROUND_LABEL[round]} ${ctx.gameNo}차전`;
+
+  return {
+    score,
+    factors: { base: 70, round: roundPts, stakes: stakesPts, pitcher: Math.round(pitcherPts * 10) / 10, momentum: momentumPts },
+    reason,
+  };
+}
+
 // ── 감지(I/O) ──────────────────────────────────────────────
 // 단일 날짜에 대해 포스트시즌 srId 를 순회하며 진행 중인 라운드의 경기를 반환.
 // 정규시즌엔 어느 srId 도 게임을 안 주므로 games=[] (→ 포스트시즌 아님).
