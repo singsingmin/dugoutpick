@@ -149,12 +149,26 @@
 
 ---
 
-## 구현 순서 (제안)
+## 구현 상태 (2026-07-11 — 6버킷 전부 구현 완료)
 
-1. **[선행] API 스파이크** — 6번 필드·시리즈스코어 검증. 여기서 막히면 나머지 전부 블록.
-2. **6번** postseasonContext 파이프라인(감지 + 스코어 누적).
-3. **1번** `computePostseasonHonjam`(context 의존).
-4. **2번** 시리즈 현황 카드 + PO 모드(추천·예측 숨김).
-5. **4번** 내 팀 컨텍스트 4분기.
-6. **5번** 브래킷 바텀시트.
-7. **3번** 예측 비활성은 2번에 흡수(별도 작업 없음). 특별 예측은 후속.
+1. ✅ **[선행] API 스파이크** — 검증 완료(§6).
+2. ✅ **6번** postseasonContext — `data-pipeline/postseason.mjs`(순수 로직) + `build.mjs` 통합.
+3. ✅ **1번** `computePostseasonHonjam` — postseason.mjs.
+4. ✅ **2번** 시리즈 현황 카드 + PO 모드 — `app/components/SeriesStatusCard.tsx`, `Today.tsx`.
+5. ✅ **4번** 내 팀 컨텍스트 — `MyTeam.tsx` + `app/utils/postseason.ts`.
+6. ✅ **5번** 브래킷 바텀시트 — `app/components/PostseasonBracketSheet.tsx`.
+7. ✅ **3번** 예측 비활성 — `Today.tsx` psToday 분기가 예측카드 렌더 제외(자동 흡수). 특별 예측은 후속.
+
+**테스트**: `data-pipeline/test/postseason.test.mjs` 92 checks(2025 실데이터 골든 + 라이브 E2E).
+
+### 파이프라인 통합 방식 (build.mjs)
+- **감지**: 정규(srId=0)가 오늘 경기를 안 주면 PO srId(4/3/5/7) 순회. 전 과정 **try/catch 격리** — 실패해도 정규 빌드 무영향.
+- **누적**: `output/postseason-history.json`(시즌별, 정규화 PO 게임 append-only dedup). **srId가 라운드 전용**이라 특정 srId를 과거 날짜로 조회하면 그 라운드 경기만 나옴 → **backfill**(콜드스타트 전 라운드 35일치, 이후 현재 라운드 12일치)로 시리즈 스코어를 정확히 채움.
+- **시드**: `standings` 정규시즌 최종 1~5위로 판정(당해 시즌).
+- **honjam**: 오늘 PO 경기의 honjam을 `computePostseasonHonjam`으로 교체. **freeze 존중**(이미 시작돼 frozen된 값은 유지, non-frozen만 교체).
+- **출력**: `games.json`에 `postseason: { active, today, bracket } | null` 추가.
+- **검증**: 오프시즌 오늘 날짜(postseason=null, 정규 무영향) + 2025 KS date replay(시리즈 스코어 LG 3-1·PO honjam 90점 확인). 라이브 PO 데이터는 2026-10 이전 없음 → 당해 시즌 첫 경기 때 실동작 재확인 권장.
+
+### 알려진 한계(후속)
+- 직전경기 흐름(momentum)은 현재 **1점차(diff)만** 반영. 역전/끝내기/연장은 정규화 데이터에 이닝/walkoff가 없어 후속(raw 보강 필요).
+- 시각 QA: 실 PO 데이터 없어 mock 스킵. 2026 첫 PO 경기 또는 preview 빌드에서 확인.
