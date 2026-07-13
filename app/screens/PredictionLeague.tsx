@@ -8,8 +8,11 @@ import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/types';
 import {
   fetchPredictionStats, fetchMonthlyLeaderboard, fetchMonthlyHitrateLeaderboard,
-  type PredictionStats, type PointsLeaderboardRow, type HitRateLeaderboardRow,
+  fetchWeeklyLeaderboard, fetchWeeklyHitrateLeaderboard,
+  type PredictionStats,
 } from '../services/predictions';
+import { getCheerTeam } from '../data/team';
+import { loadTeams } from '../data/load';
 import { titleDisplay } from '../utils/titleConfig';
 import PixelText from '../components/PixelText';
 import Panel from '../components/Panel';
@@ -20,9 +23,13 @@ import { useTeamTheme } from '../context/TeamTheme';
 import { colors, spacing } from '../theme';
 
 type Nav = NativeStackNavigationProp<RootStackParamList>;
+type Period = 'week' | 'month';
 
-// supabase/migrations/0006_prediction_league.sql get_monthly_hitrate_leaderboard의 p_min_participation 기본값과 동일하게 유지.
-const MIN_HITRATE_PARTICIPATION = 5;
+const TEAMS = loadTeams().teams;
+// 적중률 최소 참여: 월간 5회(0015) / 주간 3회(0024) — 서버 기본값과 동일하게 유지.
+const MIN_HITRATE = { week: 3, month: 5 } as const;
+
+const lbSub = (hits: number, part: number, streak: number) => `적중 ${hits}/${part} · 최고 ${streak}연속`;
 
 // 메인엔 상위 N명만 표시하고, 내가 그 밖이면 '내 순위'를 표 하단에 고정(방향 B). 전체는 별도 화면(FullLeaderboard).
 const TOP_N = 5;
@@ -36,32 +43,48 @@ function myPinned(rows: LbRow[]): LbRow | null {
 export default function PredictionLeague() {
   const navigation = useNavigation<Nav>();
   const { accent } = useTeamTheme();
+  const [period, setPeriod] = useState<Period>('week');
   const [stats, setStats] = useState<PredictionStats | null>(null);
-  const [points, setPoints] = useState<PointsLeaderboardRow[]>([]);
-  const [hitrate, setHitrate] = useState<HitRateLeaderboardRow[]>([]);
+  const [pointsRows, setPointsRows] = useState<LbRow[]>([]);
+  const [hitrateRows, setHitrateRows] = useState<LbRow[]>([]);
+  const [teamRows, setTeamRows] = useState<LbRow[]>([]); // 주간 '내 응원팀 랭킹'
+  const [cheerTeam, setCheerTeam] = useState<string | null>(null);
   const [loaded, setLoaded] = useState(false);
 
   useFocusEffect(
     useCallback(() => {
       let active = true;
-      Promise.all([fetchPredictionStats(), fetchMonthlyLeaderboard(20), fetchMonthlyHitrateLeaderboard(20)])
-        .then(([s, p, h]) => { if (!active) return; setStats(s); setPoints(p); setHitrate(h); setLoaded(true); })
-        .catch(() => { if (active) setLoaded(true); });
+      setLoaded(false);
+      (async () => {
+        const [s, ct] = await Promise.all([fetchPredictionStats(), getCheerTeam()]);
+        if (!active) return;
+        setStats(s); setCheerTeam(ct);
+        if (period === 'week') {
+          const [p, h, t] = await Promise.all([fetchWeeklyLeaderboard(20), fetchWeeklyHitrateLeaderboard(20), fetchWeeklyLeaderboard(20, true)]);
+          if (!active) return;
+          setPointsRows(p.map((r) => ({ rank: r.rank, nickname: r.nickname, isMe: r.isMe, right: `${r.weeklyPoints}점`, sub: lbSub(r.hits, r.participations, r.bestStreak) })));
+          setHitrateRows(h.map((r) => ({ rank: r.rank, nickname: r.nickname, isMe: r.isMe, right: `${r.hitRate}%`, sub: lbSub(r.hits, r.participations, r.bestStreak) })));
+          setTeamRows(t.map((r) => ({ rank: r.rank, nickname: r.nickname, isMe: r.isMe, right: `${r.weeklyPoints}점`, sub: lbSub(r.hits, r.participations, r.bestStreak) })));
+        } else {
+          const [p, h] = await Promise.all([fetchMonthlyLeaderboard(20), fetchMonthlyHitrateLeaderboard(20)]);
+          if (!active) return;
+          setPointsRows(p.map((r) => ({ rank: r.rank, nickname: r.nickname, isMe: r.isMe, right: `${r.monthlyPoints}점`, sub: lbSub(r.hits, r.participations, r.bestStreak) })));
+          setHitrateRows(h.map((r) => ({ rank: r.rank, nickname: r.nickname, isMe: r.isMe, right: `${r.hitRate}%`, sub: lbSub(r.hits, r.participations, r.bestStreak) })));
+          setTeamRows([]);
+        }
+        setLoaded(true);
+      })().catch(() => { if (active) setLoaded(true); });
       return () => { active = false; };
-    }, [])
+    }, [period])
   );
 
   const myNickname = stats?.nickname ?? null;
   const equippedTitle = stats?.equippedTitle ? titleDisplay(stats.equippedTitle).label : null;
-
-  const pointsRows: LbRow[] = points.map((r) => ({
-    rank: r.rank, nickname: r.nickname, isMe: r.isMe,
-    right: `${r.monthlyPoints}점`, sub: `적중 ${r.hits}/${r.participations} · 최고 ${r.bestStreak}연속`,
-  }));
-  const hitrateRows: LbRow[] = hitrate.map((r) => ({
-    rank: r.rank, nickname: r.nickname, isMe: r.isMe,
-    right: `${r.hitRate}%`, sub: `적중 ${r.hits}/${r.participations} · 최고 ${r.bestStreak}연속`,
-  }));
+  const isWeek = period === 'week';
+  const teamName = TEAMS.find((t) => t.code === cheerTeam)?.name ?? null;
+  const pointsTitle = isWeek ? '이번 주 예측왕' : '이번 달 포인트 랭킹';
+  const hitrateTitle = isWeek ? '이번 주 적중률 랭킹' : '이번 달 적중률 랭킹';
+  const periodWord = isWeek ? '이번 주' : '이번 달';
 
   return (
     <View style={styles.root}>
@@ -115,16 +138,31 @@ export default function PredictionLeague() {
             </Panel>
           </View>
 
-          {/* 이번 달 포인트 랭킹 — 상위 N + 내 순위 고정, 전체는 별도 화면 */}
+          {/* 주간/월간 토글 */}
+          <View style={styles.toggleRow}>
+            {(['week', 'month'] as Period[]).map((p) => (
+              <Pressable
+                key={p}
+                onPress={() => setPeriod(p)}
+                style={[styles.toggleBtn, period === p && { backgroundColor: accent, borderColor: accent }]}
+              >
+                <PixelText variant="caption" color={period === p ? colors.onGreen : colors.textDim}>
+                  {p === 'week' ? '주간' : '월간'}
+                </PixelText>
+              </Pressable>
+            ))}
+          </View>
+
+          {/* 포인트 랭킹 — 상위 N + 내 순위 고정, 전체는 별도 화면 */}
           <View style={styles.section}>
-            <SectionLabel icon="chart" label="이번 달 포인트 랭킹" />
+            <SectionLabel icon="chart" label={pointsTitle} />
             {pointsRows.length === 0 ? (
-              <Panel><PixelText variant="body" color={colors.textDim}>이번 달 참여 기록이 없어요</PixelText></Panel>
+              <Panel><PixelText variant="body" color={colors.textDim}>{periodWord} 참여 기록이 없어요</PixelText></Panel>
             ) : (
               <>
                 <LeaderboardTable rows={pointsRows.slice(0, TOP_N)} accent={accent} myRowPinned={myPinned(pointsRows)} />
                 {pointsRows.length > TOP_N && (
-                  <Pressable style={styles.moreLink} onPress={() => navigation.navigate('FullLeaderboard', { board: 'points' })}>
+                  <Pressable style={styles.moreLink} onPress={() => navigation.navigate('FullLeaderboard', { board: 'points', period })}>
                     <PixelText variant="caption" color={accent}>전체 랭킹 보기 ›</PixelText>
                   </Pressable>
                 )}
@@ -135,16 +173,16 @@ export default function PredictionLeague() {
             )}
           </View>
 
-          {/* 이번 달 적중률 랭킹 */}
+          {/* 적중률 랭킹 */}
           <View style={styles.section}>
-            <SectionLabel icon="star" label="이번 달 적중률 랭킹" />
+            <SectionLabel icon="star" label={hitrateTitle} />
             {hitrateRows.length === 0 ? (
-              <Panel><PixelText variant="body" color={colors.textDim}>이번 달 {MIN_HITRATE_PARTICIPATION}회 이상 참여한 사람만 집계돼요</PixelText></Panel>
+              <Panel><PixelText variant="body" color={colors.textDim}>{periodWord} {MIN_HITRATE[period]}회 이상 참여한 사람만 집계돼요</PixelText></Panel>
             ) : (
               <>
                 <LeaderboardTable rows={hitrateRows.slice(0, TOP_N)} accent={accent} myRowPinned={myPinned(hitrateRows)} />
                 {hitrateRows.length > TOP_N && (
-                  <Pressable style={styles.moreLink} onPress={() => navigation.navigate('FullLeaderboard', { board: 'hitrate' })}>
+                  <Pressable style={styles.moreLink} onPress={() => navigation.navigate('FullLeaderboard', { board: 'hitrate', period })}>
                     <PixelText variant="caption" color={accent}>전체 랭킹 보기 ›</PixelText>
                   </Pressable>
                 )}
@@ -154,6 +192,20 @@ export default function PredictionLeague() {
               </>
             )}
           </View>
+
+          {/* 내 응원팀 주간 랭킹 (주간 전용) */}
+          {isWeek && (
+            <View style={styles.section}>
+              <SectionLabel icon="flag" label={teamName ? `${teamName} 팬 랭킹` : '내 응원팀 랭킹'} />
+              {!cheerTeam ? (
+                <Panel><PixelText variant="body" color={colors.textDim}>응원팀을 정하면 같은 팀 팬들끼리 랭킹이 보여요</PixelText></Panel>
+              ) : teamRows.length === 0 ? (
+                <Panel><PixelText variant="body" color={colors.textDim}>{teamName} 팬 중 이번 주 참여 기록이 없어요</PixelText></Panel>
+              ) : (
+                <LeaderboardTable rows={teamRows.slice(0, TOP_N)} accent={accent} myRowPinned={myPinned(teamRows)} />
+              )}
+            </View>
+          )}
 
           <Pressable style={styles.hallLink} onPress={() => navigation.navigate('HallOfFame')}>
             <PixelText variant="body" color={accent}>명예의 전당 보기 ›</PixelText>
@@ -183,4 +235,11 @@ const styles = StyleSheet.create({
 
   moreLink: { alignItems: 'flex-end', paddingTop: spacing.xs },
   tiebreakNote: { marginTop: spacing.xs },
+
+  toggleRow: { flexDirection: 'row', gap: spacing.xs, marginBottom: spacing.md },
+  toggleBtn: {
+    paddingHorizontal: spacing.md, paddingVertical: spacing.xs,
+    borderRadius: 999, borderWidth: 1, borderColor: colors.border,
+    backgroundColor: colors.surface,
+  },
 });

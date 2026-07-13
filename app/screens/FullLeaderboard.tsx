@@ -6,7 +6,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation, useFocusEffect, useRoute, type RouteProp } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/types';
-import { fetchMonthlyLeaderboard, fetchMonthlyHitrateLeaderboard } from '../services/predictions';
+import { fetchMonthlyLeaderboard, fetchMonthlyHitrateLeaderboard, fetchWeeklyLeaderboard, fetchWeeklyHitrateLeaderboard } from '../services/predictions';
 import PixelText from '../components/PixelText';
 import ScreenHeader from '../components/ScreenHeader';
 import LeaderboardTable, { type LbRow } from '../components/LeaderboardTable';
@@ -21,7 +21,10 @@ const MIN_HITRATE_PARTICIPATION = 5;
 
 export default function FullLeaderboard() {
   const navigation = useNavigation<Nav>();
-  const board = useRoute<Rt>().params.board;
+  const params = useRoute<Rt>().params;
+  const board = params.board;
+  const period = params.period ?? 'month';
+  const isWeek = period === 'week';
   const { accent } = useTeamTheme();
   const [rows, setRows] = useState<LbRow[]>([]);
   const [loaded, setLoaded] = useState(false);
@@ -29,22 +32,24 @@ export default function FullLeaderboard() {
   useFocusEffect(
     useCallback(() => {
       let active = true;
+      const sub = (hits: number, part: number, streak: number) => `적중 ${hits}/${part} · 최고 ${streak}연속`;
       const p = board === 'points'
-        ? fetchMonthlyLeaderboard(100).then((list) => list.map((r): LbRow => ({
+        ? (isWeek ? fetchWeeklyLeaderboard(100) : fetchMonthlyLeaderboard(100)).then((list) => list.map((r): LbRow => ({
             rank: r.rank, nickname: r.nickname, isMe: r.isMe,
-            right: `${r.monthlyPoints}점`, sub: `적중 ${r.hits}/${r.participations} · 최고 ${r.bestStreak}연속`,
+            right: `${'weeklyPoints' in r ? r.weeklyPoints : r.monthlyPoints}점`, sub: sub(r.hits, r.participations, r.bestStreak),
           })))
-        : fetchMonthlyHitrateLeaderboard(100).then((list) => list.map((r): LbRow => ({
+        : (isWeek ? fetchWeeklyHitrateLeaderboard(100) : fetchMonthlyHitrateLeaderboard(100)).then((list) => list.map((r): LbRow => ({
             rank: r.rank, nickname: r.nickname, isMe: r.isMe,
-            right: `${r.hitRate}%`, sub: `적중 ${r.hits}/${r.participations} · 최고 ${r.bestStreak}연속`,
+            right: `${r.hitRate}%`, sub: sub(r.hits, r.participations, r.bestStreak),
           })));
       p.then((rs) => { if (!active) return; setRows(rs); setLoaded(true); })
         .catch(() => { if (active) setLoaded(true); });
       return () => { active = false; };
-    }, [board])
+    }, [board, isWeek])
   );
 
-  const title = board === 'points' ? '이번 달 포인트 랭킹' : '이번 달 적중률 랭킹';
+  const periodWord = isWeek ? '이번 주' : '이번 달';
+  const title = board === 'points' ? `${periodWord} 포인트 랭킹` : `${periodWord} 적중률 랭킹`;
 
   return (
     <View style={styles.root}>
@@ -58,8 +63,8 @@ export default function FullLeaderboard() {
           ) : rows.length === 0 ? (
             <PixelText variant="body" color={colors.textDim}>
               {board === 'hitrate'
-                ? `이번 달 ${MIN_HITRATE_PARTICIPATION}회 이상 참여한 사람만 집계돼요`
-                : '이번 달 참여 기록이 없어요'}
+                ? `${periodWord} ${isWeek ? 3 : MIN_HITRATE_PARTICIPATION}회 이상 참여한 사람만 집계돼요`
+                : `${periodWord} 참여 기록이 없어요`}
             </PixelText>
           ) : (
             <>

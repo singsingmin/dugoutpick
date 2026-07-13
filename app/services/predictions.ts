@@ -95,3 +95,23 @@ export async function fetchMonthlyHitrateLeaderboard(limit = 50): Promise<HitRat
   return ((data ?? []) as { rank: number; nickname: string; hit_rate: number; hits: number; participations: number; best_streak: number; is_me: boolean }[])
     .map((r) => ({ rank: r.rank, nickname: r.nickname, hitRate: r.hit_rate, hits: r.hits, participations: r.participations, bestStreak: r.best_streak, isMe: r.is_me }));
 }
+
+// ── 주간 랭킹(Phase 5, 마이그 0024) — KST 주(월~일). p_week_start 없으면 서버가 이번 주 월요일. ──
+export interface WeeklyPointsRow extends LeaderboardRow { weeklyPoints: number }
+
+// 주간 포인트 랭킹("이번 주 예측왕"). team=true면 내 응원팀 팬끼리만.
+export async function fetchWeeklyLeaderboard(limit = 50, team = false): Promise<WeeklyPointsRow[]> {
+  const fn = team ? 'get_weekly_team_leaderboard' : 'get_weekly_leaderboard';
+  const { data, error } = await supabase.rpc(fn, { p_limit: limit });
+  if (error) throw error;
+  return ((data ?? []) as { rank: number; nickname: string; weekly_points: number; hits: number; participations: number; best_streak: number; is_me: boolean }[])
+    .map((r) => ({ rank: r.rank, nickname: r.nickname, weeklyPoints: r.weekly_points, hits: r.hits, participations: r.participations, bestStreak: r.best_streak, isMe: r.is_me }));
+}
+
+// 주간 적중률 랭킹(최소 참여 서버 기본 3회).
+export async function fetchWeeklyHitrateLeaderboard(limit = 50): Promise<HitRateLeaderboardRow[]> {
+  const { data, error } = await supabase.rpc('get_weekly_hitrate_leaderboard', { p_limit: limit });
+  if (error) throw error;
+  return ((data ?? []) as { rank: number; nickname: string; hit_rate: number; hits: number; participations: number; best_streak: number; is_me: boolean }[])
+    .map((r) => ({ rank: r.rank, nickname: r.nickname, hitRate: r.hit_rate, hits: r.hits, participations: r.participations, bestStreak: r.best_streak, isMe: r.is_me }));
+}
