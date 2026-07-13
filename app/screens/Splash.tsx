@@ -11,24 +11,24 @@ let _introShownThisSession = false;
 export default function Splash({ navigation }: Props) {
   // 자동 진입 — 첫 실행 시 인트로를 0.7초 보여준 뒤 탭 없이 오늘경기(응원팀 없으면 온보딩)로 이동.
   // 세션 내 재진입(_introShownThisSession)은 지연 없이 즉시 이동.
+  //
+  // ⚠️ 자동이동을 getCheerTeam() resolve에만 걸면, 웹에서 AsyncStorage getItem이 hang할 때
+  //    .then이 영영 안 걸려 인트로에서 멈춘다(실사고). → 팀 조회를 타임아웃과 race하고,
+  //    인트로 최소 노출(delay)과 함께 기다린 뒤 무조건 진입(조회가 멈춰도 최대 대기 후 이동).
   useEffect(() => {
-    const t0 = Date.now();
-    const sinceLoad = typeof performance !== 'undefined' && performance.now ? Math.round(performance.now()) : -1;
-    console.log('[splash] effect start · sincePageLoad≈', sinceLoad, 'ms', new Date(t0).toISOString());   // 진단(임시)
     let cancelled = false;
-    let timer: ReturnType<typeof setTimeout> | null = null;
-    getCheerTeam().then((c) => {
-      console.log('[splash] getCheerTeam resolved +', Date.now() - t0, 'ms, team=', c);   // 진단(임시)
-      if (cancelled) return;
-      const dest = c ? 'Tabs' : 'Onboarding';
-      const delay = _introShownThisSession ? 0 : 700;
-      _introShownThisSession = true;
-      timer = setTimeout(() => {
-        console.log('[splash] navigate ->', dest, '+', Date.now() - t0, 'ms');   // 진단(임시)
-        if (!cancelled) navigation.replace(dest);
-      }, delay);
+    const delay = _introShownThisSession ? 0 : 700;
+    _introShownThisSession = true;
+    // 팀 조회 hang 방지: 최대 2초 후 null로 진행(그 경우 온보딩으로).
+    const teamP = Promise.race<string | null>([
+      getCheerTeam().catch(() => null),
+      new Promise<null>((res) => setTimeout(() => res(null), 2000)),
+    ]);
+    const delayP = new Promise<void>((res) => setTimeout(res, delay));
+    Promise.all([teamP, delayP]).then(([c]) => {
+      if (!cancelled) navigation.replace(c ? 'Tabs' : 'Onboarding');
     });
-    return () => { cancelled = true; if (timer) clearTimeout(timer); };
+    return () => { cancelled = true; };
   }, [navigation]);
 
   return (
