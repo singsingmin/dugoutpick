@@ -1,6 +1,6 @@
 // 오늘경기 탭: 야구장 고정 배경 전체 + 반투명 카드. (flow.md, ADR-004)
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { View, ScrollView, ActivityIndicator, Image, StyleSheet, RefreshControl, AppState } from 'react-native';
+import { View, ScrollView, Image, StyleSheet, RefreshControl, AppState } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
@@ -22,6 +22,7 @@ import WeeklyScheduleSheet from '../components/WeeklyScheduleSheet';
 import PredictionCard from '../components/PredictionCard';
 import SeriesStatusCard from '../components/SeriesStatusCard';
 import PostseasonBracketSheet from '../components/PostseasonBracketSheet';
+import Loading from '../components/Loading';
 import RewardInboxModal from '../components/RewardInboxModal';
 import { fetchUnseenRewardEvents, markRewardEventsSeen, type RewardEvent } from '../services/rewards';
 import { useScoreSkin } from '../context/ScoreSkin';
@@ -165,9 +166,9 @@ export default function Today() {
       <SafeAreaView style={styles.safe} edges={['top']}>
         <WeeklyScheduleSheet visible={weeklyVisible} onClose={() => setWeeklyVisible(false)} />
         {failed ? (
-          <Centered text="데이터를 불러오지 못했다" />
+          <Centered text="데이터를 불러오지 못했어요" />
         ) : !data ? (
-          <View style={styles.center}><ActivityIndicator color={colors.accent} /></View>
+          <Loading style={styles.center} />
         ) : data.games.length === 0 ? (
           <View style={styles.emptyTop}>
             <ScreenHeader title="오늘 경기" leftIcon="baseball" rightIcon="calendar" onRightPress={() => setWeeklyVisible(true)} />

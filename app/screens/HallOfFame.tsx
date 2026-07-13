@@ -11,6 +11,7 @@ import { backgroundInstanceLabel } from '../utils/lockerBackgroundConfig';
 import PixelText from '../components/PixelText';
 import Panel from '../components/Panel';
 import ScreenHeader from '../components/ScreenHeader';
+import Loading from '../components/Loading';
 import { colors, spacing } from '../theme';
 
 type Tab = 'monthly' | 'season';
@@ -70,7 +71,7 @@ export default function HallOfFame() {
 
         <ScrollView contentContainerStyle={styles.content}>
           {!loaded ? (
-            <PixelText variant="caption" color={colors.textDim}>불러오는 중...</PixelText>
+            <Loading />
           ) : groups.length === 0 ? (
             <PixelText variant="body" color={colors.textDim}>아직 수상 기록이 없어요</PixelText>
           ) : (

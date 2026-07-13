@@ -9,6 +9,7 @@ import { fetchOwnedTitles, equipTitle, type OwnedTitle } from '../services/cosme
 import { fetchPredictionStats } from '../services/predictions';
 import { titleDisplay, GRADE_META } from '../utils/titleConfig';
 import PixelText from '../components/PixelText';
+import Loading from '../components/Loading';
 import Panel from '../components/Panel';
 import ScreenHeader from '../components/ScreenHeader';
 import { border, colors, spacing } from '../theme';
@@ -54,7 +55,7 @@ export default function TitleList() {
         <ScreenHeader title="내 칭호" leftIcon="back" onLeftPress={() => navigation.goBack()} />
         <ScrollView contentContainerStyle={styles.content}>
           {!loaded ? (
-            <PixelText variant="caption" color={colors.textDim}>불러오는 중...</PixelText>
+            <Loading />
           ) : titles.length === 0 ? (
             <PixelText variant="body" color={colors.textDim}>아직 보유한 칭호가 없어요</PixelText>
           ) : (

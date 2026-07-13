@@ -19,6 +19,7 @@ import Panel from '../components/Panel';
 import ScreenHeader from '../components/ScreenHeader';
 import SectionLabel from '../components/SectionLabel';
 import LeaderboardTable, { type LbRow } from '../components/LeaderboardTable';
+import Loading from '../components/Loading';
 import { useTeamTheme } from '../context/TeamTheme';
 import { colors, spacing } from '../theme';
 
@@ -98,7 +99,7 @@ export default function PredictionLeague() {
             <SectionLabel icon="sparkles" label="내 기록" />
             <Panel>
               {!loaded ? (
-                <PixelText variant="caption" color={colors.textDim}>불러오는 중...</PixelText>
+                <Loading />
               ) : !myNickname ? (
                 <View style={styles.emptyBlock}>
                   <PixelText variant="body" color={colors.textDim}>아직 리그에 참여 안 했어요</PixelText>

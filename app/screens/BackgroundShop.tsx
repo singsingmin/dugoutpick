@@ -17,6 +17,7 @@ import { LOCKER_BACKGROUNDS, backgroundInstanceLabel, findBackground, type Locke
 import { isLimited, liveLimited, upcomingPreview, openMD, lastSaleMD, upcomingNotice } from '../utils/saleWindow';
 import PixelText from '../components/PixelText';
 import ScreenHeader from '../components/ScreenHeader';
+import Loading from '../components/Loading';
 import AppIcon from '../components/AppIcon';
 import { border, colors, spacing } from '../theme';
 
@@ -262,7 +263,7 @@ export default function BackgroundShop() {
             </Pressable>
           )}
           {!loaded ? (
-            <PixelText variant="caption" color={colors.textDim}>불러오는 중...</PixelText>
+            <Loading />
           ) : (
             <View style={styles.grid}>
               {cells.map((c) => {

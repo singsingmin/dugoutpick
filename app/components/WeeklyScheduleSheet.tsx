@@ -6,6 +6,7 @@ import { loadReport, loadTeams } from '../data/load';
 import { getCheerTeam } from '../data/team';
 import type { ReportData } from '../types';
 import PixelText from './PixelText';
+import Loading from './Loading';
 import { border, colors, spacing } from '../theme';
 import { shortDateDow, teamColorLight } from '../utils';
 import { useTeamTheme } from '../context/TeamTheme';
@@ -76,9 +77,9 @@ export default function WeeklyScheduleSheet({ visible, onClose }: Props) {
 
           <ScrollView style={styles.scroll} showsVerticalScrollIndicator={false}>
             {grouped.length === 0 && (
-              <PixelText variant="caption" color={colors.textDim} style={styles.empty}>
-                {report ? '이번 주 일정이 없다' : '불러오는 중...'}
-              </PixelText>
+              report
+                ? <PixelText variant="caption" color={colors.textDim} style={styles.empty}>이번 주 일정이 없어요</PixelText>
+                : <Loading />
             )}
             {grouped.map(({ date, games }) => (
               <View key={date} style={styles.dateGroup}>

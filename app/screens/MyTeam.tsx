@@ -13,6 +13,7 @@ import Panel from '../components/Panel';
 import TeamBadge from '../components/TeamBadge';
 import GameCard from '../components/GameCard';
 import SeriesStatusCard from '../components/SeriesStatusCard';
+import Loading from '../components/Loading';
 import ScreenHeader from '../components/ScreenHeader';
 import SectionLabel from '../components/SectionLabel';
 import AppIcon from '../components/AppIcon';
@@ -67,7 +68,7 @@ export default function MyTeam() {
       <SafeAreaView style={styles.safe} edges={['top']}>
       <ScreenHeader title="내 팀" leftIcon="star" />
       {!loaded ? (
-        <View style={styles.center} />
+        <Loading style={styles.center} />
       ) : !code ? (
         <View style={styles.center}><PixelText variant="title" color={colors.textDim}>응원팀을 먼저 선택하세요</PixelText></View>
       ) : (
@@ -140,7 +141,7 @@ export default function MyTeam() {
                 </View>
               </Panel>
             ) : (
-              <Panel><PixelText variant="body" color={colors.textDim}>순위 정보 없음</PixelText></Panel>
+              <Panel><PixelText variant="body" color={colors.textDim}>순위 정보가 없어요</PixelText></Panel>
             )}
           </View>
 
@@ -151,7 +152,7 @@ export default function MyTeam() {
               {recent.length > 0 ? (
                 <FormDots games={recent} />
               ) : (
-                <PixelText variant="body" color={colors.textDim}>최근 경기 기록 없음</PixelText>
+                <PixelText variant="body" color={colors.textDim}>최근 경기 기록이 없어요</PixelText>
               )}
               {standing && (
                 <PixelText variant="body" color={streakColor(standing.streak)} style={styles.statLine}>현재 {standing.streak}</PixelText>

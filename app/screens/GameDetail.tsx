@@ -9,6 +9,7 @@ import { loadGames } from '../data/load';
 import PixelText from '../components/PixelText';
 import Panel from '../components/Panel';
 import ScreenHeader from '../components/ScreenHeader';
+import Loading from '../components/Loading';
 import TeamName from '../components/TeamName';
 import TeamBadge from '../components/TeamBadge';
 import ScoreSkinRenderer from '../components/ScoreSkinRenderer';
@@ -55,11 +56,11 @@ export default function GameDetail({ route, navigation }: Props) {
     navigation.setOptions({ headerShown: false });
   }, [navigation]);
 
-  if (!loaded) return <View style={styles.container} />;
+  if (!loaded) return <Loading style={styles.container} />;
   if (!game) {
     return (
       <View style={styles.center}>
-        <PixelText variant="title" color={colors.textDim}>경기를 찾을 수 없다</PixelText>
+        <PixelText variant="title" color={colors.textDim}>경기를 찾을 수 없어요</PixelText>
       </View>
     );
   }

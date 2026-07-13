@@ -9,6 +9,7 @@ import { getCheerTeam } from '../data/team';
 import PixelText from '../components/PixelText';
 import ScreenHeader from '../components/ScreenHeader';
 import AppIcon from '../components/AppIcon';
+import Loading from '../components/Loading';
 import { FormDots } from '../components/charts';
 import { border, colors, spacing } from '../theme';
 import { useTeamTheme } from '../context/TeamTheme';
@@ -81,9 +82,9 @@ export default function Standings() {
       <SafeAreaView style={styles.safe} edges={['top']}>
       <ScreenHeader title="구단 순위" leftIcon="chart" />
       {!loaded ? (
-        <View style={styles.center} />
+        <Loading style={styles.center} />
       ) : rows.length === 0 ? (
-        <View style={styles.center}><PixelText variant="title" color={colors.textDim}>순위 정보가 없다</PixelText></View>
+        <View style={styles.center}><PixelText variant="title" color={colors.textDim}>순위 정보가 없어요</PixelText></View>
       ) : (
         <ScrollView contentContainerStyle={styles.content}>
           <View style={styles.table}>

@@ -9,6 +9,7 @@ import { fetchHasRedeemed, rpcRedeemReferralCode } from '../services/referrals';
 import { fetchPredictionStats, rpcSetNickname } from '../services/predictions';
 import PixelText from '../components/PixelText';
 import Panel from '../components/Panel';
+import Loading from '../components/Loading';
 import PixelButton from '../components/PixelButton';
 import ScreenHeader from '../components/ScreenHeader';
 import SectionLabel from '../components/SectionLabel';
@@ -111,7 +112,7 @@ export default function AccountDetail() {
             <SectionLabel label="닉네임" />
             <Panel>
               {!nickLoaded ? (
-                <PixelText variant="caption" color={colors.textDim}>불러오는 중...</PixelText>
+                <Loading />
               ) : nickname == null ? (
                 <>
                   <PixelText variant="body" color={colors.textDim}>아직 닉네임이 없어요</PixelText>

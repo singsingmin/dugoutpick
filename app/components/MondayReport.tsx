@@ -5,6 +5,7 @@ import type { ReportData } from '../types';
 import { loadReport, loadTeams } from '../data/load';
 import { getCheerTeam } from '../data/team';
 import PixelText from './PixelText';
+import Loading from './Loading';
 import Panel from './Panel';
 import TeamName from './TeamName';
 import ScoreSkinRenderer from './ScoreSkinRenderer';
@@ -31,7 +32,7 @@ export default function MondayReport() {
     return () => { active = false; };
   }, []);
 
-  if (!report) return <View style={styles.center} />;
+  if (!report) return <Loading style={styles.center} />;
 
   // 지난주 팀 성적: 현재 순위 오름차순(내 팀은 행 강조로 구분)
   const teamRows = Object.entries(report.lastWeek.team)

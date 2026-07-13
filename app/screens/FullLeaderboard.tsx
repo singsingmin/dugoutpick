@@ -10,6 +10,7 @@ import { fetchMonthlyLeaderboard, fetchMonthlyHitrateLeaderboard, fetchWeeklyLea
 import PixelText from '../components/PixelText';
 import ScreenHeader from '../components/ScreenHeader';
 import LeaderboardTable, { type LbRow } from '../components/LeaderboardTable';
+import Loading from '../components/Loading';
 import { useTeamTheme } from '../context/TeamTheme';
 import { colors, spacing } from '../theme';
 
@@ -59,7 +60,7 @@ export default function FullLeaderboard() {
         <ScreenHeader title={title} leftIcon="back" onLeftPress={() => navigation.goBack()} />
         <ScrollView contentContainerStyle={styles.content}>
           {!loaded ? (
-            <PixelText variant="caption" color={colors.textDim}>불러오는 중...</PixelText>
+            <Loading />
           ) : rows.length === 0 ? (
             <PixelText variant="body" color={colors.textDim}>
               {board === 'hitrate'
