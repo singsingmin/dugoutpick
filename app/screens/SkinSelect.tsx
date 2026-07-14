@@ -1,5 +1,5 @@
 // 꿀잼지수 스킨 선택 — 썸네일 갤러리형. 카테고리 탭 + 그리드 + 현재적용 바 + 야구공 구매.
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import { View, Image, ScrollView, Pressable, StyleSheet, Dimensions, Modal } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
@@ -17,6 +17,7 @@ import {
   type ScoreSkin,
   type ScoreSkinCategory,
 } from '../utils/scoreSkinConfig';
+import Toast, { useToast } from '../components/Toast';
 import JerseyScoreBadge from '../components/JerseyScoreBadge';
 import ScoreboardScoreBadge, { type ScoreboardVariant } from '../components/ScoreboardScoreBadge';
 import ImageFrameScoreBadge from '../components/ImageFrameScoreBadge';
@@ -120,11 +121,8 @@ export default function SkinSelect() {
   const { skinId, setSkin, baseballBalance, isOwned, buySkin } = useScoreSkin();
   const online = useOnline();
   const [tab, setTab] = useState<TabKey>('all');
-  const [toast, setToast] = useState<string | null>(null);
+  const { message: toast, showToast } = useToast();
   const [modal, setModal] = useState<ModalState>(null);
-  const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  useEffect(() => () => { if (toastTimer.current) clearTimeout(toastTimer.current); }, []);
 
   const selectedConfig = getScoreSkinById(skinId);
   const now = Date.now();
@@ -137,11 +135,6 @@ export default function SkinSelect() {
   const liveSkins = liveLimited(limitedSkins, now);
   const previewSkin = upcomingPreview(limitedSkins, now);
 
-  const showToast = (msg: string) => {
-    setToast(msg);
-    if (toastTimer.current) clearTimeout(toastTimer.current);
-    toastTimer.current = setTimeout(() => setToast(null), 1500);
-  };
 
   const applySkin = async (s: ScoreSkin) => {
     await setSkin(s.id);
@@ -384,14 +377,7 @@ export default function SkinSelect() {
         </Pressable>
       </Modal>
 
-      {/* 적용 토스트 */}
-      {toast && (
-        <View style={styles.toastWrap} pointerEvents="none">
-          <View style={styles.toast}>
-            <PixelText variant="caption" color="#fff">{toast}</PixelText>
-          </View>
-        </View>
-      )}
+      <Toast message={toast} />
     </View>
   );
 }
@@ -518,11 +504,4 @@ const styles = StyleSheet.create({
   },
   modalBtnGhost: { backgroundColor: colors.surfaceAlt },
 
-  toastWrap: { position: 'absolute', left: 0, right: 0, bottom: 40, alignItems: 'center' },
-  toast: {
-    backgroundColor: 'rgba(30,24,12,0.92)',
-    paddingHorizontal: spacing.lg,
-    paddingVertical: spacing.sm,
-    borderRadius: 999,
-  },
 });

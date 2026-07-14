@@ -1,7 +1,7 @@
 // 라커룸 배경 — 꿀잼지수 스킨(SkinSelect)과 동일한 갤러리형: 현재적용 바 + 썸네일 그리드 + 탭 즉시적용.
 // 보유 배경/기본은 탭하면 바로 장착(토스트), 미보유 구매형은 구매 모달, 명예 배경은 보유 시에만 노출.
 // 장착은 equip_background RPC(0012)로 — 리그 미참여 유저도 확실히 저장됨.
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useState } from 'react';
 import { View, Image, ScrollView, Pressable, Modal, StyleSheet, Dimensions } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
@@ -18,6 +18,7 @@ import { isLimited, liveLimited, upcomingPreview, openMD, lastSaleMD, upcomingNo
 import PixelText from '../components/PixelText';
 import ScreenHeader from '../components/ScreenHeader';
 import Loading from '../components/Loading';
+import Toast, { useToast } from '../components/Toast';
 import AppIcon from '../components/AppIcon';
 import { border, colors, spacing } from '../theme';
 
@@ -72,10 +73,7 @@ export default function BackgroundShop() {
   const [loaded, setLoaded] = useState(false);
   const [modal, setModal] = useState<ModalState>(null);
   const [busy, setBusy] = useState(false);
-  const [toast, setToast] = useState<string | null>(null);
-  const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  useEffect(() => () => { if (toastTimer.current) clearTimeout(toastTimer.current); }, []);
+  const { message: toast, showToast } = useToast();
 
   const load = useCallback(() => {
     Promise.all([fetchOwnedBackgrounds(), fetchPredictionStats()])
@@ -87,11 +85,6 @@ export default function BackgroundShop() {
   const catalogById = (id: string) => LOCKER_BACKGROUNDS.find((b) => b.id === id);
   const purchaseInstance = (id: string) => owned.find((o) => o.backgroundId === id && o.periodType == null);
 
-  const showToast = (msg: string) => {
-    setToast(msg);
-    if (toastTimer.current) clearTimeout(toastTimer.current);
-    toastTimer.current = setTimeout(() => setToast(null), 1500);
-  };
 
   // 그리드: 기본 + 상시 구매형 + 보유 한정 + 보유 명예 인스턴스.
   //   한정(윈도우 있는) 미보유 상품은 그리드에서 빼고, 아래 "지금 볼 만한 한정 1개" 카드로만 노출.
@@ -363,14 +356,7 @@ export default function BackgroundShop() {
         </Pressable>
       </Modal>
 
-      {/* 적용 토스트 */}
-      {toast && (
-        <View style={styles.toastWrap} pointerEvents="none">
-          <View style={styles.toast}>
-            <PixelText variant="caption" color="#fff">{toast}</PixelText>
-          </View>
-        </View>
-      )}
+      <Toast message={toast} />
     </View>
   );
 }
@@ -450,6 +436,4 @@ const styles = StyleSheet.create({
   },
   modalBtnGhost: { backgroundColor: colors.surfaceAlt },
 
-  toastWrap: { position: 'absolute', left: 0, right: 0, bottom: 40, alignItems: 'center' },
-  toast: { backgroundColor: 'rgba(30,24,12,0.92)', paddingHorizontal: spacing.lg, paddingVertical: spacing.sm, borderRadius: 999 },
 });

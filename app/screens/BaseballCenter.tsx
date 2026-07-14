@@ -1,5 +1,5 @@
 // 야구공 센터 — 잔액·출석 보상·연속 출석 보드·최근 내역. (광고 버튼은 추후 확장 슬롯)
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import { View, Image, ScrollView, Pressable, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
@@ -11,6 +11,7 @@ import { ATTENDANCE_REWARD, ATTENDANCE_BONUS, ATTENDANCE_CYCLE, isKstToday, kstD
 import PixelText from '../components/PixelText';
 import Panel from '../components/Panel';
 import PixelButton from '../components/PixelButton';
+import Toast, { useToast } from '../components/Toast';
 import ScreenHeader from '../components/ScreenHeader';
 import SectionLabel from '../components/SectionLabel';
 import AppIcon from '../components/AppIcon';
@@ -28,22 +29,13 @@ export default function BaseballCenter() {
     transactions, claimAttendance,
   } = useScoreSkin();
   const online = useOnline();
-  const [toast, setToast] = useState<string | null>(null);
+  const { message: toast, showToast } = useToast();
   const [historyOpen, setHistoryOpen] = useState(false);
-  const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // 오늘(KST) 받은 출석 보상 합계(기본+보너스) — 완료 카드 표시용. 재시작 후에도 내역에서 도출.
   const todayEarned = transactions
     .filter((t) => (t.reason === 'attendance' || t.reason === 'attendance_bonus') && isKstToday(t.createdAt))
     .reduce((sum, t) => sum + t.amount, 0);
-
-  useEffect(() => () => { if (toastTimer.current) clearTimeout(toastTimer.current); }, []);
-
-  const showToast = (msg: string) => {
-    setToast(msg);
-    if (toastTimer.current) clearTimeout(toastTimer.current);
-    toastTimer.current = setTimeout(() => setToast(null), 1800);
-  };
 
   const onClaim = async () => {
     if (!online) { showToast('출석 보상은 인터넷 연결 후 받을 수 있어요'); return; }
@@ -180,11 +172,7 @@ export default function BaseballCenter() {
 
       <TxHistorySheet visible={historyOpen} onClose={() => setHistoryOpen(false)} transactions={transactions} days={30} />
 
-      {toast && (
-        <View style={styles.toastWrap} pointerEvents="none">
-          <View style={styles.toast}><PixelText variant="caption" color="#fff">{toast}</PixelText></View>
-        </View>
-      )}
+      <Toast message={toast} />
     </View>
   );
 }
@@ -230,6 +218,4 @@ const styles = StyleSheet.create({
   txLabel: { flex: 1 },
   moreBtn: { paddingVertical: 2, paddingLeft: spacing.sm },
 
-  toastWrap: { position: 'absolute', left: 0, right: 0, bottom: 40, alignItems: 'center' },
-  toast: { backgroundColor: 'rgba(30,24,12,0.92)', paddingHorizontal: spacing.lg, paddingVertical: spacing.sm, borderRadius: 999 },
 });
