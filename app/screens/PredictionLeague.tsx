@@ -20,6 +20,7 @@ import ScreenHeader from '../components/ScreenHeader';
 import SectionLabel from '../components/SectionLabel';
 import LeaderboardTable, { type LbRow } from '../components/LeaderboardTable';
 import Loading from '../components/Loading';
+import ErrorRetry from '../components/ErrorRetry';
 import { useTeamTheme } from '../context/TeamTheme';
 import { colors, spacing } from '../theme';
 
@@ -51,6 +52,9 @@ export default function PredictionLeague() {
   const [teamRows, setTeamRows] = useState<LbRow[]>([]); // 주간 '내 응원팀 랭킹'
   const [cheerTeam, setCheerTeam] = useState<string | null>(null);
   const [loaded, setLoaded] = useState(false);
+  const [failed, setFailed] = useState(false);
+  const [reloadKey, setReloadKey] = useState(0);
+  const retry = () => { setLoaded(false); setFailed(false); setReloadKey((k) => k + 1); };
 
   useFocusEffect(
     useCallback(() => {
@@ -73,10 +77,10 @@ export default function PredictionLeague() {
           setHitrateRows(h.map((r) => ({ rank: r.rank, nickname: r.nickname, isMe: r.isMe, right: `${r.hitRate}%`, sub: lbSub(r.hits, r.participations, r.bestStreak) })));
           setTeamRows([]);
         }
-        setLoaded(true);
-      })().catch(() => { if (active) setLoaded(true); });
+        setFailed(false); setLoaded(true);
+      })().catch(() => { if (active) { setFailed(true); setLoaded(true); } });
       return () => { active = false; };
-    }, [period])
+    }, [period, reloadKey])
   );
 
   const myNickname = stats?.nickname ?? null;
@@ -94,6 +98,10 @@ export default function PredictionLeague() {
       <SafeAreaView style={styles.safe} edges={['top']}>
         <ScreenHeader title="예측 리그" leftIcon="back" onLeftPress={() => navigation.goBack()} />
         <ScrollView contentContainerStyle={styles.content}>
+          {failed ? (
+            <ErrorRetry onRetry={retry} />
+          ) : (
+          <>
           {/* 내 기록 */}
           <View style={styles.section}>
             <SectionLabel icon="sparkles" label="내 기록" />
@@ -211,6 +219,8 @@ export default function PredictionLeague() {
           <Pressable style={styles.hallLink} onPress={() => navigation.navigate('HallOfFame')}>
             <PixelText variant="body" color={accent}>명예의 전당 보기 ›</PixelText>
           </Pressable>
+          </>
+          )}
         </ScrollView>
       </SafeAreaView>
     </View>

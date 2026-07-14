@@ -10,6 +10,7 @@ import { fetchPredictionStats } from '../services/predictions';
 import { titleDisplay, GRADE_META } from '../utils/titleConfig';
 import PixelText from '../components/PixelText';
 import Loading from '../components/Loading';
+import ErrorRetry from '../components/ErrorRetry';
 import Panel from '../components/Panel';
 import ScreenHeader from '../components/ScreenHeader';
 import { border, colors, spacing } from '../theme';
@@ -21,16 +22,19 @@ export default function TitleList() {
   const [titles, setTitles] = useState<OwnedTitle[]>([]);
   const [equipped, setEquipped] = useState<string | null>(null);
   const [loaded, setLoaded] = useState(false);
+  const [failed, setFailed] = useState(false);
+  const [reloadKey, setReloadKey] = useState(0);
   const [busyId, setBusyId] = useState<string | null>(null);
+  const retry = () => { setLoaded(false); setFailed(false); setReloadKey((k) => k + 1); };
 
   useFocusEffect(
     useCallback(() => {
       let active = true;
       Promise.all([fetchOwnedTitles(), fetchPredictionStats()])
-        .then(([t, s]) => { if (!active) return; setTitles(t); setEquipped(s?.equippedTitle ?? null); setLoaded(true); })
-        .catch(() => setLoaded(true));
+        .then(([t, s]) => { if (!active) return; setTitles(t); setEquipped(s?.equippedTitle ?? null); setFailed(false); setLoaded(true); })
+        .catch(() => { if (active) { setFailed(true); setLoaded(true); } });
       return () => { active = false; };
-    }, [])
+    }, [reloadKey])
   );
 
   const toggleEquip = async (titleId: string) => {
@@ -56,6 +60,8 @@ export default function TitleList() {
         <ScrollView contentContainerStyle={styles.content}>
           {!loaded ? (
             <Loading />
+          ) : failed ? (
+            <ErrorRetry onRetry={retry} />
           ) : titles.length === 0 ? (
             <PixelText variant="body" color={colors.textDim}>아직 보유한 칭호가 없어요</PixelText>
           ) : (

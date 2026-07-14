@@ -11,6 +11,7 @@ import PixelText from '../components/PixelText';
 import ScreenHeader from '../components/ScreenHeader';
 import LeaderboardTable, { type LbRow } from '../components/LeaderboardTable';
 import Loading from '../components/Loading';
+import ErrorRetry from '../components/ErrorRetry';
 import { useTeamTheme } from '../context/TeamTheme';
 import { colors, spacing } from '../theme';
 
@@ -29,6 +30,9 @@ export default function FullLeaderboard() {
   const { accent } = useTeamTheme();
   const [rows, setRows] = useState<LbRow[]>([]);
   const [loaded, setLoaded] = useState(false);
+  const [failed, setFailed] = useState(false);
+  const [reloadKey, setReloadKey] = useState(0);
+  const retry = () => { setLoaded(false); setFailed(false); setReloadKey((k) => k + 1); };
 
   useFocusEffect(
     useCallback(() => {
@@ -43,10 +47,10 @@ export default function FullLeaderboard() {
             rank: r.rank, nickname: r.nickname, isMe: r.isMe,
             right: `${r.hitRate}%`, sub: sub(r.hits, r.participations, r.bestStreak),
           })));
-      p.then((rs) => { if (!active) return; setRows(rs); setLoaded(true); })
-        .catch(() => { if (active) setLoaded(true); });
+      p.then((rs) => { if (!active) return; setRows(rs); setFailed(false); setLoaded(true); })
+        .catch(() => { if (active) { setFailed(true); setLoaded(true); } });
       return () => { active = false; };
-    }, [board, isWeek])
+    }, [board, isWeek, reloadKey])
   );
 
   const periodWord = isWeek ? '이번 주' : '이번 달';
@@ -61,6 +65,8 @@ export default function FullLeaderboard() {
         <ScrollView contentContainerStyle={styles.content}>
           {!loaded ? (
             <Loading />
+          ) : failed ? (
+            <ErrorRetry onRetry={retry} />
           ) : rows.length === 0 ? (
             <PixelText variant="body" color={colors.textDim}>
               {board === 'hitrate'

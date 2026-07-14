@@ -12,6 +12,7 @@ import PixelText from '../components/PixelText';
 import Panel from '../components/Panel';
 import ScreenHeader from '../components/ScreenHeader';
 import Loading from '../components/Loading';
+import ErrorRetry from '../components/ErrorRetry';
 import { colors, spacing } from '../theme';
 
 type Tab = 'monthly' | 'season';
@@ -26,16 +27,19 @@ export default function HallOfFame() {
   const [tab, setTab] = useState<Tab>('monthly');
   const [rows, setRows] = useState<AwardHistoryRow[]>([]);
   const [loaded, setLoaded] = useState(false);
+  const [failed, setFailed] = useState(false);
+  const [reloadKey, setReloadKey] = useState(0);
+  const retry = () => { setFailed(false); setReloadKey((k) => k + 1); };
 
   useFocusEffect(
     useCallback(() => {
       let active = true;
       setLoaded(false);
       fetchAwardHistory(tab)
-        .then((r) => { if (active) { setRows(r); setLoaded(true); } })
-        .catch(() => { if (active) setLoaded(true); });
+        .then((r) => { if (active) { setRows(r); setFailed(false); setLoaded(true); } })
+        .catch(() => { if (active) { setFailed(true); setLoaded(true); } });
       return () => { active = false; };
-    }, [tab])
+    }, [tab, reloadKey])
   );
 
   // 시기별 그룹핑(최신순 — fetchAwardHistory가 이미 awarded_at desc)
@@ -72,6 +76,8 @@ export default function HallOfFame() {
         <ScrollView contentContainerStyle={styles.content}>
           {!loaded ? (
             <Loading />
+          ) : failed ? (
+            <ErrorRetry onRetry={retry} />
           ) : groups.length === 0 ? (
             <PixelText variant="body" color={colors.textDim}>아직 수상 기록이 없어요</PixelText>
           ) : (
