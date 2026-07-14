@@ -52,7 +52,7 @@ export default function LiveCard({ game, onPress }: { game: Game; onPress: () =>
   // live=null이지만 label이 있으면 끝내기 역전 post-game highlight(결정 2).
   const isHighlight = !lv && !!label;
   return (
-    <Pressable onPress={onPress}>
+    <Pressable onPress={onPress} accessibilityRole="button">
       <Panel accentColor={LIVE_RED} style={s.card}>
         <View style={s.top}>
           <PixelText variant="caption" color={LIVE_RED}>{lv ? '● LIVE' : '● 끝내기'}</PixelText>

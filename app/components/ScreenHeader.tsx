@@ -5,6 +5,13 @@ import AppIcon, { type AppIconName } from './AppIcon';
 import { colors, spacing } from '../theme';
 import { useTeamTheme } from '../context/TeamTheme';
 
+// 아이콘 버튼의 스크린리더 기본 라벨(눈엔 안 보임, TalkBack이 읽음). 필요 시 콜사이트에서 override.
+const ICON_A11Y: Partial<Record<AppIconName, string>> = {
+  back: '뒤로 가기',
+  calendar: '이번 주 일정 보기',
+  chart: '랭킹 보기',
+};
+
 interface Props {
   title: string;
   leftIcon?: AppIconName;
@@ -12,10 +19,14 @@ interface Props {
   rightLabel?: string;  // 아이콘 대신 표시할 텍스트 (예: 날짜 "6/25")
   onLeftPress?: () => void;
   onRightPress?: () => void;
+  leftAccessibilityLabel?: string;   // 좌측 버튼 스크린리더 라벨(기본: 아이콘 맵 → '뒤로 가기')
+  rightAccessibilityLabel?: string;  // 우측 버튼 스크린리더 라벨
 }
 
-export default function ScreenHeader({ title, leftIcon, rightIcon, rightLabel, onLeftPress, onRightPress }: Props) {
+export default function ScreenHeader({ title, leftIcon, rightIcon, rightLabel, onLeftPress, onRightPress, leftAccessibilityLabel, rightAccessibilityLabel }: Props) {
   const { accent } = useTeamTheme();
+  const leftLabel = leftAccessibilityLabel ?? (leftIcon ? ICON_A11Y[leftIcon] : undefined) ?? '뒤로 가기';
+  const rightLabelA11y = rightAccessibilityLabel ?? rightLabel ?? (rightIcon ? ICON_A11Y[rightIcon] : undefined) ?? '메뉴';
 
   const rightContent = (
     <View style={styles.side}>
@@ -35,11 +46,11 @@ export default function ScreenHeader({ title, leftIcon, rightIcon, rightLabel, o
   return (
     <View style={[styles.bar, { backgroundColor: accent }]}>
       {onLeftPress
-        ? <Pressable onPress={onLeftPress} hitSlop={8}>{leftContent}</Pressable>
+        ? <Pressable onPress={onLeftPress} hitSlop={8} accessibilityRole="button" accessibilityLabel={leftLabel}>{leftContent}</Pressable>
         : leftContent}
       <PixelText variant="title" color={colors.onGreen}>{title}</PixelText>
       {onRightPress
-        ? <Pressable onPress={onRightPress} hitSlop={8}>{rightContent}</Pressable>
+        ? <Pressable onPress={onRightPress} hitSlop={8} accessibilityRole="button" accessibilityLabel={rightLabelA11y}>{rightContent}</Pressable>
         : rightContent}
     </View>
   );

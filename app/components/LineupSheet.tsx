@@ -21,7 +21,7 @@ export default function LineupSheet({ visible, onClose, game }: Props) {
           <View style={styles.handle} />
           <View style={styles.header}>
             <PixelText variant="title">선발 타순</PixelText>
-            <Pressable onPress={onClose} hitSlop={8}>
+            <Pressable onPress={onClose} hitSlop={8} accessibilityRole="button" accessibilityLabel="닫기">
               <PixelText variant="body" color={colors.textDim}>✕</PixelText>
             </Pressable>
           </View>

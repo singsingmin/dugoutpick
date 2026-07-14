@@ -49,7 +49,7 @@ export default function PostseasonBracketSheet({ visible, onClose, bracket, myCo
               <AppIcon name="autumn" size={22} />
               <PixelText variant="title">가을야구 대진표</PixelText>
             </View>
-            <Pressable onPress={onClose} hitSlop={8}>
+            <Pressable onPress={onClose} hitSlop={8} accessibilityRole="button" accessibilityLabel="닫기">
               <PixelText variant="body" color={colors.textDim}>✕</PixelText>
             </Pressable>
           </View>

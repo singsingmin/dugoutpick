@@ -25,7 +25,7 @@ export default function TxHistorySheet({ visible, onClose, transactions, days = 
           <View style={styles.handle} />
           <View style={styles.header}>
             <PixelText variant="title">야구공 내역</PixelText>
-            <Pressable onPress={onClose} hitSlop={8}>
+            <Pressable onPress={onClose} hitSlop={8} accessibilityRole="button" accessibilityLabel="닫기">
               <PixelText variant="body" color={colors.textDim}>✕</PixelText>
             </Pressable>
           </View>

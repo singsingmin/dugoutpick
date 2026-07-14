@@ -70,7 +70,7 @@ export default function WeeklyScheduleSheet({ visible, onClose }: Props) {
               <PixelText variant="title">이번 주 일정</PixelText>
               {rangeText ? <PixelText variant="caption" color={colors.textDim}>{rangeText}</PixelText> : null}
             </View>
-            <Pressable onPress={onClose} hitSlop={8}>
+            <Pressable onPress={onClose} hitSlop={8} accessibilityRole="button" accessibilityLabel="닫기">
               <PixelText variant="body" color={colors.textDim}>✕</PixelText>
             </Pressable>
           </View>

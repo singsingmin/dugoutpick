@@ -57,7 +57,9 @@ export default function SeriesStatusCard({ ctx, onPressBracket }: Props) {
     </Panel>
   );
 
-  return onPressBracket ? <Pressable onPress={onPressBracket}>{inner}</Pressable> : inner;
+  return onPressBracket
+    ? <Pressable onPress={onPressBracket} accessibilityRole="button" accessibilityLabel="가을야구 대진표 보기">{inner}</Pressable>
+    : inner;
 }
 
 const styles = StyleSheet.create({

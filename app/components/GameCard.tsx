@@ -70,7 +70,7 @@ export default function GameCard({ game, variant, onPress, showRecap = true }: P
 
   if (hero) {
     return (
-      <Pressable onPress={onPress}>
+      <Pressable onPress={onPress} accessibilityRole="button">
         <Panel accentColor={colors.bad} style={styles.hero}>
           <View style={styles.heroTop}>
             <View style={styles.heroLeft}>
@@ -96,7 +96,7 @@ export default function GameCard({ game, variant, onPress, showRecap = true }: P
 
   // list variant — 한 줄: 팀명 vs 팀명 | 시간 | 점수박스
   return (
-    <Pressable onPress={onPress}>
+    <Pressable onPress={onPress} accessibilityRole="button">
       <Panel style={styles.list}>
         <View style={styles.listMatch}>
           {matchup}
