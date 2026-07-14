@@ -231,7 +231,8 @@ export default function SkinSelect() {
                   <BaseballAmount n={s.price ?? 0} size={13} color={colors.textDim} />
                 </View>
               </View>
-              <Pressable style={[styles.featuredBtn, { backgroundColor: accent }]} onPress={() => openSkinPurchase(s)}>
+              <Pressable style={[styles.featuredBtn, { backgroundColor: accent }]} onPress={() => openSkinPurchase(s)}
+                accessibilityRole="button" accessibilityLabel={`${s.fullName ?? s.label} 교환하기, ${s.price ?? 0}야구공`}>
                 <PixelText variant="caption" color="#fff">교환하기</PixelText>
               </Pressable>
             </View>
@@ -241,6 +242,8 @@ export default function SkinSelect() {
             <Pressable
               style={styles.featuredCard}
               onPress={previewSkin.availableFrom ? () => showToast(upcomingNotice(previewSkin.availableFrom!)) : undefined}
+              accessibilityRole="button"
+              accessibilityLabel={`${previewSkin.fullName ?? previewSkin.label} 오픈 예정`}
             >
               <View style={styles.featuredThumb}>
                 <SkinThumb skin={previewSkin} teamColor={accent} targetW={56} maxH={46} />

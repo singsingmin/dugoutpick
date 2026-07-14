@@ -73,7 +73,8 @@ export default function Settings() {
             <Panel style={styles.referralCard}>
               <PixelText variant="body">내 추천코드</PixelText>
               {referralCode ? (
-                <Pressable style={styles.codePill} onPress={() => { void copyReferralCode(); }}>
+                <Pressable style={styles.codePill} onPress={() => { void copyReferralCode(); }}
+                  accessibilityRole="button" accessibilityLabel={`추천코드 ${referralCode} 복사`}>
                   <PixelText variant="title" color={colors.accent} style={styles.codeText}>{referralCode}</PixelText>
                   <CopyIcon size={26} color={colors.accent} bg={colors.surfaceAlt} />
                 </Pressable>

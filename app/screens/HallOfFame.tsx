@@ -65,6 +65,8 @@ export default function HallOfFame() {
               <Pressable
                 key={t}
                 onPress={() => setTab(t)}
+                accessibilityRole="tab"
+                accessibilityState={{ selected: on }}
                 style={[styles.tab, on && { backgroundColor: accent, borderColor: accent }]}
               >
                 <PixelText variant="caption" color={on ? '#fff' : colors.text}>{t === 'monthly' ? '월간' : '시즌'}</PixelText>

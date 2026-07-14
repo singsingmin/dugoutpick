@@ -53,6 +53,9 @@ export default function Onboarding({ navigation }: Props) {
               <Pressable
                 key={t.code}
                 onPress={() => setSelected(t.code)}
+                accessibilityRole="button"
+                accessibilityState={{ selected: isSel }}
+                accessibilityLabel={`${t.fullName ?? t.name} 응원팀으로 선택`}
                 style={[
                   styles.cell,
                   isSel

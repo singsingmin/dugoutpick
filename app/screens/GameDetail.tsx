@@ -124,7 +124,8 @@ export default function GameDetail({ route, navigation }: Props) {
         <View style={styles.sectionHeader}>
           <SectionLabel icon="baseball" label="선발투수 비교" />
           {game.lineup && (
-            <Pressable onPress={() => setLineupVisible(true)} style={[styles.lineupBtn, { backgroundColor: accent }]}>
+            <Pressable onPress={() => setLineupVisible(true)} style={[styles.lineupBtn, { backgroundColor: accent }]}
+              accessibilityRole="button" accessibilityLabel="선발 라인업 타순 보기">
               <PixelText variant="caption" color={colors.onGreen}>타순 ▼</PixelText>
             </Pressable>
           )}

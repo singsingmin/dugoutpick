@@ -126,7 +126,7 @@ export default function PredictionCard({ dateYmd, games, locked }: Props) {
           locked ? (
             <PixelText variant="body" color={colors.textDim}>오늘은 예측을 놓쳤어요</PixelText>
           ) : (
-            <Pressable onPress={() => setPickerVisible(true)} disabled={submitting} hitSlop={8}>
+            <Pressable onPress={() => setPickerVisible(true)} disabled={submitting} hitSlop={8} accessibilityRole="button">
               <PixelText variant="body" color={colors.accent}>오늘 제일 재밌을 경기를 골라보세요 →</PixelText>
             </Pressable>
           )
@@ -145,7 +145,7 @@ export default function PredictionCard({ dateYmd, games, locked }: Props) {
             </View>
             <PixelText variant="caption" color={colors.textDim}>결과 대기중</PixelText>
             {!locked && (
-              <Pressable onPress={() => setPickerVisible(true)} disabled={submitting} hitSlop={8}>
+              <Pressable onPress={() => setPickerVisible(true)} disabled={submitting} hitSlop={8} accessibilityRole="button">
                 <PixelText variant="caption" color={colors.accent} style={styles.changeLink}>다시 고르기</PixelText>
               </Pressable>
             )}
@@ -193,7 +193,8 @@ export default function PredictionCard({ dateYmd, games, locked }: Props) {
                 <PixelText variant="body" color={colors.textDim} style={styles.sheetEmpty}>지금 예측할 수 있는 경기가 없어요</PixelText>
               ) : (
                 selectableGames.map((g) => (
-                  <Pressable key={g.gameId} style={styles.gameOption} disabled={submitting} onPress={() => selectGame(g.gameId)}>
+                  <Pressable key={g.gameId} style={styles.gameOption} disabled={submitting} onPress={() => selectGame(g.gameId)}
+                    accessibilityRole="button" accessibilityLabel={`${g.away.name} 대 ${g.home.name}, 이 경기로 예측`}>
                     <TeamName code={g.away.code} variant="body" />
                     <PixelText variant="caption" color={colors.textDim}>vs</PixelText>
                     <TeamName code={g.home.code} variant="body" />

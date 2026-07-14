@@ -211,7 +211,8 @@ export default function BackgroundShop() {
             <PixelText variant="caption" color={colors.textDim}>현재 적용</PixelText>
             <PixelText variant="body" color={colors.text}>{currentLabel}</PixelText>
           </View>
-          <Pressable style={styles.balancePill} onPress={() => navigation.navigate('BaseballCenter' as never)}>
+          <Pressable style={styles.balancePill} onPress={() => navigation.navigate('BaseballCenter' as never)}
+            accessibilityRole="button" accessibilityLabel={`보유 야구공 ${baseballBalance}개, 야구공 센터로 이동`}>
             <BaseballAmount n={baseballBalance} size={18} />
           </Pressable>
         </View>
@@ -229,7 +230,8 @@ export default function BackgroundShop() {
                   <BaseballAmount n={bg.price ?? 0} size={13} color={colors.textDim} />
                 </View>
               </View>
-              <Pressable style={[styles.featuredBtn, { backgroundColor: accent }]} onPress={() => openPurchase(bg)} disabled={busy}>
+              <Pressable style={[styles.featuredBtn, { backgroundColor: accent }]} onPress={() => openPurchase(bg)} disabled={busy}
+                accessibilityRole="button" accessibilityLabel={`${bg.fullName ?? bg.label} 교환하기, ${bg.price ?? 0}야구공`}>
                 <PixelText variant="caption" color="#fff">교환하기</PixelText>
               </Pressable>
             </View>
@@ -240,6 +242,8 @@ export default function BackgroundShop() {
               style={styles.featuredCard}
               disabled={busy}
               onPress={previewBg.availableFrom ? () => showToast(upcomingNotice(previewBg.availableFrom!)) : undefined}
+              accessibilityRole="button"
+              accessibilityLabel={`${previewBg.fullName ?? previewBg.label} 오픈 예정`}
             >
               <Image source={previewBg.backgroundImage} style={styles.featuredThumb} resizeMode="cover" />
               <View style={styles.featuredInfo}>
@@ -267,6 +271,9 @@ export default function BackgroundShop() {
                     key={c.key}
                     onPress={() => handlePress(c)}
                     disabled={busy}
+                    accessibilityRole="button"
+                    accessibilityState={{ selected }}
+                    accessibilityLabel={`${c.label} 배경${c.owned ? '' : `, ${c.price ?? 0}야구공`}${selected ? ', 적용 중' : ''}`}
                     style={[
                       styles.cell,
                       { width: CELL_W },

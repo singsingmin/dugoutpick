@@ -138,7 +138,7 @@ export default function PredictionLeague() {
                     </View>
                   </View>
                   <View style={styles.linkRow}>
-                    <Pressable onPress={() => navigation.navigate('TitleList')} hitSlop={8}>
+                    <Pressable onPress={() => navigation.navigate('TitleList')} hitSlop={8} accessibilityRole="button">
                       <PixelText variant="caption" color={accent}>내 칭호 관리 ›</PixelText>
                     </Pressable>
                   </View>
@@ -154,6 +154,9 @@ export default function PredictionLeague() {
                 key={p}
                 onPress={() => setPeriod(p)}
                 hitSlop={{ top: 8, bottom: 8 }}
+                accessibilityRole="tab"
+                accessibilityState={{ selected: period === p }}
+                accessibilityLabel={p === 'week' ? '주간 랭킹' : '월간 랭킹'}
                 style={[styles.toggleBtn, period === p && { backgroundColor: accent, borderColor: accent }]}
               >
                 <PixelText variant="caption" color={period === p ? colors.onGreen : colors.textDim}>
@@ -172,7 +175,7 @@ export default function PredictionLeague() {
               <>
                 <LeaderboardTable rows={pointsRows.slice(0, TOP_N)} accent={accent} myRowPinned={myPinned(pointsRows)} />
                 {pointsRows.length > TOP_N && (
-                  <Pressable style={styles.moreLink} hitSlop={8} onPress={() => navigation.navigate('FullLeaderboard', { board: 'points', period })}>
+                  <Pressable style={styles.moreLink} hitSlop={8} accessibilityRole="button" onPress={() => navigation.navigate('FullLeaderboard', { board: 'points', period })}>
                     <PixelText variant="caption" color={accent}>전체 랭킹 보기 ›</PixelText>
                   </Pressable>
                 )}
@@ -192,7 +195,7 @@ export default function PredictionLeague() {
               <>
                 <LeaderboardTable rows={hitrateRows.slice(0, TOP_N)} accent={accent} myRowPinned={myPinned(hitrateRows)} />
                 {hitrateRows.length > TOP_N && (
-                  <Pressable style={styles.moreLink} hitSlop={8} onPress={() => navigation.navigate('FullLeaderboard', { board: 'hitrate', period })}>
+                  <Pressable style={styles.moreLink} hitSlop={8} accessibilityRole="button" onPress={() => navigation.navigate('FullLeaderboard', { board: 'hitrate', period })}>
                     <PixelText variant="caption" color={accent}>전체 랭킹 보기 ›</PixelText>
                   </Pressable>
                 )}
@@ -217,7 +220,7 @@ export default function PredictionLeague() {
             </View>
           )}
 
-          <Pressable style={styles.hallLink} hitSlop={8} onPress={() => navigation.navigate('HallOfFame')}>
+          <Pressable style={styles.hallLink} hitSlop={8} accessibilityRole="button" onPress={() => navigation.navigate('HallOfFame')}>
             <PixelText variant="body" color={accent}>명예의 전당 보기 ›</PixelText>
           </Pressable>
           </>

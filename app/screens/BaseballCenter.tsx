@@ -146,7 +146,7 @@ export default function BaseballCenter() {
             <View style={styles.sectionHead}>
               <SectionLabel icon="chart" label="최근 야구공 내역" />
               {transactions.length > 0 && (
-                <Pressable onPress={() => setHistoryOpen(true)} hitSlop={8} style={styles.moreBtn}>
+                <Pressable onPress={() => setHistoryOpen(true)} hitSlop={8} style={styles.moreBtn} accessibilityRole="button" accessibilityLabel="전체 거래 내역 보기">
                   <PixelText variant="caption" color={accent}>전체 내역 ›</PixelText>
                 </Pressable>
               )}
