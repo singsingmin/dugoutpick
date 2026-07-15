@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-14T16:08:22.874Z",
+  "updatedAt": "2026-07-15T04:36:12.456Z",
   "lastWeek": {
     "range": [
       "20260706",
@@ -114,7 +114,9 @@
         {
           "date": "20260716",
           "away": "KT",
-          "home": "LG"
+          "home": "LG",
+          "awayStarter": "로건",
+          "homeStarter": "톨허스트"
         },
         {
           "date": "20260717",
@@ -136,7 +138,9 @@
         {
           "date": "20260716",
           "away": "KT",
-          "home": "LG"
+          "home": "LG",
+          "awayStarter": "로건",
+          "homeStarter": "톨허스트"
         },
         {
           "date": "20260717",
@@ -158,7 +162,9 @@
         {
           "date": "20260716",
           "away": "LT",
-          "home": "SS"
+          "home": "SS",
+          "awayStarter": "로드리게스",
+          "homeStarter": "양창섭"
         },
         {
           "date": "20260717",
@@ -180,7 +186,9 @@
         {
           "date": "20260716",
           "away": "LT",
-          "home": "SS"
+          "home": "SS",
+          "awayStarter": "로드리게스",
+          "homeStarter": "양창섭"
         },
         {
           "date": "20260717",
@@ -202,7 +210,9 @@
         {
           "date": "20260716",
           "away": "HT",
-          "home": "SK"
+          "home": "SK",
+          "awayStarter": "올러",
+          "homeStarter": "아빌라"
         },
         {
           "date": "20260717",
@@ -224,7 +234,9 @@
         {
           "date": "20260716",
           "away": "HT",
-          "home": "SK"
+          "home": "SK",
+          "awayStarter": "올러",
+          "homeStarter": "아빌라"
         },
         {
           "date": "20260717",
@@ -246,7 +258,9 @@
         {
           "date": "20260716",
           "away": "OB",
-          "home": "NC"
+          "home": "NC",
+          "awayStarter": "곽빈",
+          "homeStarter": "라일리"
         },
         {
           "date": "20260717",
@@ -268,7 +282,9 @@
         {
           "date": "20260716",
           "away": "OB",
-          "home": "NC"
+          "home": "NC",
+          "awayStarter": "곽빈",
+          "homeStarter": "라일리"
         },
         {
           "date": "20260717",
@@ -290,7 +306,9 @@
         {
           "date": "20260716",
           "away": "WO",
-          "home": "HH"
+          "home": "HH",
+          "awayStarter": "알칸타라",
+          "homeStarter": "화이트"
         },
         {
           "date": "20260717",
@@ -312,7 +330,9 @@
         {
           "date": "20260716",
           "away": "WO",
-          "home": "HH"
+          "home": "HH",
+          "awayStarter": "알칸타라",
+          "homeStarter": "화이트"
         },
         {
           "date": "20260717",
