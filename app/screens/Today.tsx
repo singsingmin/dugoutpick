@@ -22,6 +22,7 @@ import WeeklyScheduleSheet from '../components/WeeklyScheduleSheet';
 import PredictionCard from '../components/PredictionCard';
 import SeriesStatusCard from '../components/SeriesStatusCard';
 import PostseasonBracketSheet from '../components/PostseasonBracketSheet';
+import AttendanceCard from '../components/AttendanceCard';
 import Loading from '../components/Loading';
 import RewardInboxModal from '../components/RewardInboxModal';
 import { fetchUnseenRewardEvents, markRewardEventsSeen, type RewardEvent } from '../services/rewards';
@@ -172,6 +173,7 @@ export default function Today() {
         ) : data.games.length === 0 ? (
           <View style={styles.emptyTop}>
             <ScreenHeader title="오늘 경기" leftIcon="baseball" rightIcon="calendar" onRightPress={() => setWeeklyVisible(true)} />
+            <AttendanceCard />
             <PixelText variant="title" color={colors.text} style={styles.emptyTitle}>오늘 경기가 없어요</PixelText>
             {dailyHoney && (
               <View style={styles.emptyHoney}>
@@ -272,6 +274,7 @@ function Body({
         rightIcon="calendar"
         onRightPress={onCalendar}
       />
+      <AttendanceCard />
       {psToday ? (
         /* 포스트시즌: 시리즈 현황 카드가 추천·예측을 대체. 탭 → 브래킷 바텀시트 */
         <View style={styles.heroContent}>
