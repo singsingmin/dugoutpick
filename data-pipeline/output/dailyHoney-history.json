@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-16T12:50:35.039Z",
+  "updatedAt": "2026-07-16T12:58:43.418Z",
   "results": [
     {
       "date": "20260705",
@@ -72,6 +72,27 @@
         "score": 6
       },
       "calculatedAt": "2026-07-09T13:30:37.963Z"
+    },
+    {
+      "date": "20260716",
+      "actualTopGameId": "20260716KTLG0",
+      "recapScore": 90,
+      "decidingReasonTags": [
+        "1점차 접전"
+      ],
+      "displayMode": "highlight",
+      "displayTitle": "어제의 명경기",
+      "away": {
+        "code": "KT",
+        "name": "KT",
+        "score": 4
+      },
+      "home": {
+        "code": "LG",
+        "name": "LG",
+        "score": 3
+      },
+      "calculatedAt": "2026-07-16T12:58:43.418Z"
     }
   ]
 }

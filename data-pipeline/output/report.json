@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-16T12:50:35.039Z",
+  "updatedAt": "2026-07-16T12:58:43.418Z",
   "lastWeek": {
     "range": [
       "20260706",
@@ -18,14 +18,14 @@
         "l": 2,
         "d": 0,
         "rank": 2,
-        "note": "살짝 삐끗한 한 주 1승2패 — 이번주 일정도 만만치 않아"
+        "note": "2연패째 — 분위기 잡아야 해 — 이번주 일정도 만만치 않아"
       },
       "KT": {
         "w": 2,
         "l": 0,
         "d": 0,
         "rank": 3,
-        "note": "3연승으로 상승세 — 이번주 일정이 고비다"
+        "note": "4연승 폭주 기관차 🚂 누가 좀 말려봐"
       },
       "HT": {
         "w": 1,
@@ -67,14 +67,14 @@
         "l": 2,
         "d": 0,
         "rank": 9,
-        "note": "2연패 중, 한숨이 나온다"
+        "note": "1승2패, 다음주 반등을 노린다"
       },
       "WO": {
         "w": 0,
         "l": 2,
         "d": 0,
         "rank": 10,
-        "note": "4연패 행진, 분위기 반전이 절실"
+        "note": "0승2패, 더 내려갈 곳도 없다"
       }
     }
   },
@@ -85,18 +85,18 @@
     ],
     "top": [
       {
-        "away": "OB",
-        "home": "NC",
-        "pred": 84,
-        "reason": "게임차 2, 막상막하 승부",
+        "away": "KT",
+        "home": "LG",
+        "pred": 87,
+        "reason": "게임차 2.5의 순위 다툼",
         "dateStart": "20260716",
         "dateEnd": "20260719"
       },
       {
-        "away": "KT",
-        "home": "LG",
-        "pred": 82,
-        "reason": "게임차 3.5의 순위 다툼",
+        "away": "OB",
+        "home": "NC",
+        "pred": 84,
+        "reason": "게임차 2, 막상막하 승부",
         "dateStart": "20260716",
         "dateEnd": "20260719"
       },
@@ -110,6 +110,58 @@
       }
     ],
     "team": {
+      "KT": [
+        {
+          "date": "20260716",
+          "away": "KT",
+          "home": "LG",
+          "awayStarter": "로건",
+          "homeStarter": "톨허스트"
+        },
+        {
+          "date": "20260717",
+          "away": "KT",
+          "home": "LG",
+          "awayStarter": "소형준",
+          "homeStarter": "웰스"
+        },
+        {
+          "date": "20260718",
+          "away": "KT",
+          "home": "LG"
+        },
+        {
+          "date": "20260719",
+          "away": "KT",
+          "home": "LG"
+        }
+      ],
+      "LG": [
+        {
+          "date": "20260716",
+          "away": "KT",
+          "home": "LG",
+          "awayStarter": "로건",
+          "homeStarter": "톨허스트"
+        },
+        {
+          "date": "20260717",
+          "away": "KT",
+          "home": "LG",
+          "awayStarter": "소형준",
+          "homeStarter": "웰스"
+        },
+        {
+          "date": "20260718",
+          "away": "KT",
+          "home": "LG"
+        },
+        {
+          "date": "20260719",
+          "away": "KT",
+          "home": "LG"
+        }
+      ],
       "LT": [
         {
           "date": "20260716",
@@ -160,6 +212,58 @@
           "date": "20260719",
           "away": "LT",
           "home": "SS"
+        }
+      ],
+      "HT": [
+        {
+          "date": "20260716",
+          "away": "HT",
+          "home": "SK",
+          "awayStarter": "올러",
+          "homeStarter": "아빌라"
+        },
+        {
+          "date": "20260717",
+          "away": "HT",
+          "home": "SK",
+          "awayStarter": "시라카와",
+          "homeStarter": "김민준"
+        },
+        {
+          "date": "20260718",
+          "away": "HT",
+          "home": "SK"
+        },
+        {
+          "date": "20260719",
+          "away": "HT",
+          "home": "SK"
+        }
+      ],
+      "SK": [
+        {
+          "date": "20260716",
+          "away": "HT",
+          "home": "SK",
+          "awayStarter": "올러",
+          "homeStarter": "아빌라"
+        },
+        {
+          "date": "20260717",
+          "away": "HT",
+          "home": "SK",
+          "awayStarter": "시라카와",
+          "homeStarter": "김민준"
+        },
+        {
+          "date": "20260718",
+          "away": "HT",
+          "home": "SK"
+        },
+        {
+          "date": "20260719",
+          "away": "HT",
+          "home": "SK"
         }
       ],
       "OB": [
@@ -214,102 +318,6 @@
           "home": "NC"
         }
       ],
-      "KT": [
-        {
-          "date": "20260716",
-          "away": "KT",
-          "home": "LG",
-          "awayStarter": "로건",
-          "homeStarter": "톨허스트"
-        },
-        {
-          "date": "20260717",
-          "away": "KT",
-          "home": "LG"
-        },
-        {
-          "date": "20260718",
-          "away": "KT",
-          "home": "LG"
-        },
-        {
-          "date": "20260719",
-          "away": "KT",
-          "home": "LG"
-        }
-      ],
-      "LG": [
-        {
-          "date": "20260716",
-          "away": "KT",
-          "home": "LG",
-          "awayStarter": "로건",
-          "homeStarter": "톨허스트"
-        },
-        {
-          "date": "20260717",
-          "away": "KT",
-          "home": "LG"
-        },
-        {
-          "date": "20260718",
-          "away": "KT",
-          "home": "LG"
-        },
-        {
-          "date": "20260719",
-          "away": "KT",
-          "home": "LG"
-        }
-      ],
-      "HT": [
-        {
-          "date": "20260716",
-          "away": "HT",
-          "home": "SK",
-          "awayStarter": "올러",
-          "homeStarter": "아빌라"
-        },
-        {
-          "date": "20260717",
-          "away": "HT",
-          "home": "SK"
-        },
-        {
-          "date": "20260718",
-          "away": "HT",
-          "home": "SK"
-        },
-        {
-          "date": "20260719",
-          "away": "HT",
-          "home": "SK"
-        }
-      ],
-      "SK": [
-        {
-          "date": "20260716",
-          "away": "HT",
-          "home": "SK",
-          "awayStarter": "올러",
-          "homeStarter": "아빌라"
-        },
-        {
-          "date": "20260717",
-          "away": "HT",
-          "home": "SK"
-        },
-        {
-          "date": "20260718",
-          "away": "HT",
-          "home": "SK"
-        },
-        {
-          "date": "20260719",
-          "away": "HT",
-          "home": "SK"
-        }
-      ],
       "WO": [
         {
           "date": "20260716",
@@ -321,7 +329,9 @@
         {
           "date": "20260717",
           "away": "WO",
-          "home": "HH"
+          "home": "HH",
+          "awayStarter": "하영민",
+          "homeStarter": "왕옌청"
         },
         {
           "date": "20260718",
@@ -345,7 +355,9 @@
         {
           "date": "20260717",
           "away": "WO",
-          "home": "HH"
+          "home": "HH",
+          "awayStarter": "하영민",
+          "homeStarter": "왕옌청"
         },
         {
           "date": "20260718",
