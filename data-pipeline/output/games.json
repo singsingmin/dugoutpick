@@ -1,7 +1,7 @@
 {
   "date": "20260716",
   "dateText": "2026년 7월 16일",
-  "updatedAt": "2026-07-16T08:40:35.982Z",
+  "updatedAt": "2026-07-16T08:50:37.285Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -381,8 +381,8 @@
           },
           {
             "order": 2,
-            "pos": "좌익수",
-            "name": "김성욱"
+            "pos": "유격수",
+            "name": "박성한"
           },
           {
             "order": 3,
@@ -391,18 +391,18 @@
           },
           {
             "order": 4,
-            "pos": "3루수",
-            "name": "고명준"
+            "pos": "1루수",
+            "name": "전의산"
           },
           {
             "order": 5,
-            "pos": "1루수",
-            "name": "오태곤"
+            "pos": "좌익수",
+            "name": "김재환"
           },
           {
             "order": 6,
-            "pos": "우익수",
-            "name": "채현우"
+            "pos": "3루수",
+            "name": "고명준"
           },
           {
             "order": 7,
@@ -411,25 +411,25 @@
           },
           {
             "order": 8,
-            "pos": "포수",
-            "name": "조형우"
+            "pos": "우익수",
+            "name": "김성욱"
           },
           {
             "order": 9,
-            "pos": "유격수",
-            "name": "박성한"
+            "pos": "포수",
+            "name": "조형우"
           }
         ],
         "away": [
           {
             "order": 1,
-            "pos": "중견수",
-            "name": "김호령"
+            "pos": "좌익수",
+            "name": "박재현"
           },
           {
             "order": 2,
-            "pos": "좌익수",
-            "name": "박재현"
+            "pos": "중견수",
+            "name": "김호령"
           },
           {
             "order": 3,
@@ -459,15 +459,15 @@
           {
             "order": 8,
             "pos": "1루수",
-            "name": "변우혁"
+            "name": "박상준"
           },
           {
             "order": 9,
             "pos": "유격수",
-            "name": "박민"
+            "name": "김규성"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
