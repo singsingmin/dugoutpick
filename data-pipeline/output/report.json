@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-16T12:20:35.779Z",
+  "updatedAt": "2026-07-16T12:30:45.147Z",
   "lastWeek": {
     "range": [
       "20260706",
@@ -39,7 +39,7 @@
         "l": 1,
         "d": 0,
         "rank": 5,
-        "note": "2연승 흐름 탔다 — 2승1패 위닝"
+        "note": "2승1패 위닝, 분위기 탄다"
       },
       "HH": {
         "w": 1,
@@ -85,18 +85,18 @@
     ],
     "top": [
       {
-        "away": "KT",
-        "home": "LG",
-        "pred": 82,
-        "reason": "게임차 3.5의 순위 다툼",
+        "away": "OB",
+        "home": "NC",
+        "pred": 84,
+        "reason": "게임차 2, 막상막하 승부",
         "dateStart": "20260716",
         "dateEnd": "20260719"
       },
       {
-        "away": "OB",
-        "home": "NC",
-        "pred": 80,
-        "reason": "게임차 3의 순위 다툼",
+        "away": "KT",
+        "home": "LG",
+        "pred": 82,
+        "reason": "게임차 3.5의 순위 다툼",
         "dateStart": "20260716",
         "dateEnd": "20260719"
       },
@@ -110,6 +110,58 @@
       }
     ],
     "team": {
+      "OB": [
+        {
+          "date": "20260716",
+          "away": "OB",
+          "home": "NC",
+          "awayStarter": "곽빈",
+          "homeStarter": "라일리"
+        },
+        {
+          "date": "20260717",
+          "away": "OB",
+          "home": "NC",
+          "awayStarter": "최민석",
+          "homeStarter": "테일러"
+        },
+        {
+          "date": "20260718",
+          "away": "OB",
+          "home": "NC"
+        },
+        {
+          "date": "20260719",
+          "away": "OB",
+          "home": "NC"
+        }
+      ],
+      "NC": [
+        {
+          "date": "20260716",
+          "away": "OB",
+          "home": "NC",
+          "awayStarter": "곽빈",
+          "homeStarter": "라일리"
+        },
+        {
+          "date": "20260717",
+          "away": "OB",
+          "home": "NC",
+          "awayStarter": "최민석",
+          "homeStarter": "테일러"
+        },
+        {
+          "date": "20260718",
+          "away": "OB",
+          "home": "NC"
+        },
+        {
+          "date": "20260719",
+          "away": "OB",
+          "home": "NC"
+        }
+      ],
       "KT": [
         {
           "date": "20260716",
@@ -252,54 +304,6 @@
           "date": "20260719",
           "away": "HT",
           "home": "SK"
-        }
-      ],
-      "OB": [
-        {
-          "date": "20260716",
-          "away": "OB",
-          "home": "NC",
-          "awayStarter": "곽빈",
-          "homeStarter": "라일리"
-        },
-        {
-          "date": "20260717",
-          "away": "OB",
-          "home": "NC"
-        },
-        {
-          "date": "20260718",
-          "away": "OB",
-          "home": "NC"
-        },
-        {
-          "date": "20260719",
-          "away": "OB",
-          "home": "NC"
-        }
-      ],
-      "NC": [
-        {
-          "date": "20260716",
-          "away": "OB",
-          "home": "NC",
-          "awayStarter": "곽빈",
-          "homeStarter": "라일리"
-        },
-        {
-          "date": "20260717",
-          "away": "OB",
-          "home": "NC"
-        },
-        {
-          "date": "20260718",
-          "away": "OB",
-          "home": "NC"
-        },
-        {
-          "date": "20260719",
-          "away": "OB",
-          "home": "NC"
         }
       ],
       "WO": [
