@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-15T16:13:17.795Z",
+  "updatedAt": "2026-07-16T08:40:35.982Z",
   "lastWeek": {
     "range": [
       "20260706",
@@ -110,6 +110,102 @@
       }
     ],
     "team": {
+      "OB": [
+        {
+          "date": "20260716",
+          "away": "OB",
+          "home": "NC",
+          "awayStarter": "곽빈",
+          "homeStarter": "라일리"
+        },
+        {
+          "date": "20260717",
+          "away": "OB",
+          "home": "NC"
+        },
+        {
+          "date": "20260718",
+          "away": "OB",
+          "home": "NC"
+        },
+        {
+          "date": "20260719",
+          "away": "OB",
+          "home": "NC"
+        }
+      ],
+      "NC": [
+        {
+          "date": "20260716",
+          "away": "OB",
+          "home": "NC",
+          "awayStarter": "곽빈",
+          "homeStarter": "라일리"
+        },
+        {
+          "date": "20260717",
+          "away": "OB",
+          "home": "NC"
+        },
+        {
+          "date": "20260718",
+          "away": "OB",
+          "home": "NC"
+        },
+        {
+          "date": "20260719",
+          "away": "OB",
+          "home": "NC"
+        }
+      ],
+      "WO": [
+        {
+          "date": "20260716",
+          "away": "WO",
+          "home": "HH",
+          "awayStarter": "알칸타라",
+          "homeStarter": "화이트"
+        },
+        {
+          "date": "20260717",
+          "away": "WO",
+          "home": "HH"
+        },
+        {
+          "date": "20260718",
+          "away": "WO",
+          "home": "HH"
+        },
+        {
+          "date": "20260719",
+          "away": "WO",
+          "home": "HH"
+        }
+      ],
+      "HH": [
+        {
+          "date": "20260716",
+          "away": "WO",
+          "home": "HH",
+          "awayStarter": "알칸타라",
+          "homeStarter": "화이트"
+        },
+        {
+          "date": "20260717",
+          "away": "WO",
+          "home": "HH"
+        },
+        {
+          "date": "20260718",
+          "away": "WO",
+          "home": "HH"
+        },
+        {
+          "date": "20260719",
+          "away": "WO",
+          "home": "HH"
+        }
+      ],
       "KT": [
         {
           "date": "20260716",
@@ -252,102 +348,6 @@
           "date": "20260719",
           "away": "HT",
           "home": "SK"
-        }
-      ],
-      "OB": [
-        {
-          "date": "20260716",
-          "away": "OB",
-          "home": "NC",
-          "awayStarter": "곽빈",
-          "homeStarter": "라일리"
-        },
-        {
-          "date": "20260717",
-          "away": "OB",
-          "home": "NC"
-        },
-        {
-          "date": "20260718",
-          "away": "OB",
-          "home": "NC"
-        },
-        {
-          "date": "20260719",
-          "away": "OB",
-          "home": "NC"
-        }
-      ],
-      "NC": [
-        {
-          "date": "20260716",
-          "away": "OB",
-          "home": "NC",
-          "awayStarter": "곽빈",
-          "homeStarter": "라일리"
-        },
-        {
-          "date": "20260717",
-          "away": "OB",
-          "home": "NC"
-        },
-        {
-          "date": "20260718",
-          "away": "OB",
-          "home": "NC"
-        },
-        {
-          "date": "20260719",
-          "away": "OB",
-          "home": "NC"
-        }
-      ],
-      "WO": [
-        {
-          "date": "20260716",
-          "away": "WO",
-          "home": "HH",
-          "awayStarter": "알칸타라",
-          "homeStarter": "화이트"
-        },
-        {
-          "date": "20260717",
-          "away": "WO",
-          "home": "HH"
-        },
-        {
-          "date": "20260718",
-          "away": "WO",
-          "home": "HH"
-        },
-        {
-          "date": "20260719",
-          "away": "WO",
-          "home": "HH"
-        }
-      ],
-      "HH": [
-        {
-          "date": "20260716",
-          "away": "WO",
-          "home": "HH",
-          "awayStarter": "알칸타라",
-          "homeStarter": "화이트"
-        },
-        {
-          "date": "20260717",
-          "away": "WO",
-          "home": "HH"
-        },
-        {
-          "date": "20260718",
-          "away": "WO",
-          "home": "HH"
-        },
-        {
-          "date": "20260719",
-          "away": "WO",
-          "home": "HH"
         }
       ]
     }
