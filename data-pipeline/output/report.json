@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-16T12:40:42.079Z",
+  "updatedAt": "2026-07-16T12:50:35.039Z",
   "lastWeek": {
     "range": [
       "20260706",
@@ -60,7 +60,7 @@
         "l": 1,
         "d": 0,
         "rank": 8,
-        "note": "KIA 격파 포함 2승1패 위닝, 해냈다"
+        "note": "2연패째 — 분위기 잡아야 해 — 이번주 일정이 고비다"
       },
       "SK": {
         "w": 1,
@@ -110,6 +110,58 @@
       }
     ],
     "team": {
+      "LT": [
+        {
+          "date": "20260716",
+          "away": "LT",
+          "home": "SS",
+          "awayStarter": "로드리게스",
+          "homeStarter": "양창섭"
+        },
+        {
+          "date": "20260717",
+          "away": "LT",
+          "home": "SS",
+          "awayStarter": "나균안",
+          "homeStarter": "원태인"
+        },
+        {
+          "date": "20260718",
+          "away": "LT",
+          "home": "SS"
+        },
+        {
+          "date": "20260719",
+          "away": "LT",
+          "home": "SS"
+        }
+      ],
+      "SS": [
+        {
+          "date": "20260716",
+          "away": "LT",
+          "home": "SS",
+          "awayStarter": "로드리게스",
+          "homeStarter": "양창섭"
+        },
+        {
+          "date": "20260717",
+          "away": "LT",
+          "home": "SS",
+          "awayStarter": "나균안",
+          "homeStarter": "원태인"
+        },
+        {
+          "date": "20260718",
+          "away": "LT",
+          "home": "SS"
+        },
+        {
+          "date": "20260719",
+          "away": "LT",
+          "home": "SS"
+        }
+      ],
       "OB": [
         {
           "date": "20260716",
@@ -208,54 +260,6 @@
           "date": "20260719",
           "away": "KT",
           "home": "LG"
-        }
-      ],
-      "LT": [
-        {
-          "date": "20260716",
-          "away": "LT",
-          "home": "SS",
-          "awayStarter": "로드리게스",
-          "homeStarter": "양창섭"
-        },
-        {
-          "date": "20260717",
-          "away": "LT",
-          "home": "SS"
-        },
-        {
-          "date": "20260718",
-          "away": "LT",
-          "home": "SS"
-        },
-        {
-          "date": "20260719",
-          "away": "LT",
-          "home": "SS"
-        }
-      ],
-      "SS": [
-        {
-          "date": "20260716",
-          "away": "LT",
-          "home": "SS",
-          "awayStarter": "로드리게스",
-          "homeStarter": "양창섭"
-        },
-        {
-          "date": "20260717",
-          "away": "LT",
-          "home": "SS"
-        },
-        {
-          "date": "20260718",
-          "away": "LT",
-          "home": "SS"
-        },
-        {
-          "date": "20260719",
-          "away": "LT",
-          "home": "SS"
         }
       ],
       "HT": [
