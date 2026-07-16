@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-07-16T12:10:38.006Z",
+  "updatedAt": "2026-07-16T12:20:35.779Z",
   "window": 50,
   "sampleSize": 50,
-  "hitRate": 22,
-  "bonusRate": 50,
+  "hitRate": 24,
+  "bonusRate": 48,
   "ready": true,
   "records": [
     {
@@ -424,6 +424,13 @@
       "gameId": "20260709NCHH0",
       "pred": 89,
       "actual": 83,
+      "verdict": "예측 적중"
+    },
+    {
+      "date": "20260716",
+      "gameId": "20260716OBNC0",
+      "pred": 82,
+      "actual": 79,
       "verdict": "예측 적중"
     }
   ]
