@@ -1,7 +1,7 @@
 {
   "date": "20260716",
   "dateText": "2026년 7월 16일",
-  "updatedAt": "2026-07-16T11:20:37.650Z",
+  "updatedAt": "2026-07-16T11:27:03.726Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 3,
+        "inning": 6,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": true,
         "b3": false,
-        "pitcher": "로건",
-        "batter": "송찬의",
-        "heat": 31,
+        "pitcher": "톨허스트",
+        "batter": "배정대",
+        "heat": 33,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "이승현",
-        "batter": "전민재",
+        "batter": "손호영",
         "heat": 53,
         "label": "경기 흐름 체크 중"
       },
@@ -364,7 +364,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 1,
+        "score": 3,
         "starter": {
           "name": "아빌라",
           "era": null,
@@ -399,12 +399,12 @@
         "half": "B",
         "out": 1,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "올러",
-        "batter": "최정",
-        "heat": 50,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "김범수",
+        "batter": "전의산",
+        "heat": 31,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 1,
+        "inning": 7,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "곽빈",
-        "batter": "이우성",
-        "heat": 23,
+        "pitcher": "김진호",
+        "batter": "정수빈",
+        "heat": 24,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -694,7 +694,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "화이트",
           "era": 2.61,
@@ -727,13 +727,13 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "알칸타라",
-        "batter": "페라자",
-        "heat": 12,
+        "batter": "노시환",
+        "heat": 23,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
