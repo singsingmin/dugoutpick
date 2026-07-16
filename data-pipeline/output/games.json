@@ -1,7 +1,7 @@
 {
   "date": "20260716",
   "dateText": "2026년 7월 16일",
-  "updatedAt": "2026-07-16T10:30:43.731Z",
+  "updatedAt": "2026-07-16T10:40:36.487Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": true,
-        "b2": false,
-        "b3": false,
+        "b2": true,
+        "b3": true,
         "pitcher": "로건",
-        "batter": "박해민",
+        "batter": "문보경",
         "heat": 25,
         "label": "경기 흐름 체크 중"
       },
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 1,
+        "inning": 4,
+        "half": "T",
+        "out": 2,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "로드리게스",
-        "batter": "김영웅",
-        "heat": 40,
+        "pitcher": "양창섭",
+        "batter": "손호영",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -364,7 +364,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "아빌라",
           "era": null,
@@ -395,14 +395,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 1,
-        "b1": true,
+        "inning": 4,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "올러",
-        "batter": "정준재",
+        "pitcher": "아빌라",
+        "batter": "김도영",
         "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
@@ -562,12 +562,12 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": true,
-        "b2": false,
-        "b3": false,
+        "b2": true,
+        "b3": true,
         "pitcher": "라일리",
-        "batter": "안재석",
+        "batter": "류승민",
         "heat": 17,
         "label": "경기 흐름 체크 중"
       },
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
+        "inning": 5,
         "half": "T",
-        "out": 1,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "화이트",
-        "batter": "여동욱",
-        "heat": 26,
+        "batter": "추재현",
+        "heat": 29,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
