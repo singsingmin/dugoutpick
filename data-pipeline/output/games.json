@@ -1,7 +1,7 @@
 {
   "date": "20260716",
   "dateText": "2026년 7월 16일",
-  "updatedAt": "2026-07-16T11:40:35.492Z",
+  "updatedAt": "2026-07-16T11:50:38.316Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "이상동",
-        "batter": "이재원",
+        "pitcher": "전용주",
+        "batter": "박해민",
         "heat": 38,
         "label": "경기 흐름 체크 중"
       },
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 2,
-        "b1": true,
+        "inning": 7,
+        "half": "T",
+        "out": 1,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "로드리게스",
-        "batter": "김성윤",
-        "heat": 46,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "이승민",
+        "batter": "황성빈",
+        "heat": 49,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "inning": 6,
+        "half": "T",
+        "out": 3,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "성영탁",
-        "batter": "김성욱",
-        "heat": 20,
+        "pitcher": "아빌라",
+        "batter": "김도영",
+        "heat": 21,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -561,14 +561,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "전사민",
-        "batter": "박준순",
-        "heat": 26,
+        "pitcher": "박신지",
+        "batter": "박민우",
+        "heat": 27,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -682,7 +682,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 5,
+        "score": 8,
         "starter": {
           "name": "알칸타라",
           "era": 3.32,
@@ -727,14 +727,14 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": true,
         "b2": false,
         "b3": true,
-        "pitcher": "이상규",
-        "batter": "박찬혁",
-        "heat": 62,
-        "label": "후반 박빙 승부"
+        "pitcher": "조동욱",
+        "batter": "서건창",
+        "heat": 24,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
