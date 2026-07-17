@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-17T13:00:40.717Z",
+  "updatedAt": "2026-07-17T15:52:49.705Z",
   "lastWeek": {
     "range": [
       "20260706",
@@ -175,13 +175,6 @@
           "homeStarter": "양창섭"
         },
         {
-          "date": "20260717",
-          "away": "LT",
-          "home": "SS",
-          "awayStarter": "나균안",
-          "homeStarter": "원태인"
-        },
-        {
           "date": "20260718",
           "away": "LT",
           "home": "SS",
@@ -201,13 +194,6 @@
           "home": "SS",
           "awayStarter": "로드리게스",
           "homeStarter": "양창섭"
-        },
-        {
-          "date": "20260717",
-          "away": "LT",
-          "home": "SS",
-          "awayStarter": "나균안",
-          "homeStarter": "원태인"
         },
         {
           "date": "20260718",
