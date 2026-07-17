@@ -1,12 +1,12 @@
 {
   "date": "20260717",
   "dateText": "2026년 7월 17일",
-  "updatedAt": "2026-07-17T12:40:14.430Z",
+  "updatedAt": "2026-07-17T12:50:24.898Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
     "hitRate": 26,
-    "bonusRate": 52,
+    "bonusRate": 54,
     "ready": true
   },
   "recommendedGameId": "20260717KTLG0",
@@ -25,8 +25,8 @@
         "score": 6,
         "starter": {
           "name": "소형준",
-          "era": 3.25,
-          "w": 4,
+          "era": 3.09,
+          "w": 5,
           "l": 0
         }
       },
@@ -37,9 +37,9 @@
         "score": 1,
         "starter": {
           "name": "웰스",
-          "era": 2.82,
+          "era": 3.3,
           "w": 5,
-          "l": 3
+          "l": 4
         }
       },
       "honjam": {
@@ -74,8 +74,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "소형준",
+        "lose": "웰스",
         "save": null
       },
       "lineup": null
@@ -152,7 +152,7 @@
         "score": 6,
         "starter": {
           "name": "시라카와",
-          "era": 4.88,
+          "era": 5.17,
           "w": 2,
           "l": 3
         }
@@ -164,9 +164,9 @@
         "score": 3,
         "starter": {
           "name": "김민준",
-          "era": 4.18,
+          "era": 5.61,
           "w": 2,
-          "l": 1
+          "l": 2
         }
       },
       "honjam": {
@@ -201,9 +201,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "이의리",
+        "lose": "김민준",
+        "save": "조상우"
       },
       "lineup": null
     },
@@ -211,7 +211,7 @@
       "gameId": "20260717OBNC0",
       "time": "18:00",
       "stadium": "창원",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "KBS N SPORTS",
       "away": {
@@ -221,7 +221,7 @@
         "score": 4,
         "starter": {
           "name": "최민석",
-          "era": 2.33,
+          "era": 2.19,
           "w": 9,
           "l": 2
         }
@@ -229,11 +229,11 @@
       "home": {
         "code": "NC",
         "name": "NC",
-        "rank": 6,
+        "rank": 7,
         "score": 2,
         "starter": {
           "name": "테일러",
-          "era": 4.26,
+          "era": 4.13,
           "w": 6,
           "l": 4
         }
@@ -260,117 +260,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 10,
-        "half": "B",
-        "out": 1,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "김정우",
-        "batter": "김형준",
-        "heat": 67,
-        "label": "연장 혈투 진행 중"
+      "live": null,
+      "recap": {
+        "actual": 96,
+        "verdict": "기대 이상",
+        "diff": 2,
+        "total": 6,
+        "extra": 1,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "유격수",
-            "name": "김주원"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "권희동"
-          },
-          {
-            "order": 3,
-            "pos": "2루수",
-            "name": "박민우"
-          },
-          {
-            "order": 4,
-            "pos": "1루수",
-            "name": "블레인"
-          },
-          {
-            "order": 5,
-            "pos": "지명타자",
-            "name": "박건우"
-          },
-          {
-            "order": 6,
-            "pos": "좌익수",
-            "name": "이우성"
-          },
-          {
-            "order": 7,
-            "pos": "중견수",
-            "name": "고준휘"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "안중열"
-          },
-          {
-            "order": 9,
-            "pos": "3루수",
-            "name": "김한별"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "정수빈"
-          },
-          {
-            "order": 2,
-            "pos": "좌익수",
-            "name": "김민석"
-          },
-          {
-            "order": 3,
-            "pos": "지명타자",
-            "name": "박준순"
-          },
-          {
-            "order": 4,
-            "pos": "1루수",
-            "name": "세베리노"
-          },
-          {
-            "order": 5,
-            "pos": "포수",
-            "name": "양의지"
-          },
-          {
-            "order": 6,
-            "pos": "3루수",
-            "name": "안재석"
-          },
-          {
-            "order": 7,
-            "pos": "우익수",
-            "name": "손아섭"
-          },
-          {
-            "order": 8,
-            "pos": "2루수",
-            "name": "강승호"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "박찬호"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": "이영하",
+        "lose": "전사민",
+        "save": "김정우"
+      },
+      "lineup": null
     },
     {
       "gameId": "20260717WOHH0",
@@ -386,8 +290,8 @@
         "score": 7,
         "starter": {
           "name": "하영민",
-          "era": 4.16,
-          "w": 3,
+          "era": 4.35,
+          "w": 4,
           "l": 5
         }
       },
@@ -398,9 +302,9 @@
         "score": 6,
         "starter": {
           "name": "왕옌청",
-          "era": 3.59,
+          "era": 3.69,
           "w": 7,
-          "l": 3
+          "l": 4
         }
       },
       "honjam": {
@@ -435,9 +339,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "하영민",
+        "lose": "왕옌청",
+        "save": "유토"
       },
       "lineup": null
     }
