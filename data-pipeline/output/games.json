@@ -1,7 +1,7 @@
 {
   "date": "20260717",
   "dateText": "2026년 7월 17일",
-  "updatedAt": "2026-07-17T10:10:26.282Z",
+  "updatedAt": "2026-07-17T10:20:27.565Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 3,
-        "score": 4,
+        "score": 6,
         "starter": {
           "name": "소형준",
           "era": 3.25,
@@ -66,15 +66,15 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "웰스",
-        "batter": "김현수",
-        "heat": 19,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "소형준",
+        "batter": "문보경",
+        "heat": 3,
+        "label": "점수차가 벌어진 경기"
       },
       "recap": null,
       "decision": null,
@@ -288,15 +288,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 0,
+        "inning": 4,
+        "half": "T",
+        "out": 1,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "시라카와",
-        "batter": "김재환",
-        "heat": 35,
+        "pitcher": "박시후",
+        "batter": "박재현",
+        "heat": 37,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -453,15 +453,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 1,
-        "b1": true,
-        "b2": true,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "최민석",
-        "batter": "고준휘",
-        "heat": 37,
+        "pitcher": "테일러",
+        "batter": "강승호",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -587,7 +587,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 0,
+        "score": 3,
         "starter": {
           "name": "왕옌청",
           "era": 3.59,
@@ -620,14 +620,14 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 0,
-        "b1": true,
+        "out": 1,
+        "b1": false,
         "b2": true,
-        "b3": false,
+        "b3": true,
         "pitcher": "하영민",
-        "batter": "장규현",
-        "heat": 18,
-        "label": "경기 흐름 체크 중"
+        "batter": "오재원",
+        "heat": 45,
+        "label": "초반 팽팽한 흐름"
       },
       "recap": null,
       "decision": null,
