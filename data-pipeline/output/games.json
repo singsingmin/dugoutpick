@@ -1,7 +1,7 @@
 {
   "date": "20260717",
   "dateText": "2026년 7월 17일",
-  "updatedAt": "2026-07-17T11:00:41.303Z",
+  "updatedAt": "2026-07-17T11:03:17.160Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 1,
+        "inning": 8,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이상동",
-        "batter": "문정빈",
-        "heat": 13,
+        "pitcher": "김영우",
+        "batter": "안현민",
+        "heat": 14,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -291,11 +291,11 @@
         "inning": 6,
         "half": "T",
         "out": 1,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "문승원",
-        "batter": "박상준",
+        "batter": "김규성",
         "heat": 46,
         "label": "경기 흐름 체크 중"
       },
@@ -456,11 +456,11 @@
         "inning": 7,
         "half": "B",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "이용찬",
-        "batter": "김한별",
+        "batter": "김주원",
         "heat": 51,
         "label": "후반 박빙 승부"
       },
@@ -620,12 +620,12 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "하영민",
-        "batter": "김태연",
+        "batter": "심우준",
         "heat": 40,
         "label": "점수 나는 난타전"
       },
