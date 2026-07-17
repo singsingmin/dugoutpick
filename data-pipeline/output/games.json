@@ -1,7 +1,7 @@
 {
   "date": "20260717",
   "dateText": "2026년 7월 17일",
-  "updatedAt": "2026-07-17T11:10:26.008Z",
+  "updatedAt": "2026-07-17T11:20:25.559Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 1,
+        "b1": true,
         "b2": false,
-        "b3": false,
-        "pitcher": "전용주",
-        "batter": "이재원",
+        "b3": true,
+        "pitcher": "스기모토",
+        "batter": "오스틴",
         "heat": 14,
         "label": "경기 흐름 체크 중"
       },
@@ -288,16 +288,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
+        "inning": 7,
         "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "정해영",
-        "batter": "김성욱",
-        "heat": 48,
-        "label": "경기 흐름 체크 중"
+        "batter": "조형우",
+        "heat": 53,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -422,7 +422,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "테일러",
           "era": 4.26,
@@ -455,13 +455,13 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "이용찬",
-        "batter": "권희동",
-        "heat": 51,
+        "pitcher": "김택연",
+        "batter": "박건우",
+        "heat": 62,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -619,14 +619,14 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 3,
-        "b1": true,
+        "half": "B",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "박정훈",
-        "batter": "페라자",
-        "heat": 42,
+        "batter": "문현빈",
+        "heat": 44,
         "label": "점수 나는 난타전"
       },
       "recap": null,
