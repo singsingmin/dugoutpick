@@ -1,7 +1,7 @@
 {
   "date": "20260717",
   "dateText": "2026년 7월 17일",
-  "updatedAt": "2026-07-17T08:50:25.506Z",
+  "updatedAt": "2026-07-17T09:10:26.447Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -15,14 +15,14 @@
       "gameId": "20260717KTLG0",
       "time": "18:00",
       "stadium": "잠실",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SPOTV",
       "away": {
         "code": "KT",
         "name": "KT",
         "rank": 3,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "소형준",
           "era": 3.25,
@@ -34,7 +34,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 2,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "웰스",
           "era": 2.82,
@@ -61,9 +61,21 @@
           "doom": 0,
           "park": 0.09,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "B",
+        "out": 0,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "소형준",
+        "batter": "홍창기",
+        "heat": 33,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
@@ -226,14 +238,14 @@
       "gameId": "20260717HTSK0",
       "time": "18:00",
       "stadium": "문학",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SPOTV2",
       "away": {
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": null,
+        "score": 2,
         "starter": {
           "name": "시라카와",
           "era": 4.88,
@@ -245,7 +257,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "김민준",
           "era": 4.18,
@@ -272,9 +284,21 @@
           "doom": 0,
           "park": 0.55,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 0,
+        "b1": false,
+        "b2": true,
+        "b3": true,
+        "pitcher": "김민준",
+        "batter": "카스트로",
+        "heat": 24,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
@@ -379,14 +403,14 @@
       "gameId": "20260717OBNC0",
       "time": "18:00",
       "stadium": "창원",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "KBS N SPORTS",
       "away": {
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "최민석",
           "era": 2.33,
@@ -398,7 +422,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "테일러",
           "era": 4.26,
@@ -425,9 +449,21 @@
           "doom": 0,
           "park": 0.64,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "B",
+        "out": 0,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "최민석",
+        "batter": "김주원",
+        "heat": 33,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
@@ -532,14 +568,14 @@
       "gameId": "20260717WOHH0",
       "time": "18:00",
       "stadium": "대전",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SBS SPORTS",
       "away": {
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "하영민",
           "era": 4.16,
@@ -551,7 +587,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "왕옌청",
           "era": 3.59,
@@ -578,9 +614,21 @@
           "doom": 0,
           "park": 0.36,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "B",
+        "out": 0,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "하영민",
+        "batter": "오재원",
+        "heat": 33,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
