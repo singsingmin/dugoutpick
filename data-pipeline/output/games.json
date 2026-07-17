@@ -1,7 +1,7 @@
 {
   "date": "20260717",
   "dateText": "2026년 7월 17일",
-  "updatedAt": "2026-07-17T12:20:27.477Z",
+  "updatedAt": "2026-07-17T12:30:33.262Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -142,7 +142,7 @@
       "gameId": "20260717HTSK0",
       "time": "18:00",
       "stadium": "문학",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPOTV2",
       "away": {
@@ -191,117 +191,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 2,
-        "b1": true,
-        "b2": true,
-        "b3": false,
-        "pitcher": "조상우",
-        "batter": "고명준",
-        "heat": 48,
-        "label": "경기 흐름 체크 중"
+      "live": null,
+      "recap": {
+        "actual": 67,
+        "verdict": "기대 이상",
+        "diff": 3,
+        "total": 9,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "2루수",
-            "name": "정준재"
-          },
-          {
-            "order": 2,
-            "pos": "유격수",
-            "name": "박성한"
-          },
-          {
-            "order": 3,
-            "pos": "3루수",
-            "name": "고명준"
-          },
-          {
-            "order": 4,
-            "pos": "1루수",
-            "name": "전의산"
-          },
-          {
-            "order": 5,
-            "pos": "지명타자",
-            "name": "김재환"
-          },
-          {
-            "order": 6,
-            "pos": "우익수",
-            "name": "김성욱"
-          },
-          {
-            "order": 7,
-            "pos": "중견수",
-            "name": "최지훈"
-          },
-          {
-            "order": 8,
-            "pos": "좌익수",
-            "name": "최준우"
-          },
-          {
-            "order": 9,
-            "pos": "포수",
-            "name": "조형우"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "우익수",
-            "name": "박재현"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "김호령"
-          },
-          {
-            "order": 3,
-            "pos": "3루수",
-            "name": "김도영"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "나성범"
-          },
-          {
-            "order": 5,
-            "pos": "좌익수",
-            "name": "카스트로"
-          },
-          {
-            "order": 6,
-            "pos": "포수",
-            "name": "한준수"
-          },
-          {
-            "order": 7,
-            "pos": "2루수",
-            "name": "김선빈"
-          },
-          {
-            "order": 8,
-            "pos": "1루수",
-            "name": "박상준"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "김규성"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260717OBNC0",
@@ -325,7 +229,7 @@
       "home": {
         "code": "NC",
         "name": "NC",
-        "rank": 7,
+        "rank": 6,
         "score": 2,
         "starter": {
           "name": "테일러",
@@ -357,16 +261,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 2,
+        "inning": 10,
+        "half": "T",
+        "out": 1,
         "b1": true,
-        "b2": true,
-        "b3": false,
-        "pitcher": "이영하",
-        "batter": "이우성",
-        "heat": 90,
-        "label": "끝내기 한 방 찬스"
+        "b2": false,
+        "b3": true,
+        "pitcher": "전사민",
+        "batter": "박준순",
+        "heat": 89,
+        "label": "연장 혈투 진행 중"
       },
       "recap": null,
       "decision": null,

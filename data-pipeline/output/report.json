@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-17T12:20:27.477Z",
+  "updatedAt": "2026-07-17T12:30:33.262Z",
   "lastWeek": {
     "range": [
       "20260706",
@@ -46,14 +46,14 @@
         "l": 1,
         "d": 0,
         "rank": 6,
-        "note": "딱 반타작 1승1패, 평타는 쳤다"
+        "note": "2연패, 살짝 흔들린다 — 그래도 이번주 키움 만나니까 해볼 만해"
       },
       "NC": {
         "w": 1,
         "l": 1,
         "d": 0,
-        "rank": 7,
-        "note": "1승1패, 딱 중간 — 이번주 방향 잡는다"
+        "rank": 6,
+        "note": "딱 반타작 1승1패, 평타는 쳤다"
       },
       "LT": {
         "w": 2,
@@ -95,7 +95,7 @@
       {
         "away": "OB",
         "home": "NC",
-        "pred": 84,
+        "pred": 85,
         "reason": "게임차 2, 막상막하 승부",
         "dateStart": "20260716",
         "dateEnd": "20260719"
@@ -240,7 +240,9 @@
         {
           "date": "20260718",
           "away": "HT",
-          "home": "SK"
+          "home": "SK",
+          "awayStarter": "네일",
+          "homeStarter": "해치"
         },
         {
           "date": "20260719",
@@ -266,7 +268,9 @@
         {
           "date": "20260718",
           "away": "HT",
-          "home": "SK"
+          "home": "SK",
+          "awayStarter": "네일",
+          "homeStarter": "해치"
         },
         {
           "date": "20260719",
@@ -344,7 +348,9 @@
         {
           "date": "20260718",
           "away": "WO",
-          "home": "HH"
+          "home": "HH",
+          "awayStarter": "안우진",
+          "homeStarter": "에르난데스"
         },
         {
           "date": "20260719",
@@ -370,7 +376,9 @@
         {
           "date": "20260718",
           "away": "WO",
-          "home": "HH"
+          "home": "HH",
+          "awayStarter": "안우진",
+          "homeStarter": "에르난데스"
         },
         {
           "date": "20260719",
