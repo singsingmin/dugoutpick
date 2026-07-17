@@ -1,7 +1,7 @@
 {
   "date": "20260717",
   "dateText": "2026년 7월 17일",
-  "updatedAt": "2026-07-17T11:50:26.920Z",
+  "updatedAt": "2026-07-17T12:00:42.282Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -149,7 +149,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "시라카와",
           "era": 4.88,
@@ -192,16 +192,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 1,
-        "b1": true,
+        "inning": 9,
+        "half": "T",
+        "out": 2,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "곽도규",
-        "batter": "김성욱",
-        "heat": 57,
-        "label": "후반 박빙 승부"
+        "pitcher": "조병현",
+        "batter": "나성범",
+        "heat": 46,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -357,16 +357,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
+        "inning": 9,
+        "half": "T",
+        "out": 0,
         "b1": true,
         "b2": true,
         "b3": false,
-        "pitcher": "김택연",
-        "batter": "천재환",
-        "heat": 67,
-        "label": "후반 박빙 승부"
+        "pitcher": "김진호",
+        "batter": "안재석",
+        "heat": 75,
+        "label": "9회 1점 승부"
       },
       "recap": null,
       "decision": null,
@@ -522,16 +522,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
-        "b1": true,
+        "inning": 9,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "원종현",
-        "batter": "페라자",
-        "heat": 75,
-        "label": "후반 박빙 승부"
+        "pitcher": "이민우",
+        "batter": "추재현",
+        "heat": 83,
+        "label": "9회 1점 승부"
       },
       "recap": null,
       "decision": null,
