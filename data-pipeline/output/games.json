@@ -1,7 +1,7 @@
 {
   "date": "20260717",
   "dateText": "2026년 7월 17일",
-  "updatedAt": "2026-07-17T09:30:35.824Z",
+  "updatedAt": "2026-07-17T09:40:28.125Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "웰스",
-        "batter": "조대현",
+        "batter": "안현민",
         "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
@@ -289,14 +289,14 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
-        "out": 0,
+        "half": "B",
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김민준",
-        "batter": "박상준",
-        "heat": 35,
+        "pitcher": "시라카와",
+        "batter": "조형우",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -453,15 +453,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
+        "inning": 3,
         "half": "T",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "테일러",
-        "batter": "강승호",
-        "heat": 27,
+        "batter": "박찬호",
+        "heat": 31,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -575,7 +575,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 1,
+        "score": 4,
         "starter": {
           "name": "하영민",
           "era": 4.16,
@@ -619,15 +619,15 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 1,
         "b1": true,
-        "b2": false,
-        "b3": true,
-        "pitcher": "왕옌청",
-        "batter": "데이비슨",
-        "heat": 33,
-        "label": "초반 팽팽한 흐름"
+        "b2": true,
+        "b3": false,
+        "pitcher": "하영민",
+        "batter": "김태연",
+        "heat": 14,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
