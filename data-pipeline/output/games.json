@@ -1,7 +1,7 @@
 {
   "date": "20260717",
   "dateText": "2026년 7월 17일",
-  "updatedAt": "2026-07-17T10:20:27.565Z",
+  "updatedAt": "2026-07-17T10:30:31.836Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 2,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "웰스",
           "era": 2.82,
@@ -67,14 +67,14 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "소형준",
-        "batter": "문보경",
-        "heat": 3,
-        "label": "점수차가 벌어진 경기"
+        "batter": "신민재",
+        "heat": 11,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -289,14 +289,14 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
+        "half": "B",
         "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박시후",
-        "batter": "박재현",
-        "heat": 37,
+        "pitcher": "시라카와",
+        "batter": "조형우",
+        "heat": 39,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -453,16 +453,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
+        "inning": 6,
         "half": "T",
-        "out": 1,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "테일러",
-        "batter": "강승호",
-        "heat": 40,
-        "label": "초반 팽팽한 흐름"
+        "batter": "정수빈",
+        "heat": 44,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -587,7 +587,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "왕옌청",
           "era": 3.59,
@@ -618,15 +618,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 1,
-        "b1": false,
-        "b2": true,
-        "b3": true,
-        "pitcher": "하영민",
-        "batter": "오재원",
-        "heat": 45,
+        "b1": true,
+        "b2": false,
+        "b3": false,
+        "pitcher": "왕옌청",
+        "batter": "히우라",
+        "heat": 52,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
