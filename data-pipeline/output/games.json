@@ -1,7 +1,7 @@
 {
   "date": "20260717",
   "dateText": "2026년 7월 17일",
-  "updatedAt": "2026-07-17T09:25:56.309Z",
+  "updatedAt": "2026-07-17T09:30:35.824Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
+        "inning": 3,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "소형준",
-        "batter": "문보경",
-        "heat": 38,
+        "pitcher": "웰스",
+        "batter": "조대현",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -257,7 +257,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "김민준",
           "era": 4.18,
@@ -288,15 +288,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 2,
+        "inning": 2,
+        "half": "T",
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "시라카와",
-        "batter": "김재환",
-        "heat": 31,
+        "pitcher": "김민준",
+        "batter": "박상준",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -455,12 +455,12 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "테일러",
-        "batter": "안재석",
+        "batter": "강승호",
         "heat": 27,
         "label": "초반 팽팽한 흐름"
       },
@@ -621,11 +621,11 @@
         "inning": 2,
         "half": "T",
         "out": 2,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": true,
         "pitcher": "왕옌청",
-        "batter": "추재현",
+        "batter": "데이비슨",
         "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
