@@ -1,7 +1,7 @@
 {
   "date": "20260717",
   "dateText": "2026년 7월 17일",
-  "updatedAt": "2026-07-17T09:50:26.256Z",
+  "updatedAt": "2026-07-17T10:00:41.562Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
+        "inning": 4,
         "half": "B",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "소형준",
-        "batter": "신민재",
-        "heat": 16,
+        "batter": "홍창기",
+        "heat": 18,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -245,7 +245,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 2,
+        "score": 5,
         "starter": {
           "name": "시라카와",
           "era": 4.88,
@@ -294,9 +294,9 @@
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김민준",
-        "batter": "김호령",
-        "heat": 38,
+        "pitcher": "박시후",
+        "batter": "카스트로",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -453,15 +453,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
+        "inning": 4,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "최민석",
-        "batter": "김한별",
-        "heat": 33,
+        "pitcher": "테일러",
+        "batter": "세베리노",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -618,15 +618,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 1,
+        "inning": 4,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "하영민",
-        "batter": "오재원",
-        "heat": 16,
+        "pitcher": "왕옌청",
+        "batter": "권혁빈",
+        "heat": 17,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
