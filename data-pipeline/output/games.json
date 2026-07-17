@@ -1,7 +1,7 @@
 {
   "date": "20260717",
   "dateText": "2026년 7월 17일",
-  "updatedAt": "2026-07-17T11:30:32.587Z",
+  "updatedAt": "2026-07-17T11:40:26.600Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -15,7 +15,7 @@
       "gameId": "20260717KTLG0",
       "time": "18:00",
       "stadium": "잠실",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPOTV",
       "away": {
@@ -64,117 +64,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 2,
-        "b1": true,
-        "b2": false,
-        "b3": false,
-        "pitcher": "이정용",
-        "batter": "오윤석",
-        "heat": 15,
-        "label": "경기 흐름 체크 중"
+      "live": null,
+      "recap": {
+        "actual": 27,
+        "verdict": "기대 이하",
+        "diff": 5,
+        "total": 7,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "우익수",
-            "name": "홍창기"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "박해민"
-          },
-          {
-            "order": 3,
-            "pos": "지명타자",
-            "name": "오스틴"
-          },
-          {
-            "order": 4,
-            "pos": "3루수",
-            "name": "문보경"
-          },
-          {
-            "order": 5,
-            "pos": "좌익수",
-            "name": "문성주"
-          },
-          {
-            "order": 6,
-            "pos": "유격수",
-            "name": "오지환"
-          },
-          {
-            "order": 7,
-            "pos": "1루수",
-            "name": "문정빈"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "박동원"
-          },
-          {
-            "order": 9,
-            "pos": "2루수",
-            "name": "신민재"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "최원준"
-          },
-          {
-            "order": 2,
-            "pos": "1루수",
-            "name": "김현수"
-          },
-          {
-            "order": 3,
-            "pos": "우익수",
-            "name": "안현민"
-          },
-          {
-            "order": 4,
-            "pos": "좌익수",
-            "name": "힐리어드"
-          },
-          {
-            "order": 5,
-            "pos": "지명타자",
-            "name": "장성우"
-          },
-          {
-            "order": 6,
-            "pos": "3루수",
-            "name": "허경민"
-          },
-          {
-            "order": 7,
-            "pos": "2루수",
-            "name": "김상수"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "조대현"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "권동진"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260717LTSS0",
@@ -288,15 +192,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
+        "inning": 8,
+        "half": "T",
         "out": 2,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "전상현",
-        "batter": "고명준",
-        "heat": 53,
+        "pitcher": "전영준",
+        "batter": "김규성",
+        "heat": 55,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -454,14 +358,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "half": "B",
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "류진욱",
-        "batter": "김민석",
-        "heat": 64,
+        "pitcher": "김택연",
+        "batter": "박건우",
+        "heat": 67,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -587,7 +491,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 4,
+        "score": 6,
         "starter": {
           "name": "왕옌청",
           "era": 3.59,
@@ -618,16 +522,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
+        "inning": 8,
+        "half": "T",
         "out": 2,
         "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "조영건",
-        "batter": "허인서",
-        "heat": 44,
-        "label": "점수 나는 난타전"
+        "b3": false,
+        "pitcher": "강재민",
+        "batter": "서건창",
+        "heat": 72,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
