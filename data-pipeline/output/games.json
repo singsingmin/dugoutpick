@@ -1,7 +1,7 @@
 {
   "date": "20260717",
   "dateText": "2026년 7월 17일",
-  "updatedAt": "2026-07-17T10:40:27.217Z",
+  "updatedAt": "2026-07-17T10:50:24.423Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,14 +65,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "소형준",
-        "batter": "홍창기",
+        "pitcher": "함덕주",
+        "batter": "권동진",
         "heat": 12,
         "label": "경기 흐름 체크 중"
       },
@@ -289,14 +289,14 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
+        "half": "B",
         "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "최민준",
-        "batter": "카스트로",
-        "heat": 41,
+        "pitcher": "이의리",
+        "batter": "전의산",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -453,16 +453,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 1,
+        "inning": 7,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "최민석",
-        "batter": "박건우",
-        "heat": 46,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "테일러",
+        "batter": "세베리노",
+        "heat": 49,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -618,15 +618,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
+        "inning": 6,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "하영민",
-        "batter": "문현빈",
-        "heat": 37,
+        "pitcher": "왕옌청",
+        "batter": "권혁빈",
+        "heat": 39,
         "label": "점수 나는 난타전"
       },
       "recap": null,
