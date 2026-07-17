@@ -1,12 +1,12 @@
 {
   "date": "20260717",
   "dateText": "2026년 7월 17일",
-  "updatedAt": "2026-07-17T12:10:29.430Z",
+  "updatedAt": "2026-07-17T12:20:27.477Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
     "hitRate": 26,
-    "bonusRate": 50,
+    "bonusRate": 52,
     "ready": true
   },
   "recommendedGameId": "20260717KTLG0",
@@ -194,12 +194,12 @@
       "live": {
         "inning": 9,
         "half": "B",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "out": 2,
+        "b1": true,
+        "b2": true,
         "b3": false,
         "pitcher": "조상우",
-        "batter": "최준우",
+        "batter": "고명준",
         "heat": 48,
         "label": "경기 흐름 체크 중"
       },
@@ -326,7 +326,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "테일러",
           "era": 4.26,
@@ -359,13 +359,13 @@
       "live": {
         "inning": 9,
         "half": "B",
-        "out": 1,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": true,
         "b3": false,
         "pitcher": "이영하",
-        "batter": "박민우",
-        "heat": 85,
+        "batter": "이우성",
+        "heat": 90,
         "label": "끝내기 한 방 찬스"
       },
       "recap": null,
@@ -472,7 +472,7 @@
       "gameId": "20260717WOHH0",
       "time": "18:00",
       "stadium": "대전",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SBS SPORTS",
       "away": {
@@ -521,117 +521,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 0,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "유토",
-        "batter": "문현빈",
-        "heat": 93,
-        "label": "끝내기 한 방 찬스"
+      "live": null,
+      "recap": {
+        "actual": 93,
+        "verdict": "기대 이상",
+        "diff": 1,
+        "total": 13,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "좌익수",
-            "name": "오재원"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "페라자"
-          },
-          {
-            "order": 3,
-            "pos": "중견수",
-            "name": "문현빈"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "강백호"
-          },
-          {
-            "order": 5,
-            "pos": "3루수",
-            "name": "노시환"
-          },
-          {
-            "order": 6,
-            "pos": "포수",
-            "name": "장규현"
-          },
-          {
-            "order": 7,
-            "pos": "2루수",
-            "name": "황영묵"
-          },
-          {
-            "order": 8,
-            "pos": "1루수",
-            "name": "김태연"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "심우준"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "2루수",
-            "name": "서건창"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "추재현"
-          },
-          {
-            "order": 3,
-            "pos": "1루수",
-            "name": "데이비슨"
-          },
-          {
-            "order": 4,
-            "pos": "좌익수",
-            "name": "히우라"
-          },
-          {
-            "order": 5,
-            "pos": "지명타자",
-            "name": "안치홍"
-          },
-          {
-            "order": 6,
-            "pos": "우익수",
-            "name": "박찬혁"
-          },
-          {
-            "order": 7,
-            "pos": "포수",
-            "name": "김건희"
-          },
-          {
-            "order": 8,
-            "pos": "유격수",
-            "name": "권혁빈"
-          },
-          {
-            "order": 9,
-            "pos": "3루수",
-            "name": "여동욱"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     }
   ],
   "postseason": null
