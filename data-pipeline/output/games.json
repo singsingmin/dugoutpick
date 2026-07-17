@@ -1,7 +1,7 @@
 {
   "date": "20260717",
   "dateText": "2026년 7월 17일",
-  "updatedAt": "2026-07-17T10:30:31.836Z",
+  "updatedAt": "2026-07-17T10:40:27.217Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
+        "inning": 6,
         "half": "B",
-        "out": 2,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
-        "b3": true,
+        "b3": false,
         "pitcher": "소형준",
-        "batter": "신민재",
-        "heat": 11,
+        "batter": "홍창기",
+        "heat": 12,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -288,15 +288,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "시라카와",
-        "batter": "조형우",
-        "heat": 39,
+        "pitcher": "최민준",
+        "batter": "카스트로",
+        "heat": 41,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -454,14 +454,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 0,
+        "half": "B",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "테일러",
-        "batter": "정수빈",
-        "heat": 44,
+        "pitcher": "최민석",
+        "batter": "박건우",
+        "heat": 46,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -575,7 +575,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 4,
+        "score": 7,
         "starter": {
           "name": "하영민",
           "era": 4.16,
@@ -619,15 +619,15 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 1,
-        "b1": true,
+        "half": "B",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "왕옌청",
-        "batter": "히우라",
-        "heat": 52,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "하영민",
+        "batter": "문현빈",
+        "heat": 37,
+        "label": "점수 나는 난타전"
       },
       "recap": null,
       "decision": null,
