@@ -1,7 +1,7 @@
 {
   "date": "20260717",
   "dateText": "2026년 7월 17일",
-  "updatedAt": "2026-07-17T12:00:42.282Z",
+  "updatedAt": "2026-07-17T12:10:29.430Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -193,14 +193,14 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "조병현",
-        "batter": "나성범",
-        "heat": 46,
+        "pitcher": "조상우",
+        "batter": "최준우",
+        "heat": 48,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -358,15 +358,15 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
-        "out": 0,
-        "b1": true,
+        "half": "B",
+        "out": 1,
+        "b1": false,
         "b2": true,
         "b3": false,
-        "pitcher": "김진호",
-        "batter": "안재석",
-        "heat": 75,
-        "label": "9회 1점 승부"
+        "pitcher": "이영하",
+        "batter": "박민우",
+        "heat": 85,
+        "label": "끝내기 한 방 찬스"
       },
       "recap": null,
       "decision": null,
@@ -523,15 +523,15 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이민우",
-        "batter": "추재현",
-        "heat": 83,
-        "label": "9회 1점 승부"
+        "pitcher": "유토",
+        "batter": "문현빈",
+        "heat": 93,
+        "label": "끝내기 한 방 찬스"
       },
       "recap": null,
       "decision": null,
