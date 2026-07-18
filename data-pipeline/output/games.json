@@ -1,7 +1,7 @@
 {
   "date": "20260718",
   "dateText": "2026년 7월 18일",
-  "updatedAt": "2026-07-18T11:27:51.188Z",
+  "updatedAt": "2026-07-18T11:30:30.905Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 1,
+        "out": 3,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "손동현",
-        "batter": "신민재",
+        "batter": "홍창기",
         "heat": 25,
         "label": "경기 흐름 체크 중"
       },
@@ -233,11 +233,11 @@
         "inning": 8,
         "half": "B",
         "out": 1,
-        "b1": false,
+        "b1": true,
         "b2": true,
         "b3": true,
         "pitcher": "이진하",
-        "batter": "김현준",
+        "batter": "김헌곤",
         "heat": 27,
         "label": "경기 흐름 체크 중"
       },
@@ -352,7 +352,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 7,
+        "score": 9,
         "starter": {
           "name": "네일",
           "era": 3.77,
@@ -398,13 +398,13 @@
         "inning": 8,
         "half": "T",
         "out": 1,
-        "b1": true,
+        "b1": false,
         "b2": true,
         "b3": true,
-        "pitcher": "김민",
-        "batter": "한준수",
-        "heat": 14,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "한두솔",
+        "batter": "김규성",
+        "heat": 4,
+        "label": "점수차가 벌어진 경기"
       },
       "recap": null,
       "decision": null,
@@ -564,10 +564,10 @@
         "half": "T",
         "out": 1,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "손주환",
-        "batter": "조수행",
+        "batter": "김대한",
         "heat": 44,
         "label": "점수 나는 난타전"
       },
