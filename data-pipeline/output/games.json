@@ -1,7 +1,7 @@
 {
   "date": "20260718",
   "dateText": "2026년 7월 18일",
-  "updatedAt": "2026-07-18T09:10:25.362Z",
+  "updatedAt": "2026-07-18T09:20:24.406Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 1,
-        "b1": false,
-        "b2": false,
+        "inning": 2,
+        "half": "T",
+        "out": 2,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "사우어",
-        "batter": "박해민",
-        "heat": 33,
+        "pitcher": "임찬규",
+        "batter": "권동진",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -199,7 +199,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 1,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "페덱",
           "era": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 0,
+        "inning": 2,
+        "half": "T",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "나균안",
-        "batter": "김지찬",
-        "heat": 33,
+        "pitcher": "페덱",
+        "batter": "한태양",
+        "heat": 27,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "네일",
-        "batter": "박성한",
-        "heat": 33,
+        "pitcher": "해치",
+        "batter": "김선빈",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -517,7 +517,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "잭로그",
           "era": 3.9,
@@ -560,16 +560,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 0,
+        "inning": 2,
+        "half": "T",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "잭로그",
-        "batter": "김주원",
-        "heat": 26,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "구창모",
+        "batter": "조수행",
+        "heat": 20,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "T",
-        "out": 2,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "박준영",
-        "batter": "히우라",
-        "heat": 31,
+        "batter": "안치홍",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
