@@ -1,7 +1,7 @@
 {
   "date": "20260718",
   "dateText": "2026년 7월 18일",
-  "updatedAt": "2026-07-18T12:30:31.246Z",
+  "updatedAt": "2026-07-18T12:40:25.917Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -273,14 +273,14 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
+        "half": "B",
         "out": 1,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "하준영",
-        "batter": "세베리노",
-        "heat": 51,
+        "pitcher": "이영하",
+        "batter": "박민우",
+        "heat": 53,
         "label": "점수 나는 난타전"
       },
       "recap": null,
