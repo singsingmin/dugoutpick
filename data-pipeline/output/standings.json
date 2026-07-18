@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-18T11:50:26.043Z",
+  "updatedAt": "2026-07-18T12:00:39.800Z",
   "standings": [
     {
       "rank": 1,
@@ -140,15 +140,15 @@
       "rank": 6,
       "code": "HH",
       "name": "한화",
-      "games": 84,
+      "games": 85,
       "win": 40,
-      "loss": 42,
+      "loss": 43,
       "draw": 2,
-      "winRate": 0.488,
-      "gamesBehind": 11.5,
-      "last10": "5승0무5패",
-      "streak": "2패",
-      "home": "18-1-24",
+      "winRate": 0.482,
+      "gamesBehind": 12,
+      "last10": "4승0무6패",
+      "streak": "3패",
+      "home": "18-1-25",
       "away": "22-1-18",
       "rs": 0,
       "vs": {
@@ -160,11 +160,11 @@
         "NC": "3-7-0",
         "LT": "5-2-0",
         "SK": "9-2-0",
-        "WO": "4-6-0"
+        "WO": "4-7-0"
       }
     },
     {
-      "rank": 7,
+      "rank": 6,
       "code": "NC",
       "name": "NC",
       "games": 84,
@@ -248,16 +248,16 @@
       "rank": 10,
       "code": "WO",
       "name": "키움",
-      "games": 89,
-      "win": 31,
+      "games": 90,
+      "win": 32,
       "loss": 57,
       "draw": 1,
-      "winRate": 0.352,
-      "gamesBehind": 23.5,
+      "winRate": 0.36,
+      "gamesBehind": 23,
       "last10": "4승0무6패",
-      "streak": "2승",
+      "streak": "3승",
       "home": "19-1-28",
-      "away": "12-0-29",
+      "away": "13-0-29",
       "rs": 0,
       "vs": {
         "SS": "3-6-0",
@@ -265,7 +265,7 @@
         "KT": "2-8-1",
         "HT": "0-9-0",
         "OB": "4-7-0",
-        "HH": "6-4-0",
+        "HH": "7-4-0",
         "NC": "6-6-0",
         "LT": "2-7-0",
         "SK": "5-4-0"
