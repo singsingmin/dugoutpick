@@ -1,7 +1,7 @@
 {
   "date": "20260718",
   "dateText": "2026년 7월 18일",
-  "updatedAt": "2026-07-18T12:50:23.411Z",
+  "updatedAt": "2026-07-18T13:00:39.537Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -25,8 +25,8 @@
         "score": 8,
         "starter": {
           "name": "사우어",
-          "era": 4.39,
-          "w": 6,
+          "era": 4.3,
+          "w": 7,
           "l": 4
         }
       },
@@ -37,9 +37,9 @@
         "score": 2,
         "starter": {
           "name": "임찬규",
-          "era": 3.78,
+          "era": 4.08,
           "w": 9,
-          "l": 2
+          "l": 3
         }
       },
       "honjam": {
@@ -74,8 +74,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "사우어",
+        "lose": "임찬규",
         "save": null
       },
       "lineup": null
@@ -94,9 +94,9 @@
         "score": 0,
         "starter": {
           "name": "나균안",
-          "era": 3.9,
+          "era": 4.07,
           "w": 5,
-          "l": 7
+          "l": 8
         }
       },
       "home": {
@@ -106,9 +106,9 @@
         "score": 5,
         "starter": {
           "name": "페덱",
-          "era": null,
-          "w": null,
-          "l": null
+          "era": 0,
+          "w": 1,
+          "l": 0
         }
       },
       "honjam": {
@@ -143,8 +143,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "페덱",
+        "lose": "나균안",
         "save": null
       },
       "lineup": null
@@ -163,8 +163,8 @@
         "score": 12,
         "starter": {
           "name": "네일",
-          "era": 3.77,
-          "w": 5,
+          "era": 3.69,
+          "w": 6,
           "l": 5
         }
       },
@@ -175,9 +175,9 @@
         "score": 2,
         "starter": {
           "name": "해치",
-          "era": 7.33,
+          "era": 7.62,
           "w": 1,
-          "l": 3
+          "l": 4
         }
       },
       "honjam": {
@@ -212,8 +212,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "네일",
+        "lose": "해치",
         "save": null
       },
       "lineup": null
@@ -232,7 +232,7 @@
         "score": 12,
         "starter": {
           "name": "잭로그",
-          "era": 3.9,
+          "era": 4.06,
           "w": 4,
           "l": 5
         }
@@ -240,11 +240,11 @@
       "home": {
         "code": "NC",
         "name": "NC",
-        "rank": 6,
+        "rank": 7,
         "score": 9,
         "starter": {
           "name": "구창모",
-          "era": 3.35,
+          "era": 3.61,
           "w": 8,
           "l": 2
         }
@@ -281,9 +281,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "타카다",
+        "lose": "류진욱",
+        "save": "이영하"
       },
       "lineup": null
     },
@@ -301,7 +301,7 @@
         "score": 4,
         "starter": {
           "name": "안우진",
-          "era": 3.7,
+          "era": 3.48,
           "w": 2,
           "l": 5
         }
@@ -313,7 +313,7 @@
         "score": 2,
         "starter": {
           "name": "에르난데스",
-          "era": 4.97,
+          "era": 4.92,
           "w": 3,
           "l": 6
         }
@@ -350,9 +350,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "박지성",
+        "lose": "이상규",
+        "save": "원종현"
       },
       "lineup": null
     }
