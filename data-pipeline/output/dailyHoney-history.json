@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-18T12:40:25.917Z",
+  "updatedAt": "2026-07-18T12:50:23.411Z",
   "results": [
     {
       "date": "20260705",
@@ -115,6 +115,27 @@
         "score": 2
       },
       "calculatedAt": "2026-07-17T12:50:24.898Z"
+    },
+    {
+      "date": "20260718",
+      "actualTopGameId": "20260718WOHH0",
+      "recapScore": 79,
+      "decidingReasonTags": [
+        "2점차 접전"
+      ],
+      "displayMode": "highlight",
+      "displayTitle": "어제의 명경기",
+      "away": {
+        "code": "WO",
+        "name": "키움",
+        "score": 4
+      },
+      "home": {
+        "code": "HH",
+        "name": "한화",
+        "score": 2
+      },
+      "calculatedAt": "2026-07-18T12:50:23.411Z"
     }
   ]
 }
