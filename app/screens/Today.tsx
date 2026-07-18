@@ -10,7 +10,7 @@ import { loadGames, loadDailyHoney } from '../data/load';
 import { getCheerTeam } from '../data/team';
 import GameCard from '../components/GameCard';
 import LiveCard from '../components/LiveCard';
-import { getActiveWalkoff, inferWalkoffOnFinal } from '../utils/liveHeat';
+import { getActiveWalkoff, inferWalkoffOnFinal, computeLiveDisplay } from '../utils/liveHeat';
 import ScreenHeader from '../components/ScreenHeader';
 import SectionLabel from '../components/SectionLabel';
 import Panel from '../components/Panel';
@@ -203,9 +203,12 @@ function Body({
 }) {
   const [bracketVisible, setBracketVisible] = useState(false);
   // LIVE + 끝내기 역전 highlight(FINAL 후 2분) 를 '지금 볼 각'에 표시.
-  const liveGames = data.games
-    .filter((g) => g.status === 'LIVE' || !!getActiveWalkoff(g.gameId))
-    .sort((a, b) => (b.live?.heat ?? 0) - (a.live?.heat ?? 0));
+  // 정렬은 카드에 실제로 표시되는 display heat(raw+momentum+smooth) 기준 — raw로 정렬하면
+  // 표시값과 순서가 어긋난다(모멘텀/스무딩 발). computeLiveDisplay를 폴당 1회(updatedAt 멱등) 계산해
+  // 그 값으로 정렬하고 동일 값을 카드에 내려줘 정렬키 === 표시값을 보장.
+  const liveGames = data.games.filter((g) => g.status === 'LIVE' || !!getActiveWalkoff(g.gameId));
+  const liveDisplays = new Map(liveGames.map((g) => [g.gameId, computeLiveDisplay(g, data.updatedAt)]));
+  liveGames.sort((a, b) => liveDisplays.get(b.gameId)!.heat - liveDisplays.get(a.gameId)!.heat);
   const liveIds = new Set(liveGames.map((g) => g.gameId));
 
   const finished = data.games.filter((g) => g.status === 'FINAL' && g.recap && !liveIds.has(g.gameId));
@@ -320,7 +323,7 @@ function Body({
               ⚠ 라이브 점수는 30초 간격 갱신 — 실제보다 몇 초 늦을 수 있다
             </PixelText>
             {listLiveGames.map((g) => (
-              <LiveCard key={g.gameId} game={g} onPress={() => open(g.gameId)} />
+              <LiveCard key={g.gameId} game={g} display={liveDisplays.get(g.gameId)!} onPress={() => open(g.gameId)} />
             ))}
           </View>
         )}

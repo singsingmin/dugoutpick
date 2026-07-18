@@ -4,7 +4,7 @@ import type { Game, LiveState } from '../types';
 import PixelText from './PixelText';
 import Panel from './Panel';
 import TeamName from './TeamName';
-import { useLiveHeatDisplay } from '../utils/liveHeat';
+import type { LiveDisplay } from '../utils/liveHeat';
 import { formatInning } from '../utils/inning';
 import { colors, spacing } from '../theme';
 
@@ -45,10 +45,10 @@ function DiamondAndOuts({ lv }: { lv: LiveState }) {
   );
 }
 
-export default function LiveCard({ game, onPress }: { game: Game; onPress: () => void }) {
+export default function LiveCard({ game, display, onPress }: { game: Game; display: LiveDisplay; onPress: () => void }) {
   const lv = game.live;
-  // raw(Worker) → display(momentum + smooth) 보정값. ADR-021.
-  const { heat, label } = useLiveHeatDisplay(game);
+  // raw(Worker) → display(momentum + smooth) 보정값은 부모(Today)가 폴당 1회 계산해 내려줌. ADR-021.
+  const { heat, label } = display;
   // live=null이지만 label이 있으면 끝내기 역전 post-game highlight(결정 2).
   const isHighlight = !lv && !!label;
   return (

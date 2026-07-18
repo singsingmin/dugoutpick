@@ -5,7 +5,6 @@
 // 앱은 LIVE 경기를 30초마다 폴링하므로 직전 폴의 점수·직전 표시값을 가진다.
 //
 // raw(Worker) = 절대 상황 점수, display(앱) = raw + momentum + smooth.
-import { useEffect, useRef } from 'react';
 import type { Game } from '../types';
 
 const SMOOTH_MAX_DROP = 15; // 30초 폴링 기준 하락폭(스펙 v1.1: 8→15).
@@ -108,8 +107,8 @@ export interface LiveDisplay {
   label: string;
 }
 
-// LIVE 경기의 표시용 heat/label. 컴포넌트 인스턴스가 gameId별로 직전 상태를 보유(useRef).
-// 카드가 key={gameId}로 렌더되어 30초 폴링 사이에도 인스턴스가 유지된다.
+// gameId별 직전 상태. 예전엔 카드별 useRef였으나, '지금 볼 각' 정렬(부모)과 카드 표시가
+// 동일한 display 값을 쓰려면 부모가 접근 가능해야 해 모듈레벨로 승격(walkoffHighlights와 동일 패턴). ADR-021.
 interface HeatRef {
   prevAway: number | null;
   prevHome: number | null;
@@ -119,13 +118,31 @@ interface HeatRef {
   evtBonus: number;          // gapMultiplier 적용된 기본 보너스(decay 전)
   evtLabel: string | null;
   evtForce: boolean;         // 최상위 raw 라벨까지 덮어쓸지(9회말/연장말 역전)
+  // 폴당 1회만 상태를 전진시키기 위한 멱등 가드: 같은 pollToken이면 캐시 결과를 그대로 반환.
+  lastToken: string | null;
+  lastResult: LiveDisplay | null;
 }
 
-export function useLiveHeatDisplay(game: Game): LiveDisplay {
-  const ref = useRef<HeatRef>({
-    prevAway: null, prevHome: null, prevDisplay: null,
-    evtAt: null, evtBonus: 0, evtLabel: null, evtForce: false,
-  });
+const heatStates = new Map<string, HeatRef>();
+function getHeatState(gameId: string): HeatRef {
+  let s = heatStates.get(gameId);
+  if (!s) {
+    s = {
+      prevAway: null, prevHome: null, prevDisplay: null,
+      evtAt: null, evtBonus: 0, evtLabel: null, evtForce: false,
+      lastToken: null, lastResult: null,
+    };
+    heatStates.set(gameId, s);
+  }
+  return s;
+}
+
+// LIVE 경기의 표시용 heat/label(raw + momentum + smooth). 부모(Today)가 폴당 1회 호출해
+// 그 값으로 '지금 볼 각'을 정렬하고, 같은 값을 LiveCard에 내려 표시 → 정렬키와 표시값이 항상 일치.
+// pollToken(=data.updatedAt)으로 멱등 처리: 같은 폴에서 여러 번 불려도 상태(스무딩·이벤트 타이머)는 1번만 전진.
+export function computeLiveDisplay(game: Game, pollToken: string): LiveDisplay {
+  const prev = getHeatState(game.gameId);
+  if (prev.lastToken === pollToken && prev.lastResult) return prev.lastResult;
 
   const lv = game.live;
   const away = game.away.score ?? 0;
@@ -135,7 +152,6 @@ export function useLiveHeatDisplay(game: Game): LiveDisplay {
   let label = lv?.label ?? '';
 
   if (lv) {
-    const prev = ref.current;
     const now = Date.now();
     const currSigned = home - away;                     // 부호 있는 점수차(홈 기준)
     const currDiff = Math.abs(currSigned);
@@ -197,23 +213,22 @@ export function useLiveHeatDisplay(game: Game): LiveDisplay {
     const momLabel = evtBonus > 0 ? evtLabel : chase.label;
     if (momLabel && (evtForce || !TOP_PRIORITY_LABELS.has(lv.label))) label = momLabel;
     else label = lv.label;
+
+    // 직전 점수/표시값 갱신(다음 폴 비교용) — 모듈상태라 동기 커밋(예전 useEffect 대체).
+    prev.prevAway = away;
+    prev.prevHome = home;
+    prev.prevDisplay = heat;
   } else {
     // 라이브 종료(live=null)여도 끝내기 역전 highlight 창(2분) 내면 라벨/직전 heat 유지(결정 2).
     const w = getActiveWalkoff(game.gameId);
     if (w) {
-      heat = ref.current.prevDisplay ?? heat;
+      heat = prev.prevDisplay ?? heat;
       label = w;
     }
   }
 
-  // 렌더 후 직전 점수/표시값 갱신(다음 폴 비교용). 이벤트 상태는 위에서 즉시 갱신.
-  useEffect(() => {
-    if (lv) {
-      ref.current.prevAway = away;
-      ref.current.prevHome = home;
-      ref.current.prevDisplay = heat;
-    }
-  }, [lv, away, home, heat]);
-
-  return { heat, label };
+  const result: LiveDisplay = { heat, label };
+  prev.lastToken = pollToken;
+  prev.lastResult = result;
+  return result;
 }
