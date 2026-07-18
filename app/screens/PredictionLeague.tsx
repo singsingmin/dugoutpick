@@ -126,7 +126,9 @@ export default function PredictionLeague() {
                   <View style={styles.statRow}>
                     <View style={styles.statCell}>
                       <PixelText variant="caption" color={colors.textDim}>통산 적중</PixelText>
-                      <PixelText variant="body" color={colors.text}>{stats!.totalHits}/{stats!.totalPredictions}</PixelText>
+                      <PixelText variant="body" color={colors.text}>
+                        {stats!.totalHits}/{stats!.totalPredictions} · {stats!.totalPredictions > 0 ? Math.round((stats!.totalHits / stats!.totalPredictions) * 100) : 0}%
+                      </PixelText>
                     </View>
                     <View style={styles.statCell}>
                       <PixelText variant="caption" color={colors.textDim}>현재 연속</PixelText>
