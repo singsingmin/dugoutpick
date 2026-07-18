@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-18T11:40:24.123Z",
+  "updatedAt": "2026-07-18T11:50:26.043Z",
   "lastWeek": {
     "range": [
       "20260706",
@@ -60,7 +60,7 @@
         "l": 1,
         "d": 0,
         "rank": 8,
-        "note": "2연패째 — 분위기 잡아야 해 — 이번주 일정이 고비다"
+        "note": "3연패째 — 분위기 잡아야 해 — 이번주 일정이 고비다"
       },
       "SK": {
         "w": 1,
@@ -103,7 +103,7 @@
       {
         "away": "LT",
         "home": "SS",
-        "pred": 23,
+        "pred": 24,
         "reason": "영남 더비 · 양 팀 에이스 투수전(ERA 3.2·3.2)",
         "dateStart": "20260716",
         "dateEnd": "20260719"
@@ -184,7 +184,9 @@
         {
           "date": "20260719",
           "away": "LT",
-          "home": "SS"
+          "home": "SS",
+          "awayStarter": "김진욱",
+          "homeStarter": "원태인"
         }
       ],
       "SS": [
@@ -205,7 +207,9 @@
         {
           "date": "20260719",
           "away": "LT",
-          "home": "SS"
+          "home": "SS",
+          "awayStarter": "김진욱",
+          "homeStarter": "원태인"
         }
       ],
       "HT": [
