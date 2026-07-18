@@ -1,7 +1,7 @@
 {
   "date": "20260718",
   "dateText": "2026년 7월 18일",
-  "updatedAt": "2026-07-18T09:40:23.977Z",
+  "updatedAt": "2026-07-18T09:50:24.925Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
-        "out": 2,
-        "b1": false,
+        "half": "B",
+        "out": 0,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "임찬규",
-        "batter": "힐리어드",
-        "heat": 38,
+        "pitcher": "사우어",
+        "batter": "홍창기",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -199,7 +199,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 1,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "페덱",
           "era": null,
@@ -231,15 +231,15 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
-        "out": 0,
-        "b1": false,
+        "half": "B",
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "페덱",
-        "batter": "조민영",
-        "heat": 31,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "나균안",
+        "batter": "디아즈",
+        "heat": 25,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -352,7 +352,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 0,
+        "score": 5,
         "starter": {
           "name": "네일",
           "era": 3.77,
@@ -397,14 +397,14 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": true,
         "b2": true,
         "b3": false,
         "pitcher": "해치",
-        "batter": "카스트로",
-        "heat": 40,
-        "label": "초반 팽팽한 흐름"
+        "batter": "정현창",
+        "heat": 8,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -517,7 +517,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 3,
+        "score": 5,
         "starter": {
           "name": "잭로그",
           "era": 3.9,
@@ -562,14 +562,14 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "구창모",
-        "batter": "박준순",
-        "heat": 38,
-        "label": "초반 팽팽한 흐름"
+        "batter": "강승호",
+        "heat": 23,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
+        "inning": 4,
         "half": "T",
-        "out": 1,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "박준영",
-        "batter": "여동욱",
-        "heat": 38,
+        "batter": "데이비슨",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
