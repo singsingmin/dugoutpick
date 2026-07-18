@@ -174,6 +174,16 @@ async function fetchLineup(gameId, seasonId) {
 }
 
 // 팀별 최근 N경기 W/L·득실 (폼 타임라인용) — 종료 경기만
+// 최신부터 같은 결과가 이어지는 길이 → "N승"/"N패"/"N무" (무승부는 자기 연속으로 취급, 규칙 A).
+// 순위표 페이지 '연속' 컬럼과 별개로, 그래프와 동일한 일정 소스에서 계산해 둘의 시점을 일치시킴.
+function currentStreak(games) {
+  if (!games.length) return '';
+  const last = games[games.length - 1].result;
+  let n = 0;
+  for (let i = games.length - 1; i >= 0 && games[i].result === last; i--) n++;
+  return `${n}${last === 'W' ? '승' : last === 'L' ? '패' : '무'}`;
+}
+
 function buildRecent(schedule) {
   const byTeam = {};
   const add = (code, oppCode, isHome, sf, sa, date) => {
@@ -185,8 +195,13 @@ function buildRecent(schedule) {
     add(g.away, g.home, false, g.aS, g.hS, g.date);
     add(g.home, g.away, true, g.hS, g.aS, g.date);
   }
-  for (const k of Object.keys(byTeam)) byTeam[k] = byTeam[k].slice(-10);
-  return byTeam;
+  // 연속은 전체 일정(10경기 넘어도 정확) 기준으로 먼저 계산한 뒤, 그래프용 games는 최근 10개로 슬라이스.
+  const streak = {};
+  for (const k of Object.keys(byTeam)) {
+    streak[k] = currentStreak(byTeam[k]);
+    byTeam[k] = byTeam[k].slice(-10);
+  }
+  return { recent: byTeam, streak };
 }
 
 async function fetchPitcherStats() {
@@ -676,7 +691,7 @@ async function main() {
   const baseKeys = new Set(scheduleBase.map(g => `${g.date}${g.away}${g.home}`));
   const schedule = [...scheduleBase, ...rawEntries.filter(g => !baseKeys.has(`${g.date}${g.away}${g.home}`))].sort((a, b) => a.date.localeCompare(b.date));
   const stByName = Object.fromEntries(standings.map(s => [s.name, s]));
-  const recent = buildRecent(schedule);
+  const { recent, streak: recentStreak } = buildRecent(schedule);
 
   // 이번주 선발 맵: 이번주 전체 경기 날짜(최대 7일)를 병렬 fetch
   // 오늘 경기는 rawGames에 이미 있으므로 제외
@@ -863,7 +878,7 @@ async function main() {
   fs.writeFileSync(path.join(OUT_DIR, 'games.json'), JSON.stringify({ date, dateText: dt, updatedAt, trackRecord, recommendedGameId, games, postseason }, null, 2));
   fs.writeFileSync(path.join(OUT_DIR, 'standings.json'), JSON.stringify({ updatedAt, standings }, null, 2));
   fs.writeFileSync(path.join(OUT_DIR, 'teams.json'), JSON.stringify({ teams: TEAMS }, null, 2));
-  fs.writeFileSync(path.join(OUT_DIR, 'recent.json'), JSON.stringify({ updatedAt, recent }, null, 2));
+  fs.writeFileSync(path.join(OUT_DIR, 'recent.json'), JSON.stringify({ updatedAt, recent, recentStreak }, null, 2));
   fs.writeFileSync(path.join(OUT_DIR, 'report.json'), JSON.stringify({ updatedAt, ...report }, null, 2));
 
   console.log(`[build] wrote games/standings/teams/recent/report.json`);

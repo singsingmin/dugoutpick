@@ -51,6 +51,7 @@ function LegendItem({ color, label }: { color: string; label: string }) {
 export default function Standings() {
   const [rows, setRows] = useState<Standing[]>([]);
   const [recent, setRecent] = useState<Record<string, RecentGame[]>>({});
+  const [recentStreak, setRecentStreak] = useState<Record<string, string>>({});
   const [myCode, setMyCode] = useState<string | null>(null);
   const [loaded, setLoaded] = useState(false);
   const [belowExpanded, setBelowExpanded] = useState(false);
@@ -64,6 +65,7 @@ export default function Standings() {
         if (!active) return;
         setRows(s.standings);
         setRecent(r.recent);
+        setRecentStreak(r.recentStreak ?? {});
         setMyCode(c);
         setLoaded(true);
       })();
@@ -102,6 +104,8 @@ export default function Standings() {
             {rows.map((s, i) => {
               const mine = s.code != null && s.code === myCode;
               const games = (s.code && recent[s.code]) || [];
+              // 연속은 그래프(recent)와 같은 소스에서 계산한 값 우선, 없으면 순위표 스크랩값으로 폴백.
+              const streak = (s.code && recentStreak[s.code]) || s.streak;
               const isBelowCut = poCutIndex >= 0 && i > poCutIndex;
               return (
                 <View key={`${s.rank}-${s.name}`}>
@@ -121,7 +125,7 @@ export default function Standings() {
                       {/* 2줄: 최근10 폼닷 + 연속 */}
                       <View style={styles.formRow}>
                         {games.length > 0 ? <FormDots games={games} compact /> : <View />}
-                        <PixelText variant="caption" color={streakColor(s.streak)}>{s.streak}</PixelText>
+                        <PixelText variant="caption" color={streakColor(streak)}>{streak}</PixelText>
                       </View>
                       {/* 승률 막대 */}
                       <View style={styles.wrTrack}>

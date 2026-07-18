@@ -175,6 +175,9 @@ export interface RecentGame {
 export interface RecentData {
   updatedAt: string;
   recent: Record<string, RecentGame[]>; // 팀코드 → 최근 경기(오래된→최신)
+  // 팀코드 → "N승"/"N패"/"N무". 그래프와 동일한 일정 소스에서 계산한 현재 연속(순위표 페이지 '연속'과
+  // 시점 어긋남 방지). optional: 구버전 recent.json 캐시/번들엔 없을 수 있어 앱은 standings.streak로 폴백.
+  recentStreak?: Record<string, string>;
 }
 
 // Phase 3-Pre 판정: 그날 실제 꿀잼 1위 경기(예측 리그 정답 데이터, '어제의 명경기' 카드용)
