@@ -1,7 +1,7 @@
 {
   "date": "20260718",
   "dateText": "2026년 7월 18일",
-  "updatedAt": "2026-07-18T11:00:38.295Z",
+  "updatedAt": "2026-07-18T11:10:23.686Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "사우어",
-        "batter": "문보경",
-        "heat": 34,
+        "pitcher": "김진성",
+        "batter": "허경민",
+        "heat": 36,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
+        "inning": 8,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이민석",
-        "batter": "김성윤",
-        "heat": 25,
+        "pitcher": "이승현",
+        "batter": "한태양",
+        "heat": 26,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -395,14 +395,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 2,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "네일",
-        "batter": "김재환",
+        "pitcher": "서진용",
+        "batter": "정현창",
         "heat": 12,
         "label": "경기 흐름 체크 중"
       },
@@ -560,16 +560,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 1,
-        "b1": false,
+        "inning": 7,
+        "half": "T",
+        "out": 0,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "타카다",
-        "batter": "김형준",
-        "heat": 62,
-        "label": "점수 나는 난타전"
+        "pitcher": "류진욱",
+        "batter": "박준순",
+        "heat": 65,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -727,12 +727,12 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 1,
+        "b1": true,
         "b2": false,
-        "b3": false,
-        "pitcher": "이상규",
-        "batter": "김건희",
+        "b3": true,
+        "pitcher": "이민우",
+        "batter": "서건창",
         "heat": 64,
         "label": "후반 박빙 승부"
       },
