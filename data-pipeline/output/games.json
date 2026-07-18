@@ -1,7 +1,7 @@
 {
   "date": "20260718",
   "dateText": "2026년 7월 18일",
-  "updatedAt": "2026-07-18T08:10:23.201Z",
+  "updatedAt": "2026-07-18T08:20:24.314Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -401,8 +401,8 @@
           },
           {
             "order": 6,
-            "pos": "우익수",
-            "name": "김성욱"
+            "pos": "좌익수",
+            "name": "오태곤"
           },
           {
             "order": 7,
@@ -411,25 +411,25 @@
           },
           {
             "order": 8,
-            "pos": "좌익수",
-            "name": "최준우"
+            "pos": "포수",
+            "name": "조형우"
           },
           {
             "order": 9,
-            "pos": "포수",
-            "name": "조형우"
+            "pos": "우익수",
+            "name": "최준우"
           }
         ],
         "away": [
           {
             "order": 1,
-            "pos": "우익수",
-            "name": "박재현"
+            "pos": "중견수",
+            "name": "김호령"
           },
           {
             "order": 2,
-            "pos": "중견수",
-            "name": "김호령"
+            "pos": "지명타자",
+            "name": "카스트로"
           },
           {
             "order": 3,
@@ -438,36 +438,36 @@
           },
           {
             "order": 4,
-            "pos": "지명타자",
+            "pos": "우익수",
             "name": "나성범"
           },
           {
             "order": 5,
-            "pos": "좌익수",
-            "name": "카스트로"
-          },
-          {
-            "order": 6,
             "pos": "포수",
             "name": "한준수"
           },
           {
-            "order": 7,
+            "order": 6,
             "pos": "2루수",
             "name": "김선빈"
           },
           {
-            "order": 8,
+            "order": 7,
             "pos": "1루수",
             "name": "박상준"
           },
           {
+            "order": 8,
+            "pos": "좌익수",
+            "name": "박정우"
+          },
+          {
             "order": 9,
             "pos": "유격수",
-            "name": "김규성"
+            "name": "정현창"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
@@ -688,7 +688,7 @@
           {
             "order": 2,
             "pos": "우익수",
-            "name": "페라자"
+            "name": "최인호"
           },
           {
             "order": 3,
@@ -708,17 +708,17 @@
           {
             "order": 6,
             "pos": "포수",
-            "name": "장규현"
+            "name": "허인서"
           },
           {
             "order": 7,
-            "pos": "2루수",
-            "name": "황영묵"
+            "pos": "1루수",
+            "name": "김태연"
           },
           {
             "order": 8,
-            "pos": "1루수",
-            "name": "김태연"
+            "pos": "2루수",
+            "name": "이도윤"
           },
           {
             "order": 9,
@@ -773,7 +773,7 @@
             "name": "여동욱"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     }
   ],
