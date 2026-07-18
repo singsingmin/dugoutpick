@@ -1,7 +1,7 @@
 {
   "date": "20260718",
   "dateText": "2026년 7월 18일",
-  "updatedAt": "2026-07-18T10:10:02.398Z",
+  "updatedAt": "2026-07-18T10:10:25.086Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -68,11 +68,11 @@
         "inning": 4,
         "half": "B",
         "out": 2,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "사우어",
-        "batter": "오지환",
+        "batter": "문정빈",
         "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 3,
-        "b1": true,
+        "inning": 5,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "나균안",
-        "batter": "김성윤",
-        "heat": 28,
+        "pitcher": "페덱",
+        "batter": "노진혁",
+        "heat": 29,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -727,12 +727,12 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "안우진",
-        "batter": "김태연",
+        "batter": "이도윤",
         "heat": 50,
         "label": "초반 팽팽한 흐름"
       },
