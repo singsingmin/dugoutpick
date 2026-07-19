@@ -1,7 +1,7 @@
 {
   "date": "20260719",
   "dateText": "2026년 7월 19일",
-  "updatedAt": "2026-07-19T10:10:26.362Z",
+  "updatedAt": "2026-07-19T10:20:26.684Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "송승기",
-        "batter": "김현수",
-        "heat": 48,
+        "pitcher": "고영표",
+        "batter": "이재원",
+        "heat": 50,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -187,7 +187,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "김진욱",
           "era": 2.95,
@@ -230,14 +230,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 1,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김진욱",
-        "batter": "김도환",
+        "pitcher": "원태인",
+        "batter": "고승민",
         "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 1,
-        "b1": false,
+        "inning": 5,
+        "half": "T",
+        "out": 0,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "양현종",
-        "batter": "이지영",
-        "heat": 28,
+        "pitcher": "김건우",
+        "batter": "나성범",
+        "heat": 29,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -529,7 +529,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "토다",
           "era": 4.81,
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
+        "inning": 5,
         "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "최승용",
-        "batter": "블레인",
-        "heat": 18,
+        "batter": "김형준",
+        "heat": 31,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -726,14 +726,14 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "류현진",
-        "batter": "임병욱",
-        "heat": 26,
+        "pitcher": "김선기",
+        "batter": "심우준",
+        "heat": 28,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
