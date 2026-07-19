@@ -1,7 +1,7 @@
 {
   "date": "20260719",
   "dateText": "2026년 7월 19일",
-  "updatedAt": "2026-07-19T12:20:24.206Z",
+  "updatedAt": "2026-07-19T12:30:32.172Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -91,7 +91,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": 7,
+        "score": 8,
         "starter": {
           "name": "김진욱",
           "era": 2.95,
@@ -136,13 +136,13 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "out": 1,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "김재윤",
-        "batter": "고승민",
-        "heat": 83,
+        "pitcher": "이승민",
+        "batter": "박찬형",
+        "heat": 88,
         "label": "9회 1점 승부"
       },
       "recap": null,
@@ -438,15 +438,15 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
-        "out": 0,
+        "half": "B",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박상원",
-        "batter": "박찬혁",
-        "heat": 88,
-        "label": "9회 1점 승부"
+        "pitcher": "박정훈",
+        "batter": "허인서",
+        "heat": 98,
+        "label": "끝내기 한 방 찬스"
       },
       "recap": null,
       "decision": null,
