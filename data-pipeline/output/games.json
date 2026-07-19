@@ -1,7 +1,7 @@
 {
   "date": "20260719",
   "dateText": "2026년 7월 19일",
-  "updatedAt": "2026-07-19T11:48:49.688Z",
+  "updatedAt": "2026-07-19T11:50:24.077Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -398,8 +398,8 @@
         "inning": 8,
         "half": "T",
         "out": 2,
-        "b1": true,
-        "b2": false,
+        "b1": false,
+        "b2": true,
         "b3": false,
         "pitcher": "이건욱",
         "batter": "카스트로",
@@ -562,12 +562,12 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "b1": true,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "최우석",
-        "batter": "김대한",
+        "batter": "정수빈",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
@@ -731,7 +731,7 @@
         "b1": true,
         "b2": true,
         "b3": true,
-        "pitcher": "강재민",
+        "pitcher": "이상규",
         "batter": "임지열",
         "heat": 14,
         "label": "경기 흐름 체크 중"
