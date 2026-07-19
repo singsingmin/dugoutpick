@@ -1,7 +1,7 @@
 {
   "date": "20260719",
   "dateText": "2026년 7월 19일",
-  "updatedAt": "2026-07-19T12:40:24.745Z",
+  "updatedAt": "2026-07-19T12:50:23.315Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -135,14 +135,14 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
-        "out": 2,
-        "b1": false,
-        "b2": true,
+        "half": "B",
+        "out": 1,
+        "b1": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "이승민",
-        "batter": "손성빈",
-        "heat": 51,
+        "pitcher": "김원중",
+        "batter": "김영웅",
+        "heat": 53,
         "label": "점수 나는 난타전"
       },
       "recap": null,
@@ -438,15 +438,15 @@
       },
       "live": {
         "inning": 10,
-        "half": "T",
+        "half": "B",
         "out": 1,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "박상원",
-        "batter": "최재영",
-        "heat": 97,
-        "label": "연장 혈투 진행 중"
+        "pitcher": "박지성",
+        "batter": "정은원",
+        "heat": 100,
+        "label": "끝내기 한 방 찬스"
       },
       "recap": null,
       "decision": null,
