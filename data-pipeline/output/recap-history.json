@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-07-19T12:00:38.261Z",
+  "updatedAt": "2026-07-19T12:10:25.589Z",
   "window": 50,
   "sampleSize": 50,
   "hitRate": 24,
-  "bonusRate": 56,
+  "bonusRate": 54,
   "ready": true,
   "records": [
     {
@@ -523,6 +523,13 @@
       "pred": 7,
       "actual": 11,
       "verdict": "예측 적중"
+    },
+    {
+      "date": "20260719",
+      "gameId": "20260719KTLG0",
+      "pred": 86,
+      "actual": 61,
+      "verdict": "기대 이하"
     }
   ]
 }
