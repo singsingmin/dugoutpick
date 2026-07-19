@@ -1,7 +1,7 @@
 {
   "date": "20260719",
   "dateText": "2026년 7월 19일",
-  "updatedAt": "2026-07-19T09:40:24.889Z",
+  "updatedAt": "2026-07-19T09:50:25.449Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
+        "inning": 4,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "고영표",
-        "batter": "이재원",
-        "heat": 40,
+        "pitcher": "송승기",
+        "batter": "장성우",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -187,7 +187,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": 0,
+        "score": 3,
         "starter": {
           "name": "김진욱",
           "era": 2.95,
@@ -231,15 +231,15 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 1,
         "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "원태인",
-        "batter": "고승민",
-        "heat": 40,
-        "label": "초반 팽팽한 흐름"
+        "b3": false,
+        "pitcher": "김진욱",
+        "batter": "심재훈",
+        "heat": 25,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -352,7 +352,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 1,
+        "score": 4,
         "starter": {
           "name": "양현종",
           "era": 3.91,
@@ -395,16 +395,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
-        "out": 2,
+        "inning": 3,
+        "half": "T",
+        "out": 0,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "양현종",
-        "batter": "정준재",
-        "heat": 38,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "김건우",
+        "batter": "김선빈",
+        "heat": 23,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -517,7 +517,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 1,
+        "score": 3,
         "starter": {
           "name": "최승용",
           "era": 5.52,
@@ -563,13 +563,13 @@
         "inning": 3,
         "half": "T",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "토다",
-        "batter": "조수행",
-        "heat": 38,
-        "label": "초반 팽팽한 흐름"
+        "batter": "김민석",
+        "heat": 23,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
+        "inning": 3,
         "half": "B",
-        "out": 2,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "박준현",
-        "batter": "심우준",
-        "heat": 35,
+        "batter": "오재원",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
