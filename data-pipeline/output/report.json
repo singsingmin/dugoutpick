@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-19T15:29:30.701Z",
+  "updatedAt": "2026-07-20T05:24:59.636Z",
   "lastWeek": {
     "range": [
       "20260713",
@@ -114,7 +114,9 @@
         {
           "date": "20260721",
           "away": "NC",
-          "home": "LG"
+          "home": "LG",
+          "awayStarter": "원종해",
+          "homeStarter": "장현식"
         },
         {
           "date": "20260722",
@@ -146,7 +148,9 @@
         {
           "date": "20260721",
           "away": "NC",
-          "home": "LG"
+          "home": "LG",
+          "awayStarter": "원종해",
+          "homeStarter": "장현식"
         },
         {
           "date": "20260722",
@@ -178,7 +182,9 @@
         {
           "date": "20260721",
           "away": "SK",
-          "home": "LT"
+          "home": "LT",
+          "awayStarter": "타케다",
+          "homeStarter": "비슬리"
         },
         {
           "date": "20260722",
@@ -210,7 +216,9 @@
         {
           "date": "20260721",
           "away": "SK",
-          "home": "LT"
+          "home": "LT",
+          "awayStarter": "타케다",
+          "homeStarter": "비슬리"
         },
         {
           "date": "20260722",
@@ -242,7 +250,9 @@
         {
           "date": "20260721",
           "away": "HH",
-          "home": "HT"
+          "home": "HT",
+          "awayStarter": "박준영",
+          "homeStarter": "황동하"
         },
         {
           "date": "20260722",
@@ -274,7 +284,9 @@
         {
           "date": "20260721",
           "away": "HH",
-          "home": "HT"
+          "home": "HT",
+          "awayStarter": "박준영",
+          "homeStarter": "황동하"
         },
         {
           "date": "20260722",
@@ -306,7 +318,9 @@
         {
           "date": "20260721",
           "away": "OB",
-          "home": "KT"
+          "home": "KT",
+          "awayStarter": "벤자민",
+          "homeStarter": "오원석"
         },
         {
           "date": "20260722",
@@ -338,7 +352,9 @@
         {
           "date": "20260721",
           "away": "OB",
-          "home": "KT"
+          "home": "KT",
+          "awayStarter": "벤자민",
+          "homeStarter": "오원석"
         },
         {
           "date": "20260722",
@@ -370,7 +386,9 @@
         {
           "date": "20260721",
           "away": "SS",
-          "home": "WO"
+          "home": "WO",
+          "awayStarter": "최원태",
+          "homeStarter": "배동현"
         },
         {
           "date": "20260722",
@@ -402,7 +420,9 @@
         {
           "date": "20260721",
           "away": "SS",
-          "home": "WO"
+          "home": "WO",
+          "awayStarter": "최원태",
+          "homeStarter": "배동현"
         },
         {
           "date": "20260722",
