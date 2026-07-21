@@ -1,7 +1,7 @@
 {
   "date": "20260721",
   "dateText": "2026년 7월 21일",
-  "updatedAt": "2026-07-21T14:40:27.867Z",
+  "updatedAt": "2026-07-21T14:50:28.813Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -273,15 +273,15 @@
       },
       "live": {
         "inning": 11,
-        "half": "T",
+        "half": "B",
         "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "주권",
-        "batter": "김대한",
-        "heat": 92,
-        "label": "연장 혈투 진행 중"
+        "pitcher": "이영하",
+        "batter": "김상수",
+        "heat": 99,
+        "label": "끝내기 한 방 찬스"
       },
       "recap": null,
       "decision": null,
