@@ -1,7 +1,7 @@
 {
   "date": "20260721",
   "dateText": "2026년 7월 21일",
-  "updatedAt": "2026-07-21T13:00:42.692Z",
+  "updatedAt": "2026-07-21T13:10:27.945Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -21,7 +21,7 @@
       "away": {
         "code": "NC",
         "name": "NC",
-        "rank": 7,
+        "rank": 6,
         "score": 7,
         "starter": {
           "name": "원종해",
@@ -159,7 +159,7 @@
       "away": {
         "code": "HH",
         "name": "한화",
-        "rank": 6,
+        "rank": 7,
         "score": 3,
         "starter": {
           "name": "박준영",
@@ -274,12 +274,12 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 1,
+        "b1": true,
         "b2": false,
-        "b3": false,
-        "pitcher": "전용주",
-        "batter": "정수빈",
+        "b3": true,
+        "pitcher": "스기모토",
+        "batter": "박찬호",
         "heat": 59,
         "label": "후반 박빙 승부"
       },
