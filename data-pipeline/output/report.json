@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-21T08:00:41.497Z",
+  "updatedAt": "2026-07-21T08:30:35.848Z",
   "lastWeek": {
     "range": [
       "20260713",
@@ -110,74 +110,6 @@
       }
     ],
     "team": {
-      "NC": [
-        {
-          "date": "20260721",
-          "away": "NC",
-          "home": "LG",
-          "awayStarter": "원종해",
-          "homeStarter": "장현식"
-        },
-        {
-          "date": "20260722",
-          "away": "NC",
-          "home": "LG"
-        },
-        {
-          "date": "20260723",
-          "away": "NC",
-          "home": "LG"
-        },
-        {
-          "date": "20260724",
-          "away": "NC",
-          "home": "SK"
-        },
-        {
-          "date": "20260725",
-          "away": "NC",
-          "home": "SK"
-        },
-        {
-          "date": "20260726",
-          "away": "NC",
-          "home": "SK"
-        }
-      ],
-      "LG": [
-        {
-          "date": "20260721",
-          "away": "NC",
-          "home": "LG",
-          "awayStarter": "원종해",
-          "homeStarter": "장현식"
-        },
-        {
-          "date": "20260722",
-          "away": "NC",
-          "home": "LG"
-        },
-        {
-          "date": "20260723",
-          "away": "NC",
-          "home": "LG"
-        },
-        {
-          "date": "20260724",
-          "away": "LG",
-          "home": "HH"
-        },
-        {
-          "date": "20260725",
-          "away": "LG",
-          "home": "HH"
-        },
-        {
-          "date": "20260726",
-          "away": "LG",
-          "home": "HH"
-        }
-      ],
       "SK": [
         {
           "date": "20260721",
@@ -380,6 +312,74 @@
           "date": "20260726",
           "away": "WO",
           "home": "HT"
+        }
+      ],
+      "NC": [
+        {
+          "date": "20260721",
+          "away": "NC",
+          "home": "LG",
+          "awayStarter": "원종해",
+          "homeStarter": "장현식"
+        },
+        {
+          "date": "20260722",
+          "away": "NC",
+          "home": "LG"
+        },
+        {
+          "date": "20260723",
+          "away": "NC",
+          "home": "LG"
+        },
+        {
+          "date": "20260724",
+          "away": "NC",
+          "home": "SK"
+        },
+        {
+          "date": "20260725",
+          "away": "NC",
+          "home": "SK"
+        },
+        {
+          "date": "20260726",
+          "away": "NC",
+          "home": "SK"
+        }
+      ],
+      "LG": [
+        {
+          "date": "20260721",
+          "away": "NC",
+          "home": "LG",
+          "awayStarter": "원종해",
+          "homeStarter": "장현식"
+        },
+        {
+          "date": "20260722",
+          "away": "NC",
+          "home": "LG"
+        },
+        {
+          "date": "20260723",
+          "away": "NC",
+          "home": "LG"
+        },
+        {
+          "date": "20260724",
+          "away": "LG",
+          "home": "HH"
+        },
+        {
+          "date": "20260725",
+          "away": "LG",
+          "home": "HH"
+        },
+        {
+          "date": "20260726",
+          "away": "LG",
+          "home": "HH"
         }
       ],
       "HH": [
