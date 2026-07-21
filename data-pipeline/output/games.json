@@ -1,7 +1,7 @@
 {
   "date": "20260721",
   "dateText": "2026년 7월 21일",
-  "updatedAt": "2026-07-21T12:10:26.979Z",
+  "updatedAt": "2026-07-21T12:20:28.646Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
+        "inning": 8,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "전사민",
-        "batter": "오지환",
-        "heat": 59,
+        "pitcher": "김윤식",
+        "batter": "천재환",
+        "heat": 61,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -256,7 +256,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "박준영",
           "era": 4.69,
@@ -301,13 +301,13 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "out": 2,
+        "b1": true,
+        "b2": true,
         "b3": false,
         "pitcher": "정해영",
-        "batter": "이도윤",
-        "heat": 14,
+        "batter": "정은원",
+        "heat": 26,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -586,7 +586,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 1,
-        "score": 6,
+        "score": 7,
         "starter": {
           "name": "최원태",
           "era": 4.7,
@@ -631,13 +631,13 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "out": 1,
+        "b1": true,
+        "b2": true,
         "b3": false,
         "pitcher": "박정훈",
-        "batter": "이재현",
-        "heat": 76,
+        "batter": "최형우",
+        "heat": 72,
         "label": "후반 박빙 승부"
       },
       "recap": null,
