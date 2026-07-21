@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-21T14:50:28.813Z",
+  "updatedAt": "2026-07-21T16:16:14.068Z",
   "lastWeek": {
     "range": [
       "20260713",
@@ -326,6 +326,78 @@
           "home": "HT"
         }
       ],
+      "OB": [
+        {
+          "date": "20260721",
+          "away": "OB",
+          "home": "KT",
+          "awayStarter": "벤자민",
+          "homeStarter": "오원석"
+        },
+        {
+          "date": "20260722",
+          "away": "OB",
+          "home": "KT",
+          "awayStarter": "곽빈",
+          "homeStarter": "로건"
+        },
+        {
+          "date": "20260723",
+          "away": "OB",
+          "home": "KT"
+        },
+        {
+          "date": "20260724",
+          "away": "SS",
+          "home": "OB"
+        },
+        {
+          "date": "20260725",
+          "away": "SS",
+          "home": "OB"
+        },
+        {
+          "date": "20260726",
+          "away": "SS",
+          "home": "OB"
+        }
+      ],
+      "KT": [
+        {
+          "date": "20260721",
+          "away": "OB",
+          "home": "KT",
+          "awayStarter": "벤자민",
+          "homeStarter": "오원석"
+        },
+        {
+          "date": "20260722",
+          "away": "OB",
+          "home": "KT",
+          "awayStarter": "곽빈",
+          "homeStarter": "로건"
+        },
+        {
+          "date": "20260723",
+          "away": "OB",
+          "home": "KT"
+        },
+        {
+          "date": "20260724",
+          "away": "KT",
+          "home": "LT"
+        },
+        {
+          "date": "20260725",
+          "away": "KT",
+          "home": "LT"
+        },
+        {
+          "date": "20260726",
+          "away": "KT",
+          "home": "LT"
+        }
+      ],
       "SS": [
         {
           "date": "20260721",
@@ -396,74 +468,6 @@
           "date": "20260726",
           "away": "WO",
           "home": "HT"
-        }
-      ],
-      "OB": [
-        {
-          "date": "20260721",
-          "away": "OB",
-          "home": "KT",
-          "awayStarter": "벤자민",
-          "homeStarter": "오원석"
-        },
-        {
-          "date": "20260722",
-          "away": "OB",
-          "home": "KT"
-        },
-        {
-          "date": "20260723",
-          "away": "OB",
-          "home": "KT"
-        },
-        {
-          "date": "20260724",
-          "away": "SS",
-          "home": "OB"
-        },
-        {
-          "date": "20260725",
-          "away": "SS",
-          "home": "OB"
-        },
-        {
-          "date": "20260726",
-          "away": "SS",
-          "home": "OB"
-        }
-      ],
-      "KT": [
-        {
-          "date": "20260721",
-          "away": "OB",
-          "home": "KT",
-          "awayStarter": "벤자민",
-          "homeStarter": "오원석"
-        },
-        {
-          "date": "20260722",
-          "away": "OB",
-          "home": "KT"
-        },
-        {
-          "date": "20260723",
-          "away": "OB",
-          "home": "KT"
-        },
-        {
-          "date": "20260724",
-          "away": "KT",
-          "home": "LT"
-        },
-        {
-          "date": "20260725",
-          "away": "KT",
-          "home": "LT"
-        },
-        {
-          "date": "20260726",
-          "away": "KT",
-          "home": "LT"
         }
       ]
     }
