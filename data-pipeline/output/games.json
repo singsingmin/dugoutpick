@@ -1,7 +1,7 @@
 {
   "date": "20260721",
   "dateText": "2026년 7월 21일",
-  "updatedAt": "2026-07-21T14:30:39.024Z",
+  "updatedAt": "2026-07-21T14:31:20.608Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -274,12 +274,12 @@
       "live": {
         "inning": 10,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "이영하",
-        "batter": "배정대",
+        "batter": "힐리어드",
         "heat": 96,
         "label": "끝내기 한 방 찬스"
       },
