@@ -1,7 +1,7 @@
 {
   "date": "20260721",
   "dateText": "2026년 7월 21일",
-  "updatedAt": "2026-07-21T14:20:27.633Z",
+  "updatedAt": "2026-07-21T14:30:39.024Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -273,15 +273,15 @@
       },
       "live": {
         "inning": 10,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "우규민",
-        "batter": "박지훈",
-        "heat": 89,
-        "label": "연장 혈투 진행 중"
+        "pitcher": "이영하",
+        "batter": "배정대",
+        "heat": 96,
+        "label": "끝내기 한 방 찬스"
       },
       "recap": null,
       "decision": null,
