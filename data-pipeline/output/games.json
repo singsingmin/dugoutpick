@@ -1,7 +1,7 @@
 {
   "date": "20260721",
   "dateText": "2026년 7월 21일",
-  "updatedAt": "2026-07-21T12:30:36.307Z",
+  "updatedAt": "2026-07-21T12:40:27.399Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
-        "b1": false,
-        "b2": false,
+        "inning": 9,
+        "half": "T",
+        "out": 0,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "김진호",
-        "batter": "홍창기",
-        "heat": 63,
+        "pitcher": "이우찬",
+        "batter": "최정원",
+        "heat": 66,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -301,12 +301,12 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "out": 1,
+        "b1": true,
+        "b2": true,
         "b3": false,
         "pitcher": "박재규",
-        "batter": "한준수",
+        "batter": "변우혁",
         "heat": 45,
         "label": "경기 흐름 체크 중"
       },
@@ -629,16 +629,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
-        "b1": false,
+        "inning": 9,
+        "half": "T",
+        "out": 1,
+        "b1": true,
         "b2": false,
-        "b3": false,
-        "pitcher": "김태훈",
-        "batter": "김건희",
-        "heat": 75,
-        "label": "후반 박빙 승부"
+        "b3": true,
+        "pitcher": "조영건",
+        "batter": "김영웅",
+        "heat": 83,
+        "label": "9회 1점 승부"
       },
       "recap": null,
       "decision": null,
