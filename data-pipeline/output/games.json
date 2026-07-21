@@ -1,7 +1,7 @@
 {
   "date": "20260721",
   "dateText": "2026년 7월 21일",
-  "updatedAt": "2026-07-21T10:40:25.554Z",
+  "updatedAt": "2026-07-21T10:50:28.684Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
+        "inning": 5,
         "half": "T",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": true,
         "b3": false,
         "pitcher": "장현식",
-        "batter": "김형준",
-        "heat": 43,
+        "batter": "김주원",
+        "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
+        "inning": 6,
+        "half": "T",
         "out": 0,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "타케다",
-        "batter": "전민재",
-        "heat": 54,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "비슬리",
+        "batter": "김재환",
+        "heat": 57,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -397,12 +397,12 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 0,
+        "out": 3,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "이교훈",
-        "batter": "한준수",
+        "batter": "박상준",
         "heat": 9,
         "label": "경기 흐름 체크 중"
       },
@@ -561,14 +561,14 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
+        "half": "B",
         "out": 2,
-        "b1": true,
-        "b2": false,
-        "b3": true,
-        "pitcher": "오원석",
-        "batter": "양의지",
-        "heat": 43,
+        "b1": false,
+        "b2": true,
+        "b3": false,
+        "pitcher": "벤자민",
+        "batter": "권동진",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "최원태",
-        "batter": "데이비슨",
-        "heat": 18,
+        "pitcher": "배동현",
+        "batter": "디아즈",
+        "heat": 19,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
