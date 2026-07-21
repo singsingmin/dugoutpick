@@ -1,7 +1,7 @@
 {
   "date": "20260721",
   "dateText": "2026년 7월 21일",
-  "updatedAt": "2026-07-21T09:40:25.455Z",
+  "updatedAt": "2026-07-21T09:50:25.996Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
-        "b1": false,
-        "b2": false,
-        "b3": false,
+        "out": 1,
+        "b1": true,
+        "b2": true,
+        "b3": true,
         "pitcher": "원종해",
-        "batter": "홍창기",
+        "batter": "오지환",
         "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 0,
+        "inning": 2,
+        "half": "T",
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "타케다",
-        "batter": "한태양",
-        "heat": 33,
+        "pitcher": "비슬리",
+        "batter": "류효승",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -352,7 +352,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "박준영",
           "era": 4.69,
@@ -364,7 +364,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "황동하",
           "era": 4.37,
@@ -396,14 +396,14 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 1,
         "b1": true,
         "b2": false,
         "b3": true,
-        "pitcher": "황동하",
-        "batter": "페라자",
-        "heat": 31,
+        "pitcher": "박준영",
+        "batter": "한준수",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -529,7 +529,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 2,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "오원석",
           "era": 6.11,
@@ -560,14 +560,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "벤자민",
-        "batter": "최원준",
+        "pitcher": "오원석",
+        "batter": "세베리노",
         "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
@@ -682,7 +682,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 1,
-        "score": 2,
+        "score": 4,
         "starter": {
           "name": "최원태",
           "era": 4.7,
@@ -726,15 +726,15 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
-        "out": 0,
-        "b1": true,
+        "half": "B",
+        "out": 1,
+        "b1": false,
         "b2": true,
         "b3": false,
-        "pitcher": "배동현",
-        "batter": "디아즈",
-        "heat": 24,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "최원태",
+        "batter": "데이비슨",
+        "heat": 12,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
