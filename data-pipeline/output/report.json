@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-21T08:30:35.848Z",
+  "updatedAt": "2026-07-21T08:40:25.809Z",
   "lastWeek": {
     "range": [
       "20260713",
@@ -110,74 +110,6 @@
       }
     ],
     "team": {
-      "SK": [
-        {
-          "date": "20260721",
-          "away": "SK",
-          "home": "LT",
-          "awayStarter": "타케다",
-          "homeStarter": "비슬리"
-        },
-        {
-          "date": "20260722",
-          "away": "SK",
-          "home": "LT"
-        },
-        {
-          "date": "20260723",
-          "away": "SK",
-          "home": "LT"
-        },
-        {
-          "date": "20260724",
-          "away": "NC",
-          "home": "SK"
-        },
-        {
-          "date": "20260725",
-          "away": "NC",
-          "home": "SK"
-        },
-        {
-          "date": "20260726",
-          "away": "NC",
-          "home": "SK"
-        }
-      ],
-      "LT": [
-        {
-          "date": "20260721",
-          "away": "SK",
-          "home": "LT",
-          "awayStarter": "타케다",
-          "homeStarter": "비슬리"
-        },
-        {
-          "date": "20260722",
-          "away": "SK",
-          "home": "LT"
-        },
-        {
-          "date": "20260723",
-          "away": "SK",
-          "home": "LT"
-        },
-        {
-          "date": "20260724",
-          "away": "KT",
-          "home": "LT"
-        },
-        {
-          "date": "20260725",
-          "away": "KT",
-          "home": "LT"
-        },
-        {
-          "date": "20260726",
-          "away": "KT",
-          "home": "LT"
-        }
-      ],
       "OB": [
         {
           "date": "20260721",
@@ -244,74 +176,6 @@
           "date": "20260726",
           "away": "KT",
           "home": "LT"
-        }
-      ],
-      "SS": [
-        {
-          "date": "20260721",
-          "away": "SS",
-          "home": "WO",
-          "awayStarter": "최원태",
-          "homeStarter": "배동현"
-        },
-        {
-          "date": "20260722",
-          "away": "SS",
-          "home": "WO"
-        },
-        {
-          "date": "20260723",
-          "away": "SS",
-          "home": "WO"
-        },
-        {
-          "date": "20260724",
-          "away": "SS",
-          "home": "OB"
-        },
-        {
-          "date": "20260725",
-          "away": "SS",
-          "home": "OB"
-        },
-        {
-          "date": "20260726",
-          "away": "SS",
-          "home": "OB"
-        }
-      ],
-      "WO": [
-        {
-          "date": "20260721",
-          "away": "SS",
-          "home": "WO",
-          "awayStarter": "최원태",
-          "homeStarter": "배동현"
-        },
-        {
-          "date": "20260722",
-          "away": "SS",
-          "home": "WO"
-        },
-        {
-          "date": "20260723",
-          "away": "SS",
-          "home": "WO"
-        },
-        {
-          "date": "20260724",
-          "away": "WO",
-          "home": "HT"
-        },
-        {
-          "date": "20260725",
-          "away": "WO",
-          "home": "HT"
-        },
-        {
-          "date": "20260726",
-          "away": "WO",
-          "home": "HT"
         }
       ],
       "NC": [
@@ -382,6 +246,74 @@
           "home": "HH"
         }
       ],
+      "SK": [
+        {
+          "date": "20260721",
+          "away": "SK",
+          "home": "LT",
+          "awayStarter": "타케다",
+          "homeStarter": "비슬리"
+        },
+        {
+          "date": "20260722",
+          "away": "SK",
+          "home": "LT"
+        },
+        {
+          "date": "20260723",
+          "away": "SK",
+          "home": "LT"
+        },
+        {
+          "date": "20260724",
+          "away": "NC",
+          "home": "SK"
+        },
+        {
+          "date": "20260725",
+          "away": "NC",
+          "home": "SK"
+        },
+        {
+          "date": "20260726",
+          "away": "NC",
+          "home": "SK"
+        }
+      ],
+      "LT": [
+        {
+          "date": "20260721",
+          "away": "SK",
+          "home": "LT",
+          "awayStarter": "타케다",
+          "homeStarter": "비슬리"
+        },
+        {
+          "date": "20260722",
+          "away": "SK",
+          "home": "LT"
+        },
+        {
+          "date": "20260723",
+          "away": "SK",
+          "home": "LT"
+        },
+        {
+          "date": "20260724",
+          "away": "KT",
+          "home": "LT"
+        },
+        {
+          "date": "20260725",
+          "away": "KT",
+          "home": "LT"
+        },
+        {
+          "date": "20260726",
+          "away": "KT",
+          "home": "LT"
+        }
+      ],
       "HH": [
         {
           "date": "20260721",
@@ -433,6 +365,74 @@
           "date": "20260723",
           "away": "HH",
           "home": "HT"
+        },
+        {
+          "date": "20260724",
+          "away": "WO",
+          "home": "HT"
+        },
+        {
+          "date": "20260725",
+          "away": "WO",
+          "home": "HT"
+        },
+        {
+          "date": "20260726",
+          "away": "WO",
+          "home": "HT"
+        }
+      ],
+      "SS": [
+        {
+          "date": "20260721",
+          "away": "SS",
+          "home": "WO",
+          "awayStarter": "최원태",
+          "homeStarter": "배동현"
+        },
+        {
+          "date": "20260722",
+          "away": "SS",
+          "home": "WO"
+        },
+        {
+          "date": "20260723",
+          "away": "SS",
+          "home": "WO"
+        },
+        {
+          "date": "20260724",
+          "away": "SS",
+          "home": "OB"
+        },
+        {
+          "date": "20260725",
+          "away": "SS",
+          "home": "OB"
+        },
+        {
+          "date": "20260726",
+          "away": "SS",
+          "home": "OB"
+        }
+      ],
+      "WO": [
+        {
+          "date": "20260721",
+          "away": "SS",
+          "home": "WO",
+          "awayStarter": "최원태",
+          "homeStarter": "배동현"
+        },
+        {
+          "date": "20260722",
+          "away": "SS",
+          "home": "WO"
+        },
+        {
+          "date": "20260723",
+          "away": "SS",
+          "home": "WO"
         },
         {
           "date": "20260724",
