@@ -1,7 +1,7 @@
 {
   "date": "20260721",
   "dateText": "2026년 7월 21일",
-  "updatedAt": "2026-07-21T13:40:27.019Z",
+  "updatedAt": "2026-07-21T13:50:25.757Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -272,16 +272,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
+        "inning": 9,
         "half": "T",
-        "out": 2,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "박영현",
-        "batter": "양의지",
-        "heat": 64,
-        "label": "후반 박빙 승부"
+        "batter": "정수빈",
+        "heat": 75,
+        "label": "9회 1점 승부"
       },
       "recap": null,
       "decision": null,
