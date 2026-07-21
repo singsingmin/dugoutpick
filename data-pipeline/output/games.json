@@ -1,7 +1,7 @@
 {
   "date": "20260721",
   "dateText": "2026년 7월 21일",
-  "updatedAt": "2026-07-21T13:10:27.945Z",
+  "updatedAt": "2026-07-21T13:20:37.637Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -273,14 +273,14 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 1,
-        "b1": true,
+        "half": "B",
+        "out": 2,
+        "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "스기모토",
-        "batter": "박찬호",
-        "heat": 59,
+        "b3": false,
+        "pitcher": "타카다",
+        "batter": "안현민",
+        "heat": 62,
         "label": "후반 박빙 승부"
       },
       "recap": null,
