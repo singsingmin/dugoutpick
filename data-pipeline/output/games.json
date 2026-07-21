@@ -1,7 +1,7 @@
 {
   "date": "20260721",
   "dateText": "2026년 7월 21일",
-  "updatedAt": "2026-07-21T14:00:44.379Z",
+  "updatedAt": "2026-07-21T14:10:28.897Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -229,7 +229,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "벤자민",
           "era": 2.71,
@@ -273,15 +273,15 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
-        "out": 2,
-        "b1": true,
+        "half": "B",
+        "out": 0,
+        "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "박영현",
-        "batter": "김민석",
-        "heat": 75,
-        "label": "9회 1점 승부"
+        "b3": false,
+        "pitcher": "김택연",
+        "batter": "장준원",
+        "heat": 90,
+        "label": "끝내기 한 방 찬스"
       },
       "recap": null,
       "decision": null,
