@@ -1,7 +1,7 @@
 {
   "date": "20260721",
   "dateText": "2026년 7월 21일",
-  "updatedAt": "2026-07-21T14:31:20.608Z",
+  "updatedAt": "2026-07-21T14:40:27.867Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -272,16 +272,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 10,
-        "half": "B",
+        "inning": 11,
+        "half": "T",
         "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이영하",
-        "batter": "힐리어드",
-        "heat": 96,
-        "label": "끝내기 한 방 찬스"
+        "pitcher": "주권",
+        "batter": "김대한",
+        "heat": 92,
+        "label": "연장 혈투 진행 중"
       },
       "recap": null,
       "decision": null,
