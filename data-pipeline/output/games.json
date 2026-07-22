@@ -1,7 +1,7 @@
 {
   "date": "20260722",
   "dateText": "2026년 7월 22일",
-  "updatedAt": "2026-07-22T11:50:03.858Z",
+  "updatedAt": "2026-07-22T11:50:29.958Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -127,10 +127,10 @@
         "half": "T",
         "out": 2,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "김강현",
-        "batter": "최지훈",
+        "batter": "조형우",
         "heat": 24,
         "label": "경기 흐름 체크 중"
       },
