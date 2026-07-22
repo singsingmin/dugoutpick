@@ -1,7 +1,7 @@
 {
   "date": "20260722",
   "dateText": "2026년 7월 22일",
-  "updatedAt": "2026-07-22T10:00:46.682Z",
+  "updatedAt": "2026-07-22T10:10:25.787Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
+        "inning": 3,
         "half": "B",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "라일리",
-        "batter": "송찬의",
-        "heat": 38,
+        "batter": "오지환",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
+        "inning": 3,
         "half": "T",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
-        "b3": true,
+        "b3": false,
         "pitcher": "박세웅",
-        "batter": "정준재",
-        "heat": 27,
+        "batter": "박성한",
+        "heat": 31,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -396,14 +396,14 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
-        "out": 1,
-        "b1": false,
+        "half": "B",
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "올러",
-        "batter": "오재원",
-        "heat": 13,
+        "pitcher": "화이트",
+        "batter": "박상준",
+        "heat": 14,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -618,15 +618,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
-        "out": 0,
-        "b1": true,
+        "inning": 3,
+        "half": "T",
+        "out": 1,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김백산",
-        "batter": "김웅빈",
-        "heat": 38,
+        "pitcher": "알칸타라",
+        "batter": "김지찬",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
