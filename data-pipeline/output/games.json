@@ -1,7 +1,7 @@
 {
   "date": "20260722",
   "dateText": "2026년 7월 22일",
-  "updatedAt": "2026-07-22T08:40:30.623Z",
+  "updatedAt": "2026-07-22T09:40:25.306Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -15,14 +15,14 @@
       "gameId": "20260722NCLG0",
       "time": "18:30",
       "stadium": "잠실",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SBS SPORTS",
       "away": {
         "code": "NC",
         "name": "NC",
         "rank": 6,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "라일리",
           "era": 3.23,
@@ -34,7 +34,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "톨허스트",
           "era": 4.21,
@@ -61,9 +61,21 @@
           "doom": 0,
           "park": 0.09,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 2,
+        "b1": false,
+        "b2": true,
+        "b3": true,
+        "pitcher": "톨허스트",
+        "batter": "박건우",
+        "heat": 31,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
@@ -168,14 +180,14 @@
       "gameId": "20260722SKLT0",
       "time": "18:30",
       "stadium": "사직",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SPOTV2",
       "away": {
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": null,
+        "score": 1,
         "starter": {
           "name": "아빌라",
           "era": 0,
@@ -187,7 +199,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "박세웅",
           "era": 4.58,
@@ -214,9 +226,21 @@
           "doom": 0,
           "park": 0.77,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 2,
+        "b1": true,
+        "b2": false,
+        "b3": false,
+        "pitcher": "박세웅",
+        "batter": "전의산",
+        "heat": 29,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
@@ -321,14 +345,14 @@
       "gameId": "20260722HHHT0",
       "time": "18:30",
       "stadium": "광주",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "MBC SPORTS",
       "away": {
         "code": "HH",
         "name": "한화",
         "rank": 7,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "화이트",
           "era": 3.09,
@@ -340,7 +364,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "올러",
           "era": 2.52,
@@ -367,9 +391,21 @@
           "doom": 0,
           "park": 0.68,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 2,
+        "b1": true,
+        "b2": true,
+        "b3": false,
+        "pitcher": "올러",
+        "batter": "페라자",
+        "heat": 31,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
@@ -532,14 +568,14 @@
       "gameId": "20260722SSWO0",
       "time": "18:30",
       "stadium": "고척",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "KBS N SPORTS",
       "away": {
         "code": "SS",
         "name": "삼성",
         "rank": 1,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "김백산",
           "era": 0,
@@ -551,7 +587,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "알칸타라",
           "era": 3.47,
@@ -578,9 +614,21 @@
           "doom": 0,
           "park": 0,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "B",
+        "out": 1,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "김백산",
+        "batter": "추재현",
+        "heat": 33,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
