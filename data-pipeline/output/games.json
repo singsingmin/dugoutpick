@@ -1,7 +1,7 @@
 {
   "date": "20260722",
   "dateText": "2026년 7월 22일",
-  "updatedAt": "2026-07-22T11:00:39.785Z",
+  "updatedAt": "2026-07-22T11:10:25.315Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -124,13 +124,13 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 0,
-        "b1": true,
+        "half": "B",
+        "out": 3,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이민석",
-        "batter": "전의산",
+        "pitcher": "아빌라",
+        "batter": "전민재",
         "heat": 3,
         "label": "점수차가 벌어진 경기"
       },
@@ -288,15 +288,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 1,
-        "b1": true,
+        "inning": 6,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "화이트",
-        "batter": "윤도현",
-        "heat": 31,
+        "pitcher": "이태양",
+        "batter": "이도윤",
+        "heat": 33,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -480,7 +480,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "알칸타라",
           "era": 3.47,
@@ -513,13 +513,13 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "out": 1,
+        "b1": true,
+        "b2": true,
         "b3": false,
         "pitcher": "김백산",
-        "batter": "박찬혁",
-        "heat": 50,
+        "batter": "서건창",
+        "heat": 42,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
