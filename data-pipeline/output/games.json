@@ -1,7 +1,7 @@
 {
   "date": "20260722",
   "dateText": "2026년 7월 22일",
-  "updatedAt": "2026-07-22T11:40:26.316Z",
+  "updatedAt": "2026-07-22T11:50:03.858Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -125,12 +125,12 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 1,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "김강현",
-        "batter": "김재환",
+        "batter": "최지훈",
         "heat": 24,
         "label": "경기 흐름 체크 중"
       },
@@ -289,14 +289,14 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "한재승",
-        "batter": "페라자",
-        "heat": 24,
+        "pitcher": "화이트",
+        "batter": "김호령",
+        "heat": 25,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -511,15 +511,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 1,
+        "inning": 7,
+        "half": "T",
+        "out": 0,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "이재희",
-        "batter": "박찬혁",
-        "heat": 34,
+        "pitcher": "조영건",
+        "batter": "김지찬",
+        "heat": 36,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
