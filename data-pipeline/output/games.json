@@ -1,7 +1,7 @@
 {
   "date": "20260722",
   "dateText": "2026년 7월 22일",
-  "updatedAt": "2026-07-22T10:30:36.325Z",
+  "updatedAt": "2026-07-22T10:40:24.771Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -230,14 +230,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
+        "inning": 4,
+        "half": "T",
         "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "아빌라",
-        "batter": "전민재",
+        "pitcher": "박세웅",
+        "batter": "정준재",
         "heat": 9,
         "label": "경기 흐름 체크 중"
       },
@@ -396,14 +396,14 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 3,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "올러",
-        "batter": "심우준",
-        "heat": 17,
+        "pitcher": "화이트",
+        "batter": "한준수",
+        "heat": 18,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -618,15 +618,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "김백산",
-        "batter": "추재현",
-        "heat": 48,
+        "pitcher": "알칸타라",
+        "batter": "이재현",
+        "heat": 51,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
