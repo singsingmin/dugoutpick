@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-22T12:40:26.105Z",
+  "updatedAt": "2026-07-22T12:50:26.034Z",
   "results": [
     {
       "date": "20260705",
@@ -159,6 +159,27 @@
         "score": 9
       },
       "calculatedAt": "2026-07-19T13:20:24.819Z"
+    },
+    {
+      "date": "20260722",
+      "actualTopGameId": "20260722SSWO0",
+      "recapScore": 76,
+      "decidingReasonTags": [
+        "2점차 접전"
+      ],
+      "displayMode": "highlight",
+      "displayTitle": "어제의 명경기",
+      "away": {
+        "code": "SS",
+        "name": "삼성",
+        "score": 1
+      },
+      "home": {
+        "code": "WO",
+        "name": "키움",
+        "score": 3
+      },
+      "calculatedAt": "2026-07-22T12:50:26.034Z"
     }
   ]
 }
