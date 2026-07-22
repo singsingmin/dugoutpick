@@ -1,7 +1,7 @@
 {
   "date": "20260722",
   "dateText": "2026년 7월 22일",
-  "updatedAt": "2026-07-22T04:54:07.553Z",
+  "updatedAt": "2026-07-22T07:50:26.118Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -474,8 +474,8 @@
       "gameId": "20260722OBKT0",
       "time": "18:30",
       "stadium": "수원",
-      "status": "SCHEDULED",
-      "cancelReason": null,
+      "status": "CANCELED",
+      "cancelReason": "그라운드사정",
       "broadcast": "SPOTV",
       "away": {
         "code": "OB",
@@ -520,108 +520,13 @@
           "doom": 0,
           "park": 0.45,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
       "live": null,
       "recap": null,
       "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "최원준"
-          },
-          {
-            "order": 2,
-            "pos": "1루수",
-            "name": "김현수"
-          },
-          {
-            "order": 3,
-            "pos": "우익수",
-            "name": "안현민"
-          },
-          {
-            "order": 4,
-            "pos": "좌익수",
-            "name": "힐리어드"
-          },
-          {
-            "order": 5,
-            "pos": "지명타자",
-            "name": "장성우"
-          },
-          {
-            "order": 6,
-            "pos": "3루수",
-            "name": "허경민"
-          },
-          {
-            "order": 7,
-            "pos": "2루수",
-            "name": "김상수"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "한승택"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "권동진"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "유격수",
-            "name": "박찬호"
-          },
-          {
-            "order": 2,
-            "pos": "좌익수",
-            "name": "김민석"
-          },
-          {
-            "order": 3,
-            "pos": "지명타자",
-            "name": "박준순"
-          },
-          {
-            "order": 4,
-            "pos": "1루수",
-            "name": "세베리노"
-          },
-          {
-            "order": 5,
-            "pos": "포수",
-            "name": "양의지"
-          },
-          {
-            "order": 6,
-            "pos": "3루수",
-            "name": "안재석"
-          },
-          {
-            "order": 7,
-            "pos": "중견수",
-            "name": "정수빈"
-          },
-          {
-            "order": 8,
-            "pos": "2루수",
-            "name": "강승호"
-          },
-          {
-            "order": 9,
-            "pos": "우익수",
-            "name": "조수행"
-          }
-        ],
-        "confirmed": false
-      }
+      "lineup": null
     },
     {
       "gameId": "20260722SSWO0",
