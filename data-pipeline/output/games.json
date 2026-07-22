@@ -1,7 +1,7 @@
 {
   "date": "20260722",
   "dateText": "2026년 7월 22일",
-  "updatedAt": "2026-07-22T10:00:16.183Z",
+  "updatedAt": "2026-07-22T10:00:46.682Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -621,11 +621,11 @@
         "inning": 2,
         "half": "B",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "김백산",
-        "batter": "히우라",
+        "batter": "김웅빈",
         "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
