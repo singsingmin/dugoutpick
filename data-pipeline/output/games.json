@@ -1,7 +1,7 @@
 {
   "date": "20260722",
   "dateText": "2026년 7월 22일",
-  "updatedAt": "2026-07-22T09:40:25.306Z",
+  "updatedAt": "2026-07-22T09:50:25.237Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "T",
-        "out": 2,
+        "out": 1,
         "b1": false,
-        "b2": true,
-        "b3": true,
+        "b2": false,
+        "b3": false,
         "pitcher": "톨허스트",
-        "batter": "박건우",
-        "heat": 31,
+        "batter": "천재환",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "T",
-        "out": 2,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "박세웅",
-        "batter": "전의산",
-        "heat": 29,
+        "batter": "최지훈",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -352,7 +352,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 7,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "화이트",
           "era": 3.09,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "T",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
         "pitcher": "올러",
-        "batter": "페라자",
-        "heat": 31,
+        "batter": "김태연",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -618,15 +618,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 1,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "김백산",
-        "batter": "추재현",
-        "heat": 33,
+        "pitcher": "알칸타라",
+        "batter": "류지혁",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
