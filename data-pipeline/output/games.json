@@ -1,7 +1,7 @@
 {
   "date": "20260722",
   "dateText": "2026년 7월 22일",
-  "updatedAt": "2026-07-22T10:20:26.767Z",
+  "updatedAt": "2026-07-22T10:30:36.325Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
+        "half": "B",
         "out": 1,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박세웅",
-        "batter": "조형우",
-        "heat": 8,
+        "pitcher": "아빌라",
+        "batter": "전민재",
+        "heat": 9,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 0,
-        "b1": false,
+        "inning": 4,
+        "half": "T",
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "화이트",
-        "batter": "김규성",
-        "heat": 16,
+        "pitcher": "올러",
+        "batter": "심우준",
+        "heat": 17,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -618,15 +618,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
+        "inning": 4,
         "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "김백산",
-        "batter": "권혁빈",
-        "heat": 43,
+        "batter": "추재현",
+        "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
