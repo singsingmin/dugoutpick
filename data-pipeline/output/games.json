@@ -1,7 +1,7 @@
 {
   "date": "20260722",
   "dateText": "2026년 7월 22일",
-  "updatedAt": "2026-07-22T12:20:26.607Z",
+  "updatedAt": "2026-07-22T12:30:36.338Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -123,15 +123,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
+        "inning": 9,
+        "half": "T",
         "out": 2,
         "b1": true,
-        "b2": true,
-        "b3": true,
-        "pitcher": "문승원",
-        "batter": "전준우",
-        "heat": 27,
+        "b2": false,
+        "b3": false,
+        "pitcher": "정철원",
+        "batter": "최지훈",
+        "heat": 28,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -245,7 +245,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 7,
-        "score": 5,
+        "score": 7,
         "starter": {
           "name": "화이트",
           "era": 3.09,
@@ -289,14 +289,14 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": false,
-        "b2": true,
-        "b3": true,
-        "pitcher": "성영탁",
-        "batter": "허인서",
-        "heat": 43,
+        "b2": false,
+        "b3": false,
+        "pitcher": "이상규",
+        "batter": "나성범",
+        "heat": 16,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -511,15 +511,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
+        "inning": 9,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "미야지",
-        "batter": "추재현",
-        "heat": 56,
+        "pitcher": "유토",
+        "batter": "김영웅",
+        "heat": 58,
         "label": "후반 박빙 승부"
       },
       "recap": null,
