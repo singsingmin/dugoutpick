@@ -1,7 +1,7 @@
 {
   "date": "20260722",
   "dateText": "2026년 7월 22일",
-  "updatedAt": "2026-07-22T12:00:48.980Z",
+  "updatedAt": "2026-07-22T12:10:25.579Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -124,14 +124,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "현도훈",
-        "batter": "임근우",
-        "heat": 26,
+        "pitcher": "문승원",
+        "batter": "한태양",
+        "heat": 27,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -257,7 +257,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "올러",
           "era": 2.52,
@@ -289,14 +289,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
+        "half": "B",
         "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이형범",
-        "batter": "오재원",
-        "heat": 26,
+        "pitcher": "이상규",
+        "batter": "김도영",
+        "heat": 42,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -511,15 +511,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
+        "inning": 8,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "임기영",
-        "batter": "권혁빈",
-        "heat": 51,
+        "pitcher": "유토",
+        "batter": "최형우",
+        "heat": 53,
         "label": "후반 박빙 승부"
       },
       "recap": null,
