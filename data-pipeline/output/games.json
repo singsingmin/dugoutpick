@@ -1,7 +1,7 @@
 {
   "date": "20260723",
   "dateText": "2026년 7월 23일",
-  "updatedAt": "2026-07-23T11:00:45.590Z",
+  "updatedAt": "2026-07-23T11:10:24.306Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 2,
-        "b1": false,
-        "b2": false,
+        "half": "B",
+        "out": 0,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "웰스",
-        "batter": "박건우",
-        "heat": 19,
+        "pitcher": "테일러",
+        "batter": "문정빈",
+        "heat": 20,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 3,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "김민준",
-        "batter": "전민재",
+        "batter": "고승민",
         "heat": 31,
         "label": "경기 흐름 체크 중"
       },
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 1,
-        "b1": false,
+        "inning": 6,
+        "half": "T",
+        "out": 0,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "왕옌청",
-        "batter": "윤도현",
-        "heat": 31,
+        "pitcher": "이의리",
+        "batter": "심우준",
+        "heat": 33,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -618,16 +618,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
+        "inning": 6,
         "half": "B",
-        "out": 3,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "양창섭",
-        "batter": "추재현",
-        "heat": 50,
-        "label": "초반 팽팽한 흐름"
+        "batter": "데이비슨",
+        "heat": 56,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
