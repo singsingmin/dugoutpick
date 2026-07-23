@@ -1,7 +1,7 @@
 {
   "date": "20260723",
   "dateText": "2026년 7월 23일",
-  "updatedAt": "2026-07-23T11:45:50.370Z",
+  "updatedAt": "2026-07-23T11:50:25.605Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "inning": 7,
+        "half": "T",
+        "out": 1,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "김진호",
-        "batter": "문정빈",
-        "heat": 51,
-        "label": "점수 나는 난타전"
+        "pitcher": "김진성",
+        "batter": "권희동",
+        "heat": 53,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 2,
-        "b1": false,
-        "b2": true,
+        "inning": 8,
+        "half": "T",
+        "out": 1,
+        "b1": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "노경은",
-        "batter": "손성빈",
-        "heat": 38,
+        "pitcher": "현도훈",
+        "batter": "전의산",
+        "heat": 40,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -395,14 +395,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 2,
+        "inning": 8,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "왕옌청",
-        "batter": "김선빈",
+        "pitcher": "한재승",
+        "batter": "오재원",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
@@ -620,12 +620,12 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": true,
         "pitcher": "김성민",
-        "batter": "최형우",
+        "batter": "디아즈",
         "heat": 64,
         "label": "후반 박빙 승부"
       },
