@@ -1,7 +1,7 @@
 {
   "date": "20260723",
   "dateText": "2026년 7월 23일",
-  "updatedAt": "2026-07-23T11:10:24.306Z",
+  "updatedAt": "2026-07-23T11:20:26.225Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 2,
+        "score": 4,
         "starter": {
           "name": "웰스",
           "era": 3.3,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
+        "inning": 6,
+        "half": "T",
         "out": 0,
-        "b1": true,
-        "b2": true,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "테일러",
-        "batter": "문정빈",
-        "heat": 20,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "웰스",
+        "batter": "이우성",
+        "heat": 49,
+        "label": "점수 나는 난타전"
       },
       "recap": null,
       "decision": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 3,
+        "inning": 6,
+        "half": "T",
+        "out": 0,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "김민준",
-        "batter": "고승민",
-        "heat": 31,
+        "pitcher": "로드리게스",
+        "batter": "조형우",
+        "heat": 33,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -352,7 +352,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 5,
+        "score": 7,
         "starter": {
           "name": "왕옌청",
           "era": 3.69,
@@ -397,13 +397,13 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 0,
-        "b1": true,
-        "b2": false,
+        "out": 1,
+        "b1": false,
+        "b2": true,
         "b3": false,
         "pitcher": "이의리",
-        "batter": "심우준",
-        "heat": 33,
+        "batter": "문현빈",
+        "heat": 11,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -618,16 +618,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "양창섭",
-        "batter": "데이비슨",
-        "heat": 56,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "하영민",
+        "batter": "김영웅",
+        "heat": 59,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
