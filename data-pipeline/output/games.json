@@ -1,7 +1,7 @@
 {
   "date": "20260723",
   "dateText": "2026년 7월 23일",
-  "updatedAt": "2026-07-23T10:50:27.766Z",
+  "updatedAt": "2026-07-23T11:00:45.590Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 1,
+        "score": 6,
         "starter": {
           "name": "테일러",
           "era": 4.13,
@@ -67,14 +67,14 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "b1": false,
-        "b2": true,
-        "b3": true,
+        "b2": false,
+        "b3": false,
         "pitcher": "웰스",
-        "batter": "김주원",
-        "heat": 48,
-        "label": "초반 팽팽한 흐름"
+        "batter": "박건우",
+        "heat": 19,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
+        "inning": 5,
         "half": "B",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "김민준",
-        "batter": "전준우",
-        "heat": 28,
+        "batter": "전민재",
+        "heat": 31,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -396,14 +396,14 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 3,
+        "half": "B",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "왕옌청",
-        "batter": "김선빈",
-        "heat": 29,
+        "batter": "윤도현",
+        "heat": 31,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -619,14 +619,14 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 0,
+        "half": "B",
+        "out": 3,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "하영민",
-        "batter": "김성윤",
-        "heat": 48,
+        "pitcher": "양창섭",
+        "batter": "추재현",
+        "heat": 50,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
