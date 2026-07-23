@@ -1,7 +1,7 @@
 {
   "date": "20260723",
   "dateText": "2026년 7월 23일",
-  "updatedAt": "2026-07-23T12:40:25.009Z",
+  "updatedAt": "2026-07-23T12:50:26.295Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "김진수",
-        "batter": "김주원",
+        "batter": "블레인",
         "heat": 66,
         "label": "후반 박빙 승부"
       },
@@ -426,16 +426,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 10,
-        "half": "B",
+        "inning": 11,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김재윤",
-        "batter": "히우라",
-        "heat": 96,
-        "label": "끝내기 한 방 찬스"
+        "pitcher": "김재웅",
+        "batter": "최형우",
+        "heat": 92,
+        "label": "연장 혈투 진행 중"
       },
       "recap": null,
       "decision": null,
