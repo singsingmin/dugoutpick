@@ -1,7 +1,7 @@
 {
   "date": "20260723",
   "dateText": "2026년 7월 23일",
-  "updatedAt": "2026-07-23T10:00:44.329Z",
+  "updatedAt": "2026-07-23T10:10:25.181Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "웰스",
           "era": 3.3,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
+        "inning": 3,
+        "half": "T",
         "out": 0,
-        "b1": false,
-        "b2": true,
-        "b3": true,
-        "pitcher": "테일러",
-        "batter": "이주헌",
-        "heat": 35,
+        "b1": true,
+        "b2": false,
+        "b3": false,
+        "pitcher": "웰스",
+        "batter": "천재환",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -187,7 +187,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "김민준",
           "era": 5.61,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": true,
         "b2": false,
-        "b3": true,
-        "pitcher": "로드리게스",
-        "batter": "임근우",
-        "heat": 33,
+        "b3": false,
+        "pitcher": "김민준",
+        "batter": "한태양",
+        "heat": 29,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -352,7 +352,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 0,
+        "score": 3,
         "starter": {
           "name": "왕옌청",
           "era": 3.69,
@@ -397,14 +397,14 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "시라카와",
-        "batter": "심우준",
-        "heat": 40,
-        "label": "초반 팽팽한 흐름"
+        "batter": "노시환",
+        "heat": 23,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -575,7 +575,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 1,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "양창섭",
           "era": 4.07,
@@ -618,14 +618,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
+        "inning": 3,
+        "half": "T",
         "out": 2,
-        "b1": false,
-        "b2": false,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "양창섭",
-        "batter": "임병욱",
+        "pitcher": "하영민",
+        "batter": "류지혁",
         "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
