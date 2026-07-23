@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-23T13:10:26.407Z",
+  "updatedAt": "2026-07-23T13:20:27.555Z",
   "recent": {
     "HH": [
       {
@@ -249,14 +249,6 @@
     ],
     "SS": [
       {
-        "date": "20260704",
-        "oppCode": "SK",
-        "isHome": false,
-        "sf": 13,
-        "sa": 7,
-        "result": "W"
-      },
-      {
         "date": "20260705",
         "oppCode": "SK",
         "isHome": false,
@@ -327,17 +319,17 @@
         "sf": 1,
         "sa": 3,
         "result": "L"
+      },
+      {
+        "date": "20260723",
+        "oppCode": "WO",
+        "isHome": false,
+        "sf": 3,
+        "sa": 1,
+        "result": "W"
       }
     ],
     "WO": [
-      {
-        "date": "20260704",
-        "oppCode": "OB",
-        "isHome": true,
-        "sf": 5,
-        "sa": 8,
-        "result": "L"
-      },
       {
         "date": "20260705",
         "oppCode": "OB",
@@ -409,6 +401,14 @@
         "sf": 3,
         "sa": 1,
         "result": "W"
+      },
+      {
+        "date": "20260723",
+        "oppCode": "SS",
+        "isHome": true,
+        "sf": 1,
+        "sa": 3,
+        "result": "L"
       }
     ],
     "SK": [
@@ -826,8 +826,8 @@
     "HH": "2승",
     "OB": "1무",
     "NC": "2승",
-    "SS": "1패",
-    "WO": "1승",
+    "SS": "1승",
+    "WO": "1패",
     "SK": "2승",
     "LT": "2패",
     "HT": "2패",

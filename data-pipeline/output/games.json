@@ -1,7 +1,7 @@
 {
   "date": "20260723",
   "dateText": "2026년 7월 23일",
-  "updatedAt": "2026-07-23T13:10:26.407Z",
+  "updatedAt": "2026-07-23T13:20:27.555Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -25,8 +25,8 @@
         "score": 7,
         "starter": {
           "name": "테일러",
-          "era": 4.13,
-          "w": 6,
+          "era": 4.27,
+          "w": 7,
           "l": 4
         }
       },
@@ -37,9 +37,9 @@
         "score": 5,
         "starter": {
           "name": "웰스",
-          "era": 3.3,
+          "era": 3.67,
           "w": 5,
-          "l": 4
+          "l": 5
         }
       },
       "honjam": {
@@ -74,9 +74,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "테일러",
+        "lose": "웰스",
+        "save": "임지민"
       },
       "lineup": null
     },
@@ -94,8 +94,8 @@
         "score": 5,
         "starter": {
           "name": "김민준",
-          "era": 5.61,
-          "w": 2,
+          "era": 4.55,
+          "w": 3,
           "l": 2
         }
       },
@@ -106,9 +106,9 @@
         "score": 2,
         "starter": {
           "name": "로드리게스",
-          "era": 4.29,
+          "era": 4.31,
           "w": 5,
-          "l": 6
+          "l": 7
         }
       },
       "honjam": {
@@ -143,9 +143,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "김민준",
+        "lose": "로드리게스",
+        "save": "조병현"
       },
       "lineup": null
     },
@@ -163,8 +163,8 @@
         "score": 9,
         "starter": {
           "name": "왕옌청",
-          "era": 3.69,
-          "w": 7,
+          "era": 3.61,
+          "w": 8,
           "l": 4
         }
       },
@@ -175,9 +175,9 @@
         "score": 3,
         "starter": {
           "name": "시라카와",
-          "era": 5.17,
+          "era": 5.77,
           "w": 2,
-          "l": 3
+          "l": 4
         }
       },
       "honjam": {
@@ -212,8 +212,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "왕옌청",
+        "lose": "시라카와",
         "save": null
       },
       "lineup": null
@@ -290,7 +290,7 @@
         "score": 3,
         "starter": {
           "name": "양창섭",
-          "era": 4.07,
+          "era": 3.73,
           "w": 8,
           "l": 0
         }
@@ -302,7 +302,7 @@
         "score": 1,
         "starter": {
           "name": "하영민",
-          "era": 4.35,
+          "era": 3.97,
           "w": 4,
           "l": 5
         }
@@ -339,8 +339,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "김재윤",
+        "lose": "김재웅",
         "save": null
       },
       "lineup": null
