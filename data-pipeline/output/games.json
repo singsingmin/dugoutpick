@@ -1,7 +1,7 @@
 {
   "date": "20260723",
   "dateText": "2026년 7월 23일",
-  "updatedAt": "2026-07-23T12:20:25.715Z",
+  "updatedAt": "2026-07-23T12:30:37.986Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 0,
-        "b1": false,
-        "b2": false,
-        "b3": false,
+        "out": 1,
+        "b1": true,
+        "b2": true,
+        "b3": true,
         "pitcher": "전사민",
-        "batter": "홍창기",
+        "batter": "문정빈",
         "heat": 48,
         "label": "점수 나는 난타전"
       },
@@ -199,7 +199,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "로드리게스",
           "era": 4.29,
@@ -232,13 +232,13 @@
       "live": {
         "inning": 9,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "이건욱",
-        "batter": "나승엽",
-        "heat": 16,
+        "pitcher": "조병현",
+        "batter": "박건우",
+        "heat": 45,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -522,16 +522,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 9,
-        "half": "B",
+        "inning": 10,
+        "half": "T",
         "out": 0,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "이재희",
-        "batter": "김동헌",
-        "heat": 90,
-        "label": "끝내기 한 방 찬스"
+        "pitcher": "박지성",
+        "batter": "김지찬",
+        "heat": 89,
+        "label": "연장 혈투 진행 중"
       },
       "recap": null,
       "decision": null,
