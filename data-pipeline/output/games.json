@@ -1,7 +1,7 @@
 {
   "date": "20260723",
   "dateText": "2026년 7월 23일",
-  "updatedAt": "2026-07-23T12:10:26.234Z",
+  "updatedAt": "2026-07-23T12:20:25.715Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "함덕주",
-        "batter": "이우성",
-        "heat": 46,
+        "pitcher": "전사민",
+        "batter": "홍창기",
+        "heat": 48,
         "label": "점수 나는 난타전"
       },
       "recap": null,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
+        "half": "B",
         "out": 0,
-        "b1": false,
-        "b2": true,
+        "b1": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "김기준",
-        "batter": "정준재",
-        "heat": 15,
+        "pitcher": "이건욱",
+        "batter": "나승엽",
+        "heat": 16,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -345,7 +345,7 @@
       "gameId": "20260723HHHT0",
       "time": "18:30",
       "stadium": "광주",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "MBC SPORTS",
       "away": {
@@ -364,7 +364,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "시라카와",
           "era": 5.17,
@@ -394,117 +394,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 0,
-        "b1": false,
-        "b2": false,
-        "b3": true,
-        "pitcher": "이민우",
-        "batter": "박재현",
-        "heat": 5,
-        "label": "점수차가 벌어진 경기"
+      "live": null,
+      "recap": {
+        "actual": 19,
+        "verdict": "기대 이하",
+        "diff": 6,
+        "total": 12,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "김호령"
-          },
-          {
-            "order": 2,
-            "pos": "좌익수",
-            "name": "카스트로"
-          },
-          {
-            "order": 3,
-            "pos": "지명타자",
-            "name": "김도영"
-          },
-          {
-            "order": 4,
-            "pos": "우익수",
-            "name": "나성범"
-          },
-          {
-            "order": 5,
-            "pos": "2루수",
-            "name": "김선빈"
-          },
-          {
-            "order": 6,
-            "pos": "포수",
-            "name": "한준수"
-          },
-          {
-            "order": 7,
-            "pos": "1루수",
-            "name": "윤도현"
-          },
-          {
-            "order": 8,
-            "pos": "3루수",
-            "name": "변우혁"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "김규성"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "좌익수",
-            "name": "오재원"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "페라자"
-          },
-          {
-            "order": 3,
-            "pos": "중견수",
-            "name": "문현빈"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "노시환"
-          },
-          {
-            "order": 5,
-            "pos": "포수",
-            "name": "허인서"
-          },
-          {
-            "order": 6,
-            "pos": "1루수",
-            "name": "김태연"
-          },
-          {
-            "order": 7,
-            "pos": "2루수",
-            "name": "이도윤"
-          },
-          {
-            "order": 8,
-            "pos": "3루수",
-            "name": "박정현"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "심우준"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260723OBKT0",
@@ -619,15 +523,15 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
-        "out": 2,
-        "b1": false,
+        "half": "B",
+        "out": 0,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "원종현",
-        "batter": "김영웅",
-        "heat": 80,
-        "label": "9회 1점 승부"
+        "pitcher": "이재희",
+        "batter": "김동헌",
+        "heat": 90,
+        "label": "끝내기 한 방 찬스"
       },
       "recap": null,
       "decision": null,
