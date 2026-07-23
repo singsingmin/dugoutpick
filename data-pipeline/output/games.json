@@ -1,7 +1,7 @@
 {
   "date": "20260723",
   "dateText": "2026년 7월 23일",
-  "updatedAt": "2026-07-23T10:10:25.181Z",
+  "updatedAt": "2026-07-23T10:20:25.845Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
+        "half": "B",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "웰스",
-        "batter": "천재환",
-        "heat": 38,
+        "pitcher": "테일러",
+        "batter": "문성주",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -187,7 +187,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "김민준",
           "era": 5.61,
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
+        "inning": 3,
         "half": "B",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "김민준",
-        "batter": "한태양",
-        "heat": 29,
-        "label": "초반 팽팽한 흐름"
+        "batter": "전민재",
+        "heat": 25,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -396,14 +396,14 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
+        "half": "B",
         "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "시라카와",
-        "batter": "노시환",
-        "heat": 23,
+        "pitcher": "왕옌청",
+        "batter": "변우혁",
+        "heat": 25,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -619,14 +619,14 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
+        "half": "B",
         "out": 2,
         "b1": true,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "하영민",
-        "batter": "류지혁",
-        "heat": 38,
+        "pitcher": "양창섭",
+        "batter": "추재현",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
