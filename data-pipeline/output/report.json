@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-23T13:20:27.555Z",
+  "updatedAt": "2026-07-23T15:30:24.724Z",
   "lastWeek": {
     "range": [
       "20260713",
@@ -90,7 +90,7 @@
         "pred": 81,
         "reason": "게임차 5.5의 순위 다툼",
         "dateStart": "20260721",
-        "dateEnd": "20260723"
+        "dateEnd": "20260721"
       },
       {
         "away": "HH",
@@ -345,13 +345,6 @@
           "homeStarter": "오원석"
         },
         {
-          "date": "20260723",
-          "away": "OB",
-          "home": "KT",
-          "awayStarter": "곽빈",
-          "homeStarter": "로건"
-        },
-        {
           "date": "20260724",
           "away": "SS",
           "home": "OB",
@@ -376,13 +369,6 @@
           "home": "KT",
           "awayStarter": "벤자민",
           "homeStarter": "오원석"
-        },
-        {
-          "date": "20260723",
-          "away": "OB",
-          "home": "KT",
-          "awayStarter": "곽빈",
-          "homeStarter": "로건"
         },
         {
           "date": "20260724",
