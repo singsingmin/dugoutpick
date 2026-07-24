@@ -1,7 +1,7 @@
 {
   "date": "20260724",
   "dateText": "2026년 7월 24일",
-  "updatedAt": "2026-07-24T08:40:24.704Z",
+  "updatedAt": "2026-07-24T08:50:25.963Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -417,7 +417,7 @@
           {
             "order": 9,
             "pos": "3루수",
-            "name": "홍대인"
+            "name": "안상현"
           }
         ],
         "away": [
@@ -459,7 +459,7 @@
           {
             "order": 8,
             "pos": "포수",
-            "name": "안중열"
+            "name": "김형준"
           },
           {
             "order": 9,
@@ -467,7 +467,7 @@
             "name": "천재환"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
@@ -744,12 +744,12 @@
           },
           {
             "order": 4,
-            "pos": "1루수",
+            "pos": "지명타자",
             "name": "오스틴"
           },
           {
             "order": 5,
-            "pos": "지명타자",
+            "pos": "1루수",
             "name": "문정빈"
           },
           {
@@ -760,20 +760,20 @@
           {
             "order": 7,
             "pos": "3루수",
-            "name": "구본혁"
+            "name": "문보경"
           },
           {
             "order": 8,
             "pos": "포수",
-            "name": "이주헌"
+            "name": "박동원"
           },
           {
             "order": 9,
             "pos": "2루수",
-            "name": "신민재"
+            "name": "구본혁"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     }
   ],
