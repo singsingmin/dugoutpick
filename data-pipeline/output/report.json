@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-24T12:30:37.069Z",
+  "updatedAt": "2026-07-24T12:40:26.231Z",
   "lastWeek": {
     "range": [
       "20260713",
@@ -39,7 +39,7 @@
         "l": 1,
         "d": 0,
         "rank": 5,
-        "note": "3연승 흐름 탔다 — 이번주 일정이 고비다"
+        "note": "3승1패 위닝, 분위기 탄다 — 이번주 일정이 고비다"
       },
       "HH": {
         "w": 0,
@@ -93,20 +93,20 @@
         "dateEnd": "20260723"
       },
       {
-        "away": "OB",
-        "home": "KT",
-        "pred": 81,
-        "reason": "게임차 5.5의 순위 다툼",
-        "dateStart": "20260721",
-        "dateEnd": "20260721"
-      },
-      {
         "away": "LG",
         "home": "HH",
         "pred": 80,
         "reason": "게임차 6.5의 순위 다툼",
         "dateStart": "20260724",
         "dateEnd": "20260726"
+      },
+      {
+        "away": "OB",
+        "home": "KT",
+        "pred": 77,
+        "reason": "게임차 6의 순위 다툼",
+        "dateStart": "20260721",
+        "dateEnd": "20260721"
       }
     ],
     "team": {
@@ -358,7 +358,9 @@
         {
           "date": "20260725",
           "away": "SS",
-          "home": "OB"
+          "home": "OB",
+          "awayStarter": "원태인",
+          "homeStarter": "잭로그"
         },
         {
           "date": "20260726",
@@ -424,7 +426,9 @@
         {
           "date": "20260725",
           "away": "SS",
-          "home": "OB"
+          "home": "OB",
+          "awayStarter": "원태인",
+          "homeStarter": "잭로그"
         },
         {
           "date": "20260726",
