@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-24T13:00:49.495Z",
+  "updatedAt": "2026-07-24T13:10:26.058Z",
   "standings": [
     {
       "rank": 1,
@@ -86,15 +86,15 @@
       "rank": 4,
       "code": "HT",
       "name": "KIA",
-      "games": 93,
+      "games": 94,
       "win": 49,
-      "loss": 42,
+      "loss": 43,
       "draw": 2,
-      "winRate": 0.538,
-      "gamesBehind": 7.5,
+      "winRate": 0.533,
+      "gamesBehind": 8,
       "last10": "5승0무5패",
-      "streak": "2패",
-      "home": "25-2-18",
+      "streak": "3패",
+      "home": "25-2-19",
       "away": "24-0-24",
       "rs": 0,
       "vs": {
@@ -106,7 +106,7 @@
         "NC": "2-6-0",
         "LT": "7-4-1",
         "SK": "8-3-1",
-        "WO": "9-0-0"
+        "WO": "9-1-0"
       }
     },
     {
@@ -248,22 +248,22 @@
       "rank": 10,
       "code": "WO",
       "name": "키움",
-      "games": 94,
-      "win": 33,
+      "games": 95,
+      "win": 34,
       "loss": 59,
       "draw": 2,
-      "winRate": 0.359,
-      "gamesBehind": 24,
-      "last10": "4승1무5패",
-      "streak": "1패",
+      "winRate": 0.366,
+      "gamesBehind": 23.5,
+      "last10": "5승1무4패",
+      "streak": "1승",
       "home": "20-1-30",
-      "away": "13-1-29",
+      "away": "14-1-29",
       "rs": 0,
       "vs": {
         "SS": "4-8-0",
         "KT": "2-8-1",
         "LG": "3-6-0",
-        "HT": "0-9-0",
+        "HT": "1-9-0",
         "OB": "4-7-0",
         "HH": "7-4-1",
         "NC": "6-6-0",
