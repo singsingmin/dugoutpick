@@ -1,7 +1,7 @@
 {
   "date": "20260724",
   "dateText": "2026년 7월 24일",
-  "updatedAt": "2026-07-24T10:20:24.762Z",
+  "updatedAt": "2026-07-24T10:30:34.606Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 1,
-        "score": 4,
+        "score": 8,
         "starter": {
           "name": "페덱",
           "era": 0,
@@ -68,13 +68,13 @@
         "inning": 3,
         "half": "T",
         "out": 2,
-        "b1": false,
+        "b1": true,
         "b2": true,
         "b3": true,
-        "pitcher": "최민석",
-        "batter": "이재현",
-        "heat": 15,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "이병헌",
+        "batter": "구자욱",
+        "heat": 2,
+        "label": "점수차가 벌어진 경기"
       },
       "recap": null,
       "decision": null,
@@ -187,7 +187,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 2,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "로건",
           "era": 3.33,
@@ -199,7 +199,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "나균안",
           "era": 4.07,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 1,
-        "b1": true,
+        "inning": 4,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "로건",
-        "batter": "레이예스",
-        "heat": 40,
+        "pitcher": "나균안",
+        "batter": "장성우",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
+        "inning": 4,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "구창모",
-        "batter": "박성한",
-        "heat": 33,
+        "pitcher": "해치",
+        "batter": "권희동",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 1,
+        "inning": 4,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "안우진",
-        "batter": "카스트로",
-        "heat": 40,
+        "pitcher": "네일",
+        "batter": "최주환",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
+        "inning": 5,
         "half": "T",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "박준영",
-        "batter": "오지환",
-        "heat": 43,
+        "batter": "문보경",
+        "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
