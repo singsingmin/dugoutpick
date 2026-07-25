@@ -1,7 +1,7 @@
 {
   "date": "20260725",
   "dateText": "2026년 7월 25일",
-  "updatedAt": "2026-07-25T09:20:24.728Z",
+  "updatedAt": "2026-07-25T09:30:31.041Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "B",
-        "out": 2,
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
         "pitcher": "원태인",
-        "batter": "안재석",
-        "heat": 31,
+        "batter": "세베리노",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "B",
-        "out": 1,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "소형준",
-        "batter": "고승민",
-        "heat": 19,
+        "batter": "한동희",
+        "heat": 22,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 0,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "토다",
-        "batter": "박성한",
-        "heat": 33,
+        "pitcher": "김건우",
+        "batter": "한재환",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -529,7 +529,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 3,
+        "score": 5,
         "starter": {
           "name": "양현종",
           "era": 3.78,
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 2,
+        "inning": 2,
+        "half": "T",
+        "out": 1,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "박준현",
-        "batter": "하주석",
-        "heat": 19,
+        "pitcher": "양현종",
+        "batter": "박찬혁",
+        "heat": 7,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -727,12 +727,12 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "out": 2,
+        "b1": true,
+        "b2": true,
         "b3": false,
         "pitcher": "류현진",
-        "batter": "구본혁",
+        "batter": "박해민",
         "heat": 20,
         "label": "경기 흐름 체크 중"
       },
