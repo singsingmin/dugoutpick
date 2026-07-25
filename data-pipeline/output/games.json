@@ -1,7 +1,7 @@
 {
   "date": "20260725",
   "dateText": "2026년 7월 25일",
-  "updatedAt": "2026-07-25T10:00:41.200Z",
+  "updatedAt": "2026-07-25T10:10:25.130Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 2,
+        "inning": 4,
+        "half": "T",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "원태인",
-        "batter": "손아섭",
-        "heat": 25,
+        "pitcher": "잭로그",
+        "batter": "김도환",
+        "heat": 26,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "김진욱",
-        "batter": "장준원",
+        "batter": "안현민",
         "heat": 26,
         "label": "경기 흐름 체크 중"
       },
@@ -364,7 +364,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "김건우",
           "era": 6.7,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 0,
-        "b1": false,
+        "inning": 4,
+        "half": "T",
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "토다",
-        "batter": "박성한",
-        "heat": 25,
+        "batter": "김재환",
+        "heat": 17,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
+        "inning": 4,
         "half": "B",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "박준현",
-        "batter": "하주석",
-        "heat": 25,
+        "batter": "김규성",
+        "heat": 28,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -727,12 +727,12 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "박준영",
-        "batter": "오스틴",
+        "batter": "구본혁",
         "heat": 41,
         "label": "초반 팽팽한 흐름"
       },
