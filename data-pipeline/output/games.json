@@ -1,7 +1,7 @@
 {
   "date": "20260725",
   "dateText": "2026년 7월 25일",
-  "updatedAt": "2026-07-25T12:50:25.706Z",
+  "updatedAt": "2026-07-25T13:00:40.842Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -342,14 +342,14 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
-        "out": 1,
-        "b1": false,
+        "half": "B",
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "이민우",
-        "batter": "문정빈",
-        "heat": 28,
+        "pitcher": "손주영",
+        "batter": "한지윤",
+        "heat": 30,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
