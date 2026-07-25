@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-25T13:10:26.874Z",
+  "updatedAt": "2026-07-25T13:20:25.931Z",
   "lastWeek": {
     "range": [
       "20260713",
@@ -179,7 +179,9 @@
         {
           "date": "20260726",
           "away": "LG",
-          "home": "HH"
+          "home": "HH",
+          "awayStarter": "박시원",
+          "homeStarter": "짐머맨"
         }
       ],
       "SK": [
@@ -309,7 +311,9 @@
         {
           "date": "20260726",
           "away": "LG",
-          "home": "HH"
+          "home": "HH",
+          "awayStarter": "박시원",
+          "homeStarter": "짐머맨"
         }
       ],
       "HT": [
