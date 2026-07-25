@@ -1,7 +1,7 @@
 {
   "date": "20260725",
   "dateText": "2026년 7월 25일",
-  "updatedAt": "2026-07-25T09:16:55.784Z",
+  "updatedAt": "2026-07-25T09:20:24.728Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "잭로그",
           "era": 4.06,
@@ -72,8 +72,8 @@
         "b2": true,
         "b3": false,
         "pitcher": "원태인",
-        "batter": "양의지",
-        "heat": 33,
+        "batter": "안재석",
+        "heat": 31,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "소형준",
-        "batter": "황성빈",
+        "batter": "고승민",
         "heat": 19,
         "label": "경기 흐름 체크 중"
       },
@@ -398,11 +398,11 @@
         "inning": 1,
         "half": "B",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "토다",
-        "batter": "정준재",
+        "batter": "박성한",
         "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
@@ -562,12 +562,12 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "박준현",
-        "batter": "한준수",
+        "batter": "하주석",
         "heat": 19,
         "label": "경기 흐름 체크 중"
       },
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "송승기",
-        "batter": "심우준",
-        "heat": 19,
+        "pitcher": "류현진",
+        "batter": "구본혁",
+        "heat": 20,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
