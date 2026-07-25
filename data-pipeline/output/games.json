@@ -1,7 +1,7 @@
 {
   "date": "20260725",
   "dateText": "2026년 7월 25일",
-  "updatedAt": "2026-07-25T09:40:25.572Z",
+  "updatedAt": "2026-07-25T09:50:30.550Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 1,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "원태인",
           "era": 4.01,
@@ -70,9 +70,9 @@
         "out": 1,
         "b1": false,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "잭로그",
-        "batter": "김지찬",
+        "batter": "디아즈",
         "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
+        "half": "B",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김진욱",
-        "batter": "장성우",
-        "heat": 23,
+        "pitcher": "소형준",
+        "batter": "박승욱",
+        "heat": 25,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -364,7 +364,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 0,
+        "score": 3,
         "starter": {
           "name": "김건우",
           "era": 6.7,
@@ -395,16 +395,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
+        "inning": 3,
+        "half": "T",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "토다",
-        "batter": "최지훈",
-        "heat": 38,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "김건우",
+        "batter": "박민우",
+        "heat": 23,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
-        "out": 0,
+        "inning": 3,
+        "half": "T",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박준현",
-        "batter": "박재현",
-        "heat": 22,
+        "pitcher": "양현종",
+        "batter": "안치홍",
+        "heat": 23,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -694,7 +694,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 1,
+        "score": 3,
         "starter": {
           "name": "류현진",
           "era": 2.9,
@@ -727,14 +727,14 @@
       "live": {
         "inning": 2,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": true,
-        "b3": false,
+        "b3": true,
         "pitcher": "송승기",
-        "batter": "김태연",
-        "heat": 22,
-        "label": "경기 흐름 체크 중"
+        "batter": "오재원",
+        "heat": 35,
+        "label": "초반 팽팽한 흐름"
       },
       "recap": null,
       "decision": null,
