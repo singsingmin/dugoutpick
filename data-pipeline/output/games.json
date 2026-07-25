@@ -1,7 +1,7 @@
 {
   "date": "20260725",
   "dateText": "2026년 7월 25일",
-  "updatedAt": "2026-07-25T10:10:25.130Z",
+  "updatedAt": "2026-07-25T10:20:24.269Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
+        "inning": 5,
         "half": "T",
-        "out": 1,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "잭로그",
-        "batter": "김도환",
-        "heat": 26,
+        "batter": "김지찬",
+        "heat": 29,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
+        "inning": 5,
         "half": "T",
-        "out": 2,
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
         "pitcher": "김진욱",
-        "batter": "안현민",
-        "heat": 26,
+        "batter": "힐리어드",
+        "heat": 29,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -396,14 +396,14 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 1,
-        "b1": true,
+        "half": "B",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "토다",
-        "batter": "김재환",
-        "heat": 17,
+        "batter": "최지훈",
+        "heat": 18,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -517,7 +517,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "박준현",
           "era": 4.18,
@@ -560,16 +560,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
+        "inning": 5,
         "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "박준현",
-        "batter": "김규성",
-        "heat": 28,
-        "label": "경기 흐름 체크 중"
+        "batter": "김도영",
+        "heat": 43,
+        "label": "초반 팽팽한 흐름"
       },
       "recap": null,
       "decision": null,
@@ -726,14 +726,14 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 1,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "박준영",
-        "batter": "구본혁",
-        "heat": 41,
+        "pitcher": "김진수",
+        "batter": "김태연",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
