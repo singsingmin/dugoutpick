@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-25T13:00:40.842Z",
+  "updatedAt": "2026-07-25T13:10:26.874Z",
   "results": [
     {
       "date": "20260705",
@@ -223,6 +223,27 @@
         "score": 4
       },
       "calculatedAt": "2026-07-24T13:00:49.495Z"
+    },
+    {
+      "date": "20260725",
+      "actualTopGameId": "20260725SSOB0",
+      "recapScore": 61,
+      "decidingReasonTags": [
+        "실제 꿀잼 61"
+      ],
+      "displayMode": "highlight",
+      "displayTitle": "어제의 명경기",
+      "away": {
+        "code": "SS",
+        "name": "삼성",
+        "score": 4
+      },
+      "home": {
+        "code": "OB",
+        "name": "두산",
+        "score": 1
+      },
+      "calculatedAt": "2026-07-25T13:10:26.874Z"
     }
   ]
 }
