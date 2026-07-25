@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-25T11:40:26.279Z",
+  "updatedAt": "2026-07-25T11:50:24.284Z",
   "window": 50,
   "sampleSize": 50,
   "hitRate": 26,
@@ -669,6 +669,13 @@
       "gameId": "20260724WOHT0",
       "pred": 9,
       "actual": 72,
+      "verdict": "기대 이상"
+    },
+    {
+      "date": "20260725",
+      "gameId": "20260725SSOB0",
+      "pred": 37,
+      "actual": 61,
       "verdict": "기대 이상"
     }
   ]

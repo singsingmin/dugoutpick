@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-25T11:40:26.279Z",
+  "updatedAt": "2026-07-25T11:50:24.284Z",
   "lastWeek": {
     "range": [
       "20260713",
@@ -373,7 +373,9 @@
         {
           "date": "20260726",
           "away": "SS",
-          "home": "OB"
+          "home": "OB",
+          "awayStarter": "보스",
+          "homeStarter": "곽빈"
         }
       ],
       "KT": [
@@ -443,7 +445,9 @@
         {
           "date": "20260726",
           "away": "SS",
-          "home": "OB"
+          "home": "OB",
+          "awayStarter": "보스",
+          "homeStarter": "곽빈"
         }
       ],
       "WO": [
