@@ -1,12 +1,12 @@
 {
   "date": "20260725",
   "dateText": "2026년 7월 25일",
-  "updatedAt": "2026-07-25T12:00:41.356Z",
+  "updatedAt": "2026-07-25T12:10:27.334Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
-    "hitRate": 24,
-    "bonusRate": 54,
+    "hitRate": 26,
+    "bonusRate": 52,
     "ready": true
   },
   "recommendedGameId": "20260725LGHH0",
@@ -84,7 +84,7 @@
       "gameId": "20260725KTLT0",
       "time": "18:00",
       "stadium": "사직",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SBS SPORTS",
       "away": {
@@ -133,117 +133,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 3,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "손동현",
-        "batter": "나승엽",
-        "heat": 16,
-        "label": "경기 흐름 체크 중"
+      "live": null,
+      "recap": {
+        "actual": 27,
+        "verdict": "예측 적중",
+        "diff": 5,
+        "total": 7,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "황성빈"
-          },
-          {
-            "order": 2,
-            "pos": "2루수",
-            "name": "고승민"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "레이예스"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "한동희"
-          },
-          {
-            "order": 5,
-            "pos": "1루수",
-            "name": "나승엽"
-          },
-          {
-            "order": 6,
-            "pos": "우익수",
-            "name": "윤동희"
-          },
-          {
-            "order": 7,
-            "pos": "3루수",
-            "name": "박승욱"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "손성빈"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "이호준"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "좌익수",
-            "name": "김민혁"
-          },
-          {
-            "order": 2,
-            "pos": "1루수",
-            "name": "김현수"
-          },
-          {
-            "order": 3,
-            "pos": "우익수",
-            "name": "안현민"
-          },
-          {
-            "order": 4,
-            "pos": "중견수",
-            "name": "힐리어드"
-          },
-          {
-            "order": 5,
-            "pos": "지명타자",
-            "name": "장성우"
-          },
-          {
-            "order": 6,
-            "pos": "2루수",
-            "name": "김상수"
-          },
-          {
-            "order": 7,
-            "pos": "3루수",
-            "name": "허경민"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "조대현"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "장준원"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260725NCSK0",
@@ -256,7 +160,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 2,
+        "score": 4,
         "starter": {
           "name": "토다",
           "era": 5.03,
@@ -268,7 +172,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 8,
+        "score": 10,
         "starter": {
           "name": "김건우",
           "era": 6.7,
@@ -299,14 +203,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 1,
+        "inning": 8,
+        "half": "T",
+        "out": 0,
         "b1": true,
-        "b2": false,
-        "b3": false,
-        "pitcher": "김준원",
-        "batter": "최지훈",
+        "b2": true,
+        "b3": true,
+        "pitcher": "최민준",
+        "batter": "도태훈",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
@@ -490,7 +394,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 13,
+        "score": 15,
         "starter": {
           "name": "송승기",
           "era": 4.83,
@@ -533,16 +437,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 2,
-        "b1": true,
+        "inning": 7,
+        "half": "T",
+        "out": 1,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김영우",
-        "batter": "황영묵",
-        "heat": 23,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "김종수",
+        "batter": "문보경",
+        "heat": 4,
+        "label": "점수차가 벌어진 경기"
       },
       "recap": null,
       "decision": null,
