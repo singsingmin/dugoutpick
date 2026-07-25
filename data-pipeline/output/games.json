@@ -1,12 +1,12 @@
 {
   "date": "20260725",
   "dateText": "2026년 7월 25일",
-  "updatedAt": "2026-07-25T11:50:24.284Z",
+  "updatedAt": "2026-07-25T11:56:38.988Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
-    "hitRate": 26,
-    "bonusRate": 52,
+    "hitRate": 24,
+    "bonusRate": 54,
     "ready": true
   },
   "recommendedGameId": "20260725LGHH0",
@@ -135,14 +135,14 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
+        "half": "B",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "정철원",
-        "batter": "한승택",
-        "heat": 15,
+        "pitcher": "손동현",
+        "batter": "레이예스",
+        "heat": 16,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -268,7 +268,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 8,
+        "score": 10,
         "starter": {
           "name": "김건우",
           "era": 6.7,
@@ -299,14 +299,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 1,
-        "b1": true,
+        "inning": 8,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김준원",
-        "batter": "최지훈",
+        "pitcher": "김민",
+        "batter": "김휘집",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
@@ -414,7 +414,7 @@
       "gameId": "20260725WOHT0",
       "time": "18:00",
       "stadium": "광주",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPOTV2",
       "away": {
@@ -463,117 +463,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 1,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "이태양",
-        "batter": "김동헌",
-        "heat": 28,
-        "label": "경기 흐름 체크 중"
+      "live": null,
+      "recap": {
+        "actual": 56,
+        "verdict": "기대 이상",
+        "diff": 4,
+        "total": 14,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "좌익수",
-            "name": "박재현"
-          },
-          {
-            "order": 2,
-            "pos": "지명타자",
-            "name": "카스트로"
-          },
-          {
-            "order": 3,
-            "pos": "3루수",
-            "name": "김도영"
-          },
-          {
-            "order": 4,
-            "pos": "우익수",
-            "name": "나성범"
-          },
-          {
-            "order": 5,
-            "pos": "포수",
-            "name": "한준수"
-          },
-          {
-            "order": 6,
-            "pos": "1루수",
-            "name": "박상준"
-          },
-          {
-            "order": 7,
-            "pos": "2루수",
-            "name": "하주석"
-          },
-          {
-            "order": 8,
-            "pos": "유격수",
-            "name": "김규성"
-          },
-          {
-            "order": 9,
-            "pos": "중견수",
-            "name": "김호령"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "추재현"
-          },
-          {
-            "order": 2,
-            "pos": "1루수",
-            "name": "데이비슨"
-          },
-          {
-            "order": 3,
-            "pos": "2루수",
-            "name": "안치홍"
-          },
-          {
-            "order": 4,
-            "pos": "3루수",
-            "name": "김웅빈"
-          },
-          {
-            "order": 5,
-            "pos": "우익수",
-            "name": "박찬혁"
-          },
-          {
-            "order": 6,
-            "pos": "지명타자",
-            "name": "김건희"
-          },
-          {
-            "order": 7,
-            "pos": "좌익수",
-            "name": "이형종"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "김동헌"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "권혁빈"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260725LGHH0",
@@ -630,14 +534,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 1,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "강재민",
-        "batter": "문성주",
-        "heat": 21,
+        "pitcher": "김영우",
+        "batter": "김태연",
+        "heat": 23,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
