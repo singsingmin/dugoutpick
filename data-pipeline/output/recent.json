@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-26T11:50:24.619Z",
+  "updatedAt": "2026-07-26T12:00:43.025Z",
   "recent": {
     "HH": [
       {
@@ -85,14 +85,6 @@
     ],
     "OB": [
       {
-        "date": "20260707",
-        "oppCode": "SK",
-        "isHome": true,
-        "sf": 2,
-        "sa": 4,
-        "result": "L"
-      },
-      {
         "date": "20260708",
         "oppCode": "SK",
         "isHome": true,
@@ -163,6 +155,14 @@
         "sf": 1,
         "sa": 4,
         "result": "L"
+      },
+      {
+        "date": "20260726",
+        "oppCode": "SS",
+        "isHome": true,
+        "sf": 7,
+        "sa": 0,
+        "result": "W"
       }
     ],
     "NC": [
@@ -249,14 +249,6 @@
     ],
     "SS": [
       {
-        "date": "20260708",
-        "oppCode": "LG",
-        "isHome": true,
-        "sf": 2,
-        "sa": 8,
-        "result": "L"
-      },
-      {
         "date": "20260709",
         "oppCode": "LG",
         "isHome": true,
@@ -327,6 +319,14 @@
         "sf": 4,
         "sa": 1,
         "result": "W"
+      },
+      {
+        "date": "20260726",
+        "oppCode": "OB",
+        "isHome": false,
+        "sf": 0,
+        "sa": 7,
+        "result": "L"
       }
     ],
     "WO": [
@@ -824,9 +824,9 @@
   },
   "recentStreak": {
     "HH": "1패",
-    "OB": "2패",
+    "OB": "1승",
     "NC": "2패",
-    "SS": "3승",
+    "SS": "1패",
     "WO": "1패",
     "SK": "4승",
     "LT": "4패",

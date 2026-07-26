@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-26T11:50:24.619Z",
+  "updatedAt": "2026-07-26T12:00:43.025Z",
   "window": 50,
   "sampleSize": 50,
   "hitRate": 28,
@@ -712,6 +712,13 @@
       "pred": 38,
       "actual": 7,
       "verdict": "기대 이하"
+    },
+    {
+      "date": "20260726",
+      "gameId": "20260726KTLT0",
+      "pred": 17,
+      "actual": 12,
+      "verdict": "예측 적중"
     }
   ]
 }
