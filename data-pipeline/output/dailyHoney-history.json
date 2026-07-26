@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-26T12:50:25.693Z",
+  "updatedAt": "2026-07-26T13:00:39.480Z",
   "results": [
     {
       "date": "20260705",
@@ -244,6 +244,28 @@
         "score": 1
       },
       "calculatedAt": "2026-07-25T13:10:26.874Z"
+    },
+    {
+      "date": "20260726",
+      "actualTopGameId": "20260726NCSK0",
+      "recapScore": 99,
+      "decidingReasonTags": [
+        "연장 접전",
+        "1점차 접전"
+      ],
+      "displayMode": "highlight",
+      "displayTitle": "어제의 명경기",
+      "away": {
+        "code": "NC",
+        "name": "NC",
+        "score": 5
+      },
+      "home": {
+        "code": "SK",
+        "name": "SSG",
+        "score": 5
+      },
+      "calculatedAt": "2026-07-26T13:00:39.480Z"
     }
   ]
 }
