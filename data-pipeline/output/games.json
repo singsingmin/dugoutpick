@@ -1,7 +1,7 @@
 {
   "date": "20260726",
   "dateText": "2026년 7월 26일",
-  "updatedAt": "2026-07-26T09:50:25.095Z",
+  "updatedAt": "2026-07-26T09:50:51.070Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -567,7 +567,7 @@
         "b2": false,
         "b3": false,
         "pitcher": "황동하",
-        "batter": "안치홍",
+        "batter": "김웅빈",
         "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
