@@ -1,7 +1,7 @@
 {
   "date": "20260726",
   "dateText": "2026년 7월 26일",
-  "updatedAt": "2026-07-26T11:10:26.100Z",
+  "updatedAt": "2026-07-26T11:13:36.677Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -71,7 +71,7 @@
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김정우",
+        "pitcher": "김택연",
         "batter": "강민호",
         "heat": 26,
         "label": "경기 흐름 체크 중"
@@ -199,7 +199,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": 11,
+        "score": 12,
         "starter": {
           "name": "비슬리",
           "era": 4.28,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": false,
-        "b2": false,
-        "b3": true,
+        "b2": true,
+        "b3": false,
         "pitcher": "이상동",
-        "batter": "전민재",
+        "batter": "황성빈",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
@@ -397,12 +397,12 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": true,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "전사민",
-        "batter": "안상현",
+        "batter": "박성한",
         "heat": 25,
         "label": "경기 흐름 체크 중"
       },
@@ -563,11 +563,11 @@
         "inning": 6,
         "half": "B",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "김성민",
-        "batter": "김선빈",
+        "batter": "박상준",
         "heat": 23,
         "label": "경기 흐름 체크 중"
       },
@@ -730,9 +730,9 @@
         "out": 0,
         "b1": false,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "김진성",
-        "batter": "이도윤",
+        "batter": "박정현",
         "heat": 23,
         "label": "경기 흐름 체크 중"
       },
