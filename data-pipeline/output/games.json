@@ -1,7 +1,7 @@
 {
   "date": "20260726",
   "dateText": "2026년 7월 26일",
-  "updatedAt": "2026-07-26T09:50:51.070Z",
+  "updatedAt": "2026-07-26T10:00:59.412Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 1,
-        "b1": true,
-        "b2": true,
-        "b3": false,
-        "pitcher": "곽빈",
-        "batter": "류지혁",
-        "heat": 45,
+        "half": "B",
+        "out": 2,
+        "b1": false,
+        "b2": false,
+        "b3": true,
+        "pitcher": "보스",
+        "batter": "양의지",
+        "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -199,7 +199,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": 4,
+        "score": 6,
         "starter": {
           "name": "비슬리",
           "era": 4.28,
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "inning": 3,
+        "half": "T",
+        "out": 1,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "사우어",
-        "batter": "노진혁",
-        "heat": 14,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "비슬리",
+        "batter": "김현수",
+        "heat": 2,
+        "label": "점수차가 벌어진 경기"
       },
       "recap": null,
       "decision": null,
@@ -352,7 +352,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "라일리",
           "era": 3.23,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 2,
+        "inning": 4,
+        "half": "T",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "라일리",
-        "batter": "정준재",
-        "heat": 40,
+        "pitcher": "타케다",
+        "batter": "오장한",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -517,7 +517,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 1,
+        "score": 3,
         "starter": {
           "name": "김윤하",
           "era": 6.75,
@@ -560,16 +560,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
+        "inning": 4,
         "half": "T",
-        "out": 2,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "황동하",
-        "batter": "김웅빈",
-        "heat": 38,
-        "label": "초반 팽팽한 흐름"
+        "batter": "박찬혁",
+        "heat": 26,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
+        "inning": 4,
+        "half": "T",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "박시원",
-        "batter": "이원석",
-        "heat": 40,
+        "pitcher": "짐머맨",
+        "batter": "문정빈",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
