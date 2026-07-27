@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-26T15:36:15.382Z",
+  "updatedAt": "2026-07-27T05:34:37.613Z",
   "lastWeek": {
     "range": [
       "20260720",
@@ -114,7 +114,9 @@
         {
           "date": "20260728",
           "away": "WO",
-          "home": "LG"
+          "home": "LG",
+          "awayStarter": "전준표",
+          "homeStarter": "톨허스트"
         },
         {
           "date": "20260729",
@@ -146,7 +148,9 @@
         {
           "date": "20260728",
           "away": "WO",
-          "home": "LG"
+          "home": "LG",
+          "awayStarter": "전준표",
+          "homeStarter": "톨허스트"
         },
         {
           "date": "20260729",
@@ -178,7 +182,9 @@
         {
           "date": "20260728",
           "away": "HT",
-          "home": "SS"
+          "home": "SS",
+          "awayStarter": "올러",
+          "homeStarter": "최원태"
         },
         {
           "date": "20260729",
@@ -210,7 +216,9 @@
         {
           "date": "20260728",
           "away": "HT",
-          "home": "SS"
+          "home": "SS",
+          "awayStarter": "올러",
+          "homeStarter": "최원태"
         },
         {
           "date": "20260729",
@@ -242,7 +250,9 @@
         {
           "date": "20260728",
           "away": "OB",
-          "home": "SK"
+          "home": "SK",
+          "awayStarter": "벤자민",
+          "homeStarter": "아빌라"
         },
         {
           "date": "20260729",
@@ -274,7 +284,9 @@
         {
           "date": "20260728",
           "away": "OB",
-          "home": "SK"
+          "home": "SK",
+          "awayStarter": "벤자민",
+          "homeStarter": "아빌라"
         },
         {
           "date": "20260729",
@@ -306,7 +318,9 @@
         {
           "date": "20260728",
           "away": "KT",
-          "home": "NC"
+          "home": "NC",
+          "awayStarter": "고영표",
+          "homeStarter": "원종해"
         },
         {
           "date": "20260729",
@@ -338,7 +352,9 @@
         {
           "date": "20260728",
           "away": "KT",
-          "home": "NC"
+          "home": "NC",
+          "awayStarter": "고영표",
+          "homeStarter": "원종해"
         },
         {
           "date": "20260729",
@@ -370,7 +386,9 @@
         {
           "date": "20260728",
           "away": "LT",
-          "home": "HH"
+          "home": "HH",
+          "awayStarter": "박세웅",
+          "homeStarter": "화이트"
         },
         {
           "date": "20260729",
@@ -402,7 +420,9 @@
         {
           "date": "20260728",
           "away": "LT",
-          "home": "HH"
+          "home": "HH",
+          "awayStarter": "박세웅",
+          "homeStarter": "화이트"
         },
         {
           "date": "20260729",
