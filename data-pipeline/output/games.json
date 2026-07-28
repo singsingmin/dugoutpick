@@ -1,11 +1,11 @@
 {
   "date": "20260728",
   "dateText": "2026년 7월 28일",
-  "updatedAt": "2026-07-28T13:00:45.391Z",
+  "updatedAt": "2026-07-28T13:10:26.962Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
-    "hitRate": 24,
+    "hitRate": 22,
     "bonusRate": 54,
     "ready": true
   },
@@ -84,13 +84,13 @@
       "gameId": "20260728HTSS0",
       "time": "18:30",
       "stadium": "대구",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPOTV",
       "away": {
         "code": "HT",
         "name": "KIA",
-        "rank": 4,
+        "rank": 5,
         "score": 5,
         "starter": {
           "name": "올러",
@@ -133,117 +133,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 2,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "임기영",
-        "batter": "박재현",
-        "heat": 4,
-        "label": "점수차가 벌어진 경기"
+      "live": null,
+      "recap": {
+        "actual": 12,
+        "verdict": "기대 이하",
+        "diff": 7,
+        "total": 17,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "김지찬"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "김성윤"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "구자욱"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "최형우"
-          },
-          {
-            "order": 5,
-            "pos": "1루수",
-            "name": "디아즈"
-          },
-          {
-            "order": 6,
-            "pos": "유격수",
-            "name": "이재현"
-          },
-          {
-            "order": 7,
-            "pos": "3루수",
-            "name": "김영웅"
-          },
-          {
-            "order": 8,
-            "pos": "2루수",
-            "name": "류지혁"
-          },
-          {
-            "order": 9,
-            "pos": "포수",
-            "name": "김도환"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "박재현"
-          },
-          {
-            "order": 2,
-            "pos": "좌익수",
-            "name": "카스트로"
-          },
-          {
-            "order": 3,
-            "pos": "3루수",
-            "name": "김도영"
-          },
-          {
-            "order": 4,
-            "pos": "우익수",
-            "name": "나성범"
-          },
-          {
-            "order": 5,
-            "pos": "포수",
-            "name": "한준수"
-          },
-          {
-            "order": 6,
-            "pos": "지명타자",
-            "name": "김선빈"
-          },
-          {
-            "order": 7,
-            "pos": "1루수",
-            "name": "박상준"
-          },
-          {
-            "order": 8,
-            "pos": "유격수",
-            "name": "김규성"
-          },
-          {
-            "order": 9,
-            "pos": "2루수",
-            "name": "하주석"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260728OBSK0",
@@ -255,7 +159,7 @@
       "away": {
         "code": "OB",
         "name": "두산",
-        "rank": 5,
+        "rank": 4,
         "score": 2,
         "starter": {
           "name": "벤자민",
@@ -439,12 +343,12 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "out": 2,
+        "b1": true,
+        "b2": true,
         "b3": false,
         "pitcher": "최준용",
-        "batter": "한지윤",
+        "batter": "페라자",
         "heat": 14,
         "label": "경기 흐름 체크 중"
       },
