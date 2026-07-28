@@ -1,7 +1,7 @@
 {
   "date": "20260728",
   "dateText": "2026년 7월 28일",
-  "updatedAt": "2026-07-28T09:40:25.777Z",
+  "updatedAt": "2026-07-28T09:50:32.757Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "B",
-        "out": 1,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "전준표",
-        "batter": "박해민",
-        "heat": 33,
+        "batter": "문정빈",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -199,7 +199,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 1,
-        "score": 0,
+        "score": 5,
         "starter": {
           "name": "최원태",
           "era": 4.87,
@@ -232,14 +232,14 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
-        "b1": true,
+        "out": 1,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "올러",
-        "batter": "김성윤",
-        "heat": 33,
-        "label": "초반 팽팽한 흐름"
+        "batter": "김영웅",
+        "heat": 7,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -364,7 +364,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "아빌라",
           "era": 2.25,
@@ -395,14 +395,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 1,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "벤자민",
-        "batter": "마드리스",
+        "pitcher": "아빌라",
+        "batter": "김민석",
         "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "T",
-        "out": 2,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "원종해",
-        "batter": "장성우",
-        "heat": 29,
+        "batter": "김상수",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 1,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "박세웅",
-        "batter": "페라자",
-        "heat": 33,
+        "pitcher": "화이트",
+        "batter": "노진혁",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
