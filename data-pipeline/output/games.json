@@ -1,7 +1,7 @@
 {
   "date": "20260728",
   "dateText": "2026년 7월 28일",
-  "updatedAt": "2026-07-28T11:00:45.867Z",
+  "updatedAt": "2026-07-28T11:10:31.843Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "톨허스트",
           "era": 4.21,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
+        "inning": 6,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "전준표",
-        "batter": "오스틴",
-        "heat": 50,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "톨허스트",
+        "batter": "추재현",
+        "heat": 44,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -187,7 +187,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "올러",
           "era": 2.73,
@@ -232,14 +232,14 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "최원태",
-        "batter": "박상준",
-        "heat": 3,
-        "label": "점수차가 벌어진 경기"
+        "pitcher": "배찬승",
+        "batter": "박재현",
+        "heat": 10,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -397,12 +397,12 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "아빌라",
-        "batter": "박준순",
+        "batter": "안재석",
         "heat": 53,
         "label": "경기 흐름 체크 중"
       },
@@ -561,14 +561,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": true,
-        "b2": true,
-        "b3": true,
-        "pitcher": "원종해",
-        "batter": "권동진",
-        "heat": 11,
+        "b2": false,
+        "b3": false,
+        "pitcher": "고영표",
+        "batter": "김휘집",
+        "heat": 12,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 2,
-        "b1": true,
-        "b2": true,
-        "b3": true,
-        "pitcher": "이민석",
-        "batter": "한지윤",
-        "heat": 33,
+        "inning": 4,
+        "half": "T",
+        "out": 3,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "화이트",
+        "batter": "레이예스",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
