@@ -1,7 +1,7 @@
 {
   "date": "20260728",
   "dateText": "2026년 7월 28일",
-  "updatedAt": "2026-07-28T13:40:27.093Z",
+  "updatedAt": "2026-07-28T13:50:27.171Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -25,7 +25,7 @@
         "score": 3,
         "starter": {
           "name": "전준표",
-          "era": 9.35,
+          "era": 7.24,
           "w": 0,
           "l": 1
         }
@@ -37,8 +37,8 @@
         "score": 5,
         "starter": {
           "name": "톨허스트",
-          "era": 4.21,
-          "w": 8,
+          "era": 4.19,
+          "w": 9,
           "l": 8
         }
       },
@@ -74,9 +74,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "톨허스트",
+        "lose": "박지성",
+        "save": "손주영"
       },
       "lineup": null
     },
@@ -94,9 +94,9 @@
         "score": 5,
         "starter": {
           "name": "올러",
-          "era": 2.73,
+          "era": 3.36,
           "w": 9,
-          "l": 7
+          "l": 8
         }
       },
       "home": {
@@ -106,7 +106,7 @@
         "score": 12,
         "starter": {
           "name": "최원태",
-          "era": 4.87,
+          "era": 5.04,
           "w": 3,
           "l": 4
         }
@@ -143,8 +143,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "이승현",
+        "lose": "올러",
         "save": null
       },
       "lineup": null
@@ -163,7 +163,7 @@
         "score": 2,
         "starter": {
           "name": "벤자민",
-          "era": 2.66,
+          "era": 2.48,
           "w": 4,
           "l": 7
         }
@@ -175,7 +175,7 @@
         "score": 1,
         "starter": {
           "name": "아빌라",
-          "era": 2.25,
+          "era": 1.5,
           "w": 2,
           "l": 0
         }
@@ -212,8 +212,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "이영하",
+        "lose": "문승원",
         "save": null
       },
       "lineup": null
@@ -232,8 +232,8 @@
         "score": 10,
         "starter": {
           "name": "고영표",
-          "era": 4.16,
-          "w": 7,
+          "era": 3.88,
+          "w": 8,
           "l": 6
         }
       },
@@ -244,9 +244,9 @@
         "score": 0,
         "starter": {
           "name": "원종해",
-          "era": 4.32,
+          "era": 5.32,
           "w": 0,
-          "l": 0
+          "l": 1
         }
       },
       "honjam": {
@@ -281,8 +281,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "고영표",
+        "lose": "원종해",
         "save": null
       },
       "lineup": null
@@ -301,7 +301,7 @@
         "score": 9,
         "starter": {
           "name": "박세웅",
-          "era": 4.87,
+          "era": 4.92,
           "w": 2,
           "l": 7
         }
@@ -313,9 +313,9 @@
         "score": 3,
         "starter": {
           "name": "화이트",
-          "era": 2.92,
+          "era": 3.2,
           "w": 6,
-          "l": 5
+          "l": 6
         }
       },
       "honjam": {
@@ -350,8 +350,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "현도훈",
+        "lose": "화이트",
         "save": null
       },
       "lineup": null
