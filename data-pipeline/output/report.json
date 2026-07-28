@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-27T16:37:37.729Z",
+  "updatedAt": "2026-07-28T08:30:42.798Z",
   "lastWeek": {
     "range": [
       "20260720",
@@ -246,74 +246,6 @@
           "home": "LT"
         }
       ],
-      "OB": [
-        {
-          "date": "20260728",
-          "away": "OB",
-          "home": "SK",
-          "awayStarter": "벤자민",
-          "homeStarter": "아빌라"
-        },
-        {
-          "date": "20260729",
-          "away": "OB",
-          "home": "SK"
-        },
-        {
-          "date": "20260730",
-          "away": "OB",
-          "home": "SK"
-        },
-        {
-          "date": "20260731",
-          "away": "LG",
-          "home": "OB"
-        },
-        {
-          "date": "20260801",
-          "away": "LG",
-          "home": "OB"
-        },
-        {
-          "date": "20260802",
-          "away": "LG",
-          "home": "OB"
-        }
-      ],
-      "SK": [
-        {
-          "date": "20260728",
-          "away": "OB",
-          "home": "SK",
-          "awayStarter": "벤자민",
-          "homeStarter": "아빌라"
-        },
-        {
-          "date": "20260729",
-          "away": "OB",
-          "home": "SK"
-        },
-        {
-          "date": "20260730",
-          "away": "OB",
-          "home": "SK"
-        },
-        {
-          "date": "20260731",
-          "away": "SK",
-          "home": "WO"
-        },
-        {
-          "date": "20260801",
-          "away": "SK",
-          "home": "WO"
-        },
-        {
-          "date": "20260802",
-          "away": "SK",
-          "home": "WO"
-        }
-      ],
       "KT": [
         {
           "date": "20260728",
@@ -448,6 +380,74 @@
           "date": "20260802",
           "away": "HH",
           "home": "KT"
+        }
+      ],
+      "OB": [
+        {
+          "date": "20260728",
+          "away": "OB",
+          "home": "SK",
+          "awayStarter": "벤자민",
+          "homeStarter": "아빌라"
+        },
+        {
+          "date": "20260729",
+          "away": "OB",
+          "home": "SK"
+        },
+        {
+          "date": "20260730",
+          "away": "OB",
+          "home": "SK"
+        },
+        {
+          "date": "20260731",
+          "away": "LG",
+          "home": "OB"
+        },
+        {
+          "date": "20260801",
+          "away": "LG",
+          "home": "OB"
+        },
+        {
+          "date": "20260802",
+          "away": "LG",
+          "home": "OB"
+        }
+      ],
+      "SK": [
+        {
+          "date": "20260728",
+          "away": "OB",
+          "home": "SK",
+          "awayStarter": "벤자민",
+          "homeStarter": "아빌라"
+        },
+        {
+          "date": "20260729",
+          "away": "OB",
+          "home": "SK"
+        },
+        {
+          "date": "20260730",
+          "away": "OB",
+          "home": "SK"
+        },
+        {
+          "date": "20260731",
+          "away": "SK",
+          "home": "WO"
+        },
+        {
+          "date": "20260801",
+          "away": "SK",
+          "home": "WO"
+        },
+        {
+          "date": "20260802",
+          "away": "SK",
+          "home": "WO"
         }
       ]
     }
