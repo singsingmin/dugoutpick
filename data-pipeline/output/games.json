@@ -1,7 +1,7 @@
 {
   "date": "20260728",
   "dateText": "2026년 7월 28일",
-  "updatedAt": "2026-07-28T13:10:26.962Z",
+  "updatedAt": "2026-07-28T13:20:30.464Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -341,15 +341,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
+        "inning": 9,
+        "half": "T",
+        "out": 1,
         "b1": true,
-        "b2": true,
-        "b3": false,
-        "pitcher": "최준용",
-        "batter": "페라자",
-        "heat": 14,
+        "b2": false,
+        "b3": true,
+        "pitcher": "강재민",
+        "batter": "한동희",
+        "heat": 15,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
