@@ -1,7 +1,7 @@
 {
   "date": "20260728",
   "dateText": "2026년 7월 28일",
-  "updatedAt": "2026-07-28T11:20:34.977Z",
+  "updatedAt": "2026-07-28T11:30:35.953Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "정현우",
-        "batter": "박동원",
-        "heat": 46,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "톨허스트",
+        "batter": "김건희",
+        "heat": 49,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "half": "B",
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "배찬승",
-        "batter": "나성범",
-        "heat": 19,
+        "pitcher": "김범수",
+        "batter": "김지찬",
+        "heat": 20,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -352,7 +352,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "벤자민",
           "era": 2.66,
@@ -395,16 +395,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
+        "inning": 7,
         "half": "B",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "벤자민",
-        "batter": "조형우",
-        "heat": 56,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "김정우",
+        "batter": "최지훈",
+        "heat": 65,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -560,14 +560,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 2,
+        "inning": 7,
+        "half": "T",
+        "out": 1,
         "b1": true,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "고영표",
-        "batter": "오장한",
+        "pitcher": "손주환",
+        "batter": "힐리어드",
         "heat": 12,
         "label": "경기 흐름 체크 중"
       },
@@ -694,7 +694,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "화이트",
           "era": 2.92,
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 0,
-        "b1": true,
-        "b2": true,
-        "b3": true,
-        "pitcher": "이민석",
-        "batter": "페라자",
-        "heat": 37,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "화이트",
+        "batter": "한동희",
+        "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
