@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-28T12:30:40.097Z",
+  "updatedAt": "2026-07-28T12:40:27.796Z",
   "standings": [
     {
       "rank": 1,
@@ -59,15 +59,15 @@
       "rank": 3,
       "code": "LG",
       "name": "LG",
-      "games": 94,
-      "win": 53,
+      "games": 95,
+      "win": 54,
       "loss": 41,
       "draw": 0,
-      "winRate": 0.564,
-      "gamesBehind": 5,
-      "last10": "1승0무9패",
-      "streak": "1패",
-      "home": "30-0-19",
+      "winRate": 0.568,
+      "gamesBehind": 4.5,
+      "last10": "2승0무8패",
+      "streak": "1승",
+      "home": "31-0-19",
       "away": "23-0-22",
       "rs": 0,
       "vs": {
@@ -79,7 +79,7 @@
         "NC": "5-5-0",
         "LT": "7-5-0",
         "SK": "8-1-0",
-        "WO": "6-3-0"
+        "WO": "7-3-0"
       }
     },
     {
@@ -248,21 +248,21 @@
       "rank": 10,
       "code": "WO",
       "name": "키움",
-      "games": 97,
+      "games": 98,
       "win": 35,
-      "loss": 60,
+      "loss": 61,
       "draw": 2,
-      "winRate": 0.368,
-      "gamesBehind": 23.5,
-      "last10": "6승1무3패",
-      "streak": "1승",
+      "winRate": 0.365,
+      "gamesBehind": 24,
+      "last10": "5승1무4패",
+      "streak": "1패",
       "home": "20-1-30",
-      "away": "15-1-30",
+      "away": "15-1-31",
       "rs": 0,
       "vs": {
         "SS": "4-8-0",
         "KT": "2-8-1",
-        "LG": "3-6-0",
+        "LG": "3-7-0",
         "HT": "2-10-0",
         "OB": "4-7-0",
         "HH": "7-4-1",

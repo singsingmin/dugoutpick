@@ -1,12 +1,12 @@
 {
   "date": "20260728",
   "dateText": "2026년 7월 28일",
-  "updatedAt": "2026-07-28T12:30:40.097Z",
+  "updatedAt": "2026-07-28T12:40:27.796Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
-    "hitRate": 26,
-    "bonusRate": 52,
+    "hitRate": 24,
+    "bonusRate": 54,
     "ready": true
   },
   "recommendedGameId": "20260728HTSS0",
@@ -135,13 +135,13 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
+        "half": "B",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "장찬희",
-        "batter": "한준수",
+        "pitcher": "한재승",
+        "batter": "김영웅",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
@@ -249,7 +249,7 @@
       "gameId": "20260728OBSK0",
       "time": "18:30",
       "stadium": "문학",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPOTV2",
       "away": {
@@ -298,117 +298,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 10,
-        "half": "B",
-        "out": 2,
-        "b1": false,
-        "b2": false,
-        "b3": true,
-        "pitcher": "이영하",
-        "batter": "정준재",
-        "heat": 91,
-        "label": "끝내기 한 방 찬스"
+      "live": null,
+      "recap": {
+        "actual": 98,
+        "verdict": "기대 이상",
+        "diff": 1,
+        "total": 3,
+        "extra": 1,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "2루수",
-            "name": "정준재"
-          },
-          {
-            "order": 2,
-            "pos": "유격수",
-            "name": "박성한"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "마드리스"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "김재환"
-          },
-          {
-            "order": 5,
-            "pos": "1루수",
-            "name": "전의산"
-          },
-          {
-            "order": 6,
-            "pos": "포수",
-            "name": "조형우"
-          },
-          {
-            "order": 7,
-            "pos": "중견수",
-            "name": "최지훈"
-          },
-          {
-            "order": 8,
-            "pos": "우익수",
-            "name": "임근우"
-          },
-          {
-            "order": 9,
-            "pos": "3루수",
-            "name": "안상현"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "유격수",
-            "name": "박찬호"
-          },
-          {
-            "order": 2,
-            "pos": "지명타자",
-            "name": "세베리노"
-          },
-          {
-            "order": 3,
-            "pos": "2루수",
-            "name": "박준순"
-          },
-          {
-            "order": 4,
-            "pos": "포수",
-            "name": "양의지"
-          },
-          {
-            "order": 5,
-            "pos": "좌익수",
-            "name": "김민석"
-          },
-          {
-            "order": 6,
-            "pos": "3루수",
-            "name": "안재석"
-          },
-          {
-            "order": 7,
-            "pos": "1루수",
-            "name": "강승호"
-          },
-          {
-            "order": 8,
-            "pos": "중견수",
-            "name": "정수빈"
-          },
-          {
-            "order": 9,
-            "pos": "우익수",
-            "name": "김대한"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260728KTNC0",
@@ -490,7 +394,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": 6,
+        "score": 8,
         "starter": {
           "name": "박세웅",
           "era": 4.87,
@@ -534,14 +438,14 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "half": "B",
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "이형범",
-        "batter": "황성빈",
-        "heat": 39,
+        "pitcher": "이이무라",
+        "batter": "문현빈",
+        "heat": 13,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
