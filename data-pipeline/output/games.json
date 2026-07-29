@@ -1,7 +1,7 @@
 {
   "date": "20260729",
   "dateText": "2026년 7월 29일",
-  "updatedAt": "2026-07-29T11:20:42.470Z",
+  "updatedAt": "2026-07-29T11:30:38.059Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 5,
+        "score": 7,
         "starter": {
           "name": "웰스",
           "era": 3.67,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 2,
+        "inning": 5,
+        "half": "T",
+        "out": 1,
         "b1": false,
-        "b2": true,
-        "b3": true,
-        "pitcher": "하영민",
-        "batter": "문정빈",
-        "heat": 52,
+        "b2": false,
+        "b3": false,
+        "pitcher": "김영우",
+        "batter": "권혁빈",
+        "heat": 47,
         "label": "점수 나는 난타전"
       },
       "recap": null,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "양창섭",
-        "batter": "윤도현",
+        "batter": "박상준",
         "heat": 11,
         "label": "경기 흐름 체크 중"
       },
@@ -396,14 +396,14 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
+        "half": "B",
         "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "노경은",
-        "batter": "정수빈",
-        "heat": 49,
+        "pitcher": "이용찬",
+        "batter": "안상현",
+        "heat": 51,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
+        "inning": 6,
+        "half": "T",
         "out": 1,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "오원석",
-        "batter": "김주원",
-        "heat": 20,
+        "pitcher": "김태훈",
+        "batter": "오윤석",
+        "heat": 21,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -725,16 +725,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 2,
+        "inning": 7,
+        "half": "T",
+        "out": 1,
         "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "로드리게스",
-        "batter": "페라자",
-        "heat": 56,
-        "label": "경기 흐름 체크 중"
+        "b3": false,
+        "pitcher": "왕옌청",
+        "batter": "윤동희",
+        "heat": 59,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
