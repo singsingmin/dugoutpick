@@ -1,7 +1,7 @@
 {
   "date": "20260729",
   "dateText": "2026년 7월 29일",
-  "updatedAt": "2026-07-29T09:41:23.573Z",
+  "updatedAt": "2026-07-29T09:50:33.138Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "b1": true,
-        "b2": true,
-        "b3": false,
-        "pitcher": "웰스",
-        "batter": "임병욱",
-        "heat": 31,
+        "b2": false,
+        "b3": true,
+        "pitcher": "하영민",
+        "batter": "오스틴",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -187,7 +187,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 5,
-        "score": 1,
+        "score": 4,
         "starter": {
           "name": "시라카와",
           "era": 5.77,
@@ -232,14 +232,14 @@
       "live": {
         "inning": 1,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "b1": true,
         "b2": true,
-        "b3": true,
+        "b3": false,
         "pitcher": "양창섭",
-        "batter": "김호령",
-        "heat": 29,
-        "label": "초반 팽팽한 흐름"
+        "batter": "윤도현",
+        "heat": 12,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "최승용",
-        "batter": "정준재",
-        "heat": 31,
+        "pitcher": "김민준",
+        "batter": "안재석",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -562,12 +562,12 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
-        "b2": false,
-        "b3": false,
+        "b2": true,
+        "b3": true,
         "pitcher": "오원석",
-        "batter": "김주원",
+        "batter": "블레인",
         "heat": 26,
         "label": "초반 팽팽한 흐름"
       },
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "B",
-        "out": 1,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "로드리게스",
-        "batter": "페라자",
-        "heat": 26,
+        "batter": "노시환",
+        "heat": 29,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
