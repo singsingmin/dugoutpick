@@ -1,7 +1,7 @@
 {
   "date": "20260729",
   "dateText": "2026년 7월 29일",
-  "updatedAt": "2026-07-29T10:40:59.077Z",
+  "updatedAt": "2026-07-29T10:50:28.888Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
+        "inning": 4,
+        "half": "T",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "하영민",
-        "batter": "오스틴",
-        "heat": 40,
+        "pitcher": "웰스",
+        "batter": "서건창",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -230,14 +230,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
+        "inning": 4,
         "half": "B",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "시라카와",
-        "batter": "김성윤",
+        "batter": "최형우",
         "heat": 3,
         "label": "점수차가 벌어진 경기"
       },
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
+        "inning": 5,
         "half": "B",
-        "out": 1,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "최승용",
-        "batter": "조형우",
-        "heat": 28,
+        "pitcher": "타카다",
+        "batter": "정준재",
+        "heat": 31,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -561,14 +561,14 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
+        "half": "B",
         "out": 1,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "손주환",
-        "batter": "류현인",
-        "heat": 35,
+        "pitcher": "오원석",
+        "batter": "김휘집",
+        "heat": 37,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
+        "inning": 5,
         "half": "B",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
         "pitcher": "로드리게스",
-        "batter": "이원석",
-        "heat": 48,
+        "batter": "페라자",
+        "heat": 54,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
