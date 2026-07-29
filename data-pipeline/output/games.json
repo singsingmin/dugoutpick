@@ -1,7 +1,7 @@
 {
   "date": "20260729",
   "dateText": "2026년 7월 29일",
-  "updatedAt": "2026-07-29T11:10:30.697Z",
+  "updatedAt": "2026-07-29T11:20:42.470Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 3,
+        "score": 5,
         "starter": {
           "name": "웰스",
           "era": 3.67,
@@ -67,14 +67,14 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 0,
-        "b1": true,
-        "b2": false,
+        "out": 2,
+        "b1": false,
+        "b2": true,
         "b3": true,
         "pitcher": "하영민",
-        "batter": "구본혁",
-        "heat": 39,
-        "label": "초반 팽팽한 흐름"
+        "batter": "문정빈",
+        "heat": 52,
+        "label": "점수 나는 난타전"
       },
       "recap": null,
       "decision": null,
@@ -199,7 +199,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 1,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "양창섭",
           "era": 3.73,
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
+        "inning": 6,
         "half": "T",
-        "out": 2,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "양창섭",
-        "batter": "김태군",
-        "heat": 3,
-        "label": "점수차가 벌어진 경기"
+        "batter": "윤도현",
+        "heat": 11,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -395,16 +395,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 1,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "타카다",
-        "batter": "최지훈",
-        "heat": 46,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "노경은",
+        "batter": "정수빈",
+        "heat": 49,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -561,14 +561,14 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 2,
-        "b1": false,
-        "b2": true,
+        "half": "B",
+        "out": 1,
+        "b1": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "임정호",
-        "batter": "힐리어드",
-        "heat": 19,
+        "pitcher": "오원석",
+        "batter": "김주원",
+        "heat": 20,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -694,7 +694,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "왕옌청",
           "era": 3.61,
@@ -727,13 +727,13 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "로드리게스",
-        "batter": "김태연",
-        "heat": 59,
+        "batter": "페라자",
+        "heat": 56,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
