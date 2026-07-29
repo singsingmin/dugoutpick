@@ -1,7 +1,7 @@
 {
   "date": "20260729",
   "dateText": "2026년 7월 29일",
-  "updatedAt": "2026-07-29T11:51:12.219Z",
+  "updatedAt": "2026-07-29T12:00:51.651Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 10,
+        "score": 12,
         "starter": {
           "name": "하영민",
           "era": 3.97,
@@ -67,14 +67,14 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "우강훈",
-        "batter": "임병욱",
-        "heat": 37,
-        "label": "점수 나는 난타전"
+        "batter": "여동욱",
+        "heat": 10,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "이재희",
-        "batter": "나성범",
-        "heat": 53,
+        "pitcher": "이의리",
+        "batter": "전병우",
+        "heat": 56,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
+        "inning": 9,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이병헌",
-        "batter": "오태곤",
-        "heat": 27,
+        "pitcher": "조병현",
+        "batter": "박준순",
+        "heat": 28,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 2,
-        "b1": false,
-        "b2": true,
-        "b3": true,
-        "pitcher": "손동현",
-        "batter": "박민우",
-        "heat": 23,
+        "b1": true,
+        "b2": false,
+        "b3": false,
+        "pitcher": "신영우",
+        "batter": "안현민",
+        "heat": 24,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -694,7 +694,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "왕옌청",
           "era": 3.61,
@@ -725,16 +725,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 1,
-        "b1": true,
-        "b2": false,
-        "b3": true,
-        "pitcher": "김강현",
-        "batter": "이도윤",
-        "heat": 51,
-        "label": "후반 박빙 승부"
+        "inning": 8,
+        "half": "T",
+        "out": 0,
+        "b1": false,
+        "b2": true,
+        "b3": false,
+        "pitcher": "이상규",
+        "batter": "고승민",
+        "heat": 40,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
