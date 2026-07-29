@@ -1,7 +1,7 @@
 {
   "date": "20260729",
   "dateText": "2026년 7월 29일",
-  "updatedAt": "2026-07-29T13:40:34.496Z",
+  "updatedAt": "2026-07-29T13:50:27.901Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
-        "out": 1,
-        "b1": false,
-        "b2": false,
+        "half": "B",
+        "out": 0,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "배재준",
-        "batter": "박채울",
-        "heat": 4,
+        "pitcher": "최현우",
+        "batter": "이재원",
+        "heat": 5,
         "label": "점수차가 벌어진 경기"
       },
       "recap": null,
