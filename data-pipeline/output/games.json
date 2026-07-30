@@ -1,7 +1,7 @@
 {
   "date": "20260730",
   "dateText": "2026년 7월 30일",
-  "updatedAt": "2026-07-30T13:00:43.380Z",
+  "updatedAt": "2026-07-30T13:10:28.160Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -25,9 +25,9 @@
         "score": 3,
         "starter": {
           "name": "안우진",
-          "era": 3.49,
+          "era": 3.7,
           "w": 2,
-          "l": 5
+          "l": 6
         }
       },
       "home": {
@@ -38,7 +38,7 @@
         "starter": {
           "name": "임찬규",
           "era": 4.53,
-          "w": 9,
+          "w": 10,
           "l": 4
         }
       },
@@ -74,9 +74,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "임찬규",
+        "lose": "안우진",
+        "save": "손주영"
       },
       "lineup": null
     },
@@ -94,8 +94,8 @@
         "score": 12,
         "starter": {
           "name": "네일",
-          "era": 3.81,
-          "w": 6,
+          "era": 3.85,
+          "w": 7,
           "l": 5
         }
       },
@@ -106,9 +106,9 @@
         "score": 3,
         "starter": {
           "name": "페덱",
-          "era": 1.5,
+          "era": 4.24,
           "w": 2,
-          "l": 0
+          "l": 1
         }
       },
       "honjam": {
@@ -143,8 +143,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "네일",
+        "lose": "페덱",
         "save": null
       },
       "lineup": null
@@ -163,7 +163,7 @@
         "score": 5,
         "starter": {
           "name": "최민석",
-          "era": 2.49,
+          "era": 2.64,
           "w": 9,
           "l": 3
         }
@@ -175,7 +175,7 @@
         "score": 3,
         "starter": {
           "name": "해치",
-          "era": 6.55,
+          "era": 6.02,
           "w": 2,
           "l": 4
         }
@@ -212,9 +212,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "김택연",
+        "lose": "최민준",
+        "save": "이영하"
       },
       "lineup": null
     },
@@ -232,8 +232,8 @@
         "score": 10,
         "starter": {
           "name": "로건",
-          "era": 3.27,
-          "w": 2,
+          "era": 3.08,
+          "w": 3,
           "l": 1
         }
       },
@@ -244,9 +244,9 @@
         "score": 2,
         "starter": {
           "name": "구창모",
-          "era": 3.87,
+          "era": 4.19,
           "w": 8,
-          "l": 3
+          "l": 4
         }
       },
       "honjam": {
@@ -281,8 +281,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "로건",
+        "lose": "구창모",
         "save": null
       },
       "lineup": null
@@ -301,7 +301,7 @@
         "score": 2,
         "starter": {
           "name": "나균안",
-          "era": 4.28,
+          "era": 4.14,
           "w": 5,
           "l": 9
         }
@@ -313,7 +313,7 @@
         "score": 3,
         "starter": {
           "name": "박준영",
-          "era": 4.19,
+          "era": 4.07,
           "w": 1,
           "l": 0
         }
@@ -350,8 +350,8 @@
         "walkoff": 1
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "박상원",
+        "lose": "김원중",
         "save": null
       },
       "lineup": null

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-30T13:00:43.380Z",
+  "updatedAt": "2026-07-30T13:10:28.160Z",
   "lastWeek": {
     "range": [
       "20260720",
@@ -87,8 +87,8 @@
       {
         "away": "LG",
         "home": "OB",
-        "pred": 87,
-        "reason": "잠실 라이벌 더비 · 게임차 4.5의 순위 다툼",
+        "pred": 90,
+        "reason": "잠실 라이벌 더비 · 게임차 4의 순위 다툼",
         "dateStart": "20260731",
         "dateEnd": "20260802"
       },
@@ -135,7 +135,9 @@
         {
           "date": "20260731",
           "away": "SK",
-          "home": "WO"
+          "home": "WO",
+          "awayStarter": "김건우",
+          "homeStarter": "박준현"
         },
         {
           "date": "20260801",
@@ -173,7 +175,9 @@
         {
           "date": "20260731",
           "away": "LG",
-          "home": "OB"
+          "home": "OB",
+          "awayStarter": "송승기",
+          "homeStarter": "잭로그"
         },
         {
           "date": "20260801",
@@ -291,7 +295,9 @@
         {
           "date": "20260731",
           "away": "LG",
-          "home": "OB"
+          "home": "OB",
+          "awayStarter": "송승기",
+          "homeStarter": "잭로그"
         },
         {
           "date": "20260801",
@@ -329,7 +335,9 @@
         {
           "date": "20260731",
           "away": "SK",
-          "home": "WO"
+          "home": "WO",
+          "awayStarter": "김건우",
+          "homeStarter": "박준현"
         },
         {
           "date": "20260801",
