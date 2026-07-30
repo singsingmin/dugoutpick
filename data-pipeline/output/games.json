@@ -1,7 +1,7 @@
 {
   "date": "20260730",
   "dateText": "2026년 7월 30일",
-  "updatedAt": "2026-07-30T10:51:01.322Z",
+  "updatedAt": "2026-07-30T11:00:51.642Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 2,
+        "inning": 6,
+        "half": "T",
+        "out": 1,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "안우진",
-        "batter": "홍창기",
-        "heat": 42,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "임찬규",
+        "batter": "김건희",
+        "heat": 44,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
+        "inning": 5,
         "half": "T",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "페덱",
-        "batter": "윤도현",
-        "heat": 17,
+        "batter": "박재현",
+        "heat": 19,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 2,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "최민석",
-        "batter": "이지영",
-        "heat": 45,
+        "pitcher": "해치",
+        "batter": "세베리노",
+        "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -529,7 +529,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "구창모",
           "era": 3.87,
@@ -562,13 +562,13 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 1,
+        "b1": true,
         "b2": true,
         "b3": false,
         "pitcher": "로건",
-        "batter": "김휘집",
-        "heat": 18,
+        "batter": "서호철",
+        "heat": 28,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -725,16 +725,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 2,
-        "b1": false,
+        "inning": 6,
+        "half": "T",
+        "out": 0,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "나균안",
-        "batter": "이도윤",
-        "heat": 50,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "박준영",
+        "batter": "한동희",
+        "heat": 53,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
