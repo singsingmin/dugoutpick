@@ -1,7 +1,7 @@
 {
   "date": "20260730",
   "dateText": "2026년 7월 30일",
-  "updatedAt": "2026-07-30T10:00:45.414Z",
+  "updatedAt": "2026-07-30T10:10:28.228Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
+        "inning": 3,
         "half": "T",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
         "pitcher": "임찬규",
-        "batter": "데이비슨",
-        "heat": 20,
+        "batter": "안치홍",
+        "heat": 23,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -187,7 +187,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 1,
+        "score": 5,
         "starter": {
           "name": "네일",
           "era": 3.81,
@@ -231,15 +231,15 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
+        "half": "B",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "페덱",
-        "batter": "하주석",
-        "heat": 33,
-        "label": "초반 팽팽한 흐름"
+        "b3": false,
+        "pitcher": "네일",
+        "batter": "김영웅",
+        "heat": 8,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -397,12 +397,12 @@
       "live": {
         "inning": 2,
         "half": "B",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "out": 1,
+        "b1": true,
+        "b2": true,
         "b3": false,
         "pitcher": "최민석",
-        "batter": "최지훈",
+        "batter": "이지영",
         "heat": 29,
         "label": "초반 팽팽한 흐름"
       },
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
+        "inning": 3,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "로건",
-        "batter": "김휘집",
-        "heat": 35,
+        "pitcher": "구창모",
+        "batter": "권동진",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -727,12 +727,12 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "박준영",
-        "batter": "전민재",
+        "batter": "고승민",
         "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
