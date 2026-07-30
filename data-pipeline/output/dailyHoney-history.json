@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-30T12:50:33.746Z",
+  "updatedAt": "2026-07-30T13:00:43.380Z",
   "results": [
     {
       "date": "20260705",
@@ -309,6 +309,28 @@
         "score": 5
       },
       "calculatedAt": "2026-07-29T14:10:32.825Z"
+    },
+    {
+      "date": "20260730",
+      "actualTopGameId": "20260730LTHH0",
+      "recapScore": 97,
+      "decidingReasonTags": [
+        "끝내기",
+        "1점차 접전"
+      ],
+      "displayMode": "highlight",
+      "displayTitle": "어제의 명경기",
+      "away": {
+        "code": "LT",
+        "name": "롯데",
+        "score": 2
+      },
+      "home": {
+        "code": "HH",
+        "name": "한화",
+        "score": 3
+      },
+      "calculatedAt": "2026-07-30T13:00:43.380Z"
     }
   ]
 }
