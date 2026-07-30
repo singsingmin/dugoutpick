@@ -1,7 +1,7 @@
 {
   "date": "20260730",
   "dateText": "2026년 7월 30일",
-  "updatedAt": "2026-07-30T11:20:29.339Z",
+  "updatedAt": "2026-07-30T11:30:33.451Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "김윤식",
-        "batter": "여동욱",
+        "pitcher": "김진수",
+        "batter": "이형종",
         "heat": 59,
         "label": "후반 박빙 승부"
       },
@@ -232,12 +232,12 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": false,
-        "b2": false,
-        "b3": false,
+        "b2": true,
+        "b3": true,
         "pitcher": "배찬승",
-        "batter": "카스트로",
+        "batter": "하주석",
         "heat": 21,
         "label": "경기 흐름 체크 중"
       },
@@ -397,12 +397,12 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "해치",
-        "batter": "박준순",
+        "batter": "김민석",
         "heat": 53,
         "label": "경기 흐름 체크 중"
       },
@@ -562,12 +562,12 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
-        "b3": false,
-        "pitcher": "구창모",
-        "batter": "김민혁",
+        "b3": true,
+        "pitcher": "송명기",
+        "batter": "류현인",
         "heat": 11,
         "label": "경기 흐름 체크 중"
       },
@@ -725,16 +725,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 1,
-        "b1": true,
-        "b2": true,
+        "inning": 7,
+        "half": "T",
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "나균안",
-        "batter": "문현빈",
-        "heat": 56,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "이상규",
+        "batter": "윤동희",
+        "heat": 59,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
