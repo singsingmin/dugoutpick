@@ -1,7 +1,7 @@
 {
   "date": "20260730",
   "dateText": "2026년 7월 30일",
-  "updatedAt": "2026-07-30T10:30:33.166Z",
+  "updatedAt": "2026-07-30T10:40:28.383Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "임찬규",
           "era": 4.53,
@@ -67,14 +67,14 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "안우진",
-        "batter": "오스틴",
-        "heat": 28,
-        "label": "경기 흐름 체크 중"
+        "batter": "문보경",
+        "heat": 37,
+        "label": "초반 팽팽한 흐름"
       },
       "recap": null,
       "decision": null,
@@ -187,7 +187,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "네일",
           "era": 3.81,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "페덱",
-        "batter": "김도영",
-        "heat": 23,
+        "pitcher": "네일",
+        "batter": "이재현",
+        "heat": 16,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
+        "inning": 4,
+        "half": "T",
         "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "최민석",
-        "batter": "전의산",
-        "heat": 40,
+        "pitcher": "해치",
+        "batter": "김민석",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -517,7 +517,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 2,
-        "score": 1,
+        "score": 3,
         "starter": {
           "name": "로건",
           "era": 3.27,
@@ -562,14 +562,14 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "구창모",
-        "batter": "안현민",
-        "heat": 43,
-        "label": "초반 팽팽한 흐름"
+        "batter": "류현인",
+        "heat": 26,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
+        "inning": 5,
         "half": "T",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "out": 1,
+        "b1": false,
+        "b2": false,
         "b3": false,
         "pitcher": "박준영",
-        "batter": "전민재",
-        "heat": 35,
+        "batter": "황성빈",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
