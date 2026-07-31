@@ -1,7 +1,7 @@
 {
   "date": "20260731",
   "dateText": "2026년 7월 31일",
-  "updatedAt": "2026-07-31T09:50:25.311Z",
+  "updatedAt": "2026-07-31T10:00:40.336Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "송승기",
           "era": 5.5,
@@ -67,13 +67,13 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": false,
-        "b2": false,
-        "b3": false,
+        "b2": true,
+        "b3": true,
         "pitcher": "잭로그",
-        "batter": "문정빈",
-        "heat": 35,
+        "batter": "구본혁",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "김진욱",
-        "batter": "이재현",
+        "batter": "디아즈",
         "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
@@ -352,7 +352,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 0,
+        "score": 3,
         "starter": {
           "name": "류현진",
           "era": 3.22,
@@ -397,14 +397,14 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "소형준",
-        "batter": "노시환",
-        "heat": 35,
-        "label": "초반 팽팽한 흐름"
+        "batter": "이원석",
+        "heat": 20,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -529,7 +529,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "토다",
           "era": 5.38,
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 1,
+        "inning": 2,
+        "half": "T",
+        "out": 0,
         "b1": true,
         "b2": true,
-        "b3": true,
-        "pitcher": "양현종",
-        "batter": "박건우",
-        "heat": 31,
+        "b3": false,
+        "pitcher": "토다",
+        "batter": "한준수",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -726,14 +726,14 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박준현",
-        "batter": "김재환",
-        "heat": 33,
+        "pitcher": "김건우",
+        "batter": "임병욱",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
