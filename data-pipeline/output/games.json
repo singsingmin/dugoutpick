@@ -1,7 +1,7 @@
 {
   "date": "20260731",
   "dateText": "2026년 7월 31일",
-  "updatedAt": "2026-07-31T10:40:34.348Z",
+  "updatedAt": "2026-07-31T10:50:27.936Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 1,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "송승기",
-        "batter": "윤준호",
-        "heat": 48,
+        "pitcher": "잭로그",
+        "batter": "구본혁",
+        "heat": 51,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "김진욱",
-        "batter": "김도환",
+        "batter": "김성윤",
         "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
@@ -364,7 +364,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 2,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "소형준",
           "era": 2.95,
@@ -397,14 +397,14 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 0,
-        "b1": false,
-        "b2": false,
-        "b3": false,
+        "out": 1,
+        "b1": true,
+        "b2": true,
+        "b3": true,
         "pitcher": "류현진",
-        "batter": "안현민",
-        "heat": 28,
-        "label": "경기 흐름 체크 중"
+        "batter": "오윤석",
+        "heat": 37,
+        "label": "초반 팽팽한 흐름"
       },
       "recap": null,
       "decision": null,
@@ -529,7 +529,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 8,
+        "score": 9,
         "starter": {
           "name": "토다",
           "era": 5.38,
@@ -562,12 +562,12 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "이태양",
-        "batter": "천재환",
+        "batter": "블레인",
         "heat": 3,
         "label": "점수차가 벌어진 경기"
       },
@@ -694,7 +694,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 8,
+        "score": 9,
         "starter": {
           "name": "박준현",
           "era": 4.61,
@@ -731,8 +731,8 @@
         "b1": true,
         "b2": true,
         "b3": true,
-        "pitcher": "김건우",
-        "batter": "박찬혁",
+        "pitcher": "최민준",
+        "batter": "추재현",
         "heat": 3,
         "label": "점수차가 벌어진 경기"
       },
