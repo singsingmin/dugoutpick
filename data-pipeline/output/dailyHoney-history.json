@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-31T13:00:41.162Z",
+  "updatedAt": "2026-07-31T13:10:28.786Z",
   "results": [
     {
       "date": "20260705",
@@ -331,6 +331,28 @@
         "score": 3
       },
       "calculatedAt": "2026-07-30T13:00:43.380Z"
+    },
+    {
+      "date": "20260731",
+      "actualTopGameId": "20260731SSLT0",
+      "recapScore": 87,
+      "decidingReasonTags": [
+        "2점차 접전",
+        "난타전"
+      ],
+      "displayMode": "highlight",
+      "displayTitle": "어제의 명경기",
+      "away": {
+        "code": "SS",
+        "name": "삼성",
+        "score": 9
+      },
+      "home": {
+        "code": "LT",
+        "name": "롯데",
+        "score": 7
+      },
+      "calculatedAt": "2026-07-31T13:10:28.786Z"
     }
   ]
 }
