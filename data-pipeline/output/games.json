@@ -1,7 +1,7 @@
 {
   "date": "20260731",
   "dateText": "2026년 7월 31일",
-  "updatedAt": "2026-07-31T10:28:43.440Z",
+  "updatedAt": "2026-07-31T10:30:32.900Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "잭로그",
-        "batter": "오지환",
+        "batter": "문보경",
         "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
@@ -234,10 +234,10 @@
         "half": "B",
         "out": 0,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "원태인",
-        "batter": "레이예스",
+        "batter": "한동희",
         "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
@@ -727,12 +727,12 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": true,
-        "b2": true,
-        "b3": false,
+        "b2": false,
+        "b3": true,
         "pitcher": "김건우",
-        "batter": "김동헌",
+        "batter": "임병욱",
         "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
