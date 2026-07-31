@@ -1,7 +1,7 @@
 {
   "date": "20260731",
   "dateText": "2026년 7월 31일",
-  "updatedAt": "2026-07-31T11:40:31.585Z",
+  "updatedAt": "2026-07-31T11:50:32.943Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "잭로그",
           "era": 4.17,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
+        "inning": 8,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이우찬",
-        "batter": "김대한",
-        "heat": 62,
+        "pitcher": "김택연",
+        "batter": "홍창기",
+        "heat": 53,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "원태인",
-        "batter": "나승엽",
-        "heat": 23,
+        "pitcher": "정철원",
+        "batter": "전병우",
+        "heat": 24,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -395,16 +395,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 1,
+        "inning": 7,
+        "half": "T",
+        "out": 0,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "이형범",
-        "batter": "권동진",
-        "heat": 48,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "이상동",
+        "batter": "이원석",
+        "heat": 50,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -560,14 +560,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 0,
+        "inning": 7,
+        "half": "T",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "최지민",
-        "batter": "박민우",
+        "pitcher": "손주환",
+        "batter": "김호령",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
+        "inning": 6,
         "half": "B",
-        "out": 3,
-        "b1": false,
+        "out": 0,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "최민준",
-        "batter": "안치홍",
-        "heat": 20,
+        "pitcher": "이로운",
+        "batter": "박찬혁",
+        "heat": 23,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
