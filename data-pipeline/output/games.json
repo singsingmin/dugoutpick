@@ -1,7 +1,7 @@
 {
   "date": "20260731",
   "dateText": "2026년 7월 31일",
-  "updatedAt": "2026-07-31T09:40:26.623Z",
+  "updatedAt": "2026-07-31T09:50:25.311Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "송승기",
-        "batter": "박찬호",
-        "heat": 33,
+        "pitcher": "잭로그",
+        "batter": "문정빈",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "원태인",
-        "batter": "고승민",
-        "heat": 33,
+        "pitcher": "김진욱",
+        "batter": "이재현",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "T",
-        "out": 1,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "소형준",
-        "batter": "문현빈",
-        "heat": 31,
+        "batter": "노시환",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -561,14 +561,14 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
-        "out": 2,
-        "b1": false,
+        "half": "B",
+        "out": 1,
+        "b1": true,
         "b2": true,
-        "b3": false,
-        "pitcher": "토다",
-        "batter": "나성범",
-        "heat": 29,
+        "b3": true,
+        "pitcher": "양현종",
+        "batter": "박건우",
+        "heat": 31,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -694,7 +694,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "박준현",
           "era": 4.61,
@@ -725,14 +725,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 0,
+        "inning": 2,
+        "half": "T",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김건우",
-        "batter": "서건창",
+        "pitcher": "박준현",
+        "batter": "김재환",
         "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
