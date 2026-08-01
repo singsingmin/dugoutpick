@@ -1,7 +1,7 @@
 {
   "date": "20260801",
   "dateText": "2026년 8월 1일",
-  "updatedAt": "2026-08-01T10:50:32.095Z",
+  "updatedAt": "2026-08-01T11:00:40.080Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
+        "half": "B",
         "out": 1,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "타카다",
-        "batter": "박해민",
-        "heat": 53,
+        "pitcher": "우강훈",
+        "batter": "안재석",
+        "heat": 56,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -290,12 +290,12 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
-        "b3": false,
-        "pitcher": "배제성",
-        "batter": "강백호",
+        "b3": true,
+        "pitcher": "손동현",
+        "batter": "이도윤",
         "heat": 39,
         "label": "점수 나는 난타전"
       },
@@ -511,14 +511,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 2,
-        "b1": false,
-        "b2": false,
+        "inning": 6,
+        "half": "T",
+        "out": 0,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "타케다",
-        "batter": "박찬혁",
+        "pitcher": "박정훈",
+        "batter": "박성한",
         "heat": 11,
         "label": "경기 흐름 체크 중"
       },
