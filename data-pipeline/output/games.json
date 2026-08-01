@@ -1,7 +1,7 @@
 {
   "date": "20260801",
   "dateText": "2026년 8월 1일",
-  "updatedAt": "2026-08-01T09:50:24.632Z",
+  "updatedAt": "2026-08-01T10:00:50.905Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "카라스코",
           "era": null,
@@ -65,14 +65,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 0,
+        "inning": 5,
+        "half": "T",
+        "out": 1,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "카라스코",
-        "batter": "박찬호",
+        "pitcher": "곽빈",
+        "batter": "신민재",
         "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
@@ -257,7 +257,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 2,
-        "score": 0,
+        "score": 5,
         "starter": {
           "name": "배제성",
           "era": 4.3,
@@ -290,14 +290,14 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 1,
-        "b1": true,
-        "b2": false,
-        "b3": true,
+        "out": 2,
+        "b1": false,
+        "b2": true,
+        "b3": false,
         "pitcher": "짐머맨",
-        "batter": "안현민",
-        "heat": 40,
-        "label": "초반 팽팽한 흐름"
+        "batter": "한승택",
+        "heat": 16,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -480,7 +480,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "김윤하",
           "era": 6.35,
@@ -512,14 +512,14 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 1,
         "b1": true,
-        "b2": true,
-        "b3": true,
-        "pitcher": "김윤하",
-        "batter": "전의산",
-        "heat": 38,
+        "b2": false,
+        "b3": false,
+        "pitcher": "타케다",
+        "batter": "데이비슨",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
