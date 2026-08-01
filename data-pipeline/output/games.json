@@ -1,7 +1,7 @@
 {
   "date": "20260801",
   "dateText": "2026년 8월 1일",
-  "updatedAt": "2026-08-01T11:50:26.416Z",
+  "updatedAt": "2026-08-01T12:00:43.938Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -71,7 +71,7 @@
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이용찬",
+        "pitcher": "이병헌",
         "batter": "홍창기",
         "heat": 92,
         "label": "연장 혈투 진행 중"
@@ -288,15 +288,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 1,
+        "inning": 9,
+        "half": "T",
+        "out": 2,
         "b1": true,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "강재민",
-        "batter": "김현수",
-        "heat": 48,
+        "pitcher": "박영현",
+        "batter": "페라자",
+        "heat": 49,
         "label": "점수 나는 난타전"
       },
       "recap": null,
@@ -512,13 +512,13 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
+        "half": "B",
         "out": 2,
-        "b1": true,
-        "b2": false,
-        "b3": false,
-        "pitcher": "박진형",
-        "batter": "채현우",
+        "b1": false,
+        "b2": true,
+        "b3": true,
+        "pitcher": "이건욱",
+        "batter": "임병욱",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
