@@ -1,7 +1,7 @@
 {
   "date": "20260801",
   "dateText": "2026년 8월 1일",
-  "updatedAt": "2026-08-01T09:10:26.829Z",
+  "updatedAt": "2026-08-01T09:20:24.100Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 0,
+        "inning": 2,
+        "half": "T",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "카라스코",
-        "batter": "박찬호",
-        "heat": 33,
+        "pitcher": "곽빈",
+        "batter": "송찬의",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -288,15 +288,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 0,
+        "inning": 2,
+        "half": "T",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "짐머맨",
-        "batter": "최원준",
-        "heat": 33,
+        "pitcher": "배제성",
+        "batter": "노시환",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -511,15 +511,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "B",
-        "out": 1,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "타케다",
-        "batter": "안치홍",
-        "heat": 33,
+        "batter": "박찬혁",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
