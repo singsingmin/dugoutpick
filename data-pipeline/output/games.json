@@ -1,7 +1,7 @@
 {
   "date": "20260801",
   "dateText": "2026년 8월 1일",
-  "updatedAt": "2026-08-01T09:20:24.100Z",
+  "updatedAt": "2026-08-01T09:30:25.837Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
+        "inning": 3,
         "half": "T",
-        "out": 1,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "곽빈",
-        "batter": "송찬의",
-        "heat": 35,
+        "batter": "구본혁",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -289,14 +289,14 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "배제성",
-        "batter": "노시환",
-        "heat": 35,
+        "pitcher": "짐머맨",
+        "batter": "오윤석",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -511,15 +511,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
+        "inning": 3,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "타케다",
-        "batter": "박찬혁",
-        "heat": 38,
+        "pitcher": "김윤하",
+        "batter": "한유섬",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
