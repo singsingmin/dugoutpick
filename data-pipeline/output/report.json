@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-01T13:10:30.097Z",
+  "updatedAt": "2026-08-01T15:34:20.842Z",
   "lastWeek": {
     "range": [
       "20260720",
@@ -228,13 +228,6 @@
           "homeStarter": "토다"
         },
         {
-          "date": "20260801",
-          "away": "HT",
-          "home": "NC",
-          "awayStarter": "황동하",
-          "homeStarter": "라일리"
-        },
-        {
           "date": "20260802",
           "away": "HT",
           "home": "NC",
@@ -270,13 +263,6 @@
           "home": "LT",
           "awayStarter": "원태인",
           "homeStarter": "김진욱"
-        },
-        {
-          "date": "20260801",
-          "away": "SS",
-          "home": "LT",
-          "awayStarter": "보스",
-          "homeStarter": "비슬리"
         },
         {
           "date": "20260802",
@@ -448,13 +434,6 @@
           "homeStarter": "토다"
         },
         {
-          "date": "20260801",
-          "away": "HT",
-          "home": "NC",
-          "awayStarter": "황동하",
-          "homeStarter": "라일리"
-        },
-        {
           "date": "20260802",
           "away": "HT",
           "home": "NC",
@@ -490,13 +469,6 @@
           "home": "LT",
           "awayStarter": "원태인",
           "homeStarter": "김진욱"
-        },
-        {
-          "date": "20260801",
-          "away": "SS",
-          "home": "LT",
-          "awayStarter": "보스",
-          "homeStarter": "비슬리"
         },
         {
           "date": "20260802",
