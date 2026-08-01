@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-01T05:12:57.683Z",
+  "updatedAt": "2026-08-01T07:00:46.033Z",
   "lastWeek": {
     "range": [
       "20260720",
@@ -233,7 +233,9 @@
         {
           "date": "20260802",
           "away": "HT",
-          "home": "NC"
+          "home": "NC",
+          "awayStarter": "황동하",
+          "homeStarter": "라일리"
         }
       ],
       "SS": [
@@ -275,7 +277,9 @@
         {
           "date": "20260802",
           "away": "SS",
-          "home": "LT"
+          "home": "LT",
+          "awayStarter": "보스",
+          "homeStarter": "비슬리"
         }
       ],
       "OB": [
@@ -443,7 +447,9 @@
         {
           "date": "20260802",
           "away": "HT",
-          "home": "NC"
+          "home": "NC",
+          "awayStarter": "황동하",
+          "homeStarter": "라일리"
         }
       ],
       "LT": [
@@ -485,7 +491,9 @@
         {
           "date": "20260802",
           "away": "SS",
-          "home": "LT"
+          "home": "LT",
+          "awayStarter": "보스",
+          "homeStarter": "비슬리"
         }
       ],
       "HH": [
