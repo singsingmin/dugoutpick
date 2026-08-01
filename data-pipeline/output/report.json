@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-01T12:20:27.573Z",
+  "updatedAt": "2026-08-01T12:30:32.381Z",
   "lastWeek": {
     "range": [
       "20260720",
@@ -67,7 +67,7 @@
         "l": 1,
         "d": 1,
         "rank": 9,
-        "note": "2연패, 살짝 흔들린다 — 그래도 이번주 키움 만나니까 해볼 만해"
+        "note": "탈락권이지만 자존심 경기는 남았다 (4승1패 1무) — 그래도 이번주 키움 만나니까 해볼 만해"
       },
       "WO": {
         "w": 3,
@@ -149,7 +149,9 @@
         {
           "date": "20260802",
           "away": "SK",
-          "home": "WO"
+          "home": "WO",
+          "awayStarter": "아빌라",
+          "homeStarter": "전준표"
         }
       ],
       "LG": [
@@ -191,7 +193,9 @@
         {
           "date": "20260802",
           "away": "LG",
-          "home": "OB"
+          "home": "OB",
+          "awayStarter": "톨허스트",
+          "homeStarter": "벤자민"
         }
       ],
       "HT": [
@@ -321,7 +325,9 @@
         {
           "date": "20260802",
           "away": "LG",
-          "home": "OB"
+          "home": "OB",
+          "awayStarter": "톨허스트",
+          "homeStarter": "벤자민"
         }
       ],
       "SK": [
@@ -363,7 +369,9 @@
         {
           "date": "20260802",
           "away": "SK",
-          "home": "WO"
+          "home": "WO",
+          "awayStarter": "아빌라",
+          "homeStarter": "전준표"
         }
       ],
       "KT": [

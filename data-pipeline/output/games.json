@@ -1,7 +1,7 @@
 {
   "date": "20260801",
   "dateText": "2026년 8월 1일",
-  "updatedAt": "2026-08-01T12:20:27.573Z",
+  "updatedAt": "2026-08-01T12:30:32.381Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -15,7 +15,7 @@
       "gameId": "20260801LGOB0",
       "time": "18:00",
       "stadium": "잠실",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPOTV2",
       "away": {
@@ -25,9 +25,9 @@
         "score": 2,
         "starter": {
           "name": "카라스코",
-          "era": null,
-          "w": null,
-          "l": null
+          "era": 0,
+          "w": 0,
+          "l": 0
         }
       },
       "home": {
@@ -37,7 +37,7 @@
         "score": 2,
         "starter": {
           "name": "곽빈",
-          "era": 2.64,
+          "era": 2.66,
           "w": 9,
           "l": 4
         }
@@ -61,119 +61,24 @@
           "doom": 0,
           "park": 0.09,
           "offense": 0.5
-        }
+        },
+        "frozen": false
       },
-      "live": {
-        "inning": 11,
-        "half": "B",
-        "out": 3,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "김진수",
-        "batter": "박찬호",
-        "heat": 99,
-        "label": "끝내기 한 방 찬스"
+      "live": null,
+      "recap": {
+        "actual": 99,
+        "verdict": "예측 적중",
+        "diff": 0,
+        "total": 4,
+        "extra": 1,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "유격수",
-            "name": "박찬호"
-          },
-          {
-            "order": 2,
-            "pos": "1루수",
-            "name": "세베리노"
-          },
-          {
-            "order": 3,
-            "pos": "2루수",
-            "name": "박준순"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "양의지"
-          },
-          {
-            "order": 5,
-            "pos": "좌익수",
-            "name": "김민석"
-          },
-          {
-            "order": 6,
-            "pos": "3루수",
-            "name": "안재석"
-          },
-          {
-            "order": 7,
-            "pos": "우익수",
-            "name": "김대한"
-          },
-          {
-            "order": 8,
-            "pos": "중견수",
-            "name": "조수행"
-          },
-          {
-            "order": 9,
-            "pos": "포수",
-            "name": "윤준호"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "우익수",
-            "name": "홍창기"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "박해민"
-          },
-          {
-            "order": 3,
-            "pos": "1루수",
-            "name": "오스틴"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "문정빈"
-          },
-          {
-            "order": 5,
-            "pos": "좌익수",
-            "name": "송찬의"
-          },
-          {
-            "order": 6,
-            "pos": "유격수",
-            "name": "오지환"
-          },
-          {
-            "order": 7,
-            "pos": "3루수",
-            "name": "구본혁"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "이주헌"
-          },
-          {
-            "order": 9,
-            "pos": "2루수",
-            "name": "신민재"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260801SSLT0",
@@ -225,7 +130,8 @@
           "doom": 0,
           "park": 0.77,
           "offense": 0.5
-        }
+        },
+        "frozen": false
       },
       "live": null,
       "recap": null,
@@ -246,9 +152,9 @@
         "score": 4,
         "starter": {
           "name": "짐머맨",
-          "era": 0,
+          "era": 7.88,
           "w": 0,
-          "l": 0
+          "l": 1
         }
       },
       "home": {
@@ -258,8 +164,8 @@
         "score": 7,
         "starter": {
           "name": "배제성",
-          "era": 4.3,
-          "w": 0,
+          "era": 4.72,
+          "w": 1,
           "l": 2
         }
       },
@@ -282,7 +188,8 @@
           "doom": 0,
           "park": 0.45,
           "offense": 0.5
-        }
+        },
+        "frozen": false
       },
       "live": null,
       "recap": {
@@ -294,9 +201,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "배제성",
+        "lose": "짐머맨",
+        "save": "박영현"
       },
       "lineup": null
     },
@@ -350,7 +257,8 @@
           "doom": 0,
           "park": 0.64,
           "offense": 0.5
-        }
+        },
+        "frozen": false
       },
       "live": null,
       "recap": null,
@@ -371,8 +279,8 @@
         "score": 10,
         "starter": {
           "name": "타케다",
-          "era": 7.1,
-          "w": 1,
+          "era": 6.89,
+          "w": 2,
           "l": 8
         }
       },
@@ -383,9 +291,9 @@
         "score": 2,
         "starter": {
           "name": "김윤하",
-          "era": 6.35,
+          "era": 7.59,
           "w": 1,
-          "l": 1
+          "l": 2
         }
       },
       "honjam": {
@@ -407,7 +315,8 @@
           "doom": 0,
           "park": 0,
           "offense": 0.5
-        }
+        },
+        "frozen": false
       },
       "live": null,
       "recap": {
@@ -419,8 +328,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "타케다",
+        "lose": "김윤하",
         "save": null
       },
       "lineup": null
