@@ -1,7 +1,7 @@
 {
   "date": "20260802",
   "dateText": "2026년 8월 2일",
-  "updatedAt": "2026-08-02T07:20:35.020Z",
+  "updatedAt": "2026-08-02T07:27:20.907Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "아빌라",
           "era": 1.5,
@@ -67,13 +67,13 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 2,
+        "out": 3,
         "b1": true,
         "b2": false,
-        "b3": false,
-        "pitcher": "박지성",
-        "batter": "정준재",
-        "heat": 53,
+        "b3": true,
+        "pitcher": "김성민",
+        "batter": "김재환",
+        "heat": 57,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
