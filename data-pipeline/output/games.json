@@ -1,7 +1,7 @@
 {
   "date": "20260802",
   "dateText": "2026년 8월 2일",
-  "updatedAt": "2026-08-02T12:30:33.474Z",
+  "updatedAt": "2026-08-02T12:33:04.296Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -205,12 +205,12 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": true,
         "b2": false,
         "b3": true,
         "pitcher": "김원중",
-        "batter": "김지찬",
+        "batter": "김성윤",
         "heat": 15,
         "label": "경기 흐름 체크 중"
       },
