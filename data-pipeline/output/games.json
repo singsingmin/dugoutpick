@@ -1,7 +1,7 @@
 {
   "date": "20260802",
   "dateText": "2026년 8월 2일",
-  "updatedAt": "2026-08-02T09:00:42.999Z",
+  "updatedAt": "2026-08-02T09:10:26.382Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -84,14 +84,14 @@
       "gameId": "20260802LGOB0",
       "time": "18:00",
       "stadium": "잠실",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SPOTV2",
       "away": {
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "톨허스트",
           "era": 4.19,
@@ -103,7 +103,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 4,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "벤자민",
           "era": 2.48,
@@ -130,9 +130,21 @@
           "doom": 0,
           "park": 0.09,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "B",
+        "out": 0,
+        "b1": true,
+        "b2": false,
+        "b3": true,
+        "pitcher": "톨허스트",
+        "batter": "박준순",
+        "heat": 33,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
@@ -390,14 +402,14 @@
       "gameId": "20260802HHKT0",
       "time": "18:00",
       "stadium": "수원",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "KBS N SPORTS,SBS SPORTS",
       "away": {
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "화이트",
           "era": 3.2,
@@ -409,7 +421,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "고영표",
           "era": 3.88,
@@ -436,9 +448,21 @@
           "doom": 0,
           "park": 0.45,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "B",
+        "out": 2,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "화이트",
+        "batter": "안현민",
+        "heat": 33,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
