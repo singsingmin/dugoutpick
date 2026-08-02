@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-02T08:20:25.420Z",
+  "updatedAt": "2026-08-02T08:30:32.281Z",
   "standings": [
     {
       "rank": 1,
@@ -221,16 +221,16 @@
       "rank": 9,
       "code": "SK",
       "name": "SSG",
-      "games": 101,
+      "games": 102,
       "win": 38,
-      "loss": 59,
+      "loss": 60,
       "draw": 4,
-      "winRate": 0.392,
-      "gamesBehind": 21.5,
-      "last10": "6승1무3패",
-      "streak": "1승",
+      "winRate": 0.388,
+      "gamesBehind": 22,
+      "last10": "5승1무4패",
+      "streak": "1패",
       "home": "18-3-28",
-      "away": "20-1-31",
+      "away": "20-1-32",
       "rs": 0,
       "vs": {
         "KT": "7-5-0",
@@ -241,22 +241,22 @@
         "HH": "2-9-0",
         "NC": "6-3-2",
         "LT": "5-6-1",
-        "WO": "5-6-0"
+        "WO": "5-7-0"
       }
     },
     {
       "rank": 10,
       "code": "WO",
       "name": "키움",
-      "games": 102,
-      "win": 37,
+      "games": 103,
+      "win": 38,
       "loss": 63,
       "draw": 2,
-      "winRate": 0.37,
-      "gamesBehind": 24,
+      "winRate": 0.376,
+      "gamesBehind": 23.5,
       "last10": "5승0무5패",
-      "streak": "1패",
-      "home": "21-1-31",
+      "streak": "1승",
+      "home": "22-1-31",
       "away": "16-1-32",
       "rs": 0,
       "vs": {
@@ -268,7 +268,7 @@
         "HH": "7-4-1",
         "NC": "6-6-0",
         "LT": "2-7-0",
-        "SK": "6-5-0"
+        "SK": "7-5-0"
       }
     }
   ]
