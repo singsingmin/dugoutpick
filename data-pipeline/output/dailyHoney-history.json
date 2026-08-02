@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-02T12:33:04.296Z",
+  "updatedAt": "2026-08-02T12:40:26.687Z",
   "results": [
     {
       "date": "20260705",
@@ -375,6 +375,27 @@
         "score": 2
       },
       "calculatedAt": "2026-08-01T12:30:32.381Z"
+    },
+    {
+      "date": "20260802",
+      "actualTopGameId": "20260802SKWO0",
+      "recapScore": 81,
+      "decidingReasonTags": [
+        "2점차 접전"
+      ],
+      "displayMode": "highlight",
+      "displayTitle": "어제의 명경기",
+      "away": {
+        "code": "SK",
+        "name": "SSG",
+        "score": 3
+      },
+      "home": {
+        "code": "WO",
+        "name": "키움",
+        "score": 5
+      },
+      "calculatedAt": "2026-08-02T12:40:26.687Z"
     }
   ]
 }
