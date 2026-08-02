@@ -1,12 +1,12 @@
 {
   "date": "20260802",
   "dateText": "2026년 8월 2일",
-  "updatedAt": "2026-08-02T12:10:25.813Z",
+  "updatedAt": "2026-08-02T12:20:31.525Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
     "hitRate": 16,
-    "bonusRate": 56,
+    "bonusRate": 54,
     "ready": true
   },
   "recommendedGameId": "20260802LGOB0",
@@ -160,7 +160,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "보스",
           "era": 3.6,
@@ -204,14 +204,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
+        "half": "B",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "최준용",
-        "batter": "구자욱",
-        "heat": 14,
+        "pitcher": "장찬희",
+        "batter": "나승엽",
+        "heat": 27,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -318,7 +318,7 @@
       "gameId": "20260802HHKT0",
       "time": "18:00",
       "stadium": "수원",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "KBS N SPORTS,SBS SPORTS",
       "away": {
@@ -367,117 +367,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 1,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "이정현",
-        "batter": "채은성",
-        "heat": 4,
-        "label": "점수차가 벌어진 경기"
+      "live": null,
+      "recap": {
+        "actual": 10,
+        "verdict": "기대 이하",
+        "diff": 11,
+        "total": 13,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "우익수",
-            "name": "최원준"
-          },
-          {
-            "order": 2,
-            "pos": "1루수",
-            "name": "김현수"
-          },
-          {
-            "order": 3,
-            "pos": "지명타자",
-            "name": "안현민"
-          },
-          {
-            "order": 4,
-            "pos": "중견수",
-            "name": "힐리어드"
-          },
-          {
-            "order": 5,
-            "pos": "좌익수",
-            "name": "김민혁"
-          },
-          {
-            "order": 6,
-            "pos": "2루수",
-            "name": "김상수"
-          },
-          {
-            "order": 7,
-            "pos": "3루수",
-            "name": "허경민"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "한승택"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "장준원"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "이원석"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "페라자"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "문현빈"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "강백호"
-          },
-          {
-            "order": 5,
-            "pos": "3루수",
-            "name": "노시환"
-          },
-          {
-            "order": 6,
-            "pos": "1루수",
-            "name": "채은성"
-          },
-          {
-            "order": 7,
-            "pos": "포수",
-            "name": "허인서"
-          },
-          {
-            "order": 8,
-            "pos": "2루수",
-            "name": "이도윤"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "심우준"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260802HTNC0",
