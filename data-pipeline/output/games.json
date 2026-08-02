@@ -1,7 +1,7 @@
 {
   "date": "20260802",
   "dateText": "2026년 8월 2일",
-  "updatedAt": "2026-08-02T07:40:26.370Z",
+  "updatedAt": "2026-08-02T07:50:26.580Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "전준표",
           "era": 7.24,
@@ -66,13 +66,13 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
+        "half": "B",
         "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김성민",
-        "batter": "한유섬",
+        "pitcher": "노경은",
+        "batter": "김웅빈",
         "heat": 62,
         "label": "후반 박빙 승부"
       },
