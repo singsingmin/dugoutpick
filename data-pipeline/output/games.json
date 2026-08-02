@@ -1,7 +1,7 @@
 {
   "date": "20260802",
   "dateText": "2026년 8월 2일",
-  "updatedAt": "2026-08-02T05:01:46.930Z",
+  "updatedAt": "2026-08-02T05:10:25.753Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "아빌라",
           "era": 1.5,
@@ -67,13 +67,13 @@
       "live": {
         "inning": 1,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "전준표",
-        "batter": "정준재",
-        "heat": 31,
+        "batter": "전의산",
+        "heat": 29,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
