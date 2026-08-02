@@ -1,7 +1,7 @@
 {
   "date": "20260802",
   "dateText": "2026년 8월 2일",
-  "updatedAt": "2026-08-02T09:30:31.287Z",
+  "updatedAt": "2026-08-02T09:32:00.313Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -136,12 +136,12 @@
       "live": {
         "inning": 2,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": false,
         "b2": true,
         "b3": false,
         "pitcher": "톨허스트",
-        "batter": "박찬호",
+        "batter": "김대한",
         "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
@@ -249,14 +249,14 @@
       "gameId": "20260802SSLT0",
       "time": "18:00",
       "stadium": "사직",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "MBC SPORTS",
       "away": {
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "보스",
           "era": 3.6,
@@ -268,7 +268,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "비슬리",
           "era": 4.02,
@@ -295,9 +295,21 @@
           "doom": 0,
           "park": 0.77,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 0,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "비슬리",
+        "batter": "김지찬",
+        "heat": 31,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
@@ -452,15 +464,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
-        "out": 1,
+        "inning": 3,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "화이트",
-        "batter": "한승택",
-        "heat": 35,
+        "pitcher": "고영표",
+        "batter": "허인서",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
