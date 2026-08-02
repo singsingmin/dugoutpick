@@ -1,7 +1,7 @@
 {
   "date": "20260802",
   "dateText": "2026년 8월 2일",
-  "updatedAt": "2026-08-02T09:10:26.382Z",
+  "updatedAt": "2026-08-02T09:20:31.098Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -103,7 +103,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 4,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "벤자민",
           "era": 2.48,
@@ -134,14 +134,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "톨허스트",
-        "batter": "박준순",
+        "b3": false,
+        "pitcher": "벤자민",
+        "batter": "문정빈",
         "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
@@ -421,7 +421,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "고영표",
           "era": 3.88,
@@ -452,14 +452,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 2,
+        "inning": 2,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "화이트",
-        "batter": "안현민",
+        "pitcher": "고영표",
+        "batter": "강백호",
         "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
