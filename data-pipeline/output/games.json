@@ -1,7 +1,7 @@
 {
   "date": "20260802",
   "dateText": "2026년 8월 2일",
-  "updatedAt": "2026-08-02T07:10:23.908Z",
+  "updatedAt": "2026-08-02T07:20:35.020Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 1,
+        "inning": 6,
+        "half": "T",
+        "out": 2,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "김민",
-        "batter": "박찬혁",
-        "heat": 50,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "박지성",
+        "batter": "정준재",
+        "heat": 53,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
