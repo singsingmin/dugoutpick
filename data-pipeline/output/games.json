@@ -1,7 +1,7 @@
 {
   "date": "20260802",
   "dateText": "2026년 8월 2일",
-  "updatedAt": "2026-08-02T06:50:26.456Z",
+  "updatedAt": "2026-08-02T07:00:37.336Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -68,11 +68,11 @@
         "inning": 5,
         "half": "T",
         "out": 2,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "전준표",
-        "batter": "박성한",
+        "b1": true,
+        "b2": true,
+        "b3": true,
+        "pitcher": "박지성",
+        "batter": "한유섬",
         "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
