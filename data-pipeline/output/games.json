@@ -1,7 +1,7 @@
 {
   "date": "20260802",
   "dateText": "2026년 8월 2일",
-  "updatedAt": "2026-08-02T08:00:44.067Z",
+  "updatedAt": "2026-08-02T08:10:33.329Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
+        "inning": 9,
         "half": "T",
-        "out": 1,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "원종현",
-        "batter": "조형우",
-        "heat": 55,
+        "batter": "정준재",
+        "heat": 60,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -235,13 +235,13 @@
         "home": [
           {
             "order": 1,
-            "pos": "유격수",
-            "name": "박찬호"
+            "pos": "우익수",
+            "name": "김대한"
           },
           {
             "order": 2,
-            "pos": "1루수",
-            "name": "세베리노"
+            "pos": "지명타자",
+            "name": "오명진"
           },
           {
             "order": 3,
@@ -250,7 +250,7 @@
           },
           {
             "order": 4,
-            "pos": "지명타자",
+            "pos": "포수",
             "name": "양의지"
           },
           {
@@ -265,8 +265,8 @@
           },
           {
             "order": 7,
-            "pos": "우익수",
-            "name": "김대한"
+            "pos": "1루수",
+            "name": "세베리노"
           },
           {
             "order": 8,
@@ -275,8 +275,8 @@
           },
           {
             "order": 9,
-            "pos": "포수",
-            "name": "윤준호"
+            "pos": "유격수",
+            "name": "박찬호"
           }
         ],
         "away": [
@@ -326,7 +326,7 @@
             "name": "신민재"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
