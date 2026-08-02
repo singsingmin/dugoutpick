@@ -1,7 +1,7 @@
 {
   "date": "20260802",
   "dateText": "2026년 8월 2일",
-  "updatedAt": "2026-08-02T08:10:33.329Z",
+  "updatedAt": "2026-08-02T08:20:25.420Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "원종현",
-        "batter": "정준재",
+        "pitcher": "유토",
+        "batter": "전의산",
         "heat": 60,
         "label": "후반 박빙 승부"
       },
@@ -541,38 +541,38 @@
         "home": [
           {
             "order": 1,
-            "pos": "중견수",
+            "pos": "우익수",
             "name": "최원준"
           },
           {
             "order": 2,
-            "pos": "지명타자",
+            "pos": "1루수",
             "name": "김현수"
           },
           {
             "order": 3,
-            "pos": "우익수",
+            "pos": "지명타자",
             "name": "안현민"
           },
           {
             "order": 4,
-            "pos": "좌익수",
+            "pos": "중견수",
             "name": "힐리어드"
           },
           {
             "order": 5,
+            "pos": "좌익수",
+            "name": "김민혁"
+          },
+          {
+            "order": 6,
             "pos": "2루수",
             "name": "김상수"
           },
           {
-            "order": 6,
+            "order": 7,
             "pos": "3루수",
             "name": "허경민"
-          },
-          {
-            "order": 7,
-            "pos": "1루수",
-            "name": "오윤석"
           },
           {
             "order": 8,
@@ -632,7 +632,7 @@
             "name": "심우준"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
