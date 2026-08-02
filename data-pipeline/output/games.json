@@ -1,7 +1,7 @@
 {
   "date": "20260802",
   "dateText": "2026년 8월 2일",
-  "updatedAt": "2026-08-02T10:10:23.597Z",
+  "updatedAt": "2026-08-02T10:20:24.195Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -103,7 +103,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 4,
-        "score": 2,
+        "score": 6,
         "starter": {
           "name": "벤자민",
           "era": 2.48,
@@ -136,14 +136,14 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": true,
-        "b2": true,
+        "b2": false,
         "b3": false,
         "pitcher": "톨허스트",
-        "batter": "조수행",
-        "heat": 45,
-        "label": "초반 팽팽한 흐름"
+        "batter": "양의지",
+        "heat": 31,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -300,14 +300,14 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
-        "out": 0,
+        "half": "B",
+        "out": 1,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "비슬리",
-        "batter": "류지혁",
-        "heat": 8,
+        "pitcher": "보스",
+        "batter": "노진혁",
+        "heat": 9,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -464,15 +464,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 0,
-        "b1": true,
-        "b2": true,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "화이트",
-        "batter": "한승택",
-        "heat": 45,
+        "pitcher": "고영표",
+        "batter": "노시환",
+        "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
