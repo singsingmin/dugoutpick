@@ -1,7 +1,7 @@
 {
   "date": "20260802",
   "dateText": "2026년 8월 2일",
-  "updatedAt": "2026-08-02T05:17:07.962Z",
+  "updatedAt": "2026-08-02T05:20:30.173Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -68,11 +68,11 @@
         "inning": 1,
         "half": "B",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "아빌라",
-        "batter": "서건창",
+        "batter": "추재현",
         "heat": 31,
         "label": "초반 팽팽한 흐름"
       },
