@@ -1,7 +1,7 @@
 {
   "date": "20260802",
   "dateText": "2026년 8월 2일",
-  "updatedAt": "2026-08-02T05:40:27.418Z",
+  "updatedAt": "2026-08-02T05:50:29.976Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
+        "inning": 3,
+        "half": "T",
         "out": 1,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "아빌라",
-        "batter": "박찬혁",
-        "heat": 35,
+        "pitcher": "전준표",
+        "batter": "김재환",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
