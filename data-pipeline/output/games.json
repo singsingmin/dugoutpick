@@ -1,7 +1,7 @@
 {
   "date": "20260802",
   "dateText": "2026년 8월 2일",
-  "updatedAt": "2026-08-02T10:20:24.195Z",
+  "updatedAt": "2026-08-02T10:30:37.082Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -134,15 +134,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
+        "inning": 5,
         "half": "B",
-        "out": 2,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "톨허스트",
-        "batter": "양의지",
-        "heat": 31,
+        "pitcher": "이우찬",
+        "batter": "김민석",
+        "heat": 34,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -299,14 +299,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
+        "inning": 4,
+        "half": "T",
         "out": 1,
-        "b1": false,
-        "b2": true,
+        "b1": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "보스",
-        "batter": "노진혁",
+        "pitcher": "비슬리",
+        "batter": "구자욱",
         "heat": 9,
         "label": "경기 흐름 체크 중"
       },
@@ -465,14 +465,14 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 0,
+        "half": "B",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "고영표",
-        "batter": "노시환",
-        "heat": 48,
+        "pitcher": "화이트",
+        "batter": "안현민",
+        "heat": 50,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
