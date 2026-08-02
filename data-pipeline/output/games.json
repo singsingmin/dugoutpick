@@ -1,7 +1,7 @@
 {
   "date": "20260802",
   "dateText": "2026년 8월 2일",
-  "updatedAt": "2026-08-02T09:32:00.313Z",
+  "updatedAt": "2026-08-02T09:40:23.674Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -91,7 +91,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "톨허스트",
           "era": 4.19,
@@ -103,7 +103,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 4,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "벤자민",
           "era": 2.48,
@@ -134,15 +134,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
-        "out": 2,
+        "inning": 3,
+        "half": "T",
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "톨허스트",
-        "batter": "김대한",
-        "heat": 35,
+        "pitcher": "벤자민",
+        "batter": "신민재",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -300,14 +300,14 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
-        "out": 0,
+        "half": "B",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "비슬리",
-        "batter": "김지찬",
-        "heat": 31,
+        "pitcher": "보스",
+        "batter": "나승엽",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -466,12 +466,12 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "고영표",
-        "batter": "허인서",
+        "batter": "이원석",
         "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
