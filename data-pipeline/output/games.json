@@ -1,7 +1,7 @@
 {
   "date": "20260802",
   "dateText": "2026년 8월 2일",
-  "updatedAt": "2026-08-02T12:20:31.525Z",
+  "updatedAt": "2026-08-02T12:30:33.474Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -172,7 +172,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": 9,
+        "score": 10,
         "starter": {
           "name": "비슬리",
           "era": 4.02,
@@ -203,15 +203,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
+        "inning": 9,
+        "half": "T",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
-        "b3": false,
-        "pitcher": "장찬희",
-        "batter": "나승엽",
-        "heat": 27,
+        "b3": true,
+        "pitcher": "김원중",
+        "batter": "김지찬",
+        "heat": 15,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
