@@ -1,7 +1,7 @@
 {
   "date": "20260802",
   "dateText": "2026년 8월 2일",
-  "updatedAt": "2026-08-02T06:20:27.736Z",
+  "updatedAt": "2026-08-02T06:30:32.447Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 1,
+        "score": 3,
         "starter": {
           "name": "전준표",
           "era": 7.24,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 2,
-        "b1": true,
-        "b2": true,
-        "b3": true,
-        "pitcher": "아빌라",
-        "batter": "김웅빈",
-        "heat": 43,
+        "inning": 4,
+        "half": "T",
+        "out": 1,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "전준표",
+        "batter": "마드리스",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
