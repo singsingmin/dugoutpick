@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-02T15:35:12.312Z",
+  "updatedAt": "2026-08-03T05:25:04.165Z",
   "lastWeek": {
     "range": [
       "20260727",
@@ -114,7 +114,9 @@
         {
           "date": "20260804",
           "away": "NC",
-          "home": "OB"
+          "home": "OB",
+          "awayStarter": "라일리",
+          "homeStarter": "최승용"
         },
         {
           "date": "20260805",
@@ -146,7 +148,9 @@
         {
           "date": "20260804",
           "away": "NC",
-          "home": "OB"
+          "home": "OB",
+          "awayStarter": "라일리",
+          "homeStarter": "최승용"
         },
         {
           "date": "20260805",
@@ -178,7 +182,9 @@
         {
           "date": "20260804",
           "away": "HH",
-          "home": "SS"
+          "home": "SS",
+          "awayStarter": "왕옌청",
+          "homeStarter": "양창섭"
         },
         {
           "date": "20260805",
@@ -210,7 +216,9 @@
         {
           "date": "20260804",
           "away": "HH",
-          "home": "SS"
+          "home": "SS",
+          "awayStarter": "왕옌청",
+          "homeStarter": "양창섭"
         },
         {
           "date": "20260805",
@@ -242,7 +250,9 @@
         {
           "date": "20260804",
           "away": "WO",
-          "home": "LT"
+          "home": "LT",
+          "awayStarter": "하영민",
+          "homeStarter": "로드리게스"
         },
         {
           "date": "20260805",
@@ -274,7 +284,9 @@
         {
           "date": "20260804",
           "away": "WO",
-          "home": "LT"
+          "home": "LT",
+          "awayStarter": "하영민",
+          "homeStarter": "로드리게스"
         },
         {
           "date": "20260805",
@@ -306,7 +318,9 @@
         {
           "date": "20260804",
           "away": "LG",
-          "home": "SK"
+          "home": "SK",
+          "awayStarter": "웰스",
+          "homeStarter": "김민준"
         },
         {
           "date": "20260805",
@@ -338,7 +352,9 @@
         {
           "date": "20260804",
           "away": "LG",
-          "home": "SK"
+          "home": "SK",
+          "awayStarter": "웰스",
+          "homeStarter": "김민준"
         },
         {
           "date": "20260805",
@@ -370,7 +386,9 @@
         {
           "date": "20260804",
           "away": "KT",
-          "home": "HT"
+          "home": "HT",
+          "awayStarter": "오원석",
+          "homeStarter": "올러"
         },
         {
           "date": "20260805",
@@ -402,7 +420,9 @@
         {
           "date": "20260804",
           "away": "KT",
-          "home": "HT"
+          "home": "HT",
+          "awayStarter": "오원석",
+          "homeStarter": "올러"
         },
         {
           "date": "20260805",
