@@ -1,7 +1,7 @@
 {
   "date": "20260804",
   "dateText": "2026년 8월 4일",
-  "updatedAt": "2026-08-04T11:10:26.201Z",
+  "updatedAt": "2026-08-04T11:20:27.597Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -123,15 +123,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 1,
+        "inning": 6,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "왕옌청",
-        "batter": "류지혁",
-        "heat": 31,
+        "pitcher": "김재윤",
+        "batter": "노시환",
+        "heat": 33,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -245,7 +245,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "하영민",
           "era": 4.55,
@@ -289,14 +289,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "로드리게스",
-        "batter": "추재현",
-        "heat": 44,
+        "pitcher": "정현우",
+        "batter": "손성빈",
+        "heat": 56,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -454,14 +454,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김민준",
-        "batter": "문정빈",
-        "heat": 57,
+        "pitcher": "박시원",
+        "batter": "김재환",
+        "heat": 59,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
