@@ -1,12 +1,12 @@
 {
   "date": "20260804",
   "dateText": "2026년 8월 4일",
-  "updatedAt": "2026-08-04T13:10:29.814Z",
+  "updatedAt": "2026-08-04T13:20:37.664Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
-    "hitRate": 16,
-    "bonusRate": 54,
+    "hitRate": 14,
+    "bonusRate": 56,
     "ready": true
   },
   "recommendedGameId": "20260804KTHT0",
@@ -211,7 +211,7 @@
       "gameId": "20260804LGSK0",
       "time": "18:30",
       "stadium": "문학",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPOTV2",
       "away": {
@@ -260,117 +260,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 0,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "조병현",
-        "batter": "송찬의",
-        "heat": 66,
-        "label": "후반 박빙 승부"
+      "live": null,
+      "recap": {
+        "actual": 87,
+        "verdict": "기대 이상",
+        "diff": 2,
+        "total": 18,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "2루수",
-            "name": "정준재"
-          },
-          {
-            "order": 2,
-            "pos": "유격수",
-            "name": "박성한"
-          },
-          {
-            "order": 3,
-            "pos": "지명타자",
-            "name": "김재환"
-          },
-          {
-            "order": 4,
-            "pos": "1루수",
-            "name": "전의산"
-          },
-          {
-            "order": 5,
-            "pos": "좌익수",
-            "name": "오태곤"
-          },
-          {
-            "order": 6,
-            "pos": "포수",
-            "name": "조형우"
-          },
-          {
-            "order": 7,
-            "pos": "중견수",
-            "name": "최지훈"
-          },
-          {
-            "order": 8,
-            "pos": "3루수",
-            "name": "안상현"
-          },
-          {
-            "order": 9,
-            "pos": "우익수",
-            "name": "임근우"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "우익수",
-            "name": "홍창기"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "박해민"
-          },
-          {
-            "order": 3,
-            "pos": "1루수",
-            "name": "오스틴"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "문정빈"
-          },
-          {
-            "order": 5,
-            "pos": "좌익수",
-            "name": "문성주"
-          },
-          {
-            "order": 6,
-            "pos": "유격수",
-            "name": "오지환"
-          },
-          {
-            "order": 7,
-            "pos": "3루수",
-            "name": "천성호"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "이주헌"
-          },
-          {
-            "order": 9,
-            "pos": "2루수",
-            "name": "구본혁"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260804KTHT0",
