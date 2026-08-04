@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-04T13:20:37.664Z",
+  "updatedAt": "2026-08-04T13:30:34.243Z",
   "lastWeek": {
     "range": [
       "20260727",
@@ -25,7 +25,7 @@
         "l": 3,
         "d": 1,
         "rank": 3,
-        "note": "2연패 중, 한숨이 나온다 — 그래도 랜더스 상대가 남았으니까"
+        "note": "3연패 중, 한숨이 나온다 — 그래도 랜더스 상대가 남았으니까"
       },
       "OB": {
         "w": 4,
@@ -87,8 +87,8 @@
       {
         "away": "HT",
         "home": "LG",
-        "pred": 89,
-        "reason": "게임차 2.5의 순위 다툼",
+        "pred": 92,
+        "reason": "게임차 2, 막상막하 승부",
         "dateStart": "20260807",
         "dateEnd": "20260809"
       },
@@ -110,78 +110,6 @@
       }
     ],
     "team": {
-      "NC": [
-        {
-          "date": "20260804",
-          "away": "NC",
-          "home": "OB",
-          "awayStarter": "라일리",
-          "homeStarter": "최승용"
-        },
-        {
-          "date": "20260805",
-          "away": "NC",
-          "home": "OB",
-          "awayStarter": "라일리",
-          "homeStarter": "최민석"
-        },
-        {
-          "date": "20260806",
-          "away": "NC",
-          "home": "OB"
-        },
-        {
-          "date": "20260807",
-          "away": "SK",
-          "home": "NC"
-        },
-        {
-          "date": "20260808",
-          "away": "SK",
-          "home": "NC"
-        },
-        {
-          "date": "20260809",
-          "away": "SK",
-          "home": "NC"
-        }
-      ],
-      "OB": [
-        {
-          "date": "20260804",
-          "away": "NC",
-          "home": "OB",
-          "awayStarter": "라일리",
-          "homeStarter": "최승용"
-        },
-        {
-          "date": "20260805",
-          "away": "NC",
-          "home": "OB",
-          "awayStarter": "라일리",
-          "homeStarter": "최민석"
-        },
-        {
-          "date": "20260806",
-          "away": "NC",
-          "home": "OB"
-        },
-        {
-          "date": "20260807",
-          "away": "OB",
-          "home": "SS"
-        },
-        {
-          "date": "20260808",
-          "away": "OB",
-          "home": "SS"
-        },
-        {
-          "date": "20260809",
-          "away": "OB",
-          "home": "SS"
-        }
-      ],
       "HH": [
         {
           "date": "20260804",
@@ -337,7 +265,9 @@
         {
           "date": "20260805",
           "away": "LG",
-          "home": "SK"
+          "home": "SK",
+          "awayStarter": "임찬규",
+          "homeStarter": "해치"
         },
         {
           "date": "20260806",
@@ -371,7 +301,9 @@
         {
           "date": "20260805",
           "away": "LG",
-          "home": "SK"
+          "home": "SK",
+          "awayStarter": "임찬규",
+          "homeStarter": "해치"
         },
         {
           "date": "20260806",
@@ -392,6 +324,78 @@
           "date": "20260809",
           "away": "SK",
           "home": "NC"
+        }
+      ],
+      "NC": [
+        {
+          "date": "20260804",
+          "away": "NC",
+          "home": "OB",
+          "awayStarter": "라일리",
+          "homeStarter": "최승용"
+        },
+        {
+          "date": "20260805",
+          "away": "NC",
+          "home": "OB",
+          "awayStarter": "라일리",
+          "homeStarter": "최민석"
+        },
+        {
+          "date": "20260806",
+          "away": "NC",
+          "home": "OB"
+        },
+        {
+          "date": "20260807",
+          "away": "SK",
+          "home": "NC"
+        },
+        {
+          "date": "20260808",
+          "away": "SK",
+          "home": "NC"
+        },
+        {
+          "date": "20260809",
+          "away": "SK",
+          "home": "NC"
+        }
+      ],
+      "OB": [
+        {
+          "date": "20260804",
+          "away": "NC",
+          "home": "OB",
+          "awayStarter": "라일리",
+          "homeStarter": "최승용"
+        },
+        {
+          "date": "20260805",
+          "away": "NC",
+          "home": "OB",
+          "awayStarter": "라일리",
+          "homeStarter": "최민석"
+        },
+        {
+          "date": "20260806",
+          "away": "NC",
+          "home": "OB"
+        },
+        {
+          "date": "20260807",
+          "away": "OB",
+          "home": "SS"
+        },
+        {
+          "date": "20260808",
+          "away": "OB",
+          "home": "SS"
+        },
+        {
+          "date": "20260809",
+          "away": "OB",
+          "home": "SS"
         }
       ],
       "KT": [
