@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-04T04:50:36.352Z",
+  "updatedAt": "2026-08-04T08:10:34.861Z",
   "lastWeek": {
     "range": [
       "20260727",
@@ -178,74 +178,6 @@
           "home": "SS"
         }
       ],
-      "WO": [
-        {
-          "date": "20260804",
-          "away": "WO",
-          "home": "LT",
-          "awayStarter": "하영민",
-          "homeStarter": "로드리게스"
-        },
-        {
-          "date": "20260805",
-          "away": "WO",
-          "home": "LT"
-        },
-        {
-          "date": "20260806",
-          "away": "WO",
-          "home": "LT"
-        },
-        {
-          "date": "20260807",
-          "away": "WO",
-          "home": "HH"
-        },
-        {
-          "date": "20260808",
-          "away": "WO",
-          "home": "HH"
-        },
-        {
-          "date": "20260809",
-          "away": "WO",
-          "home": "HH"
-        }
-      ],
-      "LT": [
-        {
-          "date": "20260804",
-          "away": "WO",
-          "home": "LT",
-          "awayStarter": "하영민",
-          "homeStarter": "로드리게스"
-        },
-        {
-          "date": "20260805",
-          "away": "WO",
-          "home": "LT"
-        },
-        {
-          "date": "20260806",
-          "away": "WO",
-          "home": "LT"
-        },
-        {
-          "date": "20260807",
-          "away": "LT",
-          "home": "KT"
-        },
-        {
-          "date": "20260808",
-          "away": "LT",
-          "home": "KT"
-        },
-        {
-          "date": "20260809",
-          "away": "LT",
-          "home": "KT"
-        }
-      ],
       "LG": [
         {
           "date": "20260804",
@@ -384,6 +316,74 @@
           "date": "20260809",
           "away": "OB",
           "home": "SS"
+        }
+      ],
+      "WO": [
+        {
+          "date": "20260804",
+          "away": "WO",
+          "home": "LT",
+          "awayStarter": "하영민",
+          "homeStarter": "로드리게스"
+        },
+        {
+          "date": "20260805",
+          "away": "WO",
+          "home": "LT"
+        },
+        {
+          "date": "20260806",
+          "away": "WO",
+          "home": "LT"
+        },
+        {
+          "date": "20260807",
+          "away": "WO",
+          "home": "HH"
+        },
+        {
+          "date": "20260808",
+          "away": "WO",
+          "home": "HH"
+        },
+        {
+          "date": "20260809",
+          "away": "WO",
+          "home": "HH"
+        }
+      ],
+      "LT": [
+        {
+          "date": "20260804",
+          "away": "WO",
+          "home": "LT",
+          "awayStarter": "하영민",
+          "homeStarter": "로드리게스"
+        },
+        {
+          "date": "20260805",
+          "away": "WO",
+          "home": "LT"
+        },
+        {
+          "date": "20260806",
+          "away": "WO",
+          "home": "LT"
+        },
+        {
+          "date": "20260807",
+          "away": "LT",
+          "home": "KT"
+        },
+        {
+          "date": "20260808",
+          "away": "LT",
+          "home": "KT"
+        },
+        {
+          "date": "20260809",
+          "away": "LT",
+          "home": "KT"
         }
       ],
       "KT": [
