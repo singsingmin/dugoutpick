@@ -1,7 +1,7 @@
 {
   "date": "20260804",
   "dateText": "2026년 8월 4일",
-  "updatedAt": "2026-08-04T11:30:46.618Z",
+  "updatedAt": "2026-08-04T11:40:25.967Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -123,15 +123,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 1,
+        "inning": 7,
+        "half": "T",
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "왕옌청",
-        "batter": "구자욱",
-        "heat": 34,
+        "pitcher": "임기영",
+        "batter": "페라자",
+        "heat": 36,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -288,16 +288,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 2,
+        "inning": 7,
+        "half": "T",
+        "out": 1,
         "b1": true,
         "b2": false,
-        "b3": true,
-        "pitcher": "정현우",
-        "batter": "한동희",
-        "heat": 56,
-        "label": "경기 흐름 체크 중"
+        "b3": false,
+        "pitcher": "이이무라",
+        "batter": "김태진",
+        "heat": 59,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -454,14 +454,14 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
+        "half": "B",
         "out": 2,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "전영준",
-        "batter": "구본혁",
-        "heat": 62,
+        "pitcher": "박시원",
+        "batter": "정준재",
+        "heat": 65,
         "label": "후반 박빙 승부"
       },
       "recap": null,
