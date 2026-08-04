@@ -1,7 +1,7 @@
 {
   "date": "20260804",
   "dateText": "2026년 8월 4일",
-  "updatedAt": "2026-08-04T10:50:27.057Z",
+  "updatedAt": "2026-08-04T11:00:40.202Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -80,7 +80,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 1,
+        "score": 3,
         "starter": {
           "name": "왕옌청",
           "era": 3.54,
@@ -128,11 +128,11 @@
         "out": 2,
         "b1": true,
         "b2": true,
-        "b3": false,
-        "pitcher": "양창섭",
-        "batter": "이원석",
-        "heat": 48,
-        "label": "초반 팽팽한 흐름"
+        "b3": true,
+        "pitcher": "이승현",
+        "batter": "강백호",
+        "heat": 29,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -257,7 +257,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "로드리게스",
           "era": 4.33,
@@ -288,16 +288,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
+        "inning": 6,
+        "half": "T",
         "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "하영민",
-        "batter": "한동희",
-        "heat": 50,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "로드리게스",
+        "batter": "권혁빈",
+        "heat": 44,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -453,15 +453,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 0,
+        "inning": 5,
+        "half": "T",
+        "out": 1,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "박시원",
-        "batter": "조형우",
-        "heat": 48,
+        "pitcher": "김민준",
+        "batter": "박해민",
+        "heat": 51,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
