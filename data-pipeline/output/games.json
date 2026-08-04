@@ -1,7 +1,7 @@
 {
   "date": "20260804",
   "dateText": "2026년 8월 4일",
-  "updatedAt": "2026-08-04T09:40:31.775Z",
+  "updatedAt": "2026-08-04T09:50:30.593Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -123,15 +123,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 0,
+        "inning": 2,
+        "half": "T",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "왕옌청",
-        "batter": "김지찬",
-        "heat": 33,
+        "pitcher": "양창섭",
+        "batter": "강백호",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -288,15 +288,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "B",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "하영민",
-        "batter": "레이예스",
-        "heat": 31,
+        "batter": "윤동희",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -454,14 +454,14 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": true,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "김민준",
-        "batter": "문정빈",
-        "heat": 31,
+        "pitcher": "웰스",
+        "batter": "박성한",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
