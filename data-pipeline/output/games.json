@@ -1,7 +1,7 @@
 {
   "date": "20260804",
   "dateText": "2026년 8월 4일",
-  "updatedAt": "2026-08-04T12:00:49.635Z",
+  "updatedAt": "2026-08-04T12:10:29.025Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -124,14 +124,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
+        "half": "B",
         "out": 2,
-        "b1": false,
+        "b1": true,
         "b2": false,
-        "b3": true,
-        "pitcher": "배찬승",
-        "batter": "허인서",
-        "heat": 26,
+        "b3": false,
+        "pitcher": "조동욱",
+        "batter": "구자욱",
+        "heat": 27,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -288,16 +288,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
+        "inning": 9,
         "half": "T",
-        "out": 1,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "최준용",
-        "batter": "데이비슨",
-        "heat": 64,
-        "label": "후반 박빙 승부"
+        "batter": "여동욱",
+        "heat": 75,
+        "label": "9회 1점 승부"
       },
       "recap": null,
       "decision": null,
@@ -453,14 +453,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 2,
-        "b1": false,
+        "inning": 8,
+        "half": "T",
+        "out": 0,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "김진수",
-        "batter": "최지훈",
+        "pitcher": "박시후",
+        "batter": "신민재",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
