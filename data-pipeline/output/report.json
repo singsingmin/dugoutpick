@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-04T08:10:34.861Z",
+  "updatedAt": "2026-08-04T08:20:28.976Z",
   "lastWeek": {
     "range": [
       "20260727",
@@ -110,74 +110,6 @@
       }
     ],
     "team": {
-      "HH": [
-        {
-          "date": "20260804",
-          "away": "HH",
-          "home": "SS",
-          "awayStarter": "왕옌청",
-          "homeStarter": "양창섭"
-        },
-        {
-          "date": "20260805",
-          "away": "HH",
-          "home": "SS"
-        },
-        {
-          "date": "20260806",
-          "away": "HH",
-          "home": "SS"
-        },
-        {
-          "date": "20260807",
-          "away": "WO",
-          "home": "HH"
-        },
-        {
-          "date": "20260808",
-          "away": "WO",
-          "home": "HH"
-        },
-        {
-          "date": "20260809",
-          "away": "WO",
-          "home": "HH"
-        }
-      ],
-      "SS": [
-        {
-          "date": "20260804",
-          "away": "HH",
-          "home": "SS",
-          "awayStarter": "왕옌청",
-          "homeStarter": "양창섭"
-        },
-        {
-          "date": "20260805",
-          "away": "HH",
-          "home": "SS"
-        },
-        {
-          "date": "20260806",
-          "away": "HH",
-          "home": "SS"
-        },
-        {
-          "date": "20260807",
-          "away": "OB",
-          "home": "SS"
-        },
-        {
-          "date": "20260808",
-          "away": "OB",
-          "home": "SS"
-        },
-        {
-          "date": "20260809",
-          "away": "OB",
-          "home": "SS"
-        }
-      ],
       "LG": [
         {
           "date": "20260804",
@@ -318,6 +250,74 @@
           "home": "SS"
         }
       ],
+      "HH": [
+        {
+          "date": "20260804",
+          "away": "HH",
+          "home": "SS",
+          "awayStarter": "왕옌청",
+          "homeStarter": "양창섭"
+        },
+        {
+          "date": "20260805",
+          "away": "HH",
+          "home": "SS"
+        },
+        {
+          "date": "20260806",
+          "away": "HH",
+          "home": "SS"
+        },
+        {
+          "date": "20260807",
+          "away": "WO",
+          "home": "HH"
+        },
+        {
+          "date": "20260808",
+          "away": "WO",
+          "home": "HH"
+        },
+        {
+          "date": "20260809",
+          "away": "WO",
+          "home": "HH"
+        }
+      ],
+      "SS": [
+        {
+          "date": "20260804",
+          "away": "HH",
+          "home": "SS",
+          "awayStarter": "왕옌청",
+          "homeStarter": "양창섭"
+        },
+        {
+          "date": "20260805",
+          "away": "HH",
+          "home": "SS"
+        },
+        {
+          "date": "20260806",
+          "away": "HH",
+          "home": "SS"
+        },
+        {
+          "date": "20260807",
+          "away": "OB",
+          "home": "SS"
+        },
+        {
+          "date": "20260808",
+          "away": "OB",
+          "home": "SS"
+        },
+        {
+          "date": "20260809",
+          "away": "OB",
+          "home": "SS"
+        }
+      ],
       "WO": [
         {
           "date": "20260804",
@@ -397,7 +397,9 @@
         {
           "date": "20260805",
           "away": "KT",
-          "home": "HT"
+          "home": "HT",
+          "awayStarter": "로건",
+          "homeStarter": "올러"
         },
         {
           "date": "20260806",
@@ -431,7 +433,9 @@
         {
           "date": "20260805",
           "away": "KT",
-          "home": "HT"
+          "home": "HT",
+          "awayStarter": "로건",
+          "homeStarter": "올러"
         },
         {
           "date": "20260806",
