@@ -1,7 +1,7 @@
 {
   "date": "20260804",
   "dateText": "2026년 8월 4일",
-  "updatedAt": "2026-08-04T09:50:30.593Z",
+  "updatedAt": "2026-08-04T10:00:48.261Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -123,15 +123,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
+        "inning": 3,
         "half": "T",
-        "out": 1,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "양창섭",
-        "batter": "강백호",
-        "heat": 35,
+        "batter": "허인서",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -288,15 +288,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
+        "inning": 3,
         "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "하영민",
-        "batter": "윤동희",
-        "heat": 35,
+        "batter": "손성빈",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -422,7 +422,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "김민준",
           "era": 4.3,
@@ -453,15 +453,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "웰스",
-        "batter": "박성한",
-        "heat": 33,
+        "pitcher": "김민준",
+        "batter": "오지환",
+        "heat": 27,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
