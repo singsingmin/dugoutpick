@@ -1,7 +1,7 @@
 {
   "date": "20260804",
   "dateText": "2026년 8월 4일",
-  "updatedAt": "2026-08-04T10:10:28.990Z",
+  "updatedAt": "2026-08-04T10:20:32.081Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -123,15 +123,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 1,
-        "b1": false,
+        "inning": 4,
+        "half": "T",
+        "out": 0,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "왕옌청",
-        "batter": "김지찬",
-        "heat": 43,
+        "pitcher": "양창섭",
+        "batter": "페라자",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -245,7 +245,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "하영민",
           "era": 4.55,
@@ -290,13 +290,13 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "out": 1,
+        "b1": true,
+        "b2": true,
         "b3": false,
         "pitcher": "로드리게스",
-        "batter": "서건창",
-        "heat": 43,
+        "batter": "김웅빈",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -453,15 +453,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
-        "out": 0,
+        "inning": 3,
+        "half": "T",
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "웰스",
-        "batter": "조형우",
-        "heat": 35,
+        "pitcher": "김민준",
+        "batter": "문정빈",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
