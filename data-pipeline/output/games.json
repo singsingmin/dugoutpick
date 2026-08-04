@@ -1,7 +1,7 @@
 {
   "date": "20260804",
   "dateText": "2026년 8월 4일",
-  "updatedAt": "2026-08-04T11:00:40.202Z",
+  "updatedAt": "2026-08-04T11:10:26.201Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -124,14 +124,14 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 2,
-        "b1": true,
-        "b2": true,
-        "b3": true,
-        "pitcher": "이승현",
-        "batter": "강백호",
-        "heat": 29,
+        "half": "B",
+        "out": 1,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "왕옌청",
+        "batter": "류지혁",
+        "heat": 31,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -290,12 +290,12 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "로드리게스",
-        "batter": "권혁빈",
+        "batter": "추재현",
         "heat": 44,
         "label": "경기 흐름 체크 중"
       },
@@ -453,16 +453,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
+        "inning": 6,
         "half": "T",
-        "out": 1,
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
         "pitcher": "김민준",
-        "batter": "박해민",
-        "heat": 51,
-        "label": "초반 팽팽한 흐름"
+        "batter": "문정빈",
+        "heat": 57,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
