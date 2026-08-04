@@ -1,7 +1,7 @@
 {
   "date": "20260804",
   "dateText": "2026년 8월 4일",
-  "updatedAt": "2026-08-04T12:10:29.025Z",
+  "updatedAt": "2026-08-04T12:20:34.971Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -123,15 +123,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
+        "inning": 9,
+        "half": "T",
+        "out": 3,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "조동욱",
-        "batter": "구자욱",
-        "heat": 27,
+        "pitcher": "이승현",
+        "batter": "페라자",
+        "heat": 28,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -290,12 +290,12 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "최준용",
-        "batter": "여동욱",
+        "pitcher": "김원중",
+        "batter": "임병욱",
         "heat": 75,
         "label": "9회 1점 승부"
       },
@@ -410,7 +410,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "웰스",
           "era": 4.04,
@@ -455,12 +455,12 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "박시후",
-        "batter": "신민재",
+        "pitcher": "최민준",
+        "batter": "이재원",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
