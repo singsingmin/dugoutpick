@@ -1,7 +1,7 @@
 {
   "date": "20260804",
   "dateText": "2026년 8월 4일",
-  "updatedAt": "2026-08-04T12:40:25.809Z",
+  "updatedAt": "2026-08-04T12:50:29.572Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -262,14 +262,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 2,
-        "b1": true,
-        "b2": false,
-        "b3": true,
-        "pitcher": "김민",
-        "batter": "신민재",
-        "heat": 72,
+        "half": "B",
+        "out": 1,
+        "b1": false,
+        "b2": true,
+        "b3": false,
+        "pitcher": "김영우",
+        "batter": "정준재",
+        "heat": 75,
         "label": "후반 박빙 승부"
       },
       "recap": null,
