@@ -1,7 +1,7 @@
 {
   "date": "20260804",
   "dateText": "2026년 8월 4일",
-  "updatedAt": "2026-08-04T12:50:29.572Z",
+  "updatedAt": "2026-08-04T13:00:41.696Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -230,7 +230,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 9,
+        "score": 10,
         "starter": {
           "name": "김민준",
           "era": 4.3,
@@ -261,15 +261,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 1,
+        "inning": 9,
+        "half": "T",
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "김영우",
-        "batter": "정준재",
-        "heat": 75,
+        "pitcher": "김민",
+        "batter": "송찬의",
+        "heat": 66,
         "label": "후반 박빙 승부"
       },
       "recap": null,
