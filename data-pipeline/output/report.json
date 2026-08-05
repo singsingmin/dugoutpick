@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-04T16:49:14.757Z",
+  "updatedAt": "2026-08-05T04:50:44.968Z",
   "lastWeek": {
     "range": [
       "20260727",
@@ -98,7 +98,7 @@
         "pred": 71,
         "reason": "게임차 8.5의 순위 다툼 · 양 팀 에이스 투수전(ERA 3.2·3.2)",
         "dateStart": "20260805",
-        "dateEnd": "20260806"
+        "dateEnd": "20260805"
       },
       {
         "away": "OB",
@@ -124,11 +124,6 @@
           "home": "SS",
           "awayStarter": "박준영",
           "homeStarter": "페덱"
-        },
-        {
-          "date": "20260806",
-          "away": "HH",
-          "home": "SS"
         },
         {
           "date": "20260807",
@@ -162,11 +157,6 @@
           "homeStarter": "페덱"
         },
         {
-          "date": "20260806",
-          "away": "HH",
-          "home": "SS"
-        },
-        {
           "date": "20260807",
           "away": "OB",
           "home": "SS"
@@ -196,11 +186,6 @@
           "home": "LT",
           "awayStarter": "안우진",
           "homeStarter": "박세웅"
-        },
-        {
-          "date": "20260806",
-          "away": "WO",
-          "home": "LT"
         },
         {
           "date": "20260807",
@@ -234,11 +219,6 @@
           "homeStarter": "박세웅"
         },
         {
-          "date": "20260806",
-          "away": "WO",
-          "home": "LT"
-        },
-        {
           "date": "20260807",
           "away": "LT",
           "home": "KT"
@@ -268,11 +248,6 @@
           "home": "SK",
           "awayStarter": "임찬규",
           "homeStarter": "해치"
-        },
-        {
-          "date": "20260806",
-          "away": "LG",
-          "home": "SK"
         },
         {
           "date": "20260807",
@@ -306,11 +281,6 @@
           "homeStarter": "해치"
         },
         {
-          "date": "20260806",
-          "away": "LG",
-          "home": "SK"
-        },
-        {
           "date": "20260807",
           "away": "SK",
           "home": "NC"
@@ -333,11 +303,6 @@
           "home": "OB",
           "awayStarter": "라일리",
           "homeStarter": "최민석"
-        },
-        {
-          "date": "20260806",
-          "away": "NC",
-          "home": "OB"
         },
         {
           "date": "20260807",
@@ -364,11 +329,6 @@
           "homeStarter": "최민석"
         },
         {
-          "date": "20260806",
-          "away": "NC",
-          "home": "OB"
-        },
-        {
           "date": "20260807",
           "away": "OB",
           "home": "SS"
@@ -393,11 +353,6 @@
           "homeStarter": "올러"
         },
         {
-          "date": "20260806",
-          "away": "KT",
-          "home": "HT"
-        },
-        {
           "date": "20260807",
           "away": "LT",
           "home": "KT"
@@ -420,11 +375,6 @@
           "home": "HT",
           "awayStarter": "로건",
           "homeStarter": "올러"
-        },
-        {
-          "date": "20260806",
-          "away": "KT",
-          "home": "HT"
         },
         {
           "date": "20260807",
