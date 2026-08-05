@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-05T06:00:39.061Z",
+  "updatedAt": "2026-08-05T16:26:14.609Z",
   "lastWeek": {
     "range": [
       "20260727",
@@ -97,8 +97,8 @@
         "home": "HT",
         "pred": 71,
         "reason": "게임차 8.5의 순위 다툼 · 양 팀 에이스 투수전(ERA 3.2·3.2)",
-        "dateStart": "20260805",
-        "dateEnd": "20260805"
+        "dateStart": "20260806",
+        "dateEnd": "20260806"
       },
       {
         "away": "OB",
@@ -119,11 +119,9 @@
           "homeStarter": "양창섭"
         },
         {
-          "date": "20260805",
+          "date": "20260806",
           "away": "HH",
-          "home": "SS",
-          "awayStarter": "박준영",
-          "homeStarter": "페덱"
+          "home": "SS"
         },
         {
           "date": "20260807",
@@ -150,11 +148,9 @@
           "homeStarter": "양창섭"
         },
         {
-          "date": "20260805",
+          "date": "20260806",
           "away": "HH",
-          "home": "SS",
-          "awayStarter": "박준영",
-          "homeStarter": "페덱"
+          "home": "SS"
         },
         {
           "date": "20260807",
@@ -181,11 +177,9 @@
           "homeStarter": "로드리게스"
         },
         {
-          "date": "20260805",
+          "date": "20260806",
           "away": "WO",
-          "home": "LT",
-          "awayStarter": "안우진",
-          "homeStarter": "박세웅"
+          "home": "LT"
         },
         {
           "date": "20260807",
@@ -212,11 +206,9 @@
           "homeStarter": "로드리게스"
         },
         {
-          "date": "20260805",
+          "date": "20260806",
           "away": "WO",
-          "home": "LT",
-          "awayStarter": "안우진",
-          "homeStarter": "박세웅"
+          "home": "LT"
         },
         {
           "date": "20260807",
@@ -243,11 +235,9 @@
           "homeStarter": "김민준"
         },
         {
-          "date": "20260805",
+          "date": "20260806",
           "away": "LG",
-          "home": "SK",
-          "awayStarter": "임찬규",
-          "homeStarter": "해치"
+          "home": "SK"
         },
         {
           "date": "20260807",
@@ -274,11 +264,9 @@
           "homeStarter": "김민준"
         },
         {
-          "date": "20260805",
+          "date": "20260806",
           "away": "LG",
-          "home": "SK",
-          "awayStarter": "임찬규",
-          "homeStarter": "해치"
+          "home": "SK"
         },
         {
           "date": "20260807",
@@ -298,11 +286,9 @@
       ],
       "NC": [
         {
-          "date": "20260805",
+          "date": "20260806",
           "away": "NC",
-          "home": "OB",
-          "awayStarter": "라일리",
-          "homeStarter": "최민석"
+          "home": "OB"
         },
         {
           "date": "20260807",
@@ -322,11 +308,9 @@
       ],
       "OB": [
         {
-          "date": "20260805",
+          "date": "20260806",
           "away": "NC",
-          "home": "OB",
-          "awayStarter": "라일리",
-          "homeStarter": "최민석"
+          "home": "OB"
         },
         {
           "date": "20260807",
@@ -346,11 +330,9 @@
       ],
       "KT": [
         {
-          "date": "20260805",
+          "date": "20260806",
           "away": "KT",
-          "home": "HT",
-          "awayStarter": "로건",
-          "homeStarter": "올러"
+          "home": "HT"
         },
         {
           "date": "20260807",
@@ -370,11 +352,9 @@
       ],
       "HT": [
         {
-          "date": "20260805",
+          "date": "20260806",
           "away": "KT",
-          "home": "HT",
-          "awayStarter": "로건",
-          "homeStarter": "올러"
+          "home": "HT"
         },
         {
           "date": "20260807",
