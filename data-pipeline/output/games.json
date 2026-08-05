@@ -1,7 +1,7 @@
 {
   "date": "20260805",
   "dateText": "2026년 8월 5일",
-  "updatedAt": "2026-08-05T04:50:44.968Z",
+  "updatedAt": "2026-08-05T06:00:39.061Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -133,7 +133,7 @@
       "stadium": "사직",
       "status": "CANCELED",
       "cancelReason": "폭염취소",
-      "broadcast": "MBC SPORTS",
+      "broadcast": "MBC SPORTS+",
       "away": {
         "code": "WO",
         "name": "키움",
