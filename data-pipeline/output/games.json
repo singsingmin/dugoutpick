@@ -1,7 +1,7 @@
 {
-  "date": "20260808",
-  "dateText": "2026년 8월 8일",
-  "updatedAt": "2026-08-07T16:13:57.692Z",
+  "date": "20260809",
+  "dateText": "2026년 8월 9일",
+  "updatedAt": "2026-08-08T15:21:37.025Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -9,10 +9,10 @@
     "bonusRate": 56,
     "ready": true
   },
-  "recommendedGameId": "20260808HTLG0",
+  "recommendedGameId": "20260809HTLG0",
   "games": [
     {
-      "gameId": "20260808HTLG0",
+      "gameId": "20260809HTLG0",
       "time": "18:00",
       "stadium": "잠실",
       "status": "CANCELED",
@@ -51,8 +51,7 @@
           "doom": 0,
           "park": 0.09,
           "offense": 0.5
-        },
-        "frozen": false
+        }
       },
       "live": null,
       "recap": null,
@@ -60,7 +59,7 @@
       "lineup": null
     },
     {
-      "gameId": "20260808OBSS0",
+      "gameId": "20260809OBSS0",
       "time": "18:00",
       "stadium": "대구",
       "status": "CANCELED",
@@ -99,8 +98,7 @@
           "doom": 0,
           "park": 1,
           "offense": 0.5
-        },
-        "frozen": false
+        }
       },
       "live": null,
       "recap": null,
@@ -108,7 +106,7 @@
       "lineup": null
     },
     {
-      "gameId": "20260808LTKT0",
+      "gameId": "20260809LTKT0",
       "time": "18:00",
       "stadium": "수원",
       "status": "CANCELED",
@@ -147,8 +145,7 @@
           "doom": 0,
           "park": 0.45,
           "offense": 0.5
-        },
-        "frozen": false
+        }
       },
       "live": null,
       "recap": null,
@@ -156,7 +153,7 @@
       "lineup": null
     },
     {
-      "gameId": "20260808SKNC0",
+      "gameId": "20260809SKNC0",
       "time": "18:00",
       "stadium": "창원",
       "status": "CANCELED",
@@ -195,8 +192,7 @@
           "doom": 0,
           "park": 0.64,
           "offense": 0.5
-        },
-        "frozen": false
+        }
       },
       "live": null,
       "recap": null,
@@ -204,7 +200,7 @@
       "lineup": null
     },
     {
-      "gameId": "20260808WOHH0",
+      "gameId": "20260809WOHH0",
       "time": "18:00",
       "stadium": "대전",
       "status": "CANCELED",
@@ -243,8 +239,7 @@
           "doom": 0,
           "park": 0.36,
           "offense": 0.5
-        },
-        "frozen": false
+        }
       },
       "live": null,
       "recap": null,

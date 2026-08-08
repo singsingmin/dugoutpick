@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-07T16:13:57.692Z",
+  "updatedAt": "2026-08-08T15:21:37.025Z",
   "lastWeek": {
     "range": [
       "20260727",
@@ -89,24 +89,24 @@
         "home": "LG",
         "pred": 92,
         "reason": "게임차 2, 막상막하 승부",
-        "dateStart": "20260808",
-        "dateEnd": "20260808"
+        "dateStart": "20260809",
+        "dateEnd": "20260809"
       },
       {
         "away": "OB",
         "home": "SS",
         "pred": 71,
         "reason": "게임차 6.5의 순위 다툼 · 리그 2위·4위 상위권 빅매치",
-        "dateStart": "20260808",
-        "dateEnd": "20260808"
+        "dateStart": "20260809",
+        "dateEnd": "20260809"
       },
       {
         "away": "SK",
         "home": "NC",
         "pred": 44,
         "reason": "게임차 7의 순위 다툼",
-        "dateStart": "20260808",
-        "dateEnd": "20260808"
+        "dateStart": "20260809",
+        "dateEnd": "20260809"
       }
     ],
     "team": {
@@ -119,7 +119,7 @@
           "homeStarter": "양창섭"
         },
         {
-          "date": "20260808",
+          "date": "20260809",
           "away": "WO",
           "home": "HH"
         }
@@ -133,7 +133,7 @@
           "homeStarter": "양창섭"
         },
         {
-          "date": "20260808",
+          "date": "20260809",
           "away": "OB",
           "home": "SS"
         }
@@ -147,7 +147,7 @@
           "homeStarter": "로드리게스"
         },
         {
-          "date": "20260808",
+          "date": "20260809",
           "away": "WO",
           "home": "HH"
         }
@@ -161,7 +161,7 @@
           "homeStarter": "로드리게스"
         },
         {
-          "date": "20260808",
+          "date": "20260809",
           "away": "LT",
           "home": "KT"
         }
@@ -175,7 +175,7 @@
           "homeStarter": "김민준"
         },
         {
-          "date": "20260808",
+          "date": "20260809",
           "away": "HT",
           "home": "LG"
         }
@@ -189,35 +189,35 @@
           "homeStarter": "김민준"
         },
         {
-          "date": "20260808",
+          "date": "20260809",
           "away": "SK",
           "home": "NC"
         }
       ],
       "HT": [
         {
-          "date": "20260808",
+          "date": "20260809",
           "away": "HT",
           "home": "LG"
         }
       ],
       "OB": [
         {
-          "date": "20260808",
+          "date": "20260809",
           "away": "OB",
           "home": "SS"
         }
       ],
       "KT": [
         {
-          "date": "20260808",
+          "date": "20260809",
           "away": "LT",
           "home": "KT"
         }
       ],
       "NC": [
         {
-          "date": "20260808",
+          "date": "20260809",
           "away": "SK",
           "home": "NC"
         }
