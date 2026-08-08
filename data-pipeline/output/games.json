@@ -1,7 +1,7 @@
 {
   "date": "20260809",
   "dateText": "2026년 8월 9일",
-  "updatedAt": "2026-08-08T15:21:37.025Z",
+  "updatedAt": "2026-08-08T15:53:52.589Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -51,7 +51,8 @@
           "doom": 0,
           "park": 0.09,
           "offense": 0.5
-        }
+        },
+        "frozen": false
       },
       "live": null,
       "recap": null,
@@ -98,7 +99,8 @@
           "doom": 0,
           "park": 1,
           "offense": 0.5
-        }
+        },
+        "frozen": false
       },
       "live": null,
       "recap": null,
@@ -145,7 +147,8 @@
           "doom": 0,
           "park": 0.45,
           "offense": 0.5
-        }
+        },
+        "frozen": false
       },
       "live": null,
       "recap": null,
@@ -192,7 +195,8 @@
           "doom": 0,
           "park": 0.64,
           "offense": 0.5
-        }
+        },
+        "frozen": false
       },
       "live": null,
       "recap": null,
@@ -239,7 +243,8 @@
           "doom": 0,
           "park": 0.36,
           "offense": 0.5
-        }
+        },
+        "frozen": false
       },
       "live": null,
       "recap": null,
