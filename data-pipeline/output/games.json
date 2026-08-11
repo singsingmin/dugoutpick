@@ -1,7 +1,7 @@
 {
   "date": "20260811",
   "dateText": "2026년 8월 11일",
-  "updatedAt": "2026-08-11T12:30:35.039Z",
+  "updatedAt": "2026-08-11T12:40:29.570Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "타카다",
-        "batter": "페라자",
-        "heat": 43,
+        "pitcher": "황준서",
+        "batter": "박찬호",
+        "heat": 45,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -180,7 +180,7 @@
       "gameId": "20260811LTSK0",
       "time": "19:00",
       "stadium": "문학",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPOTV",
       "away": {
@@ -229,117 +229,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 0,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "조병현",
-        "batter": "윤동희",
-        "heat": 28,
-        "label": "경기 흐름 체크 중"
+      "live": null,
+      "recap": {
+        "actual": 53,
+        "verdict": "기대 이상",
+        "diff": 4,
+        "total": 12,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "2루수",
-            "name": "정준재"
-          },
-          {
-            "order": 2,
-            "pos": "유격수",
-            "name": "박성한"
-          },
-          {
-            "order": 3,
-            "pos": "지명타자",
-            "name": "김재환"
-          },
-          {
-            "order": 4,
-            "pos": "1루수",
-            "name": "전의산"
-          },
-          {
-            "order": 5,
-            "pos": "좌익수",
-            "name": "마드리스"
-          },
-          {
-            "order": 6,
-            "pos": "중견수",
-            "name": "최지훈"
-          },
-          {
-            "order": 7,
-            "pos": "우익수",
-            "name": "한유섬"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "조형우"
-          },
-          {
-            "order": 9,
-            "pos": "3루수",
-            "name": "안상현"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "황성빈"
-          },
-          {
-            "order": 2,
-            "pos": "1루수",
-            "name": "나승엽"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "레이예스"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "한동희"
-          },
-          {
-            "order": 5,
-            "pos": "2루수",
-            "name": "고승민"
-          },
-          {
-            "order": 6,
-            "pos": "우익수",
-            "name": "윤동희"
-          },
-          {
-            "order": 7,
-            "pos": "3루수",
-            "name": "노진혁"
-          },
-          {
-            "order": 8,
-            "pos": "유격수",
-            "name": "전민재"
-          },
-          {
-            "order": 9,
-            "pos": "포수",
-            "name": "손성빈"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260811SSHT0",
@@ -395,15 +299,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
+        "inning": 9,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "장찬희",
-        "batter": "카스트로",
-        "heat": 56,
+        "pitcher": "이의리",
+        "batter": "구자욱",
+        "heat": 58,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -561,14 +465,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
+        "half": "B",
         "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김진호",
-        "batter": "김현수",
-        "heat": 53,
+        "pitcher": "우규민",
+        "batter": "박건우",
+        "heat": 56,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -682,7 +586,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "카라스코",
           "era": 0,
@@ -727,13 +631,13 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "박지성",
-        "batter": "오지환",
-        "heat": 64,
+        "pitcher": "원종현",
+        "batter": "홍창기",
+        "heat": 55,
         "label": "후반 박빙 승부"
       },
       "recap": null,
