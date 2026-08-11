@@ -1,7 +1,7 @@
 {
   "date": "20260811",
   "dateText": "2026년 8월 11일",
-  "updatedAt": "2026-08-11T11:10:31.911Z",
+  "updatedAt": "2026-08-11T11:11:35.827Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "곽빈",
-        "batter": "허인서",
+        "batter": "이도윤",
         "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
@@ -232,7 +232,7 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
