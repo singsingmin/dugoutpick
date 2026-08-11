@@ -1,12 +1,12 @@
 {
   "date": "20260811",
   "dateText": "2026년 8월 11일",
-  "updatedAt": "2026-08-11T13:10:25.729Z",
+  "updatedAt": "2026-08-11T13:20:26.861Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
     "hitRate": 16,
-    "bonusRate": 52,
+    "bonusRate": 54,
     "ready": true
   },
   "recommendedGameId": "20260811HHOB0",
@@ -229,7 +229,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": 5,
+        "score": 7,
         "starter": {
           "name": "로건",
           "era": 3.08,
@@ -273,15 +273,15 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
+        "half": "B",
         "out": 2,
         "b1": false,
-        "b2": true,
-        "b3": true,
-        "pitcher": "임정호",
-        "batter": "김현수",
-        "heat": 60,
-        "label": "후반 박빙 승부"
+        "b2": false,
+        "b3": false,
+        "pitcher": "박영현",
+        "batter": "김형준",
+        "heat": 30,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -387,7 +387,7 @@
       "gameId": "20260811LGWO0",
       "time": "19:00",
       "stadium": "고척",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "MBC SPORTS+",
       "away": {
@@ -436,117 +436,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 2,
-        "b1": true,
-        "b2": false,
-        "b3": false,
-        "pitcher": "정다훈",
-        "batter": "구본혁",
-        "heat": 15,
-        "label": "경기 흐름 체크 중"
+      "live": null,
+      "recap": {
+        "actual": 32,
+        "verdict": "기대 이상",
+        "diff": 5,
+        "total": 11,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "2루수",
-            "name": "서건창"
-          },
-          {
-            "order": 2,
-            "pos": "좌익수",
-            "name": "추재현"
-          },
-          {
-            "order": 3,
-            "pos": "1루수",
-            "name": "데이비슨"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "히우라"
-          },
-          {
-            "order": 5,
-            "pos": "3루수",
-            "name": "김웅빈"
-          },
-          {
-            "order": 6,
-            "pos": "포수",
-            "name": "김건희"
-          },
-          {
-            "order": 7,
-            "pos": "중견수",
-            "name": "임병욱"
-          },
-          {
-            "order": 8,
-            "pos": "우익수",
-            "name": "박찬혁"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "권혁빈"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "우익수",
-            "name": "홍창기"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "박해민"
-          },
-          {
-            "order": 3,
-            "pos": "1루수",
-            "name": "오스틴"
-          },
-          {
-            "order": 4,
-            "pos": "3루수",
-            "name": "문보경"
-          },
-          {
-            "order": 5,
-            "pos": "지명타자",
-            "name": "문정빈"
-          },
-          {
-            "order": 6,
-            "pos": "좌익수",
-            "name": "송찬의"
-          },
-          {
-            "order": 7,
-            "pos": "유격수",
-            "name": "오지환"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "박동원"
-          },
-          {
-            "order": 9,
-            "pos": "2루수",
-            "name": "구본혁"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     }
   ],
   "postseason": null
