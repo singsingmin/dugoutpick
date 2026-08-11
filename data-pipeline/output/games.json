@@ -1,7 +1,7 @@
 {
   "date": "20260811",
   "dateText": "2026년 8월 11일",
-  "updatedAt": "2026-08-11T13:00:50.502Z",
+  "updatedAt": "2026-08-11T13:10:25.729Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -229,7 +229,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": 2,
+        "score": 5,
         "starter": {
           "name": "로건",
           "era": 3.08,
@@ -274,14 +274,14 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 1,
-        "b1": true,
+        "out": 2,
+        "b1": false,
         "b2": true,
         "b3": true,
-        "pitcher": "이용준",
-        "batter": "류현인",
-        "heat": 75,
-        "label": "9회 1점 승부"
+        "pitcher": "임정호",
+        "batter": "김현수",
+        "heat": 60,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -394,7 +394,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 5,
+        "score": 8,
         "starter": {
           "name": "카라스코",
           "era": 0,
@@ -439,14 +439,14 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 1,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "정다훈",
-        "batter": "문보경",
-        "heat": 60,
-        "label": "후반 박빙 승부"
+        "batter": "구본혁",
+        "heat": 15,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
