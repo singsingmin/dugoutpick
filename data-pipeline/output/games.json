@@ -1,7 +1,7 @@
 {
   "date": "20260811",
   "dateText": "2026년 8월 11일",
-  "updatedAt": "2026-08-11T13:30:40.072Z",
+  "updatedAt": "2026-08-11T13:40:26.691Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -25,7 +25,7 @@
         "score": 3,
         "starter": {
           "name": "왕옌청",
-          "era": 3.34,
+          "era": 3.43,
           "w": 10,
           "l": 4
         }
@@ -37,7 +37,7 @@
         "score": 6,
         "starter": {
           "name": "곽빈",
-          "era": 2.66,
+          "era": 2.53,
           "w": 9,
           "l": 4
         }
@@ -74,9 +74,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "김택연",
+        "lose": "장유호",
+        "save": "이영하"
       },
       "lineup": null
     },
@@ -94,9 +94,9 @@
         "score": 4,
         "starter": {
           "name": "비슬리",
-          "era": 4.09,
+          "era": 4.4,
           "w": 8,
-          "l": 4
+          "l": 5
         }
       },
       "home": {
@@ -106,8 +106,8 @@
         "score": 8,
         "starter": {
           "name": "아빌라",
-          "era": 2.45,
-          "w": 2,
+          "era": 1.93,
+          "w": 3,
           "l": 0
         }
       },
@@ -143,8 +143,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "아빌라",
+        "lose": "비슬리",
         "save": null
       },
       "lineup": null
@@ -163,9 +163,9 @@
         "score": 1,
         "starter": {
           "name": "페덱",
-          "era": 4.24,
+          "era": 4.13,
           "w": 2,
-          "l": 1
+          "l": 2
         }
       },
       "home": {
@@ -175,8 +175,8 @@
         "score": 3,
         "starter": {
           "name": "올러",
-          "era": 3.36,
-          "w": 9,
+          "era": 3.27,
+          "w": 10,
           "l": 8
         }
       },
@@ -212,9 +212,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "올러",
+        "lose": "페덱",
+        "save": "이의리"
       },
       "lineup": null
     },
@@ -232,7 +232,7 @@
         "score": 7,
         "starter": {
           "name": "로건",
-          "era": 3.08,
+          "era": 3.3,
           "w": 3,
           "l": 1
         }
@@ -244,7 +244,7 @@
         "score": 3,
         "starter": {
           "name": "라일리",
-          "era": 3.09,
+          "era": 2.98,
           "w": 5,
           "l": 0
         }
@@ -281,8 +281,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "우규민",
+        "lose": "임지민",
         "save": null
       },
       "lineup": null
@@ -301,8 +301,8 @@
         "score": 8,
         "starter": {
           "name": "카라스코",
-          "era": 0,
-          "w": 0,
+          "era": 1.38,
+          "w": 1,
           "l": 0
         }
       },
@@ -313,7 +313,7 @@
         "score": 3,
         "starter": {
           "name": "안우진",
-          "era": 3.7,
+          "era": 3.69,
           "w": 2,
           "l": 6
         }
@@ -350,9 +350,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "카라스코",
+        "lose": "정현우",
+        "save": "손주영"
       },
       "lineup": null
     }
