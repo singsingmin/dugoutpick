@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-11T09:00:48.772Z",
+  "updatedAt": "2026-08-11T09:10:31.020Z",
   "lastWeek": {
     "range": [
       "20260803",
@@ -110,74 +110,6 @@
       }
     ],
     "team": {
-      "SS": [
-        {
-          "date": "20260811",
-          "away": "SS",
-          "home": "HT",
-          "awayStarter": "페덱",
-          "homeStarter": "올러"
-        },
-        {
-          "date": "20260812",
-          "away": "SS",
-          "home": "HT"
-        },
-        {
-          "date": "20260813",
-          "away": "SS",
-          "home": "HT"
-        },
-        {
-          "date": "20260814",
-          "away": "HH",
-          "home": "SS"
-        },
-        {
-          "date": "20260815",
-          "away": "HH",
-          "home": "SS"
-        },
-        {
-          "date": "20260816",
-          "away": "HH",
-          "home": "SS"
-        }
-      ],
-      "HT": [
-        {
-          "date": "20260811",
-          "away": "SS",
-          "home": "HT",
-          "awayStarter": "페덱",
-          "homeStarter": "올러"
-        },
-        {
-          "date": "20260812",
-          "away": "SS",
-          "home": "HT"
-        },
-        {
-          "date": "20260813",
-          "away": "SS",
-          "home": "HT"
-        },
-        {
-          "date": "20260814",
-          "away": "OB",
-          "home": "HT"
-        },
-        {
-          "date": "20260815",
-          "away": "OB",
-          "home": "HT"
-        },
-        {
-          "date": "20260816",
-          "away": "OB",
-          "home": "HT"
-        }
-      ],
       "KT": [
         {
           "date": "20260811",
@@ -244,74 +176,6 @@
           "date": "20260816",
           "away": "NC",
           "home": "LT"
-        }
-      ],
-      "LG": [
-        {
-          "date": "20260811",
-          "away": "LG",
-          "home": "WO",
-          "awayStarter": "카라스코",
-          "homeStarter": "안우진"
-        },
-        {
-          "date": "20260812",
-          "away": "LG",
-          "home": "WO"
-        },
-        {
-          "date": "20260813",
-          "away": "LG",
-          "home": "WO"
-        },
-        {
-          "date": "20260814",
-          "away": "SK",
-          "home": "LG"
-        },
-        {
-          "date": "20260815",
-          "away": "SK",
-          "home": "LG"
-        },
-        {
-          "date": "20260816",
-          "away": "SK",
-          "home": "LG"
-        }
-      ],
-      "WO": [
-        {
-          "date": "20260811",
-          "away": "LG",
-          "home": "WO",
-          "awayStarter": "카라스코",
-          "homeStarter": "안우진"
-        },
-        {
-          "date": "20260812",
-          "away": "LG",
-          "home": "WO"
-        },
-        {
-          "date": "20260813",
-          "away": "LG",
-          "home": "WO"
-        },
-        {
-          "date": "20260814",
-          "away": "WO",
-          "home": "KT"
-        },
-        {
-          "date": "20260815",
-          "away": "WO",
-          "home": "KT"
-        },
-        {
-          "date": "20260816",
-          "away": "WO",
-          "home": "KT"
         }
       ],
       "HH": [
@@ -448,6 +312,142 @@
           "date": "20260816",
           "away": "SK",
           "home": "LG"
+        }
+      ],
+      "SS": [
+        {
+          "date": "20260811",
+          "away": "SS",
+          "home": "HT",
+          "awayStarter": "페덱",
+          "homeStarter": "올러"
+        },
+        {
+          "date": "20260812",
+          "away": "SS",
+          "home": "HT"
+        },
+        {
+          "date": "20260813",
+          "away": "SS",
+          "home": "HT"
+        },
+        {
+          "date": "20260814",
+          "away": "HH",
+          "home": "SS"
+        },
+        {
+          "date": "20260815",
+          "away": "HH",
+          "home": "SS"
+        },
+        {
+          "date": "20260816",
+          "away": "HH",
+          "home": "SS"
+        }
+      ],
+      "HT": [
+        {
+          "date": "20260811",
+          "away": "SS",
+          "home": "HT",
+          "awayStarter": "페덱",
+          "homeStarter": "올러"
+        },
+        {
+          "date": "20260812",
+          "away": "SS",
+          "home": "HT"
+        },
+        {
+          "date": "20260813",
+          "away": "SS",
+          "home": "HT"
+        },
+        {
+          "date": "20260814",
+          "away": "OB",
+          "home": "HT"
+        },
+        {
+          "date": "20260815",
+          "away": "OB",
+          "home": "HT"
+        },
+        {
+          "date": "20260816",
+          "away": "OB",
+          "home": "HT"
+        }
+      ],
+      "LG": [
+        {
+          "date": "20260811",
+          "away": "LG",
+          "home": "WO",
+          "awayStarter": "카라스코",
+          "homeStarter": "안우진"
+        },
+        {
+          "date": "20260812",
+          "away": "LG",
+          "home": "WO"
+        },
+        {
+          "date": "20260813",
+          "away": "LG",
+          "home": "WO"
+        },
+        {
+          "date": "20260814",
+          "away": "SK",
+          "home": "LG"
+        },
+        {
+          "date": "20260815",
+          "away": "SK",
+          "home": "LG"
+        },
+        {
+          "date": "20260816",
+          "away": "SK",
+          "home": "LG"
+        }
+      ],
+      "WO": [
+        {
+          "date": "20260811",
+          "away": "LG",
+          "home": "WO",
+          "awayStarter": "카라스코",
+          "homeStarter": "안우진"
+        },
+        {
+          "date": "20260812",
+          "away": "LG",
+          "home": "WO"
+        },
+        {
+          "date": "20260813",
+          "away": "LG",
+          "home": "WO"
+        },
+        {
+          "date": "20260814",
+          "away": "WO",
+          "home": "KT"
+        },
+        {
+          "date": "20260815",
+          "away": "WO",
+          "home": "KT"
+        },
+        {
+          "date": "20260816",
+          "away": "WO",
+          "home": "KT"
         }
       ]
     }
