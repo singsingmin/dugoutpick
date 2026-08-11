@@ -1,12 +1,12 @@
 {
   "date": "20260811",
   "dateText": "2026년 8월 11일",
-  "updatedAt": "2026-08-11T12:40:29.570Z",
+  "updatedAt": "2026-08-11T12:50:27.613Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
-    "hitRate": 14,
-    "bonusRate": 56,
+    "hitRate": 16,
+    "bonusRate": 54,
     "ready": true
   },
   "recommendedGameId": "20260811HHOB0",
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
+        "inning": 9,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "황준서",
-        "batter": "박찬호",
-        "heat": 45,
+        "pitcher": "이영하",
+        "batter": "채은성",
+        "heat": 46,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -249,7 +249,7 @@
       "gameId": "20260811SSHT0",
       "time": "19:00",
       "stadium": "광주",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "KBS N SPORTS",
       "away": {
@@ -298,117 +298,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 0,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "이의리",
-        "batter": "구자욱",
-        "heat": 58,
-        "label": "후반 박빙 승부"
+      "live": null,
+      "recap": {
+        "actual": 76,
+        "verdict": "예측 적중",
+        "diff": 2,
+        "total": 4,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "좌익수",
-            "name": "박재현"
-          },
-          {
-            "order": 2,
-            "pos": "1루수",
-            "name": "카스트로"
-          },
-          {
-            "order": 3,
-            "pos": "3루수",
-            "name": "김도영"
-          },
-          {
-            "order": 4,
-            "pos": "우익수",
-            "name": "나성범"
-          },
-          {
-            "order": 5,
-            "pos": "2루수",
-            "name": "김선빈"
-          },
-          {
-            "order": 6,
-            "pos": "유격수",
-            "name": "하주석"
-          },
-          {
-            "order": 7,
-            "pos": "지명타자",
-            "name": "오선우"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "김태군"
-          },
-          {
-            "order": 9,
-            "pos": "중견수",
-            "name": "김호령"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "김지찬"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "김성윤"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "구자욱"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "최형우"
-          },
-          {
-            "order": 5,
-            "pos": "1루수",
-            "name": "디아즈"
-          },
-          {
-            "order": 6,
-            "pos": "유격수",
-            "name": "이재현"
-          },
-          {
-            "order": 7,
-            "pos": "3루수",
-            "name": "김영웅"
-          },
-          {
-            "order": 8,
-            "pos": "2루수",
-            "name": "류지혁"
-          },
-          {
-            "order": 9,
-            "pos": "포수",
-            "name": "김도환"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260811KTNC0",
@@ -464,15 +368,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
-        "b1": false,
-        "b2": false,
+        "inning": 9,
+        "half": "T",
+        "out": 0,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "우규민",
-        "batter": "박건우",
-        "heat": 56,
+        "pitcher": "임지민",
+        "batter": "김민혁",
+        "heat": 58,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -630,14 +534,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
+        "half": "B",
         "out": 1,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "원종현",
-        "batter": "홍창기",
-        "heat": 55,
+        "pitcher": "우강훈",
+        "batter": "히우라",
+        "heat": 57,
         "label": "후반 박빙 승부"
       },
       "recap": null,

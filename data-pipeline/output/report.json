@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-11T12:40:29.570Z",
+  "updatedAt": "2026-08-11T12:50:27.613Z",
   "lastWeek": {
     "range": [
       "20260803",
@@ -18,7 +18,7 @@
         "l": 1,
         "d": 0,
         "rank": 2,
-        "note": "2연패, 살짝 흔들린다"
+        "note": "3연패, 살짝 흔들린다"
       },
       "LG": {
         "w": 0,
@@ -88,7 +88,7 @@
         "away": "OB",
         "home": "HT",
         "pred": 94,
-        "reason": "게임차 0.5, 막상막하 승부",
+        "reason": "게임차 없는 동률 초접전",
         "dateStart": "20260814",
         "dateEnd": "20260816"
       },
@@ -101,10 +101,10 @@
         "dateEnd": "20260816"
       },
       {
-        "away": "HH",
-        "home": "OB",
-        "pred": 80,
-        "reason": "게임차 4.5의 순위 다툼",
+        "away": "SS",
+        "home": "HT",
+        "pred": 81,
+        "reason": "전통의 명문 자존심 대결 · 게임차 6의 순위 다툼",
         "dateStart": "20260811",
         "dateEnd": "20260813"
       }
@@ -189,7 +189,9 @@
         {
           "date": "20260812",
           "away": "LT",
-          "home": "SK"
+          "home": "SK",
+          "awayStarter": "나균안",
+          "homeStarter": "김민준"
         },
         {
           "date": "20260813",
@@ -223,7 +225,9 @@
         {
           "date": "20260812",
           "away": "LT",
-          "home": "SK"
+          "home": "SK",
+          "awayStarter": "나균안",
+          "homeStarter": "김민준"
         },
         {
           "date": "20260813",
@@ -257,7 +261,9 @@
         {
           "date": "20260812",
           "away": "SS",
-          "home": "HT"
+          "home": "HT",
+          "awayStarter": "보스",
+          "homeStarter": "네일"
         },
         {
           "date": "20260813",
@@ -291,7 +297,9 @@
         {
           "date": "20260812",
           "away": "SS",
-          "home": "HT"
+          "home": "HT",
+          "awayStarter": "보스",
+          "homeStarter": "네일"
         },
         {
           "date": "20260813",
