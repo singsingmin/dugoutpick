@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-12T12:40:27.865Z",
+  "updatedAt": "2026-08-12T12:44:35.726Z",
   "lastWeek": {
     "range": [
       "20260803",
@@ -95,8 +95,8 @@
       {
         "away": "NC",
         "home": "LT",
-        "pred": 90,
-        "reason": "낙동강 더비 · 게임차 1.5, 막상막하 승부",
+        "pred": 89,
+        "reason": "낙동강 더비 · 게임차 2, 막상막하 승부",
         "dateStart": "20260814",
         "dateEnd": "20260816"
       },
@@ -344,7 +344,9 @@
         {
           "date": "20260813",
           "away": "KT",
-          "home": "NC"
+          "home": "NC",
+          "awayStarter": "대니엘",
+          "homeStarter": "테일러"
         },
         {
           "date": "20260814",
@@ -380,7 +382,9 @@
         {
           "date": "20260813",
           "away": "KT",
-          "home": "NC"
+          "home": "NC",
+          "awayStarter": "대니엘",
+          "homeStarter": "테일러"
         },
         {
           "date": "20260814",
