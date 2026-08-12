@@ -1,7 +1,7 @@
 {
   "date": "20260812",
   "dateText": "2026년 8월 12일",
-  "updatedAt": "2026-08-12T11:39:27.029Z",
+  "updatedAt": "2026-08-12T11:50:25.036Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
+        "inning": 6,
         "half": "T",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "벤자민",
-        "batter": "강백호",
-        "heat": 48,
-        "label": "초반 팽팽한 흐름"
+        "batter": "노시환",
+        "heat": 53,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -187,7 +187,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "김한결",
           "era": null,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김민준",
-        "batter": "황성빈",
-        "heat": 21,
+        "pitcher": "현도훈",
+        "batter": "최지훈",
+        "heat": 34,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -397,12 +397,12 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": true,
         "b3": true,
         "pitcher": "이승현",
-        "batter": "나성범",
+        "batter": "김태군",
         "heat": 42,
         "label": "초반 팽팽한 흐름"
       },
@@ -560,16 +560,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "소형준",
-        "batter": "김주원",
-        "heat": 56,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "구창모",
+        "batter": "김상수",
+        "heat": 59,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -727,12 +727,12 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": true,
         "b2": true,
-        "b3": false,
-        "pitcher": "김성민",
-        "batter": "송찬의",
+        "b3": true,
+        "pitcher": "김선기",
+        "batter": "박동원",
         "heat": 57,
         "label": "경기 흐름 체크 중"
       },
