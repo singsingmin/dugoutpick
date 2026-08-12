@@ -1,12 +1,12 @@
 {
   "date": "20260812",
   "dateText": "2026년 8월 12일",
-  "updatedAt": "2026-08-12T13:00:46.880Z",
+  "updatedAt": "2026-08-12T13:10:33.166Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
     "hitRate": 16,
-    "bonusRate": 56,
+    "bonusRate": 54,
     "ready": true
   },
   "recommendedGameId": "20260812HHOB0",
@@ -66,15 +66,15 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
-        "out": 0,
+        "half": "B",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "타카다",
-        "batter": "페라자",
-        "heat": 75,
-        "label": "9회 1점 승부"
+        "pitcher": "박상원",
+        "batter": "양의지",
+        "heat": 85,
+        "label": "끝내기 한 방 찬스"
       },
       "recap": null,
       "decision": null,
@@ -180,7 +180,7 @@
       "gameId": "20260812LTSK0",
       "time": "19:00",
       "stadium": "문학",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPOTV",
       "away": {
@@ -229,117 +229,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 0,
-        "b1": true,
-        "b2": false,
-        "b3": false,
-        "pitcher": "서진용",
-        "batter": "고승민",
-        "heat": 4,
-        "label": "점수차가 벌어진 경기"
+      "live": null,
+      "recap": {
+        "actual": 9,
+        "verdict": "기대 이하",
+        "diff": 8,
+        "total": 10,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "유격수",
-            "name": "정준재"
-          },
-          {
-            "order": 2,
-            "pos": "2루수",
-            "name": "박성한"
-          },
-          {
-            "order": 3,
-            "pos": "지명타자",
-            "name": "김재환"
-          },
-          {
-            "order": 4,
-            "pos": "1루수",
-            "name": "전의산"
-          },
-          {
-            "order": 5,
-            "pos": "우익수",
-            "name": "오태곤"
-          },
-          {
-            "order": 6,
-            "pos": "중견수",
-            "name": "최지훈"
-          },
-          {
-            "order": 7,
-            "pos": "좌익수",
-            "name": "마드리스"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "조형우"
-          },
-          {
-            "order": 9,
-            "pos": "3루수",
-            "name": "안상현"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "황성빈"
-          },
-          {
-            "order": 2,
-            "pos": "1루수",
-            "name": "나승엽"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "레이예스"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "한동희"
-          },
-          {
-            "order": 5,
-            "pos": "2루수",
-            "name": "고승민"
-          },
-          {
-            "order": 6,
-            "pos": "우익수",
-            "name": "윤동희"
-          },
-          {
-            "order": 7,
-            "pos": "3루수",
-            "name": "손호영"
-          },
-          {
-            "order": 8,
-            "pos": "유격수",
-            "name": "전민재"
-          },
-          {
-            "order": 9,
-            "pos": "포수",
-            "name": "손성빈"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260812SSHT0",
@@ -395,15 +299,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 0,
+        "inning": 9,
+        "half": "T",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "사토시",
-        "batter": "박재현",
-        "heat": 14,
+        "pitcher": "성영탁",
+        "batter": "류지혁",
+        "heat": 15,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -598,7 +502,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "전준표",
           "era": 6.38,
@@ -629,16 +533,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
+        "inning": 9,
+        "half": "T",
+        "out": 1,
         "b1": false,
-        "b2": true,
-        "b3": true,
-        "pitcher": "우강훈",
-        "batter": "추재현",
-        "heat": 72,
-        "label": "후반 박빙 승부"
+        "b2": false,
+        "b3": false,
+        "pitcher": "원종현",
+        "batter": "박해민",
+        "heat": 75,
+        "label": "9회 1점 승부"
       },
       "recap": null,
       "decision": null,
