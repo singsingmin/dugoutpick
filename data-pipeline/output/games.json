@@ -1,7 +1,7 @@
 {
   "date": "20260812",
   "dateText": "2026년 8월 12일",
-  "updatedAt": "2026-08-12T09:09:20.862Z",
+  "updatedAt": "2026-08-12T09:10:25.867Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -223,12 +223,12 @@
         "home": [
           {
             "order": 1,
-            "pos": "2루수",
+            "pos": "유격수",
             "name": "정준재"
           },
           {
             "order": 2,
-            "pos": "유격수",
+            "pos": "2루수",
             "name": "박성한"
           },
           {
@@ -243,8 +243,8 @@
           },
           {
             "order": 5,
-            "pos": "좌익수",
-            "name": "마드리스"
+            "pos": "우익수",
+            "name": "오태곤"
           },
           {
             "order": 6,
@@ -253,8 +253,8 @@
           },
           {
             "order": 7,
-            "pos": "우익수",
-            "name": "한유섬"
+            "pos": "좌익수",
+            "name": "마드리스"
           },
           {
             "order": 8,
@@ -301,7 +301,7 @@
           {
             "order": 7,
             "pos": "3루수",
-            "name": "노진혁"
+            "name": "손호영"
           },
           {
             "order": 8,
@@ -314,7 +314,7 @@
             "name": "손성빈"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
