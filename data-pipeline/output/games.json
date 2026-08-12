@@ -1,7 +1,7 @@
 {
   "date": "20260812",
   "dateText": "2026년 8월 12일",
-  "updatedAt": "2026-08-12T11:20:25.979Z",
+  "updatedAt": "2026-08-12T11:30:41.392Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "화이트",
-        "batter": "박준순",
+        "batter": "박지훈",
         "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
@@ -199,7 +199,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 2,
+        "score": 4,
         "starter": {
           "name": "김민준",
           "era": 4.12,
@@ -235,11 +235,11 @@
         "out": 1,
         "b1": true,
         "b2": true,
-        "b3": false,
+        "b3": true,
         "pitcher": "이영재",
-        "batter": "정준재",
-        "heat": 42,
-        "label": "초반 팽팽한 흐름"
+        "batter": "전의산",
+        "heat": 20,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
+        "inning": 5,
         "half": "B",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "보스",
-        "batter": "박재현",
-        "heat": 45,
+        "batter": "김선빈",
+        "heat": 50,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -560,16 +560,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 1,
+        "inning": 6,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "소형준",
-        "batter": "블레인",
-        "heat": 50,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "구창모",
+        "batter": "김현수",
+        "heat": 53,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -726,14 +726,14 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 2,
-        "b1": true,
-        "b2": false,
+        "half": "B",
+        "out": 3,
+        "b1": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "전준표",
-        "batter": "오스틴",
-        "heat": 51,
+        "pitcher": "임찬규",
+        "batter": "임병욱",
+        "heat": 54,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
