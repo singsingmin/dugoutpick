@@ -1,7 +1,7 @@
 {
   "date": "20260812",
   "dateText": "2026년 8월 12일",
-  "updatedAt": "2026-08-12T12:30:35.005Z",
+  "updatedAt": "2026-08-12T12:40:27.865Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 4,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "벤자민",
           "era": 2.61,
@@ -67,14 +67,14 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 0,
+        "out": 3,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "화이트",
-        "batter": "양의지",
-        "heat": 38,
-        "label": "경기 흐름 체크 중"
+        "batter": "박찬호",
+        "heat": 62,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "김민",
-        "batter": "손성빈",
+        "pitcher": "문승원",
+        "batter": "레이예스",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
@@ -364,7 +364,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 5,
-        "score": 5,
+        "score": 7,
         "starter": {
           "name": "네일",
           "era": 3.85,
@@ -397,13 +397,13 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "사토시",
-        "batter": "나성범",
-        "heat": 38,
+        "batter": "김태군",
+        "heat": 13,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -510,7 +510,7 @@
       "gameId": "20260812KTNC0",
       "time": "19:00",
       "stadium": "창원",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPOTV2",
       "away": {
@@ -559,117 +559,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
-        "b1": true,
-        "b2": false,
-        "b3": false,
-        "pitcher": "이정현",
-        "batter": "박건우",
-        "heat": 42,
-        "label": "경기 흐름 체크 중"
+      "live": null,
+      "recap": {
+        "actual": 58,
+        "verdict": "기대 이상",
+        "diff": 3,
+        "total": 3,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "유격수",
-            "name": "김주원"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "최정원"
-          },
-          {
-            "order": 3,
-            "pos": "2루수",
-            "name": "박민우"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "박건우"
-          },
-          {
-            "order": 5,
-            "pos": "3루수",
-            "name": "김휘집"
-          },
-          {
-            "order": 6,
-            "pos": "좌익수",
-            "name": "이우성"
-          },
-          {
-            "order": 7,
-            "pos": "1루수",
-            "name": "블레인"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "김형준"
-          },
-          {
-            "order": 9,
-            "pos": "우익수",
-            "name": "박시원"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "우익수",
-            "name": "최원준"
-          },
-          {
-            "order": 2,
-            "pos": "1루수",
-            "name": "김현수"
-          },
-          {
-            "order": 3,
-            "pos": "지명타자",
-            "name": "안현민"
-          },
-          {
-            "order": 4,
-            "pos": "중견수",
-            "name": "힐리어드"
-          },
-          {
-            "order": 5,
-            "pos": "좌익수",
-            "name": "김민혁"
-          },
-          {
-            "order": 6,
-            "pos": "2루수",
-            "name": "김상수"
-          },
-          {
-            "order": 7,
-            "pos": "3루수",
-            "name": "허경민"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "조대현"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "장준원"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260812LGWO0",
@@ -682,7 +586,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 1,
+        "score": 3,
         "starter": {
           "name": "임찬규",
           "era": 4.53,
@@ -725,15 +629,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 2,
-        "b1": true,
+        "inning": 8,
+        "half": "T",
+        "out": 1,
+        "b1": false,
         "b2": true,
         "b3": false,
-        "pitcher": "김진성",
-        "batter": "권혁빈",
-        "heat": 65,
+        "pitcher": "박진형",
+        "batter": "박동원",
+        "heat": 53,
         "label": "후반 박빙 승부"
       },
       "recap": null,
