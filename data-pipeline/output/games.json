@@ -1,7 +1,7 @@
 {
   "date": "20260813",
   "dateText": "2026년 8월 13일",
-  "updatedAt": "2026-08-13T10:30:40.461Z",
+  "updatedAt": "2026-08-13T10:33:36.897Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -70,9 +70,9 @@
         "out": 0,
         "b1": true,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "류현진",
-        "batter": "박찬호",
+        "batter": "조수행",
         "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
@@ -233,11 +233,11 @@
         "inning": 3,
         "half": "T",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "타케다",
-        "batter": "한태양",
+        "batter": "전민재",
         "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
@@ -397,12 +397,12 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 1,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "시라카와",
-        "batter": "심재훈",
+        "batter": "김성윤",
         "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
@@ -562,12 +562,12 @@
       "live": {
         "inning": 2,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "대니엘",
-        "batter": "박건우",
+        "batter": "블레인",
         "heat": 29,
         "label": "초반 팽팽한 흐름"
       },
@@ -727,12 +727,12 @@
       "live": {
         "inning": 2,
         "half": "B",
-        "out": 1,
+        "out": 3,
         "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "톨허스트",
-        "batter": "서건창",
+        "batter": "히우라",
         "heat": 22,
         "label": "경기 흐름 체크 중"
       },
