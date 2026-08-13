@@ -1,7 +1,7 @@
 {
   "date": "20260813",
   "dateText": "2026년 8월 13일",
-  "updatedAt": "2026-08-13T09:10:26.592Z",
+  "updatedAt": "2026-08-13T09:13:31.823Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -544,28 +544,28 @@
           },
           {
             "order": 4,
-            "pos": "지명타자",
-            "name": "박건우"
-          },
-          {
-            "order": 5,
             "pos": "3루수",
             "name": "김휘집"
           },
           {
-            "order": 6,
-            "pos": "좌익수",
-            "name": "이우성"
+            "order": 5,
+            "pos": "지명타자",
+            "name": "박건우"
           },
           {
-            "order": 7,
+            "order": 6,
             "pos": "1루수",
             "name": "블레인"
           },
           {
+            "order": 7,
+            "pos": "좌익수",
+            "name": "권희동"
+          },
+          {
             "order": 8,
             "pos": "포수",
-            "name": "김형준"
+            "name": "안중열"
           },
           {
             "order": 9,
@@ -601,26 +601,26 @@
           },
           {
             "order": 6,
-            "pos": "2루수",
-            "name": "김상수"
+            "pos": "3루수",
+            "name": "류현인"
           },
           {
             "order": 7,
-            "pos": "3루수",
-            "name": "허경민"
+            "pos": "2루수",
+            "name": "오윤석"
           },
           {
             "order": 8,
             "pos": "포수",
-            "name": "조대현"
+            "name": "한승택"
           },
           {
             "order": 9,
             "pos": "유격수",
-            "name": "장준원"
+            "name": "권동진"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
