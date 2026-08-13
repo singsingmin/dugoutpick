@@ -1,7 +1,7 @@
 {
   "date": "20260813",
   "dateText": "2026년 8월 13일",
-  "updatedAt": "2026-08-13T11:10:33.856Z",
+  "updatedAt": "2026-08-13T11:20:25.333Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": true,
-        "b2": false,
-        "b3": false,
+        "b2": true,
+        "b3": true,
         "pitcher": "최민석",
-        "batter": "강백호",
+        "batter": "허인서",
         "heat": 9,
         "label": "경기 흐름 체크 중"
       },
@@ -230,14 +230,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
+        "inning": 5,
         "half": "T",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "타케다",
-        "batter": "나승엽",
+        "batter": "레이예스",
         "heat": 3,
         "label": "점수차가 벌어진 경기"
       },
@@ -364,7 +364,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "시라카와",
           "era": 5.26,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 0,
         "b1": true,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "원태인",
-        "batter": "카스트로",
-        "heat": 45,
+        "pitcher": "시라카와",
+        "batter": "박승규",
+        "heat": 51,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -529,7 +529,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "테일러",
           "era": 4.4,
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 0,
-        "b1": true,
-        "b2": true,
+        "inning": 5,
+        "half": "T",
+        "out": 1,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "대니엘",
-        "batter": "박민우",
-        "heat": 18,
+        "pitcher": "테일러",
+        "batter": "최원준",
+        "heat": 29,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 2,
+        "inning": 5,
+        "half": "T",
+        "out": 0,
         "b1": true,
-        "b2": false,
-        "b3": false,
-        "pitcher": "톨허스트",
-        "batter": "히우라",
-        "heat": 37,
+        "b2": true,
+        "b3": true,
+        "pitcher": "알칸타라",
+        "batter": "박해민",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
