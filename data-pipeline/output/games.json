@@ -1,7 +1,7 @@
 {
   "date": "20260813",
   "dateText": "2026년 8월 13일",
-  "updatedAt": "2026-08-13T12:50:27.691Z",
+  "updatedAt": "2026-08-13T13:00:43.286Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 8,
+        "score": 9,
         "starter": {
           "name": "최민석",
           "era": 2.64,
@@ -67,14 +67,14 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "조동욱",
-        "batter": "김민석",
-        "heat": 59,
-        "label": "후반 박빙 승부"
+        "b2": true,
+        "b3": true,
+        "pitcher": "장유호",
+        "batter": "류승민",
+        "heat": 46,
+        "label": "점수 나는 난타전"
       },
       "recap": null,
       "decision": null,
@@ -268,7 +268,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 7,
+        "score": 8,
         "starter": {
           "name": "시라카와",
           "era": 5.26,
@@ -301,13 +301,13 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "김태훈",
-        "batter": "한준수",
-        "heat": 73,
+        "pitcher": "장찬희",
+        "batter": "김호령",
+        "heat": 70,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -466,12 +466,12 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "이용준",
-        "batter": "김상수",
+        "pitcher": "임지민",
+        "batter": "최원준",
         "heat": 81,
         "label": "9회 1점 승부"
       },
@@ -629,14 +629,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
+        "inning": 9,
         "half": "T",
-        "out": 3,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박진형",
-        "batter": "오지환",
+        "pitcher": "최현우",
+        "batter": "신민재",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
