@@ -1,7 +1,7 @@
 {
   "date": "20260813",
   "dateText": "2026년 8월 13일",
-  "updatedAt": "2026-08-13T13:20:29.668Z",
+  "updatedAt": "2026-08-13T13:30:35.952Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
+        "inning": 9,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "장유호",
-        "batter": "박지훈",
-        "heat": 50,
+        "pitcher": "이영하",
+        "batter": "노시환",
+        "heat": 51,
         "label": "점수 나는 난타전"
       },
       "recap": null,
@@ -299,16 +299,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
+        "inning": 9,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "장찬희",
-        "batter": "김선빈",
-        "heat": 75,
-        "label": "후반 박빙 승부"
+        "pitcher": "조상우",
+        "batter": "구자욱",
+        "heat": 83,
+        "label": "9회 1점 승부"
       },
       "recap": null,
       "decision": null,
