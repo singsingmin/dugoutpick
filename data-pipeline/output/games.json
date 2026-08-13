@@ -1,7 +1,7 @@
 {
   "date": "20260813",
   "dateText": "2026년 8월 13일",
-  "updatedAt": "2026-08-13T06:00:44.617Z",
+  "updatedAt": "2026-08-13T06:09:46.370Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -25,9 +25,9 @@
         "score": null,
         "starter": {
           "name": "류현진",
-          "era": null,
-          "w": null,
-          "l": null
+          "era": 3.41,
+          "w": 8,
+          "l": 3
         }
       },
       "home": {
@@ -43,12 +43,12 @@
         }
       },
       "honjam": {
-        "score": 71,
+        "score": 75,
         "reason": "게임차 4.5의 순위 다툼",
         "points": [
           "게임차 : 4.5 · 순위 다툼",
           "상대전적 : 한화 7승 6패 1무",
-          "최민석(ERA 2.64) 호투 기대",
+          "양 팀 에이스 투수전(ERA 3.41·2.64)",
           "6위·5위 와일드카드 판가름"
         ],
         "factors": {
@@ -57,7 +57,7 @@
           "form": 0.12,
           "rivalry": 0,
           "playoff": 1,
-          "pitcher": 0.53,
+          "pitcher": 0.66,
           "doom": 0,
           "park": 0.09,
           "offense": 0.5
@@ -190,13 +190,13 @@
         "score": null,
         "starter": {
           "name": "타케다",
-          "era": null,
-          "w": null,
-          "l": null
+          "era": 6.89,
+          "w": 2,
+          "l": 8
         }
       },
       "honjam": {
-        "score": 47,
+        "score": 41,
         "reason": "게임차 3.5의 순위 다툼",
         "points": [
           "게임차 : 3.5 · 순위 다툼",
@@ -210,7 +210,7 @@
           "form": 0.23,
           "rivalry": 0,
           "playoff": 0.25,
-          "pitcher": 0.3,
+          "pitcher": 0.16,
           "doom": 0,
           "park": 0.55,
           "offense": 0.5
@@ -331,9 +331,9 @@
         "score": null,
         "starter": {
           "name": "원태인",
-          "era": null,
-          "w": null,
-          "l": null
+          "era": 4.14,
+          "w": 6,
+          "l": 5
         }
       },
       "home": {
@@ -363,7 +363,7 @@
           "form": 0.35,
           "rivalry": 0.6,
           "playoff": 0.5,
-          "pitcher": 0.13,
+          "pitcher": 0.14,
           "doom": 0,
           "park": 0.68,
           "offense": 0.5
