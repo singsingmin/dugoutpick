@@ -1,7 +1,7 @@
 {
   "date": "20260813",
   "dateText": "2026년 8월 13일",
-  "updatedAt": "2026-08-13T10:33:36.897Z",
+  "updatedAt": "2026-08-13T10:40:26.270Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "최민석",
           "era": 2.64,
@@ -67,13 +67,13 @@
       "live": {
         "inning": 2,
         "half": "B",
-        "out": 0,
-        "b1": true,
-        "b2": false,
-        "b3": true,
+        "out": 2,
+        "b1": false,
+        "b2": true,
+        "b3": false,
         "pitcher": "류현진",
-        "batter": "조수행",
-        "heat": 35,
+        "batter": "김대한",
+        "heat": 29,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -187,7 +187,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": 0,
+        "score": 3,
         "starter": {
           "name": "로드리게스",
           "era": 4.02,
@@ -232,14 +232,14 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 0,
-        "b1": true,
-        "b2": false,
+        "out": 1,
+        "b1": false,
+        "b2": true,
         "b3": false,
         "pitcher": "타케다",
-        "batter": "전민재",
-        "heat": 40,
-        "label": "초반 팽팽한 흐름"
+        "batter": "레이예스",
+        "heat": 23,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -396,14 +396,14 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
-        "out": 2,
-        "b1": true,
-        "b2": false,
+        "half": "B",
+        "out": 1,
+        "b1": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "시라카와",
-        "batter": "김성윤",
-        "heat": 40,
+        "pitcher": "원태인",
+        "batter": "김호령",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -517,7 +517,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "대니엘",
           "era": null,
@@ -560,16 +560,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
+        "inning": 3,
+        "half": "T",
         "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "대니엘",
-        "batter": "블레인",
-        "heat": 29,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "테일러",
+        "batter": "안현민",
+        "heat": 23,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -682,7 +682,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "톨허스트",
           "era": 4.53,
@@ -725,16 +725,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
-        "out": 3,
-        "b1": true,
+        "inning": 3,
+        "half": "T",
+        "out": 1,
+        "b1": false,
         "b2": false,
-        "b3": false,
-        "pitcher": "톨허스트",
-        "batter": "히우라",
-        "heat": 22,
-        "label": "경기 흐름 체크 중"
+        "b3": true,
+        "pitcher": "알칸타라",
+        "batter": "홍창기",
+        "heat": 31,
+        "label": "초반 팽팽한 흐름"
       },
       "recap": null,
       "decision": null,
