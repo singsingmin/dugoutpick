@@ -1,7 +1,7 @@
 {
   "date": "20260813",
   "dateText": "2026년 8월 13일",
-  "updatedAt": "2026-08-13T10:20:25.062Z",
+  "updatedAt": "2026-08-13T10:30:40.461Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "B",
-        "out": 3,
+        "out": 0,
         "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "류현진",
-        "batter": "김민석",
-        "heat": 31,
+        "batter": "박찬호",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
+        "inning": 3,
         "half": "T",
-        "out": 1,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "타케다",
-        "batter": "한동희",
-        "heat": 35,
+        "batter": "한태양",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
+        "inning": 3,
         "half": "T",
-        "out": 3,
-        "b1": true,
+        "out": 1,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "시라카와",
-        "batter": "김도환",
-        "heat": 35,
+        "batter": "심재훈",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -561,14 +561,14 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
-        "out": 0,
+        "half": "B",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "테일러",
-        "batter": "류현인",
-        "heat": 27,
+        "pitcher": "대니엘",
+        "batter": "박건우",
+        "heat": 29,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -694,7 +694,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 0,
+        "score": 3,
         "starter": {
           "name": "알칸타라",
           "era": 3.35,
@@ -727,14 +727,14 @@
       "live": {
         "inning": 2,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "톨허스트",
-        "batter": "추재현",
-        "heat": 38,
-        "label": "초반 팽팽한 흐름"
+        "batter": "서건창",
+        "heat": 22,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
