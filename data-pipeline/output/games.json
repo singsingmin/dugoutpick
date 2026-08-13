@@ -1,7 +1,7 @@
 {
   "date": "20260813",
   "dateText": "2026년 8월 13일",
-  "updatedAt": "2026-08-13T09:13:31.823Z",
+  "updatedAt": "2026-08-13T09:20:32.423Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -223,12 +223,12 @@
         "home": [
           {
             "order": 1,
-            "pos": "유격수",
+            "pos": "2루수",
             "name": "정준재"
           },
           {
             "order": 2,
-            "pos": "2루수",
+            "pos": "유격수",
             "name": "박성한"
           },
           {
@@ -244,7 +244,7 @@
           {
             "order": 5,
             "pos": "우익수",
-            "name": "오태곤"
+            "name": "한유섬"
           },
           {
             "order": 6,
@@ -301,7 +301,7 @@
           {
             "order": 7,
             "pos": "3루수",
-            "name": "손호영"
+            "name": "한태양"
           },
           {
             "order": 8,
@@ -314,7 +314,7 @@
             "name": "손성빈"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
