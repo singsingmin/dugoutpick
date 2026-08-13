@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-13T13:10:26.372Z",
+  "updatedAt": "2026-08-13T13:20:29.668Z",
   "lastWeek": {
     "range": [
       "20260803",
@@ -96,7 +96,7 @@
         "away": "NC",
         "home": "LT",
         "pred": 88,
-        "reason": "낙동강 더비 · 게임차 2, 막상막하 승부",
+        "reason": "낙동강 더비 · 게임차 2.5의 순위 다툼",
         "dateStart": "20260814",
         "dateEnd": "20260816"
       },
@@ -211,7 +211,9 @@
         {
           "date": "20260814",
           "away": "NC",
-          "home": "LT"
+          "home": "LT",
+          "awayStarter": "토다",
+          "homeStarter": "김진욱"
         },
         {
           "date": "20260815",
@@ -249,7 +251,9 @@
         {
           "date": "20260814",
           "away": "SK",
-          "home": "LG"
+          "home": "LG",
+          "awayStarter": "최민준",
+          "homeStarter": "송승기"
         },
         {
           "date": "20260815",
@@ -363,7 +367,9 @@
         {
           "date": "20260814",
           "away": "WO",
-          "home": "KT"
+          "home": "KT",
+          "awayStarter": "박준현",
+          "homeStarter": "고영표"
         },
         {
           "date": "20260815",
@@ -401,7 +407,9 @@
         {
           "date": "20260814",
           "away": "NC",
-          "home": "LT"
+          "home": "LT",
+          "awayStarter": "토다",
+          "homeStarter": "김진욱"
         },
         {
           "date": "20260815",
@@ -439,7 +447,9 @@
         {
           "date": "20260814",
           "away": "SK",
-          "home": "LG"
+          "home": "LG",
+          "awayStarter": "최민준",
+          "homeStarter": "송승기"
         },
         {
           "date": "20260815",
@@ -477,7 +487,9 @@
         {
           "date": "20260814",
           "away": "WO",
-          "home": "KT"
+          "home": "KT",
+          "awayStarter": "박준현",
+          "homeStarter": "고영표"
         },
         {
           "date": "20260815",
