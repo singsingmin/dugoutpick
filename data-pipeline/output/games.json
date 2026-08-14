@@ -1,7 +1,7 @@
 {
   "date": "20260814",
   "dateText": "2026년 8월 14일",
-  "updatedAt": "2026-08-14T11:10:29.532Z",
+  "updatedAt": "2026-08-14T11:20:25.098Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
+        "inning": 6,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "최민준",
-        "batter": "문보경",
-        "heat": 50,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "송승기",
+        "batter": "박성한",
+        "heat": 53,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "최원태",
-        "batter": "채은성",
-        "heat": 48,
+        "pitcher": "짐머맨",
+        "batter": "강민호",
+        "heat": 50,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -352,7 +352,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 2,
+        "score": 5,
         "starter": {
           "name": "토다",
           "era": 5.23,
@@ -396,15 +396,15 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "김진욱",
-        "batter": "천재환",
-        "heat": 35,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "토다",
+        "batter": "윤동희",
+        "heat": 10,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -727,12 +727,12 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "고영표",
-        "batter": "데이비슨",
+        "batter": "김웅빈",
         "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
