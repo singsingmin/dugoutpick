@@ -1,7 +1,7 @@
 {
   "date": "20260814",
   "dateText": "2026년 8월 14일",
-  "updatedAt": "2026-08-14T14:00:42.149Z",
+  "updatedAt": "2026-08-14T14:08:52.671Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -172,7 +172,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": 6,
+        "score": 8,
         "starter": {
           "name": "김진욱",
           "era": 3.13,
@@ -205,14 +205,14 @@
       "live": {
         "inning": 9,
         "half": "B",
-        "out": 2,
+        "out": 3,
         "b1": true,
         "b2": false,
         "b3": true,
-        "pitcher": "임지민",
-        "batter": "한동희",
-        "heat": 53,
-        "label": "점수 나는 난타전"
+        "pitcher": "김태훈",
+        "batter": "윤동희",
+        "heat": 93,
+        "label": "끝내기 한 방 찬스"
       },
       "recap": null,
       "decision": null,
@@ -368,15 +368,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
+        "inning": 9,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김정우",
-        "batter": "하주석",
-        "heat": 14,
+        "pitcher": "한재승",
+        "batter": "강승호",
+        "heat": 15,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
