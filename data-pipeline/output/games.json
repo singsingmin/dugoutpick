@@ -1,7 +1,7 @@
 {
   "date": "20260814",
   "dateText": "2026년 8월 14일",
-  "updatedAt": "2026-08-14T10:10:26.995Z",
+  "updatedAt": "2026-08-14T10:20:26.274Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 2,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "최민준",
-        "batter": "문정빈",
-        "heat": 33,
+        "pitcher": "송승기",
+        "batter": "조형우",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "B",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "짐머맨",
-        "batter": "구자욱",
-        "heat": 33,
+        "batter": "최형우",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -396,14 +396,14 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
-        "out": 2,
-        "b1": false,
+        "half": "B",
+        "out": 1,
+        "b1": true,
         "b2": true,
         "b3": false,
-        "pitcher": "김진욱",
-        "batter": "블레인",
-        "heat": 24,
+        "pitcher": "토다",
+        "batter": "한동희",
+        "heat": 26,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -510,14 +510,14 @@
       "gameId": "20260814OBHT0",
       "time": "19:00",
       "stadium": "광주",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SBS SPORTS",
       "away": {
         "code": "OB",
         "name": "두산",
         "rank": 4,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "잭로그",
           "era": 4.02,
@@ -529,7 +529,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 5,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "황동하",
           "era": 4.38,
@@ -556,9 +556,21 @@
           "doom": 0,
           "park": 0.68,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 0,
+        "b1": true,
+        "b2": false,
+        "b3": false,
+        "pitcher": "황동하",
+        "batter": "안재석",
+        "heat": 31,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
@@ -714,14 +726,14 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "b1": true,
-        "b2": false,
-        "b3": false,
-        "pitcher": "고영표",
-        "batter": "히우라",
-        "heat": 31,
+        "b2": true,
+        "b3": true,
+        "pitcher": "박준현",
+        "batter": "힐리어드",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
