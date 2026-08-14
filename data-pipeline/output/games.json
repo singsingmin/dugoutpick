@@ -1,7 +1,7 @@
 {
   "date": "20260814",
   "dateText": "2026년 8월 14일",
-  "updatedAt": "2026-08-14T13:10:25.718Z",
+  "updatedAt": "2026-08-14T13:20:26.076Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -136,12 +136,12 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "권민규",
-        "batter": "김지찬",
+        "pitcher": "김종수",
+        "batter": "디아즈",
         "heat": 50,
         "label": "점수 나는 난타전"
       },
@@ -299,16 +299,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
+        "inning": 9,
+        "half": "T",
+        "out": 0,
         "b1": true,
         "b2": true,
         "b3": false,
-        "pitcher": "임지민",
-        "batter": "한태양",
-        "heat": 79,
-        "label": "후반 박빙 승부"
+        "pitcher": "김원중",
+        "batter": "최정원",
+        "heat": 87,
+        "label": "9회 1점 승부"
       },
       "recap": null,
       "decision": null,
@@ -433,7 +433,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 5,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "황동하",
           "era": 4.38,
@@ -464,16 +464,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 1,
+        "inning": 7,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "잭로그",
-        "batter": "김호령",
-        "heat": 4,
-        "label": "점수차가 벌어진 경기"
+        "pitcher": "김태형",
+        "batter": "양의지",
+        "heat": 12,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -629,15 +629,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 1,
-        "b1": false,
+        "inning": 9,
+        "half": "T",
+        "out": 0,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "최현우",
-        "batter": "배정대",
-        "heat": 14,
+        "pitcher": "배제성",
+        "batter": "여동욱",
+        "heat": 15,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
