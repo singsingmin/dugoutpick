@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-14T14:20:25.550Z",
+  "updatedAt": "2026-08-14T14:30:34.437Z",
   "results": [
     {
       "date": "20260705",
@@ -482,6 +482,28 @@
         "score": 8
       },
       "calculatedAt": "2026-08-13T13:50:24.788Z"
+    },
+    {
+      "date": "20260814",
+      "actualTopGameId": "20260814NCLT0",
+      "recapScore": 94,
+      "decidingReasonTags": [
+        "1점차 접전",
+        "난타전"
+      ],
+      "displayMode": "highlight",
+      "displayTitle": "어제의 명경기",
+      "away": {
+        "code": "NC",
+        "name": "NC",
+        "score": 9
+      },
+      "home": {
+        "code": "LT",
+        "name": "롯데",
+        "score": 8
+      },
+      "calculatedAt": "2026-08-14T14:30:34.437Z"
     }
   ]
 }
