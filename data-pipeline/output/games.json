@@ -1,7 +1,7 @@
 {
   "date": "20260814",
   "dateText": "2026년 8월 14일",
-  "updatedAt": "2026-08-14T10:50:27.171Z",
+  "updatedAt": "2026-08-14T11:00:40.283Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "최민준",
-        "batter": "송찬의",
-        "heat": 48,
+        "pitcher": "송승기",
+        "batter": "한유섬",
+        "heat": 51,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -199,7 +199,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "최원태",
           "era": 5.04,
@@ -231,13 +231,13 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 0,
+        "half": "B",
+        "out": 1,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "최원태",
-        "batter": "문현빈",
+        "pitcher": "짐머맨",
+        "batter": "전병우",
         "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
+        "inning": 4,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "토다",
-        "batter": "손성빈",
-        "heat": 33,
+        "pitcher": "김진욱",
+        "batter": "블레인",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -727,12 +727,12 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": false,
-        "b2": false,
-        "b3": false,
+        "b2": true,
+        "b3": true,
         "pitcher": "박준현",
-        "batter": "안현민",
+        "batter": "허경민",
         "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
