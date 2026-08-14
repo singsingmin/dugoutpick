@@ -1,12 +1,12 @@
 {
   "date": "20260814",
   "dateText": "2026년 8월 14일",
-  "updatedAt": "2026-08-14T14:08:52.671Z",
+  "updatedAt": "2026-08-14T14:10:25.125Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
     "hitRate": 14,
-    "bonusRate": 56,
+    "bonusRate": 58,
     "ready": true
   },
   "recommendedGameId": "20260814OBHT0",
@@ -153,7 +153,7 @@
       "gameId": "20260814NCLT0",
       "time": "19:00",
       "stadium": "사직",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "MBC SPORTS+",
       "away": {
@@ -202,117 +202,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 3,
-        "b1": true,
-        "b2": false,
-        "b3": true,
-        "pitcher": "김태훈",
-        "batter": "윤동희",
-        "heat": 93,
-        "label": "끝내기 한 방 찬스"
+      "live": null,
+      "recap": {
+        "actual": 94,
+        "verdict": "기대 이상",
+        "diff": 1,
+        "total": 17,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "황성빈"
-          },
-          {
-            "order": 2,
-            "pos": "1루수",
-            "name": "나승엽"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "레이예스"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "한동희"
-          },
-          {
-            "order": 5,
-            "pos": "2루수",
-            "name": "고승민"
-          },
-          {
-            "order": 6,
-            "pos": "우익수",
-            "name": "윤동희"
-          },
-          {
-            "order": 7,
-            "pos": "3루수",
-            "name": "한태양"
-          },
-          {
-            "order": 8,
-            "pos": "유격수",
-            "name": "전민재"
-          },
-          {
-            "order": 9,
-            "pos": "포수",
-            "name": "손성빈"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "유격수",
-            "name": "김주원"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "최정원"
-          },
-          {
-            "order": 3,
-            "pos": "2루수",
-            "name": "박민우"
-          },
-          {
-            "order": 4,
-            "pos": "3루수",
-            "name": "김휘집"
-          },
-          {
-            "order": 5,
-            "pos": "지명타자",
-            "name": "박건우"
-          },
-          {
-            "order": 6,
-            "pos": "1루수",
-            "name": "블레인"
-          },
-          {
-            "order": 7,
-            "pos": "좌익수",
-            "name": "권희동"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "김형준"
-          },
-          {
-            "order": 9,
-            "pos": "우익수",
-            "name": "천재환"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260814OBHT0",
@@ -370,12 +274,12 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "한재승",
-        "batter": "강승호",
+        "batter": "조수행",
         "heat": 15,
         "label": "경기 흐름 체크 중"
       },
