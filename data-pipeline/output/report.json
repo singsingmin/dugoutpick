@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-14T14:10:25.125Z",
+  "updatedAt": "2026-08-14T14:20:25.550Z",
   "lastWeek": {
     "range": [
       "20260803",
@@ -95,8 +95,8 @@
       {
         "away": "NC",
         "home": "LT",
-        "pred": 88,
-        "reason": "낙동강 더비 · 게임차 2.5의 순위 다툼",
+        "pred": 86,
+        "reason": "낙동강 더비 · 게임차 3.5의 순위 다툼",
         "dateStart": "20260814",
         "dateEnd": "20260816"
       },
@@ -224,7 +224,9 @@
         {
           "date": "20260815",
           "away": "NC",
-          "home": "LT"
+          "home": "LT",
+          "awayStarter": "원종해",
+          "homeStarter": "박세웅"
         },
         {
           "date": "20260816",
@@ -430,7 +432,9 @@
         {
           "date": "20260815",
           "away": "NC",
-          "home": "LT"
+          "home": "LT",
+          "awayStarter": "원종해",
+          "homeStarter": "박세웅"
         },
         {
           "date": "20260816",
