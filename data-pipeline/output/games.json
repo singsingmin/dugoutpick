@@ -1,7 +1,7 @@
 {
   "date": "20260814",
   "dateText": "2026년 8월 14일",
-  "updatedAt": "2026-08-14T10:40:24.593Z",
+  "updatedAt": "2026-08-14T10:50:27.171Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
+        "inning": 4,
         "half": "B",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "최민준",
-        "batter": "박해민",
-        "heat": 43,
+        "batter": "송찬의",
+        "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
+        "inning": 4,
+        "half": "T",
         "out": 0,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "짐머맨",
-        "batter": "강민호",
-        "heat": 43,
+        "pitcher": "최원태",
+        "batter": "문현빈",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
+        "inning": 3,
         "half": "B",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "토다",
-        "batter": "전민재",
-        "heat": 29,
+        "batter": "손성빈",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -694,7 +694,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "고영표",
           "era": 3.64,
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
+        "inning": 3,
         "half": "B",
-        "out": 2,
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
         "pitcher": "박준현",
-        "batter": "최원준",
-        "heat": 35,
+        "batter": "안현민",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
