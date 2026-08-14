@@ -1,7 +1,7 @@
 {
   "date": "20260814",
   "dateText": "2026년 8월 14일",
-  "updatedAt": "2026-08-14T11:36:47.876Z",
+  "updatedAt": "2026-08-14T11:40:25.532Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "최민준",
-        "batter": "천성호",
+        "batter": "신민재",
         "heat": 46,
         "label": "경기 흐름 체크 중"
       },
@@ -232,12 +232,12 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": true,
         "b2": true,
         "b3": false,
         "pitcher": "짐머맨",
-        "batter": "최형우",
+        "batter": "전병우",
         "heat": 20,
         "label": "경기 흐름 체크 중"
       },
@@ -397,12 +397,12 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "토다",
-        "batter": "황성빈",
+        "batter": "레이예스",
         "heat": 3,
         "label": "점수차가 벌어진 경기"
       },
@@ -562,12 +562,12 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "황동하",
-        "batter": "김대한",
+        "batter": "안재석",
         "heat": 13,
         "label": "경기 흐름 체크 중"
       },
@@ -726,14 +726,14 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "고영표",
-        "batter": "김동헌",
-        "heat": 48,
+        "pitcher": "배동현",
+        "batter": "힐리어드",
+        "heat": 50,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
