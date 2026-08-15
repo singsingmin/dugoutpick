@@ -1,7 +1,7 @@
 {
   "date": "20260815",
   "dateText": "2026년 8월 15일",
-  "updatedAt": "2026-08-15T12:40:25.733Z",
+  "updatedAt": "2026-08-15T12:50:25.611Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 2,
+        "score": 4,
         "starter": {
           "name": "박시원",
           "era": 4.23,
@@ -66,15 +66,15 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 2,
-        "b1": true,
+        "half": "B",
+        "out": 1,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "손주영",
-        "batter": "김재환",
-        "heat": 64,
-        "label": "후반 박빙 승부"
+        "pitcher": "한두솔",
+        "batter": "오지환",
+        "heat": 42,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -199,7 +199,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 6,
+        "score": 8,
         "starter": {
           "name": "양창섭",
           "era": 4.23,
@@ -232,13 +232,13 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": true,
-        "b2": true,
-        "b3": false,
-        "pitcher": "장유호",
-        "batter": "구자욱",
-        "heat": 73,
+        "b2": false,
+        "b3": true,
+        "pitcher": "조동욱",
+        "batter": "심재훈",
+        "heat": 59,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
+        "inning": 8,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김진호",
-        "batter": "윤동희",
-        "heat": 56,
+        "pitcher": "이이무라",
+        "batter": "박민우",
+        "heat": 58,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -561,13 +561,13 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "조상우",
-        "batter": "김민석",
+        "pitcher": "윤태호",
+        "batter": "김도영",
         "heat": 14,
         "label": "경기 흐름 체크 중"
       },
@@ -682,7 +682,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 9,
+        "score": 10,
         "starter": {
           "name": "하영민",
           "era": 4.6,
@@ -726,15 +726,15 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 0,
+        "half": "B",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "스기모토",
-        "batter": "안치홍",
-        "heat": 14,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "김선기",
+        "batter": "힐리어드",
+        "heat": 4,
+        "label": "점수차가 벌어진 경기"
       },
       "recap": null,
       "decision": null,
