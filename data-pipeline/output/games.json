@@ -1,7 +1,7 @@
 {
   "date": "20260815",
   "dateText": "2026년 8월 15일",
-  "updatedAt": "2026-08-15T13:20:24.821Z",
+  "updatedAt": "2026-08-15T13:30:32.719Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -84,7 +84,7 @@
       "gameId": "20260815HHSS0",
       "time": "19:00",
       "stadium": "대구",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "KBS N SPORTS",
       "away": {
@@ -133,117 +133,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 1,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "이승민",
-        "batter": "이진영",
-        "heat": 15,
-        "label": "경기 흐름 체크 중"
+      "live": null,
+      "recap": {
+        "actual": 39,
+        "verdict": "기대 이상",
+        "diff": 5,
+        "total": 17,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "김지찬"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "박승규"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "구자욱"
-          },
-          {
-            "order": 4,
-            "pos": "1루수",
-            "name": "디아즈"
-          },
-          {
-            "order": 5,
-            "pos": "지명타자",
-            "name": "최형우"
-          },
-          {
-            "order": 6,
-            "pos": "포수",
-            "name": "강민호"
-          },
-          {
-            "order": 7,
-            "pos": "2루수",
-            "name": "류지혁"
-          },
-          {
-            "order": 8,
-            "pos": "3루수",
-            "name": "전병우"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "이재현"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "이원석"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "페라자"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "문현빈"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "강백호"
-          },
-          {
-            "order": 5,
-            "pos": "3루수",
-            "name": "노시환"
-          },
-          {
-            "order": 6,
-            "pos": "1루수",
-            "name": "채은성"
-          },
-          {
-            "order": 7,
-            "pos": "포수",
-            "name": "허인서"
-          },
-          {
-            "order": 8,
-            "pos": "2루수",
-            "name": "이도윤"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "박정현"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260815NCLT0",
@@ -299,15 +203,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
+        "inning": 9,
+        "half": "T",
+        "out": 0,
         "b1": true,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "박지한",
-        "batter": "장두성",
-        "heat": 50,
+        "pitcher": "김원중",
+        "batter": "천재환",
+        "heat": 51,
         "label": "점수 나는 난타전"
       },
       "recap": null,
