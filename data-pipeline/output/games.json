@@ -1,7 +1,7 @@
 {
   "date": "20260815",
   "dateText": "2026년 8월 15일",
-  "updatedAt": "2026-08-15T13:30:32.719Z",
+  "updatedAt": "2026-08-15T13:40:27.425Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -205,12 +205,12 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "김원중",
-        "batter": "천재환",
+        "pitcher": "최준용",
+        "batter": "박민우",
         "heat": 51,
         "label": "점수 나는 난타전"
       },
