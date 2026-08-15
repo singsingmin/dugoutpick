@@ -1,7 +1,7 @@
 {
   "date": "20260815",
   "dateText": "2026년 8월 15일",
-  "updatedAt": "2026-08-14T15:12:44.354Z",
+  "updatedAt": "2026-08-15T09:10:26.474Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -80,18 +80,18 @@
           },
           {
             "order": 3,
-            "pos": "1루수",
+            "pos": "지명타자",
             "name": "오스틴"
           },
           {
             "order": 4,
-            "pos": "지명타자",
+            "pos": "1루수",
             "name": "문정빈"
           },
           {
             "order": 5,
-            "pos": "3루수",
-            "name": "문보경"
+            "pos": "포수",
+            "name": "박동원"
           },
           {
             "order": 6,
@@ -101,12 +101,12 @@
           {
             "order": 7,
             "pos": "우익수",
-            "name": "홍창기"
+            "name": "이재원"
           },
           {
             "order": 8,
-            "pos": "포수",
-            "name": "이주헌"
+            "pos": "3루수",
+            "name": "구본혁"
           },
           {
             "order": 9,
@@ -161,7 +161,7 @@
             "name": "임근우"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
@@ -229,7 +229,7 @@
           {
             "order": 2,
             "pos": "우익수",
-            "name": "김성윤"
+            "name": "박승규"
           },
           {
             "order": 3,
@@ -248,8 +248,8 @@
           },
           {
             "order": 6,
-            "pos": "3루수",
-            "name": "전병우"
+            "pos": "포수",
+            "name": "강민호"
           },
           {
             "order": 7,
@@ -258,8 +258,8 @@
           },
           {
             "order": 8,
-            "pos": "포수",
-            "name": "강민호"
+            "pos": "3루수",
+            "name": "전병우"
           },
           {
             "order": 9,
@@ -271,7 +271,7 @@
           {
             "order": 1,
             "pos": "중견수",
-            "name": "최인호"
+            "name": "이원석"
           },
           {
             "order": 2,
@@ -311,10 +311,10 @@
           {
             "order": 9,
             "pos": "유격수",
-            "name": "심우준"
+            "name": "박정현"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
@@ -428,8 +428,8 @@
           },
           {
             "order": 2,
-            "pos": "중견수",
-            "name": "최정원"
+            "pos": "좌익수",
+            "name": "권희동"
           },
           {
             "order": 3,
@@ -453,21 +453,21 @@
           },
           {
             "order": 7,
-            "pos": "좌익수",
-            "name": "권희동"
+            "pos": "우익수",
+            "name": "박시원"
           },
           {
             "order": 8,
             "pos": "포수",
-            "name": "김형준"
+            "name": "안중열"
           },
           {
             "order": 9,
-            "pos": "우익수",
+            "pos": "중견수",
             "name": "천재환"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
@@ -559,18 +559,18 @@
           },
           {
             "order": 7,
-            "pos": "2루수",
-            "name": "윤도현"
+            "pos": "유격수",
+            "name": "하주석"
           },
           {
             "order": 8,
             "pos": "포수",
-            "name": "김태군"
+            "name": "한준수"
           },
           {
             "order": 9,
-            "pos": "유격수",
-            "name": "정현창"
+            "pos": "2루수",
+            "name": "이호연"
           }
         ],
         "away": [
@@ -591,7 +591,7 @@
           },
           {
             "order": 4,
-            "pos": "지명타자",
+            "pos": "포수",
             "name": "양의지"
           },
           {
@@ -606,7 +606,7 @@
           },
           {
             "order": 7,
-            "pos": "유격수",
+            "pos": "지명타자",
             "name": "박찬호"
           },
           {
@@ -616,11 +616,11 @@
           },
           {
             "order": 9,
-            "pos": "포수",
-            "name": "윤준호"
+            "pos": "유격수",
+            "name": "이유찬"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
