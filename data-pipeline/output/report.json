@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-15T13:10:23.854Z",
+  "updatedAt": "2026-08-15T13:20:24.821Z",
   "lastWeek": {
     "range": [
       "20260803",
@@ -88,7 +88,7 @@
         "away": "OB",
         "home": "HT",
         "pred": 92,
-        "reason": "게임차 1.5, 막상막하 승부",
+        "reason": "게임차 0.5, 막상막하 승부",
         "dateStart": "20260814",
         "dateEnd": "20260816"
       },
@@ -101,10 +101,10 @@
         "dateEnd": "20260816"
       },
       {
-        "away": "HH",
-        "home": "OB",
-        "pred": 75,
-        "reason": "게임차 6.5의 순위 다툼",
+        "away": "SS",
+        "home": "HT",
+        "pred": 77,
+        "reason": "전통의 명문 자존심 대결 · 게임차 6.5의 순위 다툼",
         "dateStart": "20260811",
         "dateEnd": "20260813"
       }
@@ -191,7 +191,9 @@
         {
           "date": "20260816",
           "away": "OB",
-          "home": "HT"
+          "home": "HT",
+          "awayStarter": "곽빈",
+          "homeStarter": "올러"
         }
       ],
       "LT": [
@@ -361,7 +363,9 @@
         {
           "date": "20260816",
           "away": "OB",
-          "home": "HT"
+          "home": "HT",
+          "awayStarter": "곽빈",
+          "homeStarter": "올러"
         }
       ],
       "KT": [
