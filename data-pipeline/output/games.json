@@ -1,7 +1,7 @@
 {
   "date": "20260815",
   "dateText": "2026년 8월 15일",
-  "updatedAt": "2026-08-15T11:41:49.483Z",
+  "updatedAt": "2026-08-15T11:50:24.976Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 2,
+        "inning": 6,
+        "half": "T",
+        "out": 0,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "김건우",
-        "batter": "오스틴",
-        "heat": 54,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "이우찬",
+        "batter": "김재환",
+        "heat": 57,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 2,
-        "b1": false,
+        "half": "B",
+        "out": 1,
+        "b1": true,
         "b2": false,
-        "b3": false,
-        "pitcher": "이승현",
-        "batter": "노시환",
-        "heat": 57,
+        "b3": true,
+        "pitcher": "박준영",
+        "batter": "최형우",
+        "heat": 59,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -402,7 +402,7 @@
         "b2": false,
         "b3": false,
         "pitcher": "류진욱",
-        "batter": "윤동희",
+        "batter": "박승욱",
         "heat": 56,
         "label": "경기 흐름 체크 중"
       },
@@ -561,14 +561,14 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 0,
+        "half": "B",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "양현종",
-        "batter": "박준순",
-        "heat": 29,
+        "pitcher": "박신지",
+        "batter": "한준수",
+        "heat": 31,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -694,7 +694,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "오원석",
           "era": 5.59,
@@ -727,12 +727,12 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "하영민",
-        "batter": "장진혁",
+        "batter": "김현수",
         "heat": 3,
         "label": "점수차가 벌어진 경기"
       },
