@@ -1,7 +1,7 @@
 {
   "date": "20260815",
   "dateText": "2026년 8월 15일",
-  "updatedAt": "2026-08-15T11:40:25.312Z",
+  "updatedAt": "2026-08-15T11:41:49.483Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "이승현",
-        "batter": "강백호",
+        "batter": "노시환",
         "heat": 57,
         "label": "경기 흐름 체크 중"
       },
@@ -397,12 +397,12 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "류진욱",
-        "batter": "고승민",
+        "batter": "윤동희",
         "heat": 56,
         "label": "경기 흐름 체크 중"
       },
