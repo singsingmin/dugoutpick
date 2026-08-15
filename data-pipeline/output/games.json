@@ -1,7 +1,7 @@
 {
   "date": "20260815",
   "dateText": "2026년 8월 15일",
-  "updatedAt": "2026-08-15T12:50:25.611Z",
+  "updatedAt": "2026-08-15T13:00:40.813Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
+        "inning": 9,
+        "half": "T",
         "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "한두솔",
-        "batter": "오지환",
-        "heat": 42,
+        "pitcher": "손주영",
+        "batter": "오태곤",
+        "heat": 43,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
+        "inning": 8,
+        "half": "T",
         "out": 2,
-        "b1": true,
+        "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "조동욱",
-        "batter": "심재훈",
-        "heat": 59,
+        "b3": false,
+        "pitcher": "배찬승",
+        "batter": "채은성",
+        "heat": 61,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -352,7 +352,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "원종해",
           "era": 5.32,
@@ -396,14 +396,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이이무라",
-        "batter": "박민우",
-        "heat": 58,
+        "pitcher": "송명기",
+        "batter": "손성빈",
+        "heat": 73,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 0,
+        "inning": 9,
+        "half": "T",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "윤태호",
-        "batter": "김도영",
-        "heat": 14,
+        "pitcher": "이의리",
+        "batter": "이유찬",
+        "heat": 15,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -725,14 +725,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
+        "inning": 9,
+        "half": "T",
         "out": 1,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "김선기",
-        "batter": "힐리어드",
+        "pitcher": "이정현",
+        "batter": "박채울",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
