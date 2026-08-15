@@ -1,7 +1,7 @@
 {
   "date": "20260815",
   "dateText": "2026년 8월 15일",
-  "updatedAt": "2026-08-15T10:10:28.291Z",
+  "updatedAt": "2026-08-15T10:12:54.601Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -187,7 +187,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "박준영",
           "era": 4.07,
@@ -232,13 +232,13 @@
       "live": {
         "inning": 1,
         "half": "T",
-        "out": 0,
-        "b1": true,
+        "out": 1,
+        "b1": false,
         "b2": true,
-        "b3": false,
+        "b3": true,
         "pitcher": "양창섭",
-        "batter": "문현빈",
-        "heat": 31,
+        "batter": "노시환",
+        "heat": 29,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -399,10 +399,10 @@
         "half": "B",
         "out": 0,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "원종해",
-        "batter": "나승엽",
+        "batter": "레이예스",
         "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
@@ -682,7 +682,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 0,
+        "score": 3,
         "starter": {
           "name": "하영민",
           "era": 4.6,
@@ -727,14 +727,14 @@
       "live": {
         "inning": 1,
         "half": "T",
-        "out": 1,
-        "b1": true,
-        "b2": true,
+        "out": 2,
+        "b1": false,
+        "b2": false,
         "b3": false,
         "pitcher": "오원석",
-        "batter": "박찬혁",
-        "heat": 31,
-        "label": "초반 팽팽한 흐름"
+        "batter": "김건희",
+        "heat": 18,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
