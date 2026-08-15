@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-15T13:40:27.425Z",
+  "updatedAt": "2026-08-15T13:49:25.808Z",
   "results": [
     {
       "date": "20260705",
@@ -504,6 +504,27 @@
         "score": 8
       },
       "calculatedAt": "2026-08-14T14:30:34.437Z"
+    },
+    {
+      "date": "20260815",
+      "actualTopGameId": "20260815NCLT0",
+      "recapScore": 72,
+      "decidingReasonTags": [
+        "실제 꿀잼 72"
+      ],
+      "displayMode": "highlight",
+      "displayTitle": "어제의 명경기",
+      "away": {
+        "code": "NC",
+        "name": "NC",
+        "score": 5
+      },
+      "home": {
+        "code": "LT",
+        "name": "롯데",
+        "score": 8
+      },
+      "calculatedAt": "2026-08-15T13:49:25.808Z"
     }
   ]
 }

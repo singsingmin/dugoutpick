@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-15T13:40:27.425Z",
+  "updatedAt": "2026-08-15T13:49:25.808Z",
   "lastWeek": {
     "range": [
       "20260803",
@@ -237,7 +237,9 @@
         {
           "date": "20260816",
           "away": "NC",
-          "home": "LT"
+          "home": "LT",
+          "awayStarter": "라일리",
+          "homeStarter": "비슬리"
         }
       ],
       "SK": [
@@ -455,7 +457,9 @@
         {
           "date": "20260816",
           "away": "NC",
-          "home": "LT"
+          "home": "LT",
+          "awayStarter": "라일리",
+          "homeStarter": "비슬리"
         }
       ],
       "LG": [
