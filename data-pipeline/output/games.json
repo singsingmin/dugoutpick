@@ -1,7 +1,7 @@
 {
   "date": "20260816",
   "dateText": "2026년 8월 16일",
-  "updatedAt": "2026-08-16T10:45:39.495Z",
+  "updatedAt": "2026-08-16T10:50:26.919Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "카라스코",
-        "batter": "한유섬",
-        "heat": 45,
+        "pitcher": "아빌라",
+        "batter": "신민재",
+        "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -315,7 +315,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 5,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "올러",
           "era": 3.27,
@@ -346,15 +346,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 1,
+        "inning": 4,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "곽빈",
-        "batter": "박정우",
-        "heat": 40,
+        "pitcher": "올러",
+        "batter": "안재석",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -514,11 +514,11 @@
         "inning": 3,
         "half": "T",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "로건",
-        "batter": "박찬혁",
+        "batter": "데이비슨",
         "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
