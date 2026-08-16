@@ -1,7 +1,7 @@
 {
   "date": "20260816",
   "dateText": "2026년 8월 16일",
-  "updatedAt": "2026-08-16T12:10:27.857Z",
+  "updatedAt": "2026-08-16T12:19:26.059Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "아빌라",
-        "batter": "박동원",
+        "batter": "송찬의",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
@@ -347,14 +347,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 1,
-        "b1": false,
-        "b2": true,
+        "half": "B",
+        "out": 0,
+        "b1": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "전상현",
-        "batter": "윤준호",
-        "heat": 64,
+        "pitcher": "김택연",
+        "batter": "김도영",
+        "heat": 67,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -480,7 +480,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "로건",
           "era": 3.3,
@@ -513,13 +513,13 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": true,
         "b2": true,
         "b3": false,
-        "pitcher": "김성민",
-        "batter": "장진혁",
-        "heat": 56,
+        "pitcher": "박지성",
+        "batter": "최원준",
+        "heat": 59,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
