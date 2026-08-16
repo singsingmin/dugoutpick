@@ -1,7 +1,7 @@
 {
   "date": "20260816",
   "dateText": "2026년 8월 16일",
-  "updatedAt": "2026-08-16T13:10:27.696Z",
+  "updatedAt": "2026-08-16T13:20:25.932Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -321,12 +321,12 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "out": 1,
+        "b1": true,
+        "b2": true,
         "b3": false,
         "pitcher": "박영현",
-        "batter": "추재현",
+        "batter": "여동욱",
         "heat": 28,
         "label": "경기 흐름 체크 중"
       },
