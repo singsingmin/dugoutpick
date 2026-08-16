@@ -1,7 +1,7 @@
 {
   "date": "20260816",
   "dateText": "2026년 8월 16일",
-  "updatedAt": "2026-08-16T09:10:25.058Z",
+  "updatedAt": "2026-08-16T09:17:56.859Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -539,13 +539,13 @@
         "away": [
           {
             "order": 1,
-            "pos": "2루수",
+            "pos": "지명타자",
             "name": "서건창"
           },
           {
             "order": 2,
-            "pos": "지명타자",
-            "name": "히우라"
+            "pos": "우익수",
+            "name": "박찬혁"
           },
           {
             "order": 3,
@@ -554,8 +554,8 @@
           },
           {
             "order": 4,
-            "pos": "우익수",
-            "name": "박찬혁"
+            "pos": "2루수",
+            "name": "안치홍"
           },
           {
             "order": 5,
@@ -574,16 +574,16 @@
           },
           {
             "order": 8,
-            "pos": "중견수",
-            "name": "임병욱"
+            "pos": "3루수",
+            "name": "여동욱"
           },
           {
             "order": 9,
-            "pos": "3루수",
-            "name": "여동욱"
+            "pos": "중견수",
+            "name": "박채울"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     }
   ],
