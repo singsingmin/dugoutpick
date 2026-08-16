@@ -1,7 +1,7 @@
 {
   "date": "20260816",
   "dateText": "2026년 8월 16일",
-  "updatedAt": "2026-08-16T11:40:27.361Z",
+  "updatedAt": "2026-08-16T11:41:58.961Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "아빌라",
-        "batter": "이재원",
+        "batter": "홍창기",
         "heat": 12,
         "label": "경기 흐름 체크 중"
       },
@@ -349,11 +349,11 @@
         "inning": 6,
         "half": "B",
         "out": 1,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "곽빈",
-        "batter": "카스트로",
+        "batter": "나성범",
         "heat": 56,
         "label": "경기 흐름 체크 중"
       },
