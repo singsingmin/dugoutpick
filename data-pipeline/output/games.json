@@ -1,7 +1,7 @@
 {
   "date": "20260816",
   "dateText": "2026년 8월 16일",
-  "updatedAt": "2026-08-16T11:41:58.961Z",
+  "updatedAt": "2026-08-16T11:50:24.569Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 1,
+        "out": 3,
         "b1": false,
-        "b2": false,
-        "b3": false,
+        "b2": true,
+        "b3": true,
         "pitcher": "아빌라",
-        "batter": "홍창기",
+        "batter": "오스틴",
         "heat": 12,
         "label": "경기 흐름 체크 중"
       },
@@ -346,16 +346,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 1,
+        "inning": 7,
+        "half": "T",
+        "out": 0,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "곽빈",
-        "batter": "나성범",
-        "heat": 56,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "올러",
+        "batter": "김민석",
+        "heat": 59,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -513,12 +513,12 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
-        "b1": true,
+        "out": 2,
+        "b1": false,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "김윤하",
-        "batter": "김현수",
+        "batter": "힐리어드",
         "heat": 50,
         "label": "초반 팽팽한 흐름"
       },
