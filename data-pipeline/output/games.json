@@ -1,7 +1,7 @@
 {
   "date": "20260816",
   "dateText": "2026년 8월 16일",
-  "updatedAt": "2026-08-16T10:20:25.692Z",
+  "updatedAt": "2026-08-16T10:30:31.523Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
-        "out": 0,
+        "inning": 3,
+        "half": "T",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "아빌라",
-        "batter": "문정빈",
-        "heat": 38,
+        "pitcher": "카라스코",
+        "batter": "최지훈",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -303,7 +303,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 4,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "곽빈",
           "era": 2.53,
@@ -347,13 +347,13 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 2,
         "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "올러",
-        "batter": "박찬호",
+        "b3": false,
+        "pitcher": "곽빈",
+        "batter": "김호령",
         "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
@@ -480,7 +480,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "로건",
           "era": 3.3,
@@ -511,15 +511,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 1,
         "b1": false,
-        "b2": false,
-        "b3": true,
-        "pitcher": "김윤하",
-        "batter": "안현민",
-        "heat": 26,
+        "b2": true,
+        "b3": false,
+        "pitcher": "로건",
+        "batter": "박채울",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
