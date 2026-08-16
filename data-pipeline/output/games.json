@@ -1,7 +1,7 @@
 {
   "date": "20260816",
   "dateText": "2026년 8월 16일",
-  "updatedAt": "2026-08-16T11:10:24.135Z",
+  "updatedAt": "2026-08-16T11:11:21.222Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -513,12 +513,12 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "b1": false,
         "b2": true,
         "b3": false,
         "pitcher": "로건",
-        "batter": "권혁빈",
+        "batter": "여동욱",
         "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
