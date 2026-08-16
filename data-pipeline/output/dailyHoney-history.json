@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-16T13:20:25.932Z",
+  "updatedAt": "2026-08-16T13:30:32.324Z",
   "results": [
     {
       "date": "20260705",
@@ -525,6 +525,27 @@
         "score": 8
       },
       "calculatedAt": "2026-08-15T13:49:25.808Z"
+    },
+    {
+      "date": "20260816",
+      "actualTopGameId": "20260816OBHT0",
+      "recapScore": 87,
+      "decidingReasonTags": [
+        "1점차 접전"
+      ],
+      "displayMode": "highlight",
+      "displayTitle": "어제의 명경기",
+      "away": {
+        "code": "OB",
+        "name": "두산",
+        "score": 1
+      },
+      "home": {
+        "code": "HT",
+        "name": "KIA",
+        "score": 2
+      },
+      "calculatedAt": "2026-08-16T13:30:32.324Z"
     }
   ]
 }
