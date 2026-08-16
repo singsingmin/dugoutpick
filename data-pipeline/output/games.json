@@ -1,7 +1,7 @@
 {
   "date": "20260816",
   "dateText": "2026년 8월 16일",
-  "updatedAt": "2026-08-16T10:30:31.523Z",
+  "updatedAt": "2026-08-16T10:40:24.274Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
+        "inning": 4,
         "half": "T",
-        "out": 1,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "카라스코",
-        "batter": "최지훈",
-        "heat": 40,
+        "batter": "김재환",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -346,15 +346,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
+        "inning": 3,
+        "half": "T",
         "out": 2,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "곽빈",
-        "batter": "김호령",
-        "heat": 35,
+        "pitcher": "올러",
+        "batter": "박준순",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -512,14 +512,14 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 2,
         "b1": false,
-        "b2": true,
-        "b3": false,
-        "pitcher": "로건",
-        "batter": "박채울",
-        "heat": 33,
+        "b2": false,
+        "b3": true,
+        "pitcher": "김윤하",
+        "batter": "장준원",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
