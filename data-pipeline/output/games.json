@@ -1,7 +1,7 @@
 {
   "date": "20260816",
   "dateText": "2026년 8월 16일",
-  "updatedAt": "2026-08-16T11:00:40.374Z",
+  "updatedAt": "2026-08-16T11:10:24.135Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 0,
+        "score": 3,
         "starter": {
           "name": "아빌라",
           "era": 1.93,
@@ -67,14 +67,14 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "카라스코",
-        "batter": "조형우",
-        "heat": 51,
-        "label": "초반 팽팽한 흐름"
+        "batter": "김재환",
+        "heat": 29,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -346,15 +346,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 0,
+        "inning": 5,
+        "half": "T",
+        "out": 1,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "곽빈",
-        "batter": "카스트로",
-        "heat": 48,
+        "pitcher": "올러",
+        "batter": "박지훈",
+        "heat": 51,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -511,15 +511,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 2,
+        "inning": 4,
+        "half": "T",
+        "out": 1,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "김윤하",
-        "batter": "힐리어드",
-        "heat": 40,
+        "pitcher": "로건",
+        "batter": "권혁빈",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
