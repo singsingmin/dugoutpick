@@ -1,7 +1,7 @@
 {
   "date": "20260816",
   "dateText": "2026년 8월 16일",
-  "updatedAt": "2026-08-16T13:07:21.498Z",
+  "updatedAt": "2026-08-16T13:10:27.696Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -319,15 +319,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
-        "b1": true,
+        "inning": 9,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "정다훈",
-        "batter": "안현민",
-        "heat": 27,
+        "pitcher": "박영현",
+        "batter": "추재현",
+        "heat": 28,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
