@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-16T15:11:28.271Z",
+  "updatedAt": "2026-08-17T05:26:40.064Z",
   "lastWeek": {
     "range": [
       "20260810",
@@ -114,7 +114,9 @@
         {
           "date": "20260818",
           "away": "KT",
-          "home": "LG"
+          "home": "LG",
+          "awayStarter": "소형준",
+          "homeStarter": "임찬규"
         },
         {
           "date": "20260819",
@@ -146,7 +148,9 @@
         {
           "date": "20260818",
           "away": "KT",
-          "home": "LG"
+          "home": "LG",
+          "awayStarter": "소형준",
+          "homeStarter": "임찬규"
         },
         {
           "date": "20260819",
@@ -178,7 +182,9 @@
         {
           "date": "20260818",
           "away": "SK",
-          "home": "SS"
+          "home": "SS",
+          "awayStarter": "김민준",
+          "homeStarter": "페덱"
         },
         {
           "date": "20260819",
@@ -210,7 +216,9 @@
         {
           "date": "20260818",
           "away": "SK",
-          "home": "SS"
+          "home": "SS",
+          "awayStarter": "김민준",
+          "homeStarter": "페덱"
         },
         {
           "date": "20260819",
@@ -242,7 +250,9 @@
         {
           "date": "20260818",
           "away": "WO",
-          "home": "LT"
+          "home": "LT",
+          "awayStarter": "전준표",
+          "homeStarter": "비슬리"
         },
         {
           "date": "20260819",
@@ -274,7 +284,9 @@
         {
           "date": "20260818",
           "away": "WO",
-          "home": "LT"
+          "home": "LT",
+          "awayStarter": "전준표",
+          "homeStarter": "비슬리"
         },
         {
           "date": "20260819",
@@ -306,7 +318,9 @@
         {
           "date": "20260818",
           "away": "OB",
-          "home": "NC"
+          "home": "NC",
+          "awayStarter": "벤자민",
+          "homeStarter": "라일리"
         },
         {
           "date": "20260819",
@@ -338,7 +352,9 @@
         {
           "date": "20260818",
           "away": "OB",
-          "home": "NC"
+          "home": "NC",
+          "awayStarter": "벤자민",
+          "homeStarter": "라일리"
         },
         {
           "date": "20260819",
@@ -370,7 +386,9 @@
         {
           "date": "20260818",
           "away": "HT",
-          "home": "HH"
+          "home": "HH",
+          "awayStarter": "네일",
+          "homeStarter": "왕옌청"
         },
         {
           "date": "20260819",
@@ -402,7 +420,9 @@
         {
           "date": "20260818",
           "away": "HT",
-          "home": "HH"
+          "home": "HH",
+          "awayStarter": "네일",
+          "homeStarter": "왕옌청"
         },
         {
           "date": "20260819",
