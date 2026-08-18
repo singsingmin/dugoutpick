@@ -1,7 +1,7 @@
 {
   "date": "20260818",
   "dateText": "2026년 8월 18일",
-  "updatedAt": "2026-08-18T10:10:25.050Z",
+  "updatedAt": "2026-08-18T10:18:45.909Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "임찬규",
           "era": 4.28,
@@ -67,13 +67,13 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "소형준",
-        "batter": "오스틴",
-        "heat": 33,
+        "batter": "오지환",
+        "heat": 26,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 2,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "김민준",
-        "batter": "구자욱",
-        "heat": 33,
+        "pitcher": "페덱",
+        "batter": "김성욱",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "전준표",
-        "batter": "황성빈",
-        "heat": 26,
+        "pitcher": "비슬리",
+        "batter": "박찬혁",
+        "heat": 27,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -529,7 +529,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "라일리",
           "era": 2.98,
@@ -562,13 +562,13 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 1,
+        "b1": true,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "벤자민",
-        "batter": "김주원",
-        "heat": 33,
+        "batter": "김휘집",
+        "heat": 31,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -694,7 +694,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "왕옌청",
           "era": 3.43,
@@ -727,13 +727,13 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "네일",
-        "batter": "최인호",
-        "heat": 33,
+        "batter": "노시환",
+        "heat": 31,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
