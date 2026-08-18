@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-18T13:20:27.692Z",
+  "updatedAt": "2026-08-18T13:30:32.575Z",
   "results": [
     {
       "date": "20260705",
@@ -546,6 +546,27 @@
         "score": 2
       },
       "calculatedAt": "2026-08-16T13:30:32.324Z"
+    },
+    {
+      "date": "20260818",
+      "actualTopGameId": "20260818SKSS0",
+      "recapScore": 91,
+      "decidingReasonTags": [
+        "1점차 접전"
+      ],
+      "displayMode": "highlight",
+      "displayTitle": "어제의 명경기",
+      "away": {
+        "code": "SK",
+        "name": "SSG",
+        "score": 5
+      },
+      "home": {
+        "code": "SS",
+        "name": "삼성",
+        "score": 4
+      },
+      "calculatedAt": "2026-08-18T13:30:32.575Z"
     }
   ]
 }

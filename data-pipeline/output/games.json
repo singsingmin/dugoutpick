@@ -1,12 +1,12 @@
 {
   "date": "20260818",
   "dateText": "2026년 8월 18일",
-  "updatedAt": "2026-08-18T13:20:27.692Z",
+  "updatedAt": "2026-08-18T13:30:32.575Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
-    "hitRate": 20,
-    "bonusRate": 56,
+    "hitRate": 16,
+    "bonusRate": 60,
     "ready": true
   },
   "recommendedGameId": "20260818OBNC0",
@@ -153,7 +153,7 @@
       "gameId": "20260818WOLT0",
       "time": "19:00",
       "stadium": "사직",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SBS SPORTS",
       "away": {
@@ -202,117 +202,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 2,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "김한결",
-        "batter": "안치홍",
-        "heat": 15,
-        "label": "경기 흐름 체크 중"
+      "live": null,
+      "recap": {
+        "actual": 39,
+        "verdict": "기대 이상",
+        "diff": 5,
+        "total": 25,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "좌익수",
-            "name": "황성빈"
-          },
-          {
-            "order": 2,
-            "pos": "1루수",
-            "name": "나승엽"
-          },
-          {
-            "order": 3,
-            "pos": "지명타자",
-            "name": "레이예스"
-          },
-          {
-            "order": 4,
-            "pos": "3루수",
-            "name": "한동희"
-          },
-          {
-            "order": 5,
-            "pos": "2루수",
-            "name": "고승민"
-          },
-          {
-            "order": 6,
-            "pos": "우익수",
-            "name": "윤동희"
-          },
-          {
-            "order": 7,
-            "pos": "유격수",
-            "name": "전민재"
-          },
-          {
-            "order": 8,
-            "pos": "중견수",
-            "name": "장두성"
-          },
-          {
-            "order": 9,
-            "pos": "포수",
-            "name": "손성빈"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "2루수",
-            "name": "서건창"
-          },
-          {
-            "order": 2,
-            "pos": "좌익수",
-            "name": "추재현"
-          },
-          {
-            "order": 3,
-            "pos": "1루수",
-            "name": "데이비슨"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "안치홍"
-          },
-          {
-            "order": 5,
-            "pos": "3루수",
-            "name": "김웅빈"
-          },
-          {
-            "order": 6,
-            "pos": "우익수",
-            "name": "박찬혁"
-          },
-          {
-            "order": 7,
-            "pos": "포수",
-            "name": "김건희"
-          },
-          {
-            "order": 8,
-            "pos": "중견수",
-            "name": "원성준"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "권혁빈"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260818OBNC0",
@@ -324,7 +228,7 @@
       "away": {
         "code": "OB",
         "name": "두산",
-        "rank": 5,
+        "rank": 4,
         "score": 6,
         "starter": {
           "name": "벤자민",
@@ -387,7 +291,7 @@
       "gameId": "20260818HTHH0",
       "time": "19:00",
       "stadium": "대전",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPOTV2",
       "away": {
@@ -436,117 +340,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 1,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "이의리",
-        "batter": "문현빈",
-        "heat": 85,
-        "label": "끝내기 한 방 찬스"
+      "live": null,
+      "recap": {
+        "actual": 90,
+        "verdict": "기대 이상",
+        "diff": 1,
+        "total": 7,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "최인호"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "페라자"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "문현빈"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "강백호"
-          },
-          {
-            "order": 5,
-            "pos": "3루수",
-            "name": "노시환"
-          },
-          {
-            "order": 6,
-            "pos": "1루수",
-            "name": "채은성"
-          },
-          {
-            "order": 7,
-            "pos": "포수",
-            "name": "허인서"
-          },
-          {
-            "order": 8,
-            "pos": "2루수",
-            "name": "이도윤"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "심우준"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "좌익수",
-            "name": "박재현"
-          },
-          {
-            "order": 2,
-            "pos": "지명타자",
-            "name": "김선빈"
-          },
-          {
-            "order": 3,
-            "pos": "3루수",
-            "name": "김도영"
-          },
-          {
-            "order": 4,
-            "pos": "1루수",
-            "name": "카스트로"
-          },
-          {
-            "order": 5,
-            "pos": "우익수",
-            "name": "나성범"
-          },
-          {
-            "order": 6,
-            "pos": "중견수",
-            "name": "김호령"
-          },
-          {
-            "order": 7,
-            "pos": "유격수",
-            "name": "하주석"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "김태군"
-          },
-          {
-            "order": 9,
-            "pos": "2루수",
-            "name": "윤도현"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     }
   ],
   "postseason": null
