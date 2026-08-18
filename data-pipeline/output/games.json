@@ -1,7 +1,7 @@
 {
   "date": "20260818",
   "dateText": "2026년 8월 18일",
-  "updatedAt": "2026-08-18T11:40:26.027Z",
+  "updatedAt": "2026-08-18T11:47:43.862Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 2,
+        "score": 6,
         "starter": {
           "name": "임찬규",
           "era": 4.28,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 1,
-        "b1": true,
-        "b2": true,
-        "b3": true,
-        "pitcher": "소형준",
-        "batter": "문정빈",
-        "heat": 50,
-        "label": "초반 팽팽한 흐름"
+        "inning": 6,
+        "half": "T",
+        "out": 0,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "임찬규",
+        "batter": "안현민",
+        "heat": 11,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 0,
+        "inning": 7,
+        "half": "T",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김민준",
-        "batter": "구자욱",
-        "heat": 59,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "김태훈",
+        "batter": "안상현",
+        "heat": 62,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -352,7 +352,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 7,
+        "score": 8,
         "starter": {
           "name": "전준표",
           "era": 5.01,
@@ -397,12 +397,12 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "비슬리",
-        "batter": "김건희",
+        "batter": "서건창",
         "heat": 3,
         "label": "점수차가 벌어진 경기"
       },
@@ -561,14 +561,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 1,
-        "b1": false,
+        "half": "B",
+        "out": 0,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "라일리",
-        "batter": "김민석",
-        "heat": 53,
+        "pitcher": "김정우",
+        "batter": "박건우",
+        "heat": 56,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -725,16 +725,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "inning": 6,
+        "half": "T",
+        "out": 1,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "네일",
-        "batter": "문현빈",
-        "heat": 42,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "장유호",
+        "batter": "김태군",
+        "heat": 44,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
