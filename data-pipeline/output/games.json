@@ -1,7 +1,7 @@
 {
   "date": "20260818",
   "dateText": "2026년 8월 18일",
-  "updatedAt": "2026-08-18T12:24:33.207Z",
+  "updatedAt": "2026-08-18T12:30:35.200Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "김진수",
-        "batter": "최원준",
+        "batter": "안현민",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
+        "inning": 9,
+        "half": "T",
+        "out": 0,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "전영준",
-        "batter": "류지혁",
-        "heat": 67,
-        "label": "후반 박빙 승부"
+        "pitcher": "김재윤",
+        "batter": "한유섬",
+        "heat": 75,
+        "label": "9회 1점 승부"
       },
       "recap": null,
       "decision": null,
@@ -397,12 +397,12 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "배동현",
-        "batter": "고승민",
+        "pitcher": "박지성",
+        "batter": "윤동희",
         "heat": 70,
         "label": "후반 박빙 승부"
       },
@@ -561,14 +561,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 2,
-        "b1": true,
-        "b2": true,
-        "b3": true,
-        "pitcher": "손주환",
-        "batter": "박찬호",
-        "heat": 69,
+        "half": "B",
+        "out": 0,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "김택연",
+        "batter": "권희동",
+        "heat": 72,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -727,12 +727,12 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "전상현",
-        "batter": "문현빈",
+        "batter": "노시환",
         "heat": 62,
         "label": "후반 박빙 승부"
       },
