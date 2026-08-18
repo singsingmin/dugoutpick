@@ -1,7 +1,7 @@
 {
   "date": "20260818",
   "dateText": "2026년 8월 18일",
-  "updatedAt": "2026-08-18T11:50:26.656Z",
+  "updatedAt": "2026-08-18T12:00:43.634Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
+        "inning": 7,
         "half": "T",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "임찬규",
-        "batter": "힐리어드",
-        "heat": 11,
+        "pitcher": "이우찬",
+        "batter": "김민혁",
+        "heat": 12,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
+        "half": "B",
         "out": 2,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "김태훈",
-        "batter": "최지훈",
-        "heat": 62,
+        "pitcher": "김민",
+        "batter": "이재현",
+        "heat": 65,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -395,14 +395,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "전준표",
-        "batter": "레이예스",
+        "pitcher": "비슬리",
+        "batter": "데이비슨",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
@@ -560,16 +560,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
+        "inning": 7,
         "half": "B",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김정우",
-        "batter": "이우성",
-        "heat": 56,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "타카다",
+        "batter": "블레인",
+        "heat": 62,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -694,7 +694,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "왕옌청",
           "era": 3.43,
@@ -728,12 +728,12 @@
         "inning": 6,
         "half": "B",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "네일",
-        "batter": "강백호",
-        "heat": 46,
+        "batter": "허인서",
+        "heat": 56,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
