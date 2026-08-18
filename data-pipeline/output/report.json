@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-18T12:50:26.073Z",
+  "updatedAt": "2026-08-18T13:00:40.156Z",
   "lastWeek": {
     "range": [
       "20260810",
@@ -95,18 +95,18 @@
       {
         "away": "KT",
         "home": "LG",
-        "pred": 75,
-        "reason": "게임차 6.5의 순위 다툼 · 리그 1위·3위 상위권 빅매치",
+        "pred": 76,
+        "reason": "게임차 5.5의 순위 다툼 · 리그 1위·3위 상위권 빅매치",
         "dateStart": "20260818",
         "dateEnd": "20260820"
       },
       {
-        "away": "LG",
-        "home": "HH",
-        "pred": 73,
-        "reason": "게임차 7.5의 순위 다툼",
-        "dateStart": "20260821",
-        "dateEnd": "20260823"
+        "away": "OB",
+        "home": "NC",
+        "pred": 69,
+        "reason": "게임차 6.5의 순위 다툼",
+        "dateStart": "20260818",
+        "dateEnd": "20260820"
       }
     ],
     "team": {
@@ -121,7 +121,9 @@
         {
           "date": "20260819",
           "away": "KT",
-          "home": "LG"
+          "home": "LG",
+          "awayStarter": "대니엘",
+          "homeStarter": "톨허스트"
         },
         {
           "date": "20260820",
@@ -155,7 +157,9 @@
         {
           "date": "20260819",
           "away": "KT",
-          "home": "LG"
+          "home": "LG",
+          "awayStarter": "대니엘",
+          "homeStarter": "톨허스트"
         },
         {
           "date": "20260820",
