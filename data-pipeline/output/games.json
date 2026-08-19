@@ -1,7 +1,7 @@
 {
   "date": "20260819",
   "dateText": "2026년 8월 19일",
-  "updatedAt": "2026-08-19T11:50:27.118Z",
+  "updatedAt": "2026-08-19T12:00:44.119Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "스기모토",
-        "batter": "문보경",
-        "heat": 56,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "톨허스트",
+        "batter": "김민혁",
+        "heat": 59,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -199,7 +199,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 11,
+        "score": 12,
         "starter": {
           "name": "보스",
           "era": 9,
@@ -231,13 +231,13 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 1,
-        "b1": false,
+        "half": "B",
+        "out": 0,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "보스",
-        "batter": "정준재",
+        "pitcher": "서진용",
+        "batter": "디아즈",
         "heat": 3,
         "label": "점수차가 벌어진 경기"
       },
@@ -395,16 +395,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 1,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "알칸타라",
-        "batter": "윤동희",
-        "heat": 46,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "이이무라",
+        "batter": "서건창",
+        "heat": 49,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -560,14 +560,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
+        "inning": 6,
+        "half": "T",
         "out": 1,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "최민석",
-        "batter": "박민우",
+        "pitcher": "류진욱",
+        "batter": "김대한",
         "heat": 11,
         "label": "경기 흐름 체크 중"
       },
@@ -726,14 +726,14 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
+        "half": "B",
         "out": 2,
-        "b1": false,
-        "b2": true,
+        "b1": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "화이트",
-        "batter": "박정우",
-        "heat": 49,
+        "pitcher": "전상현",
+        "batter": "노시환",
+        "heat": 51,
         "label": "후반 박빙 승부"
       },
       "recap": null,
