@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T13:00:42.865Z",
+  "updatedAt": "2026-08-19T13:10:29.421Z",
   "window": 50,
   "sampleSize": 50,
   "hitRate": 16,
@@ -1167,6 +1167,13 @@
       "pred": 59,
       "actual": 86,
       "verdict": "기대 이상"
+    },
+    {
+      "date": "20260819",
+      "gameId": "20260819OBNC0",
+      "pred": 60,
+      "actual": 17,
+      "verdict": "기대 이하"
     }
   ]
 }
