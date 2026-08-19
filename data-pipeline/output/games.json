@@ -1,12 +1,12 @@
 {
   "date": "20260819",
   "dateText": "2026년 8월 19일",
-  "updatedAt": "2026-08-19T13:30:34.677Z",
+  "updatedAt": "2026-08-19T13:40:25.738Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
     "hitRate": 20,
-    "bonusRate": 56,
+    "bonusRate": 58,
     "ready": true
   },
   "recommendedGameId": "20260819HTHH0",
@@ -25,9 +25,9 @@
         "score": 0,
         "starter": {
           "name": "대니엘",
-          "era": 3.6,
+          "era": 2.7,
           "w": 0,
-          "l": 0
+          "l": 1
         }
       },
       "home": {
@@ -37,8 +37,8 @@
         "score": 1,
         "starter": {
           "name": "톨허스트",
-          "era": 4.76,
-          "w": 10,
+          "era": 4.49,
+          "w": 11,
           "l": 9
         }
       },
@@ -74,9 +74,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "톨허스트",
+        "lose": "대니엘",
+        "save": "손주영"
       },
       "lineup": null
     },
@@ -94,9 +94,9 @@
         "score": 4,
         "starter": {
           "name": "타케다",
-          "era": 7.42,
+          "era": 7.86,
           "w": 2,
-          "l": 9
+          "l": 10
         }
       },
       "home": {
@@ -106,8 +106,8 @@
         "score": 18,
         "starter": {
           "name": "보스",
-          "era": 9,
-          "w": 0,
+          "era": 7.41,
+          "w": 1,
           "l": 3
         }
       },
@@ -143,8 +143,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "보스",
+        "lose": "타케다",
         "save": null
       },
       "lineup": null
@@ -153,7 +153,7 @@
       "gameId": "20260819WOLT0",
       "time": "19:00",
       "stadium": "사직",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SBS SPORTS",
       "away": {
@@ -175,7 +175,7 @@
         "score": 5,
         "starter": {
           "name": "로드리게스",
-          "era": 3.81,
+          "era": 3.77,
           "w": 7,
           "l": 8
         }
@@ -202,117 +202,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 2,
-        "b1": false,
-        "b2": true,
-        "b3": true,
-        "pitcher": "원종현",
-        "batter": "고승민",
-        "heat": 88,
-        "label": "끝내기 한 방 찬스"
+      "live": null,
+      "recap": {
+        "actual": 98,
+        "verdict": "기대 이상",
+        "diff": 1,
+        "total": 9,
+        "extra": 0,
+        "walkoff": 1
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "좌익수",
-            "name": "황성빈"
-          },
-          {
-            "order": 2,
-            "pos": "1루수",
-            "name": "나승엽"
-          },
-          {
-            "order": 3,
-            "pos": "지명타자",
-            "name": "레이예스"
-          },
-          {
-            "order": 4,
-            "pos": "3루수",
-            "name": "한동희"
-          },
-          {
-            "order": 5,
-            "pos": "2루수",
-            "name": "고승민"
-          },
-          {
-            "order": 6,
-            "pos": "우익수",
-            "name": "윤동희"
-          },
-          {
-            "order": 7,
-            "pos": "유격수",
-            "name": "전민재"
-          },
-          {
-            "order": 8,
-            "pos": "중견수",
-            "name": "장두성"
-          },
-          {
-            "order": 9,
-            "pos": "포수",
-            "name": "손성빈"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "2루수",
-            "name": "서건창"
-          },
-          {
-            "order": 2,
-            "pos": "좌익수",
-            "name": "추재현"
-          },
-          {
-            "order": 3,
-            "pos": "지명타자",
-            "name": "데이비슨"
-          },
-          {
-            "order": 4,
-            "pos": "1루수",
-            "name": "안치홍"
-          },
-          {
-            "order": 5,
-            "pos": "3루수",
-            "name": "김웅빈"
-          },
-          {
-            "order": 6,
-            "pos": "우익수",
-            "name": "박찬혁"
-          },
-          {
-            "order": 7,
-            "pos": "포수",
-            "name": "김건희"
-          },
-          {
-            "order": 8,
-            "pos": "중견수",
-            "name": "원성준"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "권혁빈"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": "박정민",
+        "lose": "원종현",
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260819OBNC0",
@@ -324,12 +228,12 @@
       "away": {
         "code": "OB",
         "name": "두산",
-        "rank": 4,
+        "rank": 5,
         "score": 8,
         "starter": {
           "name": "최민석",
-          "era": 2.68,
-          "w": 10,
+          "era": 2.72,
+          "w": 11,
           "l": 3
         }
       },
@@ -340,9 +244,9 @@
         "score": 2,
         "starter": {
           "name": "테일러",
-          "era": 4.45,
+          "era": 4.84,
           "w": 7,
-          "l": 5
+          "l": 6
         }
       },
       "honjam": {
@@ -377,8 +281,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "최민석",
+        "lose": "테일러",
         "save": null
       },
       "lineup": null
@@ -397,7 +301,7 @@
         "score": 6,
         "starter": {
           "name": "시라카와",
-          "era": 4.87,
+          "era": 4.44,
           "w": 3,
           "l": 4
         }
@@ -409,7 +313,7 @@
         "score": 3,
         "starter": {
           "name": "화이트",
-          "era": 3.15,
+          "era": 3.11,
           "w": 6,
           "l": 7
         }
@@ -446,9 +350,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "성영탁",
+        "lose": "박상원",
+        "save": "이의리"
       },
       "lineup": null
     }

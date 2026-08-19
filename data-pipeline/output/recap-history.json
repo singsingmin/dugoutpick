@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-08-19T13:30:34.677Z",
+  "updatedAt": "2026-08-19T13:40:25.738Z",
   "window": 50,
   "sampleSize": 50,
   "hitRate": 20,
-  "bonusRate": 56,
+  "bonusRate": 58,
   "ready": true,
   "records": [
     {
@@ -1188,6 +1188,13 @@
       "pred": 67,
       "actual": 67,
       "verdict": "예측 적중"
+    },
+    {
+      "date": "20260819",
+      "gameId": "20260819WOLT0",
+      "pred": 22,
+      "actual": 98,
+      "verdict": "기대 이상"
     }
   ]
 }
