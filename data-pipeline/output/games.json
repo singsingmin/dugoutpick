@@ -1,7 +1,7 @@
 {
   "date": "20260819",
   "dateText": "2026년 8월 19일",
-  "updatedAt": "2026-08-19T11:30:35.231Z",
+  "updatedAt": "2026-08-19T11:40:25.463Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 2,
-        "b1": true,
+        "inning": 6,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "대니엘",
-        "batter": "오스틴",
-        "heat": 50,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "톨허스트",
+        "batter": "최원준",
+        "heat": 53,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -199,7 +199,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 7,
+        "score": 11,
         "starter": {
           "name": "보스",
           "era": 9,
@@ -232,14 +232,14 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 0,
-        "b1": true,
+        "out": 1,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "박시후",
-        "batter": "디아즈",
-        "heat": 10,
-        "label": "경기 흐름 체크 중"
+        "batter": "이재현",
+        "heat": 3,
+        "label": "점수차가 벌어진 경기"
       },
       "recap": null,
       "decision": null,
@@ -397,12 +397,12 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 0,
-        "b1": false,
-        "b2": false,
-        "b3": false,
+        "out": 2,
+        "b1": true,
+        "b2": true,
+        "b3": true,
         "pitcher": "로드리게스",
-        "batter": "서건창",
+        "batter": "박찬혁",
         "heat": 33,
         "label": "경기 흐름 체크 중"
       },
@@ -529,7 +529,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "테일러",
           "era": 4.45,
@@ -560,16 +560,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "최민석",
-        "batter": "박건우",
-        "heat": 3,
-        "label": "점수차가 벌어진 경기"
+        "pitcher": "신영우",
+        "batter": "안재석",
+        "heat": 10,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -726,14 +726,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 0,
-        "b1": false,
+        "half": "B",
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "화이트",
-        "batter": "나성범",
-        "heat": 44,
+        "pitcher": "시라카와",
+        "batter": "최인호",
+        "heat": 46,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
