@@ -1,12 +1,12 @@
 {
   "date": "20260819",
   "dateText": "2026년 8월 19일",
-  "updatedAt": "2026-08-19T13:10:29.421Z",
+  "updatedAt": "2026-08-19T13:20:26.962Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
-    "hitRate": 16,
-    "bonusRate": 60,
+    "hitRate": 18,
+    "bonusRate": 58,
     "ready": true
   },
   "recommendedGameId": "20260819HTHH0",
@@ -84,14 +84,14 @@
       "gameId": "20260819SKSS0",
       "time": "19:00",
       "stadium": "대구",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "KBS N SPORTS",
       "away": {
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "타케다",
           "era": 7.42,
@@ -133,117 +133,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 1,
-        "b1": true,
-        "b2": false,
-        "b3": true,
-        "pitcher": "임기영",
-        "batter": "안상현",
-        "heat": 4,
-        "label": "점수차가 벌어진 경기"
+      "live": null,
+      "recap": {
+        "actual": 12,
+        "verdict": "예측 적중",
+        "diff": 14,
+        "total": 22,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "김지찬"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "박승규"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "구자욱"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "최형우"
-          },
-          {
-            "order": 5,
-            "pos": "1루수",
-            "name": "디아즈"
-          },
-          {
-            "order": 6,
-            "pos": "3루수",
-            "name": "전병우"
-          },
-          {
-            "order": 7,
-            "pos": "2루수",
-            "name": "류지혁"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "강민호"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "이재현"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "2루수",
-            "name": "정준재"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "최지훈"
-          },
-          {
-            "order": 3,
-            "pos": "유격수",
-            "name": "박성한"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "김재환"
-          },
-          {
-            "order": 5,
-            "pos": "1루수",
-            "name": "전의산"
-          },
-          {
-            "order": 6,
-            "pos": "우익수",
-            "name": "한유섬"
-          },
-          {
-            "order": 7,
-            "pos": "포수",
-            "name": "조형우"
-          },
-          {
-            "order": 8,
-            "pos": "좌익수",
-            "name": "김성욱"
-          },
-          {
-            "order": 9,
-            "pos": "3루수",
-            "name": "안상현"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260819WOLT0",
@@ -300,15 +204,15 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박정민",
-        "batter": "데이비슨",
-        "heat": 75,
-        "label": "9회 1점 승부"
+        "pitcher": "원종현",
+        "batter": "노진혁",
+        "heat": 85,
+        "label": "끝내기 한 방 찬스"
       },
       "recap": null,
       "decision": null,
@@ -420,7 +324,7 @@
       "away": {
         "code": "OB",
         "name": "두산",
-        "rank": 5,
+        "rank": 4,
         "score": 8,
         "starter": {
           "name": "최민석",
@@ -502,7 +406,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 6,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "화이트",
           "era": 3.15,
@@ -535,13 +439,13 @@
       "live": {
         "inning": 9,
         "half": "B",
-        "out": 0,
+        "out": 3,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "조상우",
-        "batter": "김태연",
-        "heat": 30,
+        "pitcher": "이의리",
+        "batter": "강백호",
+        "heat": 48,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
