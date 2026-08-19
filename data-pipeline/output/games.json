@@ -1,7 +1,7 @@
 {
   "date": "20260819",
   "dateText": "2026년 8월 19일",
-  "updatedAt": "2026-08-19T13:23:07.721Z",
+  "updatedAt": "2026-08-19T13:30:34.677Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -172,7 +172,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "로드리게스",
           "era": 3.81,
@@ -205,13 +205,13 @@
       "live": {
         "inning": 9,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": false,
-        "b2": false,
-        "b3": false,
+        "b2": true,
+        "b3": true,
         "pitcher": "원종현",
-        "batter": "손성빈",
-        "heat": 92,
+        "batter": "고승민",
+        "heat": 88,
         "label": "끝내기 한 방 찬스"
       },
       "recap": null,
