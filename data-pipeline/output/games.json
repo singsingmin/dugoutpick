@@ -1,12 +1,12 @@
 {
   "date": "20260819",
   "dateText": "2026년 8월 19일",
-  "updatedAt": "2026-08-19T13:20:26.962Z",
+  "updatedAt": "2026-08-19T13:23:07.721Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
-    "hitRate": 18,
-    "bonusRate": 58,
+    "hitRate": 20,
+    "bonusRate": 56,
     "ready": true
   },
   "recommendedGameId": "20260819HTHH0",
@@ -172,7 +172,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "로드리게스",
           "era": 3.81,
@@ -205,13 +205,13 @@
       "live": {
         "inning": 9,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "원종현",
-        "batter": "노진혁",
-        "heat": 85,
+        "batter": "손성빈",
+        "heat": 92,
         "label": "끝내기 한 방 찬스"
       },
       "recap": null,
@@ -387,7 +387,7 @@
       "gameId": "20260819HTHH0",
       "time": "19:00",
       "stadium": "대전",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPOTV2",
       "away": {
@@ -436,117 +436,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 3,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "이의리",
-        "batter": "강백호",
-        "heat": 48,
-        "label": "경기 흐름 체크 중"
+      "live": null,
+      "recap": {
+        "actual": 67,
+        "verdict": "예측 적중",
+        "diff": 3,
+        "total": 9,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "최인호"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "페라자"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "문현빈"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "강백호"
-          },
-          {
-            "order": 5,
-            "pos": "3루수",
-            "name": "노시환"
-          },
-          {
-            "order": 6,
-            "pos": "1루수",
-            "name": "채은성"
-          },
-          {
-            "order": 7,
-            "pos": "포수",
-            "name": "허인서"
-          },
-          {
-            "order": 8,
-            "pos": "2루수",
-            "name": "이도윤"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "심우준"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "우익수",
-            "name": "박재현"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "박정우"
-          },
-          {
-            "order": 3,
-            "pos": "3루수",
-            "name": "김도영"
-          },
-          {
-            "order": 4,
-            "pos": "1루수",
-            "name": "카스트로"
-          },
-          {
-            "order": 5,
-            "pos": "지명타자",
-            "name": "나성범"
-          },
-          {
-            "order": 6,
-            "pos": "좌익수",
-            "name": "오선우"
-          },
-          {
-            "order": 7,
-            "pos": "2루수",
-            "name": "이호연"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "김태군"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "정현창"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     }
   ],
   "postseason": null
