@@ -1,7 +1,7 @@
 {
   "date": "20260820",
   "dateText": "2026년 8월 20일",
-  "updatedAt": "2026-08-20T11:18:49.262Z",
+  "updatedAt": "2026-08-20T11:20:25.542Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "고영표",
-        "batter": "문정빈",
+        "batter": "송찬의",
         "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
@@ -232,12 +232,12 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 2,
+        "out": 3,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "최민준",
-        "batter": "류지혁",
+        "batter": "강민호",
         "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
@@ -561,14 +561,14 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "구창모",
-        "batter": "박지훈",
-        "heat": 40,
+        "pitcher": "잭로그",
+        "batter": "김형준",
+        "heat": 42,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -729,10 +729,10 @@
         "half": "B",
         "out": 2,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "황동하",
-        "batter": "최재훈",
+        "batter": "황영묵",
         "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
