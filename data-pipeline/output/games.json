@@ -1,7 +1,7 @@
 {
   "date": "20260820",
   "dateText": "2026년 8월 20일",
-  "updatedAt": "2026-08-20T09:10:25.397Z",
+  "updatedAt": "2026-08-20T10:00:41.691Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -474,14 +474,14 @@
       "gameId": "20260820OBNC0",
       "time": "19:00",
       "stadium": "창원",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "MBC SPORTS+",
       "away": {
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "잭로그",
           "era": 3.97,
@@ -493,7 +493,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "구창모",
           "era": 3.94,
@@ -520,9 +520,21 @@
           "doom": 0,
           "park": 0.64,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 1,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "구창모",
+        "batter": "조수행",
+        "heat": 31,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
