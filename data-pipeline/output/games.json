@@ -1,7 +1,7 @@
 {
   "date": "20260820",
   "dateText": "2026년 8월 20일",
-  "updatedAt": "2026-08-20T10:26:47.252Z",
+  "updatedAt": "2026-08-20T10:30:32.588Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 3,
+        "inning": 2,
+        "half": "T",
+        "out": 1,
         "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "고영표",
-        "batter": "문정빈",
-        "heat": 31,
+        "b3": false,
+        "pitcher": "박시원",
+        "batter": "한승택",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "최원태",
-        "batter": "김재환",
+        "batter": "조형우",
         "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 2,
+        "inning": 2,
+        "half": "T",
+        "out": 0,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "박준현",
-        "batter": "한동희",
-        "heat": 31,
+        "pitcher": "나균안",
+        "batter": "최재영",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -562,12 +562,12 @@
       "live": {
         "inning": 2,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "잭로그",
-        "batter": "박건우",
+        "batter": "천재환",
         "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
@@ -726,14 +726,14 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "류현진",
-        "batter": "윤도현",
-        "heat": 35,
+        "pitcher": "황동하",
+        "batter": "채은성",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
