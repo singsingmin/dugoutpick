@@ -1,7 +1,7 @@
 {
   "date": "20260820",
   "dateText": "2026년 8월 20일",
-  "updatedAt": "2026-08-20T10:40:27.378Z",
+  "updatedAt": "2026-08-20T10:50:25.194Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
+        "inning": 3,
+        "half": "T",
         "out": 2,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "고영표",
-        "batter": "박동원",
-        "heat": 35,
+        "pitcher": "박시원",
+        "batter": "힐리어드",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
+        "inning": 3,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "최원태",
-        "batter": "임근우",
-        "heat": 35,
+        "pitcher": "최민준",
+        "batter": "김성윤",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
+        "inning": 3,
+        "half": "T",
         "out": 1,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "박준현",
-        "batter": "한태양",
-        "heat": 35,
+        "pitcher": "나균안",
+        "batter": "김웅빈",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -529,7 +529,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "구창모",
           "era": 3.94,
@@ -562,13 +562,13 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "잭로그",
-        "batter": "김형준",
-        "heat": 43,
+        "batter": "블레인",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
+        "inning": 4,
         "half": "T",
-        "out": 1,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "류현진",
-        "batter": "정현창",
-        "heat": 31,
+        "batter": "박재현",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
