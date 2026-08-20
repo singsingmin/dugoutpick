@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-08-20T13:40:26.761Z",
+  "updatedAt": "2026-08-20T13:50:26.523Z",
   "window": 50,
   "sampleSize": 50,
   "hitRate": 22,
-  "bonusRate": 58,
+  "bonusRate": 56,
   "ready": true,
   "records": [
     {
@@ -1216,6 +1216,13 @@
       "pred": 59,
       "actual": 59,
       "verdict": "예측 적중"
+    },
+    {
+      "date": "20260820",
+      "gameId": "20260820KTLG0",
+      "pred": 68,
+      "actual": 12,
+      "verdict": "기대 이하"
     }
   ]
 }
