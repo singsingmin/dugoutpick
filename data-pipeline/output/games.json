@@ -1,7 +1,7 @@
 {
   "date": "20260820",
   "dateText": "2026년 8월 20일",
-  "updatedAt": "2026-08-20T11:50:26.898Z",
+  "updatedAt": "2026-08-20T12:00:42.086Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김진수",
-        "batter": "오윤석",
-        "heat": 44,
+        "pitcher": "고영표",
+        "batter": "문보경",
+        "heat": 46,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 2,
-        "b1": false,
-        "b2": true,
-        "b3": true,
-        "pitcher": "전영준",
-        "batter": "디아즈",
-        "heat": 31,
+        "inning": 6,
+        "half": "T",
+        "out": 0,
+        "b1": true,
+        "b2": false,
+        "b3": false,
+        "pitcher": "배찬승",
+        "batter": "전의산",
+        "heat": 33,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -364,7 +364,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": 1,
+        "score": 3,
         "starter": {
           "name": "나균안",
           "era": 4.14,
@@ -397,13 +397,13 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
-        "b3": false,
-        "pitcher": "박준현",
-        "batter": "황성빈",
-        "heat": 59,
+        "b3": true,
+        "pitcher": "김선기",
+        "batter": "고승민",
+        "heat": 46,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -560,16 +560,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
+        "inning": 7,
         "half": "B",
-        "out": 1,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "잭로그",
-        "batter": "김휘집",
-        "heat": 59,
-        "label": "경기 흐름 체크 중"
+        "batter": "최정원",
+        "heat": 65,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -725,16 +725,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "inning": 7,
+        "half": "T",
+        "out": 1,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "이태양",
-        "batter": "노시환",
-        "heat": 46,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "이상규",
+        "batter": "박재현",
+        "heat": 49,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
