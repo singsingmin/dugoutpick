@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T13:50:26.523Z",
+  "updatedAt": "2026-08-20T14:00:42.696Z",
   "recent": {
     "LT": [
       {
@@ -78,9 +78,9 @@
         "date": "20260820",
         "oppCode": "WO",
         "isHome": true,
-        "sf": 0,
-        "sa": 0,
-        "result": "D"
+        "sf": 7,
+        "sa": 1,
+        "result": "W"
       }
     ],
     "OB": [
@@ -160,20 +160,12 @@
         "date": "20260820",
         "oppCode": "NC",
         "isHome": false,
-        "sf": 0,
-        "sa": 0,
-        "result": "D"
+        "sf": 4,
+        "sa": 5,
+        "result": "L"
       }
     ],
     "SK": [
-      {
-        "date": "20260802",
-        "oppCode": "WO",
-        "isHome": false,
-        "sf": 3,
-        "sa": 5,
-        "result": "L"
-      },
       {
         "date": "20260804",
         "oppCode": "LG",
@@ -245,17 +237,17 @@
         "sf": 4,
         "sa": 18,
         "result": "L"
+      },
+      {
+        "date": "20260820",
+        "oppCode": "SS",
+        "isHome": false,
+        "sf": 6,
+        "sa": 4,
+        "result": "W"
       }
     ],
     "HT": [
-      {
-        "date": "20260730",
-        "oppCode": "SS",
-        "isHome": false,
-        "sf": 12,
-        "sa": 3,
-        "result": "W"
-      },
       {
         "date": "20260731",
         "oppCode": "NC",
@@ -327,17 +319,17 @@
         "sf": 6,
         "sa": 3,
         "result": "W"
+      },
+      {
+        "date": "20260820",
+        "oppCode": "HH",
+        "isHome": false,
+        "sf": 10,
+        "sa": 6,
+        "result": "W"
       }
     ],
     "SS": [
-      {
-        "date": "20260731",
-        "oppCode": "LT",
-        "isHome": false,
-        "sf": 9,
-        "sa": 7,
-        "result": "W"
-      },
       {
         "date": "20260802",
         "oppCode": "LT",
@@ -409,6 +401,14 @@
         "sf": 18,
         "sa": 4,
         "result": "W"
+      },
+      {
+        "date": "20260820",
+        "oppCode": "SK",
+        "isHome": true,
+        "sf": 4,
+        "sa": 6,
+        "result": "L"
       }
     ],
     "NC": [
@@ -488,20 +488,12 @@
         "date": "20260820",
         "oppCode": "OB",
         "isHome": true,
-        "sf": 0,
-        "sa": 0,
-        "result": "D"
+        "sf": 5,
+        "sa": 4,
+        "result": "W"
       }
     ],
     "KT": [
-      {
-        "date": "20260801",
-        "oppCode": "HH",
-        "isHome": true,
-        "sf": 7,
-        "sa": 4,
-        "result": "W"
-      },
       {
         "date": "20260802",
         "oppCode": "HH",
@@ -573,17 +565,17 @@
         "sf": 0,
         "sa": 1,
         "result": "L"
+      },
+      {
+        "date": "20260820",
+        "oppCode": "LG",
+        "isHome": false,
+        "sf": 16,
+        "sa": 4,
+        "result": "W"
       }
     ],
     "HH": [
-      {
-        "date": "20260801",
-        "oppCode": "KT",
-        "isHome": false,
-        "sf": 4,
-        "sa": 7,
-        "result": "L"
-      },
       {
         "date": "20260802",
         "oppCode": "KT",
@@ -655,17 +647,17 @@
         "sf": 3,
         "sa": 6,
         "result": "L"
+      },
+      {
+        "date": "20260820",
+        "oppCode": "HT",
+        "isHome": true,
+        "sf": 6,
+        "sa": 10,
+        "result": "L"
       }
     ],
     "LG": [
-      {
-        "date": "20260802",
-        "oppCode": "OB",
-        "isHome": false,
-        "sf": 3,
-        "sa": 8,
-        "result": "L"
-      },
       {
         "date": "20260804",
         "oppCode": "SK",
@@ -737,6 +729,14 @@
         "sf": 1,
         "sa": 0,
         "result": "W"
+      },
+      {
+        "date": "20260820",
+        "oppCode": "KT",
+        "isHome": true,
+        "sf": 4,
+        "sa": 16,
+        "result": "L"
       }
     ],
     "WO": [
@@ -816,22 +816,22 @@
         "date": "20260820",
         "oppCode": "LT",
         "isHome": false,
-        "sf": 0,
-        "sa": 0,
-        "result": "D"
+        "sf": 1,
+        "sa": 7,
+        "result": "L"
       }
     ]
   },
   "recentStreak": {
-    "LT": "1무",
-    "OB": "1무",
-    "SK": "1패",
-    "HT": "4승",
-    "SS": "1승",
-    "NC": "1무",
-    "KT": "2패",
-    "HH": "5패",
-    "LG": "2승",
-    "WO": "1무"
+    "LT": "4승",
+    "OB": "1패",
+    "SK": "1승",
+    "HT": "5승",
+    "SS": "1패",
+    "NC": "1승",
+    "KT": "1승",
+    "HH": "6패",
+    "LG": "1패",
+    "WO": "4패"
   }
 }

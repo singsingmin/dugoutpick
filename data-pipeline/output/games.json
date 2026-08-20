@@ -1,7 +1,7 @@
 {
   "date": "20260820",
   "dateText": "2026년 8월 20일",
-  "updatedAt": "2026-08-20T13:50:26.523Z",
+  "updatedAt": "2026-08-20T14:00:42.696Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -25,8 +25,8 @@
         "score": 16,
         "starter": {
           "name": "고영표",
-          "era": 3.7,
-          "w": 9,
+          "era": 3.74,
+          "w": 10,
           "l": 6
         }
       },
@@ -37,7 +37,7 @@
         "score": 4,
         "starter": {
           "name": "박시원",
-          "era": 3.98,
+          "era": 3.89,
           "w": 0,
           "l": 2
         }
@@ -74,8 +74,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "고영표",
+        "lose": "케네디",
         "save": null
       },
       "lineup": null
@@ -84,7 +84,7 @@
       "gameId": "20260820SKSS0",
       "time": "19:00",
       "stadium": "대구",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "KBS N SPORTS",
       "away": {
@@ -94,7 +94,7 @@
         "score": 6,
         "starter": {
           "name": "최민준",
-          "era": 5.09,
+          "era": 5.27,
           "w": 1,
           "l": 5
         }
@@ -106,7 +106,7 @@
         "score": 4,
         "starter": {
           "name": "최원태",
-          "era": 4.83,
+          "era": 4.67,
           "w": 4,
           "l": 4
         }
@@ -133,117 +133,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 2,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "조병현",
-        "batter": "디아즈",
-        "heat": 65,
-        "label": "후반 박빙 승부"
+      "live": null,
+      "recap": {
+        "actual": 83,
+        "verdict": "기대 이상",
+        "diff": 2,
+        "total": 10,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "우익수",
-            "name": "김성윤"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "박승규"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "구자욱"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "최형우"
-          },
-          {
-            "order": 5,
-            "pos": "1루수",
-            "name": "디아즈"
-          },
-          {
-            "order": 6,
-            "pos": "3루수",
-            "name": "전병우"
-          },
-          {
-            "order": 7,
-            "pos": "2루수",
-            "name": "류지혁"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "강민호"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "이재현"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "2루수",
-            "name": "정준재"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "최지훈"
-          },
-          {
-            "order": 3,
-            "pos": "유격수",
-            "name": "박성한"
-          },
-          {
-            "order": 4,
-            "pos": "1루수",
-            "name": "전의산"
-          },
-          {
-            "order": 5,
-            "pos": "우익수",
-            "name": "한유섬"
-          },
-          {
-            "order": 6,
-            "pos": "지명타자",
-            "name": "김재환"
-          },
-          {
-            "order": 7,
-            "pos": "포수",
-            "name": "조형우"
-          },
-          {
-            "order": 8,
-            "pos": "3루수",
-            "name": "안상현"
-          },
-          {
-            "order": 9,
-            "pos": "좌익수",
-            "name": "임근우"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": "노경은",
+        "lose": "사토시",
+        "save": "조병현"
+      },
+      "lineup": null
     },
     {
       "gameId": "20260820WOLT0",
@@ -259,9 +163,9 @@
         "score": 1,
         "starter": {
           "name": "박준현",
-          "era": 5.01,
+          "era": 5.04,
           "w": 1,
-          "l": 5
+          "l": 6
         }
       },
       "home": {
@@ -271,8 +175,8 @@
         "score": 7,
         "starter": {
           "name": "나균안",
-          "era": 4.14,
-          "w": 5,
+          "era": 4,
+          "w": 6,
           "l": 9
         }
       },
@@ -308,8 +212,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "나균안",
+        "lose": "박준현",
         "save": null
       },
       "lineup": null
@@ -328,7 +232,7 @@
         "score": 4,
         "starter": {
           "name": "잭로그",
-          "era": 3.97,
+          "era": 3.91,
           "w": 6,
           "l": 6
         }
@@ -340,7 +244,7 @@
         "score": 5,
         "starter": {
           "name": "구창모",
-          "era": 3.94,
+          "era": 3.89,
           "w": 9,
           "l": 4
         }
@@ -377,8 +281,8 @@
         "walkoff": 1
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "전사민",
+        "lose": "김택연",
         "save": null
       },
       "lineup": null
@@ -397,7 +301,7 @@
         "score": 10,
         "starter": {
           "name": "황동하",
-          "era": 4.9,
+          "era": 4.82,
           "w": 7,
           "l": 5
         }
@@ -409,7 +313,7 @@
         "score": 6,
         "starter": {
           "name": "류현진",
-          "era": 3.91,
+          "era": 4.02,
           "w": 8,
           "l": 4
         }
@@ -446,8 +350,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "최지민",
+        "lose": "정우주",
         "save": null
       },
       "lineup": null
