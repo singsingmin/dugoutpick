@@ -1,7 +1,7 @@
 {
   "date": "20260820",
   "dateText": "2026년 8월 20일",
-  "updatedAt": "2026-08-20T10:55:47.518Z",
+  "updatedAt": "2026-08-20T11:00:41.528Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
+        "inning": 4,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "고영표",
-        "batter": "신민재",
-        "heat": 40,
+        "pitcher": "박시원",
+        "batter": "류현인",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "최원태",
-        "batter": "박성한",
+        "batter": "전의산",
         "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
@@ -397,12 +397,12 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "박준현",
-        "batter": "전민재",
+        "batter": "황성빈",
         "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
@@ -562,12 +562,12 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "구창모",
-        "batter": "김민석",
+        "batter": "박찬호",
         "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
@@ -682,7 +682,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "황동하",
           "era": 4.9,
@@ -730,10 +730,10 @@
         "out": 0,
         "b1": true,
         "b2": true,
-        "b3": false,
+        "b3": true,
         "pitcher": "류현진",
-        "batter": "김도영",
-        "heat": 35,
+        "batter": "나성범",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
