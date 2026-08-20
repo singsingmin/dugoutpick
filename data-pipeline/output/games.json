@@ -1,7 +1,7 @@
 {
   "date": "20260820",
   "dateText": "2026년 8월 20일",
-  "updatedAt": "2026-08-20T11:10:27.278Z",
+  "updatedAt": "2026-08-20T11:18:49.262Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
+        "half": "B",
         "out": 0,
-        "b1": true,
-        "b2": true,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "이우찬",
-        "batter": "한승택",
-        "heat": 43,
+        "pitcher": "고영표",
+        "batter": "문정빈",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -199,7 +199,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "최원태",
           "era": 4.83,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 0,
-        "b1": true,
+        "out": 2,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "최민준",
-        "batter": "최형우",
+        "batter": "류지혁",
         "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박준현",
-        "batter": "레이예스",
-        "heat": 45,
+        "pitcher": "나균안",
+        "batter": "추재현",
+        "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -529,7 +529,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "구창모",
           "era": 3.94,
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 1,
-        "b1": true,
-        "b2": true,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "잭로그",
-        "batter": "천재환",
-        "heat": 45,
+        "pitcher": "구창모",
+        "batter": "박지훈",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -727,12 +727,12 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "황동하",
-        "batter": "노시환",
+        "batter": "최재훈",
         "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
