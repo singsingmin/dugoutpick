@@ -1,7 +1,7 @@
 {
   "date": "20260820",
   "dateText": "2026년 8월 20일",
-  "updatedAt": "2026-08-20T12:30:35.435Z",
+  "updatedAt": "2026-08-20T12:40:26.224Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
+        "inning": 8,
         "half": "T",
-        "out": 3,
+        "out": 0,
         "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "이정용",
-        "batter": "김상수",
-        "heat": 24,
+        "batter": "김현수",
+        "heat": 26,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 1,
-        "b1": true,
+        "inning": 7,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김민",
-        "batter": "이재현",
-        "heat": 46,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "이승민",
+        "batter": "정준재",
+        "heat": 49,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -395,14 +395,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
+        "inning": 8,
         "half": "B",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "정현우",
-        "batter": "고승민",
+        "b3": false,
+        "pitcher": "조영건",
+        "batter": "한태양",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
+        "inning": 9,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박치국",
-        "batter": "박민우",
-        "heat": 56,
+        "pitcher": "전사민",
+        "batter": "김민석",
+        "heat": 58,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -728,11 +728,11 @@
         "inning": 8,
         "half": "T",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
-        "b3": false,
-        "pitcher": "이상규",
-        "batter": "김도영",
+        "b3": true,
+        "pitcher": "정우주",
+        "batter": "나성범",
         "heat": 58,
         "label": "후반 박빙 승부"
       },
