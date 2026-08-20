@@ -1,7 +1,7 @@
 {
   "date": "20260820",
   "dateText": "2026년 8월 20일",
-  "updatedAt": "2026-08-20T11:49:40.693Z",
+  "updatedAt": "2026-08-20T11:50:26.898Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -199,7 +199,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "최원태",
           "era": 4.83,
@@ -233,13 +233,13 @@
         "inning": 5,
         "half": "B",
         "out": 2,
-        "b1": true,
-        "b2": false,
+        "b1": false,
+        "b2": true,
         "b3": true,
         "pitcher": "전영준",
-        "batter": "최형우",
-        "heat": 42,
-        "label": "초반 팽팽한 흐름"
+        "batter": "디아즈",
+        "heat": 31,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
