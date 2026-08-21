@@ -1,7 +1,7 @@
 {
   "date": "20260821",
   "dateText": "2026년 8월 21일",
-  "updatedAt": "2026-08-21T13:20:32.481Z",
+  "updatedAt": "2026-08-21T13:25:13.063Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,14 +65,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
-        "b1": true,
+        "inning": 9,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김한결",
-        "batter": "양의지",
+        "pitcher": "이병헌",
+        "batter": "손성빈",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
@@ -231,15 +231,15 @@
       },
       "live": {
         "inning": 10,
-        "half": "T",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "half": "B",
+        "out": 1,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "이건욱",
-        "batter": "김상수",
-        "heat": 89,
-        "label": "연장 혈투 진행 중"
+        "pitcher": "주권",
+        "batter": "최지훈",
+        "heat": 96,
+        "label": "끝내기 한 방 찬스"
       },
       "recap": null,
       "decision": null,
@@ -464,15 +464,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "inning": 8,
+        "half": "T",
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "김진수",
-        "batter": "노시환",
-        "heat": 73,
+        "pitcher": "이민우",
+        "batter": "송찬의",
+        "heat": 77,
         "label": "후반 박빙 승부"
       },
       "recap": null,
