@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-21T14:10:28.678Z",
+  "updatedAt": "2026-08-21T14:20:28.660Z",
   "results": [
     {
       "date": "20260705",
@@ -611,6 +611,28 @@
         "score": 5
       },
       "calculatedAt": "2026-08-20T14:00:42.696Z"
+    },
+    {
+      "date": "20260821",
+      "actualTopGameId": "20260821KTSK0",
+      "recapScore": 99,
+      "decidingReasonTags": [
+        "연장 접전",
+        "1점차 접전"
+      ],
+      "displayMode": "highlight",
+      "displayTitle": "어제의 명경기",
+      "away": {
+        "code": "KT",
+        "name": "KT",
+        "score": 3
+      },
+      "home": {
+        "code": "SK",
+        "name": "SSG",
+        "score": 3
+      },
+      "calculatedAt": "2026-08-21T14:20:28.660Z"
     }
   ]
 }
