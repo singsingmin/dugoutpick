@@ -1,7 +1,7 @@
 {
   "date": "20260821",
   "dateText": "2026년 8월 21일",
-  "updatedAt": "2026-08-21T14:00:40.744Z",
+  "updatedAt": "2026-08-21T14:04:36.266Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -241,7 +241,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 8,
-        "score": 14,
+        "score": 15,
         "starter": {
           "name": "짐머맨",
           "era": 9,
@@ -272,16 +272,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
+        "inning": 9,
+        "half": "T",
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "이상영",
-        "batter": "한지윤",
-        "heat": 50,
-        "label": "점수 나는 난타전"
+        "pitcher": "조동욱",
+        "batter": "신민재",
+        "heat": 28,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
