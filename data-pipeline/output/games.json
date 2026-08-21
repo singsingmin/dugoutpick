@@ -1,7 +1,7 @@
 {
   "date": "20260821",
   "dateText": "2026년 8월 21일",
-  "updatedAt": "2026-08-21T13:50:25.054Z",
+  "updatedAt": "2026-08-21T14:00:40.744Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -84,7 +84,7 @@
       "gameId": "20260821KTSK0",
       "time": "19:00",
       "stadium": "문학",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPOTV",
       "away": {
@@ -133,117 +133,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 11,
-        "half": "B",
-        "out": 1,
-        "b1": true,
-        "b2": true,
-        "b3": true,
-        "pitcher": "우규민",
-        "batter": "이지영",
-        "heat": 99,
-        "label": "끝내기 한 방 찬스"
+      "live": null,
+      "recap": {
+        "actual": 99,
+        "verdict": "기대 이상",
+        "diff": 0,
+        "total": 6,
+        "extra": 1,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "2루수",
-            "name": "정준재"
-          },
-          {
-            "order": 2,
-            "pos": "유격수",
-            "name": "박성한"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "에레디아"
-          },
-          {
-            "order": 4,
-            "pos": "1루수",
-            "name": "전의산"
-          },
-          {
-            "order": 5,
-            "pos": "지명타자",
-            "name": "김재환"
-          },
-          {
-            "order": 6,
-            "pos": "중견수",
-            "name": "최지훈"
-          },
-          {
-            "order": 7,
-            "pos": "우익수",
-            "name": "한유섬"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "조형우"
-          },
-          {
-            "order": 9,
-            "pos": "3루수",
-            "name": "안상현"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "최원준"
-          },
-          {
-            "order": 2,
-            "pos": "지명타자",
-            "name": "김현수"
-          },
-          {
-            "order": 3,
-            "pos": "우익수",
-            "name": "안현민"
-          },
-          {
-            "order": 4,
-            "pos": "좌익수",
-            "name": "힐리어드"
-          },
-          {
-            "order": 5,
-            "pos": "2루수",
-            "name": "김상수"
-          },
-          {
-            "order": 6,
-            "pos": "3루수",
-            "name": "허경민"
-          },
-          {
-            "order": 7,
-            "pos": "1루수",
-            "name": "이정범"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "한승택"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "권동진"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260821SSNC0",
@@ -337,7 +241,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 8,
-        "score": 11,
+        "score": 14,
         "starter": {
           "name": "짐머맨",
           "era": 9,
@@ -370,14 +274,14 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 1,
-        "b1": true,
+        "out": 2,
+        "b1": false,
         "b2": true,
         "b3": false,
-        "pitcher": "배재준",
-        "batter": "최인호",
-        "heat": 80,
-        "label": "후반 박빙 승부"
+        "pitcher": "이상영",
+        "batter": "한지윤",
+        "heat": 50,
+        "label": "점수 나는 난타전"
       },
       "recap": null,
       "decision": null,
