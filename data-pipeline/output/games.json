@@ -1,7 +1,7 @@
 {
   "date": "20260821",
   "dateText": "2026년 8월 21일",
-  "updatedAt": "2026-08-21T14:04:36.266Z",
+  "updatedAt": "2026-08-21T14:10:28.678Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -274,12 +274,12 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "조동욱",
-        "batter": "신민재",
+        "pitcher": "박상원",
+        "batter": "문정빈",
         "heat": 28,
         "label": "경기 흐름 체크 중"
       },
