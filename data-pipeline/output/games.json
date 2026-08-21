@@ -1,7 +1,7 @@
 {
   "date": "20260821",
   "dateText": "2026년 8월 21일",
-  "updatedAt": "2026-08-21T11:49:42.099Z",
+  "updatedAt": "2026-08-21T11:50:26.627Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -730,9 +730,9 @@
         "out": 0,
         "b1": true,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "양현종",
-        "batter": "추재현",
+        "batter": "데이비슨",
         "heat": 34,
         "label": "경기 흐름 체크 중"
       },
