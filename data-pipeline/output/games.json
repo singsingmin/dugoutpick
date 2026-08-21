@@ -1,7 +1,7 @@
 {
   "date": "20260821",
   "dateText": "2026년 8월 21일",
-  "updatedAt": "2026-08-21T12:50:26.420Z",
+  "updatedAt": "2026-08-21T13:00:42.417Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 7,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "김진욱",
           "era": 3.46,
@@ -67,13 +67,13 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "윤태호",
-        "batter": "전민재",
-        "heat": 64,
+        "batter": "한동희",
+        "heat": 55,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -231,15 +231,15 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
-        "out": 1,
-        "b1": true,
+        "half": "B",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "조병현",
-        "batter": "류현인",
-        "heat": 80,
-        "label": "9회 1점 승부"
+        "pitcher": "박영현",
+        "batter": "박성한",
+        "heat": 90,
+        "label": "끝내기 한 방 찬스"
       },
       "recap": null,
       "decision": null,
@@ -345,7 +345,7 @@
       "gameId": "20260821SSNC0",
       "time": "19:00",
       "stadium": "창원",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SBS SPORTS",
       "away": {
@@ -394,117 +394,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 0,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "전사민",
-        "batter": "김지찬",
-        "heat": 75,
-        "label": "9회 1점 승부"
+      "live": null,
+      "recap": {
+        "actual": 88,
+        "verdict": "기대 이상",
+        "diff": 1,
+        "total": 5,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "유격수",
-            "name": "김주원"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "최정원"
-          },
-          {
-            "order": 3,
-            "pos": "2루수",
-            "name": "박민우"
-          },
-          {
-            "order": 4,
-            "pos": "3루수",
-            "name": "김휘집"
-          },
-          {
-            "order": 5,
-            "pos": "지명타자",
-            "name": "박건우"
-          },
-          {
-            "order": 6,
-            "pos": "좌익수",
-            "name": "권희동"
-          },
-          {
-            "order": 7,
-            "pos": "1루수",
-            "name": "블레인"
-          },
-          {
-            "order": 8,
-            "pos": "우익수",
-            "name": "천재환"
-          },
-          {
-            "order": 9,
-            "pos": "포수",
-            "name": "김형준"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "김지찬"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "김성윤"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "구자욱"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "최형우"
-          },
-          {
-            "order": 5,
-            "pos": "1루수",
-            "name": "디아즈"
-          },
-          {
-            "order": 6,
-            "pos": "2루수",
-            "name": "류지혁"
-          },
-          {
-            "order": 7,
-            "pos": "포수",
-            "name": "강민호"
-          },
-          {
-            "order": 8,
-            "pos": "3루수",
-            "name": "전병우"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "이재현"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260821LGHH0",
@@ -562,12 +466,12 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": true,
-        "b2": true,
-        "b3": false,
+        "b2": false,
+        "b3": true,
         "pitcher": "이민우",
-        "batter": "박해민",
+        "batter": "문정빈",
         "heat": 44,
         "label": "점수 나는 난타전"
       },
@@ -682,7 +586,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 3,
-        "score": 8,
+        "score": 11,
         "starter": {
           "name": "양현종",
           "era": 4.33,
@@ -727,12 +631,12 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 1,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "최현우",
-        "batter": "김선빈",
+        "batter": "하주석",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
