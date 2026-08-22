@@ -1,7 +1,7 @@
 {
   "date": "20260822",
   "dateText": "2026년 8월 22일",
-  "updatedAt": "2026-08-22T12:19:08.528Z",
+  "updatedAt": "2026-08-22T12:30:34.523Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -251,14 +251,14 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 2,
-        "b1": true,
+        "half": "B",
+        "out": 1,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "송명기",
-        "batter": "류지혁",
-        "heat": 65,
+        "pitcher": "이승민",
+        "batter": "최정원",
+        "heat": 68,
         "label": "후반 박빙 승부"
       },
       "recap": null,
