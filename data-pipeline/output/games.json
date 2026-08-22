@@ -1,7 +1,7 @@
 {
   "date": "20260822",
   "dateText": "2026년 8월 22일",
-  "updatedAt": "2026-08-22T10:40:24.729Z",
+  "updatedAt": "2026-08-22T10:46:14.241Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "안우진",
-        "batter": "박재현",
-        "heat": 53,
+        "pitcher": "올러",
+        "batter": "데이비슨",
+        "heat": 56,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -315,7 +315,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 6,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "원종해",
           "era": 5.19,
@@ -346,14 +346,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
+        "inning": 3,
+        "half": "T",
         "out": 0,
-        "b1": false,
-        "b2": true,
+        "b1": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "이승현",
-        "batter": "천재환",
+        "pitcher": "원종해",
+        "batter": "최형우",
         "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
