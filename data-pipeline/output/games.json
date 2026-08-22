@@ -1,7 +1,7 @@
 {
   "date": "20260822",
   "dateText": "2026년 8월 22일",
-  "updatedAt": "2026-08-22T09:30:34.605Z",
+  "updatedAt": "2026-08-22T09:40:26.334Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
-        "out": 0,
+        "half": "B",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "안우진",
-        "batter": "하주석",
-        "heat": 40,
+        "pitcher": "올러",
+        "batter": "박주홍",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
