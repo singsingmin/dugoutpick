@@ -1,7 +1,7 @@
 {
   "date": "20260822",
   "dateText": "2026년 8월 22일",
-  "updatedAt": "2026-08-22T09:48:19.072Z",
+  "updatedAt": "2026-08-22T10:00:40.107Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 1,
-        "b1": true,
+        "inning": 4,
+        "half": "T",
+        "out": 2,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "올러",
-        "batter": "추재현",
-        "heat": 40,
+        "pitcher": "안우진",
+        "batter": "김도영",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
