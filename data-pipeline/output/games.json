@@ -1,7 +1,7 @@
 {
   "date": "20260822",
   "dateText": "2026년 8월 22일",
-  "updatedAt": "2026-08-22T11:00:42.102Z",
+  "updatedAt": "2026-08-22T11:10:26.641Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "out": 1,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "올러",
-        "batter": "김건희",
+        "pitcher": "조상우",
+        "batter": "박주홍",
         "heat": 62,
         "label": "후반 박빙 승부"
       },
@@ -303,7 +303,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 2,
+        "score": 4,
         "starter": {
           "name": "이승현",
           "era": 7,
@@ -349,11 +349,11 @@
         "inning": 4,
         "half": "T",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "원종해",
-        "batter": "전병우",
+        "batter": "이재현",
         "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
