@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T13:30:33.393Z",
+  "updatedAt": "2026-08-22T13:40:23.310Z",
   "results": [
     {
       "date": "20260705",
@@ -633,6 +633,28 @@
         "score": 3
       },
       "calculatedAt": "2026-08-21T14:20:28.660Z"
+    },
+    {
+      "date": "20260822",
+      "actualTopGameId": "20260822SSNC0",
+      "recapScore": 86,
+      "decidingReasonTags": [
+        "2점차 접전",
+        "난타전"
+      ],
+      "displayMode": "highlight",
+      "displayTitle": "어제의 명경기",
+      "away": {
+        "code": "SS",
+        "name": "삼성",
+        "score": 8
+      },
+      "home": {
+        "code": "NC",
+        "name": "NC",
+        "score": 6
+      },
+      "calculatedAt": "2026-08-22T13:40:23.310Z"
     }
   ]
 }
