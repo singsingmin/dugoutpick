@@ -1,7 +1,7 @@
 {
   "date": "20260822",
   "dateText": "2026년 8월 22일",
-  "updatedAt": "2026-08-22T10:46:14.241Z",
+  "updatedAt": "2026-08-22T10:50:29.496Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -347,14 +347,14 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
+        "half": "B",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "원종해",
-        "batter": "최형우",
-        "heat": 38,
+        "pitcher": "이승현",
+        "batter": "최정원",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
