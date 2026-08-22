@@ -1,7 +1,7 @@
 {
   "date": "20260822",
   "dateText": "2026년 8월 22일",
-  "updatedAt": "2026-08-22T11:20:26.394Z",
+  "updatedAt": "2026-08-22T11:30:32.302Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "T",
-        "out": 0,
+        "inning": 7,
+        "half": "B",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "원종현",
-        "batter": "김태군",
-        "heat": 40,
+        "batter": "김호령",
+        "heat": 38,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -303,7 +303,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "이승현",
           "era": 7,
@@ -347,14 +347,14 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "b1": true,
         "b2": false,
-        "b3": true,
-        "pitcher": "신영우",
-        "batter": "최형우",
-        "heat": 43,
+        "b3": false,
+        "pitcher": "양창섭",
+        "batter": "블레인",
+        "heat": 39,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
