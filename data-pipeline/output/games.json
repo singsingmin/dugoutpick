@@ -1,7 +1,7 @@
 {
   "date": "20260822",
   "dateText": "2026년 8월 22일",
-  "updatedAt": "2026-08-22T09:17:43.788Z",
+  "updatedAt": "2026-08-22T09:20:24.963Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 2,
-        "b1": true,
+        "inning": 2,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "올러",
-        "batter": "안치홍",
-        "heat": 33,
+        "pitcher": "안우진",
+        "batter": "카스트로",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
