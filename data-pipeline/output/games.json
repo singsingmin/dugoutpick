@@ -1,7 +1,7 @@
 {
   "date": "20260822",
   "dateText": "2026년 8월 22일",
-  "updatedAt": "2026-08-22T07:07:13.784Z",
+  "updatedAt": "2026-08-22T07:40:24.092Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -168,8 +168,8 @@
       "gameId": "20260822LTOB0",
       "time": "19:00",
       "stadium": "잠실",
-      "status": "SCHEDULED",
-      "cancelReason": null,
+      "status": "CANCELED",
+      "cancelReason": "우천취소",
       "broadcast": "MBC SPORTS+",
       "away": {
         "code": "LT",
@@ -214,108 +214,13 @@
           "doom": 0,
           "park": 0.09,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
       "live": null,
       "recap": null,
       "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "우익수",
-            "name": "김대한"
-          },
-          {
-            "order": 2,
-            "pos": "좌익수",
-            "name": "조수행"
-          },
-          {
-            "order": 3,
-            "pos": "2루수",
-            "name": "박준순"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "양의지"
-          },
-          {
-            "order": 5,
-            "pos": "3루수",
-            "name": "안재석"
-          },
-          {
-            "order": 6,
-            "pos": "유격수",
-            "name": "박찬호"
-          },
-          {
-            "order": 7,
-            "pos": "중견수",
-            "name": "정수빈"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "윤준호"
-          },
-          {
-            "order": 9,
-            "pos": "1루수",
-            "name": "박지훈"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "황성빈"
-          },
-          {
-            "order": 2,
-            "pos": "지명타자",
-            "name": "나승엽"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "레이예스"
-          },
-          {
-            "order": 4,
-            "pos": "3루수",
-            "name": "한동희"
-          },
-          {
-            "order": 5,
-            "pos": "1루수",
-            "name": "고승민"
-          },
-          {
-            "order": 6,
-            "pos": "2루수",
-            "name": "한태양"
-          },
-          {
-            "order": 7,
-            "pos": "포수",
-            "name": "손성빈"
-          },
-          {
-            "order": 8,
-            "pos": "유격수",
-            "name": "전민재"
-          },
-          {
-            "order": 9,
-            "pos": "우익수",
-            "name": "윤동희"
-          }
-        ],
-        "confirmed": false
-      }
+      "lineup": null
     },
     {
       "gameId": "20260822KTSK0",
