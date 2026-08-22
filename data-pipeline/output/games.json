@@ -1,7 +1,7 @@
 {
   "date": "20260822",
   "dateText": "2026년 8월 22일",
-  "updatedAt": "2026-08-22T12:30:34.523Z",
+  "updatedAt": "2026-08-22T12:40:26.245Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -252,12 +252,12 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 1,
-        "b1": false,
-        "b2": false,
+        "out": 2,
+        "b1": true,
+        "b2": true,
         "b3": false,
         "pitcher": "이승민",
-        "batter": "최정원",
+        "batter": "박건우",
         "heat": 68,
         "label": "후반 박빙 승부"
       },
