@@ -1,7 +1,7 @@
 {
   "date": "20260822",
   "dateText": "2026년 8월 22일",
-  "updatedAt": "2026-08-22T11:30:32.302Z",
+  "updatedAt": "2026-08-22T11:40:24.856Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
+        "inning": 9,
+        "half": "T",
         "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "원종현",
-        "batter": "김호령",
-        "heat": 38,
+        "pitcher": "유토",
+        "batter": "카스트로",
+        "heat": 43,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -315,7 +315,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 6,
-        "score": 3,
+        "score": 6,
         "starter": {
           "name": "원종해",
           "era": 5.19,
@@ -348,14 +348,14 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 0,
-        "b1": true,
+        "out": 2,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "양창섭",
-        "batter": "블레인",
-        "heat": 39,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "임기영",
+        "batter": "최정원",
+        "heat": 51,
+        "label": "점수 나는 난타전"
       },
       "recap": null,
       "decision": null,
