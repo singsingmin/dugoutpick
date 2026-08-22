@@ -1,7 +1,7 @@
 {
   "date": "20260822",
   "dateText": "2026년 8월 22일",
-  "updatedAt": "2026-08-22T10:10:27.245Z",
+  "updatedAt": "2026-08-22T10:13:03.805Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 2,
+        "inning": 5,
+        "half": "T",
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "올러",
-        "batter": "권혁빈",
-        "heat": 45,
+        "pitcher": "안우진",
+        "batter": "나성범",
+        "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -347,14 +347,14 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
-        "out": 3,
-        "b1": true,
-        "b2": false,
+        "half": "B",
+        "out": 0,
+        "b1": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "원종해",
-        "batter": "류지혁",
-        "heat": 29,
+        "pitcher": "이승현",
+        "batter": "최정원",
+        "heat": 31,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
