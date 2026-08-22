@@ -1,7 +1,7 @@
 {
   "date": "20260822",
   "dateText": "2026년 8월 22일",
-  "updatedAt": "2026-08-22T11:40:24.856Z",
+  "updatedAt": "2026-08-22T11:42:13.130Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 3,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "올러",
           "era": 3.15,
@@ -69,12 +69,12 @@
         "half": "T",
         "out": 1,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "유토",
-        "batter": "카스트로",
-        "heat": 43,
-        "label": "경기 흐름 체크 중"
+        "batter": "김선빈",
+        "heat": 58,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -346,15 +346,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 2,
+        "inning": 5,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "임기영",
-        "batter": "최정원",
-        "heat": 51,
+        "pitcher": "신영우",
+        "batter": "류지혁",
+        "heat": 54,
         "label": "점수 나는 난타전"
       },
       "recap": null,
