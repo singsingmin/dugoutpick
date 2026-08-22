@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T14:00:40.153Z",
+  "updatedAt": "2026-08-22T15:11:12.208Z",
   "lastWeek": {
     "range": [
       "20260810",
@@ -140,13 +140,6 @@
           "homeStarter": "김건우"
         },
         {
-          "date": "20260822",
-          "away": "KT",
-          "home": "SK",
-          "awayStarter": "로건",
-          "homeStarter": "아빌라"
-        },
-        {
           "date": "20260823",
           "away": "KT",
           "home": "SK",
@@ -184,13 +177,6 @@
           "homeStarter": "짐머맨"
         },
         {
-          "date": "20260822",
-          "away": "LG",
-          "home": "HH",
-          "awayStarter": "카라스코",
-          "homeStarter": "박준영"
-        },
-        {
           "date": "20260823",
           "away": "LG",
           "home": "HH",
@@ -226,13 +212,6 @@
           "home": "SK",
           "awayStarter": "배제성",
           "homeStarter": "김건우"
-        },
-        {
-          "date": "20260822",
-          "away": "KT",
-          "home": "SK",
-          "awayStarter": "로건",
-          "homeStarter": "아빌라"
         },
         {
           "date": "20260823",
@@ -360,13 +339,6 @@
           "homeStarter": "최승용"
         },
         {
-          "date": "20260822",
-          "away": "LT",
-          "home": "OB",
-          "awayStarter": "박세웅",
-          "homeStarter": "곽빈"
-        },
-        {
           "date": "20260823",
           "away": "LT",
           "home": "OB",
@@ -402,13 +374,6 @@
           "home": "OB",
           "awayStarter": "김진욱",
           "homeStarter": "최승용"
-        },
-        {
-          "date": "20260822",
-          "away": "LT",
-          "home": "OB",
-          "awayStarter": "박세웅",
-          "homeStarter": "곽빈"
         },
         {
           "date": "20260823",
@@ -534,13 +499,6 @@
           "home": "HH",
           "awayStarter": "송승기",
           "homeStarter": "짐머맨"
-        },
-        {
-          "date": "20260822",
-          "away": "LG",
-          "home": "HH",
-          "awayStarter": "카라스코",
-          "homeStarter": "박준영"
         },
         {
           "date": "20260823",
