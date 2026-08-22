@@ -1,7 +1,7 @@
 {
   "date": "20260822",
   "dateText": "2026년 8월 22일",
-  "updatedAt": "2026-08-22T11:10:26.641Z",
+  "updatedAt": "2026-08-22T11:12:19.577Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": true,
         "b2": true,
         "b3": false,
         "pitcher": "조상우",
-        "batter": "박주홍",
+        "batter": "서건창",
         "heat": 62,
         "label": "후반 박빙 승부"
       },
@@ -348,12 +348,12 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "원종해",
-        "batter": "이재현",
+        "pitcher": "신영우",
+        "batter": "김지찬",
         "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
