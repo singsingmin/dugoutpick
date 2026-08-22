@@ -1,7 +1,7 @@
 {
   "date": "20260822",
   "dateText": "2026년 8월 22일",
-  "updatedAt": "2026-08-22T10:20:27.368Z",
+  "updatedAt": "2026-08-22T10:30:32.915Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 2,
-        "b1": true,
-        "b2": false,
+        "half": "B",
+        "out": 1,
+        "b1": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "안우진",
-        "batter": "김태군",
-        "heat": 48,
+        "pitcher": "올러",
+        "batter": "서건창",
+        "heat": 50,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -346,15 +346,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 1,
-        "b1": false,
-        "b2": true,
+        "b1": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "이승현",
-        "batter": "박건우",
-        "heat": 31,
+        "pitcher": "원종해",
+        "batter": "강민호",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
