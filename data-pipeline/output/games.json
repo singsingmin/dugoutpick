@@ -1,7 +1,7 @@
 {
   "date": "20260822",
   "dateText": "2026년 8월 22일",
-  "updatedAt": "2026-08-22T13:10:23.811Z",
+  "updatedAt": "2026-08-22T13:20:25.173Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -250,16 +250,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
+        "inning": 9,
+        "half": "T",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "장찬희",
-        "batter": "블레인",
-        "heat": 75,
-        "label": "후반 박빙 승부"
+        "pitcher": "류진욱",
+        "batter": "박계범",
+        "heat": 83,
+        "label": "9회 1점 승부"
       },
       "recap": null,
       "decision": null,
