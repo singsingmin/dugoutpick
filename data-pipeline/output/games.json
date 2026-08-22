@@ -1,7 +1,7 @@
 {
   "date": "20260822",
   "dateText": "2026년 8월 22일",
-  "updatedAt": "2026-08-22T09:40:26.334Z",
+  "updatedAt": "2026-08-22T09:48:19.072Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "안우진",
           "era": 3.69,
@@ -68,12 +68,12 @@
         "inning": 3,
         "half": "B",
         "out": 1,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "올러",
-        "batter": "박주홍",
-        "heat": 43,
+        "batter": "추재현",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
