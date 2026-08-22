@@ -1,7 +1,7 @@
 {
   "date": "20260822",
   "dateText": "2026년 8월 22일",
-  "updatedAt": "2026-08-22T07:40:24.092Z",
+  "updatedAt": "2026-08-22T07:50:24.954Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -47,7 +47,7 @@
         "reason": "KIA 6연승 질주, 기세 절정 · 올러(ERA 3.15) 호투 기대",
         "points": [
           "게임차 : 22",
-          "상대전적 : KIA 10승 2패",
+          "상대전적 : KIA 11승 2패",
           "KIA 6연승 질주, 기세 절정",
           "올러(ERA 3.15) 호투 기대"
         ],
@@ -316,7 +316,7 @@
         "reason": "게임차 12.5의 순위 다툼",
         "points": [
           "게임차 : 12.5",
-          "상대전적 : 삼성 9승 3패",
+          "상대전적 : 삼성 9승 4패",
           "최근 10경기 삼성 4승 · NC 6승",
           "가을야구 직행 순위 다툼"
         ],
@@ -437,8 +437,8 @@
       "gameId": "20260822LGHH0",
       "time": "19:00",
       "stadium": "대전",
-      "status": "SCHEDULED",
-      "cancelReason": null,
+      "status": "CANCELED",
+      "cancelReason": "우천취소",
       "broadcast": "KBS LIFE",
       "away": {
         "code": "LG",
@@ -483,108 +483,13 @@
           "doom": 0,
           "park": 0.36,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
       "live": null,
       "recap": null,
       "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "우익수",
-            "name": "김태연"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "문현빈"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "한지윤"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "강백호"
-          },
-          {
-            "order": 5,
-            "pos": "3루수",
-            "name": "노시환"
-          },
-          {
-            "order": 6,
-            "pos": "1루수",
-            "name": "채은성"
-          },
-          {
-            "order": 7,
-            "pos": "포수",
-            "name": "허인서"
-          },
-          {
-            "order": 8,
-            "pos": "2루수",
-            "name": "황영묵"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "심우준"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "2루수",
-            "name": "신민재"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "박해민"
-          },
-          {
-            "order": 3,
-            "pos": "지명타자",
-            "name": "오스틴"
-          },
-          {
-            "order": 4,
-            "pos": "1루수",
-            "name": "문정빈"
-          },
-          {
-            "order": 5,
-            "pos": "좌익수",
-            "name": "송찬의"
-          },
-          {
-            "order": 6,
-            "pos": "3루수",
-            "name": "문보경"
-          },
-          {
-            "order": 7,
-            "pos": "유격수",
-            "name": "구본혁"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "이주헌"
-          },
-          {
-            "order": 9,
-            "pos": "우익수",
-            "name": "홍창기"
-          }
-        ],
-        "confirmed": false
-      }
+      "lineup": null
     }
   ],
   "postseason": null
