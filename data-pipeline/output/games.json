@@ -1,7 +1,7 @@
 {
   "date": "20260822",
   "dateText": "2026년 8월 22일",
-  "updatedAt": "2026-08-22T10:00:40.107Z",
+  "updatedAt": "2026-08-22T10:10:27.245Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
+        "half": "B",
         "out": 2,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "안우진",
-        "batter": "김도영",
-        "heat": 43,
+        "pitcher": "올러",
+        "batter": "권혁빈",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -296,14 +296,14 @@
       "gameId": "20260822SSNC0",
       "time": "19:00",
       "stadium": "창원",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SBS SPORTS",
       "away": {
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": null,
+        "score": 1,
         "starter": {
           "name": "이승현",
           "era": 7,
@@ -315,7 +315,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 6,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "원종해",
           "era": 5.19,
@@ -342,9 +342,21 @@
           "doom": 0,
           "park": 0.64,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 3,
+        "b1": true,
+        "b2": false,
+        "b3": false,
+        "pitcher": "원종해",
+        "batter": "류지혁",
+        "heat": 29,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
