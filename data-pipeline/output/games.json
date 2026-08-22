@@ -1,7 +1,7 @@
 {
   "date": "20260822",
   "dateText": "2026년 8월 22일",
-  "updatedAt": "2026-08-22T13:40:23.310Z",
+  "updatedAt": "2026-08-22T13:49:41.224Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -25,9 +25,9 @@
         "score": 1,
         "starter": {
           "name": "올러",
-          "era": 3.15,
+          "era": 3.08,
           "w": 11,
-          "l": 8
+          "l": 9
         }
       },
       "home": {
@@ -37,8 +37,8 @@
         "score": 3,
         "starter": {
           "name": "안우진",
-          "era": 3.69,
-          "w": 2,
+          "era": 3.39,
+          "w": 3,
           "l": 6
         }
       },
@@ -74,9 +74,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "안우진",
+        "lose": "올러",
+        "save": "유토"
       },
       "lineup": null
     },
@@ -90,7 +90,7 @@
       "away": {
         "code": "LT",
         "name": "롯데",
-        "rank": 7,
+        "rank": 6,
         "score": null,
         "starter": {
           "name": "박세웅",
@@ -210,7 +210,7 @@
         "score": 8,
         "starter": {
           "name": "이승현",
-          "era": 7,
+          "era": 6.98,
           "w": 0,
           "l": 2
         }
@@ -218,11 +218,11 @@
       "home": {
         "code": "NC",
         "name": "NC",
-        "rank": 6,
+        "rank": 8,
         "score": 6,
         "starter": {
           "name": "원종해",
-          "era": 5.19,
+          "era": 6.14,
           "w": 0,
           "l": 1
         }
@@ -259,9 +259,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "이승민",
+        "lose": "배재환",
+        "save": "김재윤"
       },
       "lineup": null
     },
@@ -287,7 +287,7 @@
       "home": {
         "code": "HH",
         "name": "한화",
-        "rank": 8,
+        "rank": 7,
         "score": null,
         "starter": {
           "name": "박준영",
