@@ -1,7 +1,7 @@
 {
   "date": "20260822",
   "dateText": "2026년 8월 22일",
-  "updatedAt": "2026-08-22T11:50:24.267Z",
+  "updatedAt": "2026-08-22T12:00:40.921Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -15,7 +15,7 @@
       "gameId": "20260822HTWO0",
       "time": "18:00",
       "stadium": "고척",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPOTV2",
       "away": {
@@ -64,117 +64,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 1,
-        "b1": true,
-        "b2": false,
-        "b3": true,
-        "pitcher": "유토",
-        "batter": "하주석",
-        "heat": 58,
-        "label": "후반 박빙 승부"
+      "live": null,
+      "recap": {
+        "actual": 76,
+        "verdict": "기대 이상",
+        "diff": 2,
+        "total": 4,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "2루수",
-            "name": "서건창"
-          },
-          {
-            "order": 2,
-            "pos": "좌익수",
-            "name": "추재현"
-          },
-          {
-            "order": 3,
-            "pos": "지명타자",
-            "name": "데이비슨"
-          },
-          {
-            "order": 4,
-            "pos": "1루수",
-            "name": "안치홍"
-          },
-          {
-            "order": 5,
-            "pos": "우익수",
-            "name": "박찬혁"
-          },
-          {
-            "order": 6,
-            "pos": "포수",
-            "name": "김건희"
-          },
-          {
-            "order": 7,
-            "pos": "유격수",
-            "name": "권혁빈"
-          },
-          {
-            "order": 8,
-            "pos": "3루수",
-            "name": "어준서"
-          },
-          {
-            "order": 9,
-            "pos": "중견수",
-            "name": "박주홍"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "좌익수",
-            "name": "박재현"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "박정우"
-          },
-          {
-            "order": 3,
-            "pos": "3루수",
-            "name": "김도영"
-          },
-          {
-            "order": 4,
-            "pos": "1루수",
-            "name": "카스트로"
-          },
-          {
-            "order": 5,
-            "pos": "지명타자",
-            "name": "나성범"
-          },
-          {
-            "order": 6,
-            "pos": "2루수",
-            "name": "김선빈"
-          },
-          {
-            "order": 7,
-            "pos": "유격수",
-            "name": "하주석"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "김태군"
-          },
-          {
-            "order": 9,
-            "pos": "중견수",
-            "name": "김호령"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260822LTOB0",
@@ -346,15 +250,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 1,
+        "inning": 6,
+        "half": "T",
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "임기영",
-        "batter": "김휘집",
-        "heat": 56,
+        "pitcher": "송명기",
+        "batter": "김지찬",
+        "heat": 59,
         "label": "점수 나는 난타전"
       },
       "recap": null,
