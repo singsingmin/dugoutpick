@@ -1,7 +1,7 @@
 {
   "date": "20260822",
   "dateText": "2026년 8월 22일",
-  "updatedAt": "2026-08-22T12:10:26.788Z",
+  "updatedAt": "2026-08-22T12:19:08.528Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -250,16 +250,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 2,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "임기영",
-        "batter": "김형준",
-        "heat": 62,
-        "label": "점수 나는 난타전"
+        "pitcher": "송명기",
+        "batter": "류지혁",
+        "heat": 65,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
