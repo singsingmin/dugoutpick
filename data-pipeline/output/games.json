@@ -1,7 +1,7 @@
 {
   "date": "20260822",
   "dateText": "2026년 8월 22일",
-  "updatedAt": "2026-08-22T13:07:16.261Z",
+  "updatedAt": "2026-08-22T13:10:23.811Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -253,11 +253,11 @@
         "inning": 8,
         "half": "B",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "이승민",
-        "batter": "권희동",
+        "pitcher": "장찬희",
+        "batter": "블레인",
         "heat": 75,
         "label": "후반 박빙 승부"
       },
