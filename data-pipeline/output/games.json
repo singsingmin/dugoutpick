@@ -1,7 +1,7 @@
 {
   "date": "20260822",
   "dateText": "2026년 8월 22일",
-  "updatedAt": "2026-08-22T10:13:03.805Z",
+  "updatedAt": "2026-08-22T10:20:27.368Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "안우진",
-        "batter": "나성범",
+        "batter": "김태군",
         "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
@@ -315,7 +315,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 6,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "원종해",
           "era": 5.19,
@@ -348,12 +348,12 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": true,
         "b3": false,
         "pitcher": "이승현",
-        "batter": "최정원",
+        "batter": "박건우",
         "heat": 31,
         "label": "초반 팽팽한 흐름"
       },
