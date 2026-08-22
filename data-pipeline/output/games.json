@@ -1,7 +1,7 @@
 {
   "date": "20260822",
   "dateText": "2026년 8월 22일",
-  "updatedAt": "2026-08-22T13:20:25.173Z",
+  "updatedAt": "2026-08-22T13:30:33.393Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -207,7 +207,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 7,
+        "score": 8,
         "starter": {
           "name": "이승현",
           "era": 7,
@@ -251,15 +251,15 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "류진욱",
-        "batter": "박계범",
-        "heat": 83,
-        "label": "9회 1점 승부"
+        "pitcher": "김재윤",
+        "batter": "김주원",
+        "heat": 69,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
