@@ -1,7 +1,7 @@
 {
   "date": "20260822",
   "dateText": "2026년 8월 22일",
-  "updatedAt": "2026-08-22T12:40:26.245Z",
+  "updatedAt": "2026-08-22T12:50:26.029Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -250,15 +250,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 2,
-        "b1": true,
+        "inning": 8,
+        "half": "T",
+        "out": 1,
+        "b1": false,
         "b2": true,
         "b3": false,
-        "pitcher": "이승민",
-        "batter": "박건우",
-        "heat": 68,
+        "pitcher": "배재환",
+        "batter": "김지찬",
+        "heat": 70,
         "label": "후반 박빙 승부"
       },
       "recap": null,
