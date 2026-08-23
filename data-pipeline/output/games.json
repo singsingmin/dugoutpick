@@ -1,7 +1,7 @@
 {
   "date": "20260823",
   "dateText": "2026년 8월 23일",
-  "updatedAt": "2026-08-23T07:50:25.329Z",
+  "updatedAt": "2026-08-23T07:54:10.285Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 1,
-        "b1": true,
+        "inning": 9,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "성영탁",
-        "batter": "김건희",
-        "heat": 14,
+        "pitcher": "이강준",
+        "batter": "카스트로",
+        "heat": 15,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
