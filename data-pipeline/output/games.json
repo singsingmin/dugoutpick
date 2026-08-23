@@ -1,7 +1,7 @@
 {
   "date": "20260823",
   "dateText": "2026년 8월 23일",
-  "updatedAt": "2026-08-23T07:09:10.459Z",
+  "updatedAt": "2026-08-23T07:20:24.636Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 0,
+        "half": "B",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "조영건",
-        "batter": "김도영",
-        "heat": 49,
+        "pitcher": "전상현",
+        "batter": "서건창",
+        "heat": 51,
         "label": "후반 박빙 승부"
       },
       "recap": null,
