@@ -1,7 +1,7 @@
 {
   "date": "20260823",
   "dateText": "2026년 8월 23일",
-  "updatedAt": "2026-08-23T05:30:31.532Z",
+  "updatedAt": "2026-08-23T05:40:27.191Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 3,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "네일",
           "era": 3.74,
@@ -66,13 +66,13 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
+        "half": "B",
         "out": 1,
-        "b1": true,
-        "b2": true,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "전준표",
-        "batter": "김태군",
+        "pitcher": "네일",
+        "batter": "권혁빈",
         "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
