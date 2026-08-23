@@ -1,7 +1,7 @@
 {
   "date": "20260823",
   "dateText": "2026년 8월 23일",
-  "updatedAt": "2026-08-23T11:12:39.967Z",
+  "updatedAt": "2026-08-23T11:20:25.859Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -135,14 +135,14 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 1,
-        "b1": true,
+        "half": "B",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "곽빈",
-        "batter": "레이예스",
-        "heat": 26,
+        "pitcher": "박세웅",
+        "batter": "윤준호",
+        "heat": 28,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -299,15 +299,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 1,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "로건",
-        "batter": "전의산",
-        "heat": 28,
+        "pitcher": "아빌라",
+        "batter": "김민혁",
+        "heat": 29,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -466,12 +466,12 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
+        "out": 3,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "페덱",
-        "batter": "이우성",
+        "batter": "홍종표",
         "heat": 54,
         "label": "초반 팽팽한 흐름"
       },
@@ -629,14 +629,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 1,
-        "b1": true,
-        "b2": true,
+        "inning": 4,
+        "half": "T",
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "카라스코",
-        "batter": "강백호",
+        "pitcher": "황준서",
+        "batter": "홍창기",
         "heat": 9,
         "label": "경기 흐름 체크 중"
       },
