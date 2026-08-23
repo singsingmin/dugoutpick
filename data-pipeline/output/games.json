@@ -1,7 +1,7 @@
 {
   "date": "20260823",
   "dateText": "2026년 8월 23일",
-  "updatedAt": "2026-08-23T10:13:34.841Z",
+  "updatedAt": "2026-08-23T10:20:24.174Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -134,15 +134,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 1,
+        "inning": 2,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박세웅",
-        "batter": "안재석",
-        "heat": 33,
+        "pitcher": "곽빈",
+        "batter": "한동희",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -301,12 +301,12 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "로건",
-        "batter": "정준재",
+        "batter": "에레디아",
         "heat": 26,
         "label": "초반 팽팽한 흐름"
       },
@@ -433,7 +433,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 8,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "라일리",
           "era": 2.98,
@@ -464,14 +464,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 2,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "페덱",
-        "batter": "김휘집",
+        "pitcher": "라일리",
+        "batter": "김영웅",
         "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
@@ -586,7 +586,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 1,
+        "score": 4,
         "starter": {
           "name": "카라스코",
           "era": 3.44,
@@ -630,15 +630,15 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "b1": false,
-        "b2": true,
-        "b3": true,
-        "pitcher": "박준영",
-        "batter": "문정빈",
-        "heat": 29,
-        "label": "초반 팽팽한 흐름"
+        "b2": false,
+        "b3": false,
+        "pitcher": "카라스코",
+        "batter": "김태연",
+        "heat": 12,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
