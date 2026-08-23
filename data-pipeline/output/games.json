@@ -1,7 +1,7 @@
 {
   "date": "20260823",
   "dateText": "2026년 8월 23일",
-  "updatedAt": "2026-08-23T13:08:25.542Z",
+  "updatedAt": "2026-08-23T13:10:26.371Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -21,7 +21,7 @@
       "away": {
         "code": "HT",
         "name": "KIA",
-        "rank": 3,
+        "rank": 4,
         "score": 7,
         "starter": {
           "name": "네일",
