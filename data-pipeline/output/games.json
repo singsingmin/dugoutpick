@@ -1,7 +1,7 @@
 {
   "date": "20260823",
   "dateText": "2026년 8월 23일",
-  "updatedAt": "2026-08-23T09:10:24.864Z",
+  "updatedAt": "2026-08-23T09:18:16.570Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -312,18 +312,18 @@
           },
           {
             "order": 5,
-            "pos": "지명타자",
-            "name": "김재환"
+            "pos": "우익수",
+            "name": "오태곤"
           },
           {
             "order": 6,
-            "pos": "중견수",
-            "name": "최지훈"
+            "pos": "지명타자",
+            "name": "한유섬"
           },
           {
             "order": 7,
-            "pos": "우익수",
-            "name": "한유섬"
+            "pos": "중견수",
+            "name": "최지훈"
           },
           {
             "order": 8,
@@ -345,7 +345,7 @@
           {
             "order": 2,
             "pos": "지명타자",
-            "name": "김현수"
+            "name": "김민혁"
           },
           {
             "order": 3,
@@ -359,18 +359,18 @@
           },
           {
             "order": 5,
-            "pos": "2루수",
-            "name": "김상수"
+            "pos": "1루수",
+            "name": "김현수"
           },
           {
             "order": 6,
-            "pos": "3루수",
-            "name": "허경민"
+            "pos": "2루수",
+            "name": "류현인"
           },
           {
             "order": 7,
-            "pos": "1루수",
-            "name": "이정범"
+            "pos": "3루수",
+            "name": "허경민"
           },
           {
             "order": 8,
@@ -383,7 +383,7 @@
             "name": "권동진"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
