@@ -1,7 +1,7 @@
 {
   "date": "20260823",
   "dateText": "2026년 8월 23일",
-  "updatedAt": "2026-08-23T11:50:26.487Z",
+  "updatedAt": "2026-08-23T12:00:40.456Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -134,15 +134,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
+        "inning": 7,
         "half": "T",
-        "out": 2,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "곽빈",
-        "batter": "나승엽",
-        "heat": 33,
+        "batter": "레이예스",
+        "heat": 36,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -299,15 +299,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 2,
-        "b1": true,
-        "b2": false,
+        "b1": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "로건",
-        "batter": "에레디아",
-        "heat": 34,
+        "pitcher": "아빌라",
+        "batter": "권동진",
+        "heat": 36,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -464,15 +464,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
+        "inning": 8,
+        "half": "T",
         "out": 2,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "페덱",
-        "batter": "천재환",
-        "heat": 62,
+        "pitcher": "라일리",
+        "batter": "박계범",
+        "heat": 64,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -629,15 +629,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
+        "inning": 6,
         "half": "B",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "카라스코",
-        "batter": "한지윤",
-        "heat": 3,
+        "batter": "노시환",
+        "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
       "recap": null,
