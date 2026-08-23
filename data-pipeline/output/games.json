@@ -1,7 +1,7 @@
 {
   "date": "20260823",
   "dateText": "2026년 8월 23일",
-  "updatedAt": "2026-08-23T08:18:11.983Z",
+  "updatedAt": "2026-08-23T08:20:25.158Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 2,
+        "score": 4,
         "starter": {
           "name": "전준표",
           "era": 3.99,
@@ -70,11 +70,11 @@
         "out": 1,
         "b1": true,
         "b2": true,
-        "b3": true,
+        "b3": false,
         "pitcher": "이의리",
-        "batter": "데이비슨",
-        "heat": 16,
-        "label": "경기 흐름 체크 중"
+        "batter": "안치홍",
+        "heat": 51,
+        "label": "점수 나는 난타전"
       },
       "recap": null,
       "decision": null,
