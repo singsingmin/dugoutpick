@@ -1,7 +1,7 @@
 {
   "date": "20260823",
   "dateText": "2026년 8월 23일",
-  "updatedAt": "2026-08-23T10:20:24.174Z",
+  "updatedAt": "2026-08-23T10:30:30.943Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -135,14 +135,14 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "곽빈",
-        "batter": "한동희",
-        "heat": 35,
+        "pitcher": "박세웅",
+        "batter": "김민석",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -256,7 +256,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "로건",
           "era": 3.26,
@@ -299,16 +299,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 1,
+        "inning": 2,
+        "half": "T",
+        "out": 2,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "로건",
-        "batter": "에레디아",
-        "heat": 26,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "아빌라",
+        "batter": "김민혁",
+        "heat": 20,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -464,15 +464,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
+        "inning": 3,
         "half": "T",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "라일리",
-        "batter": "김영웅",
-        "heat": 33,
+        "batter": "김태훈",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -629,15 +629,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 0,
-        "b1": false,
+        "inning": 2,
+        "half": "T",
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "카라스코",
-        "batter": "김태연",
-        "heat": 12,
+        "pitcher": "박준영",
+        "batter": "신민재",
+        "heat": 13,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
