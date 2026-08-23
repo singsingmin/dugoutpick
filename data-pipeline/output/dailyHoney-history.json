@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-23T13:00:38.113Z",
+  "updatedAt": "2026-08-23T13:08:25.542Z",
   "results": [
     {
       "date": "20260705",
@@ -655,6 +655,29 @@
         "score": 6
       },
       "calculatedAt": "2026-08-22T13:40:23.310Z"
+    },
+    {
+      "date": "20260823",
+      "actualTopGameId": "20260823HTWO0",
+      "recapScore": 98,
+      "decidingReasonTags": [
+        "끝내기",
+        "1점차 접전",
+        "난타전"
+      ],
+      "displayMode": "highlight",
+      "displayTitle": "어제의 명경기",
+      "away": {
+        "code": "HT",
+        "name": "KIA",
+        "score": 7
+      },
+      "home": {
+        "code": "WO",
+        "name": "키움",
+        "score": 8
+      },
+      "calculatedAt": "2026-08-23T13:08:25.542Z"
     }
   ]
 }
