@@ -1,7 +1,7 @@
 {
   "date": "20260823",
   "dateText": "2026년 8월 23일",
-  "updatedAt": "2026-08-23T12:19:26.181Z",
+  "updatedAt": "2026-08-23T12:20:23.341Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -134,15 +134,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 2,
-        "b1": true,
+        "inning": 8,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박정민",
-        "batter": "양의지",
-        "heat": 38,
+        "pitcher": "곽빈",
+        "batter": "전민재",
+        "heat": 40,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -631,12 +631,12 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "케네디",
-        "batter": "박정현",
+        "batter": "김태연",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
