@@ -1,7 +1,7 @@
 {
   "date": "20260823",
   "dateText": "2026년 8월 23일",
-  "updatedAt": "2026-08-23T11:00:37.870Z",
+  "updatedAt": "2026-08-23T11:10:23.396Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -134,15 +134,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 2,
+        "inning": 4,
+        "half": "T",
+        "out": 1,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "박세웅",
-        "batter": "세베리노",
-        "heat": 25,
+        "pitcher": "곽빈",
+        "batter": "나승엽",
+        "heat": 26,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -300,14 +300,14 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 2,
-        "b1": false,
+        "half": "B",
+        "out": 0,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "아빌라",
-        "batter": "한승택",
-        "heat": 26,
+        "pitcher": "로건",
+        "batter": "에레디아",
+        "heat": 28,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -464,15 +464,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
+        "inning": 5,
         "half": "B",
-        "out": 1,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "페덱",
-        "batter": "김휘집",
-        "heat": 48,
+        "batter": "이우성",
+        "heat": 54,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -598,7 +598,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 7,
-        "score": 0,
+        "score": 3,
         "starter": {
           "name": "박준영",
           "era": 4.5,
@@ -631,14 +631,14 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "카라스코",
-        "batter": "이도윤",
-        "heat": 3,
-        "label": "점수차가 벌어진 경기"
+        "batter": "강백호",
+        "heat": 9,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
