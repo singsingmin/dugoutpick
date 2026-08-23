@@ -1,7 +1,7 @@
 {
   "date": "20260823",
   "dateText": "2026년 8월 23일",
-  "updatedAt": "2026-08-23T05:10:27.645Z",
+  "updatedAt": "2026-08-23T05:20:25.341Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 1,
-        "b1": false,
-        "b2": false,
-        "b3": false,
+        "out": 2,
+        "b1": true,
+        "b2": true,
+        "b3": true,
         "pitcher": "네일",
-        "batter": "추재현",
+        "batter": "김건희",
         "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
