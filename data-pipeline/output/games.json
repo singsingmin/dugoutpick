@@ -1,7 +1,7 @@
 {
   "date": "20260823",
   "dateText": "2026년 8월 23일",
-  "updatedAt": "2026-08-23T11:42:17.908Z",
+  "updatedAt": "2026-08-23T11:50:26.487Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -136,12 +136,12 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "곽빈",
-        "batter": "박승욱",
+        "batter": "나승엽",
         "heat": 33,
         "label": "경기 흐름 체크 중"
       },
@@ -301,12 +301,12 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "로건",
-        "batter": "안상현",
+        "batter": "에레디아",
         "heat": 34,
         "label": "경기 흐름 체크 중"
       },
@@ -465,14 +465,14 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
+        "half": "B",
         "out": 2,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "라일리",
-        "batter": "김영웅",
-        "heat": 59,
+        "pitcher": "페덱",
+        "batter": "천재환",
+        "heat": 62,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -630,13 +630,13 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
+        "half": "B",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "황준서",
-        "batter": "문보경",
+        "pitcher": "카라스코",
+        "batter": "한지윤",
         "heat": 3,
         "label": "점수차가 벌어진 경기"
       },
