@@ -1,7 +1,7 @@
 {
   "date": "20260823",
   "dateText": "2026년 8월 23일",
-  "updatedAt": "2026-08-23T08:10:26.243Z",
+  "updatedAt": "2026-08-23T08:18:11.983Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 9,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": true,
-        "b2": false,
-        "b3": false,
-        "pitcher": "이태양",
-        "batter": "이형종",
+        "b2": true,
+        "b3": true,
+        "pitcher": "이의리",
+        "batter": "데이비슨",
         "heat": 16,
         "label": "경기 흐름 체크 중"
       },
