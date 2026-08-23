@@ -1,7 +1,7 @@
 {
   "date": "20260823",
   "dateText": "2026년 8월 23일",
-  "updatedAt": "2026-08-23T06:30:31.223Z",
+  "updatedAt": "2026-08-23T06:40:25.128Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
+        "inning": 5,
         "half": "B",
-        "out": 2,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "네일",
-        "batter": "서건창",
-        "heat": 48,
+        "batter": "데이비슨",
+        "heat": 54,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
