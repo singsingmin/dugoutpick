@@ -1,7 +1,7 @@
 {
   "date": "20260823",
   "dateText": "2026년 8월 23일",
-  "updatedAt": "2026-08-23T05:00:38.241Z",
+  "updatedAt": "2026-08-23T05:10:27.645Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -15,14 +15,14 @@
       "gameId": "20260823HTWO0",
       "time": "14:00",
       "stadium": "고척",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SBS TV",
       "away": {
         "code": "HT",
         "name": "KIA",
         "rank": 3,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "네일",
           "era": 3.74,
@@ -34,7 +34,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "전준표",
           "era": 3.99,
@@ -61,9 +61,21 @@
           "doom": 0,
           "park": 0,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "B",
+        "out": 1,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "네일",
+        "batter": "추재현",
+        "heat": 33,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
