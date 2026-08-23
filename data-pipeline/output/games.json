@@ -1,7 +1,7 @@
 {
   "date": "20260823",
   "dateText": "2026년 8월 23일",
-  "updatedAt": "2026-08-23T08:00:38.137Z",
+  "updatedAt": "2026-08-23T08:10:26.243Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
-        "out": 2,
-        "b1": false,
+        "half": "B",
+        "out": 0,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "이강준",
-        "batter": "김민규",
-        "heat": 15,
+        "pitcher": "이태양",
+        "batter": "이형종",
+        "heat": 16,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
