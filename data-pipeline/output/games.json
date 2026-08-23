@@ -1,7 +1,7 @@
 {
   "date": "20260823",
   "dateText": "2026년 8월 23일",
-  "updatedAt": "2026-08-23T10:30:30.943Z",
+  "updatedAt": "2026-08-23T10:40:26.057Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -134,15 +134,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
+        "inning": 3,
         "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "박세웅",
-        "batter": "김민석",
-        "heat": 38,
+        "batter": "류승민",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -299,15 +299,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
+        "inning": 3,
         "half": "T",
-        "out": 2,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "아빌라",
-        "batter": "김민혁",
-        "heat": 20,
+        "batter": "안현민",
+        "heat": 23,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -465,14 +465,14 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
-        "out": 0,
+        "half": "B",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "라일리",
-        "batter": "김태훈",
-        "heat": 38,
+        "pitcher": "페덱",
+        "batter": "김주원",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -586,7 +586,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "카라스코",
           "era": 3.44,
@@ -631,13 +631,13 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "박준영",
-        "batter": "신민재",
-        "heat": 13,
+        "batter": "송찬의",
+        "heat": 7,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
