@@ -1,7 +1,7 @@
 {
   "date": "20260823",
   "dateText": "2026년 8월 23일",
-  "updatedAt": "2026-08-23T11:10:23.396Z",
+  "updatedAt": "2026-08-23T11:12:39.967Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -137,11 +137,11 @@
         "inning": 4,
         "half": "T",
         "out": 1,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "곽빈",
-        "batter": "나승엽",
+        "batter": "레이예스",
         "heat": 26,
         "label": "경기 흐름 체크 중"
       },
@@ -301,12 +301,12 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "로건",
-        "batter": "에레디아",
+        "batter": "전의산",
         "heat": 28,
         "label": "경기 흐름 체크 중"
       },
