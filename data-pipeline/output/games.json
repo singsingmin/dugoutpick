@@ -1,7 +1,7 @@
 {
   "date": "20260823",
   "dateText": "2026년 8월 23일",
-  "updatedAt": "2026-08-23T06:50:27.755Z",
+  "updatedAt": "2026-08-23T07:00:37.818Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 3,
-        "score": 2,
+        "score": 4,
         "starter": {
           "name": "네일",
           "era": 3.74,
@@ -67,13 +67,13 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
-        "b3": false,
-        "pitcher": "윤석원",
-        "batter": "윤도현",
-        "heat": 57,
+        "b3": true,
+        "pitcher": "조영건",
+        "batter": "김선빈",
+        "heat": 44,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
