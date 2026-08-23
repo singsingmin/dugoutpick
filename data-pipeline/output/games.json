@@ -1,7 +1,7 @@
 {
   "date": "20260823",
   "dateText": "2026년 8월 23일",
-  "updatedAt": "2026-08-23T06:10:26.021Z",
+  "updatedAt": "2026-08-23T06:20:26.108Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
+        "inning": 4,
+        "half": "T",
         "out": 2,
-        "b1": true,
+        "b1": false,
         "b2": true,
         "b3": false,
-        "pitcher": "네일",
-        "batter": "김건희",
-        "heat": 43,
+        "pitcher": "전준표",
+        "batter": "김선빈",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
