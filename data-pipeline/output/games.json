@@ -1,7 +1,7 @@
 {
   "date": "20260823",
   "dateText": "2026년 8월 23일",
-  "updatedAt": "2026-08-23T07:20:24.636Z",
+  "updatedAt": "2026-08-23T07:30:30.351Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 1,
-        "b1": false,
+        "inning": 8,
+        "half": "T",
+        "out": 0,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "전상현",
-        "batter": "서건창",
-        "heat": 51,
+        "pitcher": "원종현",
+        "batter": "하주석",
+        "heat": 53,
         "label": "후반 박빙 승부"
       },
       "recap": null,
