@@ -1,7 +1,7 @@
 {
   "date": "20260825",
   "dateText": "2026년 8월 25일",
-  "updatedAt": "2026-08-25T11:50:29.480Z",
+  "updatedAt": "2026-08-25T11:51:20.084Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -562,12 +562,12 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "이상동",
-        "batter": "김민석",
+        "batter": "세베리노",
         "heat": 53,
         "label": "후반 박빙 승부"
       },
