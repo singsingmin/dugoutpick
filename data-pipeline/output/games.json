@@ -1,7 +1,7 @@
 {
   "date": "20260825",
   "dateText": "2026년 8월 25일",
-  "updatedAt": "2026-08-25T12:10:26.399Z",
+  "updatedAt": "2026-08-25T12:20:26.248Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 1,
+        "b1": true,
         "b2": false,
-        "b3": false,
-        "pitcher": "김진호",
-        "batter": "홍창기",
+        "b3": true,
+        "pitcher": "손주환",
+        "batter": "오스틴",
         "heat": 56,
         "label": "후반 박빙 승부"
       },
@@ -230,14 +230,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
+        "inning": 8,
+        "half": "T",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "김서현",
-        "batter": "최지훈",
+        "pitcher": "전영준",
+        "batter": "한지윤",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
@@ -395,16 +395,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
+        "inning": 9,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "최준용",
-        "batter": "박상준",
-        "heat": 70,
-        "label": "후반 박빙 승부"
+        "pitcher": "조상우",
+        "batter": "전민재",
+        "heat": 78,
+        "label": "9회 1점 승부"
       },
       "recap": null,
       "decision": null,
@@ -562,12 +562,12 @@
       "live": {
         "inning": 9,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "이영하",
-        "batter": "허경민",
+        "batter": "최원준",
         "heat": 61,
         "label": "후반 박빙 승부"
       },
@@ -726,15 +726,15 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박진형",
-        "batter": "류지혁",
-        "heat": 80,
-        "label": "9회 1점 승부"
+        "pitcher": "김태훈",
+        "batter": "권혁빈",
+        "heat": 90,
+        "label": "끝내기 한 방 찬스"
       },
       "recap": null,
       "decision": null,
