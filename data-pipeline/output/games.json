@@ -1,7 +1,7 @@
 {
   "date": "20260825",
   "dateText": "2026년 8월 25일",
-  "updatedAt": "2026-08-25T11:20:25.774Z",
+  "updatedAt": "2026-08-25T11:30:34.292Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "테일러",
-        "batter": "신민재",
+        "batter": "송찬의",
         "heat": 46,
         "label": "경기 흐름 체크 중"
       },
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김민",
-        "batter": "노시환",
-        "heat": 57,
+        "pitcher": "화이트",
+        "batter": "전의산",
+        "heat": 59,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -364,7 +364,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 2,
+        "score": 4,
         "starter": {
           "name": "시라카와",
           "era": 4.44,
@@ -396,14 +396,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
+        "half": "B",
         "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "정해영",
-        "batter": "전민재",
-        "heat": 33,
+        "pitcher": "비슬리",
+        "batter": "김도영",
+        "heat": 59,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -560,16 +560,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 1,
-        "b1": false,
+        "b1": true,
         "b2": false,
-        "b3": false,
-        "pitcher": "최민석",
-        "batter": "유준규",
-        "heat": 56,
-        "label": "경기 흐름 체크 중"
+        "b3": true,
+        "pitcher": "주권",
+        "batter": "안재석",
+        "heat": 59,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -725,16 +725,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
+        "inning": 7,
         "half": "B",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "보스",
-        "batter": "권혁빈",
-        "heat": 56,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "이승현",
+        "batter": "이형종",
+        "heat": 62,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
