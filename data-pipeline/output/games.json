@@ -1,7 +1,7 @@
 {
   "date": "20260825",
   "dateText": "2026년 8월 25일",
-  "updatedAt": "2026-08-25T13:27:37.311Z",
+  "updatedAt": "2026-08-25T13:40:28.817Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -21,11 +21,11 @@
       "away": {
         "code": "NC",
         "name": "NC",
-        "rank": 6,
+        "rank": 8,
         "score": 4,
         "starter": {
           "name": "테일러",
-          "era": 4.84,
+          "era": 4.6,
           "w": 7,
           "l": 6
         }
@@ -37,7 +37,7 @@
         "score": 5,
         "starter": {
           "name": "톨허스트",
-          "era": 4.49,
+          "era": 4.42,
           "w": 11,
           "l": 9
         }
@@ -74,8 +74,8 @@
         "walkoff": 1
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "케네디",
+        "lose": "전사민",
         "save": null
       },
       "lineup": null
@@ -90,13 +90,13 @@
       "away": {
         "code": "HH",
         "name": "한화",
-        "rank": 8,
+        "rank": 7,
         "score": 1,
         "starter": {
           "name": "화이트",
-          "era": 3.11,
+          "era": 3.31,
           "w": 6,
-          "l": 7
+          "l": 8
         }
       },
       "home": {
@@ -106,7 +106,7 @@
         "score": 7,
         "starter": {
           "name": "김민준",
-          "era": 3.56,
+          "era": 3.41,
           "w": 5,
           "l": 2
         }
@@ -143,8 +143,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "김민",
+        "lose": "화이트",
         "save": null
       },
       "lineup": null
@@ -159,11 +159,11 @@
       "away": {
         "code": "LT",
         "name": "롯데",
-        "rank": 7,
+        "rank": 6,
         "score": 5,
         "starter": {
           "name": "비슬리",
-          "era": 4.72,
+          "era": 4.8,
           "w": 8,
           "l": 5
         }
@@ -171,11 +171,11 @@
       "home": {
         "code": "HT",
         "name": "KIA",
-        "rank": 3,
+        "rank": 4,
         "score": 8,
         "starter": {
           "name": "시라카와",
-          "era": 4.44,
+          "era": 4.88,
           "w": 3,
           "l": 4
         }
@@ -212,8 +212,8 @@
         "walkoff": 1
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "조상우",
+        "lose": "김원중",
         "save": null
       },
       "lineup": null
@@ -232,8 +232,8 @@
         "score": 3,
         "starter": {
           "name": "최민석",
-          "era": 2.72,
-          "w": 11,
+          "era": 2.66,
+          "w": 12,
           "l": 3
         }
       },
@@ -244,9 +244,9 @@
         "score": 1,
         "starter": {
           "name": "소형준",
-          "era": 3.39,
+          "era": 3.36,
           "w": 6,
-          "l": 2
+          "l": 3
         }
       },
       "honjam": {
@@ -281,9 +281,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "최민석",
+        "lose": "소형준",
+        "save": "이영하"
       },
       "lineup": null
     },
@@ -301,7 +301,7 @@
         "score": 3,
         "starter": {
           "name": "보스",
-          "era": 7.41,
+          "era": 6.26,
           "w": 1,
           "l": 3
         }
@@ -313,7 +313,7 @@
         "score": 3,
         "starter": {
           "name": "알칸타라",
-          "era": 3.85,
+          "era": 3.74,
           "w": 8,
           "l": 7
         }
