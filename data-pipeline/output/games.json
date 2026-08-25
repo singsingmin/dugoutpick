@@ -1,7 +1,7 @@
 {
   "date": "20260825",
   "dateText": "2026년 8월 25일",
-  "updatedAt": "2026-08-25T13:00:48.461Z",
+  "updatedAt": "2026-08-25T13:10:27.196Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 6,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "테일러",
           "era": 4.84,
@@ -66,15 +66,15 @@
       },
       "live": {
         "inning": 10,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "케네디",
-        "batter": "김휘집",
-        "heat": 89,
-        "label": "연장 혈투 진행 중"
+        "pitcher": "전사민",
+        "batter": "오스틴",
+        "heat": 91,
+        "label": "끝내기 한 방 찬스"
       },
       "recap": null,
       "decision": null,
@@ -438,15 +438,15 @@
       },
       "live": {
         "inning": 11,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "윤석원",
-        "batter": "김영웅",
-        "heat": 92,
-        "label": "연장 혈투 진행 중"
+        "pitcher": "이승현",
+        "batter": "김재현",
+        "heat": 99,
+        "label": "끝내기 한 방 찬스"
       },
       "recap": null,
       "decision": null,
