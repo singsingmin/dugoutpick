@@ -1,7 +1,7 @@
 {
   "date": "20260825",
   "dateText": "2026년 8월 25일",
-  "updatedAt": "2026-08-25T10:30:35.392Z",
+  "updatedAt": "2026-08-25T10:31:02.525Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 3,
+        "inning": 4,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "테일러",
-        "batter": "홍창기",
-        "heat": 33,
+        "pitcher": "톨허스트",
+        "batter": "안중열",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -397,12 +397,12 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "비슬리",
-        "batter": "하주석",
+        "batter": "박재현",
         "heat": 37,
         "label": "초반 팽팽한 흐름"
       },
