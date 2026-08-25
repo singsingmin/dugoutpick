@@ -1,7 +1,7 @@
 {
   "date": "20260825",
   "dateText": "2026년 8월 25일",
-  "updatedAt": "2026-08-25T11:17:46.253Z",
+  "updatedAt": "2026-08-25T11:20:25.774Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "톨허스트",
-        "batter": "안중열",
-        "heat": 44,
+        "pitcher": "테일러",
+        "batter": "신민재",
+        "heat": 46,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "김민",
-        "batter": "강백호",
+        "batter": "노시환",
         "heat": 57,
         "label": "경기 흐름 체크 중"
       },
@@ -397,12 +397,12 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "정해영",
-        "batter": "고승민",
+        "batter": "전민재",
         "heat": 33,
         "label": "경기 흐름 체크 중"
       },
@@ -562,12 +562,12 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "최민석",
-        "batter": "허경민",
+        "batter": "유준규",
         "heat": 56,
         "label": "경기 흐름 체크 중"
       },
@@ -727,12 +727,12 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "보스",
-        "batter": "김건희",
+        "batter": "권혁빈",
         "heat": 56,
         "label": "경기 흐름 체크 중"
       },
