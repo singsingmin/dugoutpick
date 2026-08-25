@@ -1,7 +1,7 @@
 {
   "date": "20260825",
   "dateText": "2026년 8월 25일",
-  "updatedAt": "2026-08-25T11:10:26.012Z",
+  "updatedAt": "2026-08-25T11:17:46.253Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
+        "inning": 6,
+        "half": "T",
         "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "테일러",
-        "batter": "홍창기",
-        "heat": 42,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "톨허스트",
+        "batter": "안중열",
+        "heat": 44,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
+        "inning": 6,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "화이트",
-        "batter": "정준재",
-        "heat": 54,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "김민",
+        "batter": "강백호",
+        "heat": 57,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 2,
+        "inning": 6,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "비슬리",
-        "batter": "김태군",
-        "heat": 31,
+        "pitcher": "정해영",
+        "batter": "고승민",
+        "heat": 33,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -561,14 +561,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "소형준",
-        "batter": "김민석",
-        "heat": 53,
+        "pitcher": "최민석",
+        "batter": "허경민",
+        "heat": 56,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -726,14 +726,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "알칸타라",
-        "batter": "구자욱",
-        "heat": 53,
+        "pitcher": "보스",
+        "batter": "김건희",
+        "heat": 56,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
