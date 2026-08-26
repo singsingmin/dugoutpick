@@ -1,7 +1,7 @@
 {
   "date": "20260826",
   "dateText": "2026년 8월 26일",
-  "updatedAt": "2026-08-26T08:40:25.500Z",
+  "updatedAt": "2026-08-26T08:50:27.461Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -238,33 +238,33 @@
           },
           {
             "order": 4,
-            "pos": "1루수",
-            "name": "전의산"
-          },
-          {
-            "order": 5,
             "pos": "지명타자",
             "name": "김재환"
           },
           {
-            "order": 6,
-            "pos": "중견수",
-            "name": "최지훈"
+            "order": 5,
+            "pos": "1루수",
+            "name": "전의산"
           },
           {
-            "order": 7,
+            "order": 6,
             "pos": "포수",
             "name": "조형우"
           },
           {
+            "order": 7,
+            "pos": "중견수",
+            "name": "최지훈"
+          },
+          {
             "order": 8,
-            "pos": "3루수",
-            "name": "안상현"
+            "pos": "우익수",
+            "name": "임근우"
           },
           {
             "order": 9,
-            "pos": "우익수",
-            "name": "임근우"
+            "pos": "3루수",
+            "name": "안상현"
           }
         ],
         "away": [
@@ -300,13 +300,13 @@
           },
           {
             "order": 7,
-            "pos": "포수",
-            "name": "허인서"
+            "pos": "2루수",
+            "name": "황영묵"
           },
           {
             "order": 8,
-            "pos": "2루수",
-            "name": "이도윤"
+            "pos": "포수",
+            "name": "최재훈"
           },
           {
             "order": 9,
@@ -314,7 +314,7 @@
             "name": "심우준"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
