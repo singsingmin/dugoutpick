@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-26T13:30:36.999Z",
+  "updatedAt": "2026-08-26T13:40:30.463Z",
   "results": [
     {
       "date": "20260705",
@@ -701,6 +701,28 @@
         "score": 5
       },
       "calculatedAt": "2026-08-25T13:27:37.311Z"
+    },
+    {
+      "date": "20260826",
+      "actualTopGameId": "20260826OBKT0",
+      "recapScore": 98,
+      "decidingReasonTags": [
+        "끝내기",
+        "1점차 접전"
+      ],
+      "displayMode": "highlight",
+      "displayTitle": "어제의 명경기",
+      "away": {
+        "code": "OB",
+        "name": "두산",
+        "score": 4
+      },
+      "home": {
+        "code": "KT",
+        "name": "KT",
+        "score": 5
+      },
+      "calculatedAt": "2026-08-26T13:40:30.463Z"
     }
   ]
 }
