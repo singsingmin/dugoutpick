@@ -1,7 +1,7 @@
 {
   "date": "20260826",
   "dateText": "2026년 8월 26일",
-  "updatedAt": "2026-08-26T11:29:36.540Z",
+  "updatedAt": "2026-08-26T11:30:33.079Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": false,
         "b2": true,
         "b3": false,
         "pitcher": "이민우",
-        "batter": "임근우",
+        "batter": "안상현",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
@@ -397,12 +397,12 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "김한결",
-        "batter": "김태군",
+        "batter": "박정우",
         "heat": 11,
         "label": "경기 흐름 체크 중"
       },
