@@ -1,7 +1,7 @@
 {
   "date": "20260826",
   "dateText": "2026년 8월 26일",
-  "updatedAt": "2026-08-26T10:58:51.263Z",
+  "updatedAt": "2026-08-26T11:00:44.072Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
-        "b1": true,
+        "out": 2,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "구창모",
-        "batter": "박해민",
+        "batter": "오스틴",
         "heat": 11,
         "label": "경기 흐름 체크 중"
       },
@@ -232,12 +232,12 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "최민준",
-        "batter": "김태연",
+        "batter": "한지윤",
         "heat": 53,
         "label": "경기 흐름 체크 중"
       },
@@ -364,7 +364,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "황동하",
           "era": 4.82,
@@ -398,13 +398,13 @@
         "inning": 4,
         "half": "B",
         "out": 0,
-        "b1": true,
-        "b2": false,
+        "b1": false,
+        "b2": true,
         "b3": false,
         "pitcher": "로드리게스",
-        "batter": "이호연",
-        "heat": 39,
-        "label": "초반 팽팽한 흐름"
+        "batter": "박상준",
+        "heat": 31,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -562,12 +562,12 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "잭로그",
-        "batter": "김현수",
+        "batter": "안현민",
         "heat": 50,
         "label": "초반 팽팽한 흐름"
       },
@@ -727,12 +727,12 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "최원태",
-        "batter": "박찬혁",
+        "batter": "원성준",
         "heat": 28,
         "label": "경기 흐름 체크 중"
       },
