@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-26T13:10:29.123Z",
+  "updatedAt": "2026-08-26T13:20:28.783Z",
   "standings": [
     {
       "rank": 1,
@@ -32,16 +32,16 @@
       "rank": 2,
       "code": "SS",
       "name": "삼성",
-      "games": 112,
-      "win": 65,
+      "games": 113,
+      "win": 66,
       "loss": 44,
       "draw": 3,
-      "winRate": 0.596,
-      "gamesBehind": 1,
+      "winRate": 0.6,
+      "gamesBehind": 0.5,
       "last10": "6승1무3패",
-      "streak": "2승",
+      "streak": "3승",
       "home": "32-1-21",
-      "away": "33-2-23",
+      "away": "34-2-23",
       "rs": 0,
       "vs": {
         "KT": "8-3-0",
@@ -52,7 +52,7 @@
         "HH": "8-3-1",
         "NC": "11-4-0",
         "SK": "8-6-0",
-        "WO": "8-4-1"
+        "WO": "9-4-1"
       }
     },
     {
@@ -248,20 +248,20 @@
       "rank": 10,
       "code": "WO",
       "name": "키움",
-      "games": 117,
+      "games": 118,
       "win": 42,
-      "loss": 72,
+      "loss": 73,
       "draw": 3,
-      "winRate": 0.368,
-      "gamesBehind": 26.5,
+      "winRate": 0.365,
+      "gamesBehind": 27,
       "last10": "3승1무6패",
-      "streak": "2승",
-      "home": "25-2-34",
+      "streak": "1패",
+      "home": "25-2-35",
       "away": "17-1-38",
       "rs": 0,
       "vs": {
         "KT": "3-10-1",
-        "SS": "4-8-1",
+        "SS": "4-9-1",
         "LG": "5-10-0",
         "HT": "4-11-0",
         "OB": "4-7-0",
