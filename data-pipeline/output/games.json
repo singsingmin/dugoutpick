@@ -1,7 +1,7 @@
 {
   "date": "20260826",
   "dateText": "2026년 8월 26일",
-  "updatedAt": "2026-08-26T10:20:27.232Z",
+  "updatedAt": "2026-08-26T10:24:37.811Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "구창모",
-        "batter": "문보경",
+        "batter": "송찬의",
         "heat": 9,
         "label": "경기 흐름 체크 중"
       },
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 2,
+        "inning": 4,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "류현진",
-        "batter": "에레디아",
-        "heat": 40,
+        "pitcher": "최민준",
+        "batter": "한지윤",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -529,7 +529,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "대니엘",
           "era": 2.7,
@@ -562,12 +562,12 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 1,
-        "b1": true,
-        "b2": true,
+        "out": 2,
+        "b1": false,
+        "b2": false,
         "b3": true,
         "pitcher": "잭로그",
-        "batter": "안현민",
+        "batter": "힐리어드",
         "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
@@ -728,11 +728,11 @@
         "inning": 3,
         "half": "T",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "박준현",
-        "batter": "류지혁",
+        "batter": "김영웅",
         "heat": 23,
         "label": "경기 흐름 체크 중"
       },
