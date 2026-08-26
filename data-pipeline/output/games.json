@@ -1,7 +1,7 @@
 {
   "date": "20260826",
   "dateText": "2026년 8월 26일",
-  "updatedAt": "2026-08-26T09:31:15.242Z",
+  "updatedAt": "2026-08-26T09:40:30.098Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 1,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "임찬규",
-        "batter": "김주원",
+        "batter": "박민우",
         "heat": 31,
         "label": "초반 팽팽한 흐름"
       },
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
+        "half": "B",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "최민준",
-        "batter": "김태연",
-        "heat": 31,
+        "pitcher": "류현진",
+        "batter": "박성한",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -345,14 +345,14 @@
       "gameId": "20260826LTHT0",
       "time": "18:30",
       "stadium": "광주",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SPOTV2",
       "away": {
         "code": "LT",
         "name": "롯데",
         "rank": 6,
-        "score": null,
+        "score": 1,
         "starter": {
           "name": "로드리게스",
           "era": 3.77,
@@ -364,7 +364,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "황동하",
           "era": 4.82,
@@ -391,9 +391,21 @@
           "doom": 0,
           "park": 0.68,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "B",
+        "out": 0,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "로드리게스",
+        "batter": "이호연",
+        "heat": 31,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
@@ -498,14 +510,14 @@
       "gameId": "20260826OBKT0",
       "time": "18:30",
       "stadium": "수원",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SBS SPORTS",
       "away": {
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "잭로그",
           "era": 4.06,
@@ -517,7 +529,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "대니엘",
           "era": 2.7,
@@ -544,9 +556,21 @@
           "doom": 0,
           "park": 0.45,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "B",
+        "out": 2,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "잭로그",
+        "batter": "안현민",
+        "heat": 33,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
@@ -658,7 +682,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 0,
+        "score": 4,
         "starter": {
           "name": "최원태",
           "era": 4.67,
@@ -708,9 +732,9 @@
         "b2": false,
         "b3": false,
         "pitcher": "박준현",
-        "batter": "박승규",
-        "heat": 31,
-        "label": "초반 팽팽한 흐름"
+        "batter": "디아즈",
+        "heat": 12,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
