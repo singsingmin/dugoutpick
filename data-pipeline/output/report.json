@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-27T13:10:30.244Z",
+  "updatedAt": "2026-08-27T13:20:32.423Z",
   "lastWeek": {
     "range": [
       "20260817",
@@ -39,7 +39,7 @@
         "l": 2,
         "d": 0,
         "rank": 5,
-        "note": "이기는 맛 아는 한 주 — 3승2패"
+        "note": "2연패째 — 분위기 잡아야 해 — 그래도 히어로즈 상대가 남았으니까"
       },
       "NC": {
         "w": 2,
@@ -87,8 +87,8 @@
       {
         "away": "KT",
         "home": "SS",
-        "pred": 93,
-        "reason": "게임차 없는 동률 초접전",
+        "pred": 92,
+        "reason": "게임차 0.5, 막상막하 승부",
         "dateStart": "20260828",
         "dateEnd": "20260830"
       },
@@ -375,7 +375,9 @@
         {
           "date": "20260828",
           "away": "WO",
-          "home": "OB"
+          "home": "OB",
+          "awayStarter": "안우진",
+          "homeStarter": "박신지"
         },
         {
           "date": "20260829",
@@ -413,7 +415,9 @@
         {
           "date": "20260828",
           "away": "KT",
-          "home": "SS"
+          "home": "SS",
+          "awayStarter": "오원석",
+          "homeStarter": "김백산"
         },
         {
           "date": "20260829",
@@ -451,7 +455,9 @@
         {
           "date": "20260828",
           "away": "KT",
-          "home": "SS"
+          "home": "SS",
+          "awayStarter": "오원석",
+          "homeStarter": "김백산"
         },
         {
           "date": "20260829",
@@ -489,7 +495,9 @@
         {
           "date": "20260828",
           "away": "WO",
-          "home": "OB"
+          "home": "OB",
+          "awayStarter": "안우진",
+          "homeStarter": "박신지"
         },
         {
           "date": "20260829",
