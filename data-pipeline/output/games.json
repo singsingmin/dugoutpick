@@ -1,7 +1,7 @@
 {
   "date": "20260827",
   "dateText": "2026년 8월 27일",
-  "updatedAt": "2026-08-27T12:20:27.921Z",
+  "updatedAt": "2026-08-27T12:30:33.056Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,13 +66,13 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "양우진",
-        "batter": "홍종표",
+        "pitcher": "류진욱",
+        "batter": "구본혁",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
+        "inning": 8,
         "half": "B",
-        "out": 3,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "주현상",
-        "batter": "에레디아",
-        "heat": 13,
+        "pitcher": "정우주",
+        "batter": "채현우",
+        "heat": 14,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -453,16 +453,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 9,
-        "half": "B",
+        "inning": 10,
+        "half": "T",
         "out": 2,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "박치국",
-        "batter": "장준원",
-        "heat": 92,
-        "label": "끝내기 한 방 찬스"
+        "pitcher": "박영현",
+        "batter": "양의지",
+        "heat": 91,
+        "label": "연장 혈투 진행 중"
       },
       "recap": null,
       "decision": null,
@@ -618,14 +618,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
+        "inning": 9,
+        "half": "T",
         "out": 1,
-        "b1": false,
-        "b2": false,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "사토시",
-        "batter": "데이비슨",
+        "pitcher": "김연주",
+        "batter": "박승규",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
