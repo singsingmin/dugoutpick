@@ -1,7 +1,7 @@
 {
   "date": "20260827",
   "dateText": "2026년 8월 27일",
-  "updatedAt": "2026-08-27T11:30:33.119Z",
+  "updatedAt": "2026-08-27T11:40:26.382Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 8,
-        "score": 10,
+        "score": 11,
         "starter": {
           "name": "토다",
           "era": 5.07,
@@ -65,14 +65,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
+        "inning": 6,
+        "half": "T",
         "out": 2,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "토다",
-        "batter": "오스틴",
+        "pitcher": "조원태",
+        "batter": "김주원",
         "heat": 3,
         "label": "점수차가 벌어진 경기"
       },
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
+        "inning": 6,
+        "half": "T",
         "out": 1,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "이민우",
-        "batter": "안상현",
-        "heat": 49,
+        "pitcher": "노경은",
+        "batter": "황영묵",
+        "heat": 52,
         "label": "점수 나는 난타전"
       },
       "recap": null,
@@ -454,14 +454,14 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 0,
+        "half": "B",
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "고영표",
-        "batter": "박찬호",
-        "heat": 36,
+        "pitcher": "윤태호",
+        "batter": "김민혁",
+        "heat": 38,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -575,7 +575,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 4,
+        "score": 8,
         "starter": {
           "name": "원태인",
           "era": 4.4,
@@ -587,7 +587,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "하영민",
           "era": 4.5,
@@ -619,15 +619,15 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
+        "half": "B",
         "out": 2,
-        "b1": true,
+        "b1": false,
         "b2": true,
-        "b3": true,
-        "pitcher": "원종현",
-        "batter": "디아즈",
-        "heat": 21,
-        "label": "경기 흐름 체크 중"
+        "b3": false,
+        "pitcher": "원태인",
+        "batter": "추재현",
+        "heat": 4,
+        "label": "점수차가 벌어진 경기"
       },
       "recap": null,
       "decision": null,
