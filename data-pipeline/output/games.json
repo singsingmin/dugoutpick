@@ -1,7 +1,7 @@
 {
   "date": "20260827",
   "dateText": "2026년 8월 27일",
-  "updatedAt": "2026-08-27T10:00:40.328Z",
+  "updatedAt": "2026-08-27T10:10:24.198Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "박시원",
           "era": 3.89,
@@ -67,14 +67,14 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
-        "b1": false,
-        "b2": true,
+        "out": 2,
+        "b1": true,
+        "b2": false,
         "b3": false,
         "pitcher": "토다",
-        "batter": "박해민",
-        "heat": 19,
-        "label": "경기 흐름 체크 중"
+        "batter": "문정빈",
+        "heat": 31,
+        "label": "초반 팽팽한 흐름"
       },
       "recap": null,
       "decision": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "B",
-        "out": 2,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "짐머맨",
-        "batter": "김재환",
-        "heat": 12,
+        "batter": "조형우",
+        "heat": 14,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -454,14 +454,14 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 1,
         "b1": true,
         "b2": false,
-        "b3": true,
-        "pitcher": "고영표",
-        "batter": "정수빈",
-        "heat": 33,
+        "b3": false,
+        "pitcher": "최승용",
+        "batter": "허경민",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -618,15 +618,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
+        "inning": 3,
         "half": "T",
-        "out": 2,
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
         "pitcher": "하영민",
-        "batter": "강민호",
-        "heat": 35,
+        "batter": "김지찬",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
