@@ -1,7 +1,7 @@
 {
   "date": "20260827",
   "dateText": "2026년 8월 27일",
-  "updatedAt": "2026-08-27T12:03:59.085Z",
+  "updatedAt": "2026-08-27T12:10:25.457Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,13 +66,13 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "half": "B",
+        "out": 1,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "조원태",
-        "batter": "박시원",
+        "pitcher": "김태훈",
+        "batter": "강민균",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
@@ -230,14 +230,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 2,
-        "b1": true,
-        "b2": true,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "주현상",
-        "batter": "안상현",
+        "pitcher": "문승원",
+        "batter": "한지윤",
         "heat": 12,
         "label": "경기 흐름 체크 중"
       },
@@ -453,16 +453,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 0,
+        "inning": 9,
+        "half": "T",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박치국",
-        "batter": "김상수",
-        "heat": 73,
-        "label": "후반 박빙 승부"
+        "pitcher": "박영현",
+        "batter": "조수행",
+        "heat": 81,
+        "label": "9회 1점 승부"
       },
       "recap": null,
       "decision": null,
@@ -575,7 +575,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 8,
+        "score": 11,
         "starter": {
           "name": "원태인",
           "era": 4.4,
@@ -620,12 +620,12 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 1,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
-        "b3": true,
+        "b3": false,
         "pitcher": "김연주",
-        "batter": "구자욱",
+        "batter": "김영웅",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
