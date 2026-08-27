@@ -1,7 +1,7 @@
 {
   "date": "20260827",
   "dateText": "2026년 8월 27일",
-  "updatedAt": "2026-08-27T13:00:44.486Z",
+  "updatedAt": "2026-08-27T13:10:30.244Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -21,7 +21,7 @@
       "away": {
         "code": "NC",
         "name": "NC",
-        "rank": 8,
+        "rank": 6,
         "score": 13,
         "starter": {
           "name": "토다",
@@ -33,7 +33,7 @@
       "home": {
         "code": "LG",
         "name": "LG",
-        "rank": 3,
+        "rank": 4,
         "score": 3,
         "starter": {
           "name": "박시원",
@@ -90,7 +90,7 @@
       "away": {
         "code": "HH",
         "name": "한화",
-        "rank": 7,
+        "rank": 8,
         "score": 6,
         "starter": {
           "name": "짐머맨",
@@ -159,7 +159,7 @@
       "away": {
         "code": "LT",
         "name": "롯데",
-        "rank": 6,
+        "rank": 7,
         "score": null,
         "starter": {
           "name": "나균안",
@@ -171,7 +171,7 @@
       "home": {
         "code": "HT",
         "name": "KIA",
-        "rank": 4,
+        "rank": 3,
         "score": null,
         "starter": {
           "name": "양현종",
@@ -211,7 +211,7 @@
       "gameId": "20260827OBKT0",
       "time": "18:30",
       "stadium": "수원",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SBS SPORTS",
       "away": {
@@ -230,7 +230,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "고영표",
           "era": 3.74,
@@ -260,117 +260,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 11,
-        "half": "T",
-        "out": 2,
-        "b1": false,
-        "b2": true,
-        "b3": false,
-        "pitcher": "손동현",
-        "batter": "김인태",
-        "heat": 94,
-        "label": "연장 혈투 진행 중"
+      "live": null,
+      "recap": {
+        "actual": 100,
+        "verdict": "기대 이상",
+        "diff": 1,
+        "total": 9,
+        "extra": 1,
+        "walkoff": 1
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "최원준"
-          },
-          {
-            "order": 2,
-            "pos": "1루수",
-            "name": "김현수"
-          },
-          {
-            "order": 3,
-            "pos": "우익수",
-            "name": "안현민"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "장성우"
-          },
-          {
-            "order": 5,
-            "pos": "2루수",
-            "name": "김상수"
-          },
-          {
-            "order": 6,
-            "pos": "3루수",
-            "name": "허경민"
-          },
-          {
-            "order": 7,
-            "pos": "좌익수",
-            "name": "장진혁"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "한승택"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "권동진"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "정수빈"
-          },
-          {
-            "order": 2,
-            "pos": "3루수",
-            "name": "안재석"
-          },
-          {
-            "order": 3,
-            "pos": "2루수",
-            "name": "박준순"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "양의지"
-          },
-          {
-            "order": 5,
-            "pos": "좌익수",
-            "name": "김민석"
-          },
-          {
-            "order": 6,
-            "pos": "1루수",
-            "name": "세베리노"
-          },
-          {
-            "order": 7,
-            "pos": "유격수",
-            "name": "박찬호"
-          },
-          {
-            "order": 8,
-            "pos": "우익수",
-            "name": "조수행"
-          },
-          {
-            "order": 9,
-            "pos": "포수",
-            "name": "윤준호"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260827SSWO0",
