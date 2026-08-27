@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-27T12:50:26.476Z",
+  "updatedAt": "2026-08-27T13:00:44.486Z",
   "lastWeek": {
     "range": [
       "20260817",
@@ -18,7 +18,7 @@
         "l": 3,
         "d": 0,
         "rank": 2,
-        "note": "3연승으로 상승세 — 이번주도 기대해볼 만"
+        "note": "4연승, 지금이 전성기"
       },
       "LG": {
         "w": 3,
@@ -95,8 +95,8 @@
       {
         "away": "KT",
         "home": "SS",
-        "pred": 92,
-        "reason": "게임차 0.5, 막상막하 승부",
+        "pred": 93,
+        "reason": "게임차 없는 동률 초접전",
         "dateStart": "20260828",
         "dateEnd": "20260830"
       },
@@ -135,7 +135,9 @@
         {
           "date": "20260828",
           "away": "NC",
-          "home": "HH"
+          "home": "HH",
+          "awayStarter": "이재학",
+          "homeStarter": "박준영"
         },
         {
           "date": "20260829",
@@ -173,7 +175,9 @@
         {
           "date": "20260828",
           "away": "LG",
-          "home": "LT"
+          "home": "LT",
+          "awayStarter": "김윤식",
+          "homeStarter": "나균안"
         },
         {
           "date": "20260829",
@@ -211,7 +215,9 @@
         {
           "date": "20260828",
           "away": "NC",
-          "home": "HH"
+          "home": "HH",
+          "awayStarter": "이재학",
+          "homeStarter": "박준영"
         },
         {
           "date": "20260829",
@@ -249,7 +255,9 @@
         {
           "date": "20260828",
           "away": "SK",
-          "home": "HT"
+          "home": "HT",
+          "awayStarter": "이준기",
+          "homeStarter": "올러"
         },
         {
           "date": "20260829",
@@ -287,7 +295,9 @@
         {
           "date": "20260828",
           "away": "LG",
-          "home": "LT"
+          "home": "LT",
+          "awayStarter": "김윤식",
+          "homeStarter": "나균안"
         },
         {
           "date": "20260829",
@@ -325,7 +335,9 @@
         {
           "date": "20260828",
           "away": "SK",
-          "home": "HT"
+          "home": "HT",
+          "awayStarter": "이준기",
+          "homeStarter": "올러"
         },
         {
           "date": "20260829",
