@@ -1,7 +1,7 @@
 {
   "date": "20260827",
   "dateText": "2026년 8월 27일",
-  "updatedAt": "2026-08-27T10:50:26.128Z",
+  "updatedAt": "2026-08-27T11:00:40.702Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "박시원",
           "era": 3.89,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 0,
+        "out": 3,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "토다",
-        "batter": "함창건",
+        "batter": "문정빈",
         "heat": 3,
         "label": "점수차가 벌어진 경기"
       },
@@ -187,7 +187,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 7,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "짐머맨",
           "era": 13.5,
@@ -231,15 +231,15 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
+        "half": "B",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "김건우",
-        "batter": "허인서",
-        "heat": 46,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "이형범",
+        "batter": "박성한",
+        "heat": 52,
+        "label": "점수 나는 난타전"
       },
       "recap": null,
       "decision": null,
@@ -422,7 +422,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "고영표",
           "era": 3.74,
@@ -453,15 +453,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 0,
-        "b1": true,
+        "inning": 5,
+        "half": "T",
+        "out": 2,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "최승용",
-        "batter": "허경민",
-        "heat": 45,
+        "pitcher": "고영표",
+        "batter": "박준순",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -619,14 +619,14 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
+        "half": "B",
         "out": 2,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "하영민",
-        "batter": "최형우",
-        "heat": 17,
+        "pitcher": "원태인",
+        "batter": "추재현",
+        "heat": 18,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
