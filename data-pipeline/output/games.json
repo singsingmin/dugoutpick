@@ -1,7 +1,7 @@
 {
   "date": "20260827",
   "dateText": "2026년 8월 27일",
-  "updatedAt": "2026-08-27T08:40:28.048Z",
+  "updatedAt": "2026-08-27T08:50:26.421Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -271,7 +271,7 @@
           {
             "order": 1,
             "pos": "우익수",
-            "name": "김태연"
+            "name": "이원석"
           },
           {
             "order": 2,
@@ -296,17 +296,17 @@
           {
             "order": 6,
             "pos": "1루수",
-            "name": "채은성"
+            "name": "김태연"
           },
           {
             "order": 7,
-            "pos": "2루수",
-            "name": "황영묵"
+            "pos": "포수",
+            "name": "허인서"
           },
           {
             "order": 8,
-            "pos": "포수",
-            "name": "최재훈"
+            "pos": "2루수",
+            "name": "황영묵"
           },
           {
             "order": 9,
@@ -314,7 +314,7 @@
             "name": "심우준"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
