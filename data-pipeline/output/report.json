@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-28T08:50:27.059Z",
+  "updatedAt": "2026-08-28T16:59:31.461Z",
   "lastWeek": {
     "range": [
       "20260817",
@@ -89,7 +89,7 @@
         "home": "SS",
         "pred": 92,
         "reason": "게임차 0.5, 막상막하 승부",
-        "dateStart": "20260828",
+        "dateStart": "20260829",
         "dateEnd": "20260830"
       },
       {
@@ -97,7 +97,7 @@
         "home": "HH",
         "pred": 91,
         "reason": "게임차 1, 막상막하 승부",
-        "dateStart": "20260828",
+        "dateStart": "20260829",
         "dateEnd": "20260830"
       },
       {
@@ -131,13 +131,6 @@
           "home": "LG",
           "awayStarter": "토다",
           "homeStarter": "박시원"
-        },
-        {
-          "date": "20260828",
-          "away": "NC",
-          "home": "HH",
-          "awayStarter": "이재학",
-          "homeStarter": "박준영"
         },
         {
           "date": "20260829",
@@ -175,13 +168,6 @@
           "homeStarter": "박시원"
         },
         {
-          "date": "20260828",
-          "away": "LG",
-          "home": "LT",
-          "awayStarter": "김윤식",
-          "homeStarter": "나균안"
-        },
-        {
           "date": "20260829",
           "away": "LG",
           "home": "LT",
@@ -215,13 +201,6 @@
           "home": "SK",
           "awayStarter": "짐머맨",
           "homeStarter": "김건우"
-        },
-        {
-          "date": "20260828",
-          "away": "NC",
-          "home": "HH",
-          "awayStarter": "이재학",
-          "homeStarter": "박준영"
         },
         {
           "date": "20260829",
@@ -259,13 +238,6 @@
           "homeStarter": "김건우"
         },
         {
-          "date": "20260828",
-          "away": "SK",
-          "home": "HT",
-          "awayStarter": "이준기",
-          "homeStarter": "올러"
-        },
-        {
           "date": "20260829",
           "away": "SK",
           "home": "HT",
@@ -294,13 +266,6 @@
           "homeStarter": "황동하"
         },
         {
-          "date": "20260828",
-          "away": "LG",
-          "home": "LT",
-          "awayStarter": "김윤식",
-          "homeStarter": "나균안"
-        },
-        {
           "date": "20260829",
           "away": "LG",
           "home": "LT",
@@ -327,13 +292,6 @@
           "home": "HT",
           "awayStarter": "로드리게스",
           "homeStarter": "황동하"
-        },
-        {
-          "date": "20260828",
-          "away": "SK",
-          "home": "HT",
-          "awayStarter": "이준기",
-          "homeStarter": "올러"
         },
         {
           "date": "20260829",
@@ -371,13 +329,6 @@
           "homeStarter": "고영표"
         },
         {
-          "date": "20260828",
-          "away": "WO",
-          "home": "OB",
-          "awayStarter": "안우진",
-          "homeStarter": "박신지"
-        },
-        {
           "date": "20260829",
           "away": "WO",
           "home": "OB",
@@ -411,13 +362,6 @@
           "home": "KT",
           "awayStarter": "최승용",
           "homeStarter": "고영표"
-        },
-        {
-          "date": "20260828",
-          "away": "KT",
-          "home": "SS",
-          "awayStarter": "오원석",
-          "homeStarter": "김백산"
         },
         {
           "date": "20260829",
@@ -455,13 +399,6 @@
           "homeStarter": "하영민"
         },
         {
-          "date": "20260828",
-          "away": "KT",
-          "home": "SS",
-          "awayStarter": "오원석",
-          "homeStarter": "김백산"
-        },
-        {
           "date": "20260829",
           "away": "KT",
           "home": "SS",
@@ -495,13 +432,6 @@
           "home": "WO",
           "awayStarter": "원태인",
           "homeStarter": "하영민"
-        },
-        {
-          "date": "20260828",
-          "away": "WO",
-          "home": "OB",
-          "awayStarter": "안우진",
-          "homeStarter": "박신지"
         },
         {
           "date": "20260829",
