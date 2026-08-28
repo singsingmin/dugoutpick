@@ -1,7 +1,7 @@
 {
   "date": "20260828",
   "dateText": "2026년 8월 28일",
-  "updatedAt": "2026-08-28T08:10:27.942Z",
+  "updatedAt": "2026-08-28T08:40:25.602Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -15,8 +15,8 @@
       "gameId": "20260828WOOB0",
       "time": "18:30",
       "stadium": "잠실",
-      "status": "SCHEDULED",
-      "cancelReason": null,
+      "status": "CANCELED",
+      "cancelReason": "그라운드사정",
       "broadcast": "MBC SPORTS+",
       "away": {
         "code": "WO",
@@ -61,108 +61,13 @@
           "doom": 0,
           "park": 0.09,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
       "live": null,
       "recap": null,
       "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "정수빈"
-          },
-          {
-            "order": 2,
-            "pos": "3루수",
-            "name": "안재석"
-          },
-          {
-            "order": 3,
-            "pos": "2루수",
-            "name": "박준순"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "양의지"
-          },
-          {
-            "order": 5,
-            "pos": "좌익수",
-            "name": "김민석"
-          },
-          {
-            "order": 6,
-            "pos": "1루수",
-            "name": "세베리노"
-          },
-          {
-            "order": 7,
-            "pos": "유격수",
-            "name": "박찬호"
-          },
-          {
-            "order": 8,
-            "pos": "우익수",
-            "name": "조수행"
-          },
-          {
-            "order": 9,
-            "pos": "포수",
-            "name": "윤준호"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "2루수",
-            "name": "서건창"
-          },
-          {
-            "order": 2,
-            "pos": "3루수",
-            "name": "김웅빈"
-          },
-          {
-            "order": 3,
-            "pos": "1루수",
-            "name": "데이비슨"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "히우라"
-          },
-          {
-            "order": 5,
-            "pos": "포수",
-            "name": "김건희"
-          },
-          {
-            "order": 6,
-            "pos": "좌익수",
-            "name": "이형종"
-          },
-          {
-            "order": 7,
-            "pos": "중견수",
-            "name": "원성준"
-          },
-          {
-            "order": 8,
-            "pos": "우익수",
-            "name": "박찬혁"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "최재영"
-          }
-        ],
-        "confirmed": false
-      }
+      "lineup": null
     },
     {
       "gameId": "20260828KTSS0",
