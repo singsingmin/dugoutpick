@@ -1,7 +1,7 @@
 {
   "date": "20260828",
   "dateText": "2026년 8월 28일",
-  "updatedAt": "2026-08-27T15:59:43.005Z",
+  "updatedAt": "2026-08-28T07:20:25.891Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -321,8 +321,8 @@
       "gameId": "20260828LGLT0",
       "time": "18:30",
       "stadium": "사직",
-      "status": "SCHEDULED",
-      "cancelReason": null,
+      "status": "CANCELED",
+      "cancelReason": "우천취소",
       "broadcast": "SPOTV",
       "away": {
         "code": "LG",
@@ -367,108 +367,13 @@
           "doom": 0,
           "park": 0.77,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
       "live": null,
       "recap": null,
       "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "황성빈"
-          },
-          {
-            "order": 2,
-            "pos": "지명타자",
-            "name": "나승엽"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "레이예스"
-          },
-          {
-            "order": 4,
-            "pos": "3루수",
-            "name": "한동희"
-          },
-          {
-            "order": 5,
-            "pos": "1루수",
-            "name": "고승민"
-          },
-          {
-            "order": 6,
-            "pos": "2루수",
-            "name": "한태양"
-          },
-          {
-            "order": 7,
-            "pos": "유격수",
-            "name": "전민재"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "손성빈"
-          },
-          {
-            "order": 9,
-            "pos": "우익수",
-            "name": "장두성"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "2루수",
-            "name": "신민재"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "박해민"
-          },
-          {
-            "order": 3,
-            "pos": "지명타자",
-            "name": "오스틴"
-          },
-          {
-            "order": 4,
-            "pos": "좌익수",
-            "name": "송찬의"
-          },
-          {
-            "order": 5,
-            "pos": "3루수",
-            "name": "문보경"
-          },
-          {
-            "order": 6,
-            "pos": "1루수",
-            "name": "문정빈"
-          },
-          {
-            "order": 7,
-            "pos": "유격수",
-            "name": "오지환"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "박동원"
-          },
-          {
-            "order": 9,
-            "pos": "우익수",
-            "name": "홍창기"
-          }
-        ],
-        "confirmed": false
-      }
+      "lineup": null
     },
     {
       "gameId": "20260828SKHT0",
