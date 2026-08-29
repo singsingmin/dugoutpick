@@ -1,7 +1,7 @@
 {
   "date": "20260829",
   "dateText": "2026년 8월 29일",
-  "updatedAt": "2026-08-29T08:10:26.247Z",
+  "updatedAt": "2026-08-29T08:20:28.748Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -682,18 +682,18 @@
         "home": [
           {
             "order": 1,
-            "pos": "우익수",
-            "name": "이원석"
+            "pos": "중견수",
+            "name": "최인호"
           },
           {
             "order": 2,
-            "pos": "중견수",
-            "name": "문현빈"
+            "pos": "우익수",
+            "name": "페라자"
           },
           {
             "order": 3,
             "pos": "좌익수",
-            "name": "한지윤"
+            "name": "문현빈"
           },
           {
             "order": 4,
@@ -707,23 +707,23 @@
           },
           {
             "order": 6,
-            "pos": "1루수",
-            "name": "김태연"
-          },
-          {
-            "order": 7,
             "pos": "포수",
             "name": "허인서"
           },
           {
+            "order": 7,
+            "pos": "1루수",
+            "name": "김태연"
+          },
+          {
             "order": 8,
             "pos": "2루수",
-            "name": "황영묵"
+            "name": "이도윤"
           },
           {
             "order": 9,
             "pos": "유격수",
-            "name": "심우준"
+            "name": "박정현"
           }
         ],
         "away": [
@@ -760,7 +760,7 @@
           {
             "order": 7,
             "pos": "포수",
-            "name": "안중열"
+            "name": "김형준"
           },
           {
             "order": 8,
@@ -773,7 +773,7 @@
             "name": "천재환"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     }
   ],
