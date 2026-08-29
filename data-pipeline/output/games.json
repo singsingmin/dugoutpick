@@ -1,7 +1,7 @@
 {
   "date": "20260829",
   "dateText": "2026년 8월 29일",
-  "updatedAt": "2026-08-29T09:50:25.924Z",
+  "updatedAt": "2026-08-29T10:00:39.787Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
+        "inning": 4,
         "half": "B",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "안우진",
-        "batter": "박준순",
-        "heat": 40,
+        "batter": "김민석",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -199,7 +199,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "페덱",
           "era": 2.61,
@@ -231,13 +231,13 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
-        "out": 2,
-        "b1": false,
-        "b2": true,
-        "b3": true,
-        "pitcher": "페덱",
-        "batter": "김민혁",
+        "half": "B",
+        "out": 1,
+        "b1": true,
+        "b2": false,
+        "b3": false,
+        "pitcher": "로건",
+        "batter": "최형우",
         "heat": 31,
         "label": "초반 팽팽한 흐름"
       },
@@ -364,7 +364,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 7,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "김진욱",
           "era": 3.37,
@@ -395,16 +395,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
+        "inning": 3,
         "half": "B",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
         "pitcher": "카라스코",
-        "batter": "손성빈",
-        "heat": 22,
-        "label": "경기 흐름 체크 중"
+        "batter": "황성빈",
+        "heat": 33,
+        "label": "초반 팽팽한 흐름"
       },
       "recap": null,
       "decision": null,
@@ -561,14 +561,14 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "올러",
-        "batter": "에레디아",
-        "heat": 45,
+        "pitcher": "아빌라",
+        "batter": "김도영",
+        "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
+        "inning": 4,
         "half": "T",
-        "out": 2,
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
         "pitcher": "박준영",
-        "batter": "블레인",
-        "heat": 38,
+        "batter": "박건우",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
