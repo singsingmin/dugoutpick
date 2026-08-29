@@ -1,7 +1,7 @@
 {
   "date": "20260829",
   "dateText": "2026년 8월 29일",
-  "updatedAt": "2026-08-29T09:40:24.920Z",
+  "updatedAt": "2026-08-29T09:50:25.924Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "안우진",
           "era": 3.39,
@@ -66,13 +66,13 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 2,
         "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "곽빈",
-        "batter": "추재현",
+        "b3": false,
+        "pitcher": "안우진",
+        "batter": "박준순",
         "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
@@ -180,14 +180,14 @@
       "gameId": "20260829KTSS0",
       "time": "18:00",
       "stadium": "대구",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SPOTV2",
       "away": {
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "로건",
           "era": 2.91,
@@ -199,7 +199,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "페덱",
           "era": 2.61,
@@ -226,9 +226,21 @@
           "doom": 0,
           "park": 1,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 2,
+        "b1": false,
+        "b2": true,
+        "b3": true,
+        "pitcher": "페덱",
+        "batter": "김민혁",
+        "heat": 31,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
@@ -385,12 +397,12 @@
       "live": {
         "inning": 2,
         "half": "B",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "out": 2,
+        "b1": true,
+        "b2": true,
         "b3": false,
         "pitcher": "카라스코",
-        "batter": "한동희",
+        "batter": "손성빈",
         "heat": 22,
         "label": "경기 흐름 체크 중"
       },
@@ -548,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
+        "inning": 4,
         "half": "T",
-        "out": 2,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "올러",
-        "batter": "정준재",
-        "heat": 40,
+        "batter": "에레디아",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -670,7 +682,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 6,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "라일리",
           "era": 2.92,
@@ -715,13 +727,13 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "박준영",
-        "batter": "김주원",
-        "heat": 40,
+        "batter": "블레인",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
