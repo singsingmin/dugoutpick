@@ -1,12 +1,12 @@
 {
   "date": "20260829",
   "dateText": "2026년 8월 29일",
-  "updatedAt": "2026-08-29T12:30:31.114Z",
+  "updatedAt": "2026-08-29T12:40:25.567Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
     "hitRate": 26,
-    "bonusRate": 50,
+    "bonusRate": 52,
     "ready": true
   },
   "recommendedGameId": "20260829KTSS0",
@@ -134,15 +134,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 0,
+        "inning": 9,
+        "half": "T",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "우규민",
-        "batter": "김영웅",
-        "heat": 27,
+        "pitcher": "이승민",
+        "batter": "유준규",
+        "heat": 28,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -301,12 +301,12 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "우강훈",
-        "batter": "황성빈",
+        "pitcher": "케네디",
+        "batter": "레이예스",
         "heat": 13,
         "label": "경기 흐름 체크 중"
       },
@@ -414,7 +414,7 @@
       "gameId": "20260829SKHT0",
       "time": "18:00",
       "stadium": "광주",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SBS SPORTS",
       "away": {
@@ -433,7 +433,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 3,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "올러",
           "era": 3.08,
@@ -463,117 +463,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 10,
-        "half": "B",
-        "out": 0,
-        "b1": false,
-        "b2": true,
-        "b3": false,
-        "pitcher": "문승원",
-        "batter": "정현창",
-        "heat": 96,
-        "label": "끝내기 한 방 찬스"
+      "live": null,
+      "recap": {
+        "actual": 100,
+        "verdict": "기대 이상",
+        "diff": 1,
+        "total": 3,
+        "extra": 1,
+        "walkoff": 1
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "좌익수",
-            "name": "박재현"
-          },
-          {
-            "order": 2,
-            "pos": "2루수",
-            "name": "이호연"
-          },
-          {
-            "order": 3,
-            "pos": "3루수",
-            "name": "김도영"
-          },
-          {
-            "order": 4,
-            "pos": "1루수",
-            "name": "카스트로"
-          },
-          {
-            "order": 5,
-            "pos": "우익수",
-            "name": "나성범"
-          },
-          {
-            "order": 6,
-            "pos": "지명타자",
-            "name": "김선빈"
-          },
-          {
-            "order": 7,
-            "pos": "유격수",
-            "name": "하주석"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "한준수"
-          },
-          {
-            "order": 9,
-            "pos": "중견수",
-            "name": "김호령"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "2루수",
-            "name": "정준재"
-          },
-          {
-            "order": 2,
-            "pos": "유격수",
-            "name": "박성한"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "에레디아"
-          },
-          {
-            "order": 4,
-            "pos": "1루수",
-            "name": "전의산"
-          },
-          {
-            "order": 5,
-            "pos": "지명타자",
-            "name": "김재환"
-          },
-          {
-            "order": 6,
-            "pos": "포수",
-            "name": "조형우"
-          },
-          {
-            "order": 7,
-            "pos": "중견수",
-            "name": "최지훈"
-          },
-          {
-            "order": 8,
-            "pos": "우익수",
-            "name": "임근우"
-          },
-          {
-            "order": 9,
-            "pos": "3루수",
-            "name": "안상현"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260829NCHH0",
