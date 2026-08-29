@@ -1,7 +1,7 @@
 {
   "date": "20260829",
   "dateText": "2026년 8월 29일",
-  "updatedAt": "2026-08-29T13:30:32.687Z",
+  "updatedAt": "2026-08-29T13:40:29.018Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -25,9 +25,9 @@
         "score": 2,
         "starter": {
           "name": "안우진",
-          "era": 3.39,
+          "era": 3.7,
           "w": 3,
-          "l": 6
+          "l": 7
         }
       },
       "home": {
@@ -37,8 +37,8 @@
         "score": 7,
         "starter": {
           "name": "곽빈",
-          "era": 2.33,
-          "w": 10,
+          "era": 2.36,
+          "w": 11,
           "l": 5
         }
       },
@@ -74,8 +74,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "곽빈",
+        "lose": "안우진",
         "save": null
       },
       "lineup": null
@@ -94,9 +94,9 @@
         "score": 2,
         "starter": {
           "name": "로건",
-          "era": 2.91,
+          "era": 3.23,
           "w": 5,
-          "l": 1
+          "l": 2
         }
       },
       "home": {
@@ -106,8 +106,8 @@
         "score": 4,
         "starter": {
           "name": "페덱",
-          "era": 2.61,
-          "w": 3,
+          "era": 2.25,
+          "w": 4,
           "l": 2
         }
       },
@@ -143,9 +143,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "페덱",
+        "lose": "로건",
+        "save": "김재윤"
       },
       "lineup": null
     },
@@ -163,8 +163,8 @@
         "score": 8,
         "starter": {
           "name": "카라스코",
-          "era": 3.33,
-          "w": 2,
+          "era": 3.26,
+          "w": 3,
           "l": 1
         }
       },
@@ -175,9 +175,9 @@
         "score": 3,
         "starter": {
           "name": "김진욱",
-          "era": 3.37,
+          "era": 3.75,
           "w": 6,
-          "l": 5
+          "l": 6
         }
       },
       "honjam": {
@@ -212,8 +212,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "카라스코",
+        "lose": "김진욱",
         "save": null
       },
       "lineup": null
@@ -232,7 +232,7 @@
         "score": 1,
         "starter": {
           "name": "아빌라",
-          "era": 1.93,
+          "era": 1.65,
           "w": 4,
           "l": 1
         }
@@ -244,7 +244,7 @@
         "score": 2,
         "starter": {
           "name": "올러",
-          "era": 3.08,
+          "era": 3.01,
           "w": 11,
           "l": 9
         }
@@ -281,8 +281,8 @@
         "walkoff": 1
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "조상우",
+        "lose": "문승원",
         "save": null
       },
       "lineup": null
@@ -302,7 +302,7 @@
         "starter": {
           "name": "라일리",
           "era": 2.92,
-          "w": 5,
+          "w": 6,
           "l": 1
         }
       },
@@ -313,9 +313,9 @@
         "score": 4,
         "starter": {
           "name": "박준영",
-          "era": 5.66,
+          "era": 6.1,
           "w": 1,
-          "l": 1
+          "l": 2
         }
       },
       "honjam": {
@@ -350,8 +350,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "라일리",
+        "lose": "박준영",
         "save": null
       },
       "lineup": null
