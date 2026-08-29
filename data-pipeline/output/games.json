@@ -1,7 +1,7 @@
 {
   "date": "20260829",
   "dateText": "2026년 8월 29일",
-  "updatedAt": "2026-08-29T11:20:23.572Z",
+  "updatedAt": "2026-08-29T11:24:59.114Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 6,
+        "score": 7,
         "starter": {
           "name": "곽빈",
           "era": 2.33,
@@ -67,13 +67,13 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "윤석원",
-        "batter": "세베리노",
-        "heat": 27,
+        "batter": "윤준호",
+        "heat": 14,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "로건",
-        "batter": "최형우",
+        "batter": "디아즈",
         "heat": 20,
         "label": "경기 흐름 체크 중"
       },
@@ -364,7 +364,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 7,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "김진욱",
           "era": 3.37,
@@ -395,16 +395,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "카라스코",
-        "batter": "한동희",
-        "heat": 4,
-        "label": "점수차가 벌어진 경기"
+        "pitcher": "현도훈",
+        "batter": "홍창기",
+        "heat": 12,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -561,14 +561,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "전상현",
-        "batter": "정준재",
-        "heat": 64,
+        "pitcher": "전영준",
+        "batter": "김호령",
+        "heat": 67,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -682,7 +682,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 6,
-        "score": 7,
+        "score": 8,
         "starter": {
           "name": "라일리",
           "era": 2.92,
@@ -725,16 +725,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 2,
-        "b1": false,
+        "inning": 7,
+        "half": "T",
+        "out": 0,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "라일리",
-        "batter": "허인서",
-        "heat": 12,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "장유호",
+        "batter": "박시원",
+        "heat": 4,
+        "label": "점수차가 벌어진 경기"
       },
       "recap": null,
       "decision": null,
