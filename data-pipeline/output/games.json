@@ -1,7 +1,7 @@
 {
   "date": "20260829",
   "dateText": "2026년 8월 29일",
-  "updatedAt": "2026-08-29T10:30:34.377Z",
+  "updatedAt": "2026-08-29T10:40:26.087Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
+        "inning": 6,
         "half": "B",
-        "out": 3,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
-        "b3": true,
+        "b3": false,
         "pitcher": "안우진",
-        "batter": "정수빈",
-        "heat": 31,
+        "batter": "김대한",
+        "heat": 34,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
+        "half": "B",
         "out": 2,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "페덱",
-        "batter": "안현민",
-        "heat": 31,
+        "pitcher": "로건",
+        "batter": "최형우",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -352,7 +352,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 4,
-        "score": 3,
+        "score": 7,
         "starter": {
           "name": "카라스코",
           "era": 3.33,
@@ -397,14 +397,14 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 1,
+        "b1": true,
         "b2": true,
         "b3": true,
-        "pitcher": "김진욱",
-        "batter": "송찬의",
-        "heat": 48,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "김한결",
+        "batter": "신민재",
+        "heat": 10,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -517,7 +517,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "아빌라",
           "era": 1.93,
@@ -562,13 +562,13 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "올러",
-        "batter": "박성한",
-        "heat": 57,
+        "batter": "전의산",
+        "heat": 53,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -725,14 +725,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
+        "inning": 5,
         "half": "B",
-        "out": 2,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "라일리",
-        "batter": "허인서",
+        "batter": "김태연",
         "heat": 3,
         "label": "점수차가 벌어진 경기"
       },
