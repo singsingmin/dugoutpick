@@ -1,7 +1,7 @@
 {
   "date": "20260830",
   "dateText": "2026년 8월 30일",
-  "updatedAt": "2026-08-30T09:10:26.438Z",
+  "updatedAt": "2026-08-30T09:20:28.570Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "최민석",
-        "batter": "히우라",
-        "heat": 31,
+        "pitcher": "전준표",
+        "batter": "박준순",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -288,15 +288,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 1,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "톨허스트",
-        "batter": "나승엽",
-        "heat": 33,
+        "pitcher": "나균안",
+        "batter": "천성호",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -513,12 +513,12 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 3,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "테일러",
-        "batter": "유민",
+        "batter": "허인서",
         "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
