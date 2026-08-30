@@ -1,7 +1,7 @@
 {
   "date": "20260830",
   "dateText": "2026년 8월 30일",
-  "updatedAt": "2026-08-30T12:10:26.867Z",
+  "updatedAt": "2026-08-30T12:20:24.924Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -309,15 +309,15 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
-        "out": 1,
-        "b1": false,
+        "half": "B",
+        "out": 0,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "김서현",
-        "batter": "박민우",
-        "heat": 88,
-        "label": "9회 1점 승부"
+        "pitcher": "손주환",
+        "batter": "문현빈",
+        "heat": 98,
+        "label": "끝내기 한 방 찬스"
       },
       "recap": null,
       "decision": null,
