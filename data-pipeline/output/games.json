@@ -1,7 +1,7 @@
 {
   "date": "20260830",
   "dateText": "2026년 8월 30일",
-  "updatedAt": "2026-08-30T09:30:32.750Z",
+  "updatedAt": "2026-08-30T09:40:26.390Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "최민석",
           "era": 2.66,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "B",
-        "out": 2,
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
         "pitcher": "전준표",
-        "batter": "정수빈",
-        "heat": 7,
-        "label": "경기 흐름 체크 중"
+        "batter": "안재석",
+        "heat": 2,
+        "label": "점수차가 벌어진 경기"
       },
       "recap": null,
       "decision": null,
@@ -288,15 +288,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
-        "out": 2,
-        "b1": true,
+        "inning": 3,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "톨허스트",
-        "batter": "윤동희",
-        "heat": 38,
+        "pitcher": "나균안",
+        "batter": "이주헌",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -468,7 +468,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 6,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "테일러",
           "era": 4.6,
@@ -512,15 +512,15 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
+        "half": "B",
         "out": 2,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "황준서",
-        "batter": "김주원",
-        "heat": 27,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "테일러",
+        "batter": "박정현",
+        "heat": 22,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
