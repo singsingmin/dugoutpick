@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-30T12:50:28.493Z",
+  "updatedAt": "2026-08-30T13:00:41.851Z",
   "results": [
     {
       "date": "20260705",
@@ -769,6 +769,28 @@
         "score": 2
       },
       "calculatedAt": "2026-08-29T13:30:32.687Z"
+    },
+    {
+      "date": "20260830",
+      "actualTopGameId": "20260830NCHH0",
+      "recapScore": 96,
+      "decidingReasonTags": [
+        "연장 접전",
+        "난타전"
+      ],
+      "displayMode": "highlight",
+      "displayTitle": "어제의 명경기",
+      "away": {
+        "code": "NC",
+        "name": "NC",
+        "score": 10
+      },
+      "home": {
+        "code": "HH",
+        "name": "한화",
+        "score": 7
+      },
+      "calculatedAt": "2026-08-30T13:00:41.851Z"
     }
   ]
 }
