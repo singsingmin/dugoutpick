@@ -1,7 +1,7 @@
 {
   "date": "20260830",
   "dateText": "2026년 8월 30일",
-  "updatedAt": "2026-08-30T12:00:40.929Z",
+  "updatedAt": "2026-08-30T12:10:26.867Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -308,16 +308,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
+        "inning": 9,
+        "half": "T",
+        "out": 1,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "이용준",
-        "batter": "심우준",
-        "heat": 80,
-        "label": "후반 박빙 승부"
+        "pitcher": "김서현",
+        "batter": "박민우",
+        "heat": 88,
+        "label": "9회 1점 승부"
       },
       "recap": null,
       "decision": null,
