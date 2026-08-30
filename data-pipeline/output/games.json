@@ -1,7 +1,7 @@
 {
   "date": "20260830",
   "dateText": "2026년 8월 30일",
-  "updatedAt": "2026-08-30T12:40:26.674Z",
+  "updatedAt": "2026-08-30T12:50:28.493Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -265,7 +265,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 6,
-        "score": 7,
+        "score": 10,
         "starter": {
           "name": "테일러",
           "era": 4.6,
@@ -309,15 +309,15 @@
       },
       "live": {
         "inning": 10,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "b1": false,
-        "b2": true,
-        "b3": true,
-        "pitcher": "김서현",
-        "batter": "천재환",
-        "heat": 97,
-        "label": "연장 혈투 진행 중"
+        "b2": false,
+        "b3": false,
+        "pitcher": "전사민",
+        "batter": "김태연",
+        "heat": 53,
+        "label": "점수 나는 난타전"
       },
       "recap": null,
       "decision": null,
