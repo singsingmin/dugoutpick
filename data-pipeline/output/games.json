@@ -1,7 +1,7 @@
 {
   "date": "20260830",
   "dateText": "2026년 8월 30일",
-  "updatedAt": "2026-08-30T12:30:37.740Z",
+  "updatedAt": "2026-08-30T12:40:26.674Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -310,12 +310,12 @@
       "live": {
         "inning": 10,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": false,
-        "b2": false,
-        "b3": false,
+        "b2": true,
+        "b3": true,
         "pitcher": "김서현",
-        "batter": "박건우",
+        "batter": "천재환",
         "heat": 97,
         "label": "연장 혈투 진행 중"
       },
