@@ -1,7 +1,7 @@
 {
   "date": "20260830",
   "dateText": "2026년 8월 30일",
-  "updatedAt": "2026-08-30T08:10:25.216Z",
+  "updatedAt": "2026-08-30T08:20:28.657Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -492,18 +492,18 @@
         "home": [
           {
             "order": 1,
-            "pos": "중견수",
-            "name": "최인호"
+            "pos": "우익수",
+            "name": "유민"
           },
           {
             "order": 2,
-            "pos": "우익수",
-            "name": "페라자"
+            "pos": "중견수",
+            "name": "문현빈"
           },
           {
             "order": 3,
-            "pos": "좌익수",
-            "name": "문현빈"
+            "pos": "3루수",
+            "name": "노시환"
           },
           {
             "order": 4,
@@ -512,28 +512,28 @@
           },
           {
             "order": 5,
-            "pos": "3루수",
-            "name": "노시환"
-          },
-          {
-            "order": 6,
             "pos": "포수",
             "name": "허인서"
           },
           {
-            "order": 7,
+            "order": 6,
             "pos": "1루수",
             "name": "김태연"
           },
           {
+            "order": 7,
+            "pos": "좌익수",
+            "name": "한지윤"
+          },
+          {
             "order": 8,
-            "pos": "2루수",
-            "name": "이도윤"
+            "pos": "유격수",
+            "name": "박정현"
           },
           {
             "order": 9,
-            "pos": "유격수",
-            "name": "박정현"
+            "pos": "2루수",
+            "name": "이도윤"
           }
         ],
         "away": [
@@ -544,8 +544,8 @@
           },
           {
             "order": 2,
-            "pos": "중견수",
-            "name": "최정원"
+            "pos": "우익수",
+            "name": "권희동"
           },
           {
             "order": 3,
@@ -569,21 +569,21 @@
           },
           {
             "order": 7,
-            "pos": "포수",
-            "name": "김형준"
+            "pos": "좌익수",
+            "name": "이우성"
           },
           {
             "order": 8,
-            "pos": "우익수",
-            "name": "박시원"
+            "pos": "포수",
+            "name": "안중열"
           },
           {
             "order": 9,
-            "pos": "좌익수",
+            "pos": "중견수",
             "name": "천재환"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     }
   ],
