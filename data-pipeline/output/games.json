@@ -1,7 +1,7 @@
 {
   "date": "20260830",
   "dateText": "2026년 8월 30일",
-  "updatedAt": "2026-08-30T13:00:41.851Z",
+  "updatedAt": "2026-08-30T13:10:26.397Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -25,9 +25,9 @@
         "score": 1,
         "starter": {
           "name": "전준표",
-          "era": 3.93,
+          "era": 5.17,
           "w": 0,
-          "l": 1
+          "l": 2
         }
       },
       "home": {
@@ -37,8 +37,8 @@
         "score": 15,
         "starter": {
           "name": "최민석",
-          "era": 2.66,
-          "w": 12,
+          "era": 2.61,
+          "w": 13,
           "l": 3
         }
       },
@@ -74,8 +74,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "최민석",
+        "lose": "전준표",
         "save": null
       },
       "lineup": null
@@ -268,7 +268,7 @@
         "score": 10,
         "starter": {
           "name": "테일러",
-          "era": 4.6,
+          "era": 4.78,
           "w": 7,
           "l": 6
         }
@@ -280,7 +280,7 @@
         "score": 7,
         "starter": {
           "name": "황준서",
-          "era": 4.17,
+          "era": 4.76,
           "w": 1,
           "l": 2
         }
@@ -317,8 +317,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "전사민",
+        "lose": "김서현",
         "save": null
       },
       "lineup": null
