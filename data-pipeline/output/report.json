@@ -1,38 +1,38 @@
 {
-  "updatedAt": "2026-08-30T13:10:26.397Z",
+  "updatedAt": "2026-08-30T18:15:51.267Z",
   "lastWeek": {
     "range": [
-      "20260817",
-      "20260823"
+      "20260824",
+      "20260830"
     ],
     "team": {
       "SS": {
         "w": 3,
-        "l": 3,
-        "d": 0,
+        "l": 0,
+        "d": 1,
         "rank": 1,
-        "note": "5연승, 이 팀 지금 무서운 거 맞아"
+        "note": "3경기 전부 승, 이번주도 못 막는다"
       },
       "KT": {
         "w": 2,
         "l": 2,
-        "d": 1,
+        "d": 0,
         "rank": 2,
-        "note": "2승2패 1무, 이겼다 졌다 롤러코스터"
+        "note": "2승2패, 이겼다 졌다 롤러코스터"
       },
       "HT": {
-        "w": 4,
-        "l": 2,
+        "w": 3,
+        "l": 0,
         "d": 0,
         "rank": 3,
-        "note": "3연승, 분위기 좋다 — 이번주 일정 해볼 만해"
+        "note": "지난주 완벽했다 — 3전 3승"
       },
       "LG": {
         "w": 3,
-        "l": 2,
+        "l": 1,
         "d": 0,
         "rank": 4,
-        "note": "KT 잡고 이글스한테 터진 아이러니 (3승2패)"
+        "note": "3승1패, 가을야구 굳히기 모드"
       },
       "OB": {
         "w": 3,
@@ -42,428 +42,392 @@
         "note": "2연승 — 좀 더 달린다 — 3승2패 위닝"
       },
       "NC": {
-        "w": 2,
-        "l": 4,
+        "w": 3,
+        "l": 2,
         "d": 0,
         "rank": 6,
-        "note": "3연승 흐름 탔다 — 이번주도 기대해볼 만"
+        "note": "3연승으로 상승세 — 이번주도 기대해볼 만"
       },
       "LT": {
-        "w": 4,
-        "l": 1,
+        "w": 0,
+        "l": 3,
         "d": 0,
         "rank": 7,
-        "note": "4연패 행진, 분위기 반전이 절실"
+        "note": "4연패 늪, 탈출이 급하다 — 이번주 이글스 만나니까 뒤집을 수 있어"
       },
       "HH": {
-        "w": 1,
-        "l": 4,
+        "w": 0,
+        "l": 5,
         "d": 0,
         "rank": 8,
-        "note": "6연패, 뭔가 터져야 한다 — 그래도 이번주 SSG 만나니까 해볼 만해"
+        "note": "6연패째… 이러다 큰일 난다 — 그래도 자이언츠 상대가 남았으니까"
       },
       "SK": {
-        "w": 2,
-        "l": 2,
-        "d": 1,
+        "w": 3,
+        "l": 1,
+        "d": 0,
         "rank": 9,
-        "note": "탈락권이지만 자존심 경기는 남았다 (2승2패 1무) — 그래도 이글스 상대가 남았으니까"
+        "note": "탈락권이지만 자존심 경기는 남았다 (3승1패) — 이번주 히어로즈 만나니까 뒤집을 수 있어"
       },
       "WO": {
-        "w": 2,
+        "w": 0,
         "l": 4,
-        "d": 0,
+        "d": 1,
         "rank": 10,
-        "note": "4연패 늪, 탈출이 급하다"
+        "note": "4연패 행진, 분위기 반전이 절실 — 그래도 랜더스 상대가 남았으니까"
       }
     }
   },
   "thisWeek": {
     "range": [
-      "20260824",
-      "20260830"
+      "20260831",
+      "20260906"
     ],
     "top": [
       {
-        "away": "KT",
-        "home": "SS",
-        "pred": 94,
-        "reason": "게임차 0.5, 막상막하 승부",
-        "dateStart": "20260829",
-        "dateEnd": "20260830"
-      },
-      {
-        "away": "NC",
-        "home": "HH",
-        "pred": 86,
-        "reason": "게임차 3의 순위 다툼",
-        "dateStart": "20260829",
-        "dateEnd": "20260830"
+        "away": "LG",
+        "home": "OB",
+        "pred": 95,
+        "reason": "잠실 라이벌 더비 · 게임차 2, 막상막하 승부",
+        "dateStart": "20260901",
+        "dateEnd": "20260903"
       },
       {
         "away": "HH",
-        "home": "SK",
-        "pred": 81,
-        "reason": "게임차 2, 막상막하 승부",
-        "dateStart": "20260825",
-        "dateEnd": "20260827"
+        "home": "LT",
+        "pred": 95,
+        "reason": "게임차 1, 막상막하 승부",
+        "dateStart": "20260904",
+        "dateEnd": "20260906"
+      },
+      {
+        "away": "SS",
+        "home": "LG",
+        "pred": 86,
+        "reason": "게임차 5.5의 순위 다툼 · 리그 1위·4위 상위권 빅매치",
+        "dateStart": "20260904",
+        "dateEnd": "20260906"
       }
     ],
     "team": {
-      "NC": [
-        {
-          "date": "20260825",
-          "away": "NC",
-          "home": "LG",
-          "awayStarter": "테일러",
-          "homeStarter": "톨허스트"
-        },
-        {
-          "date": "20260826",
-          "away": "NC",
-          "home": "LG",
-          "awayStarter": "구창모",
-          "homeStarter": "임찬규"
-        },
-        {
-          "date": "20260827",
-          "away": "NC",
-          "home": "LG",
-          "awayStarter": "토다",
-          "homeStarter": "박시원"
-        },
-        {
-          "date": "20260829",
-          "away": "NC",
-          "home": "HH",
-          "awayStarter": "라일리",
-          "homeStarter": "박준영"
-        },
-        {
-          "date": "20260830",
-          "away": "NC",
-          "home": "HH",
-          "awayStarter": "테일러",
-          "homeStarter": "황준서"
-        }
-      ],
       "LG": [
         {
-          "date": "20260825",
-          "away": "NC",
-          "home": "LG",
-          "awayStarter": "테일러",
-          "homeStarter": "톨허스트"
-        },
-        {
-          "date": "20260826",
-          "away": "NC",
-          "home": "LG",
-          "awayStarter": "구창모",
-          "homeStarter": "임찬규"
-        },
-        {
-          "date": "20260827",
-          "away": "NC",
-          "home": "LG",
-          "awayStarter": "토다",
-          "homeStarter": "박시원"
-        },
-        {
-          "date": "20260829",
+          "date": "20260901",
           "away": "LG",
-          "home": "LT",
-          "awayStarter": "카라스코",
-          "homeStarter": "김진욱"
+          "home": "OB"
         },
         {
-          "date": "20260830",
+          "date": "20260902",
           "away": "LG",
-          "home": "LT",
-          "awayStarter": "톨허스트",
-          "homeStarter": "나균안"
-        }
-      ],
-      "HH": [
-        {
-          "date": "20260825",
-          "away": "HH",
-          "home": "SK",
-          "awayStarter": "화이트",
-          "homeStarter": "김민준"
+          "home": "OB"
         },
         {
-          "date": "20260826",
-          "away": "HH",
-          "home": "SK",
-          "awayStarter": "류현진",
-          "homeStarter": "최민준"
-        },
-        {
-          "date": "20260827",
-          "away": "HH",
-          "home": "SK",
-          "awayStarter": "짐머맨",
-          "homeStarter": "김건우"
-        },
-        {
-          "date": "20260829",
-          "away": "NC",
-          "home": "HH",
-          "awayStarter": "라일리",
-          "homeStarter": "박준영"
-        },
-        {
-          "date": "20260830",
-          "away": "NC",
-          "home": "HH",
-          "awayStarter": "테일러",
-          "homeStarter": "황준서"
-        }
-      ],
-      "SK": [
-        {
-          "date": "20260825",
-          "away": "HH",
-          "home": "SK",
-          "awayStarter": "화이트",
-          "homeStarter": "김민준"
-        },
-        {
-          "date": "20260826",
-          "away": "HH",
-          "home": "SK",
-          "awayStarter": "류현진",
-          "homeStarter": "최민준"
-        },
-        {
-          "date": "20260827",
-          "away": "HH",
-          "home": "SK",
-          "awayStarter": "짐머맨",
-          "homeStarter": "김건우"
-        },
-        {
-          "date": "20260829",
-          "away": "SK",
-          "home": "HT",
-          "awayStarter": "아빌라",
-          "homeStarter": "올러"
-        },
-        {
-          "date": "20260830",
-          "away": "SK",
-          "home": "HT",
-          "awayStarter": "이준기",
-          "homeStarter": "네일"
-        }
-      ],
-      "LT": [
-        {
-          "date": "20260825",
-          "away": "LT",
-          "home": "HT",
-          "awayStarter": "비슬리",
-          "homeStarter": "시라카와"
-        },
-        {
-          "date": "20260826",
-          "away": "LT",
-          "home": "HT",
-          "awayStarter": "로드리게스",
-          "homeStarter": "황동하"
-        },
-        {
-          "date": "20260829",
+          "date": "20260903",
           "away": "LG",
-          "home": "LT",
-          "awayStarter": "카라스코",
-          "homeStarter": "김진욱"
+          "home": "OB"
         },
         {
-          "date": "20260830",
-          "away": "LG",
-          "home": "LT",
-          "awayStarter": "톨허스트",
-          "homeStarter": "나균안"
-        }
-      ],
-      "HT": [
-        {
-          "date": "20260825",
-          "away": "LT",
-          "home": "HT",
-          "awayStarter": "비슬리",
-          "homeStarter": "시라카와"
+          "date": "20260904",
+          "away": "SS",
+          "home": "LG"
         },
         {
-          "date": "20260826",
-          "away": "LT",
-          "home": "HT",
-          "awayStarter": "로드리게스",
-          "homeStarter": "황동하"
+          "date": "20260905",
+          "away": "SS",
+          "home": "LG"
         },
         {
-          "date": "20260829",
-          "away": "SK",
-          "home": "HT",
-          "awayStarter": "아빌라",
-          "homeStarter": "올러"
-        },
-        {
-          "date": "20260830",
-          "away": "SK",
-          "home": "HT",
-          "awayStarter": "이준기",
-          "homeStarter": "네일"
+          "date": "20260906",
+          "away": "SS",
+          "home": "LG"
         }
       ],
       "OB": [
         {
-          "date": "20260825",
+          "date": "20260901",
+          "away": "LG",
+          "home": "OB"
+        },
+        {
+          "date": "20260902",
+          "away": "LG",
+          "home": "OB"
+        },
+        {
+          "date": "20260903",
+          "away": "LG",
+          "home": "OB"
+        },
+        {
+          "date": "20260904",
           "away": "OB",
-          "home": "KT",
-          "awayStarter": "최민석",
-          "homeStarter": "소형준"
+          "home": "SK"
         },
         {
-          "date": "20260826",
+          "date": "20260905",
           "away": "OB",
-          "home": "KT",
-          "awayStarter": "잭로그",
-          "homeStarter": "대니엘"
+          "home": "SK"
         },
         {
-          "date": "20260827",
+          "date": "20260906",
           "away": "OB",
-          "home": "KT",
-          "awayStarter": "최승용",
-          "homeStarter": "고영표"
-        },
-        {
-          "date": "20260829",
-          "away": "WO",
-          "home": "OB",
-          "awayStarter": "안우진",
-          "homeStarter": "곽빈"
-        },
-        {
-          "date": "20260830",
-          "away": "WO",
-          "home": "OB",
-          "awayStarter": "전준표",
-          "homeStarter": "최민석"
+          "home": "SK"
         }
       ],
-      "KT": [
+      "LT": [
         {
-          "date": "20260825",
-          "away": "OB",
-          "home": "KT",
-          "awayStarter": "최민석",
-          "homeStarter": "소형준"
+          "date": "20260901",
+          "away": "LT",
+          "home": "SS"
         },
         {
-          "date": "20260826",
-          "away": "OB",
-          "home": "KT",
-          "awayStarter": "잭로그",
-          "homeStarter": "대니엘"
+          "date": "20260902",
+          "away": "LT",
+          "home": "SS"
         },
         {
-          "date": "20260827",
-          "away": "OB",
-          "home": "KT",
-          "awayStarter": "최승용",
-          "homeStarter": "고영표"
+          "date": "20260903",
+          "away": "LT",
+          "home": "SS"
         },
         {
-          "date": "20260829",
-          "away": "KT",
-          "home": "SS",
-          "awayStarter": "로건",
-          "homeStarter": "페덱"
+          "date": "20260904",
+          "away": "HH",
+          "home": "LT"
         },
         {
-          "date": "20260830",
-          "away": "KT",
-          "home": "SS",
-          "awayStarter": "오원석",
-          "homeStarter": "보스"
+          "date": "20260905",
+          "away": "HH",
+          "home": "LT"
+        },
+        {
+          "date": "20260906",
+          "away": "HH",
+          "home": "LT"
         }
       ],
       "SS": [
         {
-          "date": "20260825",
-          "away": "SS",
-          "home": "WO",
-          "awayStarter": "보스",
-          "homeStarter": "알칸타라"
+          "date": "20260901",
+          "away": "LT",
+          "home": "SS"
         },
         {
-          "date": "20260826",
-          "away": "SS",
-          "home": "WO",
-          "awayStarter": "최원태",
-          "homeStarter": "박준현"
+          "date": "20260902",
+          "away": "LT",
+          "home": "SS"
         },
         {
-          "date": "20260827",
-          "away": "SS",
-          "home": "WO",
-          "awayStarter": "원태인",
-          "homeStarter": "하영민"
+          "date": "20260903",
+          "away": "LT",
+          "home": "SS"
         },
         {
-          "date": "20260829",
+          "date": "20260904",
+          "away": "SS",
+          "home": "LG"
+        },
+        {
+          "date": "20260905",
+          "away": "SS",
+          "home": "LG"
+        },
+        {
+          "date": "20260906",
+          "away": "SS",
+          "home": "LG"
+        }
+      ],
+      "HH": [
+        {
+          "date": "20260901",
+          "away": "HH",
+          "home": "KT"
+        },
+        {
+          "date": "20260902",
+          "away": "HH",
+          "home": "KT"
+        },
+        {
+          "date": "20260903",
+          "away": "HH",
+          "home": "KT"
+        },
+        {
+          "date": "20260904",
+          "away": "HH",
+          "home": "LT"
+        },
+        {
+          "date": "20260905",
+          "away": "HH",
+          "home": "LT"
+        },
+        {
+          "date": "20260906",
+          "away": "HH",
+          "home": "LT"
+        }
+      ],
+      "KT": [
+        {
+          "date": "20260901",
+          "away": "HH",
+          "home": "KT"
+        },
+        {
+          "date": "20260902",
+          "away": "HH",
+          "home": "KT"
+        },
+        {
+          "date": "20260903",
+          "away": "HH",
+          "home": "KT"
+        },
+        {
+          "date": "20260904",
           "away": "KT",
-          "home": "SS",
-          "awayStarter": "로건",
-          "homeStarter": "페덱"
+          "home": "HT"
         },
         {
-          "date": "20260830",
+          "date": "20260905",
           "away": "KT",
-          "home": "SS",
-          "awayStarter": "오원석",
-          "homeStarter": "보스"
+          "home": "HT"
+        },
+        {
+          "date": "20260906",
+          "away": "KT",
+          "home": "HT"
+        }
+      ],
+      "HT": [
+        {
+          "date": "20260901",
+          "away": "HT",
+          "home": "NC"
+        },
+        {
+          "date": "20260902",
+          "away": "HT",
+          "home": "NC"
+        },
+        {
+          "date": "20260903",
+          "away": "HT",
+          "home": "NC"
+        },
+        {
+          "date": "20260904",
+          "away": "KT",
+          "home": "HT"
+        },
+        {
+          "date": "20260905",
+          "away": "KT",
+          "home": "HT"
+        },
+        {
+          "date": "20260906",
+          "away": "KT",
+          "home": "HT"
+        }
+      ],
+      "NC": [
+        {
+          "date": "20260901",
+          "away": "HT",
+          "home": "NC"
+        },
+        {
+          "date": "20260902",
+          "away": "HT",
+          "home": "NC"
+        },
+        {
+          "date": "20260903",
+          "away": "HT",
+          "home": "NC"
+        },
+        {
+          "date": "20260904",
+          "away": "NC",
+          "home": "WO"
+        },
+        {
+          "date": "20260905",
+          "away": "NC",
+          "home": "WO"
+        },
+        {
+          "date": "20260906",
+          "away": "NC",
+          "home": "WO"
+        }
+      ],
+      "SK": [
+        {
+          "date": "20260901",
+          "away": "SK",
+          "home": "WO"
+        },
+        {
+          "date": "20260902",
+          "away": "SK",
+          "home": "WO"
+        },
+        {
+          "date": "20260903",
+          "away": "SK",
+          "home": "WO"
+        },
+        {
+          "date": "20260904",
+          "away": "OB",
+          "home": "SK"
+        },
+        {
+          "date": "20260905",
+          "away": "OB",
+          "home": "SK"
+        },
+        {
+          "date": "20260906",
+          "away": "OB",
+          "home": "SK"
         }
       ],
       "WO": [
         {
-          "date": "20260825",
-          "away": "SS",
-          "home": "WO",
-          "awayStarter": "보스",
-          "homeStarter": "알칸타라"
+          "date": "20260901",
+          "away": "SK",
+          "home": "WO"
         },
         {
-          "date": "20260826",
-          "away": "SS",
-          "home": "WO",
-          "awayStarter": "최원태",
-          "homeStarter": "박준현"
+          "date": "20260902",
+          "away": "SK",
+          "home": "WO"
         },
         {
-          "date": "20260827",
-          "away": "SS",
-          "home": "WO",
-          "awayStarter": "원태인",
-          "homeStarter": "하영민"
+          "date": "20260903",
+          "away": "SK",
+          "home": "WO"
         },
         {
-          "date": "20260829",
-          "away": "WO",
-          "home": "OB",
-          "awayStarter": "안우진",
-          "homeStarter": "곽빈"
+          "date": "20260904",
+          "away": "NC",
+          "home": "WO"
         },
         {
-          "date": "20260830",
-          "away": "WO",
-          "home": "OB",
-          "awayStarter": "전준표",
-          "homeStarter": "최민석"
+          "date": "20260905",
+          "away": "NC",
+          "home": "WO"
+        },
+        {
+          "date": "20260906",
+          "away": "NC",
+          "home": "WO"
         }
       ]
     }
