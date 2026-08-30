@@ -1,7 +1,7 @@
 {
   "date": "20260830",
   "dateText": "2026년 8월 30일",
-  "updatedAt": "2026-08-30T11:40:24.422Z",
+  "updatedAt": "2026-08-30T11:50:23.828Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 14,
+        "score": 15,
         "starter": {
           "name": "최민석",
           "era": 2.66,
@@ -65,14 +65,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
+        "inning": 9,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "정다훈",
-        "batter": "강승호",
+        "pitcher": "윤태호",
+        "batter": "여동욱",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
@@ -361,7 +361,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 6,
-        "score": 6,
+        "score": 7,
         "starter": {
           "name": "테일러",
           "era": 4.6,
@@ -405,14 +405,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
+        "half": "B",
         "out": 0,
-        "b1": true,
-        "b2": true,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "박상원",
-        "batter": "김형준",
-        "heat": 72,
+        "pitcher": "이용준",
+        "batter": "허인서",
+        "heat": 80,
         "label": "후반 박빙 승부"
       },
       "recap": null,
