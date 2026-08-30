@@ -1,7 +1,7 @@
 {
   "date": "20260830",
   "dateText": "2026년 8월 30일",
-  "updatedAt": "2026-08-30T09:20:28.570Z",
+  "updatedAt": "2026-08-30T09:30:32.750Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 0,
+        "score": 5,
         "starter": {
           "name": "최민석",
           "era": 2.66,
@@ -67,14 +67,14 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
-        "b1": true,
+        "out": 2,
+        "b1": false,
         "b2": true,
         "b3": false,
         "pitcher": "전준표",
-        "batter": "박준순",
-        "heat": 33,
-        "label": "초반 팽팽한 흐름"
+        "batter": "정수빈",
+        "heat": 7,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -289,14 +289,14 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
-        "out": 1,
-        "b1": false,
-        "b2": true,
+        "half": "B",
+        "out": 2,
+        "b1": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "나균안",
-        "batter": "천성호",
-        "heat": 35,
+        "pitcher": "톨허스트",
+        "batter": "윤동희",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -468,7 +468,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 6,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "테일러",
           "era": 4.6,
@@ -511,15 +511,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 3,
-        "b1": true,
-        "b2": false,
+        "inning": 2,
+        "half": "T",
+        "out": 2,
+        "b1": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "테일러",
-        "batter": "허인서",
-        "heat": 33,
+        "pitcher": "황준서",
+        "batter": "김주원",
+        "heat": 27,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
