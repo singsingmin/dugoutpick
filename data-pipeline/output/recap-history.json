@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-30T11:50:23.828Z",
+  "updatedAt": "2026-08-30T12:00:40.929Z",
   "window": 50,
   "sampleSize": 50,
   "hitRate": 26,
@@ -1447,6 +1447,13 @@
       "pred": 54,
       "actual": 32,
       "verdict": "기대 이하"
+    },
+    {
+      "date": "20260830",
+      "gameId": "20260830WOOB0",
+      "pred": 9,
+      "actual": 12,
+      "verdict": "예측 적중"
     }
   ]
 }
