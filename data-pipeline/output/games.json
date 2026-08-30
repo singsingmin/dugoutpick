@@ -1,7 +1,7 @@
 {
   "date": "20260830",
   "dateText": "2026년 8월 30일",
-  "updatedAt": "2026-08-30T10:10:30.440Z",
+  "updatedAt": "2026-08-30T10:11:21.090Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -513,12 +513,12 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "주현상",
-        "batter": "천재환",
+        "batter": "김주원",
         "heat": 17,
         "label": "경기 흐름 체크 중"
       },
