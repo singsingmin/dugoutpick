@@ -1,7 +1,7 @@
 {
   "date": "20260830",
   "dateText": "2026년 8월 30일",
-  "updatedAt": "2026-08-30T12:20:24.924Z",
+  "updatedAt": "2026-08-30T12:30:37.740Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -308,16 +308,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 9,
-        "half": "B",
+        "inning": 10,
+        "half": "T",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "손주환",
-        "batter": "문현빈",
-        "heat": 98,
-        "label": "끝내기 한 방 찬스"
+        "pitcher": "김서현",
+        "batter": "박건우",
+        "heat": 97,
+        "label": "연장 혈투 진행 중"
       },
       "recap": null,
       "decision": null,
