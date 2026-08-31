@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-30T18:15:51.267Z",
+  "updatedAt": "2026-08-31T07:45:17.795Z",
   "lastWeek": {
     "range": [
       "20260824",
@@ -114,7 +114,9 @@
         {
           "date": "20260901",
           "away": "LG",
-          "home": "OB"
+          "home": "OB",
+          "awayStarter": "임찬규",
+          "homeStarter": "잭로그"
         },
         {
           "date": "20260902",
@@ -146,7 +148,9 @@
         {
           "date": "20260901",
           "away": "LG",
-          "home": "OB"
+          "home": "OB",
+          "awayStarter": "임찬규",
+          "homeStarter": "잭로그"
         },
         {
           "date": "20260902",
@@ -178,7 +182,9 @@
         {
           "date": "20260901",
           "away": "LT",
-          "home": "SS"
+          "home": "SS",
+          "awayStarter": "로드리게스",
+          "homeStarter": "보스"
         },
         {
           "date": "20260902",
@@ -210,7 +216,9 @@
         {
           "date": "20260901",
           "away": "LT",
-          "home": "SS"
+          "home": "SS",
+          "awayStarter": "로드리게스",
+          "homeStarter": "보스"
         },
         {
           "date": "20260902",
@@ -242,7 +250,9 @@
         {
           "date": "20260901",
           "away": "HH",
-          "home": "KT"
+          "home": "KT",
+          "awayStarter": "화이트",
+          "homeStarter": "대니엘"
         },
         {
           "date": "20260902",
@@ -274,7 +284,9 @@
         {
           "date": "20260901",
           "away": "HH",
-          "home": "KT"
+          "home": "KT",
+          "awayStarter": "화이트",
+          "homeStarter": "대니엘"
         },
         {
           "date": "20260902",
@@ -306,7 +318,9 @@
         {
           "date": "20260901",
           "away": "HT",
-          "home": "NC"
+          "home": "NC",
+          "awayStarter": "네일",
+          "homeStarter": "구창모"
         },
         {
           "date": "20260902",
@@ -338,7 +352,9 @@
         {
           "date": "20260901",
           "away": "HT",
-          "home": "NC"
+          "home": "NC",
+          "awayStarter": "네일",
+          "homeStarter": "구창모"
         },
         {
           "date": "20260902",
@@ -370,7 +386,9 @@
         {
           "date": "20260901",
           "away": "SK",
-          "home": "WO"
+          "home": "WO",
+          "awayStarter": "최민준",
+          "homeStarter": "알칸타라"
         },
         {
           "date": "20260902",
@@ -402,7 +420,9 @@
         {
           "date": "20260901",
           "away": "SK",
-          "home": "WO"
+          "home": "WO",
+          "awayStarter": "최민준",
+          "homeStarter": "알칸타라"
         },
         {
           "date": "20260902",
