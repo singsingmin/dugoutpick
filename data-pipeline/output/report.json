@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-31T07:45:17.795Z",
+  "updatedAt": "2026-08-31T18:03:15.996Z",
   "lastWeek": {
     "range": [
       "20260824",
@@ -87,7 +87,7 @@
       {
         "away": "LG",
         "home": "OB",
-        "pred": 95,
+        "pred": 96,
         "reason": "잠실 라이벌 더비 · 게임차 2, 막상막하 승부",
         "dateStart": "20260901",
         "dateEnd": "20260903"
@@ -95,7 +95,7 @@
       {
         "away": "HH",
         "home": "LT",
-        "pred": 95,
+        "pred": 96,
         "reason": "게임차 1, 막상막하 승부",
         "dateStart": "20260904",
         "dateEnd": "20260906"
