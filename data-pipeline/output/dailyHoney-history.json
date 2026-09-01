@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-01T13:00:41.307Z",
+  "updatedAt": "2026-09-01T13:10:28.339Z",
   "results": [
     {
       "date": "20260705",
@@ -791,6 +791,27 @@
         "score": 7
       },
       "calculatedAt": "2026-08-30T13:00:41.851Z"
+    },
+    {
+      "date": "20260901",
+      "actualTopGameId": "20260901LGOB0",
+      "recapScore": 76,
+      "decidingReasonTags": [
+        "2점차 접전"
+      ],
+      "displayMode": "highlight",
+      "displayTitle": "어제의 명경기",
+      "away": {
+        "code": "LG",
+        "name": "LG",
+        "score": 3
+      },
+      "home": {
+        "code": "OB",
+        "name": "두산",
+        "score": 1
+      },
+      "calculatedAt": "2026-09-01T13:10:28.339Z"
     }
   ]
 }
