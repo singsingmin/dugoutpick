@@ -1,7 +1,7 @@
 {
   "date": "20260901",
   "dateText": "2026년 9월 1일",
-  "updatedAt": "2026-09-01T08:40:28.194Z",
+  "updatedAt": "2026-09-01T08:50:25.507Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -376,28 +376,28 @@
         "home": [
           {
             "order": 1,
-            "pos": "중견수",
+            "pos": "우익수",
             "name": "최원준"
           },
           {
             "order": 2,
-            "pos": "2루수",
-            "name": "김상수"
-          },
-          {
-            "order": 3,
-            "pos": "우익수",
-            "name": "안현민"
-          },
-          {
-            "order": 4,
             "pos": "1루수",
             "name": "김현수"
           },
           {
-            "order": 5,
+            "order": 3,
             "pos": "지명타자",
-            "name": "김민혁"
+            "name": "안현민"
+          },
+          {
+            "order": 4,
+            "pos": "중견수",
+            "name": "힐리어드"
+          },
+          {
+            "order": 5,
+            "pos": "2루수",
+            "name": "김상수"
           },
           {
             "order": 6,
@@ -407,7 +407,7 @@
           {
             "order": 7,
             "pos": "좌익수",
-            "name": "유준규"
+            "name": "장진혁"
           },
           {
             "order": 8,
@@ -417,7 +417,7 @@
           {
             "order": 9,
             "pos": "유격수",
-            "name": "권동진"
+            "name": "장준원"
           }
         ],
         "away": [
@@ -458,16 +458,16 @@
           },
           {
             "order": 8,
-            "pos": "유격수",
-            "name": "박정현"
+            "pos": "2루수",
+            "name": "이도윤"
           },
           {
             "order": 9,
-            "pos": "2루수",
-            "name": "이도윤"
+            "pos": "유격수",
+            "name": "심우준"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
@@ -534,8 +534,8 @@
           },
           {
             "order": 2,
-            "pos": "우익수",
-            "name": "권희동"
+            "pos": "중견수",
+            "name": "최정원"
           },
           {
             "order": 3,
@@ -549,18 +549,18 @@
           },
           {
             "order": 5,
-            "pos": "지명타자",
-            "name": "박건우"
-          },
-          {
-            "order": 6,
             "pos": "3루수",
             "name": "김휘집"
           },
           {
+            "order": 6,
+            "pos": "지명타자",
+            "name": "이우성"
+          },
+          {
             "order": 7,
             "pos": "좌익수",
-            "name": "이우성"
+            "name": "천재환"
           },
           {
             "order": 8,
@@ -569,8 +569,8 @@
           },
           {
             "order": 9,
-            "pos": "중견수",
-            "name": "천재환"
+            "pos": "우익수",
+            "name": "박시원"
           }
         ],
         "away": [
@@ -606,21 +606,21 @@
           },
           {
             "order": 7,
-            "pos": "유격수",
-            "name": "하주석"
+            "pos": "중견수",
+            "name": "김호령"
           },
           {
             "order": 8,
             "pos": "포수",
-            "name": "한준수"
+            "name": "김태군"
           },
           {
             "order": 9,
-            "pos": "중견수",
-            "name": "김호령"
+            "pos": "유격수",
+            "name": "정현창"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
