@@ -1,7 +1,7 @@
 {
   "date": "20260901",
   "dateText": "2026년 9월 1일",
-  "updatedAt": "2026-09-01T09:40:25.092Z",
+  "updatedAt": "2026-09-01T09:50:29.197Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -218,15 +218,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 0,
+        "inning": 2,
+        "half": "T",
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "로드리게스",
-        "batter": "김지찬",
-        "heat": 33,
+        "pitcher": "보스",
+        "batter": "전민재",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -385,12 +385,12 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "out": 1,
+        "b1": true,
+        "b2": true,
         "b3": false,
         "pitcher": "화이트",
-        "batter": "최원준",
+        "batter": "힐리어드",
         "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
@@ -550,12 +550,12 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "네일",
-        "batter": "김주원",
+        "batter": "블레인",
         "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
@@ -713,15 +713,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "B",
-        "out": 1,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "최민준",
-        "batter": "데이비슨",
-        "heat": 33,
+        "batter": "김웅빈",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
