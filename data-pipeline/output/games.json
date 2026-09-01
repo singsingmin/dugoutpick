@@ -1,7 +1,7 @@
 {
   "date": "20260901",
   "dateText": "2026년 9월 1일",
-  "updatedAt": "2026-09-01T11:00:40.431Z",
+  "updatedAt": "2026-09-01T11:10:29.016Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "임찬규",
-        "batter": "세베리노",
-        "heat": 37,
+        "pitcher": "잭로그",
+        "batter": "오지환",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -199,7 +199,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 1,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "보스",
           "era": 6.26,
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
+        "inning": 6,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "로드리게스",
-        "batter": "강민호",
-        "heat": 50,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "보스",
+        "batter": "황성빈",
+        "heat": 44,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -396,14 +396,14 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "대니엘",
-        "batter": "심우준",
-        "heat": 19,
+        "pitcher": "화이트",
+        "batter": "허경민",
+        "heat": 20,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "네일",
-        "batter": "이우성",
-        "heat": 45,
+        "pitcher": "김진호",
+        "batter": "박재현",
+        "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 0,
-        "b1": false,
+        "inning": 6,
+        "half": "T",
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "최민준",
-        "batter": "추재현",
-        "heat": 20,
+        "pitcher": "알칸타라",
+        "batter": "최지훈",
+        "heat": 21,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
