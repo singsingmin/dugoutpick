@@ -1,7 +1,7 @@
 {
   "date": "20260901",
   "dateText": "2026년 9월 1일",
-  "updatedAt": "2026-09-01T10:00:39.682Z",
+  "updatedAt": "2026-09-01T10:10:25.592Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -15,14 +15,14 @@
       "gameId": "20260901LGOB0",
       "time": "18:30",
       "stadium": "잠실",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SPOTV",
       "away": {
         "code": "LG",
         "name": "LG",
         "rank": 4,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "임찬규",
           "era": 3.95,
@@ -34,7 +34,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "잭로그",
           "era": 3.94,
@@ -61,9 +61,21 @@
           "doom": 0,
           "park": 0.09,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "B",
+        "out": 0,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "임찬규",
+        "batter": "박찬호",
+        "heat": 33,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
@@ -218,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
-        "out": 2,
+        "inning": 3,
+        "half": "T",
+        "out": 0,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "로드리게스",
-        "batter": "강민호",
-        "heat": 38,
+        "pitcher": "보스",
+        "batter": "한태양",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -352,7 +364,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 2,
-        "score": 1,
+        "score": 3,
         "starter": {
           "name": "대니엘",
           "era": 2.81,
@@ -384,15 +396,15 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 1,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "대니엘",
-        "batter": "이도윤",
-        "heat": 33,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "화이트",
+        "batter": "김현수",
+        "heat": 22,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -549,14 +561,14 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
+        "half": "B",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "구창모",
-        "batter": "김선빈",
-        "heat": 35,
+        "pitcher": "네일",
+        "batter": "김휘집",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -670,7 +682,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "최민준",
           "era": 4.94,
@@ -713,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
+        "inning": 3,
+        "half": "T",
         "out": 2,
-        "b1": false,
-        "b2": true,
+        "b1": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "최민준",
-        "batter": "김재현",
-        "heat": 38,
+        "pitcher": "알칸타라",
+        "batter": "에레디아",
+        "heat": 31,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
