@@ -1,7 +1,7 @@
 {
   "date": "20260901",
   "dateText": "2026년 9월 1일",
-  "updatedAt": "2026-09-01T08:30:34.533Z",
+  "updatedAt": "2026-09-01T08:40:28.194Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -100,13 +100,13 @@
           },
           {
             "order": 7,
-            "pos": "우익수",
-            "name": "김대한"
+            "pos": "좌익수",
+            "name": "조수행"
           },
           {
             "order": 8,
-            "pos": "좌익수",
-            "name": "조수행"
+            "pos": "우익수",
+            "name": "김대한"
           },
           {
             "order": 9,
@@ -127,7 +127,7 @@
           },
           {
             "order": 3,
-            "pos": "1루수",
+            "pos": "지명타자",
             "name": "오스틴"
           },
           {
@@ -137,23 +137,23 @@
           },
           {
             "order": 5,
-            "pos": "지명타자",
-            "name": "문정빈"
+            "pos": "3루수",
+            "name": "문보경"
           },
           {
             "order": 6,
-            "pos": "3루수",
-            "name": "손용준"
+            "pos": "1루수",
+            "name": "문정빈"
           },
           {
             "order": 7,
             "pos": "유격수",
-            "name": "구본혁"
+            "name": "오지환"
           },
           {
             "order": 8,
             "pos": "포수",
-            "name": "이주헌"
+            "name": "박동원"
           },
           {
             "order": 9,
@@ -161,7 +161,7 @@
             "name": "홍창기"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
@@ -264,7 +264,7 @@
           {
             "order": 9,
             "pos": "유격수",
-            "name": "박계범"
+            "name": "이재현"
           }
         ],
         "away": [
@@ -314,7 +314,7 @@
             "name": "한태양"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
@@ -692,7 +692,7 @@
           },
           {
             "order": 3,
-            "pos": "지명타자",
+            "pos": "1루수",
             "name": "데이비슨"
           },
           {
@@ -702,28 +702,28 @@
           },
           {
             "order": 5,
-            "pos": "1루수",
-            "name": "최주환"
-          },
-          {
-            "order": 6,
-            "pos": "3루수",
+            "pos": "지명타자",
             "name": "김웅빈"
           },
           {
+            "order": 6,
+            "pos": "우익수",
+            "name": "박찬혁"
+          },
+          {
             "order": 7,
-            "pos": "포수",
-            "name": "김건희"
+            "pos": "3루수",
+            "name": "여동욱"
           },
           {
             "order": 8,
-            "pos": "유격수",
-            "name": "권혁빈"
+            "pos": "포수",
+            "name": "김재현"
           },
           {
             "order": 9,
-            "pos": "우익수",
-            "name": "이형종"
+            "pos": "유격수",
+            "name": "권혁빈"
           }
         ],
         "away": [
@@ -764,16 +764,16 @@
           },
           {
             "order": 8,
-            "pos": "우익수",
-            "name": "임근우"
+            "pos": "3루수",
+            "name": "안상현"
           },
           {
             "order": 9,
-            "pos": "3루수",
-            "name": "안상현"
+            "pos": "우익수",
+            "name": "임근우"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     }
   ],
