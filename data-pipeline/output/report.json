@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-31T18:03:15.996Z",
+  "updatedAt": "2026-09-01T08:30:34.533Z",
   "lastWeek": {
     "range": [
       "20260824",
@@ -314,74 +314,6 @@
           "home": "HT"
         }
       ],
-      "HT": [
-        {
-          "date": "20260901",
-          "away": "HT",
-          "home": "NC",
-          "awayStarter": "네일",
-          "homeStarter": "구창모"
-        },
-        {
-          "date": "20260902",
-          "away": "HT",
-          "home": "NC"
-        },
-        {
-          "date": "20260903",
-          "away": "HT",
-          "home": "NC"
-        },
-        {
-          "date": "20260904",
-          "away": "KT",
-          "home": "HT"
-        },
-        {
-          "date": "20260905",
-          "away": "KT",
-          "home": "HT"
-        },
-        {
-          "date": "20260906",
-          "away": "KT",
-          "home": "HT"
-        }
-      ],
-      "NC": [
-        {
-          "date": "20260901",
-          "away": "HT",
-          "home": "NC",
-          "awayStarter": "네일",
-          "homeStarter": "구창모"
-        },
-        {
-          "date": "20260902",
-          "away": "HT",
-          "home": "NC"
-        },
-        {
-          "date": "20260903",
-          "away": "HT",
-          "home": "NC"
-        },
-        {
-          "date": "20260904",
-          "away": "NC",
-          "home": "WO"
-        },
-        {
-          "date": "20260905",
-          "away": "NC",
-          "home": "WO"
-        },
-        {
-          "date": "20260906",
-          "away": "NC",
-          "home": "WO"
-        }
-      ],
       "SK": [
         {
           "date": "20260901",
@@ -433,6 +365,74 @@
           "date": "20260903",
           "away": "SK",
           "home": "WO"
+        },
+        {
+          "date": "20260904",
+          "away": "NC",
+          "home": "WO"
+        },
+        {
+          "date": "20260905",
+          "away": "NC",
+          "home": "WO"
+        },
+        {
+          "date": "20260906",
+          "away": "NC",
+          "home": "WO"
+        }
+      ],
+      "HT": [
+        {
+          "date": "20260901",
+          "away": "HT",
+          "home": "NC",
+          "awayStarter": "네일",
+          "homeStarter": "구창모"
+        },
+        {
+          "date": "20260902",
+          "away": "HT",
+          "home": "NC"
+        },
+        {
+          "date": "20260903",
+          "away": "HT",
+          "home": "NC"
+        },
+        {
+          "date": "20260904",
+          "away": "KT",
+          "home": "HT"
+        },
+        {
+          "date": "20260905",
+          "away": "KT",
+          "home": "HT"
+        },
+        {
+          "date": "20260906",
+          "away": "KT",
+          "home": "HT"
+        }
+      ],
+      "NC": [
+        {
+          "date": "20260901",
+          "away": "HT",
+          "home": "NC",
+          "awayStarter": "네일",
+          "homeStarter": "구창모"
+        },
+        {
+          "date": "20260902",
+          "away": "HT",
+          "home": "NC"
+        },
+        {
+          "date": "20260903",
+          "away": "HT",
+          "home": "NC"
         },
         {
           "date": "20260904",
