@@ -1,7 +1,7 @@
 {
   "date": "20260902",
   "dateText": "2026년 9월 2일",
-  "updatedAt": "2026-09-02T09:40:23.245Z",
+  "updatedAt": "2026-09-02T09:50:25.757Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 2,
+        "score": 4,
         "starter": {
           "name": "김윤식",
           "era": 4.97,
@@ -66,15 +66,15 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
-        "out": 2,
-        "b1": true,
+        "half": "B",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "최승용",
-        "batter": "문정빈",
-        "heat": 24,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "김윤식",
+        "batter": "박찬호",
+        "heat": 12,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -199,7 +199,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 1,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "최원태",
           "era": 4.57,
@@ -231,13 +231,13 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
-        "out": 2,
-        "b1": false,
+        "half": "B",
+        "out": 0,
+        "b1": true,
         "b2": false,
-        "b3": true,
-        "pitcher": "최원태",
-        "batter": "한동희",
+        "b3": false,
+        "pitcher": "박세웅",
+        "batter": "구자욱",
         "heat": 31,
         "label": "초반 팽팽한 흐름"
       },
@@ -397,12 +397,12 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": true,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "류현진",
-        "batter": "김현수",
+        "batter": "김민혁",
         "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
@@ -517,7 +517,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "시라카와",
           "era": 4.88,
@@ -560,14 +560,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 0,
+        "inning": 2,
+        "half": "T",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "시라카와",
-        "batter": "김주원",
+        "pitcher": "토다",
+        "batter": "김호령",
         "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 1,
-        "b1": true,
+        "inning": 2,
+        "half": "T",
+        "out": 3,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김건우",
-        "batter": "데이비슨",
-        "heat": 33,
+        "pitcher": "하영민",
+        "batter": "조형우",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
