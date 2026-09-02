@@ -1,7 +1,7 @@
 {
   "date": "20260902",
   "dateText": "2026년 9월 2일",
-  "updatedAt": "2026-09-02T13:50:28.218Z",
+  "updatedAt": "2026-09-02T14:00:42.878Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -25,7 +25,7 @@
         "score": 5,
         "starter": {
           "name": "김윤식",
-          "era": 4.97,
+          "era": 4.88,
           "w": 0,
           "l": 1
         }
@@ -37,9 +37,9 @@
         "score": 1,
         "starter": {
           "name": "최승용",
-          "era": 5.61,
+          "era": 5.74,
           "w": 3,
-          "l": 10
+          "l": 11
         }
       },
       "honjam": {
@@ -94,9 +94,9 @@
         "score": 5,
         "starter": {
           "name": "박세웅",
-          "era": 4.68,
+          "era": 4.99,
           "w": 2,
-          "l": 8
+          "l": 9
         }
       },
       "home": {
@@ -106,8 +106,8 @@
         "score": 8,
         "starter": {
           "name": "최원태",
-          "era": 4.57,
-          "w": 5,
+          "era": 4.49,
+          "w": 6,
           "l": 4
         }
       },
@@ -159,11 +159,11 @@
       "away": {
         "code": "HH",
         "name": "한화",
-        "rank": 8,
+        "rank": 9,
         "score": 6,
         "starter": {
           "name": "류현진",
-          "era": 3.85,
+          "era": 3.91,
           "w": 8,
           "l": 5
         }
@@ -175,7 +175,7 @@
         "score": 9,
         "starter": {
           "name": "소형준",
-          "era": 3.36,
+          "era": 3.55,
           "w": 6,
           "l": 3
         }
@@ -232,7 +232,7 @@
         "score": 2,
         "starter": {
           "name": "시라카와",
-          "era": 4.88,
+          "era": 4.7,
           "w": 3,
           "l": 4
         }
@@ -244,7 +244,7 @@
         "score": 3,
         "starter": {
           "name": "토다",
-          "era": 5.04,
+          "era": 4.86,
           "w": 7,
           "l": 8
         }
@@ -297,11 +297,11 @@
       "away": {
         "code": "SK",
         "name": "SSG",
-        "rank": 9,
+        "rank": 8,
         "score": 9,
         "starter": {
           "name": "김건우",
-          "era": 6.01,
+          "era": 6.06,
           "w": 8,
           "l": 9
         }
@@ -313,7 +313,7 @@
         "score": 6,
         "starter": {
           "name": "하영민",
-          "era": 4.63,
+          "era": 4.54,
           "w": 5,
           "l": 8
         }
