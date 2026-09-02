@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-09-02T12:50:27.713Z",
+  "updatedAt": "2026-09-02T13:00:44.920Z",
   "window": 50,
   "sampleSize": 50,
-  "hitRate": 22,
-  "bonusRate": 48,
+  "hitRate": 20,
+  "bonusRate": 52,
   "ready": true,
   "records": [
     {
@@ -1509,6 +1509,27 @@
       "gameId": "20260902LTSS0",
       "pred": 24,
       "actual": 72,
+      "verdict": "기대 이상"
+    },
+    {
+      "date": "20260902",
+      "gameId": "20260902HHKT0",
+      "pred": 19,
+      "actual": 75,
+      "verdict": "기대 이상"
+    },
+    {
+      "date": "20260902",
+      "gameId": "20260902HTNC0",
+      "pred": 51,
+      "actual": 97,
+      "verdict": "기대 이상"
+    },
+    {
+      "date": "20260902",
+      "gameId": "20260902SKWO0",
+      "pred": 13,
+      "actual": 75,
       "verdict": "기대 이상"
     }
   ]
