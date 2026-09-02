@@ -1,7 +1,7 @@
 {
   "date": "20260902",
   "dateText": "2026년 9월 2일",
-  "updatedAt": "2026-09-02T11:00:45.632Z",
+  "updatedAt": "2026-09-02T11:10:25.028Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
+        "half": "B",
         "out": 3,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "윤태호",
-        "batter": "문보경",
-        "heat": 29,
+        "pitcher": "이우찬",
+        "batter": "양의지",
+        "heat": 31,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -199,7 +199,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 1,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "최원태",
           "era": 4.57,
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
+        "inning": 6,
+        "half": "T",
         "out": 1,
-        "b1": true,
+        "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "박세웅",
-        "batter": "김성윤",
-        "heat": 54,
-        "label": "초반 팽팽한 흐름"
+        "b3": false,
+        "pitcher": "최원태",
+        "batter": "나승엽",
+        "heat": 53,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -352,7 +352,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 8,
-        "score": 0,
+        "score": 4,
         "starter": {
           "name": "류현진",
           "era": 3.85,
@@ -397,14 +397,14 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 0,
-        "b1": true,
+        "out": 1,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "소형준",
-        "batter": "최인호",
-        "heat": 19,
-        "label": "경기 흐름 체크 중"
+        "batter": "노시환",
+        "heat": 52,
+        "label": "초반 팽팽한 흐름"
       },
       "recap": null,
       "decision": null,
@@ -560,16 +560,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
+        "inning": 6,
+        "half": "T",
         "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "시라카와",
-        "batter": "박시원",
-        "heat": 50,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "토다",
+        "batter": "카스트로",
+        "heat": 53,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
+        "inning": 6,
         "half": "B",
-        "out": 3,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김건우",
-        "batter": "히우라",
-        "heat": 31,
+        "pitcher": "최용준",
+        "batter": "박찬혁",
+        "heat": 34,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
