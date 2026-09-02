@@ -1,7 +1,7 @@
 {
   "date": "20260902",
   "dateText": "2026년 9월 2일",
-  "updatedAt": "2026-09-02T10:00:42.716Z",
+  "updatedAt": "2026-09-02T10:10:26.289Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "B",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "out": 1,
+        "b1": false,
+        "b2": false,
         "b3": false,
         "pitcher": "김윤식",
-        "batter": "안재석",
-        "heat": 12,
+        "batter": "김대한",
+        "heat": 14,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
+        "inning": 3,
         "half": "T",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "최원태",
-        "batter": "김동현",
-        "heat": 33,
+        "batter": "손성빈",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -364,7 +364,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 2,
-        "score": 1,
+        "score": 3,
         "starter": {
           "name": "소형준",
           "era": 3.36,
@@ -397,14 +397,14 @@
       "live": {
         "inning": 2,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "류현진",
-        "batter": "허경민",
-        "heat": 35,
-        "label": "초반 팽팽한 흐름"
+        "batter": "안현민",
+        "heat": 22,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -561,14 +561,14 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "토다",
-        "batter": "하주석",
-        "heat": 38,
+        "pitcher": "시라카와",
+        "batter": "권희동",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
+        "inning": 3,
         "half": "B",
-        "out": 1,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
-        "b3": true,
+        "b3": false,
         "pitcher": "김건우",
-        "batter": "김동헌",
-        "heat": 38,
+        "batter": "서건창",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
