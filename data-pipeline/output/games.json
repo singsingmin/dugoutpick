@@ -1,7 +1,7 @@
 {
   "date": "20260902",
   "dateText": "2026년 9월 2일",
-  "updatedAt": "2026-09-02T11:10:25.028Z",
+  "updatedAt": "2026-09-02T11:20:26.383Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 3,
-        "b1": false,
+        "inning": 6,
+        "half": "T",
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "이우찬",
-        "batter": "양의지",
-        "heat": 31,
+        "pitcher": "김정우",
+        "batter": "박동원",
+        "heat": 33,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -199,7 +199,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 1,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "최원태",
           "era": 4.57,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
+        "half": "B",
         "out": 1,
-        "b1": false,
-        "b2": false,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "최원태",
-        "batter": "나승엽",
-        "heat": 53,
+        "pitcher": "박세웅",
+        "batter": "김영웅",
+        "heat": 46,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -395,16 +395,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
+        "inning": 6,
         "half": "T",
-        "out": 1,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "소형준",
-        "batter": "노시환",
-        "heat": 52,
-        "label": "초반 팽팽한 흐름"
+        "batter": "허인서",
+        "heat": 58,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -560,16 +560,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
+        "inning": 7,
         "half": "T",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "토다",
-        "batter": "카스트로",
-        "heat": 53,
-        "label": "경기 흐름 체크 중"
+        "batter": "나성범",
+        "heat": 59,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -694,7 +694,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 4,
+        "score": 6,
         "starter": {
           "name": "하영민",
           "era": 4.63,
@@ -727,13 +727,13 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "최용준",
-        "batter": "박찬혁",
-        "heat": 34,
+        "batter": "서건창",
+        "heat": 12,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
