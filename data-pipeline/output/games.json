@@ -1,12 +1,12 @@
 {
   "date": "20260903",
   "dateText": "2026년 9월 3일",
-  "updatedAt": "2026-09-03T12:50:31.239Z",
+  "updatedAt": "2026-09-03T13:00:42.053Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
-    "hitRate": 20,
-    "bonusRate": 52,
+    "hitRate": 18,
+    "bonusRate": 54,
     "ready": true
   },
   "recommendedGameId": "20260903LGOB0",
@@ -172,7 +172,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": 10,
+        "score": 13,
         "starter": {
           "name": "고영표",
           "era": 3.61,
@@ -203,16 +203,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 0,
-        "b1": true,
-        "b2": true,
+        "inning": 9,
+        "half": "T",
+        "out": 1,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "정우주",
-        "batter": "오윤석",
-        "heat": 64,
-        "label": "후반 박빙 승부"
+        "pitcher": "박영현",
+        "batter": "노시환",
+        "heat": 15,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -376,7 +376,7 @@
       "gameId": "20260903SKWO0",
       "time": "18:30",
       "stadium": "고척",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "KBS N SPORTS",
       "away": {
@@ -395,7 +395,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "박준현",
           "era": 5.53,
@@ -425,117 +425,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 0,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "전영준",
-        "batter": "여동욱",
-        "heat": 90,
-        "label": "끝내기 한 방 찬스"
+      "live": null,
+      "recap": {
+        "actual": 97,
+        "verdict": "기대 이상",
+        "diff": 1,
+        "total": 5,
+        "extra": 0,
+        "walkoff": 1
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "2루수",
-            "name": "서건창"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "추재현"
-          },
-          {
-            "order": 3,
-            "pos": "1루수",
-            "name": "데이비슨"
-          },
-          {
-            "order": 4,
-            "pos": "좌익수",
-            "name": "히우라"
-          },
-          {
-            "order": 5,
-            "pos": "지명타자",
-            "name": "김웅빈"
-          },
-          {
-            "order": 6,
-            "pos": "포수",
-            "name": "김건희"
-          },
-          {
-            "order": 7,
-            "pos": "우익수",
-            "name": "박찬혁"
-          },
-          {
-            "order": 8,
-            "pos": "3루수",
-            "name": "여동욱"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "권혁빈"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "2루수",
-            "name": "정준재"
-          },
-          {
-            "order": 2,
-            "pos": "유격수",
-            "name": "박성한"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "에레디아"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "김재환"
-          },
-          {
-            "order": 5,
-            "pos": "1루수",
-            "name": "전의산"
-          },
-          {
-            "order": 6,
-            "pos": "중견수",
-            "name": "최지훈"
-          },
-          {
-            "order": 7,
-            "pos": "포수",
-            "name": "조형우"
-          },
-          {
-            "order": 8,
-            "pos": "3루수",
-            "name": "홍대인"
-          },
-          {
-            "order": 9,
-            "pos": "우익수",
-            "name": "임근우"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     }
   ],
   "postseason": null
