@@ -1,7 +1,7 @@
 {
   "date": "20260903",
   "dateText": "2026년 9월 3일",
-  "updatedAt": "2026-09-03T10:20:25.686Z",
+  "updatedAt": "2026-09-03T10:30:31.693Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "박시원",
           "era": 5.2,
@@ -66,13 +66,13 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "곽빈",
-        "batter": "박해민",
+        "pitcher": "박시원",
+        "batter": "박준순",
         "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "원태인",
-        "batter": "레이예스",
-        "heat": 45,
+        "pitcher": "비슬리",
+        "batter": "구자욱",
+        "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -352,7 +352,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 9,
-        "score": 5,
+        "score": 7,
         "starter": {
           "name": "왕옌청",
           "era": 3.52,
@@ -397,14 +397,14 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "고영표",
-        "batter": "노시환",
-        "heat": 33,
-        "label": "초반 팽팽한 흐름"
+        "batter": "최인호",
+        "heat": 15,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -619,14 +619,14 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박준현",
-        "batter": "에레디아",
-        "heat": 38,
+        "pitcher": "이로운",
+        "batter": "서건창",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
