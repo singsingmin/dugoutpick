@@ -1,7 +1,7 @@
 {
   "date": "20260903",
   "dateText": "2026년 9월 3일",
-  "updatedAt": "2026-09-03T13:10:26.756Z",
+  "updatedAt": "2026-09-03T13:20:29.204Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -153,7 +153,7 @@
       "gameId": "20260903HHKT0",
       "time": "18:30",
       "stadium": "수원",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPOTV2",
       "away": {
@@ -202,117 +202,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 2,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "박영현",
-        "batter": "심우준",
-        "heat": 66,
-        "label": "후반 박빙 승부"
+      "live": null,
+      "recap": {
+        "actual": 87,
+        "verdict": "기대 이상",
+        "diff": 2,
+        "total": 24,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "최원준"
-          },
-          {
-            "order": 2,
-            "pos": "지명타자",
-            "name": "김민혁"
-          },
-          {
-            "order": 3,
-            "pos": "우익수",
-            "name": "안현민"
-          },
-          {
-            "order": 4,
-            "pos": "좌익수",
-            "name": "힐리어드"
-          },
-          {
-            "order": 5,
-            "pos": "2루수",
-            "name": "김상수"
-          },
-          {
-            "order": 6,
-            "pos": "3루수",
-            "name": "허경민"
-          },
-          {
-            "order": 7,
-            "pos": "1루수",
-            "name": "오윤석"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "한승택"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "장준원"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "최인호"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "페라자"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "문현빈"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "강백호"
-          },
-          {
-            "order": 5,
-            "pos": "3루수",
-            "name": "노시환"
-          },
-          {
-            "order": 6,
-            "pos": "1루수",
-            "name": "김태연"
-          },
-          {
-            "order": 7,
-            "pos": "포수",
-            "name": "허인서"
-          },
-          {
-            "order": 8,
-            "pos": "2루수",
-            "name": "황영묵"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "심우준"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260903HTNC0",
