@@ -1,7 +1,7 @@
 {
   "date": "20260903",
   "dateText": "2026년 9월 3일",
-  "updatedAt": "2026-09-03T11:50:33.347Z",
+  "updatedAt": "2026-09-03T12:00:40.442Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
+        "inning": 9,
         "half": "B",
-        "out": 2,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "김영우",
-        "batter": "강승호",
-        "heat": 67,
-        "label": "후반 박빙 승부"
+        "b3": false,
+        "pitcher": "손주영",
+        "batter": "양의지",
+        "heat": 85,
+        "label": "끝내기 한 방 찬스"
       },
       "recap": null,
       "decision": null,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "비슬리",
-        "batter": "이재현",
+        "pitcher": "박정민",
+        "batter": "김성윤",
         "heat": 67,
         "label": "후반 박빙 승부"
       },
@@ -396,14 +396,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "오원석",
-        "batter": "한지윤",
-        "heat": 61,
+        "pitcher": "장유호",
+        "batter": "김상수",
+        "heat": 64,
         "label": "점수 나는 난타전"
       },
       "recap": null,
@@ -618,16 +618,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 2,
         "b1": false,
         "b2": true,
         "b3": false,
-        "pitcher": "이건욱",
-        "batter": "여동욱",
-        "heat": 56,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "박지성",
+        "batter": "김재환",
+        "heat": 59,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
