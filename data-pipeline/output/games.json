@@ -1,7 +1,7 @@
 {
   "date": "20260903",
   "dateText": "2026년 9월 3일",
-  "updatedAt": "2026-09-03T09:40:26.801Z",
+  "updatedAt": "2026-09-03T09:50:26.919Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "T",
-        "out": 2,
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
         "pitcher": "곽빈",
-        "batter": "송찬의",
-        "heat": 31,
+        "batter": "문보경",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 1,
-        "b1": true,
+        "inning": 2,
+        "half": "T",
+        "out": 2,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "비슬리",
-        "batter": "구자욱",
-        "heat": 33,
+        "pitcher": "원태인",
+        "batter": "전민재",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -352,7 +352,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 9,
-        "score": 2,
+        "score": 5,
         "starter": {
           "name": "왕옌청",
           "era": 3.52,
@@ -396,15 +396,15 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": true,
         "b2": true,
         "b3": false,
-        "pitcher": "고영표",
-        "batter": "김태연",
-        "heat": 24,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "왕옌청",
+        "batter": "안현민",
+        "heat": 7,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -587,7 +587,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "박준현",
           "era": 5.53,
@@ -619,13 +619,13 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": true,
-        "b3": true,
-        "pitcher": "박준현",
-        "batter": "김재환",
+        "b3": false,
+        "pitcher": "이로운",
+        "batter": "데이비슨",
         "heat": 31,
         "label": "초반 팽팽한 흐름"
       },
