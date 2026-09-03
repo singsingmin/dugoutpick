@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-03T14:10:27.301Z",
+  "updatedAt": "2026-09-03T17:23:13.448Z",
   "lastWeek": {
     "range": [
       "20260824",
@@ -366,13 +366,6 @@
           "homeStarter": "토다"
         },
         {
-          "date": "20260903",
-          "away": "HT",
-          "home": "NC",
-          "awayStarter": "양현종",
-          "homeStarter": "이재학"
-        },
-        {
           "date": "20260904",
           "away": "KT",
           "home": "HT",
@@ -404,13 +397,6 @@
           "home": "NC",
           "awayStarter": "시라카와",
           "homeStarter": "토다"
-        },
-        {
-          "date": "20260903",
-          "away": "HT",
-          "home": "NC",
-          "awayStarter": "양현종",
-          "homeStarter": "이재학"
         },
         {
           "date": "20260904",
