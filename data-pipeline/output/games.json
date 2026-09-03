@@ -1,7 +1,7 @@
 {
   "date": "20260903",
   "dateText": "2026년 9월 3일",
-  "updatedAt": "2026-09-03T11:10:26.085Z",
+  "updatedAt": "2026-09-03T11:20:28.181Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 1,
-        "b1": false,
+        "inning": 7,
+        "half": "T",
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "이우찬",
-        "batter": "박준순",
-        "heat": 56,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "곽빈",
+        "batter": "문정빈",
+        "heat": 59,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 0,
+        "inning": 7,
+        "half": "T",
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "비슬리",
-        "batter": "구자욱",
-        "heat": 59,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "김태훈",
+        "batter": "박건우",
+        "heat": 62,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -364,7 +364,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 2,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "고영표",
           "era": 3.61,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 1,
+        "inning": 5,
+        "half": "T",
+        "out": 0,
         "b1": true,
-        "b2": true,
-        "b3": true,
-        "pitcher": "박상원",
-        "batter": "안현민",
-        "heat": 45,
+        "b2": false,
+        "b3": false,
+        "pitcher": "오원석",
+        "batter": "김태연",
+        "heat": 56,
         "label": "점수 나는 난타전"
       },
       "recap": null,
@@ -619,14 +619,14 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
+        "half": "B",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "박준현",
-        "batter": "에레디아",
-        "heat": 48,
+        "pitcher": "박시후",
+        "batter": "추재현",
+        "heat": 50,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
