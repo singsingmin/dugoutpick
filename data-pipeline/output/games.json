@@ -1,7 +1,7 @@
 {
   "date": "20260903",
   "dateText": "2026년 9월 3일",
-  "updatedAt": "2026-09-03T10:00:39.416Z",
+  "updatedAt": "2026-09-03T10:10:45.497Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
+        "inning": 3,
         "half": "B",
-        "out": 1,
+        "out": 0,
         "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "박시원",
-        "batter": "세베리노",
-        "heat": 38,
+        "batter": "정수빈",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
+        "inning": 3,
+        "half": "T",
         "out": 2,
-        "b1": false,
+        "b1": true,
         "b2": true,
         "b3": false,
-        "pitcher": "비슬리",
-        "batter": "전병우",
-        "heat": 38,
+        "pitcher": "원태인",
+        "batter": "나승엽",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -397,12 +397,12 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "고영표",
-        "batter": "심우준",
+        "batter": "문현빈",
         "heat": 29,
         "label": "초반 팽팽한 흐름"
       },
@@ -620,12 +620,12 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "박준현",
-        "batter": "최지훈",
+        "batter": "정준재",
         "heat": 27,
         "label": "초반 팽팽한 흐름"
       },
