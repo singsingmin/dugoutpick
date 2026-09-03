@@ -1,7 +1,7 @@
 {
   "date": "20260903",
   "dateText": "2026년 9월 3일",
-  "updatedAt": "2026-09-03T11:30:40.897Z",
+  "updatedAt": "2026-09-03T11:40:29.056Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 3,
-        "b1": false,
+        "inning": 8,
+        "half": "T",
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "김진수",
-        "batter": "조수행",
-        "heat": 62,
+        "pitcher": "타카다",
+        "batter": "신민재",
+        "heat": 64,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 1,
+        "inning": 8,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "비슬리",
-        "batter": "박계범",
-        "heat": 65,
+        "pitcher": "장찬희",
+        "batter": "황성빈",
+        "heat": 69,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -364,7 +364,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 2,
-        "score": 6,
+        "score": 8,
         "starter": {
           "name": "고영표",
           "era": 3.61,
@@ -397,12 +397,12 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "김서현",
-        "batter": "오윤석",
+        "pitcher": "조동욱",
+        "batter": "김민혁",
         "heat": 58,
         "label": "점수 나는 난타전"
       },
@@ -620,12 +620,12 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "박준현",
-        "batter": "최지훈",
+        "pitcher": "김선기",
+        "batter": "임근우",
         "heat": 53,
         "label": "경기 흐름 체크 중"
       },
