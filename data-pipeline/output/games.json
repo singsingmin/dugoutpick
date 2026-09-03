@@ -1,7 +1,7 @@
 {
   "date": "20260903",
   "dateText": "2026년 9월 3일",
-  "updatedAt": "2026-09-03T10:50:26.307Z",
+  "updatedAt": "2026-09-03T11:00:41.564Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
+        "inning": 6,
         "half": "T",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "곽빈",
-        "batter": "오지환",
-        "heat": 48,
-        "label": "초반 팽팽한 흐름"
+        "batter": "박동원",
+        "heat": 53,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 1,
-        "b1": false,
+        "inning": 6,
+        "half": "T",
+        "out": 0,
+        "b1": true,
         "b2": false,
-        "b3": true,
-        "pitcher": "비슬리",
-        "batter": "김지찬",
-        "heat": 42,
-        "label": "초반 팽팽한 흐름"
+        "b3": false,
+        "pitcher": "원태인",
+        "batter": "나승엽",
+        "heat": 44,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -364,7 +364,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 2,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "고영표",
           "era": 3.61,
@@ -396,14 +396,14 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "오원석",
-        "batter": "강백호",
-        "heat": 32,
+        "pitcher": "왕옌청",
+        "batter": "최원준",
+        "heat": 45,
         "label": "점수 나는 난타전"
       },
       "recap": null,
@@ -619,14 +619,14 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
+        "half": "B",
         "out": 1,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박준현",
-        "batter": "정준재",
-        "heat": 43,
+        "pitcher": "이로운",
+        "batter": "박찬혁",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
