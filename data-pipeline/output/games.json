@@ -1,7 +1,7 @@
 {
   "date": "20260903",
   "dateText": "2026년 9월 3일",
-  "updatedAt": "2026-09-03T12:40:33.515Z",
+  "updatedAt": "2026-09-03T12:50:31.239Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -204,14 +204,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 2,
-        "b1": false,
+        "half": "B",
+        "out": 0,
+        "b1": true,
         "b2": true,
         "b3": false,
-        "pitcher": "박영현",
-        "batter": "페라자",
-        "heat": 61,
+        "pitcher": "정우주",
+        "batter": "오윤석",
+        "heat": 64,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -383,7 +383,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 8,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "이로운",
           "era": 7.08,
@@ -427,15 +427,15 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
+        "half": "B",
         "out": 0,
-        "b1": true,
-        "b2": true,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "박진형",
-        "batter": "박성한",
-        "heat": 75,
-        "label": "9회 1점 승부"
+        "pitcher": "전영준",
+        "batter": "여동욱",
+        "heat": 90,
+        "label": "끝내기 한 방 찬스"
       },
       "recap": null,
       "decision": null,
