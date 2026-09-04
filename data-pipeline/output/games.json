@@ -1,7 +1,7 @@
 {
   "date": "20260904",
   "dateText": "2026년 9월 4일",
-  "updatedAt": "2026-09-04T11:50:25.243Z",
+  "updatedAt": "2026-09-04T12:00:40.423Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 2,
-        "b1": true,
-        "b2": true,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "이승현",
-        "batter": "홍창기",
-        "heat": 56,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "케네디",
+        "batter": "김영웅",
+        "heat": 59,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 2,
-        "b1": false,
+        "inning": 7,
+        "half": "T",
+        "out": 1,
+        "b1": true,
         "b2": true,
         "b3": false,
-        "pitcher": "짐머맨",
-        "batter": "장두성",
-        "heat": 48,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "김원중",
+        "batter": "노시환",
+        "heat": 50,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -464,15 +464,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 2,
-        "b1": false,
+        "inning": 8,
+        "half": "T",
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "전용주",
-        "batter": "박재현",
-        "heat": 51,
+        "pitcher": "전상현",
+        "batter": "안현민",
+        "heat": 53,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -586,7 +586,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 6,
-        "score": 4,
+        "score": 6,
         "starter": {
           "name": "라일리",
           "era": 2.92,
@@ -631,13 +631,13 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
-        "b1": true,
+        "out": 2,
+        "b1": false,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "정현우",
-        "batter": "김주원",
-        "heat": 40,
+        "batter": "박건우",
+        "heat": 14,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
