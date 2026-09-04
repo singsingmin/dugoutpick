@@ -1,7 +1,7 @@
 {
   "date": "20260904",
   "dateText": "2026년 9월 4일",
-  "updatedAt": "2026-09-04T12:50:27.790Z",
+  "updatedAt": "2026-09-04T13:00:42.581Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -91,7 +91,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 9,
-        "score": 8,
+        "score": 9,
         "starter": {
           "name": "박준영",
           "era": 6.1,
@@ -136,13 +136,13 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "이승헌",
-        "batter": "강백호",
-        "heat": 28,
+        "pitcher": "현도훈",
+        "batter": "장규현",
+        "heat": 15,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -370,12 +370,12 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 1,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": true,
         "b3": true,
         "pitcher": "이의리",
-        "batter": "김상수",
+        "batter": "최원준",
         "heat": 75,
         "label": "9회 1점 승부"
       },
