@@ -1,7 +1,7 @@
 {
   "date": "20260904",
   "dateText": "2026년 9월 4일",
-  "updatedAt": "2026-09-04T12:00:40.423Z",
+  "updatedAt": "2026-09-04T12:10:25.451Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
+        "inning": 8,
         "half": "T",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "케네디",
-        "batter": "김영웅",
-        "heat": 59,
+        "batter": "이재현",
+        "heat": 64,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -187,7 +187,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 9,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "박준영",
           "era": 6.1,
@@ -232,14 +232,14 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 1,
-        "b1": true,
+        "out": 2,
+        "b1": false,
         "b2": true,
-        "b3": false,
+        "b3": true,
         "pitcher": "김원중",
-        "batter": "노시환",
-        "heat": 50,
-        "label": "후반 박빙 승부"
+        "batter": "최인호",
+        "heat": 39,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -465,14 +465,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "전상현",
-        "batter": "안현민",
-        "heat": 53,
+        "pitcher": "스기모토",
+        "batter": "카스트로",
+        "heat": 56,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -629,15 +629,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
+        "inning": 9,
         "half": "T",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "정현우",
-        "batter": "박건우",
-        "heat": 14,
+        "b3": false,
+        "pitcher": "정다훈",
+        "batter": "김한별",
+        "heat": 15,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
