@@ -1,7 +1,7 @@
 {
   "date": "20260904",
   "dateText": "2026년 9월 4일",
-  "updatedAt": "2026-09-04T10:50:30.553Z",
+  "updatedAt": "2026-09-04T11:00:39.645Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 0,
+        "inning": 5,
+        "half": "T",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "페덱",
-        "batter": "송찬의",
-        "heat": 37,
+        "pitcher": "카라스코",
+        "batter": "김영웅",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "박준영",
-        "batter": "고승민",
+        "batter": "손호영",
         "heat": 18,
         "label": "경기 흐름 체크 중"
       },
@@ -396,14 +396,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
+        "half": "B",
         "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "아빌라",
-        "batter": "정수빈",
-        "heat": 33,
+        "pitcher": "이용찬",
+        "batter": "전의산",
+        "heat": 34,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -560,16 +560,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
+        "inning": 6,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "배제성",
-        "batter": "하주석",
-        "heat": 54,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "올러",
+        "batter": "조대현",
+        "heat": 57,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -682,7 +682,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 6,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "라일리",
           "era": 2.92,
@@ -726,15 +726,15 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 0,
+        "half": "B",
+        "out": 1,
         "b1": false,
         "b2": true,
         "b3": false,
-        "pitcher": "안우진",
-        "batter": "블레인",
-        "heat": 40,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "라일리",
+        "batter": "데이비슨",
+        "heat": 31,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
