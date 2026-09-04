@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-04T12:20:24.850Z",
+  "updatedAt": "2026-09-04T12:30:35.715Z",
   "lastWeek": {
     "range": [
       "20260824",
@@ -410,7 +410,9 @@
         {
           "date": "20260905",
           "away": "NC",
-          "home": "WO"
+          "home": "WO",
+          "awayStarter": "이재학",
+          "homeStarter": "전준표"
         },
         {
           "date": "20260906",
@@ -492,7 +494,9 @@
         {
           "date": "20260905",
           "away": "NC",
-          "home": "WO"
+          "home": "WO",
+          "awayStarter": "이재학",
+          "homeStarter": "전준표"
         },
         {
           "date": "20260906",
