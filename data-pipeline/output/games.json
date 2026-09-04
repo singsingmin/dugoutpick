@@ -1,7 +1,7 @@
 {
   "date": "20260904",
   "dateText": "2026년 9월 4일",
-  "updatedAt": "2026-09-04T11:00:39.645Z",
+  "updatedAt": "2026-09-04T11:10:26.095Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "카라스코",
-        "batter": "김영웅",
-        "heat": 40,
+        "pitcher": "페덱",
+        "batter": "홍창기",
+        "heat": 42,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 2,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박준영",
-        "batter": "손호영",
-        "heat": 18,
+        "pitcher": "김한결",
+        "batter": "김태연",
+        "heat": 19,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -364,7 +364,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 8,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "아빌라",
           "era": 1.65,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
+        "inning": 7,
         "half": "B",
-        "out": 1,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "이용찬",
-        "batter": "전의산",
-        "heat": 34,
+        "batter": "정준재",
+        "heat": 25,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -562,12 +562,12 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 3,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "올러",
-        "batter": "조대현",
+        "batter": "김현수",
         "heat": 57,
         "label": "경기 흐름 체크 중"
       },
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
+        "inning": 6,
+        "half": "T",
         "out": 1,
-        "b1": false,
-        "b2": true,
+        "b1": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "라일리",
-        "batter": "데이비슨",
-        "heat": 31,
+        "pitcher": "김선기",
+        "batter": "김주원",
+        "heat": 33,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
