@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-04T13:37:43.690Z",
+  "updatedAt": "2026-09-04T13:40:26.049Z",
   "lastWeek": {
     "range": [
       "20260824",
@@ -67,7 +67,7 @@
         "l": 5,
         "d": 0,
         "rank": 9,
-        "note": "9연패 늪, 탈출이 급하다"
+        "note": "5전 5패… 출구가 안 보인다"
       },
       "WO": {
         "w": 0,
@@ -103,8 +103,8 @@
       {
         "away": "HH",
         "home": "LT",
-        "pred": 87,
-        "reason": "게임차 2, 막상막하 승부",
+        "pred": 85,
+        "reason": "게임차 1, 막상막하 승부",
         "dateStart": "20260904",
         "dateEnd": "20260906"
       }
@@ -352,7 +352,9 @@
         {
           "date": "20260905",
           "away": "KT",
-          "home": "HT"
+          "home": "HT",
+          "awayStarter": "로건",
+          "homeStarter": "양현종"
         },
         {
           "date": "20260906",
@@ -385,7 +387,9 @@
         {
           "date": "20260905",
           "away": "KT",
-          "home": "HT"
+          "home": "HT",
+          "awayStarter": "로건",
+          "homeStarter": "양현종"
         },
         {
           "date": "20260906",

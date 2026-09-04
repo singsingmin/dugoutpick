@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-09-04T13:37:43.690Z",
+  "updatedAt": "2026-09-04T13:40:26.049Z",
   "window": 50,
   "sampleSize": 50,
-  "hitRate": 22,
-  "bonusRate": 50,
+  "hitRate": 20,
+  "bonusRate": 52,
   "ready": true,
   "records": [
     {
@@ -1587,6 +1587,13 @@
       "pred": 80,
       "actual": 12,
       "verdict": "기대 이하"
+    },
+    {
+      "date": "20260904",
+      "gameId": "20260904KTHT0",
+      "pred": 76,
+      "actual": 100,
+      "verdict": "기대 이상"
     }
   ]
 }

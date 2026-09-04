@@ -1,12 +1,12 @@
 {
   "date": "20260904",
   "dateText": "2026년 9월 4일",
-  "updatedAt": "2026-09-04T13:37:43.690Z",
+  "updatedAt": "2026-09-04T13:40:26.049Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
-    "hitRate": 22,
-    "bonusRate": 50,
+    "hitRate": 20,
+    "bonusRate": 52,
     "ready": true
   },
   "recommendedGameId": "20260904SSLG0",
@@ -222,7 +222,7 @@
       "gameId": "20260904KTHT0",
       "time": "18:30",
       "stadium": "광주",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "KBS N SPORTS",
       "away": {
@@ -241,7 +241,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "올러",
           "era": 3.01,
@@ -271,117 +271,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 10,
-        "half": "B",
-        "out": 1,
-        "b1": true,
-        "b2": true,
-        "b3": true,
-        "pitcher": "문용익",
-        "batter": "변우혁",
-        "heat": 96,
-        "label": "끝내기 한 방 찬스"
+      "live": null,
+      "recap": {
+        "actual": 100,
+        "verdict": "기대 이상",
+        "diff": 1,
+        "total": 7,
+        "extra": 1,
+        "walkoff": 1
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "좌익수",
-            "name": "박재현"
-          },
-          {
-            "order": 2,
-            "pos": "1루수",
-            "name": "카스트로"
-          },
-          {
-            "order": 3,
-            "pos": "3루수",
-            "name": "김도영"
-          },
-          {
-            "order": 4,
-            "pos": "우익수",
-            "name": "나성범"
-          },
-          {
-            "order": 5,
-            "pos": "지명타자",
-            "name": "김선빈"
-          },
-          {
-            "order": 6,
-            "pos": "2루수",
-            "name": "이호연"
-          },
-          {
-            "order": 7,
-            "pos": "중견수",
-            "name": "김호령"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "김태군"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "하주석"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "우익수",
-            "name": "최원준"
-          },
-          {
-            "order": 2,
-            "pos": "1루수",
-            "name": "김현수"
-          },
-          {
-            "order": 3,
-            "pos": "지명타자",
-            "name": "안현민"
-          },
-          {
-            "order": 4,
-            "pos": "중견수",
-            "name": "힐리어드"
-          },
-          {
-            "order": 5,
-            "pos": "3루수",
-            "name": "허경민"
-          },
-          {
-            "order": 6,
-            "pos": "좌익수",
-            "name": "장진혁"
-          },
-          {
-            "order": 7,
-            "pos": "2루수",
-            "name": "오윤석"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "조대현"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "권동진"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260904NCWO0",
