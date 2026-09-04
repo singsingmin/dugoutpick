@@ -1,7 +1,7 @@
 {
   "date": "20260904",
   "dateText": "2026년 9월 4일",
-  "updatedAt": "2026-09-04T11:40:26.376Z",
+  "updatedAt": "2026-09-04T11:50:25.243Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "카라스코",
           "era": 3.26,
@@ -67,13 +67,13 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 1,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": true,
         "b3": false,
         "pitcher": "이승현",
-        "batter": "문정빈",
-        "heat": 59,
+        "batter": "홍창기",
+        "heat": 56,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
+        "half": "B",
         "out": 2,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "이영재",
-        "batter": "심우준",
-        "heat": 46,
+        "pitcher": "짐머맨",
+        "batter": "장두성",
+        "heat": 48,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -345,7 +345,7 @@
       "gameId": "20260904OBSK0",
       "time": "18:30",
       "stadium": "문학",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPOTV",
       "away": {
@@ -394,117 +394,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 1,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "아빌라",
-        "batter": "오명진",
-        "heat": 28,
-        "label": "경기 흐름 체크 중"
+      "live": null,
+      "recap": {
+        "actual": 40,
+        "verdict": "예측 적중",
+        "diff": 4,
+        "total": 4,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "2루수",
-            "name": "정준재"
-          },
-          {
-            "order": 2,
-            "pos": "유격수",
-            "name": "박성한"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "에레디아"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "김재환"
-          },
-          {
-            "order": 5,
-            "pos": "우익수",
-            "name": "한유섬"
-          },
-          {
-            "order": 6,
-            "pos": "중견수",
-            "name": "최지훈"
-          },
-          {
-            "order": 7,
-            "pos": "1루수",
-            "name": "전의산"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "조형우"
-          },
-          {
-            "order": 9,
-            "pos": "3루수",
-            "name": "김요셉"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "유격수",
-            "name": "박찬호"
-          },
-          {
-            "order": 2,
-            "pos": "2루수",
-            "name": "오명진"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "김민석"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "양의지"
-          },
-          {
-            "order": 5,
-            "pos": "3루수",
-            "name": "안재석"
-          },
-          {
-            "order": 6,
-            "pos": "1루수",
-            "name": "강승호"
-          },
-          {
-            "order": 7,
-            "pos": "우익수",
-            "name": "조수행"
-          },
-          {
-            "order": 8,
-            "pos": "중견수",
-            "name": "정수빈"
-          },
-          {
-            "order": 9,
-            "pos": "포수",
-            "name": "윤준호"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260904KTHT0",
@@ -561,14 +465,14 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 3,
-        "b1": true,
+        "half": "B",
+        "out": 2,
+        "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "곽도규",
-        "batter": "장준원",
-        "heat": 49,
+        "b3": false,
+        "pitcher": "전용주",
+        "batter": "박재현",
+        "heat": 51,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -725,15 +629,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 1,
-        "b1": false,
+        "inning": 8,
+        "half": "T",
+        "out": 0,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "이용준",
-        "batter": "김재현",
-        "heat": 38,
+        "pitcher": "정현우",
+        "batter": "김주원",
+        "heat": 40,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
