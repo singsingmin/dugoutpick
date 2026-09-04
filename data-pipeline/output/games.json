@@ -1,7 +1,7 @@
 {
   "date": "20260904",
   "dateText": "2026년 9월 4일",
-  "updatedAt": "2026-09-04T09:50:24.631Z",
+  "updatedAt": "2026-09-04T10:00:40.488Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "B",
-        "out": 2,
-        "b1": true,
+        "out": 1,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "페덱",
-        "batter": "송찬의",
-        "heat": 33,
+        "batter": "문정빈",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "김진욱",
-        "batter": "강백호",
+        "batter": "장규현",
         "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
+        "inning": 3,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "아빌라",
-        "batter": "양의지",
-        "heat": 35,
+        "batter": "정수빈",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -562,12 +562,12 @@
       "live": {
         "inning": 2,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 1,
+        "b1": true,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "배제성",
-        "batter": "나성범",
+        "batter": "김호령",
         "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 1,
+        "inning": 2,
+        "half": "T",
+        "out": 2,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "라일리",
-        "batter": "히우라",
-        "heat": 31,
+        "pitcher": "안우진",
+        "batter": "최정원",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
