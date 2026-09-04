@@ -1,7 +1,7 @@
 {
   "date": "20260904",
   "dateText": "2026년 9월 4일",
-  "updatedAt": "2026-09-04T12:30:35.715Z",
+  "updatedAt": "2026-09-04T12:40:25.753Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
+        "inning": 9,
+        "half": "T",
+        "out": 1,
         "b1": false,
         "b2": true,
         "b3": false,
-        "pitcher": "배찬승",
-        "batter": "구본혁",
-        "heat": 67,
-        "label": "후반 박빙 승부"
+        "pitcher": "고우석",
+        "batter": "류지혁",
+        "heat": 75,
+        "label": "9회 1점 승부"
       },
       "recap": null,
       "decision": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
+        "inning": 8,
         "half": "B",
-        "out": 3,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "짐머맨",
-        "batter": "고승민",
-        "heat": 25,
+        "pitcher": "강재민",
+        "batter": "노진혁",
+        "heat": 27,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -433,7 +433,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 1,
+        "score": 3,
         "starter": {
           "name": "올러",
           "era": 3.01,
@@ -464,16 +464,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
+        "inning": 9,
+        "half": "T",
+        "out": 0,
         "b1": true,
-        "b2": true,
-        "b3": true,
-        "pitcher": "손동현",
-        "batter": "한준수",
-        "heat": 67,
-        "label": "후반 박빙 승부"
+        "b2": false,
+        "b3": false,
+        "pitcher": "이의리",
+        "batter": "장진혁",
+        "heat": 75,
+        "label": "9회 1점 승부"
       },
       "recap": null,
       "decision": null,
