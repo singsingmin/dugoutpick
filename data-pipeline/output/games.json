@@ -1,7 +1,7 @@
 {
   "date": "20260905",
   "dateText": "2026년 9월 5일",
-  "updatedAt": "2026-09-05T10:20:24.680Z",
+  "updatedAt": "2026-09-05T10:30:32.870Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "이승현",
           "era": 6.89,
@@ -67,14 +67,14 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": true,
-        "b2": true,
+        "b2": false,
         "b3": true,
-        "pitcher": "김진수",
-        "batter": "이재현",
-        "heat": 36,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "우강훈",
+        "batter": "김태훈",
+        "heat": 59,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -187,7 +187,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 9,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "황준서",
           "era": 4.76,
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
+        "inning": 8,
+        "half": "T",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
-        "b3": false,
-        "pitcher": "조동욱",
-        "batter": "레이예스",
-        "heat": 53,
-        "label": "후반 박빙 승부"
+        "b3": true,
+        "pitcher": "최준용",
+        "batter": "김태연",
+        "heat": 43,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -395,16 +395,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 1,
+        "inning": 9,
+        "half": "T",
+        "out": 3,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김택연",
-        "batter": "정준재",
-        "heat": 67,
-        "label": "후반 박빙 승부"
+        "pitcher": "조병현",
+        "batter": "세베리노",
+        "heat": 75,
+        "label": "9회 1점 승부"
       },
       "recap": null,
       "decision": null,
@@ -561,14 +561,14 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 0,
-        "b1": true,
+        "half": "B",
+        "out": 2,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "곽도규",
-        "batter": "김현수",
-        "heat": 59,
+        "pitcher": "김정운",
+        "batter": "김도영",
+        "heat": 62,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -726,14 +726,14 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "윤석원",
-        "batter": "박시원",
-        "heat": 59,
+        "pitcher": "손주환",
+        "batter": "여동욱",
+        "heat": 62,
         "label": "후반 박빙 승부"
       },
       "recap": null,
