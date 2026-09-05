@@ -1,7 +1,7 @@
 {
   "date": "20260905",
   "dateText": "2026년 9월 5일",
-  "updatedAt": "2026-09-05T11:40:24.402Z",
+  "updatedAt": "2026-09-05T11:50:24.056Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,15 +66,15 @@
       },
       "live": {
         "inning": 10,
-        "half": "T",
+        "half": "B",
         "out": 2,
-        "b1": true,
+        "b1": false,
         "b2": true,
         "b3": false,
-        "pitcher": "이상영",
-        "batter": "디아즈",
-        "heat": 89,
-        "label": "연장 혈투 진행 중"
+        "pitcher": "김재윤",
+        "batter": "천성호",
+        "heat": 96,
+        "label": "끝내기 한 방 찬스"
       },
       "recap": null,
       "decision": null,
