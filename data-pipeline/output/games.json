@@ -1,7 +1,7 @@
 {
   "date": "20260905",
   "dateText": "2026년 9월 5일",
-  "updatedAt": "2026-09-05T11:50:24.056Z",
+  "updatedAt": "2026-09-05T12:00:38.319Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 10,
-        "half": "B",
-        "out": 2,
+        "inning": 11,
+        "half": "T",
+        "out": 1,
         "b1": false,
         "b2": true,
         "b3": false,
-        "pitcher": "김재윤",
-        "batter": "천성호",
-        "heat": 96,
-        "label": "끝내기 한 방 찬스"
+        "pitcher": "이정용",
+        "batter": "김영웅",
+        "heat": 92,
+        "label": "연장 혈투 진행 중"
       },
       "recap": null,
       "decision": null,
