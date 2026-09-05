@@ -1,7 +1,7 @@
 {
   "date": "20260905",
   "dateText": "2026년 9월 5일",
-  "updatedAt": "2026-09-05T08:50:33.690Z",
+  "updatedAt": "2026-09-05T09:00:40.222Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
+        "inning": 4,
         "half": "T",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "톨허스트",
-        "batter": "구자욱",
-        "heat": 40,
+        "batter": "최형우",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
+        "inning": 4,
         "half": "T",
-        "out": 1,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "나균안",
-        "batter": "최인호",
-        "heat": 40,
+        "batter": "강백호",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -352,7 +352,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "최민석",
           "era": 2.61,
@@ -396,13 +396,13 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 1,
-        "b1": false,
+        "half": "B",
+        "out": 0,
+        "b1": true,
         "b2": false,
-        "b3": true,
-        "pitcher": "김민준",
-        "batter": "박준순",
+        "b3": false,
+        "pitcher": "최민석",
+        "batter": "에레디아",
         "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
@@ -562,12 +562,12 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "양현종",
-        "batter": "김현수",
+        "batter": "허경민",
         "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 1,
+        "inning": 4,
+        "half": "T",
+        "out": 2,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "이재학",
-        "batter": "권혁빈",
-        "heat": 33,
+        "pitcher": "전준표",
+        "batter": "이우성",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
