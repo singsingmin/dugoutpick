@@ -1,7 +1,7 @@
 {
   "date": "20260905",
   "dateText": "2026년 9월 5일",
-  "updatedAt": "2026-09-05T12:10:25.773Z",
+  "updatedAt": "2026-09-05T12:13:43.688Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -69,10 +69,10 @@
         "half": "B",
         "out": 1,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "사토시",
-        "batter": "박해민",
+        "batter": "오스틴",
         "heat": 94,
         "label": "끝내기 한 방 찬스"
       },
