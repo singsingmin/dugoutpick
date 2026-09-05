@@ -1,7 +1,7 @@
 {
   "date": "20260905",
   "dateText": "2026년 9월 5일",
-  "updatedAt": "2026-09-05T12:00:38.319Z",
+  "updatedAt": "2026-09-05T12:10:25.773Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "이승현",
           "era": 6.89,
@@ -66,15 +66,15 @@
       },
       "live": {
         "inning": 11,
-        "half": "T",
+        "half": "B",
         "out": 1,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "이정용",
-        "batter": "김영웅",
-        "heat": 92,
-        "label": "연장 혈투 진행 중"
+        "pitcher": "사토시",
+        "batter": "박해민",
+        "heat": 94,
+        "label": "끝내기 한 방 찬스"
       },
       "recap": null,
       "decision": null,
