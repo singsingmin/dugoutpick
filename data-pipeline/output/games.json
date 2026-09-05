@@ -1,7 +1,7 @@
 {
   "date": "20260905",
   "dateText": "2026년 9월 5일",
-  "updatedAt": "2026-09-05T11:30:32.927Z",
+  "updatedAt": "2026-09-05T11:40:24.402Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 10,
         "half": "T",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "out": 2,
+        "b1": true,
+        "b2": true,
         "b3": false,
         "pitcher": "이상영",
-        "batter": "김지찬",
+        "batter": "디아즈",
         "heat": 89,
         "label": "연장 혈투 진행 중"
       },
