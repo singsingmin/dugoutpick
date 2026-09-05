@@ -1,7 +1,7 @@
 {
   "date": "20260905",
   "dateText": "2026년 9월 5일",
-  "updatedAt": "2026-09-05T12:20:25.669Z",
+  "updatedAt": "2026-09-05T12:30:39.217Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -21,11 +21,11 @@
       "away": {
         "code": "SS",
         "name": "삼성",
-        "rank": 2,
+        "rank": 1,
         "score": 4,
         "starter": {
           "name": "이승현",
-          "era": 6.89,
+          "era": 5.94,
           "w": 0,
           "l": 2
         }
@@ -37,7 +37,7 @@
         "score": 3,
         "starter": {
           "name": "톨허스트",
-          "era": 4.42,
+          "era": 4.22,
           "w": 11,
           "l": 9
         }
@@ -74,9 +74,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "김재윤",
+        "lose": "이정용",
+        "save": "사토시"
       },
       "lineup": null
     },
@@ -94,7 +94,7 @@
         "score": 11,
         "starter": {
           "name": "황준서",
-          "era": 4.76,
+          "era": 4.95,
           "w": 1,
           "l": 2
         }
@@ -106,7 +106,7 @@
         "score": 6,
         "starter": {
           "name": "나균안",
-          "era": 4,
+          "era": 4.03,
           "w": 6,
           "l": 9
         }
@@ -143,8 +143,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "장유호",
+        "lose": "박정민",
         "save": null
       },
       "lineup": null
@@ -163,9 +163,9 @@
         "score": 2,
         "starter": {
           "name": "최민석",
-          "era": 2.61,
+          "era": 2.69,
           "w": 13,
-          "l": 3
+          "l": 4
         }
       },
       "home": {
@@ -175,8 +175,8 @@
         "score": 3,
         "starter": {
           "name": "김민준",
-          "era": 3.41,
-          "w": 5,
+          "era": 3.38,
+          "w": 6,
           "l": 2
         }
       },
@@ -212,9 +212,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "김민준",
+        "lose": "최민석",
+        "save": "조병현"
       },
       "lineup": null
     },
@@ -228,13 +228,13 @@
       "away": {
         "code": "KT",
         "name": "KT",
-        "rank": 1,
+        "rank": 2,
         "score": 3,
         "starter": {
           "name": "로건",
-          "era": 3.23,
+          "era": 3.07,
           "w": 5,
-          "l": 2
+          "l": 3
         }
       },
       "home": {
@@ -244,8 +244,8 @@
         "score": 6,
         "starter": {
           "name": "양현종",
-          "era": 4.19,
-          "w": 9,
+          "era": 4.25,
+          "w": 10,
           "l": 6
         }
       },
@@ -281,9 +281,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "양현종",
+        "lose": "로건",
+        "save": "전상현"
       },
       "lineup": null
     },
@@ -301,9 +301,9 @@
         "score": 2,
         "starter": {
           "name": "이재학",
-          "era": null,
-          "w": null,
-          "l": null
+          "era": 2.25,
+          "w": 0,
+          "l": 0
         }
       },
       "home": {
@@ -313,9 +313,9 @@
         "score": 1,
         "starter": {
           "name": "전준표",
-          "era": 5.17,
+          "era": 4.57,
           "w": 0,
-          "l": 2
+          "l": 3
         }
       },
       "honjam": {
@@ -350,9 +350,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "배재환",
+        "lose": "전준표",
+        "save": "전사민"
       },
       "lineup": null
     }
