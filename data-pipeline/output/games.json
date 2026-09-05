@@ -1,7 +1,7 @@
 {
   "date": "20260905",
   "dateText": "2026년 9월 5일",
-  "updatedAt": "2026-09-05T08:10:26.484Z",
+  "updatedAt": "2026-09-05T08:20:24.942Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이승현",
-        "batter": "신민재",
-        "heat": 33,
+        "pitcher": "톨허스트",
+        "batter": "디아즈",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -187,7 +187,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 9,
-        "score": 0,
+        "score": 3,
         "starter": {
           "name": "황준서",
           "era": 4.76,
@@ -231,15 +231,15 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
+        "half": "B",
         "out": 1,
-        "b1": true,
+        "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "나균안",
-        "batter": "강백호",
-        "heat": 31,
-        "label": "초반 팽팽한 흐름"
+        "b3": false,
+        "pitcher": "황준서",
+        "batter": "나승엽",
+        "heat": 19,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 0,
+        "inning": 2,
+        "half": "T",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "최민석",
-        "batter": "김성현",
-        "heat": 33,
+        "pitcher": "김민준",
+        "batter": "손아섭",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "T",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
         "pitcher": "양현종",
-        "batter": "허경민",
-        "heat": 29,
+        "batter": "김상수",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 0,
+        "inning": 2,
+        "half": "T",
+        "out": 1,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "이재학",
-        "batter": "추재현",
-        "heat": 33,
+        "pitcher": "전준표",
+        "batter": "김휘집",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
