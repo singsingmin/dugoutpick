@@ -1,7 +1,7 @@
 {
   "date": "20260905",
   "dateText": "2026년 9월 5일",
-  "updatedAt": "2026-09-05T08:40:27.760Z",
+  "updatedAt": "2026-09-05T08:42:31.294Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 2,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "이승현",
-        "batter": "구본혁",
+        "batter": "홍창기",
         "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "황준서",
         "batter": "조세진",
-        "heat": 35,
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -397,12 +397,12 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "최민석",
-        "batter": "김요셉",
+        "batter": "오시후",
         "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
@@ -565,7 +565,7 @@
         "out": 1,
         "b1": true,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "로건",
         "batter": "한준수",
         "heat": 35,
