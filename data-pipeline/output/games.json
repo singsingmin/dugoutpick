@@ -1,7 +1,7 @@
 {
   "date": "20260905",
   "dateText": "2026년 9월 5일",
-  "updatedAt": "2026-09-05T10:50:24.819Z",
+  "updatedAt": "2026-09-05T11:00:40.385Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
+        "inning": 9,
+        "half": "T",
         "out": 1,
-        "b1": false,
-        "b2": false,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "장찬희",
-        "batter": "구본혁",
-        "heat": 72,
-        "label": "후반 박빙 승부"
+        "pitcher": "이우찬",
+        "batter": "김영웅",
+        "heat": 80,
+        "label": "9회 1점 승부"
       },
       "recap": null,
       "decision": null,
@@ -230,14 +230,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
+        "inning": 9,
         "half": "T",
-        "out": 2,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "이영재",
-        "batter": "노시환",
+        "batter": "유민",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
@@ -433,7 +433,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 4,
+        "score": 6,
         "starter": {
           "name": "양현종",
           "era": 4.19,
@@ -465,15 +465,15 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 3,
-        "b1": true,
+        "half": "B",
+        "out": 0,
+        "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "전상현",
-        "batter": "최원준",
-        "heat": 64,
-        "label": "후반 박빙 승부"
+        "b3": false,
+        "pitcher": "우규민",
+        "batter": "김태군",
+        "heat": 45,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -630,14 +630,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 1,
-        "b1": true,
+        "half": "B",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이강준",
-        "batter": "김휘집",
-        "heat": 64,
+        "pitcher": "이용준",
+        "batter": "데이비슨",
+        "heat": 67,
         "label": "후반 박빙 승부"
       },
       "recap": null,
