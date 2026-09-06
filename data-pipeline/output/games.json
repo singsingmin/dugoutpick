@@ -1,7 +1,7 @@
 {
   "date": "20260906",
   "dateText": "2026년 9월 6일",
-  "updatedAt": "2026-09-06T09:10:24.048Z",
+  "updatedAt": "2026-09-06T09:20:26.410Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -91,7 +91,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 1,
-        "score": 2,
+        "score": 4,
         "starter": {
           "name": "후라도",
           "era": 3.11,
@@ -134,15 +134,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 2,
-        "b1": false,
+        "inning": 5,
+        "half": "T",
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "후라도",
-        "batter": "오지환",
-        "heat": 37,
+        "pitcher": "임찬규",
+        "batter": "최형우",
+        "heat": 52,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -268,7 +268,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "로드리게스",
           "era": 4.17,
@@ -299,15 +299,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 1,
-        "b1": true,
+        "inning": 5,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "화이트",
-        "batter": "레이예스",
-        "heat": 37,
+        "pitcher": "로드리게스",
+        "batter": "심우준",
+        "heat": 51,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -464,15 +464,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 2,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "잭로그",
-        "batter": "김재환",
-        "heat": 37,
+        "pitcher": "박시후",
+        "batter": "세베리노",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -629,15 +629,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 1,
+        "inning": 4,
+        "half": "T",
+        "out": 2,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "대니엘",
-        "batter": "김선빈",
-        "heat": 33,
+        "pitcher": "네일",
+        "batter": "한승택",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
