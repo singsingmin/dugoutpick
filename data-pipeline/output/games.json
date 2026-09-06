@@ -1,7 +1,7 @@
 {
   "date": "20260906",
   "dateText": "2026년 9월 6일",
-  "updatedAt": "2026-09-06T05:50:24.580Z",
+  "updatedAt": "2026-09-06T06:00:38.803Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 6,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "구창모",
           "era": 4.04,
@@ -67,13 +67,13 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "알칸타라",
-        "batter": "최정원",
-        "heat": 45,
+        "batter": "이우성",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
