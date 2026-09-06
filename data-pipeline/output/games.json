@@ -1,7 +1,7 @@
 {
   "date": "20260906",
   "dateText": "2026년 9월 6일",
-  "updatedAt": "2026-09-06T06:00:38.803Z",
+  "updatedAt": "2026-09-06T06:10:23.467Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 6,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "구창모",
           "era": 4.04,
@@ -34,7 +34,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "알칸타라",
           "era": 3.84,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 2,
-        "b1": false,
+        "half": "B",
+        "out": 1,
+        "b1": true,
         "b2": false,
-        "b3": true,
-        "pitcher": "알칸타라",
-        "batter": "이우성",
-        "heat": 43,
+        "b3": false,
+        "pitcher": "구창모",
+        "batter": "박찬혁",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
