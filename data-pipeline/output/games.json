@@ -1,7 +1,7 @@
 {
   "date": "20260906",
   "dateText": "2026년 9월 6일",
-  "updatedAt": "2026-09-06T06:30:30.177Z",
+  "updatedAt": "2026-09-06T06:33:16.024Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "알칸타라",
-        "batter": "최정원",
+        "batter": "블레인",
         "heat": 53,
         "label": "경기 흐름 체크 중"
       },
