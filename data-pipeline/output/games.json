@@ -1,7 +1,7 @@
 {
   "date": "20260906",
   "dateText": "2026년 9월 6일",
-  "updatedAt": "2026-09-06T05:20:26.874Z",
+  "updatedAt": "2026-09-06T05:30:33.982Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
+        "half": "B",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "알칸타라",
-        "batter": "김휘집",
-        "heat": 35,
+        "pitcher": "구창모",
+        "batter": "박찬혁",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
