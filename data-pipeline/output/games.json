@@ -1,7 +1,7 @@
 {
   "date": "20260906",
   "dateText": "2026년 9월 6일",
-  "updatedAt": "2026-09-05T15:23:02.235Z",
+  "updatedAt": "2026-09-06T05:00:36.823Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -70,7 +70,7 @@
         "home": [
           {
             "order": 1,
-            "pos": "2루수",
+            "pos": "지명타자",
             "name": "서건창"
           },
           {
@@ -90,8 +90,8 @@
           },
           {
             "order": 5,
-            "pos": "지명타자",
-            "name": "김웅빈"
+            "pos": "2루수",
+            "name": "안치홍"
           },
           {
             "order": 6,
@@ -100,13 +100,13 @@
           },
           {
             "order": 7,
-            "pos": "3루수",
-            "name": "여동욱"
+            "pos": "포수",
+            "name": "김건희"
           },
           {
             "order": 8,
-            "pos": "포수",
-            "name": "김동헌"
+            "pos": "3루수",
+            "name": "여동욱"
           },
           {
             "order": 9,
@@ -127,41 +127,41 @@
           },
           {
             "order": 3,
-            "pos": "2루수",
-            "name": "박민우"
-          },
-          {
-            "order": 4,
             "pos": "1루수",
             "name": "블레인"
           },
           {
-            "order": 5,
-            "pos": "우익수",
-            "name": "박건우"
-          },
-          {
-            "order": 6,
+            "order": 4,
             "pos": "3루수",
             "name": "김휘집"
           },
           {
-            "order": 7,
+            "order": 5,
             "pos": "지명타자",
+            "name": "박건우"
+          },
+          {
+            "order": 6,
+            "pos": "좌익수",
             "name": "이우성"
           },
           {
-            "order": 8,
+            "order": 7,
             "pos": "포수",
-            "name": "김형준"
+            "name": "안중열"
+          },
+          {
+            "order": 8,
+            "pos": "2루수",
+            "name": "서호철"
           },
           {
             "order": 9,
-            "pos": "좌익수",
+            "pos": "우익수",
             "name": "천재환"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
