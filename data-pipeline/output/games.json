@@ -1,7 +1,7 @@
 {
   "date": "20260906",
   "dateText": "2026년 9월 6일",
-  "updatedAt": "2026-09-06T09:40:24.909Z",
+  "updatedAt": "2026-09-06T09:50:29.382Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -91,7 +91,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 1,
-        "score": 5,
+        "score": 7,
         "starter": {
           "name": "후라도",
           "era": 3.11,
@@ -135,15 +135,15 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 1,
-        "b1": true,
-        "b2": true,
+        "half": "B",
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "케네디",
-        "batter": "김지찬",
-        "heat": 56,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "후라도",
+        "batter": "송찬의",
+        "heat": 40,
+        "label": "점수 나는 난타전"
       },
       "recap": null,
       "decision": null,
@@ -299,15 +299,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
+        "inning": 6,
+        "half": "T",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "화이트",
-        "batter": "조세진",
-        "heat": 31,
+        "pitcher": "김원중",
+        "batter": "이도윤",
+        "heat": 33,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -464,14 +464,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 2,
+        "inning": 6,
+        "half": "T",
+        "out": 0,
         "b1": true,
         "b2": true,
         "b3": false,
-        "pitcher": "잭로그",
-        "batter": "김요셉",
+        "pitcher": "김도현",
+        "batter": "박찬호",
         "heat": 11,
         "label": "경기 흐름 체크 중"
       },
@@ -629,16 +629,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
+        "inning": 6,
         "half": "T",
-        "out": 1,
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
         "pitcher": "네일",
-        "batter": "김민혁",
-        "heat": 40,
-        "label": "초반 팽팽한 흐름"
+        "batter": "힐리어드",
+        "heat": 44,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
