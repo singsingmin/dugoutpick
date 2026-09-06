@@ -1,7 +1,7 @@
 {
   "date": "20260906",
   "dateText": "2026년 9월 6일",
-  "updatedAt": "2026-09-06T06:40:25.391Z",
+  "updatedAt": "2026-09-06T06:50:26.376Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 1,
+        "score": 3,
         "starter": {
           "name": "알칸타라",
           "era": 3.84,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 0,
-        "b1": true,
+        "out": 2,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "구창모",
-        "batter": "데이비슨",
+        "pitcher": "배재환",
+        "batter": "박찬혁",
         "heat": 56,
         "label": "경기 흐름 체크 중"
       },
