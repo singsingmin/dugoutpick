@@ -1,7 +1,7 @@
 {
   "date": "20260906",
   "dateText": "2026년 9월 6일",
-  "updatedAt": "2026-09-06T06:10:23.467Z",
+  "updatedAt": "2026-09-06T06:20:22.685Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 1,
+        "inning": 5,
+        "half": "T",
+        "out": 2,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "구창모",
-        "batter": "박찬혁",
-        "heat": 45,
+        "pitcher": "알칸타라",
+        "batter": "최정원",
+        "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
