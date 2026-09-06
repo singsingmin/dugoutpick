@@ -1,7 +1,7 @@
 {
   "date": "20260906",
   "dateText": "2026년 9월 6일",
-  "updatedAt": "2026-09-06T07:10:27.443Z",
+  "updatedAt": "2026-09-06T07:20:24.262Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
+        "half": "B",
         "out": 2,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "이강준",
-        "batter": "블레인",
-        "heat": 64,
+        "pitcher": "손주환",
+        "batter": "히우라",
+        "heat": 67,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -542,12 +542,12 @@
           {
             "order": 1,
             "pos": "2루수",
-            "name": "김성현"
+            "name": "정준재"
           },
           {
             "order": 2,
             "pos": "유격수",
-            "name": "박성한"
+            "name": "안상현"
           },
           {
             "order": 3,
@@ -567,22 +567,22 @@
           {
             "order": 6,
             "pos": "포수",
-            "name": "조형우"
+            "name": "이지영"
           },
           {
             "order": 7,
             "pos": "중견수",
-            "name": "최지훈"
+            "name": "채현우"
           },
           {
             "order": 8,
-            "pos": "3루수",
-            "name": "김요셉"
+            "pos": "우익수",
+            "name": "임근우"
           },
           {
             "order": 9,
-            "pos": "우익수",
-            "name": "오시후"
+            "pos": "3루수",
+            "name": "김요셉"
           }
         ],
         "away": [
@@ -603,36 +603,36 @@
           },
           {
             "order": 4,
-            "pos": "포수",
-            "name": "양의지"
-          },
-          {
-            "order": 5,
             "pos": "2루수",
             "name": "박준순"
           },
           {
-            "order": 6,
+            "order": 5,
             "pos": "지명타자",
-            "name": "손아섭"
+            "name": "세베리노"
           },
           {
-            "order": 7,
+            "order": 6,
             "pos": "1루수",
             "name": "양석환"
           },
           {
+            "order": 7,
+            "pos": "중견수",
+            "name": "정수빈"
+          },
+          {
             "order": 8,
-            "pos": "우익수",
-            "name": "조수행"
+            "pos": "포수",
+            "name": "김기연"
           },
           {
             "order": 9,
-            "pos": "중견수",
-            "name": "정수빈"
+            "pos": "우익수",
+            "name": "김대한"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
