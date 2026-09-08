@@ -1,7 +1,7 @@
 {
   "date": "20260908",
   "dateText": "2026년 9월 8일",
-  "updatedAt": "2026-09-08T10:10:26.274Z",
+  "updatedAt": "2026-09-08T10:20:26.051Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "하영민",
           "era": 4.54,
@@ -66,13 +66,13 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
+        "half": "B",
         "out": 0,
-        "b1": true,
-        "b2": true,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "박시원",
-        "batter": "서건창",
+        "pitcher": "하영민",
+        "batter": "박동원",
         "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
+        "inning": 4,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "시라카와",
-        "batter": "김영웅",
-        "heat": 43,
+        "pitcher": "최원태",
+        "batter": "김도영",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -364,7 +364,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 2,
-        "score": 0,
+        "score": 3,
         "starter": {
           "name": "소형준",
           "era": 3.55,
@@ -395,16 +395,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
-        "out": 1,
-        "b1": true,
-        "b2": true,
+        "inning": 3,
+        "half": "T",
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "김건우",
-        "batter": "최원준",
-        "heat": 38,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "소형준",
+        "batter": "안재연",
+        "heat": 23,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
-        "out": 0,
+        "inning": 3,
+        "half": "T",
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박세웅",
-        "batter": "김휘집",
-        "heat": 35,
+        "pitcher": "토다",
+        "batter": "한동희",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -726,14 +726,14 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
+        "half": "B",
         "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "류현진",
-        "batter": "김대한",
-        "heat": 31,
+        "pitcher": "최승용",
+        "batter": "페라자",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
