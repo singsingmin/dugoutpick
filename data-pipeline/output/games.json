@@ -1,7 +1,7 @@
 {
   "date": "20260908",
   "dateText": "2026년 9월 8일",
-  "updatedAt": "2026-09-08T11:00:41.419Z",
+  "updatedAt": "2026-09-08T11:10:26.813Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 2,
+        "score": 4,
         "starter": {
           "name": "하영민",
           "era": 4.54,
@@ -69,12 +69,12 @@
         "half": "T",
         "out": 0,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": true,
-        "pitcher": "이우찬",
-        "batter": "히우라",
-        "heat": 40,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "김영우",
+        "batter": "안치홍",
+        "heat": 19,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "시라카와",
-        "batter": "김영웅",
+        "out": 2,
+        "b1": true,
+        "b2": true,
+        "b3": true,
+        "pitcher": "김범수",
+        "batter": "최형우",
         "heat": 50,
         "label": "초반 팽팽한 흐름"
       },
@@ -395,16 +395,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
+        "inning": 6,
         "half": "B",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "타케다",
-        "batter": "오윤석",
-        "heat": 42,
-        "label": "초반 팽팽한 흐름"
+        "b3": false,
+        "pitcher": "문승원",
+        "batter": "조대현",
+        "heat": 46,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 0,
-        "b1": true,
-        "b2": false,
+        "b1": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "박세웅",
-        "batter": "최정원",
-        "heat": 48,
+        "pitcher": "토다",
+        "batter": "나승엽",
+        "heat": 51,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -682,7 +682,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "최승용",
           "era": 5.74,
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 2,
-        "b1": true,
+        "inning": 6,
+        "half": "T",
+        "out": 1,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이용찬",
-        "batter": "강백호",
-        "heat": 20,
+        "pitcher": "류현진",
+        "batter": "양석환",
+        "heat": 33,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
