@@ -1,7 +1,7 @@
 {
   "date": "20260908",
   "dateText": "2026년 9월 8일",
-  "updatedAt": "2026-09-08T09:40:29.417Z",
+  "updatedAt": "2026-09-08T09:50:23.327Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "B",
-        "out": 1,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "하영민",
-        "batter": "오스틴",
-        "heat": 33,
+        "batter": "송찬의",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "시라카와",
-        "batter": "박승규",
-        "heat": 33,
+        "pitcher": "최원태",
+        "batter": "나성범",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -397,12 +397,12 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "out": 1,
+        "b1": true,
+        "b2": true,
         "b3": false,
         "pitcher": "김건우",
-        "batter": "최원준",
+        "batter": "힐리어드",
         "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
@@ -517,7 +517,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 9,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "박세웅",
           "era": 4.99,
@@ -561,13 +561,13 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
+        "half": "B",
         "out": 1,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "토다",
-        "batter": "고승민",
+        "pitcher": "박세웅",
+        "batter": "박건우",
         "heat": 31,
         "label": "초반 팽팽한 흐름"
       },
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "최승용",
-        "batter": "페라자",
-        "heat": 33,
+        "pitcher": "류현진",
+        "batter": "김민석",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
