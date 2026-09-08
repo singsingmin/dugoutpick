@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-08T12:20:32.658Z",
+  "updatedAt": "2026-09-08T12:30:34.575Z",
   "lastWeek": {
     "range": [
       "20260831",
@@ -53,7 +53,7 @@
         "l": 3,
         "d": 0,
         "rank": 7,
-        "note": "3연승 — 좀 더 달린다 — 이번주도 기대해볼 만"
+        "note": "4연승 질주 — 상승세 제대로다"
       },
       "LT": {
         "w": 1,
@@ -101,15 +101,75 @@
         "dateEnd": "20260908"
       },
       {
-        "away": "LT",
-        "home": "NC",
-        "pred": 86,
-        "reason": "낙동강 더비 · 게임차 5.5의 순위 다툼",
-        "dateStart": "20260908",
-        "dateEnd": "20260908"
+        "away": "NC",
+        "home": "HH",
+        "pred": 87,
+        "reason": "게임차 4의 순위 다툼",
+        "dateStart": "20260911",
+        "dateEnd": "20260911"
       }
     ],
     "team": {
+      "SK": [
+        {
+          "date": "20260908",
+          "away": "SK",
+          "home": "KT",
+          "awayStarter": "김건우",
+          "homeStarter": "소형준"
+        },
+        {
+          "date": "20260909",
+          "away": "SK",
+          "home": "OB",
+          "awayStarter": "이로운",
+          "homeStarter": "곽빈"
+        },
+        {
+          "date": "20260910",
+          "away": "HH",
+          "home": "SK"
+        },
+        {
+          "date": "20260911",
+          "away": "SK",
+          "home": "HT"
+        }
+      ],
+      "KT": [
+        {
+          "date": "20260908",
+          "away": "SK",
+          "home": "KT",
+          "awayStarter": "김건우",
+          "homeStarter": "소형준"
+        },
+        {
+          "date": "20260909",
+          "away": "KT",
+          "home": "SS"
+        },
+        {
+          "date": "20260910",
+          "away": "KT",
+          "home": "LT"
+        },
+        {
+          "date": "20260911",
+          "away": "KT",
+          "home": "LT"
+        },
+        {
+          "date": "20260912",
+          "away": "HT",
+          "home": "KT"
+        },
+        {
+          "date": "20260913",
+          "away": "LT",
+          "home": "KT"
+        }
+      ],
       "WO": [
         {
           "date": "20260908",
@@ -219,66 +279,6 @@
           "date": "20260913",
           "away": "LG",
           "home": "SS"
-        }
-      ],
-      "SK": [
-        {
-          "date": "20260908",
-          "away": "SK",
-          "home": "KT",
-          "awayStarter": "김건우",
-          "homeStarter": "소형준"
-        },
-        {
-          "date": "20260909",
-          "away": "SK",
-          "home": "OB",
-          "awayStarter": "이로운",
-          "homeStarter": "곽빈"
-        },
-        {
-          "date": "20260910",
-          "away": "HH",
-          "home": "SK"
-        },
-        {
-          "date": "20260911",
-          "away": "SK",
-          "home": "HT"
-        }
-      ],
-      "KT": [
-        {
-          "date": "20260908",
-          "away": "SK",
-          "home": "KT",
-          "awayStarter": "김건우",
-          "homeStarter": "소형준"
-        },
-        {
-          "date": "20260909",
-          "away": "KT",
-          "home": "SS"
-        },
-        {
-          "date": "20260910",
-          "away": "KT",
-          "home": "LT"
-        },
-        {
-          "date": "20260911",
-          "away": "KT",
-          "home": "LT"
-        },
-        {
-          "date": "20260912",
-          "away": "HT",
-          "home": "KT"
-        },
-        {
-          "date": "20260913",
-          "away": "LT",
-          "home": "KT"
         }
       ],
       "LT": [
