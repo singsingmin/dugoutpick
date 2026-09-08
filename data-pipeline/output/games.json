@@ -1,7 +1,7 @@
 {
   "date": "20260908",
   "dateText": "2026년 9월 8일",
-  "updatedAt": "2026-09-08T12:30:34.575Z",
+  "updatedAt": "2026-09-08T12:40:26.407Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
-        "out": 0,
+        "half": "B",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "조원태",
-        "batter": "김동헌",
-        "heat": 15,
+        "pitcher": "조영건",
+        "batter": "이영빈",
+        "heat": 16,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -187,7 +187,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "시라카와",
           "era": 4.7,
@@ -232,13 +232,13 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "김재윤",
-        "batter": "김호령",
-        "heat": 28,
+        "batter": "김도영",
+        "heat": 46,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -464,15 +464,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
+        "inning": 9,
         "half": "T",
-        "out": 2,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "류진욱",
-        "batter": "레이예스",
-        "heat": 55,
+        "pitcher": "신영우",
+        "batter": "나승엽",
+        "heat": 60,
         "label": "후반 박빙 승부"
       },
       "recap": null,

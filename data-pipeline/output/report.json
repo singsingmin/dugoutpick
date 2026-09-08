@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-08T12:30:34.575Z",
+  "updatedAt": "2026-09-08T12:40:26.407Z",
   "lastWeek": {
     "range": [
       "20260831",
@@ -168,6 +168,66 @@
           "date": "20260913",
           "away": "LT",
           "home": "KT"
+        }
+      ],
+      "OB": [
+        {
+          "date": "20260908",
+          "away": "OB",
+          "home": "HH",
+          "awayStarter": "최승용",
+          "homeStarter": "류현진"
+        },
+        {
+          "date": "20260909",
+          "away": "SK",
+          "home": "OB",
+          "awayStarter": "이로운",
+          "homeStarter": "곽빈"
+        },
+        {
+          "date": "20260910",
+          "away": "WO",
+          "home": "OB"
+        },
+        {
+          "date": "20260912",
+          "away": "NC",
+          "home": "OB"
+        },
+        {
+          "date": "20260913",
+          "away": "NC",
+          "home": "OB"
+        }
+      ],
+      "HH": [
+        {
+          "date": "20260908",
+          "away": "OB",
+          "home": "HH",
+          "awayStarter": "최승용",
+          "homeStarter": "류현진"
+        },
+        {
+          "date": "20260909",
+          "away": "LG",
+          "home": "HH"
+        },
+        {
+          "date": "20260910",
+          "away": "HH",
+          "home": "SK"
+        },
+        {
+          "date": "20260911",
+          "away": "NC",
+          "home": "HH"
+        },
+        {
+          "date": "20260913",
+          "away": "HH",
+          "home": "HT"
         }
       ],
       "WO": [
@@ -342,66 +402,6 @@
           "date": "20260913",
           "away": "NC",
           "home": "OB"
-        }
-      ],
-      "OB": [
-        {
-          "date": "20260908",
-          "away": "OB",
-          "home": "HH",
-          "awayStarter": "최승용",
-          "homeStarter": "류현진"
-        },
-        {
-          "date": "20260909",
-          "away": "SK",
-          "home": "OB",
-          "awayStarter": "이로운",
-          "homeStarter": "곽빈"
-        },
-        {
-          "date": "20260910",
-          "away": "WO",
-          "home": "OB"
-        },
-        {
-          "date": "20260912",
-          "away": "NC",
-          "home": "OB"
-        },
-        {
-          "date": "20260913",
-          "away": "NC",
-          "home": "OB"
-        }
-      ],
-      "HH": [
-        {
-          "date": "20260908",
-          "away": "OB",
-          "home": "HH",
-          "awayStarter": "최승용",
-          "homeStarter": "류현진"
-        },
-        {
-          "date": "20260909",
-          "away": "LG",
-          "home": "HH"
-        },
-        {
-          "date": "20260910",
-          "away": "HH",
-          "home": "SK"
-        },
-        {
-          "date": "20260911",
-          "away": "NC",
-          "home": "HH"
-        },
-        {
-          "date": "20260913",
-          "away": "HH",
-          "home": "HT"
         }
       ]
     }
