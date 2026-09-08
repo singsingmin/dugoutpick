@@ -1,7 +1,7 @@
 {
   "date": "20260908",
   "dateText": "2026년 9월 8일",
-  "updatedAt": "2026-09-08T12:50:25.613Z",
+  "updatedAt": "2026-09-08T13:00:52.252Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -273,14 +273,14 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 3,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "이준혁",
-        "batter": "장두성",
-        "heat": 46,
+        "pitcher": "이이무라",
+        "batter": "김주원",
+        "heat": 48,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
