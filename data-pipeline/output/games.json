@@ -1,12 +1,12 @@
 {
   "date": "20260908",
   "dateText": "2026년 9월 8일",
-  "updatedAt": "2026-09-08T12:40:26.407Z",
+  "updatedAt": "2026-09-08T12:50:25.613Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
-    "hitRate": 20,
-    "bonusRate": 46,
+    "hitRate": 22,
+    "bonusRate": 44,
     "ready": true
   },
   "recommendedGameId": "20260908HTSS0",
@@ -15,7 +15,7 @@
       "gameId": "20260908WOLG0",
       "time": "18:30",
       "stadium": "잠실",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "MBC SPORTS+",
       "away": {
@@ -33,7 +33,7 @@
       "home": {
         "code": "LG",
         "name": "LG",
-        "rank": 3,
+        "rank": 4,
         "score": 3,
         "starter": {
           "name": "박시원",
@@ -64,130 +64,34 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 1,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "조영건",
-        "batter": "이영빈",
-        "heat": 16,
-        "label": "경기 흐름 체크 중"
+      "live": null,
+      "recap": {
+        "actual": 32,
+        "verdict": "기대 이상",
+        "diff": 5,
+        "total": 11,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "2루수",
-            "name": "신민재"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "박해민"
-          },
-          {
-            "order": 3,
-            "pos": "지명타자",
-            "name": "오스틴"
-          },
-          {
-            "order": 4,
-            "pos": "좌익수",
-            "name": "송찬의"
-          },
-          {
-            "order": 5,
-            "pos": "1루수",
-            "name": "문정빈"
-          },
-          {
-            "order": 6,
-            "pos": "우익수",
-            "name": "홍창기"
-          },
-          {
-            "order": 7,
-            "pos": "3루수",
-            "name": "구본혁"
-          },
-          {
-            "order": 8,
-            "pos": "유격수",
-            "name": "오지환"
-          },
-          {
-            "order": 9,
-            "pos": "포수",
-            "name": "박동원"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "지명타자",
-            "name": "서건창"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "추재현"
-          },
-          {
-            "order": 3,
-            "pos": "1루수",
-            "name": "데이비슨"
-          },
-          {
-            "order": 4,
-            "pos": "좌익수",
-            "name": "히우라"
-          },
-          {
-            "order": 5,
-            "pos": "3루수",
-            "name": "김웅빈"
-          },
-          {
-            "order": 6,
-            "pos": "포수",
-            "name": "김동헌"
-          },
-          {
-            "order": 7,
-            "pos": "2루수",
-            "name": "염승원"
-          },
-          {
-            "order": 8,
-            "pos": "중견수",
-            "name": "박주홍"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "권혁빈"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260908HTSS0",
       "time": "18:30",
       "stadium": "대구",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPOTV",
       "away": {
         "code": "HT",
         "name": "KIA",
-        "rank": 4,
-        "score": 3,
+        "rank": 3,
+        "score": 4,
         "starter": {
           "name": "시라카와",
           "era": 4.7,
@@ -229,117 +133,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 2,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "김재윤",
-        "batter": "김도영",
-        "heat": 46,
-        "label": "경기 흐름 체크 중"
+      "live": null,
+      "recap": {
+        "actual": 83,
+        "verdict": "예측 적중",
+        "diff": 2,
+        "total": 10,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "김지찬"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "박승규"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "구자욱"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "최형우"
-          },
-          {
-            "order": 5,
-            "pos": "1루수",
-            "name": "디아즈"
-          },
-          {
-            "order": 6,
-            "pos": "2루수",
-            "name": "류지혁"
-          },
-          {
-            "order": 7,
-            "pos": "포수",
-            "name": "강민호"
-          },
-          {
-            "order": 8,
-            "pos": "3루수",
-            "name": "김영웅"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "이재현"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "좌익수",
-            "name": "박재현"
-          },
-          {
-            "order": 2,
-            "pos": "지명타자",
-            "name": "박상준"
-          },
-          {
-            "order": 3,
-            "pos": "3루수",
-            "name": "김도영"
-          },
-          {
-            "order": 4,
-            "pos": "1루수",
-            "name": "카스트로"
-          },
-          {
-            "order": 5,
-            "pos": "우익수",
-            "name": "나성범"
-          },
-          {
-            "order": 6,
-            "pos": "2루수",
-            "name": "김선빈"
-          },
-          {
-            "order": 7,
-            "pos": "유격수",
-            "name": "하주석"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "김태군"
-          },
-          {
-            "order": 9,
-            "pos": "중견수",
-            "name": "김호령"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260908SKKT0",
@@ -421,7 +229,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "박세웅",
           "era": 4.99,
@@ -466,14 +274,14 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "신영우",
-        "batter": "나승엽",
-        "heat": 60,
-        "label": "후반 박빙 승부"
+        "pitcher": "이준혁",
+        "batter": "장두성",
+        "heat": 46,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
