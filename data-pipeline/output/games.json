@@ -1,7 +1,7 @@
 {
   "date": "20260909",
   "dateText": "2026년 9월 9일",
-  "updatedAt": "2026-09-09T10:50:25.303Z",
+  "updatedAt": "2026-09-09T11:00:42.807Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
+        "inning": 7,
         "half": "T",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "곽빈",
-        "batter": "조형우",
-        "heat": 53,
-        "label": "경기 흐름 체크 중"
+        "batter": "안상현",
+        "heat": 59,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
+        "half": "B",
         "out": 2,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "원태인",
-        "batter": "권동진",
-        "heat": 51,
+        "pitcher": "고영표",
+        "batter": "이재현",
+        "heat": 54,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -364,7 +364,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "황동하",
           "era": 4.98,
@@ -396,15 +396,15 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 3,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "김태형",
-        "batter": "김주원",
-        "heat": 29,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "송명기",
+        "batter": "김호령",
+        "heat": 42,
+        "label": "초반 팽팽한 흐름"
       },
       "recap": null,
       "decision": null,
@@ -529,7 +529,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 7,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "왕옌청",
           "era": 3.86,
@@ -560,16 +560,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 2,
+        "inning": 5,
+        "half": "T",
+        "out": 1,
         "b1": true,
         "b2": false,
-        "b3": true,
-        "pitcher": "카라스코",
-        "batter": "심우준",
-        "heat": 37,
-        "label": "초반 팽팽한 흐름"
+        "b3": false,
+        "pitcher": "왕옌청",
+        "batter": "신민재",
+        "heat": 29,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
