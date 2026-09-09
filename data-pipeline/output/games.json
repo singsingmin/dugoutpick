@@ -1,7 +1,7 @@
 {
   "date": "20260909",
   "dateText": "2026년 9월 9일",
-  "updatedAt": "2026-09-09T08:40:27.267Z",
+  "updatedAt": "2026-09-09T08:50:26.014Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -229,7 +229,7 @@
           {
             "order": 2,
             "pos": "우익수",
-            "name": "박승규"
+            "name": "김성윤"
           },
           {
             "order": 3,
@@ -243,23 +243,23 @@
           },
           {
             "order": 5,
-            "pos": "1루수",
-            "name": "디아즈"
-          },
-          {
-            "order": 6,
             "pos": "2루수",
             "name": "류지혁"
           },
           {
+            "order": 6,
+            "pos": "3루수",
+            "name": "전병우"
+          },
+          {
             "order": 7,
-            "pos": "포수",
-            "name": "강민호"
+            "pos": "1루수",
+            "name": "디아즈"
           },
           {
             "order": 8,
-            "pos": "3루수",
-            "name": "김영웅"
+            "pos": "포수",
+            "name": "강민호"
           },
           {
             "order": 9,
@@ -275,8 +275,8 @@
           },
           {
             "order": 2,
-            "pos": "2루수",
-            "name": "김상수"
+            "pos": "3루수",
+            "name": "허경민"
           },
           {
             "order": 3,
@@ -295,26 +295,26 @@
           },
           {
             "order": 6,
-            "pos": "3루수",
-            "name": "허경민"
+            "pos": "2루수",
+            "name": "김상수"
           },
           {
             "order": 7,
             "pos": "1루수",
-            "name": "오윤석"
+            "name": "류현인"
           },
           {
             "order": 8,
             "pos": "포수",
-            "name": "조대현"
+            "name": "한승택"
           },
           {
             "order": 9,
             "pos": "유격수",
-            "name": "장준원"
+            "name": "권동진"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
