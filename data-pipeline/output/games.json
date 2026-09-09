@@ -1,7 +1,7 @@
 {
   "date": "20260909",
   "dateText": "2026년 9월 9일",
-  "updatedAt": "2026-09-09T11:00:42.807Z",
+  "updatedAt": "2026-09-09T11:10:27.661Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
+        "half": "B",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "곽빈",
-        "batter": "안상현",
-        "heat": 59,
+        "pitcher": "이로운",
+        "batter": "안재석",
+        "heat": 62,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
+        "inning": 6,
+        "half": "T",
         "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "고영표",
-        "batter": "이재현",
-        "heat": 54,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "원태인",
+        "batter": "힐리어드",
+        "heat": 57,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -352,7 +352,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 6,
-        "score": 3,
+        "score": 5,
         "starter": {
           "name": "송명기",
           "era": 5.95,
@@ -395,16 +395,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 3,
+        "inning": 6,
+        "half": "T",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "송명기",
-        "batter": "김호령",
-        "heat": 42,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "김태형",
+        "batter": "김휘집",
+        "heat": 21,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -561,14 +561,14 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "왕옌청",
-        "batter": "신민재",
-        "heat": 29,
+        "pitcher": "고우석",
+        "batter": "노시환",
+        "heat": 31,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
