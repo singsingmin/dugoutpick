@@ -1,7 +1,7 @@
 {
   "date": "20260909",
   "dateText": "2026년 9월 9일",
-  "updatedAt": "2026-09-09T12:50:26.372Z",
+  "updatedAt": "2026-09-09T13:00:44.357Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -241,7 +241,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 7,
-        "score": 17,
+        "score": 19,
         "starter": {
           "name": "왕옌청",
           "era": 3.86,
@@ -272,14 +272,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
+        "inning": 9,
+        "half": "T",
+        "out": 0,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "조원태",
-        "batter": "유민",
+        "pitcher": "김서현",
+        "batter": "오지환",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },

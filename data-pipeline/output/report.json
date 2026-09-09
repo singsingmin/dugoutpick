@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-09T12:50:26.372Z",
+  "updatedAt": "2026-09-09T13:00:44.357Z",
   "lastWeek": {
     "range": [
       "20260831",
@@ -32,7 +32,7 @@
         "l": 2,
         "d": 0,
         "rank": 4,
-        "note": "3승2패 위닝, 포스트시즌 자리 지킨다"
+        "note": "2연패, 살짝 흔들린다 — 그래도 이번주 SSG 만나니까 해볼 만해"
       },
       "OB": {
         "w": 1,
@@ -94,19 +94,19 @@
       },
       {
         "away": "NC",
-        "home": "HH",
-        "pred": 88,
+        "home": "OB",
+        "pred": 90,
         "reason": "게임차 3.5의 순위 다툼",
-        "dateStart": "20260911",
-        "dateEnd": "20260911"
+        "dateStart": "20260912",
+        "dateEnd": "20260913"
       },
       {
         "away": "NC",
-        "home": "OB",
+        "home": "HH",
         "pred": 88,
         "reason": "게임차 4의 순위 다툼",
-        "dateStart": "20260912",
-        "dateEnd": "20260913"
+        "dateStart": "20260911",
+        "dateEnd": "20260911"
       }
     ],
     "team": {
