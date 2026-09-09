@@ -1,7 +1,7 @@
 {
   "date": "20260909",
   "dateText": "2026년 9월 9일",
-  "updatedAt": "2026-09-09T09:40:28.257Z",
+  "updatedAt": "2026-09-09T09:51:05.575Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "B",
-        "out": 1,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "이로운",
-        "batter": "안재석",
-        "heat": 33,
+        "batter": "양의지",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
+        "half": "B",
         "out": 2,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "원태인",
-        "batter": "힐리어드",
-        "heat": 31,
+        "pitcher": "고영표",
+        "batter": "최형우",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -352,7 +352,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 6,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "송명기",
           "era": 5.95,
@@ -395,14 +395,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "송명기",
-        "batter": "이호연",
+        "pitcher": "황동하",
+        "batter": "김휘집",
         "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "B",
-        "out": 2,
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
         "pitcher": "카라스코",
-        "batter": "노시환",
-        "heat": 31,
+        "batter": "페라자",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
