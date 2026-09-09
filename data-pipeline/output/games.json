@@ -1,7 +1,7 @@
 {
   "date": "20260909",
   "dateText": "2026년 9월 9일",
-  "updatedAt": "2026-09-09T10:40:25.940Z",
+  "updatedAt": "2026-09-09T10:50:25.303Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
+        "inning": 6,
+        "half": "T",
         "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이로운",
-        "batter": "강승호",
-        "heat": 50,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "곽빈",
+        "batter": "조형우",
+        "heat": 53,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 0,
+        "inning": 5,
+        "half": "T",
+        "out": 2,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "고영표",
-        "batter": "류지혁",
-        "heat": 48,
+        "pitcher": "원태인",
+        "batter": "권동진",
+        "heat": 51,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -397,12 +397,12 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "김태형",
-        "batter": "권희동",
+        "batter": "김주원",
         "heat": 29,
         "label": "경기 흐름 체크 중"
       },
@@ -529,7 +529,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 7,
-        "score": 1,
+        "score": 3,
         "starter": {
           "name": "왕옌청",
           "era": 3.86,
@@ -562,13 +562,13 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": true,
-        "b2": true,
+        "b2": false,
         "b3": true,
         "pitcher": "카라스코",
-        "batter": "허인서",
-        "heat": 48,
+        "batter": "심우준",
+        "heat": 37,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
