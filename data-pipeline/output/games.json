@@ -1,7 +1,7 @@
 {
   "date": "20260909",
   "dateText": "2026년 9월 9일",
-  "updatedAt": "2026-09-09T10:20:25.450Z",
+  "updatedAt": "2026-09-09T10:30:32.727Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "inning": 5,
+        "half": "T",
+        "out": 1,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "이로운",
-        "batter": "박찬호",
-        "heat": 45,
+        "pitcher": "곽빈",
+        "batter": "최지훈",
+        "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
+        "inning": 4,
+        "half": "T",
         "out": 1,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "고영표",
-        "batter": "김성윤",
-        "heat": 43,
+        "pitcher": "원태인",
+        "batter": "안현민",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
+        "inning": 4,
         "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "송명기",
-        "batter": "주효상",
-        "heat": 25,
+        "batter": "박재현",
+        "heat": 28,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -561,14 +561,14 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "왕옌청",
-        "batter": "문정빈",
-        "heat": 45,
+        "pitcher": "카라스코",
+        "batter": "강백호",
+        "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
