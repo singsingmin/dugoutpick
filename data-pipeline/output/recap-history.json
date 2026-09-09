@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-09-09T12:10:24.311Z",
+  "updatedAt": "2026-09-09T12:20:25.863Z",
   "window": 50,
   "sampleSize": 50,
   "hitRate": 24,
-  "bonusRate": 42,
+  "bonusRate": 44,
   "ready": true,
   "records": [
     {
@@ -1699,6 +1699,13 @@
       "pred": 63,
       "actual": 67,
       "verdict": "예측 적중"
+    },
+    {
+      "date": "20260909",
+      "gameId": "20260909SKOB0",
+      "pred": 33,
+      "actual": 86,
+      "verdict": "기대 이상"
     }
   ]
 }
