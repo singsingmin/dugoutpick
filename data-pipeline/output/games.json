@@ -1,7 +1,7 @@
 {
   "date": "20260909",
   "dateText": "2026년 9월 9일",
-  "updatedAt": "2026-09-09T11:20:24.765Z",
+  "updatedAt": "2026-09-09T11:30:34.797Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
+        "inning": 8,
+        "half": "T",
         "out": 2,
-        "b1": false,
-        "b2": true,
+        "b1": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "김민",
-        "batter": "양의지",
-        "heat": 62,
+        "pitcher": "타카다",
+        "batter": "에레디아",
+        "heat": 64,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "고영표",
-        "batter": "김지찬",
-        "heat": 46,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "이승민",
+        "batter": "류현인",
+        "heat": 49,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -364,7 +364,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "황동하",
           "era": 4.98,
@@ -397,13 +397,13 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 1,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "배재환",
-        "batter": "박재현",
-        "heat": 23,
+        "batter": "나성범",
+        "heat": 34,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -560,14 +560,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
+        "inning": 6,
+        "half": "T",
         "out": 2,
-        "b1": true,
+        "b1": false,
         "b2": true,
-        "b3": true,
-        "pitcher": "고우석",
-        "batter": "심우준",
+        "b3": false,
+        "pitcher": "왕옌청",
+        "batter": "문정빈",
         "heat": 11,
         "label": "경기 흐름 체크 중"
       },
