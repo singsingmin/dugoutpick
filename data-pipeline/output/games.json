@@ -1,7 +1,7 @@
 {
   "date": "20260909",
   "dateText": "2026년 9월 9일",
-  "updatedAt": "2026-09-09T10:00:41.637Z",
+  "updatedAt": "2026-09-09T10:10:24.714Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 9,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "이로운",
           "era": 6.85,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
+        "inning": 4,
         "half": "T",
-        "out": 2,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "곽빈",
-        "batter": "박성한",
-        "heat": 40,
+        "batter": "김재환",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
+        "inning": 3,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "고영표",
-        "batter": "전병우",
-        "heat": 38,
+        "pitcher": "원태인",
+        "batter": "한승택",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
-        "out": 1,
-        "b1": false,
+        "inning": 3,
+        "half": "T",
+        "out": 0,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "송명기",
-        "batter": "나성범",
-        "heat": 35,
+        "pitcher": "황동하",
+        "batter": "천재환",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -517,7 +517,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "카라스코",
           "era": 3.47,
@@ -562,13 +562,13 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "b1": true,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "왕옌청",
-        "batter": "홍창기",
-        "heat": 38,
+        "batter": "송찬의",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
