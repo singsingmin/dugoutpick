@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-09-10T11:50:25.625Z",
+  "updatedAt": "2026-09-10T12:00:40.418Z",
   "window": 50,
   "sampleSize": 50,
-  "hitRate": 22,
-  "bonusRate": 44,
+  "hitRate": 20,
+  "bonusRate": 46,
   "ready": true,
   "records": [
     {
@@ -1727,6 +1727,13 @@
       "pred": 39,
       "actual": 12,
       "verdict": "기대 이하"
+    },
+    {
+      "date": "20260910",
+      "gameId": "20260910WOOB0",
+      "pred": 8,
+      "actual": 25,
+      "verdict": "기대 이상"
     }
   ]
 }

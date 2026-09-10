@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-10T11:50:25.625Z",
+  "updatedAt": "2026-09-10T12:00:40.418Z",
   "lastWeek": {
     "range": [
       "20260831",
@@ -39,7 +39,7 @@
         "l": 5,
         "d": 0,
         "rank": 5,
-        "note": "2연패, 살짝 흔들린다 — 그래도 이번주 키움 만나니까 해볼 만해"
+        "note": "1승5패 루징, 탈락 카운트다운 시작되나 — 그래도 이번주 키움 만나니까 해볼 만해"
       },
       "NC": {
         "w": 4,
@@ -94,19 +94,19 @@
       },
       {
         "away": "NC",
-        "home": "OB",
-        "pred": 90,
-        "reason": "게임차 3.5의 순위 다툼",
-        "dateStart": "20260912",
-        "dateEnd": "20260913"
-      },
-      {
-        "away": "NC",
         "home": "HH",
         "pred": 89,
         "reason": "게임차 3.5의 순위 다툼",
         "dateStart": "20260911",
         "dateEnd": "20260911"
+      },
+      {
+        "away": "NC",
+        "home": "OB",
+        "pred": 88,
+        "reason": "게임차 4의 순위 다툼",
+        "dateStart": "20260912",
+        "dateEnd": "20260913"
       }
     ],
     "team": {
@@ -128,7 +128,9 @@
         {
           "date": "20260911",
           "away": "WO",
-          "home": "SS"
+          "home": "SS",
+          "awayStarter": "전준표",
+          "homeStarter": "페덱"
         },
         {
           "date": "20260912",
@@ -218,7 +220,9 @@
         {
           "date": "20260911",
           "away": "WO",
-          "home": "SS"
+          "home": "SS",
+          "awayStarter": "전준표",
+          "homeStarter": "페덱"
         },
         {
           "date": "20260912",
