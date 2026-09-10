@@ -1,7 +1,7 @@
 {
   "date": "20260910",
   "dateText": "2026년 9월 10일",
-  "updatedAt": "2026-09-10T10:10:33.735Z",
+  "updatedAt": "2026-09-10T10:20:24.061Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "out": 2,
+        "b1": true,
+        "b2": true,
         "b3": false,
         "pitcher": "박준현",
-        "batter": "정수빈",
+        "batter": "양의지",
         "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
@@ -187,7 +187,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 2,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "배제성",
           "era": 3.72,
@@ -231,13 +231,13 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
-        "out": 0,
+        "half": "B",
+        "out": 2,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "비슬리",
-        "batter": "최원준",
+        "pitcher": "배제성",
+        "batter": "황성빈",
         "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
@@ -352,7 +352,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 7,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "박준영",
           "era": 6.05,
@@ -396,13 +396,13 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "아빌라",
-        "batter": "심우준",
+        "pitcher": "박준영",
+        "batter": "안재연",
         "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
+        "inning": 4,
+        "half": "T",
         "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "라일리",
-        "batter": "박재현",
-        "heat": 43,
+        "pitcher": "올러",
+        "batter": "박민우",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
