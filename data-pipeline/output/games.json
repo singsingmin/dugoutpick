@@ -1,11 +1,11 @@
 {
   "date": "20260910",
   "dateText": "2026년 9월 10일",
-  "updatedAt": "2026-09-10T12:50:25.969Z",
+  "updatedAt": "2026-09-10T13:00:43.975Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
-    "hitRate": 18,
+    "hitRate": 20,
     "bonusRate": 48,
     "ready": true
   },
@@ -84,7 +84,7 @@
       "gameId": "20260910KTLT0",
       "time": "18:30",
       "stadium": "사직",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SBS SPORTS",
       "away": {
@@ -103,7 +103,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 9,
-        "score": 1,
+        "score": 3,
         "starter": {
           "name": "비슬리",
           "era": 4.68,
@@ -133,117 +133,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 2,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "이정현",
-        "batter": "김세민",
-        "heat": 5,
-        "label": "점수차가 벌어진 경기"
+      "live": null,
+      "recap": {
+        "actual": 12,
+        "verdict": "예측 적중",
+        "diff": 13,
+        "total": 19,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "황성빈"
-          },
-          {
-            "order": 2,
-            "pos": "지명타자",
-            "name": "레이예스"
-          },
-          {
-            "order": 3,
-            "pos": "2루수",
-            "name": "고승민"
-          },
-          {
-            "order": 4,
-            "pos": "3루수",
-            "name": "한동희"
-          },
-          {
-            "order": 5,
-            "pos": "1루수",
-            "name": "나승엽"
-          },
-          {
-            "order": 6,
-            "pos": "유격수",
-            "name": "전민재"
-          },
-          {
-            "order": 7,
-            "pos": "좌익수",
-            "name": "전준우"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "유강남"
-          },
-          {
-            "order": 9,
-            "pos": "우익수",
-            "name": "조세진"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "최원준"
-          },
-          {
-            "order": 2,
-            "pos": "지명타자",
-            "name": "김민혁"
-          },
-          {
-            "order": 3,
-            "pos": "우익수",
-            "name": "안현민"
-          },
-          {
-            "order": 4,
-            "pos": "좌익수",
-            "name": "힐리어드"
-          },
-          {
-            "order": 5,
-            "pos": "1루수",
-            "name": "김현수"
-          },
-          {
-            "order": 6,
-            "pos": "3루수",
-            "name": "류현인"
-          },
-          {
-            "order": 7,
-            "pos": "2루수",
-            "name": "김상수"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "한승택"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "권동진"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260910HHSK0",
@@ -370,12 +274,12 @@
       "live": {
         "inning": 11,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 1,
+        "b1": true,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "이용준",
-        "batter": "박정우",
+        "batter": "김선빈",
         "heat": 94,
         "label": "끝내기 한 방 찬스"
       },
