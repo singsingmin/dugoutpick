@@ -1,12 +1,12 @@
 {
   "date": "20260910",
   "dateText": "2026년 9월 10일",
-  "updatedAt": "2026-09-10T12:10:25.851Z",
+  "updatedAt": "2026-09-10T12:20:24.568Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
-    "hitRate": 20,
-    "bonusRate": 46,
+    "hitRate": 18,
+    "bonusRate": 48,
     "ready": true
   },
   "recommendedGameId": "20260910NCHT0",
@@ -135,13 +135,13 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "구승민",
-        "batter": "배정대",
+        "pitcher": "문용익",
+        "batter": "박재엽",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
@@ -249,7 +249,7 @@
       "gameId": "20260910HHSK0",
       "time": "18:30",
       "stadium": "문학",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPOTV2",
       "away": {
@@ -298,117 +298,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 2,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "조병현",
-        "batter": "허인서",
-        "heat": 75,
-        "label": "9회 1점 승부"
+      "live": null,
+      "recap": {
+        "actual": 90,
+        "verdict": "기대 이상",
+        "diff": 1,
+        "total": 7,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "2루수",
-            "name": "정준재"
-          },
-          {
-            "order": 2,
-            "pos": "유격수",
-            "name": "박성한"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "에레디아"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "김재환"
-          },
-          {
-            "order": 5,
-            "pos": "1루수",
-            "name": "전의산"
-          },
-          {
-            "order": 6,
-            "pos": "중견수",
-            "name": "최지훈"
-          },
-          {
-            "order": 7,
-            "pos": "우익수",
-            "name": "한유섬"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "이지영"
-          },
-          {
-            "order": 9,
-            "pos": "3루수",
-            "name": "안재연"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "유격수",
-            "name": "심우준"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "최인호"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "문현빈"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "강백호"
-          },
-          {
-            "order": 5,
-            "pos": "3루수",
-            "name": "노시환"
-          },
-          {
-            "order": 6,
-            "pos": "우익수",
-            "name": "페라자"
-          },
-          {
-            "order": 7,
-            "pos": "1루수",
-            "name": "김태연"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "장규현"
-          },
-          {
-            "order": 9,
-            "pos": "2루수",
-            "name": "황영묵"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260910NCHT0",
@@ -467,11 +371,11 @@
         "inning": 10,
         "half": "T",
         "out": 0,
-        "b1": false,
-        "b2": false,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "곽도규",
-        "batter": "박민우",
+        "pitcher": "이의리",
+        "batter": "김휘집",
         "heat": 89,
         "label": "연장 혈투 진행 중"
       },
