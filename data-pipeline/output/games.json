@@ -1,7 +1,7 @@
 {
   "date": "20260910",
   "dateText": "2026년 9월 10일",
-  "updatedAt": "2026-09-10T08:40:25.563Z",
+  "updatedAt": "2026-09-10T08:50:25.372Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -75,54 +75,54 @@
           },
           {
             "order": 2,
-            "pos": "3루수",
-            "name": "안재석"
+            "pos": "2루수",
+            "name": "오명진"
           },
           {
             "order": 3,
-            "pos": "2루수",
-            "name": "박준순"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "양의지"
-          },
-          {
-            "order": 5,
             "pos": "좌익수",
             "name": "김민석"
           },
           {
+            "order": 4,
+            "pos": "포수",
+            "name": "양의지"
+          },
+          {
+            "order": 5,
+            "pos": "지명타자",
+            "name": "세베리노"
+          },
+          {
             "order": 6,
-            "pos": "1루수",
-            "name": "강승호"
+            "pos": "3루수",
+            "name": "안재석"
           },
           {
             "order": 7,
-            "pos": "중견수",
-            "name": "정수빈"
+            "pos": "1루수",
+            "name": "양석환"
           },
           {
             "order": 8,
             "pos": "우익수",
-            "name": "조수행"
+            "name": "류승민"
           },
           {
             "order": 9,
-            "pos": "포수",
-            "name": "윤준호"
+            "pos": "중견수",
+            "name": "정수빈"
           }
         ],
         "away": [
           {
             "order": 1,
-            "pos": "지명타자",
+            "pos": "2루수",
             "name": "서건창"
           },
           {
             "order": 2,
-            "pos": "우익수",
+            "pos": "중견수",
             "name": "추재현"
           },
           {
@@ -132,28 +132,28 @@
           },
           {
             "order": 4,
-            "pos": "좌익수",
+            "pos": "지명타자",
             "name": "히우라"
           },
           {
             "order": 5,
-            "pos": "3루수",
-            "name": "김웅빈"
+            "pos": "우익수",
+            "name": "박찬혁"
           },
           {
             "order": 6,
-            "pos": "포수",
-            "name": "김동헌"
+            "pos": "좌익수",
+            "name": "이형종"
           },
           {
             "order": 7,
-            "pos": "2루수",
-            "name": "염승원"
+            "pos": "포수",
+            "name": "김건희"
           },
           {
             "order": 8,
-            "pos": "중견수",
-            "name": "박주홍"
+            "pos": "3루수",
+            "name": "여동욱"
           },
           {
             "order": 9,
@@ -161,7 +161,7 @@
             "name": "권혁빈"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
