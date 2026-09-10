@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-09-10T13:00:43.975Z",
+  "updatedAt": "2026-09-10T13:10:27.257Z",
   "window": 50,
   "sampleSize": 50,
   "hitRate": 20,
-  "bonusRate": 48,
+  "bonusRate": 50,
   "ready": true,
   "records": [
     {
@@ -1748,6 +1748,13 @@
       "pred": 11,
       "actual": 12,
       "verdict": "예측 적중"
+    },
+    {
+      "date": "20260910",
+      "gameId": "20260910NCHT0",
+      "pred": 81,
+      "actual": 98,
+      "verdict": "기대 이상"
     }
   ]
 }

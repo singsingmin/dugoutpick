@@ -1,12 +1,12 @@
 {
   "date": "20260910",
   "dateText": "2026년 9월 10일",
-  "updatedAt": "2026-09-10T13:00:43.975Z",
+  "updatedAt": "2026-09-10T13:10:27.257Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
     "hitRate": 20,
-    "bonusRate": 48,
+    "bonusRate": 50,
     "ready": true
   },
   "recommendedGameId": "20260910NCHT0",
@@ -25,9 +25,9 @@
         "score": 0,
         "starter": {
           "name": "박준현",
-          "era": 5.28,
+          "era": 5.51,
           "w": 1,
-          "l": 7
+          "l": 8
         }
       },
       "home": {
@@ -37,7 +37,7 @@
         "score": 5,
         "starter": {
           "name": "벤자민",
-          "era": 2.53,
+          "era": 2.44,
           "w": 5,
           "l": 7
         }
@@ -74,8 +74,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "김정우",
+        "lose": "박준현",
         "save": null
       },
       "lineup": null
@@ -90,12 +90,12 @@
       "away": {
         "code": "KT",
         "name": "KT",
-        "rank": 2,
+        "rank": 1,
         "score": 16,
         "starter": {
           "name": "배제성",
-          "era": 3.72,
-          "w": 1,
+          "era": 3.31,
+          "w": 2,
           "l": 2
         }
       },
@@ -106,9 +106,9 @@
         "score": 3,
         "starter": {
           "name": "비슬리",
-          "era": 4.68,
+          "era": 5.15,
           "w": 9,
-          "l": 5
+          "l": 6
         }
       },
       "honjam": {
@@ -143,8 +143,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "배제성",
+        "lose": "비슬리",
         "save": null
       },
       "lineup": null
@@ -163,9 +163,9 @@
         "score": 3,
         "starter": {
           "name": "박준영",
-          "era": 6.05,
+          "era": 6.13,
           "w": 2,
-          "l": 2
+          "l": 3
         }
       },
       "home": {
@@ -175,8 +175,8 @@
         "score": 4,
         "starter": {
           "name": "아빌라",
-          "era": 1.4,
-          "w": 5,
+          "era": 1.41,
+          "w": 6,
           "l": 1
         }
       },
@@ -212,9 +212,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "아빌라",
+        "lose": "박준영",
+        "save": "조병현"
       },
       "lineup": null
     },
@@ -222,7 +222,7 @@
       "gameId": "20260910NCHT0",
       "time": "18:30",
       "stadium": "광주",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "MBC SPORTS+",
       "away": {
@@ -232,7 +232,7 @@
         "score": 2,
         "starter": {
           "name": "라일리",
-          "era": 2.84,
+          "era": 2.67,
           "w": 7,
           "l": 1
         }
@@ -244,7 +244,7 @@
         "score": 1,
         "starter": {
           "name": "올러",
-          "era": 2.99,
+          "era": 2.91,
           "w": 11,
           "l": 9
         }
@@ -271,117 +271,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 11,
-        "half": "B",
-        "out": 1,
-        "b1": true,
-        "b2": false,
-        "b3": true,
-        "pitcher": "이용준",
-        "batter": "김선빈",
-        "heat": 94,
-        "label": "끝내기 한 방 찬스"
+      "live": null,
+      "recap": {
+        "actual": 98,
+        "verdict": "기대 이상",
+        "diff": 1,
+        "total": 3,
+        "extra": 1,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "좌익수",
-            "name": "박재현"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "김호령"
-          },
-          {
-            "order": 3,
-            "pos": "1루수",
-            "name": "카스트로"
-          },
-          {
-            "order": 4,
-            "pos": "우익수",
-            "name": "나성범"
-          },
-          {
-            "order": 5,
-            "pos": "지명타자",
-            "name": "김선빈"
-          },
-          {
-            "order": 6,
-            "pos": "유격수",
-            "name": "하주석"
-          },
-          {
-            "order": 7,
-            "pos": "2루수",
-            "name": "이호연"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "김태군"
-          },
-          {
-            "order": 9,
-            "pos": "3루수",
-            "name": "변우혁"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "유격수",
-            "name": "김주원"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "최정원"
-          },
-          {
-            "order": 3,
-            "pos": "2루수",
-            "name": "박민우"
-          },
-          {
-            "order": 4,
-            "pos": "1루수",
-            "name": "블레인"
-          },
-          {
-            "order": 5,
-            "pos": "3루수",
-            "name": "김휘집"
-          },
-          {
-            "order": 6,
-            "pos": "지명타자",
-            "name": "박건우"
-          },
-          {
-            "order": 7,
-            "pos": "좌익수",
-            "name": "권희동"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "김형준"
-          },
-          {
-            "order": 9,
-            "pos": "우익수",
-            "name": "천재환"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": "손주환",
+        "lose": "조상우",
+        "save": "이용준"
+      },
+      "lineup": null
     }
   ],
   "postseason": null

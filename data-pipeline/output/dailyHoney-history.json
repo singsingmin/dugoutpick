@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-10T13:00:43.975Z",
+  "updatedAt": "2026-09-10T13:10:27.257Z",
   "results": [
     {
       "date": "20260705",
@@ -964,6 +964,28 @@
         "score": 4
       },
       "calculatedAt": "2026-09-09T13:20:26.059Z"
+    },
+    {
+      "date": "20260910",
+      "actualTopGameId": "20260910NCHT0",
+      "recapScore": 98,
+      "decidingReasonTags": [
+        "연장 접전",
+        "1점차 접전"
+      ],
+      "displayMode": "highlight",
+      "displayTitle": "어제의 명경기",
+      "away": {
+        "code": "NC",
+        "name": "NC",
+        "score": 2
+      },
+      "home": {
+        "code": "HT",
+        "name": "KIA",
+        "score": 1
+      },
+      "calculatedAt": "2026-09-10T13:10:27.257Z"
     }
   ]
 }
