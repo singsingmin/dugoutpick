@@ -1,7 +1,7 @@
 {
   "date": "20260911",
   "dateText": "2026년 9월 11일",
-  "updatedAt": "2026-09-11T12:00:49.725Z",
+  "updatedAt": "2026-09-11T12:10:25.155Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "페덱",
           "era": 2.55,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
+        "inning": 9,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이강준",
-        "batter": "박승규",
-        "heat": 57,
-        "label": "후반 박빙 승부"
+        "pitcher": "김재윤",
+        "batter": "여동욱",
+        "heat": 46,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -187,7 +187,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": 3,
+        "score": 5,
         "starter": {
           "name": "로건",
           "era": 3.07,
@@ -232,14 +232,14 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "최준용",
-        "batter": "안현민",
-        "heat": 53,
-        "label": "후반 박빙 승부"
+        "pitcher": "이영재",
+        "batter": "허경민",
+        "heat": 26,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -364,7 +364,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "양현종",
           "era": 4.25,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 1,
+        "inning": 8,
+        "half": "T",
+        "out": 0,
         "b1": false,
-        "b2": true,
-        "b3": true,
-        "pitcher": "이건욱",
-        "batter": "이호연",
-        "heat": 62,
+        "b2": false,
+        "b3": false,
+        "pitcher": "곽도규",
+        "batter": "박성한",
+        "heat": 53,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -561,14 +561,14 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 2,
-        "b1": false,
+        "half": "B",
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "강재민",
-        "batter": "김형준",
-        "heat": 70,
+        "pitcher": "류진욱",
+        "batter": "최인호",
+        "heat": 73,
         "label": "후반 박빙 승부"
       },
       "recap": null,
