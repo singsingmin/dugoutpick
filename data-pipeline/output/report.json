@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-11T12:10:25.155Z",
+  "updatedAt": "2026-09-11T12:20:23.789Z",
   "lastWeek": {
     "range": [
       "20260831",
@@ -156,7 +156,9 @@
         {
           "date": "20260912",
           "away": "LG",
-          "home": "SS"
+          "home": "SS",
+          "awayStarter": "톨허스트",
+          "homeStarter": "후라도"
         },
         {
           "date": "20260913",
@@ -229,7 +231,9 @@
         {
           "date": "20260912",
           "away": "LG",
-          "home": "SS"
+          "home": "SS",
+          "awayStarter": "톨허스트",
+          "homeStarter": "후라도"
         },
         {
           "date": "20260913",
