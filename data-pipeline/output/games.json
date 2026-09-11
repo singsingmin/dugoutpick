@@ -1,7 +1,7 @@
 {
   "date": "20260911",
   "dateText": "2026년 9월 11일",
-  "updatedAt": "2026-09-11T09:40:24.502Z",
+  "updatedAt": "2026-09-11T09:50:24.401Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 0,
+        "score": 4,
         "starter": {
           "name": "페덱",
           "era": 2.55,
@@ -67,14 +67,14 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
-        "b1": true,
+        "out": 1,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "전준표",
-        "batter": "박승규",
-        "heat": 33,
-        "label": "초반 팽팽한 흐름"
+        "batter": "김영웅",
+        "heat": 12,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
-        "out": 3,
+        "half": "B",
+        "out": 2,
         "b1": false,
         "b2": false,
-        "b3": false,
-        "pitcher": "김진욱",
-        "batter": "힐리어드",
-        "heat": 31,
+        "b3": true,
+        "pitcher": "로건",
+        "batter": "한동희",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -397,12 +397,12 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": true,
-        "b2": false,
-        "b3": false,
+        "b2": true,
+        "b3": true,
         "pitcher": "이준기",
-        "batter": "김민규",
+        "batter": "하주석",
         "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
@@ -562,12 +562,12 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "out": 2,
+        "b1": true,
+        "b2": true,
         "b3": false,
         "pitcher": "이재학",
-        "batter": "심우준",
+        "batter": "노시환",
         "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
