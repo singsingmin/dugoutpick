@@ -1,7 +1,7 @@
 {
   "date": "20260911",
   "dateText": "2026년 9월 11일",
-  "updatedAt": "2026-09-11T13:00:41.154Z",
+  "updatedAt": "2026-09-11T13:10:28.688Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -273,14 +273,14 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
-        "out": 1,
-        "b1": true,
+        "half": "B",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김서현",
-        "batter": "김주원",
-        "heat": 66,
+        "pitcher": "전사민",
+        "batter": "심우준",
+        "heat": 69,
         "label": "후반 박빙 승부"
       },
       "recap": null,
