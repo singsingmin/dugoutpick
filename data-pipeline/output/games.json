@@ -1,7 +1,7 @@
 {
   "date": "20260911",
   "dateText": "2026년 9월 11일",
-  "updatedAt": "2026-09-11T10:50:25.835Z",
+  "updatedAt": "2026-09-11T11:00:41.749Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "전준표",
           "era": 4.57,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
+        "inning": 5,
         "half": "B",
-        "out": 1,
-        "b1": true,
-        "b2": true,
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
         "pitcher": "전준표",
-        "batter": "강민호",
-        "heat": 37,
+        "batter": "이재현",
+        "heat": 50,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 2,
+        "inning": 5,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "로건",
-        "batter": "전민재",
-        "heat": 37,
+        "pitcher": "김진욱",
+        "batter": "장준원",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 1,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "박시후",
-        "batter": "김태군",
-        "heat": 48,
+        "pitcher": "양현종",
+        "batter": "임근우",
+        "heat": 51,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -529,7 +529,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 7,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "황준서",
           "era": 4.95,
@@ -560,14 +560,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "이재학",
-        "batter": "페라자",
+        "pitcher": "황준서",
+        "batter": "블레인",
         "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
