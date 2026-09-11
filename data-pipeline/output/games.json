@@ -1,7 +1,7 @@
 {
   "date": "20260911",
   "dateText": "2026년 9월 11일",
-  "updatedAt": "2026-09-11T13:10:28.688Z",
+  "updatedAt": "2026-09-11T13:20:26.339Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -274,12 +274,12 @@
       "live": {
         "inning": 9,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": false,
-        "b2": false,
-        "b3": false,
+        "b2": true,
+        "b3": true,
         "pitcher": "전사민",
-        "batter": "심우준",
+        "batter": "노시환",
         "heat": 69,
         "label": "후반 박빙 승부"
       },
