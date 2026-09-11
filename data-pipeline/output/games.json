@@ -1,7 +1,7 @@
 {
   "date": "20260911",
   "dateText": "2026년 9월 11일",
-  "updatedAt": "2026-09-11T12:50:27.590Z",
+  "updatedAt": "2026-09-11T13:00:41.154Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -33,7 +33,7 @@
       "home": {
         "code": "SS",
         "name": "삼성",
-        "rank": 1,
+        "rank": 2,
         "score": 6,
         "starter": {
           "name": "페덱",
@@ -90,7 +90,7 @@
       "away": {
         "code": "KT",
         "name": "KT",
-        "rank": 2,
+        "rank": 1,
         "score": 7,
         "starter": {
           "name": "로건",
@@ -241,7 +241,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 7,
-        "score": 6,
+        "score": 7,
         "starter": {
           "name": "황준서",
           "era": 4.95,
@@ -272,16 +272,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 0,
-        "b1": false,
-        "b2": true,
-        "b3": true,
-        "pitcher": "배재환",
-        "batter": "허인서",
-        "heat": 50,
-        "label": "점수 나는 난타전"
+        "inning": 9,
+        "half": "T",
+        "out": 1,
+        "b1": true,
+        "b2": false,
+        "b3": false,
+        "pitcher": "김서현",
+        "batter": "김주원",
+        "heat": 66,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
