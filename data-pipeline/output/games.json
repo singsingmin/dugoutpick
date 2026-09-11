@@ -1,7 +1,7 @@
 {
   "date": "20260911",
   "dateText": "2026년 9월 11일",
-  "updatedAt": "2026-09-11T09:50:24.401Z",
+  "updatedAt": "2026-09-11T10:00:38.479Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 1,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "전준표",
-        "batter": "김영웅",
-        "heat": 12,
+        "pitcher": "페덱",
+        "batter": "여동욱",
+        "heat": 13,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 2,
+        "inning": 2,
+        "half": "T",
+        "out": 1,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": true,
-        "pitcher": "로건",
-        "batter": "한동희",
-        "heat": 33,
+        "pitcher": "김진욱",
+        "batter": "류현인",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 2,
         "b1": true,
-        "b2": true,
-        "b3": true,
-        "pitcher": "이준기",
-        "batter": "하주석",
-        "heat": 33,
+        "b2": false,
+        "b3": false,
+        "pitcher": "양현종",
+        "batter": "신범수",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "B",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
         "pitcher": "이재학",
-        "batter": "노시환",
-        "heat": 33,
+        "batter": "페라자",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
