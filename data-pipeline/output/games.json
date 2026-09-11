@@ -1,7 +1,7 @@
 {
   "date": "20260911",
   "dateText": "2026년 9월 11일",
-  "updatedAt": "2026-09-11T11:50:25.475Z",
+  "updatedAt": "2026-09-11T12:00:49.725Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
+        "inning": 8,
         "half": "B",
-        "out": 1,
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "유토",
-        "batter": "이재현",
-        "heat": 53,
+        "pitcher": "이강준",
+        "batter": "박승규",
+        "heat": 57,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
+        "inning": 8,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "오원석",
-        "batter": "황성빈",
-        "heat": 51,
+        "pitcher": "최준용",
+        "batter": "안현민",
+        "heat": 53,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -396,14 +396,14 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 1,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": true,
-        "pitcher": "전상현",
-        "batter": "임근우",
-        "heat": 59,
+        "pitcher": "이건욱",
+        "batter": "이호연",
+        "heat": 62,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -560,16 +560,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 0,
+        "inning": 7,
+        "half": "T",
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이준혁",
-        "batter": "페라자",
-        "heat": 67,
-        "label": "점수 나는 난타전"
+        "pitcher": "강재민",
+        "batter": "김형준",
+        "heat": 70,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
