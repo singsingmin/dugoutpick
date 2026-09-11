@@ -1,7 +1,7 @@
 {
   "date": "20260911",
   "dateText": "2026년 9월 11일",
-  "updatedAt": "2026-09-11T11:30:33.375Z",
+  "updatedAt": "2026-09-11T11:40:25.085Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "페덱",
           "era": 2.55,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "윤석원",
-        "batter": "디아즈",
-        "heat": 56,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "이승민",
+        "batter": "데이비슨",
+        "heat": 50,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 1,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "김원중",
-        "batter": "한승택",
-        "heat": 44,
+        "pitcher": "스기모토",
+        "batter": "노진혁",
+        "heat": 46,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -397,12 +397,12 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "타케다",
-        "batter": "하주석",
+        "batter": "김태군",
         "heat": 56,
         "label": "경기 흐름 체크 중"
       },
@@ -563,11 +563,11 @@
         "inning": 6,
         "half": "T",
         "out": 1,
-        "b1": false,
+        "b1": true,
         "b2": true,
-        "b3": false,
-        "pitcher": "이민우",
-        "batter": "김주원",
+        "b3": true,
+        "pitcher": "장유호",
+        "batter": "박민우",
         "heat": 59,
         "label": "점수 나는 난타전"
       },
