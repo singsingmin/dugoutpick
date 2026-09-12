@@ -1,12 +1,12 @@
 {
   "date": "20260912",
   "dateText": "2026년 9월 12일",
-  "updatedAt": "2026-09-12T11:40:26.601Z",
+  "updatedAt": "2026-09-12T11:50:26.281Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
-    "hitRate": 24,
-    "bonusRate": 50,
+    "hitRate": 26,
+    "bonusRate": 48,
     "ready": true
   },
   "recommendedGameId": "20260912NCOB0",
@@ -15,7 +15,7 @@
       "gameId": "20260912NCOB0",
       "time": "17:00",
       "stadium": "잠실",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "MBC SPORTS+",
       "away": {
@@ -64,117 +64,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 0,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "이용준",
-        "batter": "조수행",
-        "heat": 93,
-        "label": "끝내기 한 방 찬스"
+      "live": null,
+      "recap": {
+        "actual": 94,
+        "verdict": "예측 적중",
+        "diff": 1,
+        "total": 19,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "유격수",
-            "name": "박찬호"
-          },
-          {
-            "order": 2,
-            "pos": "3루수",
-            "name": "안재석"
-          },
-          {
-            "order": 3,
-            "pos": "2루수",
-            "name": "박준순"
-          },
-          {
-            "order": 4,
-            "pos": "포수",
-            "name": "양의지"
-          },
-          {
-            "order": 5,
-            "pos": "좌익수",
-            "name": "김민석"
-          },
-          {
-            "order": 6,
-            "pos": "지명타자",
-            "name": "세베리노"
-          },
-          {
-            "order": 7,
-            "pos": "1루수",
-            "name": "양석환"
-          },
-          {
-            "order": 8,
-            "pos": "중견수",
-            "name": "조수행"
-          },
-          {
-            "order": 9,
-            "pos": "우익수",
-            "name": "김대한"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "유격수",
-            "name": "김주원"
-          },
-          {
-            "order": 2,
-            "pos": "좌익수",
-            "name": "권희동"
-          },
-          {
-            "order": 3,
-            "pos": "1루수",
-            "name": "블레인"
-          },
-          {
-            "order": 4,
-            "pos": "3루수",
-            "name": "김휘집"
-          },
-          {
-            "order": 5,
-            "pos": "우익수",
-            "name": "박건우"
-          },
-          {
-            "order": 6,
-            "pos": "지명타자",
-            "name": "이우성"
-          },
-          {
-            "order": 7,
-            "pos": "포수",
-            "name": "김형준"
-          },
-          {
-            "order": 8,
-            "pos": "중견수",
-            "name": "천재환"
-          },
-          {
-            "order": 9,
-            "pos": "2루수",
-            "name": "김한별"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260912LGSS0",
