@@ -1,7 +1,7 @@
 {
   "date": "20260912",
   "dateText": "2026년 9월 12일",
-  "updatedAt": "2026-09-12T09:20:26.619Z",
+  "updatedAt": "2026-09-12T09:30:34.912Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
+        "inning": 5,
         "half": "T",
-        "out": 2,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "잭로그",
-        "batter": "천재환",
-        "heat": 29,
+        "batter": "김주원",
+        "heat": 32,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -187,7 +187,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "톨허스트",
           "era": 4.22,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 1,
         "b1": false,
-        "b2": true,
-        "b3": false,
-        "pitcher": "톨허스트",
-        "batter": "김성윤",
-        "heat": 45,
+        "b2": false,
+        "b3": true,
+        "pitcher": "후라도",
+        "batter": "문보경",
+        "heat": 51,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "네일",
-        "batter": "김현수",
-        "heat": 45,
+        "pitcher": "대니엘",
+        "batter": "박정우",
+        "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -561,14 +561,14 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 0,
-        "b1": true,
+        "half": "B",
+        "out": 2,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "알칸타라",
-        "batter": "장두성",
-        "heat": 51,
+        "pitcher": "로드리게스",
+        "batter": "서건창",
+        "heat": 54,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
