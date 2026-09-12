@@ -1,7 +1,7 @@
 {
   "date": "20260912",
   "dateText": "2026년 9월 12일",
-  "updatedAt": "2026-09-12T08:40:28.602Z",
+  "updatedAt": "2026-09-12T08:50:26.988Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "잭로그",
           "era": 3.86,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
+        "inning": 3,
         "half": "T",
-        "out": 1,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "잭로그",
-        "batter": "김한별",
-        "heat": 29,
-        "label": "초반 팽팽한 흐름"
+        "batter": "권희동",
+        "heat": 26,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
-        "out": 1,
-        "b1": true,
+        "inning": 3,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "톨허스트",
-        "batter": "김영웅",
-        "heat": 29,
+        "pitcher": "후라도",
+        "batter": "신민재",
+        "heat": 31,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -364,7 +364,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "대니엘",
           "era": 2.88,
@@ -396,13 +396,13 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
+        "half": "B",
         "out": 2,
         "b1": true,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "대니엘",
-        "batter": "박정우",
+        "pitcher": "네일",
+        "batter": "김민혁",
         "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
@@ -561,14 +561,14 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 1,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "알칸타라",
-        "batter": "레이예스",
-        "heat": 40,
+        "pitcher": "로드리게스",
+        "batter": "권혁빈",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
