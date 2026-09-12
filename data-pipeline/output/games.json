@@ -1,7 +1,7 @@
 {
   "date": "20260912",
   "dateText": "2026년 9월 12일",
-  "updatedAt": "2026-09-12T10:10:26.919Z",
+  "updatedAt": "2026-09-12T10:20:24.948Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 6,
-        "score": 7,
+        "score": 10,
         "starter": {
           "name": "구창모",
           "era": 4.08,
@@ -66,15 +66,15 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
+        "half": "B",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "타카다",
-        "batter": "김주원",
-        "heat": 61,
-        "label": "점수 나는 난타전"
+        "b3": false,
+        "pitcher": "구창모",
+        "batter": "박찬호",
+        "heat": 23,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 1,
-        "b1": false,
+        "half": "B",
+        "out": 0,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "장찬희",
-        "batter": "문보경",
-        "heat": 62,
+        "pitcher": "고우석",
+        "batter": "김성윤",
+        "heat": 65,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -352,7 +352,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "네일",
           "era": 3.66,
@@ -395,16 +395,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 2,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "정해영",
-        "batter": "장준원",
-        "heat": 46,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "스기모토",
+        "batter": "박재현",
+        "heat": 59,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -517,7 +517,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 9,
-        "score": 2,
+        "score": 5,
         "starter": {
           "name": "로드리게스",
           "era": 4.35,
@@ -561,15 +561,15 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 1,
-        "b1": true,
+        "half": "B",
+        "out": 0,
+        "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "유토",
-        "batter": "한동희",
-        "heat": 49,
-        "label": "후반 박빙 승부"
+        "b3": false,
+        "pitcher": "박정민",
+        "batter": "전태현",
+        "heat": 13,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
