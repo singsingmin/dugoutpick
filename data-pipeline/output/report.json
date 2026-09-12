@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-12T11:20:25.397Z",
+  "updatedAt": "2026-09-12T11:30:34.396Z",
   "lastWeek": {
     "range": [
       "20260831",
@@ -11,7 +11,7 @@
         "l": 3,
         "d": 0,
         "rank": 1,
-        "note": "4연승, 지금이 전성기"
+        "note": "5연승, 지금이 전성기"
       },
       "SS": {
         "w": 4,
@@ -88,7 +88,7 @@
         "away": "KT",
         "home": "SS",
         "pred": 94,
-        "reason": "게임차 0.5, 막상막하 승부",
+        "reason": "게임차 1, 막상막하 승부",
         "dateStart": "20260909",
         "dateEnd": "20260909"
       },
@@ -209,7 +209,9 @@
         {
           "date": "20260913",
           "away": "HH",
-          "home": "HT"
+          "home": "HT",
+          "awayStarter": "화이트",
+          "homeStarter": "시라카와"
         }
       ],
       "SS": [
@@ -318,7 +320,9 @@
         {
           "date": "20260913",
           "away": "LT",
-          "home": "KT"
+          "home": "KT",
+          "awayStarter": "나균안",
+          "homeStarter": "소형준"
         }
       ],
       "LT": [
@@ -353,7 +357,9 @@
         {
           "date": "20260913",
           "away": "LT",
-          "home": "KT"
+          "home": "KT",
+          "awayStarter": "나균안",
+          "homeStarter": "소형준"
         }
       ],
       "NC": [
@@ -465,7 +471,9 @@
         {
           "date": "20260913",
           "away": "HH",
-          "home": "HT"
+          "home": "HT",
+          "awayStarter": "화이트",
+          "homeStarter": "시라카와"
         }
       ]
     }
