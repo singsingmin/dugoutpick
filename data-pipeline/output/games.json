@@ -1,7 +1,7 @@
 {
   "date": "20260913",
   "dateText": "2026년 9월 13일",
-  "updatedAt": "2026-09-13T09:30:34.215Z",
+  "updatedAt": "2026-09-13T09:40:39.291Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,14 +65,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이준혁",
-        "batter": "안재석",
+        "pitcher": "최민석",
+        "batter": "김주원",
         "heat": 10,
         "label": "경기 흐름 체크 중"
       },
@@ -232,12 +232,12 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": false,
-        "b2": false,
-        "b3": false,
+        "b2": true,
+        "b3": true,
         "pitcher": "양창섭",
-        "batter": "구본혁",
+        "batter": "홍창기",
         "heat": 10,
         "label": "경기 흐름 체크 중"
       },
@@ -364,7 +364,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "시라카와",
           "era": 4.91,
@@ -397,13 +397,13 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "화이트",
-        "batter": "박정우",
-        "heat": 50,
+        "batter": "나성범",
+        "heat": 42,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -517,7 +517,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 9,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "나균안",
           "era": 4.03,
@@ -561,15 +561,15 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 2,
-        "b1": true,
-        "b2": false,
+        "half": "B",
+        "out": 0,
+        "b1": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "소형준",
-        "batter": "황성빈",
-        "heat": 29,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "나균안",
+        "batter": "안현민",
+        "heat": 50,
+        "label": "초반 팽팽한 흐름"
       },
       "recap": null,
       "decision": null,
