@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-13T11:20:27.200Z",
+  "updatedAt": "2026-09-13T11:30:33.275Z",
   "results": [
     {
       "date": "20260705",
@@ -1030,6 +1030,27 @@
         "score": 9
       },
       "calculatedAt": "2026-09-12T11:50:26.281Z"
+    },
+    {
+      "date": "20260913",
+      "actualTopGameId": "20260913LTKT0",
+      "recapScore": 64,
+      "decidingReasonTags": [
+        "실제 꿀잼 64"
+      ],
+      "displayMode": "highlight",
+      "displayTitle": "어제의 명경기",
+      "away": {
+        "code": "LT",
+        "name": "롯데",
+        "score": 2
+      },
+      "home": {
+        "code": "KT",
+        "name": "KT",
+        "score": 5
+      },
+      "calculatedAt": "2026-09-13T11:30:33.275Z"
     }
   ]
 }

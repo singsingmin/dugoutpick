@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-13T11:20:27.200Z",
+  "updatedAt": "2026-09-13T11:30:33.275Z",
   "window": 50,
   "sampleSize": 50,
   "hitRate": 24,
@@ -1831,6 +1831,13 @@
       "gameId": "20260913HHHT0",
       "pred": 39,
       "actual": 9,
+      "verdict": "기대 이하"
+    },
+    {
+      "date": "20260913",
+      "gameId": "20260913LGSS0",
+      "pred": 71,
+      "actual": 12,
       "verdict": "기대 이하"
     }
   ]
