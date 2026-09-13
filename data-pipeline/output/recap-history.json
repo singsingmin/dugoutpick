@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-09-13T10:50:27.118Z",
+  "updatedAt": "2026-09-13T11:00:43.956Z",
   "window": 50,
   "sampleSize": 50,
   "hitRate": 26,
-  "bonusRate": 48,
+  "bonusRate": 46,
   "ready": true,
   "records": [
     {
@@ -1811,6 +1811,13 @@
       "pred": 85,
       "actual": 94,
       "verdict": "예측 적중"
+    },
+    {
+      "date": "20260913",
+      "gameId": "20260913NCOB0",
+      "pred": 90,
+      "actual": 9,
+      "verdict": "기대 이하"
     }
   ]
 }
