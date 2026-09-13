@@ -1,7 +1,7 @@
 {
   "date": "20260913",
   "dateText": "2026년 9월 13일",
-  "updatedAt": "2026-09-13T07:10:26.320Z",
+  "updatedAt": "2026-09-13T07:20:25.175Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -554,18 +554,18 @@
           },
           {
             "order": 6,
+            "pos": "2루수",
+            "name": "김상수"
+          },
+          {
+            "order": 7,
             "pos": "3루수",
             "name": "허경민"
           },
           {
-            "order": 7,
-            "pos": "2루수",
-            "name": "류현인"
-          },
-          {
             "order": 8,
             "pos": "포수",
-            "name": "한승택"
+            "name": "조대현"
           },
           {
             "order": 9,
@@ -586,7 +586,7 @@
           },
           {
             "order": 3,
-            "pos": "1루수",
+            "pos": "2루수",
             "name": "고승민"
           },
           {
@@ -606,21 +606,21 @@
           },
           {
             "order": 7,
-            "pos": "2루수",
-            "name": "박찬형"
+            "pos": "1루수",
+            "name": "나승엽"
           },
           {
             "order": 8,
-            "pos": "포수",
-            "name": "박건우"
+            "pos": "우익수",
+            "name": "장두성"
           },
           {
             "order": 9,
-            "pos": "우익수",
-            "name": "장두성"
+            "pos": "포수",
+            "name": "박건우"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     }
   ],
