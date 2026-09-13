@@ -1,7 +1,7 @@
 {
   "date": "20260913",
   "dateText": "2026년 9월 13일",
-  "updatedAt": "2026-09-13T09:50:33.040Z",
+  "updatedAt": "2026-09-13T09:53:04.581Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "류진욱",
-        "batter": "조수행",
+        "batter": "양의지",
         "heat": 11,
         "label": "경기 흐름 체크 중"
       },
@@ -232,12 +232,12 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "임찬규",
-        "batter": "김영웅",
+        "batter": "김지찬",
         "heat": 3,
         "label": "점수차가 벌어진 경기"
       },
@@ -563,11 +563,11 @@
         "inning": 6,
         "half": "T",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "소형준",
-        "batter": "한동희",
+        "batter": "전민재",
         "heat": 33,
         "label": "경기 흐름 체크 중"
       },
