@@ -1,7 +1,7 @@
 {
   "date": "20260913",
   "dateText": "2026년 9월 13일",
-  "updatedAt": "2026-09-13T08:10:27.484Z",
+  "updatedAt": "2026-09-13T08:20:28.542Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 2,
-        "b1": false,
+        "inning": 2,
+        "half": "T",
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "토다",
-        "batter": "박준순",
-        "heat": 33,
+        "pitcher": "최민석",
+        "batter": "박건우",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -199,7 +199,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "최원태",
           "era": 4.37,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 1,
+        "inning": 2,
+        "half": "T",
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "임찬규",
-        "batter": "김성윤",
-        "heat": 33,
+        "pitcher": "최원태",
+        "batter": "구본혁",
+        "heat": 27,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -364,7 +364,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "시라카와",
           "era": 4.91,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "화이트",
-        "batter": "박재현",
-        "heat": 33,
+        "pitcher": "시라카와",
+        "batter": "강백호",
+        "heat": 27,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -529,7 +529,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "소형준",
           "era": 3.41,
@@ -562,13 +562,13 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "나균안",
-        "batter": "최원준",
-        "heat": 33,
+        "batter": "힐리어드",
+        "heat": 31,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
