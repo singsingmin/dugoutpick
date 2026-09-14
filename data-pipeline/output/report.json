@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-13T17:18:29.317Z",
+  "updatedAt": "2026-09-14T07:14:57.367Z",
   "lastWeek": {
     "range": [
       "20260907",
@@ -114,7 +114,9 @@
         {
           "date": "20260915",
           "away": "LT",
-          "home": "SS"
+          "home": "SS",
+          "awayStarter": "박세웅",
+          "homeStarter": "원태인"
         },
         {
           "date": "20260916",
@@ -141,7 +143,9 @@
         {
           "date": "20260915",
           "away": "LT",
-          "home": "SS"
+          "home": "SS",
+          "awayStarter": "박세웅",
+          "homeStarter": "원태인"
         },
         {
           "date": "20260916",
@@ -168,7 +172,9 @@
         {
           "date": "20260915",
           "away": "HT",
-          "home": "SK"
+          "home": "SK",
+          "awayStarter": "김태형",
+          "homeStarter": "김민준"
         },
         {
           "date": "20260917",
@@ -190,7 +196,9 @@
         {
           "date": "20260915",
           "away": "HT",
-          "home": "SK"
+          "home": "SK",
+          "awayStarter": "김태형",
+          "homeStarter": "김민준"
         },
         {
           "date": "20260916",
@@ -212,7 +220,9 @@
         {
           "date": "20260915",
           "away": "LG",
-          "home": "NC"
+          "home": "NC",
+          "awayStarter": "카라스코",
+          "homeStarter": "송명기"
         },
         {
           "date": "20260916",
@@ -239,7 +249,9 @@
         {
           "date": "20260915",
           "away": "LG",
-          "home": "NC"
+          "home": "NC",
+          "awayStarter": "카라스코",
+          "homeStarter": "송명기"
         },
         {
           "date": "20260916",
@@ -271,7 +283,9 @@
         {
           "date": "20260915",
           "away": "KT",
-          "home": "HH"
+          "home": "HH",
+          "awayStarter": "고영표",
+          "homeStarter": "왕옌청"
         },
         {
           "date": "20260916",
@@ -298,7 +312,9 @@
         {
           "date": "20260915",
           "away": "KT",
-          "home": "HH"
+          "home": "HH",
+          "awayStarter": "고영표",
+          "homeStarter": "왕옌청"
         },
         {
           "date": "20260916",
