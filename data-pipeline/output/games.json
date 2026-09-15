@@ -1,7 +1,7 @@
 {
   "date": "20260915",
   "dateText": "2026년 9월 15일",
-  "updatedAt": "2026-09-15T12:40:27.663Z",
+  "updatedAt": "2026-09-15T12:50:28.270Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 2,
+        "score": 4,
         "starter": {
           "name": "원태인",
           "era": 4.2,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": true,
         "b2": false,
-        "b3": false,
-        "pitcher": "박정민",
-        "batter": "박승규",
+        "b3": true,
+        "pitcher": "이영재",
+        "batter": "류지혁",
         "heat": 67,
         "label": "후반 박빙 승부"
       },
@@ -249,7 +249,7 @@
       "gameId": "20260915LGNC0",
       "time": "18:30",
       "stadium": "창원",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPOTV",
       "away": {
@@ -298,117 +298,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 0,
-        "b1": true,
-        "b2": false,
-        "b3": false,
-        "pitcher": "손주영",
-        "batter": "김형준",
-        "heat": 85,
-        "label": "끝내기 한 방 찬스"
+      "live": null,
+      "recap": {
+        "actual": 88,
+        "verdict": "기대 이상",
+        "diff": 1,
+        "total": 5,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "최정원"
-          },
-          {
-            "order": 2,
-            "pos": "2루수",
-            "name": "박민우"
-          },
-          {
-            "order": 3,
-            "pos": "1루수",
-            "name": "블레인"
-          },
-          {
-            "order": 4,
-            "pos": "3루수",
-            "name": "김휘집"
-          },
-          {
-            "order": 5,
-            "pos": "지명타자",
-            "name": "박건우"
-          },
-          {
-            "order": 6,
-            "pos": "좌익수",
-            "name": "이우성"
-          },
-          {
-            "order": 7,
-            "pos": "우익수",
-            "name": "천재환"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "김형준"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "김한별"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "2루수",
-            "name": "신민재"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "박해민"
-          },
-          {
-            "order": 3,
-            "pos": "지명타자",
-            "name": "오스틴"
-          },
-          {
-            "order": 4,
-            "pos": "좌익수",
-            "name": "송찬의"
-          },
-          {
-            "order": 5,
-            "pos": "1루수",
-            "name": "문정빈"
-          },
-          {
-            "order": 6,
-            "pos": "3루수",
-            "name": "구본혁"
-          },
-          {
-            "order": 7,
-            "pos": "유격수",
-            "name": "오지환"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "이주헌"
-          },
-          {
-            "order": 9,
-            "pos": "우익수",
-            "name": "홍창기"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260915KTHH0",
@@ -432,7 +336,7 @@
       "home": {
         "code": "HH",
         "name": "한화",
-        "rank": 7,
+        "rank": 8,
         "score": 3,
         "starter": {
           "name": "왕옌청",
