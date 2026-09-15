@@ -1,7 +1,7 @@
 {
   "date": "20260915",
   "dateText": "2026년 9월 15일",
-  "updatedAt": "2026-09-15T10:30:33.909Z",
+  "updatedAt": "2026-09-15T10:40:23.806Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "원태인",
           "era": 4.2,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 1,
+        "inning": 4,
+        "half": "T",
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "박세웅",
-        "batter": "디아즈",
-        "heat": 40,
+        "pitcher": "원태인",
+        "batter": "고승민",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -199,7 +199,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 8,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "김민준",
           "era": 3.38,
@@ -232,14 +232,14 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": true,
-        "b2": false,
-        "b3": false,
+        "b2": true,
+        "b3": true,
         "pitcher": "김태형",
-        "batter": "오시후",
-        "heat": 25,
-        "label": "경기 흐름 체크 중"
+        "batter": "김재환",
+        "heat": 33,
+        "label": "초반 팽팽한 흐름"
       },
       "recap": null,
       "decision": null,
@@ -396,14 +396,14 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "송명기",
-        "batter": "오지환",
-        "heat": 35,
+        "pitcher": "카라스코",
+        "batter": "박민우",
+        "heat": 37,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -560,14 +560,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 0,
+        "inning": 4,
+        "half": "T",
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "고영표",
-        "batter": "황영묵",
+        "pitcher": "왕옌청",
+        "batter": "안현민",
         "heat": 9,
         "label": "경기 흐름 체크 중"
       },
