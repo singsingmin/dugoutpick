@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-15T08:30:33.239Z",
+  "updatedAt": "2026-09-15T08:40:24.599Z",
   "lastWeek": {
     "range": [
       "20260907",
@@ -168,6 +168,54 @@
           "home": "LT"
         }
       ],
+      "HT": [
+        {
+          "date": "20260915",
+          "away": "HT",
+          "home": "SK",
+          "awayStarter": "김태형",
+          "homeStarter": "김민준"
+        },
+        {
+          "date": "20260917",
+          "away": "WO",
+          "home": "HT"
+        },
+        {
+          "date": "20260919",
+          "away": "HT",
+          "home": "NC"
+        },
+        {
+          "date": "20260920",
+          "away": "HT",
+          "home": "NC"
+        }
+      ],
+      "SK": [
+        {
+          "date": "20260915",
+          "away": "HT",
+          "home": "SK",
+          "awayStarter": "김태형",
+          "homeStarter": "김민준"
+        },
+        {
+          "date": "20260916",
+          "away": "SK",
+          "home": "LT"
+        },
+        {
+          "date": "20260917",
+          "away": "SK",
+          "home": "NC"
+        },
+        {
+          "date": "20260920",
+          "away": "WO",
+          "home": "SK"
+        }
+      ],
       "LG": [
         {
           "date": "20260915",
@@ -287,54 +335,6 @@
           "date": "20260920",
           "away": "HH",
           "home": "LG"
-        }
-      ],
-      "HT": [
-        {
-          "date": "20260915",
-          "away": "HT",
-          "home": "SK",
-          "awayStarter": "김태형",
-          "homeStarter": "김민준"
-        },
-        {
-          "date": "20260917",
-          "away": "WO",
-          "home": "HT"
-        },
-        {
-          "date": "20260919",
-          "away": "HT",
-          "home": "NC"
-        },
-        {
-          "date": "20260920",
-          "away": "HT",
-          "home": "NC"
-        }
-      ],
-      "SK": [
-        {
-          "date": "20260915",
-          "away": "HT",
-          "home": "SK",
-          "awayStarter": "김태형",
-          "homeStarter": "김민준"
-        },
-        {
-          "date": "20260916",
-          "away": "SK",
-          "home": "LT"
-        },
-        {
-          "date": "20260917",
-          "away": "SK",
-          "home": "NC"
-        },
-        {
-          "date": "20260920",
-          "away": "WO",
-          "home": "SK"
         }
       ],
       "OB": [
