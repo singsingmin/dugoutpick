@@ -1,7 +1,7 @@
 {
   "date": "20260915",
   "dateText": "2026년 9월 15일",
-  "updatedAt": "2026-09-15T12:00:44.562Z",
+  "updatedAt": "2026-09-15T12:10:25.024Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 9,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "박세웅",
           "era": 5.01,
@@ -66,13 +66,13 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "이승민",
-        "batter": "황성빈",
+        "pitcher": "김원중",
+        "batter": "최형우",
         "heat": 62,
         "label": "후반 박빙 승부"
       },
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 1,
+        "inning": 8,
+        "half": "T",
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "곽도규",
-        "batter": "김재환",
-        "heat": 41,
+        "pitcher": "전영준",
+        "batter": "김선빈",
+        "heat": 43,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -352,7 +352,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "카라스코",
           "era": 3.83,
@@ -396,15 +396,15 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
+        "half": "B",
         "out": 1,
-        "b1": true,
-        "b2": true,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "신영우",
-        "batter": "문정빈",
-        "heat": 53,
-        "label": "후반 박빙 승부"
+        "pitcher": "케네디",
+        "batter": "박민우",
+        "heat": 42,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -560,14 +560,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 0,
+        "inning": 9,
+        "half": "T",
+        "out": 1,
         "b1": false,
         "b2": false,
-        "b3": false,
-        "pitcher": "김정운",
-        "batter": "황영묵",
+        "b3": true,
+        "pitcher": "박재규",
+        "batter": "최원준",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
