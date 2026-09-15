@@ -1,7 +1,7 @@
 {
   "date": "20260915",
   "dateText": "2026년 9월 15일",
-  "updatedAt": "2026-09-15T13:30:35.368Z",
+  "updatedAt": "2026-09-15T13:40:24.846Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -106,9 +106,9 @@
         "score": 6,
         "starter": {
           "name": "김민준",
-          "era": null,
-          "w": null,
-          "l": null
+          "era": 3.47,
+          "w": 7,
+          "l": 2
         }
       },
       "honjam": {
@@ -163,9 +163,9 @@
         "score": 3,
         "starter": {
           "name": "카라스코",
-          "era": null,
-          "w": null,
-          "l": null
+          "era": 3.35,
+          "w": 5,
+          "l": 2
         }
       },
       "home": {
@@ -175,9 +175,9 @@
         "score": 2,
         "starter": {
           "name": "송명기",
-          "era": null,
-          "w": null,
-          "l": null
+          "era": 5.08,
+          "w": 1,
+          "l": 1
         }
       },
       "honjam": {
