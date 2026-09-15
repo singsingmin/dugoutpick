@@ -1,7 +1,7 @@
 {
   "date": "20260915",
   "dateText": "2026년 9월 15일",
-  "updatedAt": "2026-09-15T09:40:23.785Z",
+  "updatedAt": "2026-09-15T09:41:40.188Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "김태형",
-        "batter": "최지훈",
+        "batter": "에레디아",
         "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
@@ -397,12 +397,12 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "카라스코",
-        "batter": "최정원",
+        "batter": "박민우",
         "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
@@ -517,7 +517,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "고영표",
           "era": 3.8,
@@ -567,8 +567,8 @@
         "b2": true,
         "b3": true,
         "pitcher": "왕옌청",
-        "batter": "김현수",
-        "heat": 31,
+        "batter": "김상수",
+        "heat": 29,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
