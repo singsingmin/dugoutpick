@@ -1,7 +1,7 @@
 {
   "date": "20260915",
   "dateText": "2026년 9월 15일",
-  "updatedAt": "2026-09-15T12:50:28.270Z",
+  "updatedAt": "2026-09-15T13:00:43.923Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 4,
+        "score": 7,
         "starter": {
           "name": "원태인",
           "era": 4.2,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
-        "b1": true,
+        "inning": 9,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "이영재",
-        "batter": "류지혁",
-        "heat": 67,
-        "label": "후반 박빙 승부"
+        "b3": false,
+        "pitcher": "김재윤",
+        "batter": "장두성",
+        "heat": 28,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
