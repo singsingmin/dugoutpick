@@ -1,7 +1,7 @@
 {
   "date": "20260915",
   "dateText": "2026년 9월 15일",
-  "updatedAt": "2026-09-15T13:10:26.220Z",
+  "updatedAt": "2026-09-15T13:20:27.981Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -15,7 +15,7 @@
       "gameId": "20260915LTSS0",
       "time": "18:30",
       "stadium": "대구",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SBS SPORTS",
       "away": {
@@ -25,7 +25,7 @@
         "score": 3,
         "starter": {
           "name": "박세웅",
-          "era": 5.01,
+          "era": 4.92,
           "w": 3,
           "l": 9
         }
@@ -37,7 +37,7 @@
         "score": 7,
         "starter": {
           "name": "원태인",
-          "era": 4.2,
+          "era": 4.16,
           "w": 7,
           "l": 7
         }
@@ -64,117 +64,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 3,
-        "b1": true,
-        "b2": false,
-        "b3": false,
-        "pitcher": "김재윤",
-        "batter": "레이예스",
-        "heat": 28,
-        "label": "경기 흐름 체크 중"
+      "live": null,
+      "recap": {
+        "actual": 50,
+        "verdict": "기대 이상",
+        "diff": 4,
+        "total": 10,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "우익수",
-            "name": "김성윤"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "박승규"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "구자욱"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "최형우"
-          },
-          {
-            "order": 5,
-            "pos": "1루수",
-            "name": "디아즈"
-          },
-          {
-            "order": 6,
-            "pos": "2루수",
-            "name": "류지혁"
-          },
-          {
-            "order": 7,
-            "pos": "포수",
-            "name": "강민호"
-          },
-          {
-            "order": 8,
-            "pos": "3루수",
-            "name": "전병우"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "김상준"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "황성빈"
-          },
-          {
-            "order": 2,
-            "pos": "지명타자",
-            "name": "레이예스"
-          },
-          {
-            "order": 3,
-            "pos": "2루수",
-            "name": "고승민"
-          },
-          {
-            "order": 4,
-            "pos": "3루수",
-            "name": "한동희"
-          },
-          {
-            "order": 5,
-            "pos": "1루수",
-            "name": "나승엽"
-          },
-          {
-            "order": 6,
-            "pos": "유격수",
-            "name": "전민재"
-          },
-          {
-            "order": 7,
-            "pos": "좌익수",
-            "name": "전준우"
-          },
-          {
-            "order": 8,
-            "pos": "우익수",
-            "name": "장두성"
-          },
-          {
-            "order": 9,
-            "pos": "포수",
-            "name": "박건우"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": "사토시",
+        "lose": "박정민",
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260915HTSK0",
@@ -190,9 +94,9 @@
         "score": 3,
         "starter": {
           "name": "김태형",
-          "era": 5.32,
+          "era": 5.4,
           "w": 3,
-          "l": 3
+          "l": 4
         }
       },
       "home": {
@@ -202,8 +106,8 @@
         "score": 6,
         "starter": {
           "name": "김민준",
-          "era": 3.38,
-          "w": 6,
+          "era": 3.47,
+          "w": 7,
           "l": 2
         }
       },
@@ -239,9 +143,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "김민준",
+        "lose": "김태형",
+        "save": "문승원"
       },
       "lineup": null
     },
@@ -259,8 +163,8 @@
         "score": 3,
         "starter": {
           "name": "카라스코",
-          "era": 3.83,
-          "w": 4,
+          "era": 3.35,
+          "w": 5,
           "l": 2
         }
       },
@@ -271,9 +175,9 @@
         "score": 2,
         "starter": {
           "name": "송명기",
-          "era": 5.11,
+          "era": 5.08,
           "w": 1,
-          "l": 0
+          "l": 1
         }
       },
       "honjam": {
@@ -308,9 +212,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "카라스코",
+        "lose": "송명기",
+        "save": "손주영"
       },
       "lineup": null
     },
@@ -328,8 +232,8 @@
         "score": 13,
         "starter": {
           "name": "고영표",
-          "era": 3.8,
-          "w": 11,
+          "era": 3.65,
+          "w": 12,
           "l": 6
         }
       },
@@ -340,9 +244,9 @@
         "score": 3,
         "starter": {
           "name": "왕옌청",
-          "era": 3.75,
+          "era": 3.97,
           "w": 11,
-          "l": 5
+          "l": 6
         }
       },
       "honjam": {
@@ -377,8 +281,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "고영표",
+        "lose": "왕옌청",
         "save": null
       },
       "lineup": null
