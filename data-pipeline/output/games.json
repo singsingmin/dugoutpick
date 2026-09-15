@@ -1,7 +1,7 @@
 {
   "date": "20260915",
   "dateText": "2026년 9월 15일",
-  "updatedAt": "2026-09-15T10:10:24.477Z",
+  "updatedAt": "2026-09-15T10:20:25.738Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
-        "out": 1,
-        "b1": true,
+        "inning": 3,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박세웅",
-        "batter": "김성윤",
-        "heat": 35,
+        "pitcher": "원태인",
+        "batter": "박건우",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -187,7 +187,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 1,
+        "score": 3,
         "starter": {
           "name": "김태형",
           "era": 5.32,
@@ -232,14 +232,14 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": true,
-        "b2": true,
-        "b3": false,
+        "b2": false,
+        "b3": true,
         "pitcher": "김민준",
-        "batter": "이호연",
-        "heat": 38,
-        "label": "초반 팽팽한 흐름"
+        "batter": "한준수",
+        "heat": 23,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -352,7 +352,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "카라스코",
           "era": 3.83,
@@ -396,13 +396,13 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
-        "out": 2,
-        "b1": false,
-        "b2": true,
+        "half": "B",
+        "out": 1,
+        "b1": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "송명기",
-        "batter": "박해민",
+        "pitcher": "카라스코",
+        "batter": "김한별",
         "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
@@ -517,7 +517,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "고영표",
           "era": 3.8,
@@ -560,16 +560,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
+        "inning": 3,
+        "half": "T",
         "out": 1,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "고영표",
-        "batter": "유민",
-        "heat": 29,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "왕옌청",
+        "batter": "김현수",
+        "heat": 23,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
