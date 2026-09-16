@@ -1,7 +1,7 @@
 {
   "date": "20260916",
   "dateText": "2026년 9월 16일",
-  "updatedAt": "2026-09-16T13:40:25.458Z",
+  "updatedAt": "2026-09-16T13:50:26.258Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -222,7 +222,7 @@
       "gameId": "20260916KTHH0",
       "time": "18:30",
       "stadium": "대전",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "KBS N SPORTS,SBS SPORTS",
       "away": {
@@ -271,117 +271,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 11,
-        "half": "B",
-        "out": 1,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "문용익",
-        "batter": "최인호",
-        "heat": 100,
-        "label": "끝내기 한 방 찬스"
+      "live": null,
+      "recap": {
+        "actual": 99,
+        "verdict": "기대 이상",
+        "diff": 0,
+        "total": 8,
+        "extra": 1,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "유격수",
-            "name": "심우준"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "최인호"
-          },
-          {
-            "order": 3,
-            "pos": "우익수",
-            "name": "페라자"
-          },
-          {
-            "order": 4,
-            "pos": "1루수",
-            "name": "강백호"
-          },
-          {
-            "order": 5,
-            "pos": "포수",
-            "name": "허인서"
-          },
-          {
-            "order": 6,
-            "pos": "좌익수",
-            "name": "한지윤"
-          },
-          {
-            "order": 7,
-            "pos": "지명타자",
-            "name": "장규현"
-          },
-          {
-            "order": 8,
-            "pos": "3루수",
-            "name": "박정현"
-          },
-          {
-            "order": 9,
-            "pos": "2루수",
-            "name": "이도윤"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "우익수",
-            "name": "최원준"
-          },
-          {
-            "order": 2,
-            "pos": "좌익수",
-            "name": "김민혁"
-          },
-          {
-            "order": 3,
-            "pos": "지명타자",
-            "name": "안현민"
-          },
-          {
-            "order": 4,
-            "pos": "중견수",
-            "name": "힐리어드"
-          },
-          {
-            "order": 5,
-            "pos": "1루수",
-            "name": "김현수"
-          },
-          {
-            "order": 6,
-            "pos": "2루수",
-            "name": "김상수"
-          },
-          {
-            "order": 7,
-            "pos": "3루수",
-            "name": "허경민"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "한승택"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "장준원"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     }
   ],
   "postseason": null
