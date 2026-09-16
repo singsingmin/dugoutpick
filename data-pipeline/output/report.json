@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-16T12:40:28.082Z",
+  "updatedAt": "2026-09-16T12:50:24.971Z",
   "lastWeek": {
     "range": [
       "20260907",
@@ -25,7 +25,7 @@
         "l": 2,
         "d": 0,
         "rank": 3,
-        "note": "이기다 지다 사건 많은 한 주 — 2승2패"
+        "note": "4연승, 이 팀 지금 무서운 거 맞아"
       },
       "HT": {
         "w": 2,
@@ -87,16 +87,16 @@
       {
         "away": "LG",
         "home": "KT",
-        "pred": 85,
-        "reason": "게임차 7의 순위 다툼 · 리그 1위·3위 상위권 빅매치",
+        "pred": 86,
+        "reason": "게임차 6.5의 순위 다툼 · 리그 1위·3위 상위권 빅매치",
         "dateStart": "20260918",
         "dateEnd": "20260918"
       },
       {
         "away": "SK",
         "home": "NC",
-        "pred": 81,
-        "reason": "게임차 5의 순위 다툼",
+        "pred": 82,
+        "reason": "게임차 4.5의 순위 다툼",
         "dateStart": "20260917",
         "dateEnd": "20260917"
       },
@@ -216,7 +216,9 @@
         {
           "date": "20260917",
           "away": "SK",
-          "home": "NC"
+          "home": "NC",
+          "awayStarter": "이로운",
+          "homeStarter": "라일리"
         },
         {
           "date": "20260920",
@@ -273,7 +275,9 @@
         {
           "date": "20260917",
           "away": "SK",
-          "home": "NC"
+          "home": "NC",
+          "awayStarter": "이로운",
+          "homeStarter": "라일리"
         },
         {
           "date": "20260918",
