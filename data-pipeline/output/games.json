@@ -1,7 +1,7 @@
 {
   "date": "20260916",
   "dateText": "2026년 9월 16일",
-  "updatedAt": "2026-09-16T10:20:24.606Z",
+  "updatedAt": "2026-09-16T10:30:32.202Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
+        "inning": 4,
         "half": "T",
-        "out": 2,
+        "out": 0,
         "b1": false,
-        "b2": true,
-        "b3": true,
+        "b2": false,
+        "b3": false,
         "pitcher": "벤자민",
-        "batter": "구자욱",
-        "heat": 38,
+        "batter": "디아즈",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
+        "inning": 4,
         "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "아빌라",
-        "batter": "김동혁",
-        "heat": 43,
+        "batter": "나승엽",
+        "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
+        "inning": 4,
         "half": "T",
-        "out": 2,
-        "b1": true,
+        "out": 1,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "클레빈저",
-        "batter": "송찬의",
-        "heat": 38,
+        "pitcher": "배재환",
+        "batter": "오지환",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -562,12 +562,12 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "out": 1,
+        "b1": true,
+        "b2": true,
         "b3": false,
         "pitcher": "류현진",
-        "batter": "최원준",
+        "batter": "힐리어드",
         "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
