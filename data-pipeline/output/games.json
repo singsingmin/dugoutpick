@@ -1,7 +1,7 @@
 {
   "date": "20260916",
   "dateText": "2026년 9월 16일",
-  "updatedAt": "2026-09-16T13:50:26.258Z",
+  "updatedAt": "2026-09-16T14:00:42.184Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -25,9 +25,9 @@
         "score": 1,
         "starter": {
           "name": "페덱",
-          "era": 2.77,
+          "era": 2.93,
           "w": 5,
-          "l": 2
+          "l": 3
         }
       },
       "home": {
@@ -37,8 +37,8 @@
         "score": 3,
         "starter": {
           "name": "벤자민",
-          "era": 2.44,
-          "w": 5,
+          "era": 2.41,
+          "w": 6,
           "l": 7
         }
       },
@@ -74,9 +74,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "벤자민",
+        "lose": "페덱",
+        "save": "이영하"
       },
       "lineup": null
     },
@@ -94,8 +94,8 @@
         "score": 4,
         "starter": {
           "name": "아빌라",
-          "era": 1.41,
-          "w": 6,
+          "era": 1.39,
+          "w": 7,
           "l": 1
         }
       },
@@ -106,9 +106,9 @@
         "score": 1,
         "starter": {
           "name": "비슬리",
-          "era": 5.15,
+          "era": 5.06,
           "w": 9,
-          "l": 6
+          "l": 7
         }
       },
       "honjam": {
@@ -143,9 +143,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "아빌라",
+        "lose": "비슬리",
+        "save": "문승원"
       },
       "lineup": null
     },
@@ -163,7 +163,7 @@
         "score": 9,
         "starter": {
           "name": "박시원",
-          "era": 4.4,
+          "era": 4.41,
           "w": 1,
           "l": 4
         }
@@ -175,9 +175,9 @@
         "score": 2,
         "starter": {
           "name": "클레빈저",
-          "era": null,
-          "w": null,
-          "l": null
+          "era": 3,
+          "w": 0,
+          "l": 0
         }
       },
       "honjam": {
@@ -212,8 +212,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "고우석",
+        "lose": "김진호",
         "save": null
       },
       "lineup": null
@@ -232,7 +232,7 @@
         "score": 4,
         "starter": {
           "name": "배제성",
-          "era": 3.31,
+          "era": 3.38,
           "w": 2,
           "l": 2
         }
@@ -244,7 +244,7 @@
         "score": 4,
         "starter": {
           "name": "류현진",
-          "era": 3.8,
+          "era": 3.62,
           "w": 9,
           "l": 5
         }
