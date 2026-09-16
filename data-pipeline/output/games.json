@@ -1,7 +1,7 @@
 {
   "date": "20260916",
   "dateText": "2026년 9월 16일",
-  "updatedAt": "2026-09-16T09:35:41.442Z",
+  "updatedAt": "2026-09-16T09:40:24.966Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "페덱",
-        "batter": "박찬호",
+        "batter": "김민석",
         "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
@@ -232,12 +232,12 @@
       "live": {
         "inning": 1,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "비슬리",
-        "batter": "최지훈",
+        "batter": "고명준",
         "heat": 31,
         "label": "초반 팽팽한 흐름"
       },
@@ -396,14 +396,14 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
-        "out": 2,
-        "b1": false,
+        "half": "B",
+        "out": 0,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "클레빈저",
-        "batter": "오스틴",
-        "heat": 31,
+        "pitcher": "박시원",
+        "batter": "권희동",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -562,12 +562,12 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "배제성",
-        "batter": "심우준",
+        "batter": "페라자",
         "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
