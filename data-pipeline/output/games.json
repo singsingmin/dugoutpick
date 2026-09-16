@@ -1,7 +1,7 @@
 {
   "date": "20260916",
   "dateText": "2026년 9월 16일",
-  "updatedAt": "2026-09-16T13:20:27.252Z",
+  "updatedAt": "2026-09-16T13:30:35.561Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -272,16 +272,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 10,
-        "half": "B",
-        "out": 2,
+        "inning": 11,
+        "half": "T",
+        "out": 1,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "문용익",
-        "batter": "정은원",
-        "heat": 98,
-        "label": "끝내기 한 방 찬스"
+        "pitcher": "김종수",
+        "batter": "류현인",
+        "heat": 94,
+        "label": "연장 혈투 진행 중"
       },
       "recap": null,
       "decision": null,
