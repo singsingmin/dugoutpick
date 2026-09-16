@@ -1,7 +1,7 @@
 {
   "date": "20260916",
   "dateText": "2026년 9월 16일",
-  "updatedAt": "2026-09-16T11:00:41.060Z",
+  "updatedAt": "2026-09-16T11:10:24.915Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 1,
+        "inning": 6,
+        "half": "T",
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "페덱",
-        "batter": "박찬호",
-        "heat": 42,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "타카다",
+        "batter": "구자욱",
+        "heat": 44,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -187,7 +187,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 7,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "아빌라",
           "era": 1.41,
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
+        "inning": 6,
+        "half": "T",
         "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "아빌라",
-        "batter": "박건우",
-        "heat": 50,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "비슬리",
+        "batter": "오시후",
+        "heat": 53,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -352,7 +352,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 1,
+        "score": 3,
         "starter": {
           "name": "박시원",
           "era": 4.4,
@@ -396,14 +396,14 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": true,
-        "b2": true,
-        "b3": true,
-        "pitcher": "김진호",
-        "batter": "송찬의",
-        "heat": 48,
+        "b2": false,
+        "b3": false,
+        "pitcher": "김강률",
+        "batter": "천재환",
+        "heat": 50,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -529,7 +529,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 8,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "류현진",
           "era": 3.8,
@@ -562,13 +562,13 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 2,
-        "b1": false,
-        "b2": false,
-        "b3": true,
-        "pitcher": "전용주",
-        "batter": "페라자",
-        "heat": 50,
+        "out": 3,
+        "b1": true,
+        "b2": true,
+        "b3": false,
+        "pitcher": "김정운",
+        "batter": "허인서",
+        "heat": 42,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
