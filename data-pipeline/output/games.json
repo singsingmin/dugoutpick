@@ -1,7 +1,7 @@
 {
   "date": "20260916",
   "dateText": "2026년 9월 16일",
-  "updatedAt": "2026-09-16T11:10:24.915Z",
+  "updatedAt": "2026-09-16T11:20:26.122Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
+        "half": "B",
         "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "타카다",
-        "batter": "구자욱",
-        "heat": 44,
+        "pitcher": "페덱",
+        "batter": "세베리노",
+        "heat": 46,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
+        "inning": 7,
         "half": "T",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "비슬리",
-        "batter": "오시후",
-        "heat": 53,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "이영재",
+        "batter": "안재연",
+        "heat": 59,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -395,16 +395,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
+        "inning": 6,
+        "half": "T",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김강률",
-        "batter": "천재환",
-        "heat": 50,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "이준혁",
+        "batter": "구본혁",
+        "heat": 53,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -560,16 +560,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
+        "inning": 6,
         "half": "B",
-        "out": 3,
-        "b1": true,
-        "b2": true,
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
         "pitcher": "김정운",
-        "batter": "허인서",
-        "heat": 42,
-        "label": "초반 팽팽한 흐름"
+        "batter": "한지윤",
+        "heat": 46,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
