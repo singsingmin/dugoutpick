@@ -1,7 +1,7 @@
 {
   "date": "20260916",
   "dateText": "2026년 9월 16일",
-  "updatedAt": "2026-09-16T11:20:26.122Z",
+  "updatedAt": "2026-09-16T11:30:33.225Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 2,
+        "inning": 7,
+        "half": "T",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "페덱",
-        "batter": "세베리노",
-        "heat": 46,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "타카다",
+        "batter": "이창용",
+        "heat": 49,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "이영재",
-        "batter": "안재연",
+        "pitcher": "이진하",
+        "batter": "최지훈",
         "heat": 59,
         "label": "후반 박빙 승부"
       },
@@ -396,14 +396,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 0,
-        "b1": false,
+        "half": "B",
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "이준혁",
-        "batter": "구본혁",
-        "heat": 53,
+        "pitcher": "케네디",
+        "batter": "김휘집",
+        "heat": 56,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -560,16 +560,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "김정운",
-        "batter": "한지윤",
-        "heat": 46,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "짐머맨",
+        "batter": "김현수",
+        "heat": 49,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
