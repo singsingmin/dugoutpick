@@ -1,7 +1,7 @@
 {
   "date": "20260916",
   "dateText": "2026년 9월 16일",
-  "updatedAt": "2026-09-16T12:50:24.971Z",
+  "updatedAt": "2026-09-16T13:00:42.716Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -274,12 +274,12 @@
       "live": {
         "inning": 9,
         "half": "B",
-        "out": 1,
-        "b1": false,
-        "b2": false,
+        "out": 2,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "손동현",
-        "batter": "유민",
+        "pitcher": "문용익",
+        "batter": "유로결",
         "heat": 92,
         "label": "끝내기 한 방 찬스"
       },
