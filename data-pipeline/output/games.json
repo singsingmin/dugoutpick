@@ -1,7 +1,7 @@
 {
   "date": "20260916",
   "dateText": "2026년 9월 16일",
-  "updatedAt": "2026-09-16T11:40:24.915Z",
+  "updatedAt": "2026-09-16T11:50:24.815Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
+        "inning": 8,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이승현",
-        "batter": "조수행",
-        "heat": 51,
+        "pitcher": "김택연",
+        "batter": "류지혁",
+        "heat": 53,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
+        "inning": 8,
         "half": "T",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "윤성빈",
-        "batter": "전의산",
-        "heat": 36,
+        "pitcher": "현도훈",
+        "batter": "이지영",
+        "heat": 40,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -352,7 +352,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 3,
+        "score": 5,
         "starter": {
           "name": "박시원",
           "era": 4.4,
@@ -397,14 +397,14 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 0,
-        "b1": true,
-        "b2": false,
+        "out": 3,
+        "b1": false,
+        "b2": true,
         "b3": false,
         "pitcher": "이용준",
-        "batter": "홍창기",
-        "heat": 59,
-        "label": "후반 박빙 승부"
+        "batter": "오지환",
+        "heat": 36,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -517,7 +517,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": 0,
+        "score": 3,
         "starter": {
           "name": "배제성",
           "era": 3.31,
@@ -562,13 +562,13 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "b1": true,
-        "b2": false,
-        "b3": true,
-        "pitcher": "장유호",
-        "batter": "허경민",
-        "heat": 49,
+        "b2": true,
+        "b3": false,
+        "pitcher": "조동욱",
+        "batter": "김민혁",
+        "heat": 59,
         "label": "후반 박빙 승부"
       },
       "recap": null,
