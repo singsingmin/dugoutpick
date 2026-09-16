@@ -1,7 +1,7 @@
 {
   "date": "20260916",
   "dateText": "2026년 9월 16일",
-  "updatedAt": "2026-09-16T10:10:26.343Z",
+  "updatedAt": "2026-09-16T10:20:24.606Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": false,
-        "b2": false,
-        "b3": false,
+        "b2": true,
+        "b3": true,
         "pitcher": "벤자민",
-        "batter": "강민호",
+        "batter": "구자욱",
         "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
+        "half": "B",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "비슬리",
-        "batter": "최지훈",
-        "heat": 40,
+        "pitcher": "아빌라",
+        "batter": "김동혁",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -397,12 +397,12 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 1,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "클레빈저",
-        "batter": "박해민",
+        "batter": "송찬의",
         "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
@@ -529,7 +529,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 8,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "류현진",
           "era": 3.8,
@@ -560,14 +560,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 1,
-        "b1": true,
+        "inning": 4,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "배제성",
-        "batter": "심우준",
+        "pitcher": "류현진",
+        "batter": "최원준",
         "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
