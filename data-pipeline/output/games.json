@@ -1,7 +1,7 @@
 {
   "date": "20260917",
   "dateText": "2026년 9월 17일",
-  "updatedAt": "2026-09-17T12:30:33.028Z",
+  "updatedAt": "2026-09-17T12:40:25.767Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -15,7 +15,7 @@
       "gameId": "20260917WOHT0",
       "time": "18:30",
       "stadium": "광주",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPOTV2,MBC SPORTS+",
       "away": {
@@ -25,7 +25,7 @@
         "score": 0,
         "starter": {
           "name": "안우진",
-          "era": 3.88,
+          "era": 3.65,
           "w": 3,
           "l": 8
         }
@@ -37,7 +37,7 @@
         "score": 2,
         "starter": {
           "name": "올러",
-          "era": 2.91,
+          "era": 2.8,
           "w": 11,
           "l": 9
         }
@@ -64,117 +64,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 2,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "이의리",
-        "batter": "여동욱",
-        "heat": 58,
-        "label": "후반 박빙 승부"
+      "live": null,
+      "recap": {
+        "actual": 74,
+        "verdict": "기대 이상",
+        "diff": 2,
+        "total": 2,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "좌익수",
-            "name": "박정우"
-          },
-          {
-            "order": 2,
-            "pos": "지명타자",
-            "name": "한준수"
-          },
-          {
-            "order": 3,
-            "pos": "1루수",
-            "name": "카스트로"
-          },
-          {
-            "order": 4,
-            "pos": "우익수",
-            "name": "나성범"
-          },
-          {
-            "order": 5,
-            "pos": "2루수",
-            "name": "김선빈"
-          },
-          {
-            "order": 6,
-            "pos": "유격수",
-            "name": "하주석"
-          },
-          {
-            "order": 7,
-            "pos": "중견수",
-            "name": "김호령"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "김태군"
-          },
-          {
-            "order": 9,
-            "pos": "3루수",
-            "name": "변우혁"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "2루수",
-            "name": "서건창"
-          },
-          {
-            "order": 2,
-            "pos": "우익수",
-            "name": "추재현"
-          },
-          {
-            "order": 3,
-            "pos": "1루수",
-            "name": "데이비슨"
-          },
-          {
-            "order": 4,
-            "pos": "좌익수",
-            "name": "히우라"
-          },
-          {
-            "order": 5,
-            "pos": "지명타자",
-            "name": "김웅빈"
-          },
-          {
-            "order": 6,
-            "pos": "중견수",
-            "name": "박주홍"
-          },
-          {
-            "order": 7,
-            "pos": "3루수",
-            "name": "어준서"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "김재현"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "권혁빈"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": "곽도규",
+        "lose": "박준현",
+        "save": "이의리"
+      },
+      "lineup": null
     },
     {
       "gameId": "20260917SKNC0",
@@ -190,8 +94,8 @@
         "score": 2,
         "starter": {
           "name": "이로운",
-          "era": 5.96,
-          "w": 6,
+          "era": 5.4,
+          "w": 7,
           "l": 3
         }
       },
@@ -202,7 +106,7 @@
         "score": 1,
         "starter": {
           "name": "라일리",
-          "era": 2.67,
+          "era": 2.59,
           "w": 7,
           "l": 1
         }
@@ -239,9 +143,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "이로운",
+        "lose": "손주환",
+        "save": "전영준"
       },
       "lineup": null
     }
