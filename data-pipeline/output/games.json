@@ -1,7 +1,7 @@
 {
   "date": "20260917",
   "dateText": "2026년 9월 17일",
-  "updatedAt": "2026-09-17T10:30:35.099Z",
+  "updatedAt": "2026-09-17T10:40:24.922Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
+        "half": "B",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "올러",
-        "batter": "히우라",
-        "heat": 45,
+        "pitcher": "안우진",
+        "batter": "나성범",
+        "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 3,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "라일리",
-        "batter": "한유섬",
-        "heat": 51,
+        "pitcher": "이로운",
+        "batter": "박민우",
+        "heat": 54,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
