@@ -1,7 +1,7 @@
 {
   "date": "20260917",
   "dateText": "2026년 9월 17일",
-  "updatedAt": "2026-09-17T09:44:05.867Z",
+  "updatedAt": "2026-09-17T09:51:02.458Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "올러",
-        "batter": "히우라",
+        "batter": "박주홍",
         "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
@@ -232,12 +232,12 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 0,
+        "out": 3,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "라일리",
-        "batter": "김재환",
+        "batter": "전의산",
         "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
