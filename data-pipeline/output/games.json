@@ -1,7 +1,7 @@
 {
   "date": "20260917",
   "dateText": "2026년 9월 17일",
-  "updatedAt": "2026-09-17T09:31:07.151Z",
+  "updatedAt": "2026-09-17T09:40:25.274Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -15,14 +15,14 @@
       "gameId": "20260917WOHT0",
       "time": "18:30",
       "stadium": "광주",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SPOTV2,MBC SPORTS+",
       "away": {
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "안우진",
           "era": 3.88,
@@ -34,7 +34,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "올러",
           "era": 2.91,
@@ -61,9 +61,21 @@
           "doom": 0,
           "park": 0.68,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "B",
+        "out": 1,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "안우진",
+        "batter": "한준수",
+        "heat": 33,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
@@ -219,14 +231,14 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
-        "out": 0,
+        "half": "B",
+        "out": 1,
         "b1": false,
         "b2": false,
-        "b3": false,
-        "pitcher": "라일리",
-        "batter": "박성한",
-        "heat": 31,
+        "b3": true,
+        "pitcher": "이로운",
+        "batter": "블레인",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
