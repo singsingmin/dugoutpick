@@ -1,7 +1,7 @@
 {
   "date": "20260917",
   "dateText": "2026년 9월 17일",
-  "updatedAt": "2026-09-17T11:50:25.441Z",
+  "updatedAt": "2026-09-17T12:00:40.896Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "올러",
           "era": 2.91,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 2,
-        "b1": true,
+        "inning": 8,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박준현",
-        "batter": "한준수",
-        "heat": 65,
+        "pitcher": "곽도규",
+        "batter": "추재현",
+        "heat": 53,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
+        "inning": 9,
+        "half": "T",
+        "out": 1,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "김민",
-        "batter": "김휘집",
-        "heat": 67,
-        "label": "후반 박빙 승부"
+        "pitcher": "전사민",
+        "batter": "전의산",
+        "heat": 75,
+        "label": "9회 1점 승부"
       },
       "recap": null,
       "decision": null,
