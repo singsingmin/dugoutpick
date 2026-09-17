@@ -1,7 +1,7 @@
 {
   "date": "20260917",
   "dateText": "2026년 9월 17일",
-  "updatedAt": "2026-09-17T11:20:24.981Z",
+  "updatedAt": "2026-09-17T11:30:31.875Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "안우진",
-        "batter": "나성범",
-        "heat": 59,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "전상현",
+        "batter": "어준서",
+        "heat": 62,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 3,
-        "b1": true,
+        "out": 2,
+        "b1": false,
         "b2": true,
         "b3": false,
-        "pitcher": "이로운",
-        "batter": "안중열",
+        "pitcher": "손주환",
+        "batter": "박성한",
         "heat": 69,
         "label": "후반 박빙 승부"
       },
