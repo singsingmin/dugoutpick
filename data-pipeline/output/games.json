@@ -1,7 +1,7 @@
 {
   "date": "20260917",
   "dateText": "2026년 9월 17일",
-  "updatedAt": "2026-09-17T11:30:31.875Z",
+  "updatedAt": "2026-09-17T11:40:32.057Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "전상현",
-        "batter": "어준서",
-        "heat": 62,
+        "pitcher": "안우진",
+        "batter": "김태군",
+        "heat": 65,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -187,7 +187,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 7,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "이로운",
           "era": 5.96,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "손주환",
-        "batter": "박성한",
-        "heat": 69,
+        "pitcher": "김민",
+        "batter": "박민우",
+        "heat": 67,
         "label": "후반 박빙 승부"
       },
       "recap": null,
