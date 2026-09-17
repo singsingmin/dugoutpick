@@ -1,7 +1,7 @@
 {
   "date": "20260917",
   "dateText": "2026년 9월 17일",
-  "updatedAt": "2026-09-17T10:50:25.395Z",
+  "updatedAt": "2026-09-17T11:00:38.419Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 0,
+        "half": "B",
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "올러",
-        "batter": "김재현",
-        "heat": 51,
+        "pitcher": "안우진",
+        "batter": "한준수",
+        "heat": 54,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
+        "inning": 7,
         "half": "T",
-        "out": 1,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "라일리",
-        "batter": "최지훈",
-        "heat": 57,
-        "label": "경기 흐름 체크 중"
+        "batter": "에레디아",
+        "heat": 62,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
