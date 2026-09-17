@@ -1,7 +1,7 @@
 {
   "date": "20260917",
   "dateText": "2026년 9월 17일",
-  "updatedAt": "2026-09-17T10:10:25.396Z",
+  "updatedAt": "2026-09-17T10:20:27.807Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
-        "out": 2,
-        "b1": false,
-        "b2": true,
+        "half": "B",
+        "out": 0,
+        "b1": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "올러",
-        "batter": "추재현",
-        "heat": 40,
+        "pitcher": "안우진",
+        "batter": "김태군",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
+        "inning": 4,
         "half": "B",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "이로운",
-        "batter": "블레인",
-        "heat": 40,
+        "batter": "김휘집",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
