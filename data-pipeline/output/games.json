@@ -1,7 +1,7 @@
 {
   "date": "20260917",
   "dateText": "2026년 9월 17일",
-  "updatedAt": "2026-09-17T12:20:27.903Z",
+  "updatedAt": "2026-09-17T12:30:33.028Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 1,
+        "inning": 9,
+        "half": "T",
+        "out": 2,
         "b1": false,
-        "b2": true,
-        "b3": true,
-        "pitcher": "유토",
-        "batter": "정현창",
-        "heat": 56,
+        "b2": false,
+        "b3": false,
+        "pitcher": "이의리",
+        "batter": "여동욱",
+        "heat": 58,
         "label": "후반 박빙 승부"
       },
       "recap": null,
