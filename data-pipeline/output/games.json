@@ -1,7 +1,7 @@
 {
   "date": "20260917",
   "dateText": "2026년 9월 17일",
-  "updatedAt": "2026-09-17T11:40:32.057Z",
+  "updatedAt": "2026-09-17T11:50:25.441Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "안우진",
-        "batter": "김태군",
+        "pitcher": "박준현",
+        "batter": "한준수",
         "heat": 65,
         "label": "후반 박빙 승부"
       },
@@ -232,12 +232,12 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "김민",
-        "batter": "박민우",
+        "batter": "김휘집",
         "heat": 67,
         "label": "후반 박빙 승부"
       },
