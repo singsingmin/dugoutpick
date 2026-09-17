@@ -1,7 +1,7 @@
 {
   "date": "20260917",
   "dateText": "2026년 9월 17일",
-  "updatedAt": "2026-09-17T08:50:25.593Z",
+  "updatedAt": "2026-09-17T09:31:07.151Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -168,14 +168,14 @@
       "gameId": "20260917SKNC0",
       "time": "18:30",
       "stadium": "창원",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "KBS N SPORTS,SPOTV",
       "away": {
         "code": "SK",
         "name": "SSG",
         "rank": 7,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "이로운",
           "era": 5.96,
@@ -187,7 +187,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 6,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "라일리",
           "era": 2.67,
@@ -214,9 +214,21 @@
           "doom": 0,
           "park": 0.64,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 0,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "라일리",
+        "batter": "박성한",
+        "heat": 31,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
