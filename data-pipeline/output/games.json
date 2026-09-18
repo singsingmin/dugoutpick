@@ -1,7 +1,7 @@
 {
   "date": "20260918",
   "dateText": "2026년 9월 18일",
-  "updatedAt": "2026-09-18T13:40:25.673Z",
+  "updatedAt": "2026-09-18T13:41:52.431Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,15 +66,15 @@
       },
       "live": {
         "inning": 11,
-        "half": "T",
-        "out": 3,
+        "half": "B",
+        "out": 0,
         "b1": false,
-        "b2": true,
-        "b3": true,
-        "pitcher": "김정우",
-        "batter": "박찬혁",
+        "b2": false,
+        "b3": false,
+        "pitcher": "조영건",
+        "batter": "박찬호",
         "heat": 100,
-        "label": "연장 혈투 진행 중"
+        "label": "끝내기 한 방 찬스"
       },
       "recap": null,
       "decision": null,
