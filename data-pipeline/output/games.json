@@ -1,7 +1,7 @@
 {
   "date": "20260918",
   "dateText": "2026년 9월 18일",
-  "updatedAt": "2026-09-18T11:50:24.744Z",
+  "updatedAt": "2026-09-18T12:00:38.603Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "잭로그",
           "era": 4.1,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 2,
+        "inning": 8,
+        "half": "T",
+        "out": 1,
         "b1": true,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "윤석원",
-        "batter": "양의지",
-        "heat": 53,
-        "label": "후반 박빙 승부"
+        "pitcher": "김택연",
+        "batter": "히우라",
+        "heat": 43,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "로드리게스",
-        "batter": "김형준",
+        "batter": "권희동",
         "heat": 14,
         "label": "경기 흐름 체크 중"
       },
@@ -396,13 +396,13 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "이정현",
-        "batter": "신민재",
+        "b3": false,
+        "pitcher": "톨허스트",
+        "batter": "김현수",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
@@ -529,7 +529,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 8,
-        "score": 0,
+        "score": 3,
         "starter": {
           "name": "박준영",
           "era": 6.13,
@@ -560,14 +560,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
+        "inning": 8,
+        "half": "T",
         "out": 1,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "후라도",
-        "batter": "허인서",
+        "pitcher": "박재규",
+        "batter": "김성윤",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
