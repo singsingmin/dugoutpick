@@ -1,7 +1,7 @@
 {
   "date": "20260918",
   "dateText": "2026년 9월 18일",
-  "updatedAt": "2026-09-18T13:30:33.826Z",
+  "updatedAt": "2026-09-18T13:40:25.673Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 11,
         "half": "T",
-        "out": 2,
-        "b1": true,
-        "b2": false,
-        "b3": false,
+        "out": 3,
+        "b1": false,
+        "b2": true,
+        "b3": true,
         "pitcher": "김정우",
-        "batter": "박주홍",
+        "batter": "박찬혁",
         "heat": 100,
         "label": "연장 혈투 진행 중"
       },
