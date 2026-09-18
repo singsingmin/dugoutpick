@@ -1,7 +1,7 @@
 {
   "date": "20260918",
   "dateText": "2026년 9월 18일",
-  "updatedAt": "2026-09-18T13:00:40.026Z",
+  "updatedAt": "2026-09-18T13:10:26.773Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 3,
+        "inning": 10,
+        "half": "T",
+        "out": 2,
         "b1": true,
-        "b2": true,
-        "b3": true,
-        "pitcher": "유토",
-        "batter": "김대한",
-        "heat": 98,
-        "label": "끝내기 한 방 찬스"
+        "b2": false,
+        "b3": false,
+        "pitcher": "이용찬",
+        "batter": "권혁빈",
+        "heat": 97,
+        "label": "연장 혈투 진행 중"
       },
       "recap": null,
       "decision": null,
