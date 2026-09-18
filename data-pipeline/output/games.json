@@ -1,7 +1,7 @@
 {
   "date": "20260918",
   "dateText": "2026년 9월 18일",
-  "updatedAt": "2026-09-18T13:41:52.431Z",
+  "updatedAt": "2026-09-18T13:50:26.598Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 11,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "조영건",
-        "batter": "박찬호",
+        "batter": "박지훈",
         "heat": 100,
         "label": "끝내기 한 방 찬스"
       },
