@@ -1,7 +1,7 @@
 {
   "date": "20260918",
   "dateText": "2026년 9월 18일",
-  "updatedAt": "2026-09-18T09:40:23.732Z",
+  "updatedAt": "2026-09-18T09:50:24.939Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "알칸타라",
           "era": 3.68,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "알칸타라",
-        "batter": "김민석",
-        "heat": 33,
+        "pitcher": "잭로그",
+        "batter": "김동헌",
+        "heat": 27,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "B",
-        "out": 1,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "이재학",
-        "batter": "나승엽",
-        "heat": 31,
+        "batter": "한동희",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "T",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
         "pitcher": "로건",
-        "batter": "문정빈",
-        "heat": 31,
+        "batter": "오지환",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 0,
+        "inning": 2,
+        "half": "T",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "후라도",
-        "batter": "심우준",
-        "heat": 33,
+        "pitcher": "박준영",
+        "batter": "전병우",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
