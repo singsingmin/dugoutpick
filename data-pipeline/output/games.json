@@ -1,12 +1,12 @@
 {
   "date": "20260918",
   "dateText": "2026년 9월 18일",
-  "updatedAt": "2026-09-18T13:50:26.598Z",
+  "updatedAt": "2026-09-18T14:00:44.959Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
     "hitRate": 20,
-    "bonusRate": 48,
+    "bonusRate": 50,
     "ready": true
   },
   "recommendedGameId": "20260918LGKT0",
@@ -15,7 +15,7 @@
       "gameId": "20260918WOOB0",
       "time": "18:30",
       "stadium": "잠실",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPOTV,KBS N SPORTS",
       "away": {
@@ -25,7 +25,7 @@
         "score": 6,
         "starter": {
           "name": "알칸타라",
-          "era": 3.68,
+          "era": 3.87,
           "w": 9,
           "l": 9
         }
@@ -37,7 +37,7 @@
         "score": 6,
         "starter": {
           "name": "잭로그",
-          "era": 4.1,
+          "era": 4.09,
           "w": 7,
           "l": 7
         }
@@ -64,117 +64,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 11,
-        "half": "B",
-        "out": 2,
-        "b1": false,
-        "b2": true,
-        "b3": false,
-        "pitcher": "조영건",
-        "batter": "박지훈",
-        "heat": 100,
-        "label": "끝내기 한 방 찬스"
+      "live": null,
+      "recap": {
+        "actual": 99,
+        "verdict": "기대 이상",
+        "diff": 0,
+        "total": 12,
+        "extra": 1,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "유격수",
-            "name": "박찬호"
-          },
-          {
-            "order": 2,
-            "pos": "3루수",
-            "name": "안재석"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "김민석"
-          },
-          {
-            "order": 4,
-            "pos": "포수",
-            "name": "양의지"
-          },
-          {
-            "order": 5,
-            "pos": "지명타자",
-            "name": "세베리노"
-          },
-          {
-            "order": 6,
-            "pos": "1루수",
-            "name": "양석환"
-          },
-          {
-            "order": 7,
-            "pos": "중견수",
-            "name": "정수빈"
-          },
-          {
-            "order": 8,
-            "pos": "2루수",
-            "name": "강승호"
-          },
-          {
-            "order": 9,
-            "pos": "우익수",
-            "name": "조수행"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "2루수",
-            "name": "서건창"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "추재현"
-          },
-          {
-            "order": 3,
-            "pos": "1루수",
-            "name": "데이비슨"
-          },
-          {
-            "order": 4,
-            "pos": "좌익수",
-            "name": "히우라"
-          },
-          {
-            "order": 5,
-            "pos": "우익수",
-            "name": "박찬혁"
-          },
-          {
-            "order": 6,
-            "pos": "지명타자",
-            "name": "안치홍"
-          },
-          {
-            "order": 7,
-            "pos": "3루수",
-            "name": "여동욱"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "김동헌"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "권혁빈"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260918NCLT0",
@@ -190,9 +94,9 @@
         "score": 6,
         "starter": {
           "name": "이재학",
-          "era": 5,
+          "era": 5.56,
           "w": 0,
-          "l": 0
+          "l": 1
         }
       },
       "home": {
@@ -202,8 +106,8 @@
         "score": 9,
         "starter": {
           "name": "로드리게스",
-          "era": 4.2,
-          "w": 8,
+          "era": 4.28,
+          "w": 9,
           "l": 11
         }
       },
@@ -239,8 +143,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "로드리게스",
+        "lose": "이재학",
         "save": null
       },
       "lineup": null
@@ -259,8 +163,8 @@
         "score": 12,
         "starter": {
           "name": "톨허스트",
-          "era": 4.19,
-          "w": 11,
+          "era": 4.08,
+          "w": 12,
           "l": 9
         }
       },
@@ -271,9 +175,9 @@
         "score": 1,
         "starter": {
           "name": "로건",
-          "era": 2.97,
+          "era": 3.17,
           "w": 6,
-          "l": 3
+          "l": 4
         }
       },
       "honjam": {
@@ -308,8 +212,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "톨허스트",
+        "lose": "로건",
         "save": null
       },
       "lineup": null
@@ -328,8 +232,8 @@
         "score": 10,
         "starter": {
           "name": "후라도",
-          "era": 3.26,
-          "w": 6,
+          "era": 3.15,
+          "w": 7,
           "l": 1
         }
       },
@@ -340,9 +244,9 @@
         "score": 4,
         "starter": {
           "name": "박준영",
-          "era": 6.13,
+          "era": 6.06,
           "w": 2,
-          "l": 3
+          "l": 4
         }
       },
       "honjam": {
@@ -377,8 +281,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "후라도",
+        "lose": "박준영",
         "save": null
       },
       "lineup": null
