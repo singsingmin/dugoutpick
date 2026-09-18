@@ -1,7 +1,7 @@
 {
   "date": "20260918",
   "dateText": "2026년 9월 18일",
-  "updatedAt": "2026-09-18T08:40:25.285Z",
+  "updatedAt": "2026-09-18T08:50:25.506Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -376,22 +376,22 @@
         "home": [
           {
             "order": 1,
-            "pos": "우익수",
+            "pos": "중견수",
             "name": "최원준"
           },
           {
             "order": 2,
-            "pos": "좌익수",
+            "pos": "지명타자",
             "name": "김민혁"
           },
           {
             "order": 3,
-            "pos": "지명타자",
+            "pos": "우익수",
             "name": "안현민"
           },
           {
             "order": 4,
-            "pos": "중견수",
+            "pos": "좌익수",
             "name": "힐리어드"
           },
           {
@@ -417,7 +417,7 @@
           {
             "order": 9,
             "pos": "유격수",
-            "name": "장준원"
+            "name": "권동진"
           }
         ],
         "away": [
@@ -459,7 +459,7 @@
           {
             "order": 8,
             "pos": "포수",
-            "name": "박동원"
+            "name": "이주헌"
           },
           {
             "order": 9,
@@ -467,7 +467,7 @@
             "name": "신민재"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
