@@ -1,7 +1,7 @@
 {
   "date": "20260918",
   "dateText": "2026년 9월 18일",
-  "updatedAt": "2026-09-18T13:10:26.773Z",
+  "updatedAt": "2026-09-18T13:20:26.043Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 10,
+        "inning": 11,
         "half": "T",
-        "out": 2,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "이용찬",
-        "batter": "권혁빈",
-        "heat": 97,
+        "batter": "서건창",
+        "heat": 100,
         "label": "연장 혈투 진행 중"
       },
       "recap": null,
