@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-19T11:20:27.018Z",
+  "updatedAt": "2026-09-19T11:30:30.421Z",
   "results": [
     {
       "date": "20260705",
@@ -1137,6 +1137,27 @@
         "score": 6
       },
       "calculatedAt": "2026-09-18T14:00:44.959Z"
+    },
+    {
+      "date": "20260919",
+      "actualTopGameId": "20260919HHLG0",
+      "recapScore": 87,
+      "decidingReasonTags": [
+        "1점차 접전"
+      ],
+      "displayMode": "highlight",
+      "displayTitle": "어제의 명경기",
+      "away": {
+        "code": "HH",
+        "name": "한화",
+        "score": 1
+      },
+      "home": {
+        "code": "LG",
+        "name": "LG",
+        "score": 2
+      },
+      "calculatedAt": "2026-09-19T11:30:30.421Z"
     }
   ]
 }
