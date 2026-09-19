@@ -1,7 +1,7 @@
 {
   "date": "20260919",
   "dateText": "2026년 9월 19일",
-  "updatedAt": "2026-09-19T08:40:25.890Z",
+  "updatedAt": "2026-09-19T08:50:29.052Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
+        "inning": 4,
         "half": "B",
-        "out": 1,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "화이트",
-        "batter": "신민재",
-        "heat": 40,
+        "batter": "오스틴",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -187,7 +187,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "최원태",
           "era": 4.55,
@@ -231,13 +231,13 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
+        "half": "B",
         "out": 2,
-        "b1": true,
+        "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "나균안",
-        "batter": "디아즈",
+        "b3": false,
+        "pitcher": "최원태",
+        "batter": "황성빈",
         "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
@@ -396,14 +396,14 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 1,
         "b1": true,
         "b2": false,
         "b3": true,
-        "pitcher": "대니엘",
-        "batter": "세베리노",
-        "heat": 27,
+        "pitcher": "최승용",
+        "batter": "허경민",
+        "heat": 29,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -517,7 +517,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 1,
+        "score": 3,
         "starter": {
           "name": "네일",
           "era": 3.65,
@@ -561,15 +561,15 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "구창모",
-        "batter": "한준수",
-        "heat": 38,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "네일",
+        "batter": "안중열",
+        "heat": 25,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
