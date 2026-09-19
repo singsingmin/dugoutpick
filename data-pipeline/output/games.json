@@ -1,7 +1,7 @@
 {
   "date": "20260919",
   "dateText": "2026년 9월 19일",
-  "updatedAt": "2026-09-19T11:40:25.211Z",
+  "updatedAt": "2026-09-19T11:50:25.355Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -25,7 +25,7 @@
         "score": 1,
         "starter": {
           "name": "화이트",
-          "era": 3.47,
+          "era": 3.35,
           "w": 7,
           "l": 10
         }
@@ -37,7 +37,7 @@
         "score": 2,
         "starter": {
           "name": "임찬규",
-          "era": 4.19,
+          "era": 4.06,
           "w": 14,
           "l": 5
         }
@@ -74,9 +74,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "고우석",
+        "lose": "조동욱",
+        "save": "손주영"
       },
       "lineup": null
     },
@@ -94,7 +94,7 @@
         "score": 3,
         "starter": {
           "name": "최원태",
-          "era": 4.55,
+          "era": 4.59,
           "w": 7,
           "l": 5
         }
@@ -106,7 +106,7 @@
         "score": 5,
         "starter": {
           "name": "나균안",
-          "era": 4.23,
+          "era": 4.24,
           "w": 6,
           "l": 10
         }
@@ -143,9 +143,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "박정민",
+        "lose": "사토시",
+        "save": "이이무라"
       },
       "lineup": null
     },
@@ -175,8 +175,8 @@
         "score": 15,
         "starter": {
           "name": "대니엘",
-          "era": 2.61,
-          "w": 2,
+          "era": 2.43,
+          "w": 3,
           "l": 2
         }
       },
@@ -212,8 +212,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "대니엘",
+        "lose": "윤태호",
         "save": null
       },
       "lineup": null
@@ -232,8 +232,8 @@
         "score": 5,
         "starter": {
           "name": "네일",
-          "era": 3.65,
-          "w": 10,
+          "era": 3.57,
+          "w": 11,
           "l": 7
         }
       },
@@ -244,9 +244,9 @@
         "score": 1,
         "starter": {
           "name": "구창모",
-          "era": 4.05,
+          "era": 4.16,
           "w": 10,
-          "l": 6
+          "l": 7
         }
       },
       "honjam": {
@@ -281,8 +281,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "네일",
+        "lose": "구창모",
         "save": null
       },
       "lineup": null
