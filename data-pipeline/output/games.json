@@ -1,7 +1,7 @@
 {
   "date": "20260920",
   "dateText": "2026년 9월 20일",
-  "updatedAt": "2026-09-20T07:30:30.006Z",
+  "updatedAt": "2026-09-20T07:40:23.187Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
-        "b1": false,
+        "inning": 9,
+        "half": "T",
+        "out": 3,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "김서현",
-        "batter": "이재원",
-        "heat": 67,
-        "label": "후반 박빙 승부"
+        "pitcher": "손주영",
+        "batter": "정민규",
+        "heat": 75,
+        "label": "9회 1점 승부"
       },
       "recap": null,
       "decision": null,
@@ -230,14 +230,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이승현",
-        "batter": "황성빈",
+        "pitcher": "현도훈",
+        "batter": "류지혁",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
@@ -395,14 +395,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 0,
-        "b1": true,
-        "b2": true,
+        "inning": 8,
+        "half": "T",
+        "out": 2,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "김윤하",
-        "batter": "이지영",
+        "pitcher": "타케다",
+        "batter": "김시앙",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
@@ -517,7 +517,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 2,
+        "score": 4,
         "starter": {
           "name": "박신지",
           "era": 5.56,
@@ -562,14 +562,14 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 1,
+        "b1": true,
         "b2": true,
         "b3": false,
-        "pitcher": "스기모토",
-        "batter": "오명진",
-        "heat": 4,
-        "label": "점수차가 벌어진 경기"
+        "pitcher": "손동현",
+        "batter": "양석환",
+        "heat": 14,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -726,14 +726,14 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 0,
-        "b1": false,
+        "half": "B",
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "송명기",
-        "batter": "한준수",
-        "heat": 62,
+        "pitcher": "조상우",
+        "batter": "권희동",
+        "heat": 65,
         "label": "후반 박빙 승부"
       },
       "recap": null,
