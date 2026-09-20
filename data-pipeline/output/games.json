@@ -1,7 +1,7 @@
 {
   "date": "20260920",
   "dateText": "2026년 9월 20일",
-  "updatedAt": "2026-09-20T07:40:23.187Z",
+  "updatedAt": "2026-09-20T07:50:24.047Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -15,7 +15,7 @@
       "gameId": "20260920HHLG0",
       "time": "14:00",
       "stadium": "잠실",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SPOTV",
       "away": {
@@ -64,117 +64,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "T",
-        "out": 3,
-        "b1": true,
-        "b2": false,
-        "b3": false,
-        "pitcher": "손주영",
-        "batter": "정민규",
-        "heat": 75,
-        "label": "9회 1점 승부"
+      "live": null,
+      "recap": {
+        "actual": 90,
+        "verdict": "기대 이상",
+        "diff": 1,
+        "total": 7,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "박해민"
-          },
-          {
-            "order": 2,
-            "pos": "3루수",
-            "name": "구본혁"
-          },
-          {
-            "order": 3,
-            "pos": "지명타자",
-            "name": "오스틴"
-          },
-          {
-            "order": 4,
-            "pos": "좌익수",
-            "name": "송찬의"
-          },
-          {
-            "order": 5,
-            "pos": "1루수",
-            "name": "문정빈"
-          },
-          {
-            "order": 6,
-            "pos": "유격수",
-            "name": "오지환"
-          },
-          {
-            "order": 7,
-            "pos": "우익수",
-            "name": "이재원"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "이주헌"
-          },
-          {
-            "order": 9,
-            "pos": "2루수",
-            "name": "신민재"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "최인호"
-          },
-          {
-            "order": 2,
-            "pos": "3루수",
-            "name": "박정현"
-          },
-          {
-            "order": 3,
-            "pos": "좌익수",
-            "name": "한지윤"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "강백호"
-          },
-          {
-            "order": 5,
-            "pos": "포수",
-            "name": "허인서"
-          },
-          {
-            "order": 6,
-            "pos": "1루수",
-            "name": "김태연"
-          },
-          {
-            "order": 7,
-            "pos": "2루수",
-            "name": "정은원"
-          },
-          {
-            "order": 8,
-            "pos": "우익수",
-            "name": "유민"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "이도윤"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20260920SSLT0",
@@ -231,13 +135,13 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
+        "half": "B",
         "out": 0,
-        "b1": false,
-        "b2": false,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "현도훈",
-        "batter": "류지혁",
+        "pitcher": "이승현",
+        "batter": "전민재",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
@@ -396,13 +300,13 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 2,
-        "b1": false,
+        "half": "B",
+        "out": 3,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "타케다",
-        "batter": "김시앙",
+        "pitcher": "임진묵",
+        "batter": "김재환",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
@@ -517,7 +421,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 4,
+        "score": 8,
         "starter": {
           "name": "박신지",
           "era": 5.56,
@@ -562,14 +466,14 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 1,
+        "out": 3,
         "b1": true,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "손동현",
-        "batter": "양석환",
-        "heat": 14,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "김정운",
+        "batter": "손아섭",
+        "heat": 72,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -694,7 +598,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 6,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "토다",
           "era": 5.39,
@@ -727,13 +631,13 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "조상우",
-        "batter": "권희동",
-        "heat": 65,
+        "batter": "박건우",
+        "heat": 62,
         "label": "후반 박빙 승부"
       },
       "recap": null,
