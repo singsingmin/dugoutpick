@@ -1,7 +1,7 @@
 {
   "date": "20260920",
   "dateText": "2026년 9월 20일",
-  "updatedAt": "2026-09-20T08:30:29.994Z",
+  "updatedAt": "2026-09-20T08:40:24.352Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -341,15 +341,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
+        "inning": 9,
         "half": "T",
-        "out": 3,
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "전사민",
-        "batter": "김민규",
-        "heat": 26,
+        "pitcher": "최우석",
+        "batter": "김호령",
+        "heat": 28,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
