@@ -1,7 +1,7 @@
 {
   "date": "20260920",
   "dateText": "2026년 9월 20일",
-  "updatedAt": "2026-09-20T07:50:24.047Z",
+  "updatedAt": "2026-09-20T08:00:35.742Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -134,14 +134,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 0,
+        "inning": 8,
+        "half": "T",
+        "out": 1,
         "b1": true,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "이승현",
-        "batter": "전민재",
+        "pitcher": "현도훈",
+        "batter": "김헌곤",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
@@ -256,7 +256,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "하영민",
           "era": 4.31,
@@ -299,16 +299,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 3,
+        "inning": 9,
+        "half": "T",
+        "out": 2,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "임진묵",
-        "batter": "김재환",
-        "heat": 4,
-        "label": "점수차가 벌어진 경기"
+        "pitcher": "전영준",
+        "batter": "안치홍",
+        "heat": 15,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -465,14 +465,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 3,
+        "half": "B",
+        "out": 1,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "김정운",
-        "batter": "손아섭",
-        "heat": 72,
+        "pitcher": "타카다",
+        "batter": "허경민",
+        "heat": 75,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -598,7 +598,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 6,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "토다",
           "era": 5.39,
@@ -629,15 +629,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "inning": 8,
+        "half": "T",
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "조상우",
-        "batter": "박건우",
-        "heat": 62,
+        "pitcher": "손주환",
+        "batter": "김선빈",
+        "heat": 53,
         "label": "후반 박빙 승부"
       },
       "recap": null,
