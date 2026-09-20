@@ -1,7 +1,7 @@
 {
   "date": "20260920",
   "dateText": "2026년 9월 20일",
-  "updatedAt": "2026-09-20T08:50:24.409Z",
+  "updatedAt": "2026-09-20T09:00:37.087Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -310,7 +310,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 6,
-        "score": 4,
+        "score": 6,
         "starter": {
           "name": "토다",
           "era": 5.39,
@@ -345,12 +345,12 @@
         "half": "B",
         "out": 0,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "곽도규",
-        "batter": "오태양",
-        "heat": 30,
-        "label": "경기 흐름 체크 중"
+        "batter": "블레인",
+        "heat": 69,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
