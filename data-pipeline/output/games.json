@@ -1,7 +1,7 @@
 {
   "date": "20260920",
   "dateText": "2026년 9월 20일",
-  "updatedAt": "2026-09-20T09:10:24.300Z",
+  "updatedAt": "2026-09-20T09:20:23.414Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -343,12 +343,12 @@
       "live": {
         "inning": 9,
         "half": "B",
-        "out": 1,
+        "out": 3,
         "b1": true,
         "b2": true,
-        "b3": false,
+        "b3": true,
         "pitcher": "이의리",
-        "batter": "김휘집",
+        "batter": "안중열",
         "heat": 69,
         "label": "후반 박빙 승부"
       },
