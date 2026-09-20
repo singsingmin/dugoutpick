@@ -1,7 +1,7 @@
 {
   "date": "20260920",
   "dateText": "2026년 9월 20일",
-  "updatedAt": "2026-09-20T08:40:24.352Z",
+  "updatedAt": "2026-09-20T08:50:24.409Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -342,14 +342,14 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "최우석",
-        "batter": "김호령",
-        "heat": 28,
+        "pitcher": "곽도규",
+        "batter": "오태양",
+        "heat": 30,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
