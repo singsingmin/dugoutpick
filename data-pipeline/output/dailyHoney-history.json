@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T13:00:46.812Z",
+  "updatedAt": "2026-09-22T13:10:26.798Z",
   "results": [
     {
       "date": "20260705",
@@ -1180,6 +1180,27 @@
         "score": 9
       },
       "calculatedAt": "2026-09-20T09:30:30.542Z"
+    },
+    {
+      "date": "20260922",
+      "actualTopGameId": "20260922OBWO0",
+      "recapScore": 81,
+      "decidingReasonTags": [
+        "2점차 접전"
+      ],
+      "displayMode": "highlight",
+      "displayTitle": "어제의 명경기",
+      "away": {
+        "code": "OB",
+        "name": "두산",
+        "score": 5
+      },
+      "home": {
+        "code": "WO",
+        "name": "키움",
+        "score": 3
+      },
+      "calculatedAt": "2026-09-22T13:10:26.798Z"
     }
   ]
 }
