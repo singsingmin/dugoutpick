@@ -1,7 +1,7 @@
 {
   "date": "20260922",
   "dateText": "2026년 9월 22일",
-  "updatedAt": "2026-09-22T10:50:25.339Z",
+  "updatedAt": "2026-09-22T11:00:40.568Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
+        "inning": 4,
         "half": "B",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
         "pitcher": "이준혁",
-        "batter": "김태훈",
-        "heat": 43,
+        "batter": "김상준",
+        "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "아빌라",
-        "batter": "한승택",
-        "heat": 51,
+        "pitcher": "배제성",
+        "batter": "박성한",
+        "heat": 54,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -395,14 +395,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 1,
+        "inning": 6,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "비슬리",
-        "batter": "심우준",
+        "pitcher": "주현상",
+        "batter": "고승민",
         "heat": 11,
         "label": "경기 흐름 체크 중"
       },
@@ -517,7 +517,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "벤자민",
           "era": 2.41,
@@ -562,13 +562,13 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "b1": true,
         "b2": true,
         "b3": false,
         "pitcher": "전준표",
-        "batter": "양의지",
-        "heat": 48,
+        "batter": "양석환",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
