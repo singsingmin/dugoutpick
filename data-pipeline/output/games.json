@@ -1,7 +1,7 @@
 {
   "date": "20260922",
   "dateText": "2026년 9월 22일",
-  "updatedAt": "2026-09-22T10:40:24.899Z",
+  "updatedAt": "2026-09-22T10:50:25.339Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 1,
-        "b1": false,
-        "b2": false,
-        "b3": true,
-        "pitcher": "클레빈저",
-        "batter": "김성윤",
+        "out": 2,
+        "b1": true,
+        "b2": true,
+        "b3": false,
+        "pitcher": "이준혁",
+        "batter": "김태훈",
         "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "배제성",
-        "batter": "전의산",
-        "heat": 48,
+        "pitcher": "아빌라",
+        "batter": "한승택",
+        "heat": 51,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
+        "inning": 5,
         "half": "B",
-        "out": 2,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "비슬리",
-        "batter": "허인서",
-        "heat": 10,
+        "batter": "심우준",
+        "heat": 11,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 1,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "벤자민",
-        "batter": "임병욱",
-        "heat": 45,
+        "pitcher": "전준표",
+        "batter": "양의지",
+        "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
