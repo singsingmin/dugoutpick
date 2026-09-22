@@ -1,7 +1,7 @@
 {
   "date": "20260922",
   "dateText": "2026년 9월 22일",
-  "updatedAt": "2026-09-22T12:20:24.211Z",
+  "updatedAt": "2026-09-22T12:30:38.998Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 6,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "클레빈저",
           "era": 3,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
+        "inning": 8,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이재학",
-        "batter": "김현준",
-        "heat": 56,
+        "pitcher": "이승민",
+        "batter": "권희동",
+        "heat": 70,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
+        "inning": 9,
+        "half": "T",
         "out": 1,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "스기모토",
-        "batter": "이지영",
-        "heat": 67,
-        "label": "후반 박빙 승부"
+        "pitcher": "전영준",
+        "batter": "최원준",
+        "heat": 75,
+        "label": "9회 1점 승부"
       },
       "recap": null,
       "decision": null,
@@ -464,15 +464,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
+        "inning": 9,
+        "half": "T",
         "out": 1,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김택연",
-        "batter": "안치홍",
-        "heat": 57,
+        "pitcher": "조영건",
+        "batter": "세베리노",
+        "heat": 60,
         "label": "후반 박빙 승부"
       },
       "recap": null,
