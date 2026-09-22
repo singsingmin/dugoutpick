@@ -1,7 +1,7 @@
 {
   "date": "20260922",
   "dateText": "2026년 9월 22일",
-  "updatedAt": "2026-09-22T12:30:38.998Z",
+  "updatedAt": "2026-09-22T12:40:27.731Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "이승민",
-        "batter": "권희동",
+        "pitcher": "김재윤",
+        "batter": "블레인",
         "heat": 70,
         "label": "후반 박빙 승부"
       },
@@ -187,7 +187,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": 3,
+        "score": 8,
         "starter": {
           "name": "배제성",
           "era": 3.38,
@@ -232,14 +232,14 @@
       "live": {
         "inning": 9,
         "half": "T",
-        "out": 1,
-        "b1": true,
-        "b2": true,
+        "out": 2,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "전영준",
-        "batter": "최원준",
-        "heat": 75,
-        "label": "9회 1점 승부"
+        "pitcher": "한두솔",
+        "batter": "오윤석",
+        "heat": 4,
+        "label": "점수차가 벌어진 경기"
       },
       "recap": null,
       "decision": null,
@@ -465,14 +465,14 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "조영건",
-        "batter": "세베리노",
-        "heat": 60,
+        "pitcher": "이영하",
+        "batter": "어준서",
+        "heat": 62,
         "label": "후반 박빙 승부"
       },
       "recap": null,
