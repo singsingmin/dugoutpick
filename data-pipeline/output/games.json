@@ -1,7 +1,7 @@
 {
   "date": "20260922",
   "dateText": "2026년 9월 22일",
-  "updatedAt": "2026-09-22T12:10:38.352Z",
+  "updatedAt": "2026-09-22T12:20:24.211Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
+        "inning": 7,
         "half": "B",
-        "out": 2,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "배재환",
-        "batter": "김성윤",
-        "heat": 51,
-        "label": "점수 나는 난타전"
+        "pitcher": "이재학",
+        "batter": "김현준",
+        "heat": 56,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
+        "half": "B",
         "out": 1,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "타케다",
-        "batter": "김현수",
-        "heat": 64,
+        "pitcher": "스기모토",
+        "batter": "이지영",
+        "heat": 67,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -433,7 +433,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 1,
+        "score": 3,
         "starter": {
           "name": "전준표",
           "era": 4.66,
@@ -466,14 +466,14 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "김택연",
-        "batter": "데이비슨",
-        "heat": 27,
-        "label": "경기 흐름 체크 중"
+        "batter": "안치홍",
+        "heat": 57,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
