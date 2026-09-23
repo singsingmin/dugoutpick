@@ -1,7 +1,7 @@
 {
   "date": "20260923",
   "dateText": "2026년 9월 23일",
-  "updatedAt": "2026-09-23T11:30:33.335Z",
+  "updatedAt": "2026-09-23T11:40:31.100Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 0,
-        "b1": false,
-        "b2": false,
-        "b3": false,
+        "out": 1,
+        "b1": true,
+        "b2": true,
+        "b3": true,
         "pitcher": "김택연",
-        "batter": "한준수",
+        "batter": "김호령",
         "heat": 62,
         "label": "후반 박빙 승부"
       },
@@ -187,7 +187,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 6,
-        "score": 5,
+        "score": 7,
         "starter": {
           "name": "라일리",
           "era": 2.59,
@@ -232,13 +232,13 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 1,
-        "b1": false,
-        "b2": true,
-        "b3": true,
-        "pitcher": "우규민",
-        "batter": "안중열",
-        "heat": 46,
+        "out": 3,
+        "b1": true,
+        "b2": false,
+        "b3": false,
+        "pitcher": "김민수",
+        "batter": "블레인",
+        "heat": 21,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -395,16 +395,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 1,
-        "b1": true,
+        "inning": 7,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박세웅",
-        "batter": "심우준",
-        "heat": 61,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "조동욱",
+        "batter": "장두성",
+        "heat": 64,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
