@@ -1,7 +1,7 @@
 {
   "date": "20260923",
   "dateText": "2026년 9월 23일",
-  "updatedAt": "2026-09-23T11:10:25.812Z",
+  "updatedAt": "2026-09-23T11:20:26.066Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "잭로그",
-        "batter": "김선빈",
-        "heat": 57,
+        "pitcher": "올러",
+        "batter": "양의지",
+        "heat": 59,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 1,
+        "inning": 6,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "라일리",
-        "batter": "안현민",
-        "heat": 43,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "로건",
+        "batter": "한재환",
+        "heat": 46,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -395,16 +395,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 1,
-        "b1": true,
+        "inning": 6,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": true,
         "b3": false,
-        "pitcher": "박세웅",
-        "batter": "김태연",
-        "heat": 50,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "장유호",
+        "batter": "노진혁",
+        "heat": 53,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
