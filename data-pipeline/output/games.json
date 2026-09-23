@@ -1,7 +1,7 @@
 {
   "date": "20260923",
   "dateText": "2026년 9월 23일",
-  "updatedAt": "2026-09-23T11:20:26.066Z",
+  "updatedAt": "2026-09-23T11:30:33.335Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "올러",
-        "batter": "양의지",
-        "heat": 59,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "김택연",
+        "batter": "한준수",
+        "heat": 62,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "로건",
-        "batter": "한재환",
+        "b2": true,
+        "b3": true,
+        "pitcher": "우규민",
+        "batter": "안중열",
         "heat": 46,
         "label": "경기 흐름 체크 중"
       },
@@ -352,7 +352,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "박세웅",
           "era": 4.92,
@@ -396,14 +396,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 0,
-        "b1": false,
-        "b2": true,
+        "half": "B",
+        "out": 1,
+        "b1": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "장유호",
-        "batter": "노진혁",
-        "heat": 53,
+        "pitcher": "박세웅",
+        "batter": "심우준",
+        "heat": 61,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
