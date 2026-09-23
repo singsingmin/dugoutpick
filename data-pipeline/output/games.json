@@ -1,7 +1,7 @@
 {
   "date": "20260923",
   "dateText": "2026년 9월 23일",
-  "updatedAt": "2026-09-23T08:40:26.492Z",
+  "updatedAt": "2026-09-23T09:38:28.250Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -15,14 +15,14 @@
       "gameId": "20260923HTOB0",
       "time": "18:30",
       "stadium": "잠실",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SPOTV2",
       "away": {
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": null,
+        "score": 1,
         "starter": {
           "name": "올러",
           "era": 2.8,
@@ -34,7 +34,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "잭로그",
           "era": 4.15,
@@ -61,9 +61,21 @@
           "doom": 0,
           "park": 0.09,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 2,
+        "b1": true,
+        "b2": false,
+        "b3": false,
+        "pitcher": "잭로그",
+        "batter": "나성범",
+        "heat": 29,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
@@ -168,14 +180,14 @@
       "gameId": "20260923NCKT0",
       "time": "18:30",
       "stadium": "수원",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SBS SPORTS,SPOTV",
       "away": {
         "code": "NC",
         "name": "NC",
         "rank": 6,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "라일리",
           "era": 2.59,
@@ -187,7 +199,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "로건",
           "era": 3.17,
@@ -214,9 +226,21 @@
           "doom": 0,
           "park": 0.45,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "B",
+        "out": 0,
+        "b1": true,
+        "b2": false,
+        "b3": false,
+        "pitcher": "라일리",
+        "batter": "김민혁",
+        "heat": 33,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
@@ -321,14 +345,14 @@
       "gameId": "20260923LTHH0",
       "time": "18:30",
       "stadium": "대전",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "KBS N SPORTS,MBC SPORTS+",
       "away": {
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "박세웅",
           "era": 4.92,
@@ -340,7 +364,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 9,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "박준영",
           "era": 6.28,
@@ -367,9 +391,21 @@
           "doom": 0,
           "park": 0.36,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "B",
+        "out": 0,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "박세웅",
+        "batter": "페라자",
+        "heat": 33,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
