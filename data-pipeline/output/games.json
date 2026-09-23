@@ -1,7 +1,7 @@
 {
   "date": "20260923",
   "dateText": "2026년 9월 23일",
-  "updatedAt": "2026-09-23T13:00:41.257Z",
+  "updatedAt": "2026-09-23T13:12:17.096Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -25,7 +25,7 @@
         "score": 2,
         "starter": {
           "name": "올러",
-          "era": 2.8,
+          "era": 2.81,
           "w": 11,
           "l": 9
         }
@@ -37,7 +37,7 @@
         "score": 3,
         "starter": {
           "name": "잭로그",
-          "era": 4.15,
+          "era": 4.11,
           "w": 7,
           "l": 7
         }
@@ -74,8 +74,8 @@
         "walkoff": 1
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "이영하",
+        "lose": "이의리",
         "save": null
       },
       "lineup": null
@@ -94,8 +94,8 @@
         "score": 10,
         "starter": {
           "name": "라일리",
-          "era": 2.59,
-          "w": 7,
+          "era": 2.68,
+          "w": 8,
           "l": 1
         }
       },
@@ -106,9 +106,9 @@
         "score": 3,
         "starter": {
           "name": "로건",
-          "era": 3.17,
+          "era": 3.53,
           "w": 6,
-          "l": 4
+          "l": 5
         }
       },
       "honjam": {
@@ -143,8 +143,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "라일리",
+        "lose": "로건",
         "save": null
       },
       "lineup": null
@@ -163,7 +163,7 @@
         "score": 9,
         "starter": {
           "name": "박세웅",
-          "era": 4.92,
+          "era": 4.99,
           "w": 3,
           "l": 9
         }
@@ -175,7 +175,7 @@
         "score": 5,
         "starter": {
           "name": "박준영",
-          "era": 6.28,
+          "era": 6.27,
           "w": 2,
           "l": 6
         }
@@ -212,8 +212,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "박정민",
+        "lose": "조동욱",
         "save": null
       },
       "lineup": null
