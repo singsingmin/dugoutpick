@@ -1,7 +1,7 @@
 {
   "date": "20260923",
   "dateText": "2026년 9월 23일",
-  "updatedAt": "2026-09-23T09:40:25.878Z",
+  "updatedAt": "2026-09-23T09:50:26.230Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 0,
+        "inning": 2,
+        "half": "T",
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "올러",
-        "batter": "정수빈",
-        "heat": 31,
+        "pitcher": "잭로그",
+        "batter": "김태군",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -199,7 +199,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "로건",
           "era": 3.17,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "라일리",
-        "batter": "김민혁",
-        "heat": 33,
+        "pitcher": "로건",
+        "batter": "블레인",
+        "heat": 27,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 0,
+        "inning": 2,
+        "half": "T",
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박세웅",
-        "batter": "페라자",
-        "heat": 33,
+        "pitcher": "박준영",
+        "batter": "전민재",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
