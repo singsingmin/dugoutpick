@@ -1,7 +1,7 @@
 {
   "date": "20260923",
   "dateText": "2026년 9월 23일",
-  "updatedAt": "2026-09-23T10:00:38.612Z",
+  "updatedAt": "2026-09-23T10:10:27.453Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
+        "inning": 3,
+        "half": "T",
         "out": 1,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "올러",
-        "batter": "세베리노",
-        "heat": 35,
+        "pitcher": "잭로그",
+        "batter": "김민규",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
+        "inning": 3,
+        "half": "T",
         "out": 0,
-        "b1": false,
-        "b2": false,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "라일리",
-        "batter": "허경민",
-        "heat": 29,
+        "pitcher": "로건",
+        "batter": "천재환",
+        "heat": 31,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -364,7 +364,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 9,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "박준영",
           "era": 6.28,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
-        "out": 2,
-        "b1": true,
+        "inning": 3,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박세웅",
-        "batter": "이도윤",
-        "heat": 38,
+        "pitcher": "박준영",
+        "batter": "손성빈",
+        "heat": 31,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
