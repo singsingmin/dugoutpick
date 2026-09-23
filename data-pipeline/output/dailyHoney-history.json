@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-23T12:50:27.398Z",
+  "updatedAt": "2026-09-23T13:00:41.257Z",
   "results": [
     {
       "date": "20260705",
@@ -1201,6 +1201,28 @@
         "score": 3
       },
       "calculatedAt": "2026-09-22T13:10:26.798Z"
+    },
+    {
+      "date": "20260923",
+      "actualTopGameId": "20260923HTOB0",
+      "recapScore": 97,
+      "decidingReasonTags": [
+        "끝내기",
+        "1점차 접전"
+      ],
+      "displayMode": "highlight",
+      "displayTitle": "어제의 명경기",
+      "away": {
+        "code": "HT",
+        "name": "KIA",
+        "score": 2
+      },
+      "home": {
+        "code": "OB",
+        "name": "두산",
+        "score": 3
+      },
+      "calculatedAt": "2026-09-23T13:00:41.257Z"
     }
   ]
 }
