@@ -1,7 +1,7 @@
 {
   "date": "20260923",
   "dateText": "2026년 9월 23일",
-  "updatedAt": "2026-09-23T10:30:31.241Z",
+  "updatedAt": "2026-09-23T10:40:29.974Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 3,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "잭로그",
-        "batter": "나성범",
+        "batter": "김태군",
         "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
+        "inning": 4,
+        "half": "T",
         "out": 2,
-        "b1": true,
+        "b1": false,
         "b2": true,
         "b3": false,
-        "pitcher": "라일리",
-        "batter": "김현수",
-        "heat": 40,
+        "pitcher": "로건",
+        "batter": "신재인",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
+        "inning": 4,
         "half": "B",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "박세웅",
-        "batter": "김태연",
-        "heat": 25,
+        "batter": "박정현",
+        "heat": 28,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
