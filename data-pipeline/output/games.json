@@ -1,7 +1,7 @@
 {
   "date": "20260924",
   "dateText": "2026년 9월 24일",
-  "updatedAt": "2026-09-24T07:10:28.003Z",
+  "updatedAt": "2026-09-24T07:30:32.120Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -376,22 +376,22 @@
         "home": [
           {
             "order": 1,
-            "pos": "중견수",
+            "pos": "우익수",
             "name": "최원준"
           },
           {
             "order": 2,
-            "pos": "지명타자",
+            "pos": "좌익수",
             "name": "김민혁"
           },
           {
             "order": 3,
-            "pos": "우익수",
+            "pos": "지명타자",
             "name": "안현민"
           },
           {
             "order": 4,
-            "pos": "좌익수",
+            "pos": "중견수",
             "name": "힐리어드"
           },
           {
@@ -401,13 +401,13 @@
           },
           {
             "order": 6,
-            "pos": "2루수",
+            "pos": "3루수",
             "name": "류현인"
           },
           {
             "order": 7,
-            "pos": "3루수",
-            "name": "허경민"
+            "pos": "2루수",
+            "name": "김상수"
           },
           {
             "order": 8,
@@ -423,13 +423,13 @@
         "away": [
           {
             "order": 1,
-            "pos": "우익수",
+            "pos": "좌익수",
             "name": "천재환"
           },
           {
             "order": 2,
-            "pos": "중견수",
-            "name": "오태양"
+            "pos": "2루수",
+            "name": "홍종표"
           },
           {
             "order": 3,
@@ -438,36 +438,36 @@
           },
           {
             "order": 4,
-            "pos": "1루수",
-            "name": "블레인"
-          },
-          {
-            "order": 5,
             "pos": "유격수",
             "name": "김휘집"
           },
           {
+            "order": 5,
+            "pos": "1루수",
+            "name": "한재환"
+          },
+          {
             "order": 6,
-            "pos": "좌익수",
-            "name": "권희동"
+            "pos": "3루수",
+            "name": "신재인"
           },
           {
             "order": 7,
             "pos": "포수",
-            "name": "김형준"
+            "name": "안중열"
           },
           {
             "order": 8,
-            "pos": "2루수",
-            "name": "한재환"
+            "pos": "우익수",
+            "name": "윤준혁"
           },
           {
             "order": 9,
-            "pos": "3루수",
-            "name": "신재인"
+            "pos": "중견수",
+            "name": "오태양"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     }
   ],
