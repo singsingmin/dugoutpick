@@ -1,7 +1,7 @@
 {
   "date": "20260924",
   "dateText": "2026년 9월 24일",
-  "updatedAt": "2026-09-24T09:10:25.521Z",
+  "updatedAt": "2026-09-24T09:20:24.963Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 1,
+        "score": 4,
         "starter": {
           "name": "톨허스트",
           "era": 4.08,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 2,
+        "inning": 4,
+        "half": "T",
+        "out": 0,
         "b1": true,
         "b2": false,
-        "b3": true,
-        "pitcher": "로드리게스",
-        "batter": "문정빈",
-        "heat": 40,
-        "label": "초반 팽팽한 흐름"
+        "b3": false,
+        "pitcher": "톨허스트",
+        "batter": "고승민",
+        "heat": 17,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
+        "inning": 5,
         "half": "B",
-        "out": 3,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "후라도",
-        "batter": "김재환",
-        "heat": 45,
+        "batter": "전의산",
+        "heat": 50,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -364,7 +364,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": 1,
+        "score": 3,
         "starter": {
           "name": "대니엘",
           "era": 2.43,
@@ -395,16 +395,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 1,
-        "b1": true,
-        "b2": true,
-        "b3": true,
-        "pitcher": "송명기",
-        "batter": "김상수",
-        "heat": 45,
-        "label": "초반 팽팽한 흐름"
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "대니엘",
+        "batter": "신재인",
+        "heat": 29,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
