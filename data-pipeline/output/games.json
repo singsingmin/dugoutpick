@@ -1,7 +1,7 @@
 {
   "date": "20260924",
   "dateText": "2026년 9월 24일",
-  "updatedAt": "2026-09-24T10:20:26.395Z",
+  "updatedAt": "2026-09-24T10:30:31.751Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 2,
+        "inning": 7,
+        "half": "T",
+        "out": 1,
         "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "이진하",
-        "batter": "박동원",
-        "heat": 59,
-        "label": "경기 흐름 체크 중"
+        "b2": true,
+        "b3": true,
+        "pitcher": "케네디",
+        "batter": "전민재",
+        "heat": 62,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
+        "half": "B",
         "out": 1,
-        "b1": false,
-        "b2": false,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "타케다",
-        "batter": "강민호",
-        "heat": 40,
+        "pitcher": "이승민",
+        "batter": "최지훈",
+        "heat": 42,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
+        "inning": 9,
         "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "손동현",
-        "batter": "윤준혁",
-        "heat": 40,
+        "batter": "홍종표",
+        "heat": 43,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
