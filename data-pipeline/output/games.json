@@ -1,7 +1,7 @@
 {
   "date": "20260924",
   "dateText": "2026년 9월 24일",
-  "updatedAt": "2026-09-24T11:30:33.572Z",
+  "updatedAt": "2026-09-24T11:40:25.666Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -25,8 +25,8 @@
         "score": 6,
         "starter": {
           "name": "로드리게스",
-          "era": 4.28,
-          "w": 9,
+          "era": 4.38,
+          "w": 10,
           "l": 11
         }
       },
@@ -37,9 +37,9 @@
         "score": 4,
         "starter": {
           "name": "톨허스트",
-          "era": 4.08,
+          "era": 4.25,
           "w": 12,
-          "l": 9
+          "l": 10
         }
       },
       "honjam": {
@@ -74,9 +74,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "로드리게스",
+        "lose": "톨허스트",
+        "save": "이이무라"
       },
       "lineup": null
     },
@@ -94,21 +94,21 @@
         "score": 5,
         "starter": {
           "name": "후라도",
-          "era": 3.15,
-          "w": 7,
+          "era": 3.12,
+          "w": 8,
           "l": 1
         }
       },
       "home": {
         "code": "SK",
         "name": "SSG",
-        "rank": 7,
+        "rank": 8,
         "score": 4,
         "starter": {
           "name": "김민준",
-          "era": 3.47,
+          "era": 3.65,
           "w": 7,
-          "l": 2
+          "l": 3
         }
       },
       "honjam": {
@@ -143,9 +143,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "후라도",
+        "lose": "김민준",
+        "save": "김재윤"
       },
       "lineup": null
     },
@@ -163,9 +163,9 @@
         "score": 2,
         "starter": {
           "name": "송명기",
-          "era": 4.85,
+          "era": 5.18,
           "w": 1,
-          "l": 1
+          "l": 2
         }
       },
       "home": {
@@ -175,8 +175,8 @@
         "score": 3,
         "starter": {
           "name": "대니엘",
-          "era": 2.43,
-          "w": 3,
+          "era": 2.05,
+          "w": 4,
           "l": 2
         }
       },
@@ -212,9 +212,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "대니엘",
+        "lose": "송명기",
+        "save": "김정운"
       },
       "lineup": null
     }
