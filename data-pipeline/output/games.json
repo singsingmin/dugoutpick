@@ -1,7 +1,7 @@
 {
   "date": "20260924",
   "dateText": "2026년 9월 24일",
-  "updatedAt": "2026-09-24T09:30:33.319Z",
+  "updatedAt": "2026-09-24T09:37:57.864Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": false,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "로드리게스",
-        "batter": "신민재",
+        "batter": "구본혁",
         "heat": 18,
         "label": "경기 흐름 체크 중"
       },
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김민준",
-        "batter": "최형우",
-        "heat": 44,
+        "pitcher": "후라도",
+        "batter": "오시후",
+        "heat": 46,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 1,
-        "b1": true,
+        "inning": 6,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": true,
         "b3": false,
-        "pitcher": "이준혁",
-        "batter": "안현민",
-        "heat": 31,
+        "pitcher": "대니엘",
+        "batter": "오태양",
+        "heat": 33,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
