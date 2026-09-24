@@ -1,7 +1,7 @@
 {
   "date": "20260924",
   "dateText": "2026년 9월 24일",
-  "updatedAt": "2026-09-24T11:00:39.840Z",
+  "updatedAt": "2026-09-24T11:10:26.291Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "로드리게스",
           "era": 4.28,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 3,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "손주영",
-        "batter": "나승엽",
-        "heat": 67,
+        "pitcher": "박정민",
+        "batter": "이재원",
+        "heat": 60,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -199,7 +199,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 7,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "김민준",
           "era": 3.47,
@@ -232,14 +232,14 @@
       "live": {
         "inning": 9,
         "half": "B",
-        "out": 1,
+        "out": 3,
         "b1": true,
         "b2": true,
         "b3": false,
         "pitcher": "김재윤",
-        "batter": "이지영",
-        "heat": 62,
-        "label": "후반 박빙 승부"
+        "batter": "박성한",
+        "heat": 88,
+        "label": "끝내기 한 방 찬스"
       },
       "recap": null,
       "decision": null,
