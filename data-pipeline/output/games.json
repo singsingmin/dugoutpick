@@ -1,7 +1,7 @@
 {
   "date": "20260924",
   "dateText": "2026년 9월 24일",
-  "updatedAt": "2026-09-24T08:20:26.229Z",
+  "updatedAt": "2026-09-24T08:30:34.260Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
+        "half": "B",
         "out": 1,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "톨허스트",
-        "batter": "전민재",
-        "heat": 35,
+        "pitcher": "로드리게스",
+        "batter": "오지환",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "김민준",
-        "batter": "강민호",
+        "batter": "박승규",
         "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
@@ -364,7 +364,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "대니엘",
           "era": 2.43,
@@ -397,13 +397,13 @@
       "live": {
         "inning": 2,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "송명기",
-        "batter": "힐리어드",
-        "heat": 38,
+        "batter": "김상수",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
