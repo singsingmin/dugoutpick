@@ -1,7 +1,7 @@
 {
   "date": "20260924",
   "dateText": "2026년 9월 24일",
-  "updatedAt": "2026-09-24T10:00:40.084Z",
+  "updatedAt": "2026-09-24T10:10:25.536Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
+        "inning": 6,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "로드리게스",
-        "batter": "오스틴",
-        "heat": 53,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "고우석",
+        "batter": "한태양",
+        "heat": 56,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
+        "half": "B",
         "out": 1,
-        "b1": false,
+        "b1": true,
         "b2": true,
-        "b3": true,
-        "pitcher": "이건욱",
-        "batter": "디아즈",
-        "heat": 12,
+        "b3": false,
+        "pitcher": "후라도",
+        "batter": "고명준",
+        "heat": 13,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -396,14 +396,14 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 2,
-        "b1": true,
+        "half": "B",
+        "out": 1,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "대니엘",
-        "batter": "블레인",
-        "heat": 36,
+        "pitcher": "김태경",
+        "batter": "최원준",
+        "heat": 38,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
