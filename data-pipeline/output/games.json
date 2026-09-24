@@ -1,7 +1,7 @@
 {
   "date": "20260924",
   "dateText": "2026년 9월 24일",
-  "updatedAt": "2026-09-24T09:20:24.963Z",
+  "updatedAt": "2026-09-24T09:30:33.319Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 0,
-        "b1": true,
+        "half": "B",
+        "out": 1,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "톨허스트",
-        "batter": "고승민",
-        "heat": 17,
+        "pitcher": "로드리게스",
+        "batter": "신민재",
+        "heat": 18,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -187,7 +187,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "후라도",
           "era": 3.15,
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
+        "inning": 6,
+        "half": "T",
         "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "후라도",
-        "batter": "전의산",
-        "heat": 50,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "김민준",
+        "batter": "최형우",
+        "heat": 44,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -396,14 +396,14 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
+        "half": "B",
         "out": 1,
-        "b1": false,
-        "b2": false,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "대니엘",
-        "batter": "신재인",
-        "heat": 29,
+        "pitcher": "이준혁",
+        "batter": "안현민",
+        "heat": 31,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
