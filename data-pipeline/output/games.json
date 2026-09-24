@@ -1,7 +1,7 @@
 {
   "date": "20260924",
   "dateText": "2026년 9월 24일",
-  "updatedAt": "2026-09-24T08:10:26.913Z",
+  "updatedAt": "2026-09-24T08:20:26.229Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 2,
-        "b1": false,
+        "inning": 2,
+        "half": "T",
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "로드리게스",
-        "batter": "오스틴",
-        "heat": 33,
+        "pitcher": "톨허스트",
+        "batter": "전민재",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "후라도",
-        "batter": "박성한",
-        "heat": 33,
+        "pitcher": "김민준",
+        "batter": "강민호",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "송명기",
-        "batter": "최원준",
-        "heat": 33,
+        "batter": "힐리어드",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
