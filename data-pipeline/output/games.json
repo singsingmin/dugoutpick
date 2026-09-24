@@ -1,7 +1,7 @@
 {
   "date": "20260924",
   "dateText": "2026년 9월 24일",
-  "updatedAt": "2026-09-23T18:44:03.181Z",
+  "updatedAt": "2026-09-24T07:10:28.003Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -122,7 +122,7 @@
           },
           {
             "order": 2,
-            "pos": "1루수",
+            "pos": "지명타자",
             "name": "나승엽"
           },
           {
@@ -137,31 +137,31 @@
           },
           {
             "order": 5,
-            "pos": "2루수",
+            "pos": "1루수",
             "name": "고승민"
           },
           {
             "order": 6,
-            "pos": "지명타자",
-            "name": "노진혁"
-          },
-          {
-            "order": 7,
             "pos": "유격수",
             "name": "전민재"
           },
           {
-            "order": 8,
+            "order": 7,
             "pos": "포수",
             "name": "손성빈"
           },
           {
-            "order": 9,
+            "order": 8,
             "pos": "우익수",
             "name": "장두성"
+          },
+          {
+            "order": 9,
+            "pos": "2루수",
+            "name": "한태양"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
@@ -253,30 +253,30 @@
           },
           {
             "order": 7,
+            "pos": "2루수",
+            "name": "안상현"
+          },
+          {
+            "order": 8,
             "pos": "포수",
             "name": "이지영"
           },
           {
-            "order": 8,
-            "pos": "2루수",
-            "name": "홍대인"
-          },
-          {
             "order": 9,
             "pos": "우익수",
-            "name": "김정민"
+            "name": "오시후"
           }
         ],
         "away": [
           {
             "order": 1,
-            "pos": "2루수",
-            "name": "류지혁"
+            "pos": "중견수",
+            "name": "박승규"
           },
           {
             "order": 2,
-            "pos": "지명타자",
-            "name": "최형우"
+            "pos": "우익수",
+            "name": "김성윤"
           },
           {
             "order": 3,
@@ -295,8 +295,8 @@
           },
           {
             "order": 6,
-            "pos": "중견수",
-            "name": "김성윤"
+            "pos": "지명타자",
+            "name": "최형우"
           },
           {
             "order": 7,
@@ -305,8 +305,8 @@
           },
           {
             "order": 8,
-            "pos": "우익수",
-            "name": "김헌곤"
+            "pos": "2루수",
+            "name": "류지혁"
           },
           {
             "order": 9,
@@ -314,7 +314,7 @@
             "name": "김상준"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
