@@ -1,7 +1,7 @@
 {
   "date": "20260924",
   "dateText": "2026년 9월 24일",
-  "updatedAt": "2026-09-24T10:10:25.536Z",
+  "updatedAt": "2026-09-24T10:20:26.395Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 0,
+        "half": "B",
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "고우석",
-        "batter": "한태양",
-        "heat": 56,
+        "pitcher": "이진하",
+        "batter": "박동원",
+        "heat": 59,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -199,7 +199,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 7,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "김민준",
           "era": 3.47,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
+        "inning": 8,
+        "half": "T",
         "out": 1,
-        "b1": true,
-        "b2": true,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "후라도",
-        "batter": "고명준",
-        "heat": 13,
+        "pitcher": "타케다",
+        "batter": "강민호",
+        "heat": 40,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 1,
+        "inning": 8,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김태경",
-        "batter": "최원준",
-        "heat": 38,
+        "pitcher": "손동현",
+        "batter": "윤준혁",
+        "heat": 40,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
