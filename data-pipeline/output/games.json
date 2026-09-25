@@ -1,7 +1,7 @@
 {
   "date": "20260925",
   "dateText": "2026년 9월 25일",
-  "updatedAt": "2026-09-25T09:50:25.801Z",
+  "updatedAt": "2026-09-25T09:55:14.184Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -183,12 +183,12 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "김종수",
-        "batter": "천재환",
+        "batter": "박민우",
         "heat": 3,
         "label": "점수차가 벌어진 경기"
       },
