@@ -1,7 +1,7 @@
 {
   "date": "20260925",
   "dateText": "2026년 9월 25일",
-  "updatedAt": "2026-09-25T10:20:28.391Z",
+  "updatedAt": "2026-09-25T10:30:33.577Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -181,15 +181,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
+        "inning": 7,
         "half": "B",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "강재민",
-        "batter": "김한별",
-        "heat": 12,
+        "pitcher": "주현상",
+        "batter": "천재환",
+        "heat": 13,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
