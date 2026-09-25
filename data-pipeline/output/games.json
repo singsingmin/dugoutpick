@@ -1,7 +1,7 @@
 {
   "date": "20260925",
   "dateText": "2026년 9월 25일",
-  "updatedAt": "2026-09-25T09:20:25.149Z",
+  "updatedAt": "2026-09-25T09:30:34.056Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -182,13 +182,13 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 1,
-        "b1": true,
-        "b2": false,
+        "half": "B",
+        "out": 0,
+        "b1": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "구창모",
-        "batter": "박정현",
+        "pitcher": "박재규",
+        "batter": "권희동",
         "heat": 3,
         "label": "점수차가 벌어진 경기"
       },
