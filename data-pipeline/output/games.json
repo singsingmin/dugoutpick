@@ -1,7 +1,7 @@
 {
   "date": "20260925",
   "dateText": "2026년 9월 25일",
-  "updatedAt": "2026-09-25T10:00:39.426Z",
+  "updatedAt": "2026-09-25T10:10:27.108Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -138,7 +138,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 9,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "화이트",
           "era": 3.35,
@@ -181,16 +181,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 2,
-        "b1": true,
-        "b2": true,
-        "b3": true,
-        "pitcher": "김종수",
-        "batter": "오장한",
-        "heat": 3,
-        "label": "점수차가 벌어진 경기"
+        "inning": 6,
+        "half": "T",
+        "out": 1,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "구창모",
+        "batter": "박정현",
+        "heat": 11,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
