@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-25T11:20:24.724Z",
+  "updatedAt": "2026-09-25T11:30:36.214Z",
   "lastWeek": {
     "range": [
       "20260914",
@@ -67,7 +67,7 @@
         "l": 4,
         "d": 1,
         "rank": 9,
-        "note": "9연패 행진, 분위기 반전이 절실"
+        "note": "10연패 행진, 분위기 반전이 절실"
       },
       "WO": {
         "w": 0,
@@ -103,8 +103,8 @@
       {
         "away": "LT",
         "home": "HH",
-        "pred": 85,
-        "reason": "게임차 4의 순위 다툼",
+        "pred": 84,
+        "reason": "게임차 4.5의 순위 다툼",
         "dateStart": "20260922",
         "dateEnd": "20260923"
       }
@@ -142,7 +142,9 @@
         {
           "date": "20260926",
           "away": "HH",
-          "home": "NC"
+          "home": "NC",
+          "awayStarter": "황준서",
+          "homeStarter": "토다"
         },
         {
           "date": "20260927",
@@ -198,7 +200,9 @@
         {
           "date": "20260926",
           "away": "WO",
-          "home": "KT"
+          "home": "KT",
+          "awayStarter": "안우진",
+          "homeStarter": "고영표"
         },
         {
           "date": "20260927",
@@ -289,7 +293,9 @@
         {
           "date": "20260926",
           "away": "HH",
-          "home": "NC"
+          "home": "NC",
+          "awayStarter": "황준서",
+          "homeStarter": "토다"
         },
         {
           "date": "20260927",
@@ -336,7 +342,9 @@
         {
           "date": "20260926",
           "away": "WO",
-          "home": "KT"
+          "home": "KT",
+          "awayStarter": "안우진",
+          "homeStarter": "고영표"
         },
         {
           "date": "20260927",
@@ -355,7 +363,9 @@
         {
           "date": "20260926",
           "away": "LG",
-          "home": "HT"
+          "home": "HT",
+          "awayStarter": "임찬규",
+          "homeStarter": "네일"
         },
         {
           "date": "20260927",
@@ -374,7 +384,9 @@
         {
           "date": "20260926",
           "away": "LG",
-          "home": "HT"
+          "home": "HT",
+          "awayStarter": "임찬규",
+          "homeStarter": "네일"
         },
         {
           "date": "20260927",
