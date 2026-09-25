@@ -1,7 +1,7 @@
 {
   "date": "20260925",
   "dateText": "2026년 9월 25일",
-  "updatedAt": "2026-09-25T10:10:27.108Z",
+  "updatedAt": "2026-09-25T10:20:28.391Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -182,14 +182,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "구창모",
-        "batter": "박정현",
-        "heat": 11,
+        "pitcher": "강재민",
+        "batter": "김한별",
+        "heat": 12,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
