@@ -1,7 +1,7 @@
 {
   "date": "20260925",
   "dateText": "2026년 9월 25일",
-  "updatedAt": "2026-09-25T08:20:26.347Z",
+  "updatedAt": "2026-09-25T08:30:46.088Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -150,7 +150,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 6,
-        "score": 3,
+        "score": 6,
         "starter": {
           "name": "구창모",
           "era": 4.16,
@@ -183,14 +183,14 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": true,
         "b2": true,
         "b3": false,
         "pitcher": "화이트",
-        "batter": "권희동",
-        "heat": 19,
-        "label": "경기 흐름 체크 중"
+        "batter": "천재환",
+        "heat": 2,
+        "label": "점수차가 벌어진 경기"
       },
       "recap": null,
       "decision": null,
