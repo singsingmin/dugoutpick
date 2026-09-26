@@ -1,7 +1,7 @@
 {
   "date": "20260926",
   "dateText": "2026년 9월 26일",
-  "updatedAt": "2026-09-26T08:50:26.086Z",
+  "updatedAt": "2026-09-26T09:00:39.312Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
+        "inning": 4,
+        "half": "T",
         "out": 2,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "임찬규",
-        "batter": "카스트로",
-        "heat": 33,
+        "pitcher": "네일",
+        "batter": "오지환",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "out": 2,
+        "b1": true,
+        "b2": true,
         "b3": false,
         "pitcher": "안우진",
-        "batter": "허경민",
+        "batter": "김민혁",
         "heat": 25,
         "label": "경기 흐름 체크 중"
       },
@@ -396,14 +396,14 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "토다",
-        "batter": "김태연",
-        "heat": 43,
+        "pitcher": "황준서",
+        "batter": "김휘집",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
