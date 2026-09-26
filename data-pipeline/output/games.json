@@ -1,7 +1,7 @@
 {
   "date": "20260926",
   "dateText": "2026년 9월 26일",
-  "updatedAt": "2026-09-26T07:10:24.909Z",
+  "updatedAt": "2026-09-26T07:20:25.728Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -376,13 +376,13 @@
         "home": [
           {
             "order": 1,
-            "pos": "중견수",
-            "name": "천재환"
+            "pos": "3루수",
+            "name": "신재인"
           },
           {
             "order": 2,
             "pos": "좌익수",
-            "name": "고준휘"
+            "name": "권희동"
           },
           {
             "order": 3,
@@ -396,40 +396,40 @@
           },
           {
             "order": 5,
-            "pos": "3루수",
+            "pos": "유격수",
             "name": "김휘집"
           },
           {
             "order": 6,
-            "pos": "우익수",
-            "name": "권희동"
-          },
-          {
-            "order": 7,
             "pos": "포수",
             "name": "김형준"
           },
           {
-            "order": 8,
+            "order": 7,
             "pos": "1루수",
             "name": "한재환"
           },
           {
+            "order": 8,
+            "pos": "우익수",
+            "name": "윤준혁"
+          },
+          {
             "order": 9,
-            "pos": "유격수",
-            "name": "김한별"
+            "pos": "중견수",
+            "name": "오태양"
           }
         ],
         "away": [
           {
             "order": 1,
-            "pos": "유격수",
-            "name": "심우준"
+            "pos": "우익수",
+            "name": "김태연"
           },
           {
             "order": 2,
-            "pos": "지명타자",
-            "name": "페라자"
+            "pos": "중견수",
+            "name": "권광민"
           },
           {
             "order": 3,
@@ -443,31 +443,31 @@
           },
           {
             "order": 5,
-            "pos": "포수",
-            "name": "허인서"
+            "pos": "지명타자",
+            "name": "페라자"
           },
           {
             "order": 6,
-            "pos": "우익수",
-            "name": "김태연"
+            "pos": "포수",
+            "name": "장규현"
           },
           {
             "order": 7,
+            "pos": "2루수",
+            "name": "황영묵"
+          },
+          {
+            "order": 8,
             "pos": "3루수",
             "name": "박정현"
           },
           {
-            "order": 8,
-            "pos": "중견수",
-            "name": "최인호"
-          },
-          {
             "order": 9,
-            "pos": "2루수",
-            "name": "이도윤"
+            "pos": "유격수",
+            "name": "심우준"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     }
   ],
