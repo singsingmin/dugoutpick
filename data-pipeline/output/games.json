@@ -1,7 +1,7 @@
 {
   "date": "20260926",
   "dateText": "2026년 9월 26일",
-  "updatedAt": "2026-09-26T09:30:30.840Z",
+  "updatedAt": "2026-09-26T09:37:33.549Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "out": 2,
+        "b1": true,
+        "b2": true,
         "b3": false,
         "pitcher": "네일",
-        "batter": "신민재",
+        "batter": "송찬의",
         "heat": 44,
         "label": "경기 흐름 체크 중"
       },
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 2,
+        "inning": 6,
+        "half": "T",
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "안우진",
-        "batter": "최원준",
-        "heat": 31,
+        "pitcher": "고영표",
+        "batter": "어준서",
+        "heat": 33,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -395,16 +395,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
+        "inning": 6,
+        "half": "T",
         "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "강재민",
-        "batter": "블레인",
-        "heat": 42,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "토다",
+        "batter": "심우준",
+        "heat": 44,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
