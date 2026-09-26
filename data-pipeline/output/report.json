@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-26T11:00:41.905Z",
+  "updatedAt": "2026-09-26T11:10:25.601Z",
   "lastWeek": {
     "range": [
       "20260914",
@@ -244,7 +244,9 @@
         {
           "date": "20260927",
           "away": "HH",
-          "home": "LT"
+          "home": "LT",
+          "awayStarter": "이상규",
+          "homeStarter": "나균안"
         }
       ],
       "HH": [
@@ -279,7 +281,9 @@
         {
           "date": "20260927",
           "away": "HH",
-          "home": "LT"
+          "home": "LT",
+          "awayStarter": "이상규",
+          "homeStarter": "나균안"
         }
       ],
       "OB": [
@@ -342,7 +346,9 @@
         {
           "date": "20260927",
           "away": "LG",
-          "home": "HT"
+          "home": "HT",
+          "awayStarter": "카라스코",
+          "homeStarter": "시라카와"
         }
       ],
       "LG": [
@@ -363,7 +369,9 @@
         {
           "date": "20260927",
           "away": "LG",
-          "home": "HT"
+          "home": "HT",
+          "awayStarter": "카라스코",
+          "homeStarter": "시라카와"
         }
       ]
     }
