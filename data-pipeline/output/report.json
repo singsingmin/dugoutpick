@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-26T11:10:25.601Z",
+  "updatedAt": "2026-09-26T11:20:24.804Z",
   "lastWeek": {
     "range": [
       "20260914",
@@ -67,14 +67,14 @@
         "l": 4,
         "d": 1,
         "rank": 9,
-        "note": "10연패 행진, 분위기 반전이 절실"
+        "note": "11연패 행진, 분위기 반전이 절실"
       },
       "WO": {
         "w": 0,
         "l": 2,
         "d": 1,
         "rank": 10,
-        "note": "6연패, 뭔가 터져야 한다"
+        "note": "꼴찌에서 탈출하자 — 0승2패 1무"
       }
     }
   },
@@ -87,8 +87,8 @@
       {
         "away": "LG",
         "home": "HT",
-        "pred": 92,
-        "reason": "게임차 3의 순위 다툼",
+        "pred": 95,
+        "reason": "게임차 2, 막상막하 승부",
         "dateStart": "20260926",
         "dateEnd": "20260927"
       },
@@ -96,15 +96,15 @@
         "away": "HT",
         "home": "OB",
         "pred": 87,
-        "reason": "게임차 4의 순위 다툼",
+        "reason": "게임차 4.5의 순위 다툼",
         "dateStart": "20260923",
         "dateEnd": "20260923"
       },
       {
         "away": "LT",
         "home": "HH",
-        "pred": 84,
-        "reason": "게임차 4.5의 순위 다툼",
+        "pred": 82,
+        "reason": "게임차 5의 순위 다툼",
         "dateStart": "20260922",
         "dateEnd": "20260923"
       }
@@ -149,7 +149,9 @@
         {
           "date": "20260927",
           "away": "WO",
-          "home": "NC"
+          "home": "NC",
+          "awayStarter": "하영민",
+          "homeStarter": "클레빈저"
         }
       ],
       "SS": [
@@ -200,7 +202,9 @@
         {
           "date": "20260927",
           "away": "KT",
-          "home": "OB"
+          "home": "OB",
+          "awayStarter": "배제성",
+          "homeStarter": "최승용"
         }
       ],
       "SK": [
@@ -304,7 +308,9 @@
         {
           "date": "20260927",
           "away": "KT",
-          "home": "OB"
+          "home": "OB",
+          "awayStarter": "배제성",
+          "homeStarter": "최승용"
         }
       ],
       "WO": [
@@ -325,7 +331,9 @@
         {
           "date": "20260927",
           "away": "WO",
-          "home": "NC"
+          "home": "NC",
+          "awayStarter": "하영민",
+          "homeStarter": "클레빈저"
         }
       ],
       "HT": [

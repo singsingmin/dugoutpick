@@ -1,7 +1,7 @@
 {
   "date": "20260926",
   "dateText": "2026년 9월 26일",
-  "updatedAt": "2026-09-26T11:10:25.601Z",
+  "updatedAt": "2026-09-26T11:20:24.804Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -25,9 +25,9 @@
         "score": 1,
         "starter": {
           "name": "임찬규",
-          "era": 4.06,
+          "era": 4.15,
           "w": 14,
-          "l": 5
+          "l": 6
         }
       },
       "home": {
@@ -37,8 +37,8 @@
         "score": 5,
         "starter": {
           "name": "네일",
-          "era": 3.57,
-          "w": 11,
+          "era": 3.45,
+          "w": 12,
           "l": 7
         }
       },
@@ -74,9 +74,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "네일",
+        "lose": "임찬규",
+        "save": "곽도규"
       },
       "lineup": null
     },
@@ -94,8 +94,8 @@
         "score": 10,
         "starter": {
           "name": "안우진",
-          "era": 3.65,
-          "w": 3,
+          "era": 3.45,
+          "w": 4,
           "l": 8
         }
       },
@@ -106,9 +106,9 @@
         "score": 1,
         "starter": {
           "name": "고영표",
-          "era": 3.54,
+          "era": 3.57,
           "w": 13,
-          "l": 6
+          "l": 7
         }
       },
       "honjam": {
@@ -143,8 +143,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "안우진",
+        "lose": "고영표",
         "save": null
       },
       "lineup": null
@@ -163,9 +163,9 @@
         "score": 2,
         "starter": {
           "name": "황준서",
-          "era": 5.64,
+          "era": 5.63,
           "w": 1,
-          "l": 3
+          "l": 4
         }
       },
       "home": {
@@ -175,8 +175,8 @@
         "score": 3,
         "starter": {
           "name": "토다",
-          "era": 5.19,
-          "w": 7,
+          "era": 4.94,
+          "w": 8,
           "l": 10
         }
       },
@@ -212,9 +212,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "토다",
+        "lose": "황준서",
+        "save": "손주환"
       },
       "lineup": null
     }
