@@ -1,7 +1,7 @@
 {
   "date": "20260927",
   "dateText": "2026년 9월 27일",
-  "updatedAt": "2026-09-27T08:20:25.040Z",
+  "updatedAt": "2026-09-27T08:30:32.033Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": 0,
+        "score": 4,
         "starter": {
           "name": "배제성",
           "era": 3.11,
@@ -67,14 +67,14 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": true,
-        "b2": true,
-        "b3": false,
+        "b2": false,
+        "b3": true,
         "pitcher": "최승용",
-        "batter": "김상수",
-        "heat": 35,
-        "label": "초반 팽팽한 흐름"
+        "batter": "김현수",
+        "heat": 13,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "이상규",
-        "batter": "황성빈",
+        "batter": "고승민",
         "heat": 19,
         "label": "경기 흐름 체크 중"
       },
@@ -396,14 +396,14 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
-        "out": 0,
+        "half": "B",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "시라카와",
-        "batter": "이재원",
-        "heat": 33,
+        "pitcher": "카라스코",
+        "batter": "한준수",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -517,7 +517,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "하영민",
           "era": 4.57,
@@ -561,13 +561,13 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "클레빈저",
-        "batter": "염승원",
+        "pitcher": "하영민",
+        "batter": "블레인",
         "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
