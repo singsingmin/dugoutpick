@@ -1,7 +1,7 @@
 {
   "date": "20260927",
   "dateText": "2026년 9월 27일",
-  "updatedAt": "2026-09-27T11:30:32.024Z",
+  "updatedAt": "2026-09-27T11:40:27.025Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -25,8 +25,8 @@
         "score": 12,
         "starter": {
           "name": "배제성",
-          "era": 3.11,
-          "w": 2,
+          "era": 2.84,
+          "w": 3,
           "l": 2
         }
       },
@@ -37,9 +37,9 @@
         "score": 6,
         "starter": {
           "name": "최승용",
-          "era": 5.92,
+          "era": 6.22,
           "w": 3,
-          "l": 12
+          "l": 13
         }
       },
       "honjam": {
@@ -74,8 +74,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "배제성",
+        "lose": "최승용",
         "save": null
       },
       "lineup": null
@@ -94,7 +94,7 @@
         "score": 6,
         "starter": {
           "name": "이상규",
-          "era": 5.08,
+          "era": 4.83,
           "w": 3,
           "l": 3
         }
@@ -106,9 +106,9 @@
         "score": 2,
         "starter": {
           "name": "나균안",
-          "era": 4.24,
+          "era": 4.31,
           "w": 6,
-          "l": 10
+          "l": 11
         }
       },
       "honjam": {
@@ -143,9 +143,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "주현상",
+        "lose": "나균안",
+        "save": "김서현"
       },
       "lineup": null
     },
@@ -222,7 +222,7 @@
         "starter": {
           "name": "하영민",
           "era": 4.57,
-          "w": 6,
+          "w": 7,
           "l": 9
         }
       },
@@ -233,7 +233,7 @@
         "score": 4,
         "starter": {
           "name": "클레빈저",
-          "era": 6.75,
+          "era": 5.23,
           "w": 0,
           "l": 0
         }
@@ -270,8 +270,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "하영민",
+        "lose": "이준혁",
         "save": null
       },
       "lineup": null
