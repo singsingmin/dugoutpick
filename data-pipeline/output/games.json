@@ -1,7 +1,7 @@
 {
   "date": "20260927",
   "dateText": "2026년 9월 27일",
-  "updatedAt": "2026-09-27T10:17:10.798Z",
+  "updatedAt": "2026-09-27T10:20:26.957Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,13 +66,13 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "b1": false,
-        "b2": true,
-        "b3": true,
-        "pitcher": "박치국",
-        "batter": "안현민",
+        "b2": false,
+        "b3": false,
+        "pitcher": "김민수",
+        "batter": "강승호",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김원중",
-        "batter": "황영묵",
-        "heat": 36,
+        "pitcher": "장유호",
+        "batter": "레이예스",
+        "heat": 38,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -562,12 +562,12 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "b1": true,
         "b2": true,
         "b3": false,
         "pitcher": "이용준",
-        "batter": "데이비슨",
+        "batter": "히우라",
         "heat": 59,
         "label": "후반 박빙 승부"
       },
