@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-27T11:20:24.540Z",
+  "updatedAt": "2026-09-27T11:30:32.024Z",
   "results": [
     {
       "date": "20260705",
@@ -1287,6 +1287,27 @@
         "score": 3
       },
       "calculatedAt": "2026-09-26T11:10:25.601Z"
+    },
+    {
+      "date": "20260927",
+      "actualTopGameId": "20260927WONC0",
+      "recapScore": 53,
+      "decidingReasonTags": [
+        "실제 꿀잼 53"
+      ],
+      "displayMode": "summary",
+      "displayTitle": "어제 경기 요약",
+      "away": {
+        "code": "WO",
+        "name": "키움",
+        "score": 8
+      },
+      "home": {
+        "code": "NC",
+        "name": "NC",
+        "score": 4
+      },
+      "calculatedAt": "2026-09-27T11:30:32.024Z"
     }
   ]
 }

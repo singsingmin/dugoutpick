@@ -1,7 +1,7 @@
 {
   "date": "20260927",
   "dateText": "2026년 9월 27일",
-  "updatedAt": "2026-09-27T11:20:24.540Z",
+  "updatedAt": "2026-09-27T11:30:32.024Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -211,7 +211,7 @@
       "gameId": "20260927WONC0",
       "time": "17:00",
       "stadium": "창원",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "KBS N SPORTS,MBC SPORTS+",
       "away": {
@@ -230,7 +230,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 6,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "클레빈저",
           "era": 6.75,
@@ -260,117 +260,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 1,
-        "b1": false,
-        "b2": true,
-        "b3": false,
-        "pitcher": "조영건",
-        "batter": "신재인",
-        "heat": 16,
-        "label": "경기 흐름 체크 중"
+      "live": null,
+      "recap": {
+        "actual": 53,
+        "verdict": "기대 이상",
+        "diff": 4,
+        "total": 12,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "우익수",
-            "name": "천재환"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "고준휘"
-          },
-          {
-            "order": 3,
-            "pos": "지명타자",
-            "name": "박민우"
-          },
-          {
-            "order": 4,
-            "pos": "1루수",
-            "name": "블레인"
-          },
-          {
-            "order": 5,
-            "pos": "3루수",
-            "name": "김휘집"
-          },
-          {
-            "order": 6,
-            "pos": "좌익수",
-            "name": "권희동"
-          },
-          {
-            "order": 7,
-            "pos": "포수",
-            "name": "안중열"
-          },
-          {
-            "order": 8,
-            "pos": "2루수",
-            "name": "한재환"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "홍종표"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "좌익수",
-            "name": "추재현"
-          },
-          {
-            "order": 2,
-            "pos": "1루수",
-            "name": "데이비슨"
-          },
-          {
-            "order": 3,
-            "pos": "지명타자",
-            "name": "히우라"
-          },
-          {
-            "order": 4,
-            "pos": "3루수",
-            "name": "김웅빈"
-          },
-          {
-            "order": 5,
-            "pos": "우익수",
-            "name": "박찬혁"
-          },
-          {
-            "order": 6,
-            "pos": "중견수",
-            "name": "임병욱"
-          },
-          {
-            "order": 7,
-            "pos": "포수",
-            "name": "김동헌"
-          },
-          {
-            "order": 8,
-            "pos": "2루수",
-            "name": "염승원"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "최재영"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     }
   ],
   "postseason": null
