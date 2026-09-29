@@ -1,7 +1,7 @@
 {
   "date": "20260929",
   "dateText": "2026년 9월 29일",
-  "updatedAt": "2026-09-29T10:58:47.718Z",
+  "updatedAt": "2026-09-29T11:00:42.694Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -231,13 +231,13 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "페덱",
-        "batter": "심우준",
+        "pitcher": "짐머맨",
+        "batter": "구자욱",
         "heat": 3,
         "label": "점수차가 벌어진 경기"
       },
@@ -562,12 +562,12 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "이우찬",
-        "batter": "에레디아",
+        "batter": "전의산",
         "heat": 11,
         "label": "경기 흐름 체크 중"
       },
