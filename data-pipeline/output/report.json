@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T13:20:27.068Z",
+  "updatedAt": "2026-09-29T13:30:36.266Z",
   "lastWeek": {
     "range": [
       "20260921",
@@ -110,6 +110,68 @@
       }
     ],
     "team": {
+      "NC": [
+        {
+          "date": "20260929",
+          "away": "NC",
+          "home": "OB",
+          "awayStarter": "이재학",
+          "homeStarter": "벤자민"
+        },
+        {
+          "date": "20260930",
+          "away": "NC",
+          "home": "OB",
+          "awayStarter": "라일리",
+          "homeStarter": "잭로그"
+        },
+        {
+          "date": "20261001",
+          "away": "NC",
+          "home": "OB"
+        },
+        {
+          "date": "20261003",
+          "away": "SK",
+          "home": "NC"
+        },
+        {
+          "date": "20261004",
+          "away": "SK",
+          "home": "NC"
+        }
+      ],
+      "OB": [
+        {
+          "date": "20260929",
+          "away": "NC",
+          "home": "OB",
+          "awayStarter": "이재학",
+          "homeStarter": "벤자민"
+        },
+        {
+          "date": "20260930",
+          "away": "NC",
+          "home": "OB",
+          "awayStarter": "라일리",
+          "homeStarter": "잭로그"
+        },
+        {
+          "date": "20261001",
+          "away": "NC",
+          "home": "OB"
+        },
+        {
+          "date": "20261003",
+          "away": "OB",
+          "home": "SS"
+        },
+        {
+          "date": "20261004",
+          "away": "OB",
+          "home": "SS"
+        }
+      ],
       "HH": [
         {
           "date": "20260929",
@@ -222,68 +284,6 @@
           "date": "20261004",
           "away": "LT",
           "home": "KT"
-        }
-      ],
-      "NC": [
-        {
-          "date": "20260929",
-          "away": "NC",
-          "home": "OB",
-          "awayStarter": "이재학",
-          "homeStarter": "벤자민"
-        },
-        {
-          "date": "20260930",
-          "away": "NC",
-          "home": "OB",
-          "awayStarter": "라일리",
-          "homeStarter": "잭로그"
-        },
-        {
-          "date": "20261001",
-          "away": "NC",
-          "home": "OB"
-        },
-        {
-          "date": "20261003",
-          "away": "SK",
-          "home": "NC"
-        },
-        {
-          "date": "20261004",
-          "away": "SK",
-          "home": "NC"
-        }
-      ],
-      "OB": [
-        {
-          "date": "20260929",
-          "away": "NC",
-          "home": "OB",
-          "awayStarter": "이재학",
-          "homeStarter": "벤자민"
-        },
-        {
-          "date": "20260930",
-          "away": "NC",
-          "home": "OB",
-          "awayStarter": "라일리",
-          "homeStarter": "잭로그"
-        },
-        {
-          "date": "20261001",
-          "away": "NC",
-          "home": "OB"
-        },
-        {
-          "date": "20261003",
-          "away": "OB",
-          "home": "SS"
-        },
-        {
-          "date": "20261004",
-          "away": "OB",
-          "home": "SS"
         }
       ],
       "LG": [
