@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T12:50:27.732Z",
+  "updatedAt": "2026-09-29T13:00:42.888Z",
   "lastWeek": {
     "range": [
       "20260921",
@@ -95,21 +95,73 @@
       {
         "away": "SK",
         "home": "NC",
-        "pred": 86,
-        "reason": "게임차 2, 막상막하 승부",
+        "pred": 88,
+        "reason": "게임차 1.5, 막상막하 승부",
         "dateStart": "20261003",
         "dateEnd": "20261004"
       },
       {
         "away": "NC",
         "home": "OB",
-        "pred": 81,
-        "reason": "게임차 6의 순위 다툼",
+        "pred": 79,
+        "reason": "게임차 7의 순위 다툼",
         "dateStart": "20260929",
         "dateEnd": "20261001"
       }
     ],
     "team": {
+      "WO": [
+        {
+          "date": "20260929",
+          "away": "WO",
+          "home": "LT",
+          "awayStarter": "전준표",
+          "homeStarter": "박세웅"
+        },
+        {
+          "date": "20260930",
+          "away": "WO",
+          "home": "LT",
+          "awayStarter": "김성진",
+          "homeStarter": "로드리게스"
+        },
+        {
+          "date": "20261003",
+          "away": "WO",
+          "home": "HH"
+        },
+        {
+          "date": "20261004",
+          "away": "WO",
+          "home": "HH"
+        }
+      ],
+      "LT": [
+        {
+          "date": "20260929",
+          "away": "WO",
+          "home": "LT",
+          "awayStarter": "전준표",
+          "homeStarter": "박세웅"
+        },
+        {
+          "date": "20260930",
+          "away": "WO",
+          "home": "LT",
+          "awayStarter": "김성진",
+          "homeStarter": "로드리게스"
+        },
+        {
+          "date": "20261003",
+          "away": "LT",
+          "home": "KT"
+        },
+        {
+          "date": "20261004",
+          "away": "LT",
+          "home": "KT"
+        }
+      ],
       "NC": [
         {
           "date": "20260929",
@@ -232,58 +284,6 @@
           "date": "20261004",
           "away": "OB",
           "home": "SS"
-        }
-      ],
-      "WO": [
-        {
-          "date": "20260929",
-          "away": "WO",
-          "home": "LT",
-          "awayStarter": "전준표",
-          "homeStarter": "박세웅"
-        },
-        {
-          "date": "20260930",
-          "away": "WO",
-          "home": "LT",
-          "awayStarter": "김성진",
-          "homeStarter": "로드리게스"
-        },
-        {
-          "date": "20261003",
-          "away": "WO",
-          "home": "HH"
-        },
-        {
-          "date": "20261004",
-          "away": "WO",
-          "home": "HH"
-        }
-      ],
-      "LT": [
-        {
-          "date": "20260929",
-          "away": "WO",
-          "home": "LT",
-          "awayStarter": "전준표",
-          "homeStarter": "박세웅"
-        },
-        {
-          "date": "20260930",
-          "away": "WO",
-          "home": "LT",
-          "awayStarter": "김성진",
-          "homeStarter": "로드리게스"
-        },
-        {
-          "date": "20261003",
-          "away": "LT",
-          "home": "KT"
-        },
-        {
-          "date": "20261004",
-          "away": "LT",
-          "home": "KT"
         }
       ],
       "LG": [
