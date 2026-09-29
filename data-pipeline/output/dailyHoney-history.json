@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T13:40:26.594Z",
+  "updatedAt": "2026-09-29T13:50:28.428Z",
   "results": [
     {
       "date": "20260705",
@@ -1308,6 +1308,27 @@
         "score": 4
       },
       "calculatedAt": "2026-09-27T11:30:32.024Z"
+    },
+    {
+      "date": "20260929",
+      "actualTopGameId": "20260929KTHT0",
+      "recapScore": 95,
+      "decidingReasonTags": [
+        "연장 접전"
+      ],
+      "displayMode": "highlight",
+      "displayTitle": "어제의 명경기",
+      "away": {
+        "code": "KT",
+        "name": "KT",
+        "score": 8
+      },
+      "home": {
+        "code": "HT",
+        "name": "KIA",
+        "score": 5
+      },
+      "calculatedAt": "2026-09-29T13:50:28.428Z"
     }
   ]
 }

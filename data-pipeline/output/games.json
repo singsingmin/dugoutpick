@@ -1,12 +1,12 @@
 {
   "date": "20260929",
   "dateText": "2026년 9월 29일",
-  "updatedAt": "2026-09-29T13:40:26.594Z",
+  "updatedAt": "2026-09-29T13:50:28.428Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
     "hitRate": 14,
-    "bonusRate": 54,
+    "bonusRate": 56,
     "ready": true
   },
   "recommendedGameId": "20260929KTHT0",
@@ -25,9 +25,9 @@
         "score": 2,
         "starter": {
           "name": "이재학",
-          "era": 6.08,
+          "era": 7.04,
           "w": 0,
-          "l": 1
+          "l": 2
         }
       },
       "home": {
@@ -37,8 +37,8 @@
         "score": 5,
         "starter": {
           "name": "벤자민",
-          "era": 2.37,
-          "w": 7,
+          "era": 2.42,
+          "w": 8,
           "l": 7
         }
       },
@@ -74,9 +74,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "벤자민",
+        "lose": "이재학",
+        "save": "이영하"
       },
       "lineup": null
     },
@@ -94,9 +94,9 @@
         "score": 5,
         "starter": {
           "name": "박준영",
-          "era": 6.27,
+          "era": 7.03,
           "w": 2,
-          "l": 6
+          "l": 7
         }
       },
       "home": {
@@ -106,8 +106,8 @@
         "score": 10,
         "starter": {
           "name": "페덱",
-          "era": 3.21,
-          "w": 6,
+          "era": 2.95,
+          "w": 7,
           "l": 3
         }
       },
@@ -143,8 +143,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "페덱",
+        "lose": "박준영",
         "save": null
       },
       "lineup": null
@@ -163,9 +163,9 @@
         "score": 2,
         "starter": {
           "name": "전준표",
-          "era": 4.56,
+          "era": 4.5,
           "w": 0,
-          "l": 5
+          "l": 6
         }
       },
       "home": {
@@ -175,7 +175,7 @@
         "score": 4,
         "starter": {
           "name": "박세웅",
-          "era": 4.99,
+          "era": 4.92,
           "w": 3,
           "l": 9
         }
@@ -212,9 +212,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "박정민",
+        "lose": "전준표",
+        "save": "이이무라"
       },
       "lineup": null
     },
@@ -232,9 +232,9 @@
         "score": 1,
         "starter": {
           "name": "톨허스트",
-          "era": 4.25,
+          "era": 4.34,
           "w": 12,
-          "l": 10
+          "l": 11
         }
       },
       "home": {
@@ -244,8 +244,8 @@
         "score": 7,
         "starter": {
           "name": "아빌라",
-          "era": 1.62,
-          "w": 7,
+          "era": 1.56,
+          "w": 8,
           "l": 2
         }
       },
@@ -281,8 +281,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "아빌라",
+        "lose": "톨허스트",
         "save": null
       },
       "lineup": null
@@ -291,7 +291,7 @@
       "gameId": "20260929KTHT0",
       "time": "18:30",
       "stadium": "광주",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "MBC SPORTS+",
       "away": {
@@ -301,7 +301,7 @@
         "score": 8,
         "starter": {
           "name": "로건",
-          "era": 3.53,
+          "era": 3.93,
           "w": 6,
           "l": 5
         }
@@ -313,7 +313,7 @@
         "score": 5,
         "starter": {
           "name": "올러",
-          "era": 2.81,
+          "era": 2.92,
           "w": 11,
           "l": 9
         }
@@ -340,117 +340,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 10,
-        "half": "B",
-        "out": 3,
-        "b1": false,
-        "b2": true,
-        "b3": false,
-        "pitcher": "박영현",
-        "batter": "변우혁",
-        "heat": 53,
-        "label": "점수 나는 난타전"
+      "live": null,
+      "recap": {
+        "actual": 95,
+        "verdict": "기대 이상",
+        "diff": 3,
+        "total": 13,
+        "extra": 1,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "좌익수",
-            "name": "박재현"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "김호령"
-          },
-          {
-            "order": 3,
-            "pos": "3루수",
-            "name": "김도영"
-          },
-          {
-            "order": 4,
-            "pos": "1루수",
-            "name": "카스트로"
-          },
-          {
-            "order": 5,
-            "pos": "우익수",
-            "name": "나성범"
-          },
-          {
-            "order": 6,
-            "pos": "2루수",
-            "name": "김선빈"
-          },
-          {
-            "order": 7,
-            "pos": "지명타자",
-            "name": "한준수"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "김태군"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "하주석"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "최원준"
-          },
-          {
-            "order": 2,
-            "pos": "1루수",
-            "name": "김현수"
-          },
-          {
-            "order": 3,
-            "pos": "우익수",
-            "name": "안현민"
-          },
-          {
-            "order": 4,
-            "pos": "좌익수",
-            "name": "힐리어드"
-          },
-          {
-            "order": 5,
-            "pos": "지명타자",
-            "name": "장성우"
-          },
-          {
-            "order": 6,
-            "pos": "2루수",
-            "name": "류현인"
-          },
-          {
-            "order": 7,
-            "pos": "3루수",
-            "name": "허경민"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "한승택"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "장준원"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": "박영현",
+        "lose": "성영탁",
+        "save": null
+      },
+      "lineup": null
     }
   ],
   "postseason": null
