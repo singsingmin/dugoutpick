@@ -1,7 +1,7 @@
 {
   "date": "20260929",
   "dateText": "2026년 9월 29일",
-  "updatedAt": "2026-09-29T13:10:30.373Z",
+  "updatedAt": "2026-09-29T13:20:27.068Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -341,16 +341,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 2,
-        "b1": true,
-        "b2": false,
-        "b3": false,
-        "pitcher": "우규민",
-        "batter": "김호령",
-        "heat": 95,
-        "label": "끝내기 한 방 찬스"
+        "inning": 10,
+        "half": "T",
+        "out": 0,
+        "b1": false,
+        "b2": true,
+        "b3": true,
+        "pitcher": "정해영",
+        "batter": "안현민",
+        "heat": 94,
+        "label": "연장 혈투 진행 중"
       },
       "recap": null,
       "decision": null,

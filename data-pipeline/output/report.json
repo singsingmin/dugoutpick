@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T13:10:30.373Z",
+  "updatedAt": "2026-09-29T13:20:27.068Z",
   "lastWeek": {
     "range": [
       "20260921",
@@ -110,6 +110,68 @@
       }
     ],
     "team": {
+      "HH": [
+        {
+          "date": "20260929",
+          "away": "HH",
+          "home": "SS",
+          "awayStarter": "박준영",
+          "homeStarter": "페덱"
+        },
+        {
+          "date": "20260930",
+          "away": "HH",
+          "home": "SS",
+          "awayStarter": "화이트",
+          "homeStarter": "후라도"
+        },
+        {
+          "date": "20261001",
+          "away": "HH",
+          "home": "SS"
+        },
+        {
+          "date": "20261003",
+          "away": "WO",
+          "home": "HH"
+        },
+        {
+          "date": "20261004",
+          "away": "WO",
+          "home": "HH"
+        }
+      ],
+      "SS": [
+        {
+          "date": "20260929",
+          "away": "HH",
+          "home": "SS",
+          "awayStarter": "박준영",
+          "homeStarter": "페덱"
+        },
+        {
+          "date": "20260930",
+          "away": "HH",
+          "home": "SS",
+          "awayStarter": "화이트",
+          "homeStarter": "후라도"
+        },
+        {
+          "date": "20261001",
+          "away": "HH",
+          "home": "SS"
+        },
+        {
+          "date": "20261003",
+          "away": "OB",
+          "home": "SS"
+        },
+        {
+          "date": "20261004",
+          "away": "OB",
+          "home": "SS"
+        }
+      ],
       "WO": [
         {
           "date": "20260929",
@@ -212,68 +274,6 @@
           "date": "20261001",
           "away": "NC",
           "home": "OB"
-        },
-        {
-          "date": "20261003",
-          "away": "OB",
-          "home": "SS"
-        },
-        {
-          "date": "20261004",
-          "away": "OB",
-          "home": "SS"
-        }
-      ],
-      "HH": [
-        {
-          "date": "20260929",
-          "away": "HH",
-          "home": "SS",
-          "awayStarter": "박준영",
-          "homeStarter": "페덱"
-        },
-        {
-          "date": "20260930",
-          "away": "HH",
-          "home": "SS",
-          "awayStarter": "화이트",
-          "homeStarter": "후라도"
-        },
-        {
-          "date": "20261001",
-          "away": "HH",
-          "home": "SS"
-        },
-        {
-          "date": "20261003",
-          "away": "WO",
-          "home": "HH"
-        },
-        {
-          "date": "20261004",
-          "away": "WO",
-          "home": "HH"
-        }
-      ],
-      "SS": [
-        {
-          "date": "20260929",
-          "away": "HH",
-          "home": "SS",
-          "awayStarter": "박준영",
-          "homeStarter": "페덱"
-        },
-        {
-          "date": "20260930",
-          "away": "HH",
-          "home": "SS",
-          "awayStarter": "화이트",
-          "homeStarter": "후라도"
-        },
-        {
-          "date": "20261001",
-          "away": "HH",
-          "home": "SS"
         },
         {
           "date": "20261003",
