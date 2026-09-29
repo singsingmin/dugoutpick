@@ -1,7 +1,7 @@
 {
   "date": "20260929",
   "dateText": "2026년 9월 29일",
-  "updatedAt": "2026-09-29T11:10:25.015Z",
+  "updatedAt": "2026-09-29T11:20:29.033Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "벤자민",
-        "batter": "김주원",
-        "heat": 29,
+        "pitcher": "최성영",
+        "batter": "양의지",
+        "heat": 31,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -230,14 +230,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 2,
-        "b1": false,
+        "inning": 6,
+        "half": "T",
+        "out": 1,
+        "b1": true,
         "b2": false,
-        "b3": true,
-        "pitcher": "원종혁",
-        "batter": "강민호",
+        "b3": false,
+        "pitcher": "페덱",
+        "batter": "문현빈",
         "heat": 3,
         "label": "점수차가 벌어진 경기"
       },
@@ -395,16 +395,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
+        "inning": 7,
         "half": "T",
-        "out": 2,
-        "b1": true,
-        "b2": true,
-        "b3": true,
+        "out": 0,
+        "b1": false,
+        "b2": false,
+        "b3": false,
         "pitcher": "박정민",
-        "batter": "권혁빈",
-        "heat": 57,
-        "label": "경기 흐름 체크 중"
+        "batter": "추재현",
+        "heat": 62,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
+        "inning": 7,
         "half": "T",
-        "out": 1,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "아빌라",
-        "batter": "오스틴",
-        "heat": 11,
+        "batter": "오지환",
+        "heat": 12,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -725,16 +725,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
+        "inning": 6,
         "half": "T",
-        "out": 1,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "올러",
-        "batter": "류현인",
-        "heat": 51,
-        "label": "초반 팽팽한 흐름"
+        "batter": "한승택",
+        "heat": 56,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
