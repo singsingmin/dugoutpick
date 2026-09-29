@@ -1,7 +1,7 @@
 {
   "date": "20260929",
   "dateText": "2026년 9월 29일",
-  "updatedAt": "2026-09-29T13:00:42.888Z",
+  "updatedAt": "2026-09-29T13:10:30.373Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -342,15 +342,15 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
+        "half": "B",
         "out": 2,
         "b1": true,
-        "b2": true,
-        "b3": true,
-        "pitcher": "성영탁",
-        "batter": "조대현",
-        "heat": 84,
-        "label": "9회 1점 승부"
+        "b2": false,
+        "b3": false,
+        "pitcher": "우규민",
+        "batter": "김호령",
+        "heat": 95,
+        "label": "끝내기 한 방 찬스"
       },
       "recap": null,
       "decision": null,
