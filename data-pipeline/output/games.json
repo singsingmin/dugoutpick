@@ -1,7 +1,7 @@
 {
-  "date": "20260930",
-  "dateText": "2026년 9월 30일",
-  "updatedAt": "2026-09-30T14:00:42.321Z",
+  "date": "20261001",
+  "dateText": "2026년 10월 1일",
+  "updatedAt": "2026-09-30T16:33:08.718Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -9,352 +9,619 @@
     "bonusRate": 64,
     "ready": true
   },
-  "recommendedGameId": "20260930NCOB0",
+  "recommendedGameId": "20261001NCOB0",
   "games": [
     {
-      "gameId": "20260930NCOB0",
+      "gameId": "20261001NCOB0",
       "time": "18:30",
       "stadium": "잠실",
-      "status": "FINAL",
+      "status": "SCHEDULED",
       "cancelReason": null,
-      "broadcast": "SPOTV",
+      "broadcast": "SBS SPORTS,SPOTV",
       "away": {
         "code": "NC",
         "name": "NC",
         "rank": 6,
-        "score": 5,
+        "score": null,
         "starter": {
-          "name": "라일리",
-          "era": 2.69,
-          "w": 8,
-          "l": 1
+          "name": "송명기",
+          "era": 5.18,
+          "w": 1,
+          "l": 2
         }
       },
       "home": {
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 6,
+        "score": null,
         "starter": {
-          "name": "잭로그",
-          "era": 4.15,
-          "w": 7,
-          "l": 7
+          "name": "최민석",
+          "era": 2.73,
+          "w": 14,
+          "l": 4
         }
       },
       "honjam": {
-        "score": 73,
-        "reason": "게임차 7의 순위 다툼",
+        "score": 69,
+        "reason": "게임차 8의 순위 다툼",
         "points": [
-          "게임차 : 7",
-          "상대전적 : NC 4승 10패",
-          "라일리(ERA 2.68) 호투 기대",
+          "게임차 : 8",
+          "상대전적 : NC 4승 11패",
+          "최민석(ERA 2.73) 호투 기대",
           "6위·5위 와일드카드 판가름"
         ],
         "factors": {
-          "close": 0.65,
+          "close": 0.6,
           "quality": 0.5,
-          "form": 0.23,
+          "form": 0.35,
           "rivalry": 0,
           "playoff": 1,
-          "pitcher": 0.53,
+          "pitcher": 0.38,
           "doom": 0,
           "park": 0.09,
           "offense": 0.5
-        },
-        "frozen": true
+        }
       },
       "live": null,
-      "recap": {
-        "actual": 98,
-        "verdict": "기대 이상",
-        "diff": 1,
-        "total": 11,
-        "extra": 0,
-        "walkoff": 1
-      },
-      "decision": {
-        "win": "이병헌",
-        "lose": "손주환",
-        "save": null
-      },
-      "lineup": null
+      "recap": null,
+      "decision": null,
+      "lineup": {
+        "home": [
+          {
+            "order": 1,
+            "pos": "유격수",
+            "name": "박찬호"
+          },
+          {
+            "order": 2,
+            "pos": "3루수",
+            "name": "안재석"
+          },
+          {
+            "order": 3,
+            "pos": "2루수",
+            "name": "박준순"
+          },
+          {
+            "order": 4,
+            "pos": "지명타자",
+            "name": "양의지"
+          },
+          {
+            "order": 5,
+            "pos": "좌익수",
+            "name": "김민석"
+          },
+          {
+            "order": 6,
+            "pos": "1루수",
+            "name": "세베리노"
+          },
+          {
+            "order": 7,
+            "pos": "우익수",
+            "name": "조수행"
+          },
+          {
+            "order": 8,
+            "pos": "포수",
+            "name": "윤준호"
+          },
+          {
+            "order": 9,
+            "pos": "중견수",
+            "name": "정수빈"
+          }
+        ],
+        "away": [
+          {
+            "order": 1,
+            "pos": "유격수",
+            "name": "김주원"
+          },
+          {
+            "order": 2,
+            "pos": "우익수",
+            "name": "천재환"
+          },
+          {
+            "order": 3,
+            "pos": "지명타자",
+            "name": "블레인"
+          },
+          {
+            "order": 4,
+            "pos": "3루수",
+            "name": "김휘집"
+          },
+          {
+            "order": 5,
+            "pos": "포수",
+            "name": "김형준"
+          },
+          {
+            "order": 6,
+            "pos": "좌익수",
+            "name": "권희동"
+          },
+          {
+            "order": 7,
+            "pos": "1루수",
+            "name": "한재환"
+          },
+          {
+            "order": 8,
+            "pos": "2루수",
+            "name": "김한별"
+          },
+          {
+            "order": 9,
+            "pos": "중견수",
+            "name": "오태양"
+          }
+        ],
+        "confirmed": false
+      }
     },
     {
-      "gameId": "20260930HHSS0",
+      "gameId": "20261001HHSS0",
       "time": "18:30",
       "stadium": "대구",
-      "status": "FINAL",
+      "status": "SCHEDULED",
       "cancelReason": null,
       "broadcast": "MBC SPORTS+",
       "away": {
         "code": "HH",
         "name": "한화",
         "rank": 9,
-        "score": 2,
+        "score": null,
         "starter": {
-          "name": "화이트",
-          "era": 4.01,
-          "w": 7,
-          "l": 12
+          "name": "황준서",
+          "era": 5.63,
+          "w": 1,
+          "l": 4
         }
       },
       "home": {
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 6,
+        "score": null,
         "starter": {
-          "name": "후라도",
-          "era": 3.09,
-          "w": 9,
-          "l": 1
+          "name": "원태인",
+          "era": 4.66,
+          "w": 7,
+          "l": 8
         }
       },
       "honjam": {
-        "score": 14,
-        "reason": "후라도(ERA 3.12) 호투 기대 · 삼성 3연승 질주",
+        "score": 8,
+        "reason": "삼성 4연승 질주",
         "points": [
-          "게임차 : 24.5",
-          "상대전적 : 한화 3승 10패 1무",
-          "후라도(ERA 3.12) 호투 기대",
-          "삼성 3연승 질주"
+          "게임차 : 25.5",
+          "상대전적 : 한화 3승 11패 1무",
+          "삼성 4연승 질주",
+          "라팍·사직급 타자 친화 구장, 고득점 기대"
         ],
         "factors": {
           "close": 0,
           "quality": 0.5,
-          "form": 0.41,
+          "form": 0.53,
           "rivalry": 0,
           "playoff": 0,
-          "pitcher": 0.52,
+          "pitcher": 0.06,
           "doom": 0,
           "park": 1,
           "offense": 0.5
-        },
-        "frozen": true
+        }
       },
       "live": null,
-      "recap": {
-        "actual": 46,
-        "verdict": "기대 이상",
-        "diff": 4,
-        "total": 8,
-        "extra": 0,
-        "walkoff": 0
-      },
-      "decision": {
-        "win": "후라도",
-        "lose": "화이트",
-        "save": null
-      },
-      "lineup": null
-    },
-    {
-      "gameId": "20260930WOLT0",
-      "time": "18:30",
-      "stadium": "사직",
-      "status": "FINAL",
-      "cancelReason": null,
-      "broadcast": "KBS N SPORTS",
-      "away": {
-        "code": "WO",
-        "name": "키움",
-        "rank": 10,
-        "score": 6,
-        "starter": {
-          "name": "김성진",
-          "era": 6.37,
-          "w": 1,
-          "l": 3
-        }
-      },
-      "home": {
-        "code": "LT",
-        "name": "롯데",
-        "rank": 7,
-        "score": 8,
-        "starter": {
-          "name": "로드리게스",
-          "era": 4.28,
-          "w": 10,
-          "l": 11
-        }
-      },
-      "honjam": {
-        "score": 15,
-        "reason": "게임차 14의 순위 다툼",
-        "points": [
-          "게임차 : 14",
-          "상대전적 : 키움 2승 13패",
-          "최근 10경기 키움 2승 · 롯데 7승",
-          "10위권 PO 생존 경쟁"
+      "recap": null,
+      "decision": null,
+      "lineup": {
+        "home": [
+          {
+            "order": 1,
+            "pos": "중견수",
+            "name": "김지찬"
+          },
+          {
+            "order": 2,
+            "pos": "우익수",
+            "name": "김성윤"
+          },
+          {
+            "order": 3,
+            "pos": "좌익수",
+            "name": "구자욱"
+          },
+          {
+            "order": 4,
+            "pos": "1루수",
+            "name": "디아즈"
+          },
+          {
+            "order": 5,
+            "pos": "지명타자",
+            "name": "최형우"
+          },
+          {
+            "order": 6,
+            "pos": "포수",
+            "name": "강민호"
+          },
+          {
+            "order": 7,
+            "pos": "3루수",
+            "name": "김영웅"
+          },
+          {
+            "order": 8,
+            "pos": "유격수",
+            "name": "이재현"
+          },
+          {
+            "order": 9,
+            "pos": "2루수",
+            "name": "류지혁"
+          }
         ],
-        "factors": {
-          "close": 0.31,
-          "quality": 0.17,
-          "form": 0.36,
-          "rivalry": 0,
-          "playoff": 0.5,
-          "pitcher": 0.1,
-          "doom": 0,
-          "park": 0.77,
-          "offense": 0.5
-        },
-        "frozen": true
-      },
-      "live": null,
-      "recap": {
-        "actual": 86,
-        "verdict": "기대 이상",
-        "diff": 2,
-        "total": 14,
-        "extra": 0,
-        "walkoff": 0
-      },
-      "decision": {
-        "win": "현도훈",
-        "lose": "김성진",
-        "save": null
-      },
-      "lineup": null
+        "away": [
+          {
+            "order": 1,
+            "pos": "중견수",
+            "name": "최인호"
+          },
+          {
+            "order": 2,
+            "pos": "우익수",
+            "name": "페라자"
+          },
+          {
+            "order": 3,
+            "pos": "좌익수",
+            "name": "문현빈"
+          },
+          {
+            "order": 4,
+            "pos": "지명타자",
+            "name": "강백호"
+          },
+          {
+            "order": 5,
+            "pos": "3루수",
+            "name": "노시환"
+          },
+          {
+            "order": 6,
+            "pos": "포수",
+            "name": "허인서"
+          },
+          {
+            "order": 7,
+            "pos": "1루수",
+            "name": "김태연"
+          },
+          {
+            "order": 8,
+            "pos": "2루수",
+            "name": "정은원"
+          },
+          {
+            "order": 9,
+            "pos": "유격수",
+            "name": "심우준"
+          }
+        ],
+        "confirmed": false
+      }
     },
     {
-      "gameId": "20260930LGSK0",
+      "gameId": "20261001LGSK0",
       "time": "18:30",
       "stadium": "문학",
-      "status": "FINAL",
+      "status": "SCHEDULED",
       "cancelReason": null,
-      "broadcast": "SBS SPORTS",
+      "broadcast": "SPOTV2",
       "away": {
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 3,
+        "score": null,
         "starter": {
-          "name": "박시원",
-          "era": 4,
-          "w": 1,
-          "l": 4
+          "name": "임찬규",
+          "era": 4.15,
+          "w": 14,
+          "l": 6
         }
       },
       "home": {
         "code": "SK",
         "name": "SSG",
         "rank": 8,
-        "score": 4,
+        "score": null,
         "starter": {
-          "name": "김건우",
-          "era": 6.03,
-          "w": 9,
-          "l": 10
+          "name": "김민준",
+          "era": 3.65,
+          "w": 7,
+          "l": 3
         }
       },
       "honjam": {
-        "score": 23,
-        "reason": "게임차 14.5의 순위 다툼",
+        "score": 37,
+        "reason": "게임차 13.5의 순위 다툼",
         "points": [
-          "게임차 : 14.5",
-          "상대전적 : LG 9승 5패",
-          "LG 3연패 탈출 발판",
+          "게임차 : 13.5",
+          "상대전적 : LG 9승 6패",
+          "LG 4연패 탈출 발판",
           "8위권 PO 생존 경쟁"
         ],
         "factors": {
-          "close": 0.27,
+          "close": 0.32,
           "quality": 0.5,
           "form": 0.41,
           "rivalry": 0,
           "playoff": 0.5,
-          "pitcher": 0.1,
+          "pitcher": 0.37,
           "doom": 0,
           "park": 0.55,
           "offense": 0.5
-        },
-        "frozen": true
+        }
       },
       "live": null,
-      "recap": {
-        "actual": 97,
-        "verdict": "기대 이상",
-        "diff": 1,
-        "total": 7,
-        "extra": 0,
-        "walkoff": 1
-      },
-      "decision": {
-        "win": "최민준",
-        "lose": "손주영",
-        "save": null
-      },
-      "lineup": null
+      "recap": null,
+      "decision": null,
+      "lineup": {
+        "home": [
+          {
+            "order": 1,
+            "pos": "유격수",
+            "name": "박성한"
+          },
+          {
+            "order": 2,
+            "pos": "2루수",
+            "name": "정준재"
+          },
+          {
+            "order": 3,
+            "pos": "좌익수",
+            "name": "에레디아"
+          },
+          {
+            "order": 4,
+            "pos": "1루수",
+            "name": "전의산"
+          },
+          {
+            "order": 5,
+            "pos": "3루수",
+            "name": "고명준"
+          },
+          {
+            "order": 6,
+            "pos": "지명타자",
+            "name": "김재환"
+          },
+          {
+            "order": 7,
+            "pos": "중견수",
+            "name": "최지훈"
+          },
+          {
+            "order": 8,
+            "pos": "포수",
+            "name": "조형우"
+          },
+          {
+            "order": 9,
+            "pos": "우익수",
+            "name": "김정민"
+          }
+        ],
+        "away": [
+          {
+            "order": 1,
+            "pos": "중견수",
+            "name": "박해민"
+          },
+          {
+            "order": 2,
+            "pos": "2루수",
+            "name": "구본혁"
+          },
+          {
+            "order": 3,
+            "pos": "지명타자",
+            "name": "오스틴"
+          },
+          {
+            "order": 4,
+            "pos": "3루수",
+            "name": "문보경"
+          },
+          {
+            "order": 5,
+            "pos": "유격수",
+            "name": "오지환"
+          },
+          {
+            "order": 6,
+            "pos": "좌익수",
+            "name": "송찬의"
+          },
+          {
+            "order": 7,
+            "pos": "1루수",
+            "name": "문정빈"
+          },
+          {
+            "order": 8,
+            "pos": "포수",
+            "name": "박동원"
+          },
+          {
+            "order": 9,
+            "pos": "우익수",
+            "name": "이재원"
+          }
+        ],
+        "confirmed": false
+      }
     },
     {
-      "gameId": "20260930KTHT0",
+      "gameId": "20261001KTHT0",
       "time": "18:30",
       "stadium": "광주",
-      "status": "FINAL",
+      "status": "SCHEDULED",
       "cancelReason": null,
-      "broadcast": "SPOTV2",
+      "broadcast": "KBS N SPORTS",
       "away": {
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": 3,
+        "score": null,
         "starter": {
-          "name": "대니엘",
-          "era": 2.16,
-          "w": 4,
-          "l": 2
+          "name": "소형준",
+          "era": 3.38,
+          "w": 8,
+          "l": 3
         }
       },
       "home": {
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 2,
+        "score": null,
         "starter": {
-          "name": "김태형",
-          "era": 5.04,
-          "w": 3,
-          "l": 4
+          "name": "양현종",
+          "era": 4.04,
+          "w": 11,
+          "l": 6
         }
       },
       "honjam": {
-        "score": 69,
-        "reason": "게임차 10의 순위 다툼 · 리그 1위·4위 상위권 빅매치",
+        "score": 65,
+        "reason": "리그 1위·4위 상위권 빅매치 · 게임차 11의 순위 다툼",
         "points": [
-          "게임차 : 10",
-          "상대전적 : KT 8승 6패",
+          "게임차 : 11",
+          "상대전적 : KT 9승 6패",
           "리그 1위·4위 상위권 빅매치",
-          "대니엘 ERA 2.05 압도적 에이스 등판"
+          "소형준(ERA 3.38) 호투 기대"
         ],
         "factors": {
-          "close": 0.49,
+          "close": 0.44,
           "quality": 0.83,
-          "form": 0.23,
+          "form": 0.29,
           "rivalry": 0,
           "playoff": 0.5,
-          "pitcher": 0.49,
+          "pitcher": 0.43,
           "doom": 0,
           "park": 0.68,
           "offense": 0.5
-        },
-        "frozen": true
+        }
       },
       "live": null,
-      "recap": {
-        "actual": 88,
-        "verdict": "기대 이상",
-        "diff": 1,
-        "total": 5,
-        "extra": 0,
-        "walkoff": 0
-      },
-      "decision": {
-        "win": "손동현",
-        "lose": "전상현",
-        "save": "박영현"
-      },
-      "lineup": null
+      "recap": null,
+      "decision": null,
+      "lineup": {
+        "home": [
+          {
+            "order": 1,
+            "pos": "우익수",
+            "name": "박정우"
+          },
+          {
+            "order": 2,
+            "pos": "좌익수",
+            "name": "박재현"
+          },
+          {
+            "order": 3,
+            "pos": "3루수",
+            "name": "김도영"
+          },
+          {
+            "order": 4,
+            "pos": "1루수",
+            "name": "카스트로"
+          },
+          {
+            "order": 5,
+            "pos": "지명타자",
+            "name": "나성범"
+          },
+          {
+            "order": 6,
+            "pos": "2루수",
+            "name": "김선빈"
+          },
+          {
+            "order": 7,
+            "pos": "포수",
+            "name": "한준수"
+          },
+          {
+            "order": 8,
+            "pos": "유격수",
+            "name": "하주석"
+          },
+          {
+            "order": 9,
+            "pos": "중견수",
+            "name": "김호령"
+          }
+        ],
+        "away": [
+          {
+            "order": 1,
+            "pos": "우익수",
+            "name": "최원준"
+          },
+          {
+            "order": 2,
+            "pos": "좌익수",
+            "name": "김민혁"
+          },
+          {
+            "order": 3,
+            "pos": "지명타자",
+            "name": "안현민"
+          },
+          {
+            "order": 4,
+            "pos": "중견수",
+            "name": "힐리어드"
+          },
+          {
+            "order": 5,
+            "pos": "1루수",
+            "name": "김현수"
+          },
+          {
+            "order": 6,
+            "pos": "2루수",
+            "name": "김상수"
+          },
+          {
+            "order": 7,
+            "pos": "3루수",
+            "name": "류현인"
+          },
+          {
+            "order": 8,
+            "pos": "포수",
+            "name": "한승택"
+          },
+          {
+            "order": 9,
+            "pos": "유격수",
+            "name": "장준원"
+          }
+        ],
+        "confirmed": false
+      }
     }
   ],
   "postseason": null
