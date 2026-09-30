@@ -1,7 +1,7 @@
 {
   "date": "20260930",
   "dateText": "2026년 9월 30일",
-  "updatedAt": "2026-09-30T12:20:26.458Z",
+  "updatedAt": "2026-09-30T12:30:33.649Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "잭로그",
           "era": 4.11,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 1,
-        "b1": true,
-        "b2": false,
-        "b3": true,
-        "pitcher": "이용준",
-        "batter": "조수행",
-        "heat": 56,
-        "label": "후반 박빙 승부"
+        "inning": 9,
+        "half": "T",
+        "out": 0,
+        "b1": false,
+        "b2": true,
+        "b3": false,
+        "pitcher": "이영하",
+        "batter": "김휘집",
+        "heat": 75,
+        "label": "9회 1점 승부"
       },
       "recap": null,
       "decision": null,
@@ -267,7 +267,7 @@
       "home": {
         "code": "LT",
         "name": "롯데",
-        "rank": 7,
+        "rank": 8,
         "score": 6,
         "starter": {
           "name": "로드리게스",
@@ -300,14 +300,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
+        "half": "B",
         "out": 1,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "최준용",
-        "batter": "김재현",
-        "heat": 26,
+        "pitcher": "임진묵",
+        "batter": "황성빈",
+        "heat": 27,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -432,7 +432,7 @@
       "home": {
         "code": "SK",
         "name": "SSG",
-        "rank": 8,
+        "rank": 7,
         "score": 4,
         "starter": {
           "name": "김건우",
@@ -535,12 +535,12 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "손동현",
-        "batter": "박재현",
+        "batter": "나성범",
         "heat": 72,
         "label": "후반 박빙 승부"
       },
