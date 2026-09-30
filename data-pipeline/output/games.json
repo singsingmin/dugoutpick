@@ -1,7 +1,7 @@
 {
   "date": "20260930",
   "dateText": "2026년 9월 30일",
-  "updatedAt": "2026-09-30T11:40:26.208Z",
+  "updatedAt": "2026-09-30T11:50:33.364Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 2,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "라일리",
-        "batter": "정수빈",
-        "heat": 56,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "김정우",
+        "batter": "박민우",
+        "heat": 59,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
+        "inning": 9,
         "half": "T",
-        "out": 3,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이승민",
-        "batter": "강백호",
-        "heat": 26,
+        "pitcher": "김태훈",
+        "batter": "장규현",
+        "heat": 28,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 2,
+        "inning": 7,
+        "half": "T",
+        "out": 1,
         "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "원종현",
-        "batter": "황성빈",
-        "heat": 34,
+        "b2": true,
+        "b3": true,
+        "pitcher": "박정민",
+        "batter": "히우라",
+        "heat": 36,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -561,14 +561,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 0,
-        "b1": false,
+        "half": "B",
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "이건욱",
-        "batter": "문보경",
-        "heat": 40,
+        "pitcher": "고우석",
+        "batter": "에레디아",
+        "heat": 42,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -725,16 +725,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 2,
-        "b1": false,
+        "inning": 7,
+        "half": "T",
+        "out": 0,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "대니엘",
-        "batter": "김선빈",
-        "heat": 46,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "곽도규",
+        "batter": "김민혁",
+        "heat": 49,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
