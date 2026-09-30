@@ -1,7 +1,7 @@
 {
   "date": "20260930",
   "dateText": "2026년 9월 30일",
-  "updatedAt": "2026-09-30T11:20:25.613Z",
+  "updatedAt": "2026-09-30T11:30:31.719Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": false,
-        "b2": false,
-        "b3": false,
+        "b2": true,
+        "b3": true,
         "pitcher": "이용찬",
-        "batter": "한재환",
+        "batter": "천재환",
         "heat": 44,
         "label": "경기 흐름 체크 중"
       },
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
+        "inning": 7,
         "half": "B",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "장유호",
-        "batter": "류지혁",
-        "heat": 23,
+        "pitcher": "조동욱",
+        "batter": "김지찬",
+        "heat": 25,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
+        "inning": 6,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박진형",
-        "batter": "고승민",
-        "heat": 31,
+        "pitcher": "김원중",
+        "batter": "임병욱",
+        "heat": 33,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -517,7 +517,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "박시원",
           "era": 4.41,
@@ -562,14 +562,14 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "out": 2,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "전영준",
-        "batter": "박동원",
-        "heat": 49,
-        "label": "후반 박빙 승부"
+        "pitcher": "타케다",
+        "batter": "문보경",
+        "heat": 36,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -726,14 +726,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
+        "half": "B",
         "out": 1,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "성영탁",
-        "batter": "오윤석",
-        "heat": 57,
+        "pitcher": "대니엘",
+        "batter": "김도영",
+        "heat": 59,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
