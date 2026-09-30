@@ -1,7 +1,7 @@
 {
   "date": "20260930",
   "dateText": "2026년 9월 30일",
-  "updatedAt": "2026-09-30T10:50:25.090Z",
+  "updatedAt": "2026-09-30T11:00:39.732Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 6,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "라일리",
           "era": 2.68,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 2,
-        "b1": true,
+        "inning": 5,
+        "half": "T",
+        "out": 1,
+        "b1": false,
         "b2": false,
         "b3": true,
-        "pitcher": "라일리",
-        "batter": "박찬호",
-        "heat": 45,
+        "pitcher": "잭로그",
+        "batter": "천재환",
+        "heat": 51,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 1,
-        "b1": false,
+        "half": "B",
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "후라도",
-        "batter": "최인호",
-        "heat": 48,
+        "pitcher": "화이트",
+        "batter": "디아즈",
+        "heat": 50,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -364,7 +364,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 7,
-        "score": 3,
+        "score": 5,
         "starter": {
           "name": "로드리게스",
           "era": 4.38,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
+        "inning": 5,
         "half": "T",
-        "out": 2,
-        "b1": true,
-        "b2": true,
-        "b3": true,
+        "out": 0,
+        "b1": false,
+        "b2": false,
+        "b3": false,
         "pitcher": "현도훈",
-        "batter": "염승원",
-        "heat": 26,
+        "batter": "최재영",
+        "heat": 10,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -560,16 +560,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
+        "inning": 6,
         "half": "T",
-        "out": 2,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "김건우",
-        "batter": "박해민",
-        "heat": 51,
-        "label": "초반 팽팽한 흐름"
+        "batter": "구본혁",
+        "heat": 57,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "대니엘",
-        "batter": "나성범",
-        "heat": 48,
+        "pitcher": "김태형",
+        "batter": "안현민",
+        "heat": 51,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
