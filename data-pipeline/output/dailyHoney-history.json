@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-30T13:00:42.980Z",
+  "updatedAt": "2026-09-30T13:10:27.678Z",
   "results": [
     {
       "date": "20260705",
@@ -1329,6 +1329,28 @@
         "score": 5
       },
       "calculatedAt": "2026-09-29T13:50:28.428Z"
+    },
+    {
+      "date": "20260930",
+      "actualTopGameId": "20260930NCOB0",
+      "recapScore": 98,
+      "decidingReasonTags": [
+        "끝내기",
+        "1점차 접전"
+      ],
+      "displayMode": "highlight",
+      "displayTitle": "어제의 명경기",
+      "away": {
+        "code": "NC",
+        "name": "NC",
+        "score": 5
+      },
+      "home": {
+        "code": "OB",
+        "name": "두산",
+        "score": 6
+      },
+      "calculatedAt": "2026-09-30T13:10:27.678Z"
     }
   ]
 }
