@@ -1,7 +1,7 @@
 {
   "date": "20260930",
   "dateText": "2026년 9월 30일",
-  "updatedAt": "2026-09-30T11:10:44.615Z",
+  "updatedAt": "2026-09-30T11:20:25.613Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
+        "inning": 6,
         "half": "T",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "잭로그",
-        "batter": "권희동",
-        "heat": 40,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "이용찬",
+        "batter": "한재환",
+        "heat": 44,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 0,
+        "half": "B",
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "후라도",
-        "batter": "강백호",
-        "heat": 21,
+        "pitcher": "장유호",
+        "batter": "류지혁",
+        "heat": 23,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -396,14 +396,14 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김태균",
-        "batter": "히우라",
-        "heat": 29,
+        "pitcher": "박진형",
+        "batter": "고승민",
+        "heat": 31,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -517,7 +517,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "박시원",
           "era": 4.41,
@@ -560,16 +560,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
+        "inning": 7,
         "half": "T",
-        "out": 1,
-        "b1": true,
-        "b2": true,
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
         "pitcher": "전영준",
-        "batter": "오지환",
-        "heat": 57,
-        "label": "경기 흐름 체크 중"
+        "batter": "박동원",
+        "heat": 49,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -727,12 +727,12 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "김태형",
-        "batter": "김현수",
+        "pitcher": "성영탁",
+        "batter": "오윤석",
         "heat": 57,
         "label": "경기 흐름 체크 중"
       },
