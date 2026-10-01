@@ -1,7 +1,7 @@
 {
   "date": "20261001",
   "dateText": "2026년 10월 1일",
-  "updatedAt": "2026-10-01T09:50:25.679Z",
+  "updatedAt": "2026-10-01T10:00:42.373Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
-        "out": 0,
-        "b1": true,
-        "b2": true,
+        "half": "B",
+        "out": 2,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "최민석",
-        "batter": "고준휘",
-        "heat": 27,
+        "pitcher": "송명기",
+        "batter": "정수빈",
+        "heat": 29,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 1,
-        "b1": true,
+        "b1": false,
         "b2": true,
         "b3": false,
-        "pitcher": "황준서",
-        "batter": "최형우",
-        "heat": 33,
+        "pitcher": "원태인",
+        "batter": "김태연",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -364,7 +364,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 8,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "김민준",
           "era": 3.65,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
+        "inning": 3,
         "half": "T",
-        "out": 2,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "김민준",
-        "batter": "문보경",
-        "heat": 35,
+        "batter": "박동원",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -529,7 +529,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "양현종",
           "era": 4.04,
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "B",
-        "out": 2,
+        "out": 0,
         "b1": false,
-        "b2": true,
-        "b3": true,
+        "b2": false,
+        "b3": false,
         "pitcher": "소형준",
-        "batter": "나성범",
-        "heat": 31,
+        "batter": "하주석",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
