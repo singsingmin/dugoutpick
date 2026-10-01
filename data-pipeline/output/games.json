@@ -1,7 +1,7 @@
 {
   "date": "20261001",
   "dateText": "2026년 10월 1일",
-  "updatedAt": "2026-10-01T08:50:26.501Z",
+  "updatedAt": "2026-10-01T09:40:24.625Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -15,14 +15,14 @@
       "gameId": "20261001NCOB0",
       "time": "18:30",
       "stadium": "잠실",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SBS SPORTS,SPOTV",
       "away": {
         "code": "NC",
         "name": "NC",
         "rank": 6,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "송명기",
           "era": 5.18,
@@ -34,7 +34,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "최민석",
           "era": 2.73,
@@ -61,9 +61,21 @@
           "doom": 0,
           "park": 0.09,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "B",
+        "out": 1,
+        "b1": true,
+        "b2": false,
+        "b3": false,
+        "pitcher": "송명기",
+        "batter": "박준순",
+        "heat": 33,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
@@ -168,14 +180,14 @@
       "gameId": "20261001HHSS0",
       "time": "18:30",
       "stadium": "대구",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "MBC SPORTS+",
       "away": {
         "code": "HH",
         "name": "한화",
         "rank": 9,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "황준서",
           "era": 5.63,
@@ -187,7 +199,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "원태인",
           "era": 4.66,
@@ -214,9 +226,21 @@
           "doom": 0,
           "park": 1,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "B",
+        "out": 0,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "황준서",
+        "batter": "김지찬",
+        "heat": 33,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
@@ -321,14 +345,14 @@
       "gameId": "20261001LGSK0",
       "time": "18:30",
       "stadium": "문학",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SPOTV2",
       "away": {
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "임찬규",
           "era": 4.15,
@@ -340,7 +364,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 8,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "김민준",
           "era": 3.65,
@@ -367,9 +391,21 @@
           "doom": 0,
           "park": 0.55,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "B",
+        "out": 0,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "임찬규",
+        "batter": "박성한",
+        "heat": 33,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
@@ -474,14 +510,14 @@
       "gameId": "20261001KTHT0",
       "time": "18:30",
       "stadium": "광주",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "KBS N SPORTS",
       "away": {
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": null,
+        "score": 1,
         "starter": {
           "name": "소형준",
           "era": 3.38,
@@ -493,7 +529,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "양현종",
           "era": 4.04,
@@ -520,9 +556,21 @@
           "doom": 0,
           "park": 0.68,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "B",
+        "out": 0,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "소형준",
+        "batter": "박정우",
+        "heat": 31,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
