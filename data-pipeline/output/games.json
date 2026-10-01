@@ -1,7 +1,7 @@
 {
   "date": "20261001",
   "dateText": "2026년 10월 1일",
-  "updatedAt": "2026-10-01T12:10:29.528Z",
+  "updatedAt": "2026-10-01T12:20:26.250Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
+        "inning": 8,
+        "half": "T",
         "out": 2,
         "b1": true,
         "b2": false,
-        "b3": true,
-        "pitcher": "배재환",
-        "batter": "박찬호",
-        "heat": 70,
+        "b3": false,
+        "pitcher": "이병헌",
+        "batter": "김휘집",
+        "heat": 72,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
+        "inning": 8,
+        "half": "T",
         "out": 2,
         "b1": false,
         "b2": true,
         "b3": false,
-        "pitcher": "장유호",
-        "batter": "최형우",
-        "heat": 51,
+        "pitcher": "김재윤",
+        "batter": "김태연",
+        "heat": 53,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -397,12 +397,12 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "out": 1,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "고우석",
-        "batter": "조형우",
+        "pitcher": "케네디",
+        "batter": "최지훈",
         "heat": 73,
         "label": "후반 박빙 승부"
       },
@@ -529,7 +529,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 2,
+        "score": 5,
         "starter": {
           "name": "양현종",
           "era": 4.04,
@@ -562,14 +562,14 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 0,
-        "b1": true,
+        "out": 1,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "손동현",
-        "batter": "김선빈",
-        "heat": 38,
-        "label": "경기 흐름 체크 중"
+        "batter": "박민",
+        "heat": 70,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
