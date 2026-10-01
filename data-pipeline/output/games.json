@@ -1,7 +1,7 @@
 {
   "date": "20261001",
   "dateText": "2026년 10월 1일",
-  "updatedAt": "2026-10-01T13:00:43.045Z",
+  "updatedAt": "2026-10-01T13:10:25.635Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -21,7 +21,7 @@
       "away": {
         "code": "NC",
         "name": "NC",
-        "rank": 6,
+        "rank": 7,
         "score": 7,
         "starter": {
           "name": "송명기",
@@ -171,7 +171,7 @@
       "home": {
         "code": "SK",
         "name": "SSG",
-        "rank": 7,
+        "rank": 6,
         "score": 6,
         "starter": {
           "name": "김민준",
@@ -222,7 +222,7 @@
       "gameId": "20261001KTHT0",
       "time": "18:30",
       "stadium": "광주",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "KBS N SPORTS",
       "away": {
@@ -271,117 +271,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 1,
-        "b1": false,
-        "b2": false,
-        "b3": true,
-        "pitcher": "김정운",
-        "batter": "하주석",
-        "heat": 68,
-        "label": "후반 박빙 승부"
+      "live": null,
+      "recap": {
+        "actual": 84,
+        "verdict": "기대 이상",
+        "diff": 2,
+        "total": 12,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "박정우"
-          },
-          {
-            "order": 2,
-            "pos": "좌익수",
-            "name": "박재현"
-          },
-          {
-            "order": 3,
-            "pos": "지명타자",
-            "name": "김도영"
-          },
-          {
-            "order": 4,
-            "pos": "1루수",
-            "name": "카스트로"
-          },
-          {
-            "order": 5,
-            "pos": "우익수",
-            "name": "나성범"
-          },
-          {
-            "order": 6,
-            "pos": "2루수",
-            "name": "김선빈"
-          },
-          {
-            "order": 7,
-            "pos": "유격수",
-            "name": "하주석"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "김태군"
-          },
-          {
-            "order": 9,
-            "pos": "3루수",
-            "name": "박민"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "최원준"
-          },
-          {
-            "order": 2,
-            "pos": "1루수",
-            "name": "김현수"
-          },
-          {
-            "order": 3,
-            "pos": "우익수",
-            "name": "안현민"
-          },
-          {
-            "order": 4,
-            "pos": "좌익수",
-            "name": "힐리어드"
-          },
-          {
-            "order": 5,
-            "pos": "지명타자",
-            "name": "장성우"
-          },
-          {
-            "order": 6,
-            "pos": "2루수",
-            "name": "김상수"
-          },
-          {
-            "order": 7,
-            "pos": "3루수",
-            "name": "류현인"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "조대현"
-          },
-          {
-            "order": 9,
-            "pos": "유격수",
-            "name": "장준원"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     }
   ],
   "postseason": null

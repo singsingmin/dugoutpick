@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-01T13:00:43.045Z",
+  "updatedAt": "2026-10-01T13:10:25.635Z",
   "results": [
     {
       "date": "20260705",
@@ -1351,6 +1351,27 @@
         "score": 6
       },
       "calculatedAt": "2026-09-30T13:10:27.678Z"
+    },
+    {
+      "date": "20261001",
+      "actualTopGameId": "20261001LGSK0",
+      "recapScore": 92,
+      "decidingReasonTags": [
+        "1점차 접전"
+      ],
+      "displayMode": "highlight",
+      "displayTitle": "어제의 명경기",
+      "away": {
+        "code": "LG",
+        "name": "LG",
+        "score": 5
+      },
+      "home": {
+        "code": "SK",
+        "name": "SSG",
+        "score": 6
+      },
+      "calculatedAt": "2026-10-01T13:10:25.635Z"
     }
   ]
 }
