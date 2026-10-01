@@ -1,7 +1,7 @@
 {
   "date": "20261001",
   "dateText": "2026년 10월 1일",
-  "updatedAt": "2026-10-01T12:00:45.954Z",
+  "updatedAt": "2026-10-01T12:10:29.528Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 6,
+        "score": 8,
         "starter": {
           "name": "최민석",
           "era": 2.73,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "배재환",
-        "batter": "안재석",
+        "batter": "박찬호",
         "heat": 70,
         "label": "후반 박빙 승부"
       },
@@ -199,7 +199,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 1,
+        "score": 3,
         "starter": {
           "name": "원태인",
           "era": 4.66,
@@ -232,13 +232,13 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "주현상",
-        "batter": "류지혁",
-        "heat": 65,
+        "pitcher": "장유호",
+        "batter": "최형우",
+        "heat": 51,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
+        "inning": 8,
         "half": "B",
-        "out": 2,
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
         "pitcher": "고우석",
-        "batter": "김재환",
-        "heat": 68,
+        "batter": "조형우",
+        "heat": 73,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -561,14 +561,14 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
+        "half": "B",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "이태양",
-        "batter": "김상수",
-        "heat": 36,
+        "pitcher": "손동현",
+        "batter": "김선빈",
+        "heat": 38,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
