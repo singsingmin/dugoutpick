@@ -1,7 +1,7 @@
 {
   "date": "20261003",
   "dateText": "2026년 10월 3일",
-  "updatedAt": "2026-10-03T05:20:24.953Z",
+  "updatedAt": "2026-10-03T05:30:30.889Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 3,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "카라스코",
           "era": 3.55,
@@ -65,14 +65,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
+        "inning": 3,
+        "half": "T",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "네일",
-        "batter": "문보경",
+        "pitcher": "카라스코",
+        "batter": "김호령",
         "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
@@ -199,7 +199,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 0,
+        "score": 3,
         "starter": {
           "name": "최원태",
           "era": 4.59,
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 1,
         "b1": true,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "최승용",
-        "batter": "디아즈",
-        "heat": 33,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "최원태",
+        "batter": "김민석",
+        "heat": 20,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -396,14 +396,14 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
-        "out": 1,
-        "b1": true,
+        "half": "B",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "고영표",
-        "batter": "전준우",
-        "heat": 33,
+        "pitcher": "비슬리",
+        "batter": "허경민",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -561,14 +561,14 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
+        "half": "B",
         "out": 2,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "구창모",
-        "batter": "김재환",
-        "heat": 35,
+        "pitcher": "이로운",
+        "batter": "김형준",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -682,7 +682,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 0,
+        "score": 4,
         "starter": {
           "name": "하영민",
           "era": 4.57,
@@ -727,14 +727,14 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": true,
-        "b3": true,
+        "b3": false,
         "pitcher": "이상규",
-        "batter": "임병욱",
-        "heat": 35,
-        "label": "초반 팽팽한 흐름"
+        "batter": "데이비슨",
+        "heat": 13,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
