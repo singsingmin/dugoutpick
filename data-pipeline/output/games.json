@@ -1,7 +1,7 @@
 {
   "date": "20261003",
   "dateText": "2026년 10월 3일",
-  "updatedAt": "2026-10-03T05:50:23.512Z",
+  "updatedAt": "2026-10-03T06:00:40.289Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 4,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "네일",
           "era": 3.45,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
+        "inning": 4,
+        "half": "T",
         "out": 1,
         "b1": false,
         "b2": false,
-        "b3": false,
-        "pitcher": "네일",
-        "batter": "박해민",
-        "heat": 33,
-        "label": "초반 팽팽한 흐름"
+        "b3": true,
+        "pitcher": "카라스코",
+        "batter": "김태군",
+        "heat": 26,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -187,7 +187,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "최승용",
           "era": 6.22,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "최원태",
-        "batter": "조수행",
-        "heat": 15,
+        "pitcher": "최승용",
+        "batter": "최형우",
+        "heat": 25,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -364,7 +364,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": 2,
+        "score": 4,
         "starter": {
           "name": "고영표",
           "era": 3.57,
@@ -395,16 +395,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
+        "inning": 4,
+        "half": "T",
         "out": 1,
         "b1": false,
-        "b2": true,
-        "b3": true,
-        "pitcher": "비슬리",
-        "batter": "류현인",
-        "heat": 33,
-        "label": "초반 팽팽한 흐름"
+        "b2": false,
+        "b3": false,
+        "pitcher": "고영표",
+        "batter": "한동희",
+        "heat": 17,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 2,
-        "b1": false,
+        "inning": 4,
+        "half": "T",
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "이로운",
-        "batter": "김휘집",
-        "heat": 40,
+        "pitcher": "구창모",
+        "batter": "에레디아",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 2,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "하영민",
-        "batter": "최인호",
-        "heat": 16,
+        "inning": 4,
+        "half": "T",
+        "out": 1,
+        "b1": true,
+        "b2": true,
+        "b3": true,
+        "pitcher": "이상규",
+        "batter": "추재현",
+        "heat": 17,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
