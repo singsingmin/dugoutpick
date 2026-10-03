@@ -1,7 +1,7 @@
 {
   "date": "20261003",
   "dateText": "2026년 10월 3일",
-  "updatedAt": "2026-10-03T08:10:25.684Z",
+  "updatedAt": "2026-10-03T08:20:24.241Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 3,
+        "inning": 9,
+        "half": "T",
+        "out": 1,
         "b1": true,
         "b2": false,
-        "b3": true,
-        "pitcher": "전상현",
-        "batter": "문성주",
-        "heat": 73,
-        "label": "후반 박빙 승부"
+        "b3": false,
+        "pitcher": "손주영",
+        "batter": "나성범",
+        "heat": 81,
+        "label": "9회 1점 승부"
       },
       "recap": null,
       "decision": null,
@@ -324,7 +324,7 @@
       "away": {
         "code": "SK",
         "name": "SSG",
-        "rank": 6,
+        "rank": 7,
         "score": 1,
         "starter": {
           "name": "이로운",
@@ -336,7 +336,7 @@
       "home": {
         "code": "NC",
         "name": "NC",
-        "rank": 7,
+        "rank": 6,
         "score": 13,
         "starter": {
           "name": "구창모",
