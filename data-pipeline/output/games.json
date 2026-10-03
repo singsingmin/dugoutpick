@@ -1,7 +1,7 @@
 {
   "date": "20261003",
   "dateText": "2026년 10월 3일",
-  "updatedAt": "2026-10-03T07:09:37.494Z",
+  "updatedAt": "2026-10-03T07:10:23.055Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -237,7 +237,7 @@
         "b2": true,
         "b3": true,
         "pitcher": "김태훈",
-        "batter": "김기연",
+        "batter": "오명진",
         "heat": 56,
         "label": "경기 흐름 체크 중"
       },
@@ -728,11 +728,11 @@
         "inning": 8,
         "half": "B",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "유토",
-        "batter": "박정현",
+        "batter": "최인호",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
