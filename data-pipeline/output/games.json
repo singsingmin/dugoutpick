@@ -1,7 +1,7 @@
 {
   "date": "20261004",
   "dateText": "2026년 10월 4일",
-  "updatedAt": "2026-10-04T06:31:06.230Z",
+  "updatedAt": "2026-10-04T06:40:24.129Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 1,
-        "b1": true,
+        "inning": 5,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이의리",
-        "batter": "구본혁",
-        "heat": 45,
+        "pitcher": "김진수",
+        "batter": "김태군",
+        "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -230,14 +230,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
+        "inning": 6,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "벤자민",
-        "batter": "전병우",
+        "pitcher": "임기영",
+        "batter": "정수빈",
         "heat": 11,
         "label": "경기 흐름 체크 중"
       },
@@ -397,12 +397,12 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
+        "out": 3,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "이건욱",
-        "batter": "한재환",
+        "batter": "고준휘",
         "heat": 50,
         "label": "초반 팽팽한 흐름"
       },
@@ -517,7 +517,7 @@
         "code": "WO",
         "name": "키움",
         "rank": 10,
-        "score": 6,
+        "score": 7,
         "starter": {
           "name": "안우진",
           "era": 3.45,
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 2,
-        "b1": true,
-        "b2": true,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "안우진",
-        "batter": "정은원",
-        "heat": 31,
+        "pitcher": "짐머맨",
+        "batter": "여동욱",
+        "heat": 19,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
