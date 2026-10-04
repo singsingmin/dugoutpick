@@ -1,7 +1,7 @@
 {
   "date": "20261004",
   "dateText": "2026년 10월 4일",
-  "updatedAt": "2026-10-04T10:00:57.734Z",
+  "updatedAt": "2026-10-04T10:10:24.923Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -343,12 +343,12 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "김정운",
-        "batter": "윤동희",
+        "pitcher": "오원석",
+        "batter": "나승엽",
         "heat": 59,
         "label": "후반 박빙 승부"
       },
