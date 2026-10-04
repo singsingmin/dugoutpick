@@ -1,7 +1,7 @@
 {
   "date": "20261004",
   "dateText": "2026년 10월 4일",
-  "updatedAt": "2026-10-04T09:20:24.089Z",
+  "updatedAt": "2026-10-04T09:30:32.130Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -343,12 +343,12 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "out": 2,
+        "b1": true,
+        "b2": true,
         "b3": false,
         "pitcher": "나균안",
-        "batter": "장준원",
+        "batter": "힐리어드",
         "heat": 50,
         "label": "초반 팽팽한 흐름"
       },
