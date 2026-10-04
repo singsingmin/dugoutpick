@@ -1,7 +1,7 @@
 {
   "date": "20261004",
   "dateText": "2026년 10월 4일",
-  "updatedAt": "2026-10-04T10:30:34.165Z",
+  "updatedAt": "2026-10-04T10:40:24.071Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -298,7 +298,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "나균안",
           "era": 4.31,
@@ -343,13 +343,13 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": true,
-        "b2": true,
-        "b3": false,
-        "pitcher": "오원석",
-        "batter": "고승민",
-        "heat": 64,
+        "b2": false,
+        "b3": true,
+        "pitcher": "손동현",
+        "batter": "손성빈",
+        "heat": 69,
         "label": "후반 박빙 승부"
       },
       "recap": null,
