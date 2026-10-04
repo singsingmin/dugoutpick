@@ -1,7 +1,7 @@
 {
   "date": "20261004",
   "dateText": "2026년 10월 4일",
-  "updatedAt": "2026-10-04T11:00:38.681Z",
+  "updatedAt": "2026-10-04T11:10:23.960Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -342,15 +342,15 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "half": "B",
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "손동현",
-        "batter": "박승욱",
-        "heat": 80,
-        "label": "9회 1점 승부"
+        "pitcher": "최준용",
+        "batter": "김상수",
+        "heat": 90,
+        "label": "끝내기 한 방 찬스"
       },
       "recap": null,
       "decision": null,
