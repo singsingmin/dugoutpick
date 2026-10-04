@@ -1,7 +1,7 @@
 {
   "date": "20261004",
   "dateText": "2026년 10월 4일",
-  "updatedAt": "2026-10-04T10:40:24.071Z",
+  "updatedAt": "2026-10-04T10:48:44.452Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -342,14 +342,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 1,
-        "b1": true,
+        "half": "B",
+        "out": 2,
+        "b1": false,
         "b2": false,
         "b3": true,
-        "pitcher": "손동현",
-        "batter": "손성빈",
-        "heat": 69,
+        "pitcher": "최준용",
+        "batter": "류현인",
+        "heat": 72,
         "label": "후반 박빙 승부"
       },
       "recap": null,
