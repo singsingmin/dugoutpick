@@ -1,7 +1,7 @@
 {
   "date": "20261004",
   "dateText": "2026년 10월 4일",
-  "updatedAt": "2026-10-04T11:50:24.562Z",
+  "updatedAt": "2026-10-04T12:00:39.569Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -344,11 +344,11 @@
         "inning": 11,
         "half": "B",
         "out": 1,
-        "b1": false,
-        "b2": false,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "이진하",
-        "batter": "류현인",
+        "pitcher": "이준서",
+        "batter": "권동진",
         "heat": 99,
         "label": "끝내기 한 방 찬스"
       },
