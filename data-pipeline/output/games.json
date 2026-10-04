@@ -1,7 +1,7 @@
 {
   "date": "20261004",
   "dateText": "2026년 10월 4일",
-  "updatedAt": "2026-10-04T09:40:25.384Z",
+  "updatedAt": "2026-10-04T09:50:25.135Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -342,14 +342,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "배제성",
-        "batter": "전민재",
-        "heat": 53,
+        "pitcher": "나균안",
+        "batter": "김상수",
+        "heat": 56,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
