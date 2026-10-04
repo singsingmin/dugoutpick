@@ -1,7 +1,7 @@
 {
   "date": "20261004",
   "dateText": "2026년 10월 4일",
-  "updatedAt": "2026-10-04T07:29:27.961Z",
+  "updatedAt": "2026-10-04T07:30:30.299Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -398,11 +398,11 @@
         "inning": 8,
         "half": "T",
         "out": 2,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "이준혁",
-        "batter": "최지훈",
+        "batter": "조형우",
         "heat": 53,
         "label": "후반 박빙 승부"
       },
@@ -560,14 +560,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 2,
-        "b1": true,
+        "inning": 8,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박진형",
-        "batter": "노시환",
+        "pitcher": "김종수",
+        "batter": "김재현",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
