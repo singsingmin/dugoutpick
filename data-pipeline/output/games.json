@@ -1,7 +1,7 @@
 {
   "date": "20261004",
   "dateText": "2026년 10월 4일",
-  "updatedAt": "2026-10-04T11:40:25.011Z",
+  "updatedAt": "2026-10-04T11:50:24.562Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -342,15 +342,15 @@
       },
       "live": {
         "inning": 11,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 1,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "스기모토",
-        "batter": "노진혁",
-        "heat": 92,
-        "label": "연장 혈투 진행 중"
+        "pitcher": "이진하",
+        "batter": "류현인",
+        "heat": 99,
+        "label": "끝내기 한 방 찬스"
       },
       "recap": null,
       "decision": null,
