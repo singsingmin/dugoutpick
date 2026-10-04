@@ -1,7 +1,7 @@
 {
   "date": "20261004",
   "dateText": "2026년 10월 4일",
-  "updatedAt": "2026-10-04T09:30:32.130Z",
+  "updatedAt": "2026-10-04T09:40:25.384Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -341,16 +341,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 2,
+        "inning": 6,
+        "half": "T",
+        "out": 1,
         "b1": true,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "나균안",
-        "batter": "힐리어드",
-        "heat": 50,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "배제성",
+        "batter": "전민재",
+        "heat": 53,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
