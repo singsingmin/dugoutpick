@@ -1,7 +1,7 @@
 {
   "date": "20261004",
   "dateText": "2026년 10월 4일",
-  "updatedAt": "2026-10-04T10:20:24.624Z",
+  "updatedAt": "2026-10-04T10:30:34.165Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -341,15 +341,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 1,
-        "b1": false,
-        "b2": false,
+        "inning": 8,
+        "half": "T",
+        "out": 0,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "박정민",
-        "batter": "장준원",
-        "heat": 62,
+        "pitcher": "오원석",
+        "batter": "고승민",
+        "heat": 64,
         "label": "후반 박빙 승부"
       },
       "recap": null,
