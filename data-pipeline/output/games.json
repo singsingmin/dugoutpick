@@ -1,7 +1,7 @@
 {
   "date": "20261004",
   "dateText": "2026년 10월 4일",
-  "updatedAt": "2026-10-03T18:26:22.145Z",
+  "updatedAt": "2026-10-04T05:00:40.297Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -70,13 +70,13 @@
         "home": [
           {
             "order": 1,
-            "pos": "중견수",
-            "name": "박해민"
+            "pos": "우익수",
+            "name": "홍창기"
           },
           {
             "order": 2,
-            "pos": "유격수",
-            "name": "오지환"
+            "pos": "중견수",
+            "name": "박해민"
           },
           {
             "order": 3,
@@ -95,12 +95,12 @@
           },
           {
             "order": 6,
-            "pos": "좌익수",
-            "name": "송찬의"
+            "pos": "유격수",
+            "name": "오지환"
           },
           {
             "order": 7,
-            "pos": "우익수",
+            "pos": "좌익수",
             "name": "이재원"
           },
           {
@@ -132,7 +132,7 @@
           },
           {
             "order": 4,
-            "pos": "지명타자",
+            "pos": "우익수",
             "name": "나성범"
           },
           {
@@ -142,8 +142,8 @@
           },
           {
             "order": 6,
-            "pos": "우익수",
-            "name": "박정우"
+            "pos": "지명타자",
+            "name": "한준수"
           },
           {
             "order": 7,
@@ -158,10 +158,10 @@
           {
             "order": 9,
             "pos": "유격수",
-            "name": "김규성"
+            "name": "박민"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
@@ -189,15 +189,15 @@
         "rank": 2,
         "score": null,
         "starter": {
-          "name": "페덱",
-          "era": 2.95,
-          "w": 7,
-          "l": 3
+          "name": "이승현",
+          "era": 6.05,
+          "w": 0,
+          "l": 2
         }
       },
       "honjam": {
-        "score": 78,
-        "reason": "게임차 12의 순위 다툼 · 벤자민 ERA 2.42 압도적 에이스 등판",
+        "score": 66,
+        "reason": "게임차 12의 순위 다툼",
         "points": [
           "게임차 : 12",
           "상대전적 : 두산 6승 7패 1무",
@@ -210,7 +210,7 @@
           "form": 0.46,
           "rivalry": 0,
           "playoff": 0.5,
-          "pitcher": 0.77,
+          "pitcher": 0.43,
           "doom": 0,
           "park": 1,
           "offense": 0.5
@@ -248,8 +248,8 @@
           },
           {
             "order": 6,
-            "pos": "포수",
-            "name": "강민호"
+            "pos": "좌익수",
+            "name": "김헌곤"
           },
           {
             "order": 7,
@@ -258,8 +258,8 @@
           },
           {
             "order": 8,
-            "pos": "좌익수",
-            "name": "김헌곤"
+            "pos": "포수",
+            "name": "강민호"
           },
           {
             "order": 9,
@@ -270,8 +270,8 @@
         "away": [
           {
             "order": 1,
-            "pos": "중견수",
-            "name": "정수빈"
+            "pos": "유격수",
+            "name": "박찬호"
           },
           {
             "order": 2,
@@ -285,36 +285,36 @@
           },
           {
             "order": 4,
-            "pos": "지명타자",
+            "pos": "포수",
             "name": "양의지"
           },
           {
             "order": 5,
+            "pos": "지명타자",
+            "name": "세베리노"
+          },
+          {
+            "order": 6,
             "pos": "좌익수",
             "name": "김민석"
           },
           {
-            "order": 6,
-            "pos": "1루수",
-            "name": "세베리노"
-          },
-          {
             "order": 7,
-            "pos": "유격수",
-            "name": "박찬호"
+            "pos": "1루수",
+            "name": "양석환"
           },
           {
             "order": 8,
-            "pos": "우익수",
-            "name": "조수행"
+            "pos": "중견수",
+            "name": "정수빈"
           },
           {
             "order": 9,
-            "pos": "포수",
-            "name": "윤준호"
+            "pos": "우익수",
+            "name": "김대한"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
@@ -386,7 +386,7 @@
           },
           {
             "order": 3,
-            "pos": "2루수",
+            "pos": "지명타자",
             "name": "박민우"
           },
           {
@@ -401,7 +401,7 @@
           },
           {
             "order": 6,
-            "pos": "지명타자",
+            "pos": "좌익수",
             "name": "이우성"
           },
           {
@@ -416,8 +416,8 @@
           },
           {
             "order": 9,
-            "pos": "좌익수",
-            "name": "오태양"
+            "pos": "2루수",
+            "name": "한재환"
           }
         ],
         "away": [
@@ -464,10 +464,10 @@
           {
             "order": 9,
             "pos": "우익수",
-            "name": "임근우"
+            "name": "김정민"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
@@ -587,27 +587,27 @@
           {
             "order": 3,
             "pos": "지명타자",
-            "name": "히우라"
-          },
-          {
-            "order": 4,
-            "pos": "3루수",
             "name": "김웅빈"
           },
           {
-            "order": 5,
+            "order": 4,
             "pos": "우익수",
             "name": "박찬혁"
           },
           {
-            "order": 6,
+            "order": 5,
             "pos": "중견수",
             "name": "임병욱"
           },
           {
+            "order": 6,
+            "pos": "3루수",
+            "name": "어준서"
+          },
+          {
             "order": 7,
             "pos": "포수",
-            "name": "김동헌"
+            "name": "김재현"
           },
           {
             "order": 8,
@@ -620,7 +620,7 @@
             "name": "권혁빈"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
