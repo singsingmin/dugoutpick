@@ -1,7 +1,7 @@
 {
   "date": "20261004",
   "dateText": "2026년 10월 4일",
-  "updatedAt": "2026-10-04T08:50:23.588Z",
+  "updatedAt": "2026-10-04T09:00:39.217Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -21,7 +21,7 @@
       "away": {
         "code": "HT",
         "name": "KIA",
-        "rank": 4,
+        "rank": 3,
         "score": 6,
         "starter": {
           "name": "시라카와",
@@ -33,7 +33,7 @@
       "home": {
         "code": "LG",
         "name": "LG",
-        "rank": 3,
+        "rank": 4,
         "score": 5,
         "starter": {
           "name": "김윤식",
@@ -341,15 +341,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
+        "inning": 4,
+        "half": "T",
         "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "나균안",
-        "batter": "안현민",
-        "heat": 33,
+        "pitcher": "배제성",
+        "batter": "고승민",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
