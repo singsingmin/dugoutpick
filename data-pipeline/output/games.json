@@ -1,7 +1,7 @@
 {
   "date": "20261004",
   "dateText": "2026년 10월 4일",
-  "updatedAt": "2026-10-04T05:50:24.654Z",
+  "updatedAt": "2026-10-04T06:00:38.294Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
+        "inning": 3,
         "half": "B",
-        "out": 2,
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
         "pitcher": "시라카와",
-        "batter": "구본혁",
-        "heat": 38,
+        "batter": "홍창기",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -187,7 +187,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "벤자민",
           "era": 2.42,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
+        "inning": 4,
         "half": "T",
-        "out": 1,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "이승현",
-        "batter": "김민석",
-        "heat": 15,
+        "batter": "김대한",
+        "heat": 9,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -396,14 +396,14 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "클레빈저",
-        "batter": "전의산",
-        "heat": 45,
+        "pitcher": "최민준",
+        "batter": "박민우",
+        "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -562,12 +562,12 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "짐머맨",
-        "batter": "히우라",
+        "batter": "여동욱",
         "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
