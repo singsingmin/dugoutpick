@@ -1,7 +1,7 @@
 {
   "date": "20261004",
   "dateText": "2026년 10월 4일",
-  "updatedAt": "2026-10-04T09:50:25.135Z",
+  "updatedAt": "2026-10-04T10:00:57.734Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -341,16 +341,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "나균안",
-        "batter": "김상수",
-        "heat": 56,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "김정운",
+        "batter": "윤동희",
+        "heat": 59,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
