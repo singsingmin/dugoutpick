@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-04T12:00:39.569Z",
+  "updatedAt": "2026-10-04T12:10:25.926Z",
   "results": [
     {
       "date": "20260705",
@@ -1393,6 +1393,28 @@
         "score": 4
       },
       "calculatedAt": "2026-10-03T08:40:23.082Z"
+    },
+    {
+      "date": "20261004",
+      "actualTopGameId": "20261004LTKT0",
+      "recapScore": 99,
+      "decidingReasonTags": [
+        "연장 접전",
+        "1점차 접전"
+      ],
+      "displayMode": "highlight",
+      "displayTitle": "어제의 명경기",
+      "away": {
+        "code": "LT",
+        "name": "롯데",
+        "score": 2
+      },
+      "home": {
+        "code": "KT",
+        "name": "KT",
+        "score": 2
+      },
+      "calculatedAt": "2026-10-04T12:10:25.926Z"
     }
   ]
 }
