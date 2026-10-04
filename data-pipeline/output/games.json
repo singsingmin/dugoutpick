@@ -1,7 +1,7 @@
 {
   "date": "20261004",
   "dateText": "2026년 10월 4일",
-  "updatedAt": "2026-10-04T11:20:24.617Z",
+  "updatedAt": "2026-10-04T11:30:32.808Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -342,15 +342,15 @@
       },
       "live": {
         "inning": 10,
-        "half": "T",
-        "out": 0,
+        "half": "B",
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박영현",
-        "batter": "고승민",
-        "heat": 89,
-        "label": "연장 혈투 진행 중"
+        "pitcher": "이이무라",
+        "batter": "안현민",
+        "heat": 96,
+        "label": "끝내기 한 방 찬스"
       },
       "recap": null,
       "decision": null,
