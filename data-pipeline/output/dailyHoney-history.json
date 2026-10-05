@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-05T07:46:19.321Z",
+  "updatedAt": "2026-10-05T11:56:21.083Z",
   "results": [
     {
       "date": "20260705",
@@ -1415,6 +1415,27 @@
         "score": 2
       },
       "calculatedAt": "2026-10-04T12:10:25.926Z"
+    },
+    {
+      "date": "20261005",
+      "actualTopGameId": "20261005OBSS0",
+      "recapScore": 84,
+      "decidingReasonTags": [
+        "2점차 접전"
+      ],
+      "displayMode": "highlight",
+      "displayTitle": "어제의 명경기",
+      "away": {
+        "code": "OB",
+        "name": "두산",
+        "score": 7
+      },
+      "home": {
+        "code": "SS",
+        "name": "삼성",
+        "score": 5
+      },
+      "calculatedAt": "2026-10-05T11:56:21.083Z"
     }
   ]
 }
