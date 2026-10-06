@@ -1,7 +1,7 @@
 {
   "date": "20261006",
   "dateText": "2026년 10월 6일",
-  "updatedAt": "2026-10-06T10:30:33.261Z",
+  "updatedAt": "2026-10-06T10:40:26.920Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
+        "inning": 4,
         "half": "T",
-        "out": 1,
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
         "pitcher": "박시원",
-        "batter": "최정원",
-        "heat": 15,
+        "batter": "김휘집",
+        "heat": 17,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -187,7 +187,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "곽빈",
           "era": 2.26,
@@ -231,13 +231,13 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": true,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "박세웅",
-        "batter": "강승호",
+        "pitcher": "곽빈",
+        "batter": "나승엽",
         "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
+        "inning": 4,
         "half": "B",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "임기영",
-        "batter": "카스트로",
-        "heat": 40,
+        "batter": "나성범",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
+        "inning": 4,
         "half": "B",
-        "out": 2,
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "김건우",
-        "batter": "강백호",
-        "heat": 40,
+        "batter": "허인서",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 2,
+        "inning": 4,
+        "half": "T",
+        "out": 0,
         "b1": true,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "대니엘",
-        "batter": "김웅빈",
-        "heat": 40,
+        "pitcher": "박준현",
+        "batter": "장준원",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
