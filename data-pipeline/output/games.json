@@ -1,7 +1,7 @@
 {
   "date": "20261006",
   "dateText": "2026년 10월 6일",
-  "updatedAt": "2026-10-06T10:40:26.920Z",
+  "updatedAt": "2026-10-06T10:50:25.658Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 0,
+        "half": "B",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박시원",
-        "batter": "김휘집",
-        "heat": 17,
+        "pitcher": "최우석",
+        "batter": "박해민",
+        "heat": 18,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
+        "inning": 5,
         "half": "B",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "곽빈",
-        "batter": "나승엽",
-        "heat": 45,
+        "batter": "윤동희",
+        "heat": 50,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "임기영",
-        "batter": "나성범",
-        "heat": 45,
+        "pitcher": "김태형",
+        "batter": "김성윤",
+        "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 1,
-        "b1": false,
+        "inning": 5,
+        "half": "T",
+        "out": 0,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "김건우",
-        "batter": "허인서",
-        "heat": 45,
+        "pitcher": "화이트",
+        "batter": "최지훈",
+        "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -682,7 +682,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": 2,
+        "score": 4,
         "starter": {
           "name": "대니엘",
           "era": 2.16,
@@ -726,15 +726,15 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
+        "half": "B",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박준현",
-        "batter": "장준원",
-        "heat": 43,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "대니엘",
+        "batter": "임병욱",
+        "heat": 28,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
