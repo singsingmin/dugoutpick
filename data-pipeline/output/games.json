@@ -1,7 +1,7 @@
 {
   "date": "20261006",
   "dateText": "2026년 10월 6일",
-  "updatedAt": "2026-10-06T11:00:42.124Z",
+  "updatedAt": "2026-10-06T11:10:24.886Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "박시원",
-        "batter": "천재환",
-        "heat": 19,
+        "pitcher": "이준혁",
+        "batter": "문보경",
+        "heat": 20,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
+        "inning": 6,
         "half": "B",
-        "out": 3,
-        "b1": true,
+        "out": 1,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "곽빈",
-        "batter": "조세진",
-        "heat": 50,
-        "label": "초반 팽팽한 흐름"
+        "batter": "레이예스",
+        "heat": 56,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -364,7 +364,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 3,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "김태형",
           "era": 5.04,
@@ -395,16 +395,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
+        "inning": 6,
+        "half": "T",
         "out": 0,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "임기영",
-        "batter": "박정우",
-        "heat": 50,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "이의리",
+        "batter": "최형우",
+        "heat": 44,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -529,7 +529,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 9,
-        "score": 3,
+        "score": 7,
         "starter": {
           "name": "화이트",
           "era": 4.01,
@@ -565,11 +565,11 @@
         "out": 1,
         "b1": true,
         "b2": false,
-        "b3": false,
-        "pitcher": "김건우",
-        "batter": "최인호",
-        "heat": 50,
-        "label": "초반 팽팽한 흐름"
+        "b3": true,
+        "pitcher": "타케다",
+        "batter": "허인서",
+        "heat": 11,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -682,7 +682,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "대니엘",
           "era": 2.16,
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
+        "inning": 6,
         "half": "T",
-        "out": 1,
+        "out": 0,
         "b1": false,
         "b2": false,
-        "b3": true,
+        "b3": false,
         "pitcher": "김선기",
-        "batter": "배정대",
-        "heat": 29,
+        "batter": "장준원",
+        "heat": 21,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
