@@ -1,7 +1,7 @@
 {
   "date": "20261006",
   "dateText": "2026년 10월 6일",
-  "updatedAt": "2026-10-06T09:40:27.165Z",
+  "updatedAt": "2026-10-06T09:50:59.237Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 4,
-        "score": 0,
+        "score": 4,
         "starter": {
           "name": "박시원",
           "era": 4,
@@ -67,14 +67,14 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "최성영",
-        "batter": "송찬의",
-        "heat": 33,
-        "label": "초반 팽팽한 흐름"
+        "batter": "구본혁",
+        "heat": 12,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "곽빈",
-        "batter": "황성빈",
-        "heat": 33,
+        "pitcher": "박세웅",
+        "batter": "강승호",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
+        "inning": 2,
         "half": "T",
-        "out": 2,
+        "out": 1,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
         "pitcher": "김태형",
-        "batter": "최형우",
-        "heat": 29,
+        "batter": "김영웅",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -517,7 +517,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 6,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "김건우",
           "era": 6.03,
@@ -561,13 +561,13 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
-        "out": 2,
-        "b1": false,
-        "b2": true,
+        "half": "B",
+        "out": 0,
+        "b1": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "화이트",
-        "batter": "고명준",
+        "pitcher": "김건우",
+        "batter": "이도윤",
         "heat": 31,
         "label": "초반 팽팽한 흐름"
       },
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "대니엘",
-        "batter": "추재현",
-        "heat": 33,
+        "pitcher": "박준현",
+        "batter": "오윤석",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
