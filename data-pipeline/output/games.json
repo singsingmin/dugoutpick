@@ -1,7 +1,7 @@
 {
   "date": "20261006",
   "dateText": "2026년 10월 6일",
-  "updatedAt": "2026-10-06T12:10:25.281Z",
+  "updatedAt": "2026-10-06T12:20:24.489Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
+        "inning": 9,
         "half": "T",
-        "out": 1,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김영우",
-        "batter": "김한별",
-        "heat": 14,
+        "pitcher": "장현식",
+        "batter": "권희동",
+        "heat": 15,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -180,7 +180,7 @@
       "gameId": "20261006OBLT0",
       "time": "18:30",
       "stadium": "사직",
-      "status": "LIVE",
+      "status": "FINAL",
       "cancelReason": null,
       "broadcast": "SBS SPORTS",
       "away": {
@@ -229,117 +229,21 @@
         },
         "frozen": true
       },
-      "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 1,
-        "b1": true,
-        "b2": false,
-        "b3": false,
-        "pitcher": "이영하",
-        "batter": "한동희",
-        "heat": 61,
-        "label": "후반 박빙 승부"
+      "live": null,
+      "recap": {
+        "actual": 76,
+        "verdict": "기대 이상",
+        "diff": 2,
+        "total": 4,
+        "extra": 0,
+        "walkoff": 0
       },
-      "recap": null,
-      "decision": null,
-      "lineup": {
-        "home": [
-          {
-            "order": 1,
-            "pos": "중견수",
-            "name": "황성빈"
-          },
-          {
-            "order": 2,
-            "pos": "지명타자",
-            "name": "레이예스"
-          },
-          {
-            "order": 3,
-            "pos": "1루수",
-            "name": "나승엽"
-          },
-          {
-            "order": 4,
-            "pos": "3루수",
-            "name": "한동희"
-          },
-          {
-            "order": 5,
-            "pos": "2루수",
-            "name": "고승민"
-          },
-          {
-            "order": 6,
-            "pos": "우익수",
-            "name": "윤동희"
-          },
-          {
-            "order": 7,
-            "pos": "유격수",
-            "name": "전민재"
-          },
-          {
-            "order": 8,
-            "pos": "포수",
-            "name": "손성빈"
-          },
-          {
-            "order": 9,
-            "pos": "좌익수",
-            "name": "조세진"
-          }
-        ],
-        "away": [
-          {
-            "order": 1,
-            "pos": "유격수",
-            "name": "박찬호"
-          },
-          {
-            "order": 2,
-            "pos": "중견수",
-            "name": "정수빈"
-          },
-          {
-            "order": 3,
-            "pos": "3루수",
-            "name": "안재석"
-          },
-          {
-            "order": 4,
-            "pos": "지명타자",
-            "name": "세베리노"
-          },
-          {
-            "order": 5,
-            "pos": "좌익수",
-            "name": "김민석"
-          },
-          {
-            "order": 6,
-            "pos": "2루수",
-            "name": "강승호"
-          },
-          {
-            "order": 7,
-            "pos": "1루수",
-            "name": "양석환"
-          },
-          {
-            "order": 8,
-            "pos": "우익수",
-            "name": "류승민"
-          },
-          {
-            "order": 9,
-            "pos": "포수",
-            "name": "윤준호"
-          }
-        ],
-        "confirmed": true
-      }
+      "decision": {
+        "win": null,
+        "lose": null,
+        "save": null
+      },
+      "lineup": null
     },
     {
       "gameId": "20261006SSHT0",
@@ -395,16 +299,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
-        "b1": false,
+        "inning": 9,
+        "half": "T",
+        "out": 1,
+        "b1": true,
         "b2": false,
-        "b3": false,
-        "pitcher": "이승민",
-        "batter": "카스트로",
-        "heat": 70,
-        "label": "후반 박빙 승부"
+        "b3": true,
+        "pitcher": "최지민",
+        "batter": "전병우",
+        "heat": 78,
+        "label": "9회 1점 승부"
       },
       "recap": null,
       "decision": null,
@@ -561,13 +465,13 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
+        "half": "B",
         "out": 1,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "이민우",
-        "batter": "오태곤",
+        "pitcher": "변건우",
+        "batter": "문현빈",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
@@ -725,14 +629,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 0,
+        "inning": 9,
+        "half": "T",
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "주권",
-        "batter": "히우라",
+        "pitcher": "조영건",
+        "batter": "힐리어드",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
