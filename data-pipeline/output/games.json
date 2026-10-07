@@ -1,7 +1,7 @@
 {
   "date": "20261007",
   "dateText": "2026년 10월 7일",
-  "updatedAt": "2026-10-07T10:30:32.206Z",
+  "updatedAt": "2026-10-07T10:40:25.161Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 4,
-        "score": 3,
+        "score": 5,
         "starter": {
           "name": "임찬규",
           "era": 4.3,
@@ -67,14 +67,14 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 1,
+        "out": 2,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "최민석",
-        "batter": "오스틴",
-        "heat": 35,
-        "label": "초반 팽팽한 흐름"
+        "batter": "구본혁",
+        "heat": 47,
+        "label": "점수 나는 난타전"
       },
       "recap": null,
       "decision": null,
@@ -187,7 +187,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 3,
-        "score": 1,
+        "score": 3,
         "starter": {
           "name": "양현종",
           "era": 4.24,
@@ -232,12 +232,12 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": false,
         "b2": true,
-        "b3": false,
+        "b3": true,
         "pitcher": "김태균",
-        "batter": "김선빈",
+        "batter": "박재현",
         "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 2,
+        "inning": 4,
+        "half": "T",
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "신영우",
-        "batter": "조형우",
-        "heat": 16,
+        "pitcher": "김민준",
+        "batter": "김주원",
+        "heat": 17,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -562,12 +562,12 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "소형준",
-        "batter": "최형우",
+        "batter": "김영웅",
         "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
@@ -682,7 +682,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 9,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "정우주",
           "era": 8.36,
@@ -726,14 +726,14 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김성진",
-        "batter": "강백호",
-        "heat": 43,
+        "pitcher": "정우주",
+        "batter": "박찬혁",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
