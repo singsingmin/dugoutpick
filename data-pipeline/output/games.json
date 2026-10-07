@@ -1,7 +1,7 @@
 {
   "date": "20261007",
   "dateText": "2026년 10월 7일",
-  "updatedAt": "2026-10-07T12:10:26.082Z",
+  "updatedAt": "2026-10-07T12:20:25.306Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
+        "inning": 9,
+        "half": "T",
         "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "이영하",
-        "batter": "박동원",
-        "heat": 63,
+        "pitcher": "손주영",
+        "batter": "양석환",
+        "heat": 66,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -187,7 +187,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 3,
-        "score": 5,
+        "score": 8,
         "starter": {
           "name": "양현종",
           "era": 4.24,
@@ -236,10 +236,10 @@
         "b1": false,
         "b2": true,
         "b3": false,
-        "pitcher": "김원중",
-        "batter": "김호령",
-        "heat": 67,
-        "label": "후반 박빙 승부"
+        "pitcher": "김강현",
+        "batter": "카스트로",
+        "heat": 26,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -397,12 +397,12 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "문승원",
-        "batter": "박시원",
+        "batter": "김휘집",
         "heat": 43,
         "label": "경기 흐름 체크 중"
       },
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
+        "inning": 8,
+        "half": "T",
         "out": 1,
-        "b1": false,
-        "b2": true,
-        "b3": true,
-        "pitcher": "김태훈",
-        "batter": "힐리어드",
-        "heat": 25,
+        "b1": true,
+        "b2": false,
+        "b3": false,
+        "pitcher": "김정운",
+        "batter": "박계범",
+        "heat": 26,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -725,15 +725,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 1,
-        "b1": true,
+        "inning": 9,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김서현",
-        "batter": "염승원",
-        "heat": 57,
+        "pitcher": "조영건",
+        "batter": "허인서",
+        "heat": 60,
         "label": "후반 박빙 승부"
       },
       "recap": null,
