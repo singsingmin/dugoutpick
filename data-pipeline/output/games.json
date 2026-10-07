@@ -1,7 +1,7 @@
 {
   "date": "20261007",
   "dateText": "2026년 10월 7일",
-  "updatedAt": "2026-10-07T10:00:39.407Z",
+  "updatedAt": "2026-10-07T10:10:27.495Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "최민석",
           "era": 2.92,
@@ -67,14 +67,14 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "임찬규",
-        "batter": "조수행",
-        "heat": 23,
-        "label": "경기 흐름 체크 중"
+        "batter": "세베리노",
+        "heat": 31,
+        "label": "초반 팽팽한 흐름"
       },
       "recap": null,
       "decision": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
-        "out": 0,
+        "inning": 3,
+        "half": "T",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "양현종",
-        "batter": "한동희",
-        "heat": 35,
+        "pitcher": "김태균",
+        "batter": "박정우",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
+        "inning": 3,
         "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "송명기",
-        "batter": "김재환",
-        "heat": 38,
+        "batter": "김정민",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -529,7 +529,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "소형준",
           "era": 3.37,
@@ -562,13 +562,13 @@
       "live": {
         "inning": 2,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "원태인",
-        "batter": "힐리어드",
-        "heat": 38,
+        "batter": "권동진",
+        "heat": 29,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -727,12 +727,12 @@
       "live": {
         "inning": 2,
         "half": "B",
-        "out": 0,
-        "b1": false,
-        "b2": false,
-        "b3": false,
+        "out": 2,
+        "b1": true,
+        "b2": true,
+        "b3": true,
         "pitcher": "정우주",
-        "batter": "김건희",
+        "batter": "추재현",
         "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
