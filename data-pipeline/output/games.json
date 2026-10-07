@@ -1,7 +1,7 @@
 {
   "date": "20261007",
   "dateText": "2026년 10월 7일",
-  "updatedAt": "2026-10-07T08:40:24.651Z",
+  "updatedAt": "2026-10-07T09:30:34.523Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -474,14 +474,14 @@
       "gameId": "20261007SSKT0",
       "time": "18:30",
       "stadium": "수원",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "MBC SPORTS+",
       "away": {
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "원태인",
           "era": 4.55,
@@ -493,7 +493,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "소형준",
           "era": 3.37,
@@ -520,9 +520,21 @@
           "doom": 0,
           "park": 0.45,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 0,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "소형준",
+        "batter": "김현준",
+        "heat": 31,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
