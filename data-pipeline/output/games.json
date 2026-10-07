@@ -1,7 +1,7 @@
 {
   "date": "20261007",
   "dateText": "2026년 10월 7일",
-  "updatedAt": "2026-10-07T11:30:33.665Z",
+  "updatedAt": "2026-10-07T11:40:25.328Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "타카다",
-        "batter": "손용준",
-        "heat": 54,
-        "label": "점수 나는 난타전"
+        "pitcher": "케네디",
+        "batter": "정수빈",
+        "heat": 56,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -199,7 +199,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "김태균",
           "era": 10.29,
@@ -230,16 +230,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
+        "inning": 7,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "정해영",
-        "batter": "손성빈",
-        "heat": 48,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "최준용",
+        "batter": "김도영",
+        "heat": 62,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 2,
+        "inning": 7,
+        "half": "T",
+        "out": 1,
         "b1": true,
         "b2": false,
-        "b3": true,
-        "pitcher": "임정호",
-        "batter": "고명준",
-        "heat": 23,
+        "b3": false,
+        "pitcher": "김민준",
+        "batter": "박민우",
+        "heat": 24,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -529,7 +529,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "소형준",
           "era": 3.37,
@@ -560,15 +560,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 1,
-        "b1": true,
-        "b2": true,
+        "inning": 7,
+        "half": "T",
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "백정현",
-        "batter": "류현인",
-        "heat": 46,
+        "pitcher": "오원석",
+        "batter": "전병우",
+        "heat": 36,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -725,16 +725,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 1,
+        "inning": 7,
+        "half": "T",
+        "out": 2,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "강재민",
-        "batter": "권혁빈",
-        "heat": 56,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "박진형",
+        "batter": "이도윤",
+        "heat": 59,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
