@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-07T17:52:29.654Z",
+  "updatedAt": "2026-10-08T05:00:38.911Z",
   "lastWeek": {
     "range": [
       "20260928",
@@ -135,7 +135,9 @@
         {
           "date": "20261009",
           "away": "HT",
-          "home": "NC"
+          "home": "NC",
+          "awayStarter": "네일",
+          "homeStarter": "구창모"
         },
         {
           "date": "20261010",
@@ -173,7 +175,9 @@
         {
           "date": "20261009",
           "away": "LG",
-          "home": "LT"
+          "home": "LT",
+          "awayStarter": "카라스코",
+          "homeStarter": "김한결"
         },
         {
           "date": "20261010",
@@ -229,7 +233,9 @@
         {
           "date": "20261009",
           "away": "SS",
-          "home": "SK"
+          "home": "SK",
+          "awayStarter": "사토시",
+          "homeStarter": "이로운"
         },
         {
           "date": "20261011",
@@ -262,7 +268,9 @@
         {
           "date": "20261009",
           "away": "LG",
-          "home": "LT"
+          "home": "LT",
+          "awayStarter": "카라스코",
+          "homeStarter": "김한결"
         },
         {
           "date": "20261010",
@@ -328,7 +336,9 @@
         {
           "date": "20261009",
           "away": "SS",
-          "home": "SK"
+          "home": "SK",
+          "awayStarter": "사토시",
+          "homeStarter": "이로운"
         },
         {
           "date": "20261010",
@@ -361,7 +371,9 @@
         {
           "date": "20261009",
           "away": "HT",
-          "home": "NC"
+          "home": "NC",
+          "awayStarter": "네일",
+          "homeStarter": "구창모"
         },
         {
           "date": "20261010",
