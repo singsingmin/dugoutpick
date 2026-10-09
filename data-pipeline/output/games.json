@@ -1,7 +1,7 @@
 {
   "date": "20261009",
   "dateText": "2026년 10월 9일",
-  "updatedAt": "2026-10-09T06:31:11.608Z",
+  "updatedAt": "2026-10-09T06:40:25.113Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 1,
+        "inning": 6,
+        "half": "T",
+        "out": 0,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "카라스코",
-        "batter": "고승민",
-        "heat": 42,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "최준용",
+        "batter": "문보경",
+        "heat": 44,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이로운",
-        "batter": "김성윤",
-        "heat": 44,
+        "pitcher": "페덱",
+        "batter": "임근우",
+        "heat": 46,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -397,12 +397,12 @@
       "live": {
         "inning": 6,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "구창모",
-        "batter": "나성범",
+        "batter": "이호연",
         "heat": 57,
         "label": "경기 흐름 체크 중"
       },
