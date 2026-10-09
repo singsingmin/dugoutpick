@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T07:50:24.227Z",
+  "updatedAt": "2026-10-09T08:00:40.197Z",
   "lastWeek": {
     "range": [
       "20260928",
@@ -18,7 +18,7 @@
         "l": 1,
         "d": 0,
         "rank": 2,
-        "note": "4승1패 위닝, 포스트시즌 자리 지킨다"
+        "note": "2연패, 살짝 흔들린다"
       },
       "HT": {
         "w": 2,
@@ -46,7 +46,7 @@
         "l": 1,
         "d": 0,
         "rank": 6,
-        "note": "LG 잡고 4승1패 위닝 — 윗물 정조준"
+        "note": "2연승 흐름 탔다 — 4승1패 위닝"
       },
       "NC": {
         "w": 1,
@@ -60,7 +60,7 @@
         "l": 1,
         "d": 1,
         "rank": 8,
-        "note": "4연패 늪, 탈출이 급하다"
+        "note": "2승1패 1무 위닝, 분위기 탄다"
       },
       "HH": {
         "w": 0,
@@ -85,26 +85,26 @@
     ],
     "top": [
       {
-        "away": "HT",
-        "home": "LG",
-        "pred": 97,
-        "reason": "게임차 없는 동률 초접전",
-        "dateStart": "20261005",
-        "dateEnd": "20261005"
-      },
-      {
         "away": "OB",
         "home": "LG",
         "pred": 97,
-        "reason": "잠실 라이벌 더비 · 게임차 3의 순위 다툼",
+        "reason": "잠실 라이벌 더비 · 게임차 2.5의 순위 다툼",
         "dateStart": "20261007",
         "dateEnd": "20261007"
       },
       {
+        "away": "HT",
+        "home": "LG",
+        "pred": 96,
+        "reason": "게임차 0.5, 막상막하 승부",
+        "dateStart": "20261005",
+        "dateEnd": "20261005"
+      },
+      {
         "away": "SK",
         "home": "NC",
-        "pred": 93,
-        "reason": "게임차 2.5의 순위 다툼",
+        "pred": 92,
+        "reason": "게임차 3의 순위 다툼",
         "dateStart": "20261005",
         "dateEnd": "20261005"
       }
@@ -142,7 +142,9 @@
         {
           "date": "20261010",
           "away": "SK",
-          "home": "HT"
+          "home": "HT",
+          "awayStarter": "최민준",
+          "homeStarter": "시라카와"
         },
         {
           "date": "20261011",
@@ -182,7 +184,9 @@
         {
           "date": "20261010",
           "away": "LG",
-          "home": "LT"
+          "home": "LT",
+          "awayStarter": "톨허스트",
+          "homeStarter": "나균안"
         }
       ],
       "OB": [
@@ -275,7 +279,9 @@
         {
           "date": "20261010",
           "away": "LG",
-          "home": "LT"
+          "home": "LT",
+          "awayStarter": "톨허스트",
+          "homeStarter": "나균안"
         },
         {
           "date": "20261011",
@@ -343,7 +349,9 @@
         {
           "date": "20261010",
           "away": "SK",
-          "home": "HT"
+          "home": "HT",
+          "awayStarter": "최민준",
+          "homeStarter": "시라카와"
         }
       ],
       "NC": [
