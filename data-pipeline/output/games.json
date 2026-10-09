@@ -1,7 +1,7 @@
 {
   "date": "20261009",
   "dateText": "2026년 10월 9일",
-  "updatedAt": "2026-10-09T06:50:26.838Z",
+  "updatedAt": "2026-10-09T07:00:43.969Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
-        "half": "B",
-        "out": 0,
+        "inning": 7,
+        "half": "T",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김강률",
-        "batter": "전민재",
-        "heat": 46,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "김원중",
+        "batter": "홍창기",
+        "heat": 49,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -187,7 +187,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "사토시",
           "era": 5.87,
@@ -232,14 +232,14 @@
       "live": {
         "inning": 7,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "이로운",
-        "batter": "디아즈",
-        "heat": 36,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "문승원",
+        "batter": "강민호",
+        "heat": 49,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
@@ -396,14 +396,14 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이용준",
-        "batter": "박재현",
-        "heat": 59,
+        "pitcher": "네일",
+        "batter": "김형준",
+        "heat": 62,
         "label": "후반 박빙 승부"
       },
       "recap": null,
