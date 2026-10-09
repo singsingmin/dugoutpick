@@ -1,7 +1,7 @@
 {
   "date": "20261009",
   "dateText": "2026년 10월 9일",
-  "updatedAt": "2026-10-09T05:10:25.740Z",
+  "updatedAt": "2026-10-09T05:20:25.728Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 2,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "카라스코",
-        "batter": "고승민",
-        "heat": 33,
+        "pitcher": "김한결",
+        "batter": "구본혁",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -199,7 +199,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 6,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "이로운",
           "era": 6,
@@ -230,14 +230,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 2,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "사토시",
-        "batter": "전의산",
+        "pitcher": "이로운",
+        "batter": "이재현",
         "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
@@ -364,7 +364,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "구창모",
           "era": 4.01,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 0,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "네일",
-        "batter": "김주원",
-        "heat": 31,
+        "pitcher": "구창모",
+        "batter": "김태군",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
