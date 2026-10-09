@@ -1,7 +1,7 @@
 {
   "date": "20261009",
   "dateText": "2026년 10월 9일",
-  "updatedAt": "2026-10-09T07:20:25.595Z",
+  "updatedAt": "2026-10-09T07:30:38.249Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": 5,
+        "score": 8,
         "starter": {
           "name": "김한결",
           "era": 8.1,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
+        "inning": 8,
         "half": "B",
-        "out": 2,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "우강훈",
-        "batter": "전민재",
-        "heat": 25,
-        "label": "경기 흐름 체크 중"
+        "b3": false,
+        "pitcher": "양우진",
+        "batter": "장두성",
+        "heat": 4,
+        "label": "점수차가 벌어진 경기"
       },
       "recap": null,
       "decision": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 0,
+        "inning": 9,
+        "half": "T",
+        "out": 3,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "페덱",
-        "batter": "안상현",
-        "heat": 56,
+        "pitcher": "조병현",
+        "batter": "김영웅",
+        "heat": 58,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -397,12 +397,12 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 2,
+        "out": 1,
         "b1": false,
-        "b2": false,
-        "b3": true,
+        "b2": true,
+        "b3": false,
         "pitcher": "배재환",
-        "batter": "김태군",
+        "batter": "김호령",
         "heat": 53,
         "label": "후반 박빙 승부"
       },
