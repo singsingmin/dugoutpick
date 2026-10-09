@@ -1,7 +1,7 @@
 {
   "date": "20261009",
   "dateText": "2026년 10월 9일",
-  "updatedAt": "2026-10-09T06:10:24.617Z",
+  "updatedAt": "2026-10-09T06:20:24.902Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 5,
         "half": "T",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "out": 1,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "김한결",
-        "batter": "박동원",
+        "pitcher": "최준용",
+        "batter": "송찬의",
         "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 2,
-        "b1": false,
+        "b1": true,
         "b2": false,
-        "b3": true,
-        "pitcher": "백정현",
-        "batter": "최지훈",
-        "heat": 37,
+        "b3": false,
+        "pitcher": "이로운",
+        "batter": "김상준",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
+        "inning": 5,
         "half": "B",
-        "out": 1,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "네일",
-        "batter": "김형준",
-        "heat": 48,
+        "batter": "권희동",
+        "heat": 54,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
