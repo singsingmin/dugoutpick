@@ -1,7 +1,7 @@
 {
   "date": "20261009",
   "dateText": "2026년 10월 9일",
-  "updatedAt": "2026-10-09T05:50:24.886Z",
+  "updatedAt": "2026-10-09T06:00:44.577Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 4,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "카라스코",
           "era": 3.93,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
-        "out": 1,
+        "inning": 4,
+        "half": "T",
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "카라스코",
-        "batter": "전민재",
-        "heat": 25,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "김한결",
+        "batter": "구본혁",
+        "heat": 35,
+        "label": "초반 팽팽한 흐름"
       },
       "recap": null,
       "decision": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
+        "inning": 4,
         "half": "B",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "사토시",
-        "batter": "조형우",
-        "heat": 40,
+        "pitcher": "임기영",
+        "batter": "한유섬",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -352,7 +352,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 3,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "네일",
           "era": 3.53,
@@ -397,13 +397,13 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "out": 1,
+        "b1": true,
+        "b2": true,
         "b3": false,
         "pitcher": "구창모",
-        "batter": "카스트로",
-        "heat": 43,
+        "batter": "김태군",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
