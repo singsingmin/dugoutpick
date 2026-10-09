@@ -1,7 +1,7 @@
 {
   "date": "20261009",
   "dateText": "2026년 10월 9일",
-  "updatedAt": "2026-10-09T05:30:32.698Z",
+  "updatedAt": "2026-10-09T05:40:23.761Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": 0,
+        "score": 3,
         "starter": {
           "name": "김한결",
           "era": 8.1,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
-        "out": 1,
-        "b1": true,
-        "b2": true,
+        "inning": 3,
+        "half": "T",
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "카라스코",
-        "batter": "윤동희",
-        "heat": 38,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "김한결",
+        "batter": "이영빈",
+        "heat": 23,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이로운",
-        "batter": "김영웅",
-        "heat": 38,
+        "pitcher": "사토시",
+        "batter": "최지훈",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -396,14 +396,14 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "구창모",
-        "batter": "박재현",
-        "heat": 38,
+        "pitcher": "네일",
+        "batter": "김주원",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
