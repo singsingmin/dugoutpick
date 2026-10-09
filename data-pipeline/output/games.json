@@ -1,7 +1,7 @@
 {
   "date": "20261009",
   "dateText": "2026년 10월 9일",
-  "updatedAt": "2026-10-09T05:00:41.694Z",
+  "updatedAt": "2026-10-09T05:10:25.740Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -15,14 +15,14 @@
       "gameId": "20261009LGLT0",
       "time": "14:00",
       "stadium": "사직",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SPOTV2,MBC SPORTS+",
       "away": {
         "code": "LG",
         "name": "LG",
         "rank": 4,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "카라스코",
           "era": 3.93,
@@ -34,7 +34,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "김한결",
           "era": 8.1,
@@ -61,9 +61,21 @@
           "doom": 0,
           "park": 0.77,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "B",
+        "out": 2,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "카라스코",
+        "batter": "고승민",
+        "heat": 33,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
@@ -219,14 +231,14 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
-        "out": 0,
+        "half": "B",
+        "out": 2,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "이로운",
-        "batter": "김지찬",
-        "heat": 31,
+        "pitcher": "사토시",
+        "batter": "전의산",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -333,14 +345,14 @@
       "gameId": "20261009HTNC0",
       "time": "14:00",
       "stadium": "창원",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SBS SPORTS",
       "away": {
         "code": "HT",
         "name": "KIA",
         "rank": 3,
-        "score": null,
+        "score": 1,
         "starter": {
           "name": "네일",
           "era": 3.53,
@@ -352,7 +364,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 7,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "구창모",
           "era": 4.01,
@@ -379,9 +391,21 @@
           "doom": 0,
           "park": 0.64,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "B",
+        "out": 0,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "네일",
+        "batter": "김주원",
+        "heat": 31,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
