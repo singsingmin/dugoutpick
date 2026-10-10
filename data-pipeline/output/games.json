@@ -1,7 +1,7 @@
 {
   "date": "20261010",
   "dateText": "2026년 10월 10일",
-  "updatedAt": "2026-10-10T06:00:39.474Z",
+  "updatedAt": "2026-10-10T06:10:25.808Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "나균안",
-        "batter": "구본혁",
-        "heat": 43,
+        "pitcher": "톨허스트",
+        "batter": "전민재",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
