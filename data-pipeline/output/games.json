@@ -1,7 +1,7 @@
 {
   "date": "20261010",
   "dateText": "2026년 10월 10일",
-  "updatedAt": "2026-10-10T06:20:26.270Z",
+  "updatedAt": "2026-10-10T06:30:33.423Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 4,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "톨허스트",
           "era": 4.32,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
+        "half": "B",
         "out": 1,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "나균안",
-        "batter": "오스틴",
-        "heat": 48,
+        "pitcher": "톨허스트",
+        "batter": "장두성",
+        "heat": 42,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
