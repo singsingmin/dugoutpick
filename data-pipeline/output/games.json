@@ -1,7 +1,7 @@
 {
   "date": "20261010",
   "dateText": "2026년 10월 10일",
-  "updatedAt": "2026-10-09T17:43:47.772Z",
+  "updatedAt": "2026-10-10T05:00:41.457Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -70,18 +70,18 @@
         "home": [
           {
             "order": 1,
+            "pos": "좌익수",
+            "name": "황성빈"
+          },
+          {
+            "order": 2,
             "pos": "지명타자",
             "name": "레이예스"
           },
           {
-            "order": 2,
+            "order": 3,
             "pos": "1루수",
             "name": "나승엽"
-          },
-          {
-            "order": 3,
-            "pos": "2루수",
-            "name": "고승민"
           },
           {
             "order": 4,
@@ -90,18 +90,18 @@
           },
           {
             "order": 5,
+            "pos": "2루수",
+            "name": "고승민"
+          },
+          {
+            "order": 6,
             "pos": "유격수",
             "name": "전민재"
           },
           {
-            "order": 6,
+            "order": 7,
             "pos": "포수",
             "name": "손성빈"
-          },
-          {
-            "order": 7,
-            "pos": "좌익수",
-            "name": "조세진"
           },
           {
             "order": 8,
@@ -111,28 +111,28 @@
           {
             "order": 9,
             "pos": "중견수",
-            "name": "황성빈"
+            "name": "장두성"
           }
         ],
         "away": [
           {
             "order": 1,
+            "pos": "우익수",
+            "name": "홍창기"
+          },
+          {
+            "order": 2,
             "pos": "중견수",
             "name": "박해민"
           },
           {
-            "order": 2,
-            "pos": "좌익수",
-            "name": "송찬의"
-          },
-          {
             "order": 3,
-            "pos": "1루수",
+            "pos": "지명타자",
             "name": "오스틴"
           },
           {
             "order": 4,
-            "pos": "지명타자",
+            "pos": "1루수",
             "name": "문정빈"
           },
           {
@@ -142,8 +142,8 @@
           },
           {
             "order": 6,
-            "pos": "우익수",
-            "name": "이재원"
+            "pos": "좌익수",
+            "name": "송찬의"
           },
           {
             "order": 7,
@@ -153,15 +153,15 @@
           {
             "order": 8,
             "pos": "포수",
-            "name": "박동원"
+            "name": "이주헌"
           },
           {
             "order": 9,
             "pos": "2루수",
-            "name": "이영빈"
+            "name": "신민재"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       }
     },
     {
