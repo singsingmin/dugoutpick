@@ -1,7 +1,7 @@
 {
   "date": "20261010",
   "dateText": "2026년 10월 10일",
-  "updatedAt": "2026-10-10T09:00:39.507Z",
+  "updatedAt": "2026-10-10T09:10:25.378Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -33,7 +33,7 @@
       "home": {
         "code": "LT",
         "name": "롯데",
-        "rank": 7,
+        "rank": 8,
         "score": 3,
         "starter": {
           "name": "나균안",
@@ -134,15 +134,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
+        "inning": 4,
         "half": "B",
-        "out": 2,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "이준기",
-        "batter": "나성범",
-        "heat": 33,
+        "batter": "김선빈",
+        "heat": 37,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -255,7 +255,7 @@
       "away": {
         "code": "NC",
         "name": "NC",
-        "rank": 8,
+        "rank": 7,
         "score": 3,
         "starter": {
           "name": "클레빈저",
@@ -301,12 +301,12 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 0,
+        "out": 1,
         "b1": true,
         "b2": false,
-        "b3": false,
-        "pitcher": "황준서",
-        "batter": "신재인",
+        "b3": true,
+        "pitcher": "강재민",
+        "batter": "오태양",
         "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
