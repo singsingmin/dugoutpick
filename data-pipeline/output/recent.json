@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T11:40:23.050Z",
+  "updatedAt": "2026-10-10T11:50:23.029Z",
   "recent": {
     "LG": [
       {
@@ -78,9 +78,9 @@
         "date": "20261010",
         "oppCode": "LT",
         "isHome": false,
-        "sf": 0,
-        "sa": 0,
-        "result": "D"
+        "sf": 4,
+        "sa": 3,
+        "result": "W"
       }
     ],
     "OB": [
@@ -242,9 +242,9 @@
         "date": "20261010",
         "oppCode": "LG",
         "isHome": true,
-        "sf": 0,
-        "sa": 0,
-        "result": "D"
+        "sf": 3,
+        "sa": 4,
+        "result": "L"
       }
     ],
     "SS": [
@@ -331,14 +331,6 @@
     ],
     "HH": [
       {
-        "date": "20260926",
-        "oppCode": "NC",
-        "isHome": false,
-        "sf": 2,
-        "sa": 3,
-        "result": "L"
-      },
-      {
         "date": "20260927",
         "oppCode": "LT",
         "isHome": false,
@@ -408,6 +400,14 @@
         "isHome": false,
         "sf": 3,
         "sa": 5,
+        "result": "L"
+      },
+      {
+        "date": "20261010",
+        "oppCode": "NC",
+        "isHome": true,
+        "sf": 8,
+        "sa": 9,
         "result": "L"
       }
     ],
@@ -495,14 +495,6 @@
     ],
     "HT": [
       {
-        "date": "20260926",
-        "oppCode": "LG",
-        "isHome": true,
-        "sf": 5,
-        "sa": 1,
-        "result": "W"
-      },
-      {
         "date": "20260929",
         "oppCode": "KT",
         "isHome": true,
@@ -573,17 +565,17 @@
         "sf": 7,
         "sa": 2,
         "result": "W"
+      },
+      {
+        "date": "20261010",
+        "oppCode": "SK",
+        "isHome": true,
+        "sf": 8,
+        "sa": 5,
+        "result": "W"
       }
     ],
     "NC": [
-      {
-        "date": "20260927",
-        "oppCode": "WO",
-        "isHome": true,
-        "sf": 4,
-        "sa": 8,
-        "result": "L"
-      },
       {
         "date": "20260929",
         "oppCode": "OB",
@@ -655,17 +647,17 @@
         "sf": 2,
         "sa": 7,
         "result": "L"
+      },
+      {
+        "date": "20261010",
+        "oppCode": "HH",
+        "isHome": false,
+        "sf": 9,
+        "sa": 8,
+        "result": "W"
       }
     ],
     "SK": [
-      {
-        "date": "20260924",
-        "oppCode": "SS",
-        "isHome": true,
-        "sf": 4,
-        "sa": 5,
-        "result": "L"
-      },
       {
         "date": "20260929",
         "oppCode": "LG",
@@ -737,6 +729,14 @@
         "sf": 3,
         "sa": 1,
         "result": "W"
+      },
+      {
+        "date": "20261010",
+        "oppCode": "HT",
+        "isHome": false,
+        "sf": 5,
+        "sa": 8,
+        "result": "L"
       }
     ],
     "WO": [
@@ -823,15 +823,15 @@
     ]
   },
   "recentStreak": {
-    "LG": "1무",
+    "LG": "1승",
     "OB": "1패",
-    "LT": "1무",
+    "LT": "1패",
     "SS": "2패",
-    "HH": "1패",
+    "HH": "2패",
     "KT": "3승",
-    "HT": "2승",
-    "NC": "5패",
-    "SK": "2승",
+    "HT": "3승",
+    "NC": "1승",
+    "SK": "1패",
     "WO": "1승"
   }
 }
