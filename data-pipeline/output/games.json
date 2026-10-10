@@ -1,7 +1,7 @@
 {
   "date": "20261010",
   "dateText": "2026년 10월 10일",
-  "updatedAt": "2026-10-10T09:40:23.420Z",
+  "updatedAt": "2026-10-10T09:50:24.294Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -103,7 +103,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 3,
-        "score": 4,
+        "score": 8,
         "starter": {
           "name": "시라카와",
           "era": 4.65,
@@ -136,14 +136,14 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 2,
-        "b1": true,
+        "out": 3,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "이준기",
-        "batter": "김도영",
-        "heat": 50,
-        "label": "초반 팽팽한 흐름"
+        "batter": "김선빈",
+        "heat": 11,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -299,15 +299,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
+        "inning": 6,
         "half": "T",
-        "out": 1,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "이민우",
-        "batter": "고준휘",
-        "heat": 10,
+        "batter": "한석현",
+        "heat": 11,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
