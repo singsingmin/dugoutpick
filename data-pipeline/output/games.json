@@ -1,7 +1,7 @@
 {
   "date": "20261010",
   "dateText": "2026년 10월 10일",
-  "updatedAt": "2026-10-10T06:30:33.423Z",
+  "updatedAt": "2026-10-10T06:40:27.044Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 1,
+        "inning": 6,
+        "half": "T",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "톨허스트",
-        "batter": "장두성",
-        "heat": 42,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "나균안",
+        "batter": "송찬의",
+        "heat": 44,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
