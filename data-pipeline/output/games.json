@@ -1,7 +1,7 @@
 {
   "date": "20261010",
   "dateText": "2026년 10월 10일",
-  "updatedAt": "2026-10-10T11:30:32.459Z",
+  "updatedAt": "2026-10-10T11:40:23.050Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -205,12 +205,12 @@
       "live": {
         "inning": 9,
         "half": "B",
-        "out": 1,
-        "b1": false,
+        "out": 3,
+        "b1": true,
         "b2": true,
         "b3": true,
-        "pitcher": "이용준",
-        "batter": "박정현",
+        "pitcher": "김재열",
+        "batter": "정은원",
         "heat": 93,
         "label": "끝내기 한 방 찬스"
       },
