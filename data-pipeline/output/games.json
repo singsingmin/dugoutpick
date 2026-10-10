@@ -1,7 +1,7 @@
 {
   "date": "20261010",
   "dateText": "2026년 10월 10일",
-  "updatedAt": "2026-10-10T07:30:34.348Z",
+  "updatedAt": "2026-10-10T07:40:23.238Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "나균안",
-        "batter": "문정빈",
-        "heat": 53,
+        "pitcher": "김진수",
+        "batter": "한동희",
+        "heat": 56,
         "label": "후반 박빙 승부"
       },
       "recap": null,
