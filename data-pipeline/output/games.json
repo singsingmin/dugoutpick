@@ -1,7 +1,7 @@
 {
   "date": "20261010",
   "dateText": "2026년 10월 10일",
-  "updatedAt": "2026-10-10T07:20:24.697Z",
+  "updatedAt": "2026-10-10T07:30:34.348Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 1,
-        "b1": true,
+        "inning": 8,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "고우석",
-        "batter": "황성빈",
-        "heat": 51,
+        "pitcher": "나균안",
+        "batter": "문정빈",
+        "heat": 53,
         "label": "후반 박빙 승부"
       },
       "recap": null,
