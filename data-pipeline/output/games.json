@@ -1,7 +1,7 @@
 {
   "date": "20261010",
   "dateText": "2026년 10월 10일",
-  "updatedAt": "2026-10-10T06:40:27.044Z",
+  "updatedAt": "2026-10-10T06:50:22.877Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 0,
+        "half": "B",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "나균안",
-        "batter": "송찬의",
-        "heat": 44,
+        "pitcher": "케네디",
+        "batter": "한동희",
+        "heat": 46,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
