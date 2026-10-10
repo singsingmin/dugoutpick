@@ -1,7 +1,7 @@
 {
   "date": "20261010",
   "dateText": "2026년 10월 10일",
-  "updatedAt": "2026-10-10T11:20:24.042Z",
+  "updatedAt": "2026-10-10T11:30:32.459Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -172,7 +172,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 9,
-        "score": 5,
+        "score": 8,
         "starter": {
           "name": "황준서",
           "era": 5.37,
@@ -206,13 +206,13 @@
         "inning": 9,
         "half": "B",
         "out": 1,
-        "b1": true,
+        "b1": false,
         "b2": true,
         "b3": true,
-        "pitcher": "최요한",
-        "batter": "허인서",
-        "heat": 30,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "이용준",
+        "batter": "박정현",
+        "heat": 93,
+        "label": "끝내기 한 방 찬스"
       },
       "recap": null,
       "decision": null,
