@@ -1,7 +1,7 @@
 {
   "date": "20261010",
   "dateText": "2026년 10월 10일",
-  "updatedAt": "2026-10-10T08:40:27.015Z",
+  "updatedAt": "2026-10-10T08:50:23.523Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,15 +66,15 @@
       },
       "live": {
         "inning": 10,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": true,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "박정민",
-        "batter": "구본혁",
-        "heat": 84,
-        "label": "연장 혈투 진행 중"
+        "pitcher": "이우찬",
+        "batter": "손성빈",
+        "heat": 91,
+        "label": "끝내기 한 방 찬스"
       },
       "recap": null,
       "decision": null,
@@ -187,7 +187,7 @@
         "code": "SK",
         "name": "SSG",
         "rank": 6,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "최민준",
           "era": 4.66,
@@ -232,13 +232,13 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 0,
+        "out": 3,
         "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "시라카와",
-        "batter": "박성한",
-        "heat": 31,
+        "batter": "고명준",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -352,7 +352,7 @@
         "code": "NC",
         "name": "NC",
         "rank": 8,
-        "score": 0,
+        "score": 3,
         "starter": {
           "name": "클레빈저",
           "era": 3.31,
@@ -397,13 +397,13 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "황준서",
-        "batter": "오태양",
-        "heat": 38,
+        "batter": "김형준",
+        "heat": 31,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
