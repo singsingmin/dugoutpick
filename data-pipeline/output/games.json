@@ -1,7 +1,7 @@
 {
   "date": "20261010",
   "dateText": "2026년 10월 10일",
-  "updatedAt": "2026-10-10T08:30:34.683Z",
+  "updatedAt": "2026-10-10T08:40:27.015Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 4,
-        "score": 3,
+        "score": 4,
         "starter": {
           "name": "톨허스트",
           "era": 4.32,
@@ -67,13 +67,13 @@
       "live": {
         "inning": 10,
         "half": "T",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "out": 1,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "이이무라",
-        "batter": "오스틴",
-        "heat": 89,
+        "pitcher": "박정민",
+        "batter": "구본혁",
+        "heat": 84,
         "label": "연장 혈투 진행 중"
       },
       "recap": null,
@@ -199,7 +199,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 3,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "시라카와",
           "era": 4.65,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
-        "out": 1,
-        "b1": false,
+        "inning": 3,
+        "half": "T",
+        "out": 0,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "최민준",
-        "batter": "김선빈",
-        "heat": 35,
+        "pitcher": "시라카와",
+        "batter": "박성한",
+        "heat": 31,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
@@ -395,15 +395,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
+        "inning": 3,
         "half": "T",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
         "pitcher": "황준서",
-        "batter": "고준휘",
-        "heat": 33,
+        "batter": "오태양",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
