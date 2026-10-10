@@ -1,7 +1,7 @@
 {
   "date": "20261010",
   "dateText": "2026년 10월 10일",
-  "updatedAt": "2026-10-10T08:20:24.842Z",
+  "updatedAt": "2026-10-10T08:30:34.683Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -65,16 +65,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 9,
-        "half": "B",
-        "out": 2,
-        "b1": true,
+        "inning": 10,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "손주영",
-        "batter": "한동희",
-        "heat": 90,
-        "label": "끝내기 한 방 찬스"
+        "pitcher": "이이무라",
+        "batter": "오스틴",
+        "heat": 89,
+        "label": "연장 혈투 진행 중"
       },
       "recap": null,
       "decision": null,
@@ -199,7 +199,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 3,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "시라카와",
           "era": 4.65,
@@ -231,13 +231,13 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
+        "half": "B",
         "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "시라카와",
-        "batter": "조형우",
+        "pitcher": "최민준",
+        "batter": "김선빈",
         "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
@@ -397,12 +397,12 @@
       "live": {
         "inning": 2,
         "half": "T",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "out": 2,
+        "b1": true,
+        "b2": true,
         "b3": false,
         "pitcher": "황준서",
-        "batter": "김휘집",
+        "batter": "고준휘",
         "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
