@@ -1,7 +1,7 @@
 {
   "date": "20261010",
   "dateText": "2026년 10월 10일",
-  "updatedAt": "2026-10-10T06:50:22.877Z",
+  "updatedAt": "2026-10-10T07:00:43.588Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 6,
         "half": "B",
-        "out": 1,
-        "b1": false,
-        "b2": false,
+        "out": 2,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "케네디",
-        "batter": "한동희",
+        "pitcher": "고우석",
+        "batter": "손성빈",
         "heat": 46,
         "label": "경기 흐름 체크 중"
       },
