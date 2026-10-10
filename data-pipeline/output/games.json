@@ -1,7 +1,7 @@
 {
   "date": "20261010",
   "dateText": "2026년 10월 10일",
-  "updatedAt": "2026-10-10T08:00:40.927Z",
+  "updatedAt": "2026-10-10T08:10:26.261Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
-        "out": 2,
+        "half": "B",
+        "out": 1,
         "b1": false,
-        "b2": false,
-        "b3": true,
-        "pitcher": "송재영",
-        "batter": "박해민",
-        "heat": 58,
+        "b2": true,
+        "b3": false,
+        "pitcher": "손주영",
+        "batter": "전준우",
+        "heat": 61,
         "label": "후반 박빙 승부"
       },
       "recap": null,
@@ -180,14 +180,14 @@
       "gameId": "20261010SKHT0",
       "time": "17:00",
       "stadium": "광주",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SPOTV",
       "away": {
         "code": "SK",
         "name": "SSG",
         "rank": 6,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "최민준",
           "era": 4.66,
@@ -199,7 +199,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 3,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "시라카와",
           "era": 4.65,
@@ -226,9 +226,21 @@
           "doom": 0,
           "park": 0.68,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "B",
+        "out": 0,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "최민준",
+        "batter": "박재현",
+        "heat": 33,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
@@ -333,14 +345,14 @@
       "gameId": "20261010NCHH0",
       "time": "17:00",
       "stadium": "대전",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "MBC SPORTS+,KBS N SPORTS",
       "away": {
         "code": "NC",
         "name": "NC",
         "rank": 8,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "클레빈저",
           "era": 3.31,
@@ -352,7 +364,7 @@
         "code": "HH",
         "name": "한화",
         "rank": 9,
-        "score": null,
+        "score": 1,
         "starter": {
           "name": "황준서",
           "era": 5.37,
@@ -379,9 +391,21 @@
           "doom": 0,
           "park": 0.36,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "B",
+        "out": 1,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "클레빈저",
+        "batter": "문현빈",
+        "heat": 31,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
