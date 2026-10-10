@@ -1,7 +1,7 @@
 {
   "date": "20261010",
   "dateText": "2026년 10월 10일",
-  "updatedAt": "2026-10-10T07:40:23.238Z",
+  "updatedAt": "2026-10-10T07:47:39.309Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 8,
         "half": "B",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "out": 1,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "김진수",
-        "batter": "한동희",
+        "pitcher": "손주영",
+        "batter": "손성빈",
         "heat": 56,
         "label": "후반 박빙 승부"
       },
