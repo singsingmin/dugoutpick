@@ -1,7 +1,7 @@
 {
   "date": "20261010",
   "dateText": "2026년 10월 10일",
-  "updatedAt": "2026-10-10T05:20:30.637Z",
+  "updatedAt": "2026-10-10T05:30:34.260Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 4,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "톨허스트",
           "era": 4.32,
@@ -34,7 +34,7 @@
         "code": "LT",
         "name": "롯데",
         "rank": 7,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "나균안",
           "era": 4.29,
@@ -66,14 +66,14 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
-        "out": 1,
-        "b1": false,
-        "b2": true,
+        "half": "B",
+        "out": 2,
+        "b1": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "나균안",
-        "batter": "송찬의",
-        "heat": 35,
+        "pitcher": "톨허스트",
+        "batter": "윤동희",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
