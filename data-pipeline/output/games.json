@@ -1,7 +1,7 @@
 {
   "date": "20261011",
   "dateText": "2026년 10월 11일",
-  "updatedAt": "2026-10-11T05:40:25.448Z",
+  "updatedAt": "2026-10-11T05:50:24.658Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": 2,
+        "score": 5,
         "starter": {
           "name": "고영표",
           "era": 3.38,
@@ -67,14 +67,14 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 0,
+        "out": 2,
         "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "후라도",
-        "batter": "김민혁",
-        "heat": 38,
-        "label": "초반 팽팽한 흐름"
+        "batter": "허경민",
+        "heat": 15,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
@@ -231,14 +231,14 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
-        "out": 0,
+        "half": "B",
+        "out": 1,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "올러",
-        "batter": "조세진",
-        "heat": 40,
+        "pitcher": "김진욱",
+        "batter": "한준수",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
