@@ -1,455 +1,167 @@
 {
-  "updatedAt": "2026-10-11T08:10:24.377Z",
+  "updatedAt": "2026-10-11T16:41:15.592Z",
   "lastWeek": {
     "range": [
-      "20260928",
-      "20261004"
+      "20261005",
+      "20261011"
     ],
     "team": {
       "KT": {
         "w": 4,
         "l": 0,
-        "d": 1,
+        "d": 0,
         "rank": 1,
         "note": "4전승으로 마감, 지금 이 팀 뭔가 달라"
       },
       "SS": {
-        "w": 4,
-        "l": 1,
+        "w": 1,
+        "l": 4,
         "d": 0,
         "rank": 2,
-        "note": "3연패, 살짝 흔들린다"
+        "note": "1승4패, 다음주 선두 직접 잡으러 간다"
       },
       "HT": {
-        "w": 2,
-        "l": 3,
+        "w": 4,
+        "l": 2,
         "d": 0,
         "rank": 3,
-        "note": "아쉬운 한 주 2승3패, 이번주는 달라야 해 — 이번주 자이언츠 만나니까 뒤집을 수 있어"
+        "note": "4승2패 위닝, 포스트시즌 자리 지킨다"
       },
       "LG": {
-        "w": 0,
-        "l": 5,
+        "w": 3,
+        "l": 2,
         "d": 0,
         "rank": 4,
-        "note": "5연패로 마감… 다음주는 제발 — 이번주 자이언츠 만나니까 뒤집을 수 있어"
+        "note": "3승2패, 가을야구 굳히기 모드"
       },
       "OB": {
-        "w": 4,
+        "w": 2,
         "l": 1,
         "d": 0,
         "rank": 5,
-        "note": "삼성 상대로 꿀잼 위닝 — 4승1패"
+        "note": "삼성 격파 포함 2승1패 위닝, 해냈다"
       },
       "SK": {
-        "w": 4,
-        "l": 1,
+        "w": 3,
+        "l": 2,
         "d": 0,
         "rank": 6,
-        "note": "LG 잡고 4승1패 위닝 — 윗물 정조준"
+        "note": "강팀 격파에 약팀 덜미 — 뭔가 아쉬운 한 주 (3승2패)"
       },
       "NC": {
         "w": 1,
         "l": 4,
         "d": 0,
         "rank": 7,
-        "note": "1승4패, 가을야구 적신호 — 지금부터가 진짜 — 이번주 이글스 만나니까 뒤집을 수 있어"
+        "note": "1승4패, 가을야구 적신호 — 지금부터가 진짜"
       },
       "LT": {
         "w": 2,
-        "l": 1,
-        "d": 1,
+        "l": 4,
+        "d": 0,
         "rank": 8,
-        "note": "2승1패 1무 위닝, 분위기 탄다"
+        "note": "2승4패, 가을야구 적신호 — 지금부터가 진짜"
       },
       "HH": {
-        "w": 0,
-        "l": 5,
-        "d": 0,
-        "rank": 9,
-        "note": "지난주 한 경기도 못 잡았다, 단체로 멘탈 가출 — 그래도 이번주 키움 만나니까 해볼 만해"
-      },
-      "WO": {
         "w": 2,
         "l": 2,
         "d": 0,
+        "rank": 9,
+        "note": "2연패, 살짝 흔들린다"
+      },
+      "WO": {
+        "w": 1,
+        "l": 2,
+        "d": 0,
         "rank": 10,
-        "note": "꼴찌에서 탈출하자 — 2승2패 — 이번주 이글스 만나니까 뒤집을 수 있어"
+        "note": "1승2패, 탈꼴찌가 간절하다"
       }
     }
   },
   "thisWeek": {
     "range": [
-      "20261005",
-      "20261011"
+      "20261012",
+      "20261018"
     ],
     "top": [
       {
-        "away": "HT",
-        "home": "LG",
+        "away": "LG",
+        "home": "HT",
         "pred": 96,
         "reason": "게임차 0.5, 막상막하 승부",
-        "dateStart": "20261005",
-        "dateEnd": "20261005"
+        "dateStart": "20261012",
+        "dateEnd": "20261012"
       },
       {
-        "away": "OB",
-        "home": "LG",
-        "pred": 96,
-        "reason": "잠실 라이벌 더비 · 게임차 3의 순위 다툼",
-        "dateStart": "20261007",
-        "dateEnd": "20261007"
+        "away": "KT",
+        "home": "SS",
+        "pred": 88,
+        "reason": "게임차 7의 순위 다툼 · 리그 1위·2위 상위권 빅매치",
+        "dateStart": "20261012",
+        "dateEnd": "20261012"
       },
       {
-        "away": "SK",
-        "home": "NC",
-        "pred": 91,
-        "reason": "게임차 2.5의 순위 다툼",
-        "dateStart": "20261005",
-        "dateEnd": "20261005"
+        "away": "LT",
+        "home": "OB",
+        "pred": 57,
+        "reason": "게임차 11의 순위 다툼",
+        "dateStart": "20261012",
+        "dateEnd": "20261012"
       }
     ],
     "team": {
-      "HT": [
+      "LT": [
         {
-          "date": "20261005",
-          "away": "HT",
-          "home": "LG",
-          "awayStarter": "올러",
-          "homeStarter": "톨허스트"
-        },
-        {
-          "date": "20261006",
-          "away": "SS",
-          "home": "HT",
-          "awayStarter": "장찬희",
-          "homeStarter": "김태형"
-        },
-        {
-          "date": "20261007",
-          "away": "HT",
-          "home": "LT",
-          "awayStarter": "양현종",
-          "homeStarter": "김태균"
-        },
-        {
-          "date": "20261009",
-          "away": "HT",
-          "home": "NC",
-          "awayStarter": "네일",
-          "homeStarter": "구창모"
-        },
-        {
-          "date": "20261010",
-          "away": "SK",
-          "home": "HT",
-          "awayStarter": "최민준",
-          "homeStarter": "시라카와"
-        },
-        {
-          "date": "20261011",
+          "date": "20261012",
           "away": "LT",
-          "home": "HT",
-          "awayStarter": "김진욱",
-          "homeStarter": "올러"
-        }
-      ],
-      "LG": [
-        {
-          "date": "20261005",
-          "away": "HT",
-          "home": "LG",
-          "awayStarter": "올러",
-          "homeStarter": "톨허스트"
-        },
-        {
-          "date": "20261006",
-          "away": "NC",
-          "home": "LG",
-          "awayStarter": "최성영",
-          "homeStarter": "박시원"
-        },
-        {
-          "date": "20261007",
-          "away": "OB",
-          "home": "LG",
-          "awayStarter": "최민석",
-          "homeStarter": "임찬규"
-        },
-        {
-          "date": "20261009",
-          "away": "LG",
-          "home": "LT",
-          "awayStarter": "카라스코",
-          "homeStarter": "김한결"
-        },
-        {
-          "date": "20261010",
-          "away": "LG",
-          "home": "LT",
-          "awayStarter": "톨허스트",
-          "homeStarter": "나균안"
+          "home": "OB",
+          "awayStarter": "박세웅",
+          "homeStarter": "이용찬"
         }
       ],
       "OB": [
         {
-          "date": "20261005",
-          "away": "OB",
-          "home": "SS",
-          "awayStarter": "잭로그",
-          "homeStarter": "후라도"
-        },
-        {
-          "date": "20261006",
-          "away": "OB",
-          "home": "LT",
-          "awayStarter": "곽빈",
-          "homeStarter": "박세웅"
-        },
-        {
-          "date": "20261007",
-          "away": "OB",
-          "home": "LG",
-          "awayStarter": "최민석",
-          "homeStarter": "임찬규"
-        }
-      ],
-      "SS": [
-        {
-          "date": "20261005",
-          "away": "OB",
-          "home": "SS",
-          "awayStarter": "잭로그",
-          "homeStarter": "후라도"
-        },
-        {
-          "date": "20261006",
-          "away": "SS",
-          "home": "HT",
-          "awayStarter": "장찬희",
-          "homeStarter": "김태형"
-        },
-        {
-          "date": "20261007",
-          "away": "SS",
-          "home": "KT",
-          "awayStarter": "원태인",
-          "homeStarter": "소형준"
-        },
-        {
-          "date": "20261009",
-          "away": "SS",
-          "home": "SK",
-          "awayStarter": "사토시",
-          "homeStarter": "이로운"
-        },
-        {
-          "date": "20261011",
-          "away": "KT",
-          "home": "SS",
-          "awayStarter": "고영표",
-          "homeStarter": "후라도"
-        }
-      ],
-      "LT": [
-        {
-          "date": "20261005",
+          "date": "20261012",
           "away": "LT",
-          "home": "KT",
-          "awayStarter": "김진욱",
-          "homeStarter": "로건"
-        },
-        {
-          "date": "20261006",
-          "away": "OB",
-          "home": "LT",
-          "awayStarter": "곽빈",
-          "homeStarter": "박세웅"
-        },
-        {
-          "date": "20261007",
-          "away": "HT",
-          "home": "LT",
-          "awayStarter": "양현종",
-          "homeStarter": "김태균"
-        },
-        {
-          "date": "20261009",
-          "away": "LG",
-          "home": "LT",
-          "awayStarter": "카라스코",
-          "homeStarter": "김한결"
-        },
-        {
-          "date": "20261010",
-          "away": "LG",
-          "home": "LT",
-          "awayStarter": "톨허스트",
-          "homeStarter": "나균안"
-        },
-        {
-          "date": "20261011",
-          "away": "LT",
-          "home": "HT",
-          "awayStarter": "김진욱",
-          "homeStarter": "올러"
+          "home": "OB",
+          "awayStarter": "박세웅",
+          "homeStarter": "이용찬"
         }
       ],
       "KT": [
         {
-          "date": "20261005",
-          "away": "LT",
-          "home": "KT",
-          "awayStarter": "김진욱",
-          "homeStarter": "로건"
-        },
-        {
-          "date": "20261006",
-          "away": "KT",
-          "home": "WO",
-          "awayStarter": "대니엘",
-          "homeStarter": "박준현"
-        },
-        {
-          "date": "20261007",
-          "away": "SS",
-          "home": "KT",
-          "awayStarter": "원태인",
-          "homeStarter": "소형준"
-        },
-        {
-          "date": "20261011",
+          "date": "20261012",
           "away": "KT",
           "home": "SS",
-          "awayStarter": "고영표",
-          "homeStarter": "후라도"
+          "awayStarter": "소형준",
+          "homeStarter": "양창섭"
         }
       ],
-      "SK": [
+      "SS": [
         {
-          "date": "20261005",
-          "away": "SK",
-          "home": "NC",
-          "awayStarter": "아빌라",
-          "homeStarter": "토다"
-        },
-        {
-          "date": "20261006",
-          "away": "SK",
-          "home": "HH",
-          "awayStarter": "김건우",
-          "homeStarter": "화이트"
-        },
-        {
-          "date": "20261007",
-          "away": "NC",
-          "home": "SK",
-          "awayStarter": "송명기",
-          "homeStarter": "김민준"
-        },
-        {
-          "date": "20261009",
-          "away": "SS",
-          "home": "SK",
-          "awayStarter": "사토시",
-          "homeStarter": "이로운"
-        },
-        {
-          "date": "20261010",
-          "away": "SK",
-          "home": "HT",
-          "awayStarter": "최민준",
-          "homeStarter": "시라카와"
-        }
-      ],
-      "NC": [
-        {
-          "date": "20261005",
-          "away": "SK",
-          "home": "NC",
-          "awayStarter": "아빌라",
-          "homeStarter": "토다"
-        },
-        {
-          "date": "20261006",
-          "away": "NC",
-          "home": "LG",
-          "awayStarter": "최성영",
-          "homeStarter": "박시원"
-        },
-        {
-          "date": "20261007",
-          "away": "NC",
-          "home": "SK",
-          "awayStarter": "송명기",
-          "homeStarter": "김민준"
-        },
-        {
-          "date": "20261009",
-          "away": "HT",
-          "home": "NC",
-          "awayStarter": "네일",
-          "homeStarter": "구창모"
-        },
-        {
-          "date": "20261010",
-          "away": "NC",
-          "home": "HH",
-          "awayStarter": "클레빈저",
-          "homeStarter": "황준서"
-        }
-      ],
-      "WO": [
-        {
-          "date": "20261005",
-          "away": "WO",
-          "home": "HH",
-          "awayStarter": "전준표",
-          "homeStarter": "강건우"
-        },
-        {
-          "date": "20261006",
+          "date": "20261012",
           "away": "KT",
-          "home": "WO",
-          "awayStarter": "대니엘",
-          "homeStarter": "박준현"
-        },
-        {
-          "date": "20261007",
-          "away": "HH",
-          "home": "WO",
-          "awayStarter": "정우주",
-          "homeStarter": "김성진"
+          "home": "SS",
+          "awayStarter": "소형준",
+          "homeStarter": "양창섭"
         }
       ],
-      "HH": [
+      "LG": [
         {
-          "date": "20261005",
-          "away": "WO",
-          "home": "HH",
-          "awayStarter": "전준표",
-          "homeStarter": "강건우"
-        },
+          "date": "20261012",
+          "away": "LG",
+          "home": "HT",
+          "awayStarter": "임찬규",
+          "homeStarter": "양현종"
+        }
+      ],
+      "HT": [
         {
-          "date": "20261006",
-          "away": "SK",
-          "home": "HH",
-          "awayStarter": "김건우",
-          "homeStarter": "화이트"
-        },
-        {
-          "date": "20261007",
-          "away": "HH",
-          "home": "WO",
-          "awayStarter": "정우주",
-          "homeStarter": "김성진"
-        },
-        {
-          "date": "20261010",
-          "away": "NC",
-          "home": "HH",
-          "awayStarter": "클레빈저",
-          "homeStarter": "황준서"
+          "date": "20261012",
+          "away": "LG",
+          "home": "HT",
+          "awayStarter": "임찬규",
+          "homeStarter": "양현종"
         }
       ]
     }
