@@ -1,7 +1,7 @@
 {
   "date": "20261011",
   "dateText": "2026년 10월 11일",
-  "updatedAt": "2026-10-11T06:00:39.213Z",
+  "updatedAt": "2026-10-11T06:10:24.124Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,12 +67,12 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "후라도",
-        "batter": "한승택",
+        "batter": "안현민",
         "heat": 17,
         "label": "경기 흐름 체크 중"
       },
@@ -232,12 +232,12 @@
       "live": {
         "inning": 4,
         "half": "B",
-        "out": 0,
+        "out": 3,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "김진욱",
-        "batter": "카스트로",
+        "batter": "김태군",
         "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
