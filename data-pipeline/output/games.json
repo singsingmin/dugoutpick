@@ -1,7 +1,7 @@
 {
   "date": "20261011",
   "dateText": "2026년 10월 11일",
-  "updatedAt": "2026-10-11T06:10:24.124Z",
+  "updatedAt": "2026-10-11T06:20:27.854Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": 5,
+        "score": 6,
         "starter": {
           "name": "고영표",
           "era": 3.38,
@@ -65,15 +65,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
+        "inning": 5,
         "half": "T",
-        "out": 2,
-        "b1": true,
+        "out": 0,
+        "b1": false,
         "b2": false,
-        "b3": true,
-        "pitcher": "후라도",
-        "batter": "안현민",
-        "heat": 17,
+        "b3": false,
+        "pitcher": "장찬희",
+        "batter": "김현수",
+        "heat": 10,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
@@ -230,15 +230,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 3,
-        "b1": false,
-        "b2": true,
+        "inning": 5,
+        "half": "T",
+        "out": 1,
+        "b1": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "김진욱",
-        "batter": "김태군",
-        "heat": 48,
+        "pitcher": "올러",
+        "batter": "전준우",
+        "heat": 51,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
