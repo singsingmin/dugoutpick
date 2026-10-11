@@ -1,7 +1,7 @@
 {
   "date": "20261011",
   "dateText": "2026년 10월 11일",
-  "updatedAt": "2026-10-11T05:00:43.205Z",
+  "updatedAt": "2026-10-11T05:10:27.274Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -15,14 +15,14 @@
       "gameId": "20261011KTSS0",
       "time": "14:00",
       "stadium": "대구",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "MBC SPORTS+,SPOTV2",
       "away": {
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "고영표",
           "era": 3.38,
@@ -34,7 +34,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "후라도",
           "era": 3.27,
@@ -61,9 +61,21 @@
           "doom": 0,
           "park": 1,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 3,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "후라도",
+        "batter": "안현민",
+        "heat": 31,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
@@ -168,14 +180,14 @@
       "gameId": "20261011LTHT0",
       "time": "14:00",
       "stadium": "광주",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "KBS N SPORTS,SPOTV",
       "away": {
         "code": "LT",
         "name": "롯데",
         "rank": 8,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "김진욱",
           "era": 4.29,
@@ -187,7 +199,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 3,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "올러",
           "era": 3.03,
@@ -214,9 +226,21 @@
           "doom": 0,
           "park": 0.68,
           "offense": 0.5
-        }
+        },
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "T",
+        "out": 3,
+        "b1": false,
+        "b2": false,
+        "b3": true,
+        "pitcher": "올러",
+        "batter": "한동희",
+        "heat": 31,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
