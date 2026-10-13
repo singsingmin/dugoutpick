@@ -1,0 +1,19 @@
+{
+  "season": "2026",
+  "games": [
+    {
+      "gameId": "20261014OBLG0",
+      "date": "20261014",
+      "round": "WC",
+      "gameNo": 1,
+      "awayCode": "OB",
+      "homeCode": "LG",
+      "awayName": "두산",
+      "homeName": "LG",
+      "awayScore": 0,
+      "homeScore": 0,
+      "finished": false,
+      "canceled": false
+    }
+  ]
+}
