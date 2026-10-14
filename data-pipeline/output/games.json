@@ -1,7 +1,7 @@
 {
   "date": "20261014",
   "dateText": "2026년 10월 14일",
-  "updatedAt": "2026-10-14T13:00:44.603Z",
+  "updatedAt": "2026-10-14T13:10:25.465Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 1,
+        "score": 0,
         "starter": {
           "name": "곽빈",
           "era": 2.24,
@@ -34,7 +34,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 4,
-        "score": 4,
+        "score": 0,
         "starter": {
           "name": "카라스코",
           "era": 4.05,
@@ -59,10 +59,10 @@
       },
       "live": null,
       "recap": {
-        "actual": 61,
-        "verdict": "기대 이하",
-        "diff": 3,
-        "total": 5,
+        "actual": 92,
+        "verdict": "예측 적중",
+        "diff": 0,
+        "total": 0,
         "extra": 0,
         "walkoff": 0
       },
