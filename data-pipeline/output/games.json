@@ -1,7 +1,7 @@
 {
   "date": "20261014",
   "dateText": "2026년 10월 14일",
-  "updatedAt": "2026-10-14T12:20:28.183Z",
+  "updatedAt": "2026-10-14T12:30:35.934Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -59,14 +59,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
-        "out": 1,
-        "b1": true,
-        "b2": true,
+        "half": "B",
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "이우찬",
-        "batter": "세베리노",
-        "heat": 64,
+        "pitcher": "이영하",
+        "batter": "송찬의",
+        "heat": 67,
         "label": "후반 박빙 승부"
       },
       "recap": null,
