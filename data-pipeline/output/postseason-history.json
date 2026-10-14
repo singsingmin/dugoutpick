@@ -10,9 +10,9 @@
       "homeCode": "LG",
       "awayName": "두산",
       "homeName": "LG",
-      "awayScore": 0,
-      "homeScore": 0,
-      "finished": false,
+      "awayScore": 1,
+      "homeScore": 4,
+      "finished": true,
       "canceled": false
     }
   ]

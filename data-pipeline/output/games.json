@@ -1,7 +1,7 @@
 {
   "date": "20261014",
   "dateText": "2026년 10월 14일",
-  "updatedAt": "2026-10-14T13:10:25.465Z",
+  "updatedAt": "2026-10-14T13:20:26.584Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "곽빈",
           "era": 2.24,
@@ -34,7 +34,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 4,
-        "score": 0,
+        "score": 4,
         "starter": {
           "name": "카라스코",
           "era": 4.05,
@@ -59,17 +59,17 @@
       },
       "live": null,
       "recap": {
-        "actual": 92,
-        "verdict": "예측 적중",
-        "diff": 0,
-        "total": 0,
+        "actual": 61,
+        "verdict": "기대 이하",
+        "diff": 3,
+        "total": 5,
         "extra": 0,
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "카라스코",
+        "lose": "곽빈",
+        "save": "김강률"
       },
       "lineup": null
     }
@@ -106,15 +106,17 @@
         "roundName": "와일드카드 결정전",
         "high": "LG",
         "low": "OB",
-        "score": {},
-        "status": "active",
-        "winner": null
+        "score": {
+          "LG": 1
+        },
+        "status": "done",
+        "winner": "LG"
       },
       {
         "round": "준PO",
         "roundName": "준플레이오프",
         "high": "HT",
-        "low": null,
+        "low": "LG",
         "score": {},
         "status": "upcoming",
         "winner": null
