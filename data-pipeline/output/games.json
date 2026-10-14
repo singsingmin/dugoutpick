@@ -1,7 +1,7 @@
 {
   "date": "20261014",
   "dateText": "2026년 10월 14일",
-  "updatedAt": "2026-10-14T09:50:23.947Z",
+  "updatedAt": "2026-10-14T10:00:45.632Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 4,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "카라스코",
           "era": 4.05,
@@ -58,15 +58,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 1,
+        "inning": 2,
+        "half": "T",
+        "out": 0,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "곽빈",
-        "batter": "오스틴",
-        "heat": 33,
+        "pitcher": "카라스코",
+        "batter": "강승호",
+        "heat": 27,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
