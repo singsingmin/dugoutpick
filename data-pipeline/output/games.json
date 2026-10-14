@@ -1,7 +1,7 @@
 {
   "date": "20261014",
   "dateText": "2026년 10월 14일",
-  "updatedAt": "2026-10-14T11:50:27.831Z",
+  "updatedAt": "2026-10-14T12:00:42.839Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -60,12 +60,12 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "타카다",
-        "batter": "홍창기",
+        "pitcher": "김택연",
+        "batter": "오스틴",
         "heat": 62,
         "label": "후반 박빙 승부"
       },
