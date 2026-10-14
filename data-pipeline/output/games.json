@@ -1,7 +1,7 @@
 {
   "date": "20261014",
   "dateText": "2026년 10월 14일",
-  "updatedAt": "2026-10-14T10:10:24.031Z",
+  "updatedAt": "2026-10-14T10:20:24.898Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -60,12 +60,12 @@
       "live": {
         "inning": 2,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": true,
-        "b3": false,
+        "b3": true,
         "pitcher": "곽빈",
-        "batter": "박동원",
+        "batter": "오스틴",
         "heat": 29,
         "label": "초반 팽팽한 흐름"
       },
