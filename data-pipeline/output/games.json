@@ -1,7 +1,7 @@
 {
   "date": "20261014",
   "dateText": "2026년 10월 14일",
-  "updatedAt": "2026-10-14T11:30:40.277Z",
+  "updatedAt": "2026-10-14T11:40:26.978Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "OB",
         "name": "두산",
         "rank": 5,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "곽빈",
           "era": 2.24,
@@ -59,14 +59,14 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
-        "out": 1,
-        "b1": true,
-        "b2": true,
-        "b3": true,
-        "pitcher": "케네디",
-        "batter": "정수빈",
-        "heat": 49,
+        "half": "B",
+        "out": 0,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "곽빈",
+        "batter": "신민재",
+        "heat": 62,
         "label": "후반 박빙 승부"
       },
       "recap": null,
