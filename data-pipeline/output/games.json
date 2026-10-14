@@ -1,7 +1,7 @@
 {
-  "date": "20261014",
-  "dateText": "2026년 10월 14일",
-  "updatedAt": "2026-10-14T13:20:26.584Z",
+  "date": "20261015",
+  "dateText": "2026년 10월 15일",
+  "updatedAt": "2026-10-14T19:03:38.385Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -9,97 +9,11 @@
     "bonusRate": 50,
     "ready": true
   },
-  "recommendedGameId": "20261014OBLG0",
-  "games": [
-    {
-      "gameId": "20261014OBLG0",
-      "time": "18:30",
-      "stadium": "잠실",
-      "status": "FINAL",
-      "cancelReason": null,
-      "broadcast": "MBC TV",
-      "away": {
-        "code": "OB",
-        "name": "두산",
-        "rank": 5,
-        "score": 1,
-        "starter": {
-          "name": "곽빈",
-          "era": 2.24,
-          "w": 11,
-          "l": 7
-        }
-      },
-      "home": {
-        "code": "LG",
-        "name": "LG",
-        "rank": 4,
-        "score": 4,
-        "starter": {
-          "name": "카라스코",
-          "era": 4.05,
-          "w": 6,
-          "l": 3
-        }
-      },
-      "honjam": {
-        "score": 86,
-        "reason": "시리즈 매치포인트",
-        "points": [
-          "4위 LG 1승 어드밴티지 · 5위 두산는 2연승 필요"
-        ],
-        "factors": {
-          "base": 70,
-          "round": 0,
-          "stakes": 12,
-          "pitcher": 3.7,
-          "momentum": 0
-        },
-        "frozen": true
-      },
-      "live": null,
-      "recap": {
-        "actual": 61,
-        "verdict": "기대 이하",
-        "diff": 3,
-        "total": 5,
-        "extra": 0,
-        "walkoff": 0
-      },
-      "decision": {
-        "win": "카라스코",
-        "lose": "곽빈",
-        "save": "김강률"
-      },
-      "lineup": null
-    }
-  ],
+  "recommendedGameId": null,
+  "games": [],
   "postseason": {
     "active": true,
-    "today": {
-      "active": true,
-      "round": "WC",
-      "roundName": "와일드카드 결정전",
-      "gameNo": 1,
-      "seriesFormat": 2,
-      "high": "LG",
-      "low": "OB",
-      "seriesScore": {
-        "LG": 0,
-        "OB": 0
-      },
-      "matchpoint": {
-        "LG": true,
-        "OB": false
-      },
-      "elimination": {
-        "LG": false,
-        "OB": true
-      },
-      "isFinalGame": false,
-      "wcAdvantage": true,
-      "contextLine": "4위 LG 1승 어드밴티지 · 5위 두산는 2연승 필요"
-    },
+    "today": null,
     "bracket": [
       {
         "round": "WC",

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-14T13:20:26.584Z",
+  "updatedAt": "2026-10-14T19:03:38.385Z",
   "lastWeek": {
     "range": [
       "20261005",
@@ -93,18 +93,18 @@
         "dateEnd": "20261012"
       },
       {
-        "away": "OB",
-        "home": "LG",
-        "pred": 96,
-        "reason": "잠실 라이벌 더비 · 게임차 3의 순위 다툼",
-        "dateStart": "20261014",
-        "dateEnd": "20261014"
-      },
-      {
         "away": "KT",
         "home": "SS",
         "pred": 87,
         "reason": "게임차 8의 순위 다툼 · 리그 1위·2위 상위권 빅매치",
+        "dateStart": "20261012",
+        "dateEnd": "20261012"
+      },
+      {
+        "away": "LT",
+        "home": "OB",
+        "pred": 70,
+        "reason": "게임차 10의 순위 다툼",
         "dateStart": "20261012",
         "dateEnd": "20261012"
       }
@@ -126,13 +126,6 @@
           "home": "OB",
           "awayStarter": "박세웅",
           "homeStarter": "이용찬"
-        },
-        {
-          "date": "20261014",
-          "away": "OB",
-          "home": "LG",
-          "awayStarter": "곽빈",
-          "homeStarter": "카라스코"
         }
       ],
       "KT": [
@@ -160,13 +153,6 @@
           "home": "HT",
           "awayStarter": "임찬규",
           "homeStarter": "양현종"
-        },
-        {
-          "date": "20261014",
-          "away": "OB",
-          "home": "LG",
-          "awayStarter": "곽빈",
-          "homeStarter": "카라스코"
         }
       ],
       "HT": [
