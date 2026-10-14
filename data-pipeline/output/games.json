@@ -1,7 +1,7 @@
 {
   "date": "20261014",
   "dateText": "2026년 10월 14일",
-  "updatedAt": "2026-10-14T09:40:23.609Z",
+  "updatedAt": "2026-10-14T09:50:23.947Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -59,14 +59,14 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
-        "out": 2,
-        "b1": false,
+        "half": "B",
+        "out": 1,
+        "b1": true,
         "b2": false,
-        "b3": true,
-        "pitcher": "카라스코",
-        "batter": "양의지",
-        "heat": 31,
+        "b3": false,
+        "pitcher": "곽빈",
+        "batter": "오스틴",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
