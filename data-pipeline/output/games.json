@@ -1,7 +1,7 @@
 {
   "date": "20261014",
   "dateText": "2026년 10월 14일",
-  "updatedAt": "2026-10-14T11:10:23.237Z",
+  "updatedAt": "2026-10-14T11:20:24.281Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -59,14 +59,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 1,
-        "b1": true,
+        "half": "B",
+        "out": 3,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "카라스코",
-        "batter": "박찬호",
-        "heat": 44,
+        "pitcher": "곽빈",
+        "batter": "박동원",
+        "heat": 46,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
