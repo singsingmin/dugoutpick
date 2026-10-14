@@ -1,7 +1,7 @@
 {
   "date": "20261014",
   "dateText": "2026년 10월 14일",
-  "updatedAt": "2026-10-14T12:10:23.108Z",
+  "updatedAt": "2026-10-14T12:20:28.183Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -60,12 +60,12 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 0,
-        "b1": false,
-        "b2": false,
+        "out": 1,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "김진수",
-        "batter": "조수행",
+        "pitcher": "이우찬",
+        "batter": "세베리노",
         "heat": 64,
         "label": "후반 박빙 승부"
       },
