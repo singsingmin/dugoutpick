@@ -14,6 +14,20 @@
       "homeScore": 4,
       "finished": true,
       "canceled": false
+    },
+    {
+      "gameId": "20261017LGHT0",
+      "date": "20261017",
+      "round": "준PO",
+      "gameNo": 1,
+      "awayCode": "LG",
+      "homeCode": "HT",
+      "awayName": "LG",
+      "homeName": "KIA",
+      "awayScore": 0,
+      "homeScore": 0,
+      "finished": false,
+      "canceled": false
     }
   ]
 }
