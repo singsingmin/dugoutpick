@@ -1,7 +1,7 @@
 {
   "date": "20261017",
   "dateText": "2026년 10월 17일",
-  "updatedAt": "2026-10-17T05:10:22.562Z",
+  "updatedAt": "2026-10-17T05:20:22.874Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -58,15 +58,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
-        "out": 0,
+        "inning": 2,
+        "half": "T",
+        "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "톨허스트",
-        "batter": "박재현",
-        "heat": 33,
+        "pitcher": "네일",
+        "batter": "문보경",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
