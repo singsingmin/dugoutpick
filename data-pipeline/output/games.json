@@ -1,7 +1,7 @@
 {
   "date": "20261017",
   "dateText": "2026년 10월 17일",
-  "updatedAt": "2026-10-17T07:40:24.223Z",
+  "updatedAt": "2026-10-17T07:50:22.749Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 3,
-        "score": 3,
+        "score": 5,
         "starter": {
           "name": "네일",
           "era": 3.49,
@@ -58,16 +58,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 2,
-        "b1": true,
+        "inning": 9,
+        "half": "T",
+        "out": 0,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "장현식",
-        "batter": "김도영",
-        "heat": 56,
-        "label": "후반 박빙 승부"
+        "pitcher": "전상현",
+        "batter": "문보경",
+        "heat": 28,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
