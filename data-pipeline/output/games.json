@@ -1,7 +1,7 @@
 {
   "date": "20261017",
   "dateText": "2026년 10월 17일",
-  "updatedAt": "2026-10-17T07:20:23.405Z",
+  "updatedAt": "2026-10-17T07:30:31.726Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -61,11 +61,11 @@
         "inning": 8,
         "half": "T",
         "out": 2,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "성영탁",
-        "batter": "박해민",
+        "pitcher": "전상현",
+        "batter": "오스틴",
         "heat": 53,
         "label": "후반 박빙 승부"
       },
