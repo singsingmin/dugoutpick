@@ -1,7 +1,7 @@
 {
   "date": "20261017",
   "dateText": "2026년 10월 17일",
-  "updatedAt": "2026-10-17T05:20:22.874Z",
+  "updatedAt": "2026-10-17T05:30:30.230Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 4,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "톨허스트",
           "era": 4.24,
@@ -34,7 +34,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 3,
-        "score": 0,
+        "score": 1,
         "starter": {
           "name": "네일",
           "era": 3.49,
@@ -59,14 +59,14 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
+        "half": "B",
         "out": 1,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "네일",
-        "batter": "문보경",
-        "heat": 35,
+        "pitcher": "톨허스트",
+        "batter": "김규성",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
