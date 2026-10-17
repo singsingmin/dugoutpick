@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-17T08:10:22.994Z",
+  "updatedAt": "2026-10-17T16:02:18.295Z",
   "lastWeek": {
     "range": [
       "20261005",
@@ -90,7 +90,7 @@
         "pred": 96,
         "reason": "게임차 1.5, 막상막하 승부",
         "dateStart": "20261012",
-        "dateEnd": "20261017"
+        "dateEnd": "20261018"
       },
       {
         "away": "KT",
@@ -155,11 +155,11 @@
           "homeStarter": "양현종"
         },
         {
-          "date": "20261017",
+          "date": "20261018",
           "away": "LG",
           "home": "HT",
-          "awayStarter": "톨허스트",
-          "homeStarter": "네일"
+          "awayStarter": "임찬규",
+          "homeStarter": "올러"
         }
       ],
       "HT": [
@@ -171,11 +171,11 @@
           "homeStarter": "양현종"
         },
         {
-          "date": "20261017",
+          "date": "20261018",
           "away": "LG",
           "home": "HT",
-          "awayStarter": "톨허스트",
-          "homeStarter": "네일"
+          "awayStarter": "임찬규",
+          "homeStarter": "올러"
         }
       ]
     }
