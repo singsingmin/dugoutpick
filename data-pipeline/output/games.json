@@ -1,7 +1,7 @@
 {
   "date": "20261017",
   "dateText": "2026년 10월 17일",
-  "updatedAt": "2026-10-17T08:00:43.792Z",
+  "updatedAt": "2026-10-17T08:10:22.994Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,9 +67,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "네일",
+        "lose": "톨허스트",
+        "save": "전상현"
       },
       "lineup": null
     }
@@ -117,7 +117,9 @@
         "roundName": "준플레이오프",
         "high": "HT",
         "low": "LG",
-        "score": {},
+        "score": {
+          "HT": 1
+        },
         "status": "active",
         "winner": null
       },
