@@ -1,7 +1,7 @@
 {
   "date": "20261017",
   "dateText": "2026년 10월 17일",
-  "updatedAt": "2026-10-17T07:10:24.103Z",
+  "updatedAt": "2026-10-17T07:20:23.405Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -58,15 +58,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 1,
-        "b1": true,
+        "inning": 8,
+        "half": "T",
+        "out": 2,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이우찬",
-        "batter": "김태군",
-        "heat": 51,
+        "pitcher": "성영탁",
+        "batter": "박해민",
+        "heat": 53,
         "label": "후반 박빙 승부"
       },
       "recap": null,
