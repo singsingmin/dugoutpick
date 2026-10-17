@@ -1,7 +1,7 @@
 {
   "date": "20261017",
   "dateText": "2026년 10월 17일",
-  "updatedAt": "2026-10-17T05:40:23.724Z",
+  "updatedAt": "2026-10-17T05:50:23.707Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -59,14 +59,14 @@
       },
       "live": {
         "inning": 3,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "네일",
-        "batter": "구본혁",
-        "heat": 40,
+        "pitcher": "톨허스트",
+        "batter": "김태군",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
