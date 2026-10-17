@@ -1,7 +1,7 @@
 {
   "date": "20261017",
   "dateText": "2026년 10월 17일",
-  "updatedAt": "2026-10-17T07:30:31.726Z",
+  "updatedAt": "2026-10-17T07:40:24.223Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -59,14 +59,14 @@
       },
       "live": {
         "inning": 8,
-        "half": "T",
+        "half": "B",
         "out": 2,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "전상현",
-        "batter": "오스틴",
-        "heat": 53,
+        "pitcher": "장현식",
+        "batter": "김도영",
+        "heat": 56,
         "label": "후반 박빙 승부"
       },
       "recap": null,
