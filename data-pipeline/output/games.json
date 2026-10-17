@@ -1,7 +1,7 @@
 {
   "date": "20261017",
   "dateText": "2026년 10월 17일",
-  "updatedAt": "2026-10-16T18:13:19.878Z",
+  "updatedAt": "2026-10-17T05:00:43.271Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -17,7 +17,7 @@
       "stadium": "광주",
       "status": "SCHEDULED",
       "cancelReason": null,
-      "broadcast": "",
+      "broadcast": "KBS 2TV",
       "away": {
         "code": "LG",
         "name": "LG",
