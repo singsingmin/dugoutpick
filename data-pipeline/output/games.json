@@ -1,7 +1,7 @@
 {
   "date": "20261017",
   "dateText": "2026년 10월 17일",
-  "updatedAt": "2026-10-17T06:10:22.730Z",
+  "updatedAt": "2026-10-17T06:17:32.511Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -58,15 +58,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
+        "inning": 5,
+        "half": "T",
         "out": 2,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "톨허스트",
-        "batter": "나성범",
-        "heat": 45,
+        "pitcher": "네일",
+        "batter": "홍창기",
+        "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
