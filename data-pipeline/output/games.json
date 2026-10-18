@@ -1,7 +1,7 @@
 {
   "date": "20261018",
   "dateText": "2026년 10월 18일",
-  "updatedAt": "2026-10-18T06:50:21.170Z",
+  "updatedAt": "2026-10-18T07:00:42.043Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -59,14 +59,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "올러",
-        "batter": "오스틴",
-        "heat": 33,
+        "pitcher": "손주영",
+        "batter": "박민",
+        "heat": 34,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
