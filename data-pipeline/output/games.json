@@ -1,7 +1,7 @@
 {
-  "date": "20261018",
-  "dateText": "2026년 10월 18일",
-  "updatedAt": "2026-10-18T08:30:30.240Z",
+  "date": "20261019",
+  "dateText": "2026년 10월 19일",
+  "updatedAt": "2026-10-18T16:38:52.368Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -9,97 +9,11 @@
     "bonusRate": 48,
     "ready": true
   },
-  "recommendedGameId": "20261018LGHT0",
-  "games": [
-    {
-      "gameId": "20261018LGHT0",
-      "time": "14:00",
-      "stadium": "광주",
-      "status": "FINAL",
-      "cancelReason": null,
-      "broadcast": "SBS TV",
-      "away": {
-        "code": "LG",
-        "name": "LG",
-        "rank": 4,
-        "score": 3,
-        "starter": {
-          "name": "임찬규",
-          "era": 4.46,
-          "w": 15,
-          "l": 7
-        }
-      },
-      "home": {
-        "code": "HT",
-        "name": "KIA",
-        "rank": 3,
-        "score": 6,
-        "starter": {
-          "name": "올러",
-          "era": 3.13,
-          "w": 11,
-          "l": 10
-        }
-      },
-      "honjam": {
-        "score": 79,
-        "reason": "준플레이오프 2차전",
-        "points": [
-          "시리즈 1-0"
-        ],
-        "factors": {
-          "base": 70,
-          "round": 2,
-          "stakes": 5,
-          "pitcher": 2.4,
-          "momentum": 0
-        },
-        "frozen": true
-      },
-      "live": null,
-      "recap": {
-        "actual": 67,
-        "verdict": "기대 이하",
-        "diff": 3,
-        "total": 9,
-        "extra": 0,
-        "walkoff": 0
-      },
-      "decision": {
-        "win": "올러",
-        "lose": "임찬규",
-        "save": "전상현"
-      },
-      "lineup": null
-    }
-  ],
+  "recommendedGameId": null,
+  "games": [],
   "postseason": {
     "active": true,
-    "today": {
-      "active": true,
-      "round": "준PO",
-      "roundName": "준플레이오프",
-      "gameNo": 2,
-      "seriesFormat": 5,
-      "high": "HT",
-      "low": "LG",
-      "seriesScore": {
-        "HT": 1,
-        "LG": 0
-      },
-      "matchpoint": {
-        "HT": false,
-        "LG": false
-      },
-      "elimination": {
-        "HT": false,
-        "LG": false
-      },
-      "isFinalGame": false,
-      "wcAdvantage": false,
-      "contextLine": "시리즈 1-0"
-    },
+    "today": null,
     "bracket": [
       {
         "round": "WC",
