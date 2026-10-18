@@ -1,7 +1,7 @@
 {
   "date": "20261018",
   "dateText": "2026년 10월 18일",
-  "updatedAt": "2026-10-18T07:40:23.536Z",
+  "updatedAt": "2026-10-18T07:50:24.370Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "LG",
         "name": "LG",
         "rank": 4,
-        "score": 2,
+        "score": 3,
         "starter": {
           "name": "임찬규",
           "era": 4.46,
@@ -60,13 +60,13 @@
       "live": {
         "inning": 8,
         "half": "T",
-        "out": 1,
+        "out": 2,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "조상우",
-        "batter": "오스틴",
-        "heat": 26,
+        "pitcher": "전상현",
+        "batter": "이재원",
+        "heat": 43,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
