@@ -1,7 +1,7 @@
 {
   "date": "20261018",
   "dateText": "2026년 10월 18일",
-  "updatedAt": "2026-10-18T05:40:22.678Z",
+  "updatedAt": "2026-10-18T05:50:27.307Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -58,14 +58,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
-        "out": 0,
+        "inning": 3,
+        "half": "T",
+        "out": 1,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "케네디",
-        "batter": "김도영",
+        "pitcher": "올러",
+        "batter": "구본혁",
         "heat": 8,
         "label": "경기 흐름 체크 중"
       },
