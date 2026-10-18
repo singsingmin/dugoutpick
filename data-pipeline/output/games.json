@@ -1,7 +1,7 @@
 {
   "date": "20261018",
   "dateText": "2026년 10월 18일",
-  "updatedAt": "2026-10-18T06:10:21.610Z",
+  "updatedAt": "2026-10-18T06:20:22.918Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -59,14 +59,14 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "올러",
-        "batter": "문정빈",
-        "heat": 17,
+        "pitcher": "이우찬",
+        "batter": "김도영",
+        "heat": 18,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
