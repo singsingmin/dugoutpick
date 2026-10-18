@@ -1,7 +1,7 @@
 {
   "date": "20261018",
   "dateText": "2026년 10월 18일",
-  "updatedAt": "2026-10-18T07:10:24.658Z",
+  "updatedAt": "2026-10-18T07:20:22.986Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -59,14 +59,14 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "곽도규",
-        "batter": "오지환",
-        "heat": 36,
+        "pitcher": "김강률",
+        "batter": "박재현",
+        "heat": 38,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
