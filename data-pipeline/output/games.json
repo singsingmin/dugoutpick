@@ -1,7 +1,7 @@
 {
   "date": "20261018",
   "dateText": "2026년 10월 18일",
-  "updatedAt": "2026-10-18T05:10:21.879Z",
+  "updatedAt": "2026-10-18T05:20:22.858Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 3,
-        "score": 0,
+        "score": 2,
         "starter": {
           "name": "올러",
           "era": 3.13,
@@ -60,13 +60,13 @@
       "live": {
         "inning": 1,
         "half": "B",
-        "out": 0,
+        "out": 1,
         "b1": false,
-        "b2": false,
-        "b3": false,
+        "b2": true,
+        "b3": true,
         "pitcher": "임찬규",
-        "batter": "박정우",
-        "heat": 33,
+        "batter": "김선빈",
+        "heat": 26,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
