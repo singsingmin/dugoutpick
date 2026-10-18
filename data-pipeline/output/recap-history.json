@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-18T08:00:39.236Z",
+  "updatedAt": "2026-10-18T08:10:22.935Z",
   "window": 50,
   "sampleSize": 50,
   "hitRate": 12,
@@ -2468,6 +2468,13 @@
       "gameId": "20261017LGHT0",
       "pred": 82,
       "actual": 43,
+      "verdict": "기대 이하"
+    },
+    {
+      "date": "20261018",
+      "gameId": "20261018LGHT0",
+      "pred": 79,
+      "actual": 67,
       "verdict": "기대 이하"
     }
   ]

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-18T08:00:39.236Z",
+  "updatedAt": "2026-10-18T08:10:22.935Z",
   "results": [
     {
       "date": "20260705",
@@ -1584,6 +1584,27 @@
         "score": 5
       },
       "calculatedAt": "2026-10-17T08:00:43.792Z"
+    },
+    {
+      "date": "20261018",
+      "actualTopGameId": "20261018LGHT0",
+      "recapScore": 67,
+      "decidingReasonTags": [
+        "실제 꿀잼 67"
+      ],
+      "displayMode": "highlight",
+      "displayTitle": "어제의 명경기",
+      "away": {
+        "code": "LG",
+        "name": "LG",
+        "score": 3
+      },
+      "home": {
+        "code": "HT",
+        "name": "KIA",
+        "score": 6
+      },
+      "calculatedAt": "2026-10-18T08:10:22.935Z"
     }
   ]
 }
