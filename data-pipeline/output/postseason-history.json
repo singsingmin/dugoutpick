@@ -42,6 +42,20 @@
       "homeScore": 6,
       "finished": true,
       "canceled": false
+    },
+    {
+      "gameId": "20261020HTLG0",
+      "date": "20261020",
+      "round": "준PO",
+      "gameNo": 3,
+      "awayCode": "HT",
+      "homeCode": "LG",
+      "awayName": "KIA",
+      "homeName": "LG",
+      "awayScore": 0,
+      "homeScore": 0,
+      "finished": false,
+      "canceled": false
     }
   ]
 }
