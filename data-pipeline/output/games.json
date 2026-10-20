@@ -1,7 +1,7 @@
 {
   "date": "20261020",
   "dateText": "2026년 10월 20일",
-  "updatedAt": "2026-10-20T10:40:23.913Z",
+  "updatedAt": "2026-10-20T10:50:26.204Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -59,13 +59,13 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이우찬",
-        "batter": "박재현",
+        "pitcher": "시라카와",
+        "batter": "오지환",
         "heat": 3,
         "label": "점수차가 벌어진 경기"
       },
