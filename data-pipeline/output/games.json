@@ -1,7 +1,7 @@
 {
   "date": "20261020",
   "dateText": "2026년 10월 20일",
-  "updatedAt": "2026-10-20T10:20:23.577Z",
+  "updatedAt": "2026-10-20T10:30:33.868Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -58,14 +58,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
-        "half": "B",
-        "out": 2,
-        "b1": false,
+        "inning": 3,
+        "half": "T",
+        "out": 1,
+        "b1": true,
         "b2": true,
         "b3": false,
-        "pitcher": "시라카와",
-        "batter": "문성주",
+        "pitcher": "케네디",
+        "batter": "하주석",
         "heat": 2,
         "label": "점수차가 벌어진 경기"
       },
