@@ -1,7 +1,7 @@
 {
   "date": "20261020",
   "dateText": "2026년 10월 20일",
-  "updatedAt": "2026-10-20T13:00:43.201Z",
+  "updatedAt": "2026-10-20T13:20:25.804Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,8 +67,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "시라카와",
+        "lose": "카라스코",
         "save": null
       },
       "lineup": null
@@ -118,16 +118,16 @@
         "high": "HT",
         "low": "LG",
         "score": {
-          "HT": 2
+          "HT": 3
         },
-        "status": "active",
-        "winner": null
+        "status": "done",
+        "winner": "HT"
       },
       {
         "round": "PO",
         "roundName": "플레이오프",
         "high": "SS",
-        "low": null,
+        "low": "HT",
         "score": {},
         "status": "upcoming",
         "winner": null

@@ -52,9 +52,9 @@
       "homeCode": "LG",
       "awayName": "KIA",
       "homeName": "LG",
-      "awayScore": 0,
-      "homeScore": 0,
-      "finished": false,
+      "awayScore": 13,
+      "homeScore": 1,
+      "finished": true,
       "canceled": false
     }
   ]
