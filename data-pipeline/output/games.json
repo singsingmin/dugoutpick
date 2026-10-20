@@ -1,7 +1,7 @@
 {
   "date": "20261020",
   "dateText": "2026년 10월 20일",
-  "updatedAt": "2026-10-20T11:20:24.377Z",
+  "updatedAt": "2026-10-20T11:30:32.978Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 3,
-        "score": 8,
+        "score": 9,
         "starter": {
           "name": "시라카와",
           "era": 4.75,
@@ -59,14 +59,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "김진수",
-        "batter": "김도영",
-        "heat": 3,
+        "pitcher": "시라카와",
+        "batter": "구본혁",
+        "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
       "recap": null,
