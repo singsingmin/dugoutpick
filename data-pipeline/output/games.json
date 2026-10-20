@@ -1,7 +1,7 @@
 {
-  "date": "20261020",
-  "dateText": "2026년 10월 20일",
-  "updatedAt": "2026-10-20T13:20:25.804Z",
+  "date": "20261021",
+  "dateText": "2026년 10월 21일",
+  "updatedAt": "2026-10-20T18:49:33.165Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -9,97 +9,11 @@
     "bonusRate": 46,
     "ready": true
   },
-  "recommendedGameId": "20261020HTLG0",
-  "games": [
-    {
-      "gameId": "20261020HTLG0",
-      "time": "18:30",
-      "stadium": "잠실",
-      "status": "FINAL",
-      "cancelReason": null,
-      "broadcast": "MBC TV",
-      "away": {
-        "code": "HT",
-        "name": "KIA",
-        "rank": 3,
-        "score": 13,
-        "starter": {
-          "name": "시라카와",
-          "era": 4.75,
-          "w": 4,
-          "l": 5
-        }
-      },
-      "home": {
-        "code": "LG",
-        "name": "LG",
-        "rank": 4,
-        "score": 1,
-        "starter": {
-          "name": "카라스코",
-          "era": 4.05,
-          "w": 6,
-          "l": 3
-        }
-      },
-      "honjam": {
-        "score": 85,
-        "reason": "시리즈 매치포인트",
-        "points": [
-          "KIA 이기면 진출"
-        ],
-        "factors": {
-          "base": 70,
-          "round": 2,
-          "stakes": 12,
-          "pitcher": 1.2,
-          "momentum": 0
-        },
-        "frozen": true
-      },
-      "live": null,
-      "recap": {
-        "actual": 11,
-        "verdict": "기대 이하",
-        "diff": 12,
-        "total": 14,
-        "extra": 0,
-        "walkoff": 0
-      },
-      "decision": {
-        "win": "시라카와",
-        "lose": "카라스코",
-        "save": null
-      },
-      "lineup": null
-    }
-  ],
+  "recommendedGameId": null,
+  "games": [],
   "postseason": {
     "active": true,
-    "today": {
-      "active": true,
-      "round": "준PO",
-      "roundName": "준플레이오프",
-      "gameNo": 3,
-      "seriesFormat": 5,
-      "high": "HT",
-      "low": "LG",
-      "seriesScore": {
-        "HT": 2,
-        "LG": 0
-      },
-      "matchpoint": {
-        "HT": true,
-        "LG": false
-      },
-      "elimination": {
-        "HT": false,
-        "LG": true
-      },
-      "isFinalGame": false,
-      "wcAdvantage": false,
-      "contextLine": "KIA 이기면 진출"
-    },
+    "today": null,
     "bracket": [
       {
         "round": "WC",
