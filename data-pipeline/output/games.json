@@ -1,7 +1,7 @@
 {
   "date": "20261020",
   "dateText": "2026년 10월 20일",
-  "updatedAt": "2026-10-20T09:40:24.864Z",
+  "updatedAt": "2026-10-20T09:43:08.337Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -59,14 +59,14 @@
       },
       "live": {
         "inning": 1,
-        "half": "T",
-        "out": 3,
+        "half": "B",
+        "out": 0,
         "b1": false,
-        "b2": true,
+        "b2": false,
         "b3": false,
-        "pitcher": "카라스코",
-        "batter": "카스트로",
-        "heat": 31,
+        "pitcher": "시라카와",
+        "batter": "박해민",
+        "heat": 33,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
