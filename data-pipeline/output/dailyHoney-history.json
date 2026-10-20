@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-20T12:50:24.716Z",
+  "updatedAt": "2026-10-20T13:00:43.201Z",
   "results": [
     {
       "date": "20260705",
@@ -1605,6 +1605,27 @@
         "score": 6
       },
       "calculatedAt": "2026-10-18T08:10:22.935Z"
+    },
+    {
+      "date": "20261020",
+      "actualTopGameId": "20261020HTLG0",
+      "recapScore": 11,
+      "decidingReasonTags": [
+        "난타전"
+      ],
+      "displayMode": "highlight",
+      "displayTitle": "어제의 명경기",
+      "away": {
+        "code": "HT",
+        "name": "KIA",
+        "score": 13
+      },
+      "home": {
+        "code": "LG",
+        "name": "LG",
+        "score": 1
+      },
+      "calculatedAt": "2026-10-20T13:00:43.201Z"
     }
   ]
 }
