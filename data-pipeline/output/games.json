@@ -1,7 +1,7 @@
 {
   "date": "20261020",
   "dateText": "2026년 10월 20일",
-  "updatedAt": "2026-10-20T12:40:23.924Z",
+  "updatedAt": "2026-10-20T12:50:24.716Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -58,14 +58,14 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
+        "inning": 9,
+        "half": "T",
         "out": 2,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "김태형",
-        "batter": "송찬의",
+        "pitcher": "이정용",
+        "batter": "김호령",
         "heat": 4,
         "label": "점수차가 벌어진 경기"
       },
