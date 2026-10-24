@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-23T18:47:37.763Z",
+  "updatedAt": "2026-10-24T16:46:07.889Z",
   "lastWeek": {
     "range": [
       "20261012",
@@ -83,7 +83,35 @@
       "20261019",
       "20261025"
     ],
-    "top": [],
-    "team": {}
+    "top": [
+      {
+        "away": "HT",
+        "home": "SS",
+        "pred": 92,
+        "reason": "전통의 명문 자존심 대결 · 게임차 4.5의 순위 다툼",
+        "dateStart": "20261025",
+        "dateEnd": "20261025"
+      }
+    ],
+    "team": {
+      "HT": [
+        {
+          "date": "20261025",
+          "away": "HT",
+          "home": "SS",
+          "awayStarter": "네일",
+          "homeStarter": "페덱"
+        }
+      ],
+      "SS": [
+        {
+          "date": "20261025",
+          "away": "HT",
+          "home": "SS",
+          "awayStarter": "네일",
+          "homeStarter": "페덱"
+        }
+      ]
+    }
   }
 }
