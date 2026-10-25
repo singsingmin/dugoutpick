@@ -1,7 +1,7 @@
 {
-  "date": "20261025",
-  "dateText": "2026년 10월 25일",
-  "updatedAt": "2026-10-25T05:00:39.646Z",
+  "date": "20261026",
+  "dateText": "2026년 10월 26일",
+  "updatedAt": "2026-10-25T17:19:04.323Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -9,14 +9,14 @@
     "bonusRate": 46,
     "ready": true
   },
-  "recommendedGameId": "20261025HTSS0",
+  "recommendedGameId": "20261026HTSS0",
   "games": [
     {
-      "gameId": "20261025HTSS0",
-      "time": "14:00",
+      "gameId": "20261026HTSS0",
+      "time": "18:30",
       "stadium": "대구",
-      "status": "CANCELED",
-      "cancelReason": "우천취소",
+      "status": "SCHEDULED",
+      "cancelReason": null,
       "broadcast": "MBC TV",
       "away": {
         "code": "HT",
@@ -55,12 +55,108 @@
           "pitcher": 3.6,
           "momentum": 0
         },
-        "frozen": true
+        "frozen": false
       },
       "live": null,
       "recap": null,
       "decision": null,
-      "lineup": null
+      "lineup": {
+        "home": [
+          {
+            "order": 1,
+            "pos": "지명타자",
+            "name": "김지찬"
+          },
+          {
+            "order": 2,
+            "pos": "중견수",
+            "name": "김성윤"
+          },
+          {
+            "order": 3,
+            "pos": "2루수",
+            "name": "류지혁"
+          },
+          {
+            "order": 4,
+            "pos": "좌익수",
+            "name": "최형우"
+          },
+          {
+            "order": 5,
+            "pos": "1루수",
+            "name": "전병우"
+          },
+          {
+            "order": 6,
+            "pos": "우익수",
+            "name": "김헌곤"
+          },
+          {
+            "order": 7,
+            "pos": "포수",
+            "name": "강민호"
+          },
+          {
+            "order": 8,
+            "pos": "3루수",
+            "name": "김영웅"
+          },
+          {
+            "order": 9,
+            "pos": "유격수",
+            "name": "이재현"
+          }
+        ],
+        "away": [
+          {
+            "order": 1,
+            "pos": "우익수",
+            "name": "박정우"
+          },
+          {
+            "order": 2,
+            "pos": "좌익수",
+            "name": "박재현"
+          },
+          {
+            "order": 3,
+            "pos": "3루수",
+            "name": "김도영"
+          },
+          {
+            "order": 4,
+            "pos": "1루수",
+            "name": "카스트로"
+          },
+          {
+            "order": 5,
+            "pos": "지명타자",
+            "name": "나성범"
+          },
+          {
+            "order": 6,
+            "pos": "2루수",
+            "name": "김선빈"
+          },
+          {
+            "order": 7,
+            "pos": "유격수",
+            "name": "하주석"
+          },
+          {
+            "order": 8,
+            "pos": "포수",
+            "name": "김태군"
+          },
+          {
+            "order": 9,
+            "pos": "중견수",
+            "name": "김호령"
+          }
+        ],
+        "confirmed": false
+      }
     }
   ],
   "postseason": {
