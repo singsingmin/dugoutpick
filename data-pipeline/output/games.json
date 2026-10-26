@@ -1,7 +1,7 @@
 {
-  "date": "20261026",
-  "dateText": "2026년 10월 26일",
-  "updatedAt": "2026-10-26T10:38:34.349Z",
+  "date": "20261027",
+  "dateText": "2026년 10월 27일",
+  "updatedAt": "2026-10-26T17:03:44.995Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -9,66 +9,55 @@
     "bonusRate": 46,
     "ready": true
   },
-  "recommendedGameId": "20261026HTSS0",
+  "recommendedGameId": "20261027HTSS0",
   "games": [
     {
-      "gameId": "20261026HTSS0",
+      "gameId": "20261027HTSS0",
       "time": "18:30",
       "stadium": "대구",
-      "status": "LIVE",
+      "status": "SCHEDULED",
       "cancelReason": null,
-      "broadcast": "MBC TV",
+      "broadcast": "KBS 2TV",
       "away": {
         "code": "HT",
         "name": "KIA",
         "rank": 3,
-        "score": 5,
+        "score": null,
         "starter": {
-          "name": "네일",
-          "era": 3.49,
-          "w": 13,
-          "l": 7
+          "name": "올러",
+          "era": 3.13,
+          "w": 11,
+          "l": 10
         }
       },
       "home": {
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 0,
+        "score": null,
         "starter": {
-          "name": "페덱",
-          "era": 2.95,
-          "w": 7,
+          "name": "후라도",
+          "era": 3.54,
+          "w": 9,
           "l": 3
         }
       },
       "honjam": {
-        "score": 86,
-        "reason": "플레이오프 1차전",
+        "score": 82,
+        "reason": "플레이오프 2차전",
         "points": [
-          "시리즈 개막"
+          "시리즈 0-1"
         ],
         "factors": {
           "base": 70,
           "round": 4,
-          "stakes": 8,
-          "pitcher": 3.6,
+          "stakes": 5,
+          "pitcher": 3.3,
           "momentum": 0
         },
-        "frozen": true
+        "frozen": false
       },
-      "live": {
-        "inning": 4,
-        "half": "T",
-        "out": 2,
-        "b1": false,
-        "b2": false,
-        "b3": false,
-        "pitcher": "페덱",
-        "batter": "박정우",
-        "heat": 9,
-        "label": "경기 흐름 체크 중"
-      },
+      "live": null,
       "recap": null,
       "decision": null,
       "lineup": {
@@ -176,13 +165,13 @@
       "active": true,
       "round": "PO",
       "roundName": "플레이오프",
-      "gameNo": 1,
+      "gameNo": 2,
       "seriesFormat": 5,
       "high": "SS",
       "low": "HT",
       "seriesScore": {
         "SS": 0,
-        "HT": 0
+        "HT": 1
       },
       "matchpoint": {
         "SS": false,
@@ -194,7 +183,7 @@
       },
       "isFinalGame": false,
       "wcAdvantage": false,
-      "contextLine": "시리즈 개막"
+      "contextLine": "시리즈 0-1"
     },
     "bracket": [
       {
@@ -224,7 +213,9 @@
         "roundName": "플레이오프",
         "high": "SS",
         "low": "HT",
-        "score": {},
+        "score": {
+          "HT": 1
+        },
         "status": "active",
         "winner": null
       },
