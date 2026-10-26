@@ -1,7 +1,7 @@
 {
   "date": "20261026",
   "dateText": "2026년 10월 26일",
-  "updatedAt": "2026-10-25T17:19:04.323Z",
+  "updatedAt": "2026-10-26T10:38:34.349Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -15,14 +15,14 @@
       "gameId": "20261026HTSS0",
       "time": "18:30",
       "stadium": "대구",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "MBC TV",
       "away": {
         "code": "HT",
         "name": "KIA",
         "rank": 3,
-        "score": null,
+        "score": 5,
         "starter": {
           "name": "네일",
           "era": 3.49,
@@ -34,7 +34,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "페덱",
           "era": 2.95,
@@ -55,9 +55,20 @@
           "pitcher": 3.6,
           "momentum": 0
         },
-        "frozen": false
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 4,
+        "half": "T",
+        "out": 2,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "페덱",
+        "batter": "박정우",
+        "heat": 9,
+        "label": "경기 흐름 체크 중"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
