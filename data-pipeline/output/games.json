@@ -1,7 +1,7 @@
 {
   "date": "20261027",
   "dateText": "2026년 10월 27일",
-  "updatedAt": "2026-10-27T11:10:22.613Z",
+  "updatedAt": "2026-10-27T11:20:24.897Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 4,
+        "score": 5,
         "starter": {
           "name": "후라도",
           "era": 3.54,
@@ -62,11 +62,11 @@
         "half": "B",
         "out": 2,
         "b1": true,
-        "b2": false,
-        "b3": false,
-        "pitcher": "이의리",
-        "batter": "구자욱",
-        "heat": 31,
+        "b2": true,
+        "b3": true,
+        "pitcher": "성영탁",
+        "batter": "김영웅",
+        "heat": 20,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
