@@ -1,7 +1,7 @@
 {
   "date": "20261027",
   "dateText": "2026년 10월 27일",
-  "updatedAt": "2026-10-27T13:00:44.607Z",
+  "updatedAt": "2026-10-27T13:10:26.413Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,8 +67,8 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
+        "win": "후라도",
+        "lose": "올러",
         "save": null
       },
       "lineup": null
@@ -129,7 +129,8 @@
         "high": "SS",
         "low": "HT",
         "score": {
-          "HT": 1
+          "HT": 1,
+          "SS": 1
         },
         "status": "active",
         "winner": null
