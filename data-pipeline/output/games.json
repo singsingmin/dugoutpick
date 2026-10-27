@@ -1,7 +1,7 @@
 {
   "date": "20261027",
   "dateText": "2026년 10월 27일",
-  "updatedAt": "2026-10-27T10:07:34.746Z",
+  "updatedAt": "2026-10-27T10:10:26.679Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -60,12 +60,12 @@
       "live": {
         "inning": 3,
         "half": "T",
-        "out": 0,
-        "b1": true,
-        "b2": false,
+        "out": 1,
+        "b1": false,
+        "b2": true,
         "b3": false,
         "pitcher": "후라도",
-        "batter": "김호령",
+        "batter": "박재현",
         "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
