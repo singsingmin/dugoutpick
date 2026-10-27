@@ -1,7 +1,7 @@
 {
   "date": "20261027",
   "dateText": "2026년 10월 27일",
-  "updatedAt": "2026-10-27T12:10:25.478Z",
+  "updatedAt": "2026-10-27T12:20:27.325Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -34,7 +34,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 7,
+        "score": 8,
         "starter": {
           "name": "후라도",
           "era": 3.54,
@@ -60,14 +60,14 @@
       "live": {
         "inning": 7,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 1,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "김범수",
-        "batter": "디아즈",
-        "heat": 13,
-        "label": "경기 흐름 체크 중"
+        "pitcher": "정해영",
+        "batter": "강민호",
+        "heat": 4,
+        "label": "점수차가 벌어진 경기"
       },
       "recap": null,
       "decision": null,
