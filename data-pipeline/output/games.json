@@ -1,7 +1,7 @@
 {
   "date": "20261027",
   "dateText": "2026년 10월 27일",
-  "updatedAt": "2026-10-27T10:20:26.132Z",
+  "updatedAt": "2026-10-27T10:30:31.632Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -60,12 +60,12 @@
       "live": {
         "inning": 3,
         "half": "B",
-        "out": 0,
+        "out": 2,
         "b1": false,
-        "b2": false,
+        "b2": true,
         "b3": false,
         "pitcher": "올러",
-        "batter": "류지혁",
+        "batter": "박승규",
         "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
