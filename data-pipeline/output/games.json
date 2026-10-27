@@ -1,7 +1,7 @@
 {
   "date": "20261027",
   "dateText": "2026년 10월 27일",
-  "updatedAt": "2026-10-27T11:30:33.416Z",
+  "updatedAt": "2026-10-27T11:40:22.963Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -59,14 +59,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 2,
-        "b1": false,
-        "b2": false,
+        "half": "B",
+        "out": 1,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "후라도",
-        "batter": "카스트로",
-        "heat": 21,
+        "pitcher": "성영탁",
+        "batter": "김지찬",
+        "heat": 23,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
