@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-27T12:50:24.302Z",
+  "updatedAt": "2026-10-27T13:00:44.607Z",
   "results": [
     {
       "date": "20260705",
@@ -1626,6 +1626,27 @@
         "score": 1
       },
       "calculatedAt": "2026-10-20T13:00:43.201Z"
+    },
+    {
+      "date": "20261027",
+      "actualTopGameId": "20261027HTSS0",
+      "recapScore": 32,
+      "decidingReasonTags": [
+        "실제 꿀잼 32"
+      ],
+      "displayMode": "summary",
+      "displayTitle": "어제 경기 요약",
+      "away": {
+        "code": "HT",
+        "name": "KIA",
+        "score": 3
+      },
+      "home": {
+        "code": "SS",
+        "name": "삼성",
+        "score": 8
+      },
+      "calculatedAt": "2026-10-27T13:00:44.607Z"
     }
   ]
 }
