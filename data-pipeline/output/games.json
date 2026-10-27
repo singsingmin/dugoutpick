@@ -1,7 +1,7 @@
 {
   "date": "20261027",
   "dateText": "2026년 10월 27일",
-  "updatedAt": "2026-10-27T09:50:24.262Z",
+  "updatedAt": "2026-10-27T10:00:42.570Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -59,14 +59,14 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
+        "half": "B",
         "out": 1,
-        "b1": false,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "후라도",
-        "batter": "나성범",
-        "heat": 35,
+        "pitcher": "올러",
+        "batter": "김영웅",
+        "heat": 38,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
