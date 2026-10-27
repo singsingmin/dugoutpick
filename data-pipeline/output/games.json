@@ -1,7 +1,7 @@
 {
   "date": "20261027",
   "dateText": "2026년 10월 27일",
-  "updatedAt": "2026-10-27T10:50:25.231Z",
+  "updatedAt": "2026-10-27T11:00:47.150Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -58,15 +58,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 1,
+        "inning": 5,
+        "half": "T",
+        "out": 2,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "올러",
-        "batter": "강민호",
-        "heat": 28,
+        "pitcher": "후라도",
+        "batter": "박재현",
+        "heat": 29,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
