@@ -1,7 +1,7 @@
 {
   "date": "20261029",
   "dateText": "2026년 10월 29일",
-  "updatedAt": "2026-10-29T12:30:37.400Z",
+  "updatedAt": "2026-10-29T12:40:25.452Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -63,9 +63,9 @@
         "out": 1,
         "b1": true,
         "b2": true,
-        "b3": false,
-        "pitcher": "성영탁",
-        "batter": "류지혁",
+        "b3": true,
+        "pitcher": "전상현",
+        "batter": "이재현",
         "heat": 58,
         "label": "후반 박빙 승부"
       },
