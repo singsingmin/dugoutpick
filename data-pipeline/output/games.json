@@ -1,7 +1,7 @@
 {
   "date": "20261029",
   "dateText": "2026년 10월 29일",
-  "updatedAt": "2026-10-29T13:00:42.799Z",
+  "updatedAt": "2026-10-29T13:10:26.244Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -59,14 +59,14 @@
       },
       "live": {
         "inning": 9,
-        "half": "T",
-        "out": 0,
-        "b1": true,
+        "half": "B",
+        "out": 1,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "전상현",
-        "batter": "박승규",
-        "heat": 63,
+        "pitcher": "김태훈",
+        "batter": "하주석",
+        "heat": 65,
         "label": "후반 박빙 승부"
       },
       "recap": null,
