@@ -1,7 +1,7 @@
 {
   "date": "20261029",
   "dateText": "2026년 10월 29일",
-  "updatedAt": "2026-10-29T10:50:24.780Z",
+  "updatedAt": "2026-10-29T11:00:44.608Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 2,
+        "score": 4,
         "starter": {
           "name": "최원태",
           "era": 4.68,
@@ -58,15 +58,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 4,
-        "half": "B",
-        "out": 2,
-        "b1": true,
+        "inning": 5,
+        "half": "T",
+        "out": 1,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이재희",
-        "batter": "박재현",
-        "heat": 45,
+        "pitcher": "시라카와",
+        "batter": "이재현",
+        "heat": 48,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
