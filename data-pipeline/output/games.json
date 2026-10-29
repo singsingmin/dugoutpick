@@ -1,7 +1,7 @@
 {
   "date": "20261029",
   "dateText": "2026년 10월 29일",
-  "updatedAt": "2026-10-29T13:20:24.578Z",
+  "updatedAt": "2026-10-29T13:40:25.558Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,9 +67,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "원태인",
+        "lose": "조상우",
+        "save": "사토시"
       },
       "lineup": null
     }
@@ -130,7 +130,7 @@
         "low": "HT",
         "score": {
           "HT": 1,
-          "SS": 1
+          "SS": 2
         },
         "status": "active",
         "winner": null

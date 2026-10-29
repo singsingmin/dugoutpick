@@ -108,9 +108,9 @@
       "homeCode": "HT",
       "awayName": "삼성",
       "homeName": "KIA",
-      "awayScore": 0,
-      "homeScore": 0,
-      "finished": false,
+      "awayScore": 6,
+      "homeScore": 4,
+      "finished": true,
       "canceled": false
     }
   ]
