@@ -1,7 +1,7 @@
 {
   "date": "20261029",
   "dateText": "2026년 10월 29일",
-  "updatedAt": "2026-10-29T12:10:26.037Z",
+  "updatedAt": "2026-10-29T12:20:24.209Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -59,14 +59,14 @@
       },
       "live": {
         "inning": 7,
-        "half": "T",
+        "half": "B",
         "out": 2,
-        "b1": true,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "이의리",
-        "batter": "디아즈",
-        "heat": 53,
+        "pitcher": "이승민",
+        "batter": "김도영",
+        "heat": 56,
         "label": "후반 박빙 승부"
       },
       "recap": null,
