@@ -1,7 +1,7 @@
 {
   "date": "20261029",
   "dateText": "2026년 10월 29일",
-  "updatedAt": "2026-10-29T09:50:25.727Z",
+  "updatedAt": "2026-10-29T10:00:42.554Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -59,14 +59,14 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
+        "half": "B",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "시라카와",
-        "batter": "강민호",
-        "heat": 27,
+        "pitcher": "최원태",
+        "batter": "카스트로",
+        "heat": 29,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
