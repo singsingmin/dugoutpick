@@ -1,7 +1,7 @@
 {
   "date": "20261029",
   "dateText": "2026년 10월 29일",
-  "updatedAt": "2026-10-29T11:11:08.089Z",
+  "updatedAt": "2026-10-29T11:20:24.329Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -60,12 +60,12 @@
       "live": {
         "inning": 5,
         "half": "B",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
         "pitcher": "이재희",
-        "batter": "김호령",
+        "batter": "나성범",
         "heat": 50,
         "label": "초반 팽팽한 흐름"
       },
