@@ -1,7 +1,7 @@
 {
   "date": "20261029",
   "dateText": "2026년 10월 29일",
-  "updatedAt": "2026-10-29T12:20:24.209Z",
+  "updatedAt": "2026-10-29T12:30:37.400Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -58,15 +58,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 7,
-        "half": "B",
-        "out": 2,
-        "b1": false,
-        "b2": false,
+        "inning": 8,
+        "half": "T",
+        "out": 1,
+        "b1": true,
+        "b2": true,
         "b3": false,
-        "pitcher": "이승민",
-        "batter": "김도영",
-        "heat": 56,
+        "pitcher": "성영탁",
+        "batter": "류지혁",
+        "heat": 58,
         "label": "후반 박빙 승부"
       },
       "recap": null,
