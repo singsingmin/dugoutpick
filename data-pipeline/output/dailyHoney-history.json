@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-29T13:10:26.244Z",
+  "updatedAt": "2026-10-29T13:20:24.578Z",
   "results": [
     {
       "date": "20260705",
@@ -1647,6 +1647,27 @@
         "score": 8
       },
       "calculatedAt": "2026-10-27T13:00:44.607Z"
+    },
+    {
+      "date": "20261029",
+      "actualTopGameId": "20261029SSHT0",
+      "recapScore": 83,
+      "decidingReasonTags": [
+        "2점차 접전"
+      ],
+      "displayMode": "highlight",
+      "displayTitle": "어제의 명경기",
+      "away": {
+        "code": "SS",
+        "name": "삼성",
+        "score": 6
+      },
+      "home": {
+        "code": "HT",
+        "name": "KIA",
+        "score": 4
+      },
+      "calculatedAt": "2026-10-29T13:20:24.578Z"
     }
   ]
 }
