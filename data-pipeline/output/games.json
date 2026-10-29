@@ -1,7 +1,7 @@
 {
   "date": "20261029",
   "dateText": "2026년 10월 29일",
-  "updatedAt": "2026-10-29T09:40:26.026Z",
+  "updatedAt": "2026-10-29T09:50:25.727Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -58,15 +58,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 1,
-        "half": "B",
+        "inning": 2,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "최원태",
-        "batter": "박재현",
-        "heat": 26,
+        "pitcher": "시라카와",
+        "batter": "강민호",
+        "heat": 27,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
