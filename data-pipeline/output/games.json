@@ -1,7 +1,7 @@
 {
   "date": "20261029",
   "dateText": "2026년 10월 29일",
-  "updatedAt": "2026-10-29T12:50:24.927Z",
+  "updatedAt": "2026-10-29T13:00:42.799Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -58,15 +58,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 8,
-        "half": "B",
-        "out": 1,
+        "inning": 9,
+        "half": "T",
+        "out": 0,
         "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "이승민",
-        "batter": "이호연",
-        "heat": 60,
+        "pitcher": "전상현",
+        "batter": "박승규",
+        "heat": 63,
         "label": "후반 박빙 승부"
       },
       "recap": null,
