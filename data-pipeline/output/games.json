@@ -1,7 +1,7 @@
 {
   "date": "20261029",
   "dateText": "2026년 10월 29일",
-  "updatedAt": "2026-10-29T11:10:26.222Z",
+  "updatedAt": "2026-10-29T11:11:08.089Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -59,14 +59,14 @@
       },
       "live": {
         "inning": 5,
-        "half": "T",
-        "out": 3,
-        "b1": true,
-        "b2": true,
+        "half": "B",
+        "out": 0,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "곽도규",
-        "batter": "구자욱",
-        "heat": 48,
+        "pitcher": "이재희",
+        "batter": "김호령",
+        "heat": 50,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
