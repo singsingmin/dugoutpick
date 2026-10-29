@@ -1,7 +1,7 @@
 {
   "date": "20261029",
   "dateText": "2026년 10월 29일",
-  "updatedAt": "2026-10-29T10:40:23.726Z",
+  "updatedAt": "2026-10-29T10:50:24.780Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -59,14 +59,14 @@
       },
       "live": {
         "inning": 4,
-        "half": "T",
-        "out": 1,
-        "b1": false,
+        "half": "B",
+        "out": 2,
+        "b1": true,
         "b2": false,
         "b3": false,
-        "pitcher": "시라카와",
-        "batter": "디아즈",
-        "heat": 43,
+        "pitcher": "이재희",
+        "batter": "박재현",
+        "heat": 45,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
