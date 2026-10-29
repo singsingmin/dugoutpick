@@ -1,7 +1,7 @@
 {
   "date": "20261029",
   "dateText": "2026년 10월 29일",
-  "updatedAt": "2026-10-29T11:30:35.108Z",
+  "updatedAt": "2026-10-29T11:40:30.337Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -62,10 +62,10 @@
         "half": "T",
         "out": 1,
         "b1": true,
-        "b2": false,
+        "b2": true,
         "b3": false,
-        "pitcher": "이태양",
-        "batter": "강민호",
+        "pitcher": "조상우",
+        "batter": "김영웅",
         "heat": 53,
         "label": "경기 흐름 체크 중"
       },
