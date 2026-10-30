@@ -1,7 +1,7 @@
 {
   "date": "20261030",
   "dateText": "2026년 10월 30일",
-  "updatedAt": "2026-10-30T10:10:27.169Z",
+  "updatedAt": "2026-10-30T10:20:23.393Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -58,15 +58,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 2,
+        "inning": 3,
         "half": "B",
-        "out": 1,
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
         "pitcher": "페덱",
-        "batter": "김선빈",
-        "heat": 35,
+        "batter": "하주석",
+        "heat": 40,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
