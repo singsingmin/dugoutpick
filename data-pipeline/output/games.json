@@ -1,7 +1,7 @@
 {
   "date": "20261030",
   "dateText": "2026년 10월 30일",
-  "updatedAt": "2026-10-30T10:20:23.393Z",
+  "updatedAt": "2026-10-30T10:30:34.918Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -58,15 +58,15 @@
         "frozen": true
       },
       "live": {
-        "inning": 3,
-        "half": "B",
+        "inning": 4,
+        "half": "T",
         "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "페덱",
-        "batter": "하주석",
-        "heat": 40,
+        "pitcher": "네일",
+        "batter": "최형우",
+        "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
