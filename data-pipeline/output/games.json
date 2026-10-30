@@ -1,7 +1,7 @@
 {
   "date": "20261030",
   "dateText": "2026년 10월 30일",
-  "updatedAt": "2026-10-30T11:10:24.660Z",
+  "updatedAt": "2026-10-30T11:20:23.844Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -58,16 +58,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 5,
-        "half": "B",
-        "out": 2,
-        "b1": true,
+        "inning": 6,
+        "half": "T",
+        "out": 1,
+        "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "페덱",
-        "batter": "김도영",
-        "heat": 54,
-        "label": "초반 팽팽한 흐름"
+        "pitcher": "곽도규",
+        "batter": "최형우",
+        "heat": 57,
+        "label": "경기 흐름 체크 중"
       },
       "recap": null,
       "decision": null,
