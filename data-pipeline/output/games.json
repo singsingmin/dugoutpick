@@ -1,7 +1,7 @@
 {
   "date": "20261030",
   "dateText": "2026년 10월 30일",
-  "updatedAt": "2026-10-30T10:30:34.918Z",
+  "updatedAt": "2026-10-30T10:40:23.663Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -60,12 +60,12 @@
       "live": {
         "inning": 4,
         "half": "T",
-        "out": 0,
-        "b1": false,
+        "out": 2,
+        "b1": true,
         "b2": false,
-        "b3": false,
+        "b3": true,
         "pitcher": "네일",
-        "batter": "최형우",
+        "batter": "이재현",
         "heat": 43,
         "label": "초반 팽팽한 흐름"
       },
