@@ -1,7 +1,7 @@
 {
   "date": "20261030",
   "dateText": "2026년 10월 30일",
-  "updatedAt": "2026-10-30T11:20:23.844Z",
+  "updatedAt": "2026-10-30T11:30:35.703Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -22,7 +22,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 1,
+        "score": 2,
         "starter": {
           "name": "페덱",
           "era": 2.95,
@@ -59,14 +59,14 @@
       },
       "live": {
         "inning": 6,
-        "half": "T",
-        "out": 1,
+        "half": "B",
+        "out": 0,
         "b1": false,
         "b2": false,
         "b3": false,
-        "pitcher": "곽도규",
-        "batter": "최형우",
-        "heat": 57,
+        "pitcher": "페덱",
+        "batter": "나성범",
+        "heat": 56,
         "label": "경기 흐름 체크 중"
       },
       "recap": null,
