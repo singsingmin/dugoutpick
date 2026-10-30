@@ -1,7 +1,7 @@
 {
-  "date": "20261030",
-  "dateText": "2026년 10월 30일",
-  "updatedAt": "2026-10-30T12:50:25.911Z",
+  "date": "20261031",
+  "dateText": "2026년 10월 31일",
+  "updatedAt": "2026-10-30T17:04:19.876Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -9,97 +9,11 @@
     "bonusRate": 42,
     "ready": true
   },
-  "recommendedGameId": "20261030SSHT0",
-  "games": [
-    {
-      "gameId": "20261030SSHT0",
-      "time": "18:30",
-      "stadium": "광주",
-      "status": "FINAL",
-      "cancelReason": null,
-      "broadcast": "MBC SPORTS+,KBS N SPORTS,SBS SPORTS,SPOTV,SPOTV2",
-      "away": {
-        "code": "SS",
-        "name": "삼성",
-        "rank": 2,
-        "score": 2,
-        "starter": {
-          "name": "페덱",
-          "era": 2.95,
-          "w": 7,
-          "l": 3
-        }
-      },
-      "home": {
-        "code": "HT",
-        "name": "KIA",
-        "rank": 3,
-        "score": 4,
-        "starter": {
-          "name": "네일",
-          "era": 3.49,
-          "w": 13,
-          "l": 7
-        }
-      },
-      "honjam": {
-        "score": 90,
-        "reason": "시리즈 매치포인트",
-        "points": [
-          "삼성 이기면 진출"
-        ],
-        "factors": {
-          "base": 70,
-          "round": 4,
-          "stakes": 12,
-          "pitcher": 3.6,
-          "momentum": 0
-        },
-        "frozen": true
-      },
-      "live": null,
-      "recap": {
-        "actual": 79,
-        "verdict": "기대 이하",
-        "diff": 2,
-        "total": 6,
-        "extra": 0,
-        "walkoff": 0
-      },
-      "decision": {
-        "win": "조상우",
-        "lose": "사토시",
-        "save": "전상현"
-      },
-      "lineup": null
-    }
-  ],
+  "recommendedGameId": null,
+  "games": [],
   "postseason": {
     "active": true,
-    "today": {
-      "active": true,
-      "round": "PO",
-      "roundName": "플레이오프",
-      "gameNo": 4,
-      "seriesFormat": 5,
-      "high": "SS",
-      "low": "HT",
-      "seriesScore": {
-        "SS": 2,
-        "HT": 1
-      },
-      "matchpoint": {
-        "SS": true,
-        "HT": false
-      },
-      "elimination": {
-        "SS": false,
-        "HT": true
-      },
-      "isFinalGame": false,
-      "wcAdvantage": false,
-      "contextLine": "삼성 이기면 진출"
-    },
+    "today": null,
     "bracket": [
       {
         "round": "WC",
