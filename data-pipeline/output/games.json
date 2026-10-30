@@ -1,7 +1,7 @@
 {
   "date": "20261030",
   "dateText": "2026년 10월 30일",
-  "updatedAt": "2026-10-30T12:40:25.193Z",
+  "updatedAt": "2026-10-30T12:50:25.911Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -67,9 +67,9 @@
         "walkoff": 0
       },
       "decision": {
-        "win": null,
-        "lose": null,
-        "save": null
+        "win": "조상우",
+        "lose": "사토시",
+        "save": "전상현"
       },
       "lineup": null
     }
@@ -129,7 +129,7 @@
         "high": "SS",
         "low": "HT",
         "score": {
-          "HT": 1,
+          "HT": 2,
           "SS": 2
         },
         "status": "active",
