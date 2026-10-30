@@ -1,7 +1,7 @@
 {
   "date": "20261030",
   "dateText": "2026년 10월 30일",
-  "updatedAt": "2026-10-30T10:00:41.877Z",
+  "updatedAt": "2026-10-30T10:10:27.169Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -59,14 +59,14 @@
       },
       "live": {
         "inning": 2,
-        "half": "T",
-        "out": 2,
-        "b1": true,
-        "b2": true,
+        "half": "B",
+        "out": 1,
+        "b1": false,
+        "b2": false,
         "b3": false,
-        "pitcher": "네일",
-        "batter": "김지찬",
-        "heat": 33,
+        "pitcher": "페덱",
+        "batter": "김선빈",
+        "heat": 35,
         "label": "초반 팽팽한 흐름"
       },
       "recap": null,
