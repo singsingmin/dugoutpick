@@ -1,7 +1,7 @@
 {
   "date": "20261030",
   "dateText": "2026년 10월 30일",
-  "updatedAt": "2026-10-29T17:28:42.505Z",
+  "updatedAt": "2026-10-30T09:40:24.010Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -15,14 +15,14 @@
       "gameId": "20261030SSHT0",
       "time": "18:30",
       "stadium": "광주",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "MBC SPORTS+,KBS N SPORTS,SBS SPORTS,SPOTV,SPOTV2",
       "away": {
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "페덱",
           "era": 2.95,
@@ -34,7 +34,7 @@
         "code": "HT",
         "name": "KIA",
         "rank": 3,
-        "score": null,
+        "score": 0,
         "starter": {
           "name": "네일",
           "era": 3.49,
@@ -55,9 +55,20 @@
           "pitcher": 3.6,
           "momentum": 0
         },
-        "frozen": false
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 1,
+        "half": "B",
+        "out": 0,
+        "b1": false,
+        "b2": false,
+        "b3": false,
+        "pitcher": "페덱",
+        "batter": "박재현",
+        "heat": 33,
+        "label": "초반 팽팽한 흐름"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
