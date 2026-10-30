@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-30T12:30:34.540Z",
+  "updatedAt": "2026-10-30T12:40:25.193Z",
   "window": 50,
   "sampleSize": 50,
   "hitRate": 12,
-  "bonusRate": 44,
+  "bonusRate": 42,
   "ready": true,
   "records": [
     {
@@ -2497,6 +2497,13 @@
       "pred": 83,
       "actual": 83,
       "verdict": "예측 적중"
+    },
+    {
+      "date": "20261030",
+      "gameId": "20261030SSHT0",
+      "pred": 90,
+      "actual": 79,
+      "verdict": "기대 이하"
     }
   ]
 }
