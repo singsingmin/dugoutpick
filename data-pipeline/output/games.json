@@ -1,7 +1,7 @@
 {
   "date": "20261030",
   "dateText": "2026년 10월 30일",
-  "updatedAt": "2026-10-30T11:40:25.883Z",
+  "updatedAt": "2026-10-30T11:50:25.547Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -58,16 +58,16 @@
         "frozen": true
       },
       "live": {
-        "inning": 6,
+        "inning": 7,
         "half": "B",
-        "out": 2,
+        "out": 0,
         "b1": false,
-        "b2": true,
-        "b3": true,
-        "pitcher": "이승민",
-        "batter": "김태군",
-        "heat": 56,
-        "label": "경기 흐름 체크 중"
+        "b2": false,
+        "b3": false,
+        "pitcher": "배찬승",
+        "batter": "박재현",
+        "heat": 62,
+        "label": "후반 박빙 승부"
       },
       "recap": null,
       "decision": null,
