@@ -1,7 +1,7 @@
 {
-  "date": "20261101",
-  "dateText": "2026년 11월 1일",
-  "updatedAt": "2026-11-01T08:15:48.562Z",
+  "date": "20261102",
+  "dateText": "2026년 11월 2일",
+  "updatedAt": "2026-11-01T17:24:22.467Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -9,97 +9,11 @@
     "bonusRate": 40,
     "ready": true
   },
-  "recommendedGameId": "20261101HTSS0",
-  "games": [
-    {
-      "gameId": "20261101HTSS0",
-      "time": "14:00",
-      "stadium": "대구",
-      "status": "FINAL",
-      "cancelReason": null,
-      "broadcast": "KBS 2TV",
-      "away": {
-        "code": "HT",
-        "name": "KIA",
-        "rank": 3,
-        "score": 1,
-        "starter": {
-          "name": "올러",
-          "era": 3.13,
-          "w": 11,
-          "l": 10
-        }
-      },
-      "home": {
-        "code": "SS",
-        "name": "삼성",
-        "rank": 2,
-        "score": 6,
-        "starter": {
-          "name": "후라도",
-          "era": 3.54,
-          "w": 9,
-          "l": 3
-        }
-      },
-      "honjam": {
-        "score": 95,
-        "reason": "운명의 최종전",
-        "points": [
-          "운명의 최종전"
-        ],
-        "factors": {
-          "base": 70,
-          "round": 4,
-          "stakes": 18,
-          "pitcher": 3.3,
-          "momentum": 0
-        },
-        "frozen": true
-      },
-      "live": null,
-      "recap": {
-        "actual": 27,
-        "verdict": "기대 이하",
-        "diff": 5,
-        "total": 7,
-        "extra": 0,
-        "walkoff": 0
-      },
-      "decision": {
-        "win": "후라도",
-        "lose": "올러",
-        "save": null
-      },
-      "lineup": null
-    }
-  ],
+  "recommendedGameId": null,
+  "games": [],
   "postseason": {
     "active": true,
-    "today": {
-      "active": true,
-      "round": "PO",
-      "roundName": "플레이오프",
-      "gameNo": 5,
-      "seriesFormat": 5,
-      "high": "SS",
-      "low": "HT",
-      "seriesScore": {
-        "SS": 2,
-        "HT": 2
-      },
-      "matchpoint": {
-        "SS": true,
-        "HT": true
-      },
-      "elimination": {
-        "SS": true,
-        "HT": true
-      },
-      "isFinalGame": true,
-      "wcAdvantage": false,
-      "contextLine": "운명의 최종전"
-    },
+    "today": null,
     "bracket": [
       {
         "round": "WC",
