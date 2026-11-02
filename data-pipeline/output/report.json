@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-01T17:24:22.467Z",
+  "updatedAt": "2026-11-02T22:08:33.411Z",
   "lastWeek": {
     "range": [
       "20261026",
@@ -83,7 +83,35 @@
       "20261102",
       "20261108"
     ],
-    "top": [],
-    "team": {}
+    "top": [
+      {
+        "away": "SS",
+        "home": "KT",
+        "pred": 87,
+        "reason": "게임차 8의 순위 다툼 · 리그 1위·2위 상위권 빅매치",
+        "dateStart": "20261103",
+        "dateEnd": "20261103"
+      }
+    ],
+    "team": {
+      "SS": [
+        {
+          "date": "20261103",
+          "away": "SS",
+          "home": "KT",
+          "awayStarter": "최원태",
+          "homeStarter": "대니엘"
+        }
+      ],
+      "KT": [
+        {
+          "date": "20261103",
+          "away": "SS",
+          "home": "KT",
+          "awayStarter": "최원태",
+          "homeStarter": "대니엘"
+        }
+      ]
+    }
   }
 }

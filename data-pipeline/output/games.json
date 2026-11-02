@@ -1,7 +1,7 @@
 {
-  "date": "20261102",
-  "dateText": "2026년 11월 2일",
-  "updatedAt": "2026-11-01T17:24:22.467Z",
+  "date": "20261103",
+  "dateText": "2026년 11월 3일",
+  "updatedAt": "2026-11-02T22:08:33.411Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -9,11 +9,182 @@
     "bonusRate": 40,
     "ready": true
   },
-  "recommendedGameId": null,
-  "games": [],
+  "recommendedGameId": "20261103SSKT0",
+  "games": [
+    {
+      "gameId": "20261103SSKT0",
+      "time": "18:30",
+      "stadium": "수원",
+      "status": "SCHEDULED",
+      "cancelReason": null,
+      "broadcast": "SBS TV",
+      "away": {
+        "code": "SS",
+        "name": "삼성",
+        "rank": 2,
+        "score": null,
+        "starter": {
+          "name": "최원태",
+          "era": 4.68,
+          "w": 7,
+          "l": 5
+        }
+      },
+      "home": {
+        "code": "KT",
+        "name": "KT",
+        "rank": 1,
+        "score": null,
+        "starter": {
+          "name": "대니엘",
+          "era": 2.13,
+          "w": 5,
+          "l": 2
+        }
+      },
+      "honjam": {
+        "score": 88,
+        "reason": "한국시리즈 1차전",
+        "points": [
+          "시리즈 개막"
+        ],
+        "factors": {
+          "base": 70,
+          "round": 7,
+          "stakes": 8,
+          "pitcher": 3.2,
+          "momentum": 0
+        },
+        "frozen": false
+      },
+      "live": null,
+      "recap": null,
+      "decision": null,
+      "lineup": {
+        "home": [
+          {
+            "order": 1,
+            "pos": "우익수",
+            "name": "최원준"
+          },
+          {
+            "order": 2,
+            "pos": "2루수",
+            "name": "류현인"
+          },
+          {
+            "order": 3,
+            "pos": "지명타자",
+            "name": "안현민"
+          },
+          {
+            "order": 4,
+            "pos": "좌익수",
+            "name": "힐리어드"
+          },
+          {
+            "order": 5,
+            "pos": "1루수",
+            "name": "김현수"
+          },
+          {
+            "order": 6,
+            "pos": "3루수",
+            "name": "허경민"
+          },
+          {
+            "order": 7,
+            "pos": "중견수",
+            "name": "배정대"
+          },
+          {
+            "order": 8,
+            "pos": "포수",
+            "name": "조대현"
+          },
+          {
+            "order": 9,
+            "pos": "유격수",
+            "name": "장준원"
+          }
+        ],
+        "away": [
+          {
+            "order": 1,
+            "pos": "지명타자",
+            "name": "김지찬"
+          },
+          {
+            "order": 2,
+            "pos": "중견수",
+            "name": "김성윤"
+          },
+          {
+            "order": 3,
+            "pos": "2루수",
+            "name": "류지혁"
+          },
+          {
+            "order": 4,
+            "pos": "좌익수",
+            "name": "최형우"
+          },
+          {
+            "order": 5,
+            "pos": "1루수",
+            "name": "전병우"
+          },
+          {
+            "order": 6,
+            "pos": "우익수",
+            "name": "김헌곤"
+          },
+          {
+            "order": 7,
+            "pos": "포수",
+            "name": "강민호"
+          },
+          {
+            "order": 8,
+            "pos": "3루수",
+            "name": "김영웅"
+          },
+          {
+            "order": 9,
+            "pos": "유격수",
+            "name": "이재현"
+          }
+        ],
+        "confirmed": false
+      }
+    }
+  ],
   "postseason": {
     "active": true,
-    "today": null,
+    "today": {
+      "active": true,
+      "round": "KS",
+      "roundName": "한국시리즈",
+      "gameNo": 1,
+      "seriesFormat": 7,
+      "high": "KT",
+      "low": "SS",
+      "seriesScore": {
+        "KT": 0,
+        "SS": 0
+      },
+      "matchpoint": {
+        "KT": false,
+        "SS": false
+      },
+      "elimination": {
+        "KT": false,
+        "SS": false
+      },
+      "isFinalGame": false,
+      "wcAdvantage": false,
+      "contextLine": "시리즈 개막"
+    },
     "bracket": [
       {
         "round": "WC",
@@ -55,7 +226,7 @@
         "high": "KT",
         "low": "SS",
         "score": {},
-        "status": "upcoming",
+        "status": "active",
         "winner": null
       }
     ]
