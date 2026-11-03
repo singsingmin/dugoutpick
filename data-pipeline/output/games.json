@@ -1,7 +1,7 @@
 {
-  "date": "20261103",
-  "dateText": "2026년 11월 3일",
-  "updatedAt": "2026-11-03T12:29:48.406Z",
+  "date": "20261104",
+  "dateText": "2026년 11월 4일",
+  "updatedAt": "2026-11-03T19:43:14.031Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -9,66 +9,55 @@
     "bonusRate": 40,
     "ready": true
   },
-  "recommendedGameId": "20261103SSKT0",
+  "recommendedGameId": "20261104SSKT0",
   "games": [
     {
-      "gameId": "20261103SSKT0",
+      "gameId": "20261104SSKT0",
       "time": "18:30",
       "stadium": "수원",
-      "status": "LIVE",
+      "status": "SCHEDULED",
       "cancelReason": null,
-      "broadcast": "SBS TV",
+      "broadcast": "MBC TV",
       "away": {
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 5,
+        "score": null,
         "starter": {
-          "name": "최원태",
-          "era": 4.68,
+          "name": "페덱",
+          "era": 2.95,
           "w": 7,
-          "l": 5
+          "l": 3
         }
       },
       "home": {
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": 8,
+        "score": null,
         "starter": {
-          "name": "대니엘",
-          "era": 2.13,
-          "w": 5,
-          "l": 2
+          "name": "고영표",
+          "era": 3.28,
+          "w": 15,
+          "l": 7
         }
       },
       "honjam": {
         "score": 88,
-        "reason": "한국시리즈 1차전",
+        "reason": "한국시리즈 2차전",
         "points": [
-          "시리즈 개막"
+          "시리즈 1-0"
         ],
         "factors": {
           "base": 70,
           "round": 7,
-          "stakes": 8,
-          "pitcher": 3.2,
-          "momentum": 0
+          "stakes": 5,
+          "pitcher": 3.8,
+          "momentum": 2
         },
-        "frozen": true
+        "frozen": false
       },
-      "live": {
-        "inning": 8,
-        "half": "T",
-        "out": 1,
-        "b1": true,
-        "b2": true,
-        "b3": false,
-        "pitcher": "오원석",
-        "batter": "김성윤",
-        "heat": 48,
-        "label": "점수 나는 난타전"
-      },
+      "live": null,
       "recap": null,
       "decision": null,
       "lineup": {
@@ -176,12 +165,12 @@
       "active": true,
       "round": "KS",
       "roundName": "한국시리즈",
-      "gameNo": 1,
+      "gameNo": 2,
       "seriesFormat": 7,
       "high": "KT",
       "low": "SS",
       "seriesScore": {
-        "KT": 0,
+        "KT": 1,
         "SS": 0
       },
       "matchpoint": {
@@ -194,7 +183,7 @@
       },
       "isFinalGame": false,
       "wcAdvantage": false,
-      "contextLine": "시리즈 개막"
+      "contextLine": "시리즈 1-0"
     },
     "bracket": [
       {
@@ -236,7 +225,9 @@
         "roundName": "한국시리즈",
         "high": "KT",
         "low": "SS",
-        "score": {},
+        "score": {
+          "KT": 1
+        },
         "status": "active",
         "winner": null
       }
