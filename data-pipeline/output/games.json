@@ -1,7 +1,7 @@
 {
   "date": "20261103",
   "dateText": "2026년 11월 3일",
-  "updatedAt": "2026-11-02T22:08:33.411Z",
+  "updatedAt": "2026-11-03T12:29:48.406Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -15,14 +15,14 @@
       "gameId": "20261103SSKT0",
       "time": "18:30",
       "stadium": "수원",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SBS TV",
       "away": {
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": null,
+        "score": 5,
         "starter": {
           "name": "최원태",
           "era": 4.68,
@@ -34,7 +34,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": null,
+        "score": 8,
         "starter": {
           "name": "대니엘",
           "era": 2.13,
@@ -55,9 +55,20 @@
           "pitcher": 3.2,
           "momentum": 0
         },
-        "frozen": false
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 8,
+        "half": "T",
+        "out": 1,
+        "b1": true,
+        "b2": true,
+        "b3": false,
+        "pitcher": "오원석",
+        "batter": "김성윤",
+        "heat": 48,
+        "label": "점수 나는 난타전"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
