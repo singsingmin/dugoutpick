@@ -1,7 +1,7 @@
 {
   "date": "20261104",
   "dateText": "2026년 11월 4일",
-  "updatedAt": "2026-11-03T19:43:14.031Z",
+  "updatedAt": "2026-11-04T12:40:30.631Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -15,14 +15,14 @@
       "gameId": "20261104SSKT0",
       "time": "18:30",
       "stadium": "수원",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "MBC TV",
       "away": {
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": null,
+        "score": 1,
         "starter": {
           "name": "페덱",
           "era": 2.95,
@@ -34,7 +34,7 @@
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": null,
+        "score": 1,
         "starter": {
           "name": "고영표",
           "era": 3.28,
@@ -55,9 +55,20 @@
           "pitcher": 3.8,
           "momentum": 2
         },
-        "frozen": false
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 10,
+        "half": "T",
+        "out": 0,
+        "b1": true,
+        "b2": false,
+        "b3": false,
+        "pitcher": "스기모토",
+        "batter": "김성윤",
+        "heat": 89,
+        "label": "연장 혈투 진행 중"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
