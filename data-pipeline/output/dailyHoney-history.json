@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-05T20:24:02.552Z",
+  "updatedAt": "2026-11-06T12:35:25.255Z",
   "results": [
     {
       "date": "20260705",
@@ -1710,6 +1710,27 @@
         "score": 6
       },
       "calculatedAt": "2026-11-01T08:15:48.562Z"
+    },
+    {
+      "date": "20261106",
+      "actualTopGameId": "20261106KTSS0",
+      "recapScore": 43,
+      "decidingReasonTags": [
+        "실제 꿀잼 43"
+      ],
+      "displayMode": "summary",
+      "displayTitle": "어제 경기 요약",
+      "away": {
+        "code": "KT",
+        "name": "KT",
+        "score": 1
+      },
+      "home": {
+        "code": "SS",
+        "name": "삼성",
+        "score": 5
+      },
+      "calculatedAt": "2026-11-06T12:35:25.255Z"
     }
   ]
 }
