@@ -1,7 +1,7 @@
 {
   "date": "20261107",
   "dateText": "2026년 11월 7일",
-  "updatedAt": "2026-11-06T19:45:37.388Z",
+  "updatedAt": "2026-11-07T07:52:47.241Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -15,14 +15,14 @@
       "gameId": "20261107KTSS0",
       "time": "14:00",
       "stadium": "대구",
-      "status": "SCHEDULED",
+      "status": "LIVE",
       "cancelReason": null,
       "broadcast": "SBS TV",
       "away": {
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": null,
+        "score": 4,
         "starter": {
           "name": "로건",
           "era": 3.59,
@@ -34,7 +34,7 @@
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": null,
+        "score": 10,
         "starter": {
           "name": "장찬희",
           "era": 4.5,
@@ -55,9 +55,20 @@
           "pitcher": 1.9,
           "momentum": 0
         },
-        "frozen": false
+        "frozen": true
       },
-      "live": null,
+      "live": {
+        "inning": 7,
+        "half": "B",
+        "out": 3,
+        "b1": false,
+        "b2": false,
+        "b3": true,
+        "pitcher": "스기모토",
+        "batter": "디아즈",
+        "heat": 4,
+        "label": "점수차가 벌어진 경기"
+      },
       "recap": null,
       "decision": null,
       "lineup": {
