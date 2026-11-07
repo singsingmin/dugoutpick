@@ -1,7 +1,7 @@
 {
-  "date": "20261107",
-  "dateText": "2026년 11월 7일",
-  "updatedAt": "2026-11-07T11:24:17.283Z",
+  "date": "20261108",
+  "dateText": "2026년 11월 8일",
+  "updatedAt": "2026-11-07T16:55:54.530Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -9,69 +9,154 @@
     "bonusRate": 36,
     "ready": true
   },
-  "recommendedGameId": "20261107KTSS0",
+  "recommendedGameId": "20261108KTSS0",
   "games": [
     {
-      "gameId": "20261107KTSS0",
+      "gameId": "20261108KTSS0",
       "time": "14:00",
       "stadium": "대구",
-      "status": "FINAL",
+      "status": "SCHEDULED",
       "cancelReason": null,
-      "broadcast": "SBS TV",
+      "broadcast": "MBC TV",
       "away": {
         "code": "KT",
         "name": "KT",
         "rank": 1,
-        "score": 5,
+        "score": null,
         "starter": {
-          "name": "로건",
-          "era": 3.59,
-          "w": 7,
-          "l": 5
+          "name": "대니엘",
+          "era": 2.13,
+          "w": 5,
+          "l": 2
         }
       },
       "home": {
         "code": "SS",
         "name": "삼성",
         "rank": 2,
-        "score": 10,
+        "score": null,
         "starter": {
-          "name": "장찬희",
-          "era": 4.5,
-          "w": 4,
-          "l": 5
+          "name": "원태인",
+          "era": 4.52,
+          "w": 7,
+          "l": 9
         }
       },
       "honjam": {
-        "score": 84,
-        "reason": "한국시리즈 4차전",
+        "score": 92,
+        "reason": "우승까지 한 걸음, 매치포인트",
         "points": [
-          "시리즈 1-2"
+          "삼성 이기면 우승"
         ],
         "factors": {
           "base": 70,
           "round": 7,
-          "stakes": 5,
-          "pitcher": 1.9,
+          "stakes": 12,
+          "pitcher": 3.4,
           "momentum": 0
         },
-        "frozen": true
+        "frozen": false
       },
       "live": null,
-      "recap": {
-        "actual": 38,
-        "verdict": "기대 이하",
-        "diff": 5,
-        "total": 15,
-        "extra": 0,
-        "walkoff": 0
-      },
-      "decision": {
-        "win": "이재희",
-        "lose": "로건",
-        "save": null
-      },
-      "lineup": null
+      "recap": null,
+      "decision": null,
+      "lineup": {
+        "home": [
+          {
+            "order": 1,
+            "pos": "지명타자",
+            "name": "김지찬"
+          },
+          {
+            "order": 2,
+            "pos": "중견수",
+            "name": "김성윤"
+          },
+          {
+            "order": 3,
+            "pos": "2루수",
+            "name": "류지혁"
+          },
+          {
+            "order": 4,
+            "pos": "좌익수",
+            "name": "최형우"
+          },
+          {
+            "order": 5,
+            "pos": "1루수",
+            "name": "전병우"
+          },
+          {
+            "order": 6,
+            "pos": "우익수",
+            "name": "김헌곤"
+          },
+          {
+            "order": 7,
+            "pos": "포수",
+            "name": "강민호"
+          },
+          {
+            "order": 8,
+            "pos": "3루수",
+            "name": "김영웅"
+          },
+          {
+            "order": 9,
+            "pos": "유격수",
+            "name": "이재현"
+          }
+        ],
+        "away": [
+          {
+            "order": 1,
+            "pos": "우익수",
+            "name": "최원준"
+          },
+          {
+            "order": 2,
+            "pos": "2루수",
+            "name": "류현인"
+          },
+          {
+            "order": 3,
+            "pos": "지명타자",
+            "name": "안현민"
+          },
+          {
+            "order": 4,
+            "pos": "좌익수",
+            "name": "힐리어드"
+          },
+          {
+            "order": 5,
+            "pos": "1루수",
+            "name": "김현수"
+          },
+          {
+            "order": 6,
+            "pos": "3루수",
+            "name": "허경민"
+          },
+          {
+            "order": 7,
+            "pos": "중견수",
+            "name": "배정대"
+          },
+          {
+            "order": 8,
+            "pos": "포수",
+            "name": "조대현"
+          },
+          {
+            "order": 9,
+            "pos": "유격수",
+            "name": "장준원"
+          }
+        ],
+        "confirmed": false
+      }
     }
   ],
   "postseason": {
@@ -80,25 +165,25 @@
       "active": true,
       "round": "KS",
       "roundName": "한국시리즈",
-      "gameNo": 4,
+      "gameNo": 5,
       "seriesFormat": 7,
       "high": "KT",
       "low": "SS",
       "seriesScore": {
         "KT": 1,
-        "SS": 2
+        "SS": 3
       },
       "matchpoint": {
         "KT": false,
-        "SS": false
+        "SS": true
       },
       "elimination": {
-        "KT": false,
+        "KT": true,
         "SS": false
       },
       "isFinalGame": false,
       "wcAdvantage": false,
-      "contextLine": "시리즈 1-2"
+      "contextLine": "삼성 이기면 우승"
     },
     "bracket": [
       {

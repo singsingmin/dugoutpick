@@ -196,6 +196,20 @@
       "homeScore": 10,
       "finished": true,
       "canceled": false
+    },
+    {
+      "gameId": "20261108KTSS0",
+      "date": "20261108",
+      "round": "KS",
+      "gameNo": 5,
+      "awayCode": "KT",
+      "homeCode": "SS",
+      "awayName": "KT",
+      "homeName": "삼성",
+      "awayScore": 0,
+      "homeScore": 0,
+      "finished": false,
+      "canceled": false
     }
   ]
 }
