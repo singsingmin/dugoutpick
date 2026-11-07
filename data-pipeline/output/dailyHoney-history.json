@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-07T07:52:47.241Z",
+  "updatedAt": "2026-11-07T11:24:17.283Z",
   "results": [
     {
       "date": "20260705",
@@ -1731,6 +1731,27 @@
         "score": 5
       },
       "calculatedAt": "2026-11-06T12:35:25.255Z"
+    },
+    {
+      "date": "20261107",
+      "actualTopGameId": "20261107KTSS0",
+      "recapScore": 38,
+      "decidingReasonTags": [
+        "난타전"
+      ],
+      "displayMode": "highlight",
+      "displayTitle": "어제의 명경기",
+      "away": {
+        "code": "KT",
+        "name": "KT",
+        "score": 5
+      },
+      "home": {
+        "code": "SS",
+        "name": "삼성",
+        "score": 10
+      },
+      "calculatedAt": "2026-11-07T11:24:17.283Z"
     }
   ]
 }

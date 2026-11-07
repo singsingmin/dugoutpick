@@ -192,9 +192,9 @@
       "homeCode": "SS",
       "awayName": "KT",
       "homeName": "삼성",
-      "awayScore": 0,
-      "homeScore": 0,
-      "finished": false,
+      "awayScore": 5,
+      "homeScore": 10,
+      "finished": true,
       "canceled": false
     }
   ]
