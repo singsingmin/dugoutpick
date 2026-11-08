@@ -1,7 +1,7 @@
 {
-  "date": "20261108",
-  "dateText": "2026년 11월 8일",
-  "updatedAt": "2026-11-08T11:36:48.215Z",
+  "date": "20261109",
+  "dateText": "2026년 11월 9일",
+  "updatedAt": "2026-11-08T17:23:40.745Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -9,97 +9,11 @@
     "bonusRate": 34,
     "ready": true
   },
-  "recommendedGameId": "20261108KTSS0",
-  "games": [
-    {
-      "gameId": "20261108KTSS0",
-      "time": "14:00",
-      "stadium": "대구",
-      "status": "FINAL",
-      "cancelReason": null,
-      "broadcast": "MBC TV",
-      "away": {
-        "code": "KT",
-        "name": "KT",
-        "rank": 2,
-        "score": 1,
-        "starter": {
-          "name": "대니엘",
-          "era": 2.13,
-          "w": 5,
-          "l": 2
-        }
-      },
-      "home": {
-        "code": "SS",
-        "name": "삼성",
-        "rank": 1,
-        "score": 12,
-        "starter": {
-          "name": "원태인",
-          "era": 4.52,
-          "w": 7,
-          "l": 9
-        }
-      },
-      "honjam": {
-        "score": 92,
-        "reason": "우승까지 한 걸음, 매치포인트",
-        "points": [
-          "삼성 이기면 우승"
-        ],
-        "factors": {
-          "base": 70,
-          "round": 7,
-          "stakes": 12,
-          "pitcher": 3.4,
-          "momentum": 0
-        },
-        "frozen": true
-      },
-      "live": null,
-      "recap": {
-        "actual": 10,
-        "verdict": "기대 이하",
-        "diff": 11,
-        "total": 13,
-        "extra": 0,
-        "walkoff": 0
-      },
-      "decision": {
-        "win": "원태인",
-        "lose": "대니엘",
-        "save": "페덱"
-      },
-      "lineup": null
-    }
-  ],
+  "recommendedGameId": null,
+  "games": [],
   "postseason": {
     "active": true,
-    "today": {
-      "active": true,
-      "round": "KS",
-      "roundName": "한국시리즈",
-      "gameNo": 5,
-      "seriesFormat": 7,
-      "high": "SS",
-      "low": "KT",
-      "seriesScore": {
-        "SS": 3,
-        "KT": 1
-      },
-      "matchpoint": {
-        "SS": true,
-        "KT": false
-      },
-      "elimination": {
-        "SS": false,
-        "KT": true
-      },
-      "isFinalGame": false,
-      "wcAdvantage": false,
-      "contextLine": "삼성 이기면 우승"
-    },
+    "today": null,
     "bracket": [
       {
         "round": "WC",
