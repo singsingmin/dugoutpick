@@ -1,7 +1,7 @@
 {
   "date": "20261108",
   "dateText": "2026년 11월 8일",
-  "updatedAt": "2026-11-08T08:08:12.506Z",
+  "updatedAt": "2026-11-08T11:36:48.215Z",
   "trackRecord": {
     "window": 50,
     "sampleSize": 50,
@@ -21,7 +21,7 @@
       "away": {
         "code": "KT",
         "name": "KT",
-        "rank": 1,
+        "rank": 2,
         "score": 1,
         "starter": {
           "name": "대니엘",
@@ -33,7 +33,7 @@
       "home": {
         "code": "SS",
         "name": "삼성",
-        "rank": 2,
+        "rank": 1,
         "score": 12,
         "starter": {
           "name": "원태인",
@@ -82,19 +82,19 @@
       "roundName": "한국시리즈",
       "gameNo": 5,
       "seriesFormat": 7,
-      "high": "KT",
-      "low": "SS",
+      "high": "SS",
+      "low": "KT",
       "seriesScore": {
-        "KT": 1,
-        "SS": 3
+        "SS": 3,
+        "KT": 1
       },
       "matchpoint": {
-        "KT": false,
-        "SS": true
+        "SS": true,
+        "KT": false
       },
       "elimination": {
-        "KT": true,
-        "SS": false
+        "SS": false,
+        "KT": true
       },
       "isFinalGame": false,
       "wcAdvantage": false,
@@ -126,26 +126,26 @@
       {
         "round": "PO",
         "roundName": "플레이오프",
-        "high": "SS",
+        "high": "KT",
         "low": "HT",
         "score": {
           "HT": 2,
           "SS": 3
         },
-        "status": "done",
-        "winner": "SS"
+        "status": "active",
+        "winner": null
       },
       {
         "round": "KS",
         "roundName": "한국시리즈",
-        "high": "KT",
-        "low": "SS",
+        "high": "SS",
+        "low": null,
         "score": {
           "KT": 1,
           "SS": 4
         },
-        "status": "done",
-        "winner": "SS"
+        "status": "upcoming",
+        "winner": null
       }
     ]
   }
